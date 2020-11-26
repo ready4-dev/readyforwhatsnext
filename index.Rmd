@@ -7,20 +7,20 @@ output:
 ---
 
 
-ready4 is a set of scientific computing tools to help identify policies that can better support the mental health and wellbeing of children and young people.
+ready4 is a set of scientific computing tools that collectively provide a framework for reproducible, replicable and generalisable mental health modelling.
 
 ready4 consists of three categories of code library:
 
  - **Developer workflow** tools to facilitate standardisation and automation of code authoring and data management tasks;
- - **Modeller workflow** tools to standardise and automate common data synthesis, analysis and simulation tasks;
+ - **Modeller workflow** tools to standardise and automate common data analysis, synthesis and simulation tasks;
  - **Prediction tools** to help forecast population mental health outcomes under varying potential future states.
 
-The initial ready4 suite (all Developer Workflow tools and some Modeller workflow and Prediction tools) is an outcome of the readyforwhatsnext project that has been funded by VicHealth, Orygen and Victoria University and which is led by researchers in Orygen, Victoria University, Deakin University and Flinders University. The suite is expanding with outputs from pojects from other funders, who are identified in each project page.
+The initial ready4 suite (all Developer Workflow tools and some Modeller workflow and Prediction tools) is an outcome of the [readyforwhatsnext](https://readyforwhatsnext.github.io/readyforwhatsnext/index.html) project that has been funded by VicHealth, Orygen and Victoria University and which is led by researchers in Orygen, Victoria University, Deakin University and Flinders University. The suite is expanding with outputs from projects from other funders, who are identified in each project page.
 
-Most of the code libraries in the ready4suite are currently being prepared for documentation prior to public release. The following developer tools code libraries have been documented by an algorithm we created (human written edits and extensions to this documentation will be produced in 2021) - and are now publicly available:
+Most of the code libraries in the ready4 suite are currently being prepared for documentation prior to public release. The following developer tools code libraries have been documented in a basic fashion by an algorithm we created (human written edits and extensions to this documentation will be produced in 2021) - and are now publicly available:
 
  - [ready4fun](https://ready4-dev.github.io/ready4fun/index.html) tools for function authoring and automated documention;
  - [ready4class](https://ready4-dev.github.io/ready4class/index.html) tools for automating the creation and extension of classes; and
  - [ready4use](https://ready4-dev.github.io/ready4use/) tools for data management and automation of replication dataset distribution.
  
- Source code for all of the above is available in our [GitHub repositories](https://github.com/ready4-dev).
+Source code for all of the above is available in our [GitHub repositories](https://github.com/ready4-dev).
