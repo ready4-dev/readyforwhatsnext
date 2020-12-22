@@ -17,10 +17,20 @@ ready4 consists of three categories of code library:
 
 The initial ready4 suite (all Developer Workflow tools and some Modeller workflow and Prediction tools) is an outcome of the [readyforwhatsnext](https://readyforwhatsnext.github.io/readyforwhatsnext/index.html) project that has been funded by VicHealth, Orygen and Victoria University and which is led by researchers in Orygen, Victoria University, Deakin University and Flinders University. The suite is expanding with outputs from projects from other funders, who are identified in each project page.
 
-Most of the code libraries in the ready4 suite are currently being prepared for documentation prior to public release. The following developer tools code libraries have been documented in a basic fashion by an algorithm we created (human written edits and extensions to this documentation will be produced in 2021) - and are now publicly available:
+Most of the code libraries in the ready4 suite are currently being prepared for documentation prior to public release. A number of code libraries have been documented in a basic fashion by an algorithm we created (human written edits and extensions to this documentation will be produced in 2021) - and are now publicly available.
 
- - [ready4fun](https://ready4-dev.github.io/ready4fun/index.html) tools for function authoring and automated documention;
+Developer workflow tools for which development version code libraries are currently publicly available:
+
+ - [ready4fun](https://ready4-dev.github.io/ready4fun/index.html) tools for function authoring and automated documentation;
  - [ready4class](https://ready4-dev.github.io/ready4class/index.html) tools for automating the creation and extension of classes; and
  - [ready4use](https://ready4-dev.github.io/ready4use/) tools for data management and automation of replication dataset distribution.
  
+One modeller workflow toolkit has a development version code library publicly available:
+
+ - [ready4u](https://ready4-dev.github.io/ready4u/index.html) tools for developing transfer to utility mapping algorithms.
+ 
+One prediction toolkit has a development version code library publicly available:
+
+ - [map2aqol](https://ready4-dev.github.io/map2aqol/index.html) tools for predicting AQoL 6D health utility from a range of anxiety, depression and psychological distress measures.
+
 Source code for all of the above is available in our [GitHub repositories](https://github.com/ready4-dev).
