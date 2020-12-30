@@ -34,7 +34,7 @@ One modeller workflow toolkit has a development version code library publicly av
  
 One prediction toolkit has a development version code library publicly available:
 
- - [map2aqol](https://ready4-dev.github.io/map2aqol/index.html) tools for predicting AQoL 6D health utility from a range of anxiety, depression and psychological distress measures.
+ - [youthu](https://ready4-dev.github.io/youthu/index.html) tools for predicting adolescent AQoL 6D health utility from a range of anxiety, depression and psychological distress measures.
 
 Source code for all of the above is available in our [GitHub repositories](https://github.com/ready4-dev).
 
