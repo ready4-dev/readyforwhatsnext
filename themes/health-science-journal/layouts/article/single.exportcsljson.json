@@ -1,0 +1,31 @@
+[
+	{
+		"id": "{{ range ( findRE "[[:upper:]]" .Site.Title ) }}{{ . }}{{ end }}{{ .Page.Params.articleID }}{{ range first 1 .Page.Params.authors }}{{ .surname }}{{ end }}{{ dateFormat "2006" .Date }}",
+		"type": "article-journal",
+		"abstract": "{{ .Page.Params.abstract }}",
+		"container-title": "{{ .Site.Title }}",{{ with .Page.Params.DOI }}
+		"DOI": "{{ . }}",{{ end }}
+		"ISSN": "{{ .Site.Params.eISSN }}",{{ with .Page.Params.issue }}
+		"issue": "{{ . }}",{{ end }}{{ with .Site.Params.abbreviatedTitle }}
+		"journalAbbreviation": "{{ . }}",{{ end }}
+		"page": "{{ .Page.Params.firstpage }}{{ with .Page.Params.lastpage }}-{{ . }}{{ end }}",
+		"title": "{{ .Title }}",
+		"volume": "{{ .Page.Params.volume }}",
+		"author": [
+{{ range $elem_index, $elem_val := .Page.Params.authors}}			{
+				"family": "{{ .surname }}",
+				"given": "{{ .given_name }}"
+			}{{ if lt $elem_index (sub (len $.Params.authors) 1) }},{{ end }}
+{{ end }}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"{{ dateFormat "2006" .Date }}",
+					"{{ dateFormat "1" .Date }}",
+					"{{ dateFormat "2" .Date }}"
+				]
+			]
+		}
+	}
+]

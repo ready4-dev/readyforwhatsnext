@@ -1,0 +1,93 @@
+<script type="text/javascript">
+	window.onload = function() {
+		var acm = document.getElementById("acm");
+		var acs = document.getElementById("acs");
+		var apa = document.getElementById("apa");
+		var abnt = document.getElementById("abnt");
+		var chicago = document.getElementById("chicago");
+		var harvard = document.getElementById("harvard");
+		var ieee = document.getElementById("ieee");
+		var mla = document.getElementById("mla");
+		var turabian = document.getElementById("turabian");
+		var vancouver = document.getElementById("vancouver");
+		var d = new Date();
+		var y = d.getFullYear();
+		var m = d.getMonth() + 1;
+		var day = d.getDate();
+		if (m == 1) {
+		var month = "January";
+		} else if (m == 2) {
+		var month = "February";
+		} else if (m == 3) {
+		var month = "March";
+		} else if (m == 4) {
+		var month = "April";
+		} else if (m == 5) {
+		var month = "May";
+		} else if (m == 6) {
+		var month = "June";
+		} else if (m == 7) {
+		var month = "July";
+		} else if (m == 8) {
+		var month = "August";
+		} else if (m == 9) {
+		var month = "September";
+		} else if (m == 10) {
+		var month = "October";
+		} else if (m == 11) {
+		var month = "November";
+		} else if (m == 12) {
+		var month = "December";
+		}
+		acm.onclick = function() {
+		var style = "{{ range $elem_index, $elem_val := .Page.Params.authors }}{{ .surname }}, {{ replaceRE "[[:lower:]]+" "." .given_name }}{{ if lt $elem_index (sub (len $.Params.authors) 2) }}, {{ else if lt $elem_index (sub (len $.Params.authors) 1) }} and {{ end }}{{ end }} {{ dateFormat "2006" .Date }}. {{ .Title }}. <i>{{ .Site.Title }}</i>. {{ .Page.Params.volume }}, {{ with .Page.Params.issue }}{{ . }} {{ end }}({{ dateFormat "Jan. 2006" .Date }}), {{ .Page.Params.firstpage }}{{ with .Page.Params.lastpage }}-{{ . }}{{ end }}.{{ with .Page.Params.DOI}} DOI:https://doi.org/{{ . }}{{ end }}"
+		document.getElementById("citationtext").innerHTML = style;
+		return false;
+		}
+		acs.onclick = function() {
+		var style = "{{ range $elem_index, $elem_val := .Page.Params.authors }}{{ .surname }}, {{ replaceRE "[[:lower:]]+" "." .given_name }}{{ if lt $elem_index (sub (len $.Params.authors) 1) }}; {{ end }}{{ end }} {{ .Title }}. <i>{{ .Site.Params.abbreviatedTitle }}</i> <b>{{ dateFormat "2006" .Date }}</b>, <i>{{ .Page.Params.volume }}</i>, {{ .Page.Params.firstpage }}{{ with .Page.Params.lastpage }}-{{ . }}{{ end }}."
+		document.getElementById("citationtext").innerHTML = style;
+		return false;
+		}
+		apa.onclick = function() {
+		var style = "{{ range $elem_index, $elem_val := .Page.Params.authors }}{{ .surname }}, {{ replaceRE "[[:lower:]]+" "." .given_name }}{{ if lt $elem_index (sub (len $.Params.authors) 2) }}, {{ else if lt $elem_index (sub (len $.Params.authors) 1) }}, & {{ end }}{{ end }} ({{ dateFormat "2006" .Date }}). {{ .Title }}. <i>{{ .Site.Title }}</i>, <i>{{ .Page.Params.volume }}</i>, {{ .Page.Params.firstpage }}{{ with .Page.Params.lastpage }}-{{ . }}{{ end }}.{{ with .Page.Params.DOI}} https://doi.org/{{ . }}{{ end }}"
+		document.getElementById("citationtext").innerHTML = style;
+		return false;
+		}
+		abnt.onclick = function() {
+		var style = "{{ range $elem_index, $elem_val := .Page.Params.authors }}{{ upper .surname }}, {{ replaceRE "[[:lower:]]+" "." .given_name }}{{ if lt $elem_index (sub (len $.Params.authors) 1) }}; {{ end }}{{ end }} {{ .Title }}. <b>{{ .Site.Title }}</b>, v. {{ .Page.Params.volume }}, {{ with .Page.Params.issue }}n. {{ . }}, {{ end }}p. {{ .Page.Params.firstpage }}{{ with .Page.Params.lastpage }}-{{ . }}{{ end }}, {{ dateFormat "2 Jan. 2006" .Date }}."
+		document.getElementById("citationtext").innerHTML = style;
+		return false;
+		}
+		chicago.onclick = function() {
+		var style = "{{ range $elem_index, $elem_val := .Page.Params.authors }}{{ .surname }}, {{ .given_name }}{{ if lt $elem_index (sub (len $.Params.authors) 2) }}, {{ else if lt $elem_index (sub (len $.Params.authors) 1) }} and {{ end }}{{ end }}. {{ dateFormat "2006" .Date }}. “{{ .Title }}”. <i>{{ .Site.Title }}</i> {{ .Page.Params.volume}}{{ with .Page.Params.issue }} ({{ . }}){{ end }}, {{ .Page.Params.firstpage }}{{ with .Page.Params.lastpage }}-{{ . }}{{ end }}."
+		document.getElementById("citationtext").innerHTML = style;
+		return false;
+		}
+		harvard.onclick = function() {
+		var style = "{{ range $elem_index, $elem_val := .Page.Params.authors }}{{ .surname }}, {{ replaceRE "[[:lower:]]+" "." .given_name }}{{ if lt $elem_index (sub (len $.Params.authors) 2) }}, {{ else if lt $elem_index (sub (len $.Params.authors) 1) }} and {{ end }}{{ end }} ({{ dateFormat "2006" .Date }}) “{{ .Title }}”, <i>{{ .Site.Title }}</i>, {{ .Page.Params.volume}}{{ with .Page.Params.issue }}({{ . }}){{ end }}, p. {{ .Page.Params.firstpage }}{{ with .Page.Params.lastpage }}-{{ . }}{{ end }}.{{ with .Page.Params.DOI}} doi: {{ . }}.{{ end }}"
+		document.getElementById("citationtext").innerHTML = style;
+		return false;
+		}
+		ieee.onclick = function() {
+		var style = "{{ range $elem_index, $elem_val := .Page.Params.authors }}{{ replaceRE "[[:lower:]]+" "." .given_name }} {{ .surname }}{{ if lt $elem_index (sub (len $.Params.authors) 2) }}, {{ else if lt $elem_index (sub (len $.Params.authors) 1) }}, and {{ end }}{{ end }}, “{{ .Title }}”, <i>{{ .Site.Params.abbreviatedTitle }}</i>, vol. {{ .Page.Params.volume}}, {{ with .Page.Params.issue }}no. {{ . }},{{ end }} p. {{ .Page.Params.firstpage }}{{ with .Page.Params.lastpage }}-{{ . }}{{ end }}, {{ dateFormat "Jan. 2006" .Date }}."
+		document.getElementById("citationtext").innerHTML = style;
+		return false;
+		}
+		mla.onclick = function() {
+		var style = "{{ if lt (len .Params.authors) 3 }}{{ range $elem_index, $elem_val := .Page.Params.authors }}{{ if eq $elem_index 0}}{{ .surname }}, {{ .given_name }}{{ if gt (len $.Page.Params.authors) 1 }}, and {{ end }}{{ else }}{{ .given_name }} {{ .surname }}{{ end }}{{ end }}{{ else }}{{ range first 1 .Page.Params.authors }}{{ .surname }}, {{ .given_name }}, et al{{ end }}{{ end }}. “{{ .Title }}.” <i>{{ .Site.Title }}</i>, vol. {{ .Page.Params.volume }}, {{ with .Page.Params.issue }}no. {{ . }}, {{ end }}{{ dateFormat "2006" .Date }}, {{ if .Page.Params.lastpage }}pp. {{ .Page.Params.firstpage }}-{{ .Page.Params.lastpage }}{{ else }}p. {{ .Page.Params.firstpage }}{{ end }}{{ with .Page.Params.DOI }}, doi:{{ . }}{{ end }}."
+		document.getElementById("citationtext").innerHTML = style;
+		return false;
+		}
+		turabian.onclick = function() {
+		var style = "{{ range $elem_index, $elem_val := .Page.Params.authors }}{{ if eq $elem_index 0}}{{ .surname }}, {{ .given_name }}{{ if lt $elem_index (sub (len $.Params.authors) 2) }}, {{ else if lt $elem_index (sub (len $.Params.authors) 1) }}, and {{ else }}{{ end }}{{ else }}{{ .given_name }} {{ .surname }}{{ if lt $elem_index (sub (len $.Params.authors) 2) }}, {{ else if lt $elem_index (sub (len $.Params.authors) 1) }}, and {{ else }}{{ end }}{{ end }}{{ end }}. “{{ .Title }}”. <i>{{ .Site.Title }}</i> {{ .Page.Params.volume }}, {{ with .Page.Params.issue }}no. {{ . }} {{ end }}({{ dateFormat "January 2, 2006" .Date }}): {{ .Page.Params.firstpage }}{{ with .Page.Params.lastpage }}-{{ . }}{{ end }}. Acccessed " + month + " " + day + ", " + y + ". {{ .Permalink }}."
+		document.getElementById("citationtext").innerHTML = style;
+		return false;
+		}
+		vancouver.onclick = function() {
+		var style = "{{ range $elem_index, $elem_val := .Page.Params.authors }}{{ .surname }}, {{ range ( findRE "[[:upper:]]" .given_name ) }}{{ . }}{{ end }}{{ if lt $elem_index (sub (len $.Params.authors) 1) }}, {{ end }}{{ end }}. {{ .Title }}. {{ .Site.Params.abbreviatedTitle }} [Internet]. {{ dateFormat "2006 Jan" .Date }} [cited " + y + " " + month + " " + day + "];{{ .Page.Params.volume }}{{ with .Page.Params.issue }}({{ . }}){{ end }}:{{ .Page.Params.firstpage }}{{ with .Page.Params.lastpage }}-{{ . }}{{ end }}. Available from: {{ .Permalink }}{{ with .Page.Params.DOI }} DOI: {{ . }}{{ end }}"
+		document.getElementById("citationtext").innerHTML = style;
+		return false;
+		}
+	}
+</script>

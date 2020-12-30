@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="{{ if $.Params.language }}{{ slicestr $.Params.language  0 2 }}{{ else }}{{ $.Site.Language }}{{ end }}">
+<head>
+{{ partial "head.html" . }}{{ with .Site.Params.mirrorfor }}
+<link rel="canonical" href="{{ . }}" />
+{{ end }}{{ partial "social-meta.html" . }}{{ partial "stylesheets.html" . }}
+</head>
+<body>
+{{ partial "global-header.html" . }}
+{{ partial "header.html" . }}
+<div class="container container-homepage-issue">{{ if .Site.Params.currentissuepath }}{{ with .Site.GetPage "article" }}{{ with .Site.GetPage .Site.Params.currentissuepath }}
+{{ partial "homepage-issue-header.html" . }}
+{{ partial "homepage-issue-description.html" . }}
+{{ if .Title }}<div class="row justify-content-center">{{ else }}<div class="row justify-content-center issue-only-image">{{ end }}
+<div class="col-12 col-lg-9">
+{{ partial "homepage-issue-toc.html" . }}
+{{ end }}{{ end }}{{ else }}{{ with .Site.GetPage "article" }}{{ range first 1 .Pages }}
+{{ partial "homepage-issue-header.html" . }}
+{{ partial "homepage-issue-description.html" . }}
+{{ if .Title }}<div class="row justify-content-center">{{ else }}<div class="row justify-content-center issue-only-image">{{ end }}
+<div class="col-12 col-lg-9">
+{{ partial "homepage-issue-toc.html" . }}
+{{ end }}{{ end }}{{ end }}{{ partial "view-all-issues-button.html" . }}
+</div>
+{{ partial "additional-content.html" . }}
+</div>
+</div>
+{{ partial "footer.html" . }}
+{{ partial "javascript-libraries.html" . }}
+</body>
+</html>

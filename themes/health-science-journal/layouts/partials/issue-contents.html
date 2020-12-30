@@ -1,0 +1,37 @@
+{{ if .Page.Params.issuecover}}{{ else }}<div class="row justify-content-center">{{ end }}
+<div class="col-12 col-lg-9">
+<div class="issue-toc">
+{{ range .Pages.GroupByParam "articleType_weight" }}
+<div class="issue-toc-section">
+<h3 class="issue-toc-section-title">{{ range first 1 .Pages }}{{ .Params.articleType }}{{ end }}</h3>
+{{ range (.Pages.ByDate) }}
+<div class="article-summary">
+<div class="row">
+<div class="col">
+<div class="article-summary-authors">{{$listlen := sub (len .Page.Params.authors) 1 }}{{ range $elem_index, $elem_val := .Page.Params.authors }}{{ .given_name }} {{ .surname }}{{ if lt $elem_index $listlen }}, {{ end }}{{ end }}
+</div>
+</div>
+<div class="col-3 col-md-2 col-lg-2">
+<div class="article-summary-pages text-right">{{ .Params.firstpage }}{{ with .Params.lastpage }}-{{ . }}{{ end }}</div>
+</div>
+</div>
+<div class="article-summary-title"><a href="{{ .Permalink }}">{{ .Title }}</a></div>
+<div class="article-summary-doi"><a href="https://doi.org/{{ .Params.DOI }}">https://doi.org/{{ .Params.DOI }}</a></div>
+<div class="article-summary-galleys">
+{{ if .Params.PDF }}<a class="btn btn-primary" href="{{ .Page.Permalink }}view-pdf.html">
+PDF
+</a>&nbsp;{{ end }}{{ if .Params.HTML }}<a class="btn btn-primary" href="{{ .Page.Permalink }}view-html.html">
+HTML
+</a>&nbsp;{{ end }}{{ if .Params.XML }}<a class="btn btn-primary" href="{{ .Page.Permalink }}view-lens.html">
+XML
+</a>&nbsp;{{ end }}{{ if .Params.EPUB }}<a class="btn btn-primary" href="{{ .Page.Permalink }}{{ .Params.EPUB }}">
+EPUB
+</a>&nbsp;{{ end }}{{ if .Params.customGalleys }}{{ range .Params.customGalleys }}{{ if .galleyURL }}<a class="btn btn-primary" href="{{ .galleyURL }}">
+{{ .galleyname }}
+</a>&nbsp;{{ end }}{{ end }}{{ end }}</div>
+</div>{{ end }}
+</div>
+{{ end }}
+</div>
+</div>
+{{ if .Page.Params.issuecover}}{{ else }}</div>{{ end }}

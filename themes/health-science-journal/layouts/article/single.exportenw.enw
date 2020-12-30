@@ -1,0 +1,13 @@
+%0 Journal Article
+{{ range .Page.Params.authors }}%A {{ .surname }}, {{ .given_name }}
+{{ end }}%D {{ dateFormat "2006" .Date }}
+%T {{ .Title }}
+%J {{ .Site.Title }}
+{{ with .Page.Params.volume }}%V {{ . }}
+{{ end }}{{ with .Page.Params.issue }}%N {{ . }}
+{{ end }}{{ with .Page.Params.DOI}}%R {{ . }}
+{{ end }}%U {{ .Permalink }}
+{{ with .Page.Params.firstpage }}%P {{ . }}{{ with $.Page.Params.lastpage }}-{{ . }}{{ end }}
+{{ end }}{{ with .Site.Params.eISSN }}%@ {{ . }}
+{{ end }}%U {{ .Permalink }}
+%X {{ .Page.Params.abstract }}

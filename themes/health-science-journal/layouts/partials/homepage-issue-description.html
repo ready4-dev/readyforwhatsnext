@@ -1,0 +1,11 @@
+{{ $issuelink := .Page.Permalink }}{{ if .Title }}<div class="row justify-content-center homepage-issue-header">
+{{ with .Page.Params.issuecover }}<div class="col-lg-3"><a href="{{ $issuelink }}"><img class="img-fluid homepage-issue-cover" src="{{ . | absURL }}"></a></div>{{ end }}
+<div class="col-lg-9">
+<div class="homepage-issue-description-wrapper">
+<div class="homepage-issue-description">
+<div class="h2">{{ .Title }}</div>
+{{ with .Description }}<p>{{ . }}</p><div class="homepage-issue-description-more"><a href="{{ $issuelink }}">More</a></div>{{ end }}
+</div>
+</div>
+</div>
+</div>{{ end }}

@@ -1,0 +1,4 @@
+{{ hugo.Generator }}{{ partial "favicon.html" . }}
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>{{ if .Page.Title }}{{ .Title }}{{ else }}{{ .Site.Title }}{{ end }}</title>
+{{ if .Page.Params.description }}<meta name="description" content="{{ .Page.Params.description | truncate 250 }}">{{ else if .Page.Params.abstract }}<meta name="description" content="{{ .Page.Params.abstract | truncate 250 }}">{{ else if .Site.Params.description }}<meta name="description" content="{{ .Site.Params.description | truncate 250 }}">{{ end }}

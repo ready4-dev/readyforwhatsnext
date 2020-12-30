@@ -1,0 +1,26 @@
+<footer class="site-footer">
+<div class="container site-footer-content">
+<div class="container site-footer-sidebar" role="complementary" aria-label="Sidebar">
+<div class="row">{{ range $elem_index, $elem_val := .Site.Params.customblocks }}
+<div class="pkp_block block_custom" id="customblock-Publisher-{{ add $elem_index 1 }}">
+<div class="content">
+<p><span class="title">{{ .name }}</span></p>
+<p>{{ .content | markdownify }}</p>
+</div>
+</div>{{ end }}</div>
+</div>
+<div class="container site-footer-content">
+<div class="row">
+{{ with .Site.Params.footercontent }}<div class="col-md site-footer-content align-self-center">
+<p>{{ . | markdownify }}</p>
+<p>ISSN: {{ with $.Site.Params.eISSN }}{{ . }}{{ end }}</p>
+</div>
+{{ end }}<div class="col-md col-md-2 align-self-center text-right">
+<a href="https://pkp.sfu.ca">
+<img class="footer-brand-image" alt="Submission platform & workflow by OJS/PKP" src="{{ "img/ojs_brand_white.png" | absURL }}" loading="lazy">
+</a>
+</div>
+</div>
+</div>
+</div>
+</footer>

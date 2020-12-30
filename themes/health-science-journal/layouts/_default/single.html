@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="{{ if $.Params.language }}{{ slicestr $.Params.language  0 2 }}{{ else }}{{ $.Site.Language }}{{ end }}">
+<head>
+{{ partial "relcanonical.html" . }}
+{{ partial "head.html" . }}
+{{ partial "social-meta.html" . }}
+{{ partial "stylesheets.html" . }}
+</head>
+<body>
+{{ partial "global-header.html" . }}
+<div class="container page-custom">
+<div class="row page-header justify-content-md-center">
+<div class="col-md-8">
+<h1>{{ .Title }}</h1>
+</div>
+</div>
+<div class="row justify-content-md-center">
+<div class="col-md-8">
+<div class="page-content">
+{{ .Content }}
+</div>
+</div>
+</div>
+</div>
+{{ partial "footer.html" . }}
+{{ partial "javascript-libraries.html" . }}
+</body>
+</html>

@@ -1,0 +1,24 @@
+{{ if .Params.twittercard }}<meta name="twitter:card" content="{{ .Params.twittercard }}" />
+{{ else if .Site.Params.twittercard }}<meta name="twitter:card" content="{{ .Site.Params.twittercard }}" />
+{{ end }}{{ with .Site.Params.twitterhandle }}<meta name="twitter:site" content="{{ . }}" />
+{{ end }}{{ if .Params.twitterhandle }}{{ range .Params.twitterhandle }}<meta name="twitter:creator" content="{{ . }}" />
+{{ end }}{{ end }}{{ if .Params.socialimage }}<meta name="twitter:image" content="{{ .Params.socialimage | absURL }}" />
+<meta name="og:image" content="{{ .Params.socialimage | absURL }}" />
+{{ else if .Site.Params.socialimage }}<meta name="twitter:image" content="{{ .Site.Params.socialimage | absURL }}" />
+<meta name="og:image" content="{{ .Site.Params.socialimage | absURL }}" />
+{{ end }}{{ if .Params.socialimagealt }}<meta name="twitter:image:alt" content="{{ .Params.socialimagealt }}" />
+<meta name="og:image:alt" content="{{ .Params.socialimagealt }}" />
+{{ else if .Site.Params.socialimagealt }}<meta name="twitter:image:alt" content="{{ .Site.Params.socialimagealt }}" />
+<meta name="og:image:alt" content="{{ .Site.Params.socialimagealt }}" />
+{{ end }}{{ if .Title }}<meta name="twitter:title" content="{{ .Title }}" />
+<meta name="og:title" content="{{ .Title }}" />{{ else }}<meta name="twitter:title" content="{{ .Site.Title }}" />
+<meta name="og:title" content="{{ .Site.Title }}" />{{ end }}
+{{ if .Params.abstract }}<meta property="og:type" content="article" />
+<meta name="twitter:description" content="{{ truncate 300 .Params.abstract }}" />
+<meta name="og:description" content="{{ truncate 300 .Params.abstract }}" />{{ else }}<meta property="og:type" content="website" />{{ if .Description }}
+<meta name="twitter:description" content="{{ truncate 300 .Description }}" />
+<meta name="og:description" content="{{ truncate 300 .Description }}" />{{ else if .Site.Params.socialdescription }}
+<meta name="twitter:description" content="{{ truncate 300 .Site.Params.socialdescription }}" />
+<meta name="og:description" content="{{ truncate 300 .Site.Params.socialdescription }}" />{{ end }}{{ end }}
+<meta property="og:url" content="{{ .Permalink }}" />
+<meta property="og:site_name" content="{{ .Site.Title }}" />

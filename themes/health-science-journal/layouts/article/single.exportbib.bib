@@ -1,0 +1,13 @@
+@article{{ "{" }}{{ range ( findRE "[[:upper:]]" .Site.Title ) }}{{ . }}{{ end }}{{ .Page.Params.articleID }}{{ range first 1 .Page.Params.authors }}{{ .surname }}{{ end }}{{ dateFormat "2006" .Date }},
+   author = {{ "{" }}{{ range $elem_index, $elem_val := .Page.Params.authors }}{{ .surname }}, {{ .given_name }}{{ if lt $elem_index (sub (len $.Params.authors) 1) }} and {{ end }}{{ end }}{{ "}" }},
+   title = {{ "{" }}{{ .Title }}{{ "}" }},
+   journal = {{ "{" }}{{ .Site.Title }}{{ "}" }},
+   volume = {{ "{" }}{{ .Page.Params.volume }}{{ "}" }},{{ with .Page.Params.issue }}
+   number = {{ "{" }}{{ . }}{{ "}" }},{{ end }}
+   pages = {{ "{" }}{{ .Page.Params.firstpage }}{{ with .Page.Params.lastpage }}-{{ . }}{{ end }}{{ "}" }},{{ with .Site.Params.eISSN }}
+   ISSN = {{ "{" }}{{ . }}{{ "}" }},{{ end }}{{ with .Page.Params.DOI }}
+   DOI = {{ "{" }}{{ . }}{{ "}" }},{{ end }}
+   url = {{ "{" }}{{ .Permalink }}{{ "}" }},
+   year = {{ "{" }}{{ dateFormat "2006" .Date }}{{ "}" }},
+   type = {{ "{" }}Journal Article{{ "}" }}
+}

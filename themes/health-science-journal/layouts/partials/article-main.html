@@ -1,0 +1,91 @@
+<div class="row justify-content-md-center" id="mainArticleContent">
+<div class="col-lg-3 order-lg-2" id="articleDetailsWrapper">
+<div class="article-details-sidebar" id="articleDetails">
+<div class="article-details-block article-details-galleys article-details-galleys-sidebar">
+{{ if .Params.PDF }}<div class="article-details-galley"><a class="btn btn-primary" href="{{ .Page.Permalink }}view-pdf.html">
+PDF
+</a></div>{{ end }}
+{{ if .Params.HTML }}&nbsp;<div class="article-details-galley"><a class="btn btn-primary" href="{{ .Page.Permalink }}view-html.html">
+HTML
+</a></div>{{ end }}
+{{ if .Params.XML }}&nbsp;<div class="article-details-galley"><a class="btn btn-primary" href="{{ .Page.Permalink }}view-lens.html">
+XML
+</a></div>{{ end }}
+{{ if .Params.EPUB }}&nbsp;<div class="article-details-galley"><a class="btn btn-primary" href="{{ .Page.Permalink }}{{ .Params.EPUB }}">
+EPUB
+</a></div>{{ end }}
+{{ if .Params.customGalleys }}{{ range .Params.customGalleys }}{{ if .galleyURL }}&nbsp;<div class="article-details-galley"><a class="btn btn-primary" href="{{ .galleyURL }}">
+{{ .galleyname }}
+</a></div>&nbsp;{{ end }}{{ end }}{{ end }}
+</div>
+{{ if eq .Site.Params.crossmark_enabled true }}
+<div class="article-details-block">
+<script src="https://crossmark-cdn.crossref.org/widget/v2.0/widget.js"></script>
+<a data-target="crossmark"><img src="https://crossmark-cdn.crossref.org/widget/v2.0/logos/CROSSMARK_Color_horizontal.svg" width="150" /></a>
+</div>{{ end }}
+<div class="article-details-block article-details-keywords">
+<h2 class="article-details-heading">
+Keywords
+</h2>
+<div class="article-details-keywords-value">
+{{ range $elem_index, $elem_val := .Params.keywords }}<span>{{ . }}</span>{{ if lt $elem_index (sub (len $.Params.keywords) 1) }}<br>{{ end }}{{ end }}</div>
+</div>
+{{ partial "citation-export-plugin.html" . }}
+{{ if .Page.Params.funding }}<div class="item funders">
+<div class="value">
+<h3>Funding data</h3>
+<ul>{{ $listedfunders := slice }}
+{{ range .Page.Params.funding }}{{ if in $listedfunders .funder }}{{ else }}<li>{{ if .fundref }}<a href="https://search.crossref.org/funding?q={{ .fundref }}">{{ .funder }}</a>{{ else }}{{ .funder }}{{ end }}{{ $listedfunders = $listedfunders | append .funder }}{{ $current := .funder }}{{ $awards := slice }}{{ range $.Page.Params.funding }}{{ if eq $current .funder }}{{ if .awardid }}{{ $awards = $awards | append .awardid }}{{ end }}{{ end }}{{ end }}{{ with $awards }}<br />Grants: {{ delimit . "; " }}{{ end }}</li>
+{{ end }}{{ end }}</ul>
+</div>
+</div>{{ end }}
+</div>
+</div>
+<div class="col-lg-9 order-lg-1" id="articleMainWrapper">
+<div class="article-details-main" id="articleMain">
+<div class="article-details-block article-details-abstract">
+<h2 class="article-details-heading">Abstract</h2>
+<p>{{ markdownify .Page.Params.abstract }}</p>
+</div>
+<div class="article-details-block article-details-doi small-screen">
+<a href="https://doi.org/{{ .Page.Params.DOI }}">https://doi.org/{{ .Page.Params.DOI }}</a>
+</div>
+<div class="article-details-block article-details-galleys article-details-galleys-btm">
+{{ if .Params.PDF }}<div class="article-details-galley"><a class="btn btn-primary" href="{{ .Page.Permalink }}view-pdf.html">
+PDF
+</a></div>{{ end }}
+{{ if .Params.HTML }}&nbsp;<div class="article-details-galley"><a class="btn btn-primary" href="{{ .Page.Permalink }}view-html.html">
+HTML
+</a></div>{{ end }}
+{{ if .Params.XML }}&nbsp;<div class="article-details-galley"><a class="btn btn-primary" href="{{ .Page.Permalink }}view-lens.html">
+XML
+</a></div>{{ end }}
+{{ if .Params.EPUB }}&nbsp;<div class="article-details-galley"><a class="btn btn-primary" href="{{ .Page.Permalink }}{{ .Params.EPUB }}">
+EPUB
+</a></div>{{ end }}
+{{ if .Params.customGalleys }}{{ range .Params.customGalleys }}{{ if .galleyURL }}&nbsp;<div class="article-details-galley"><a class="btn btn-primary" href="{{ .galleyURL }}">
+{{ .galleyname }}
+</a></div>{{ end }}{{ end }}{{ end }}
+</div>
+{{ if .Page.Params.references }}<div class="article-details-block article-details-references">
+<h2 class="article-details-heading">
+References
+</h2>
+<div class="article-details-references-value">
+{{ range .Page.Params.references }}<p>{{ htmlUnescape . }}</p>
+{{ end }}
+</div>
+</div>{{ end }}
+{{ if .Page.Params.license }}<div class="article-details-block article-details-license">
+{{ if in .Page.Params.license "creativecommons.org/licenses/by/4.0" }}<a rel="license" href="https://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons Attribution License Logo" src="{{ "/img/cc-by.svg" | absURL }}" width="88" height="31"></a><p>This work is licensed under a <a rel="license" href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.</p>{{ else if in .Page.Params.license "creativecommons.org/licenses/by-nc/4.0" }}<a rel="license" href="https://creativecommons.org/licenses/by-nc/4.0/"><img alt="Creative Commons Attribution NonCommercial License Logo" src="{{ "/img/cc-by-nc.svg" | absURL }}" width="88" height="31"></a><p>This work is licensed under a <a rel="license" href="https://creativecommons.org/licenses/by-nc/4.0/">Creative Commons Attribution NonCommercial 4.0 International License</a>.</p>{{ else if in .Page.Params.license "creativecommons.org/licenses/by-sa/4.0" }}<a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons Attribution Share Alike License Logo" src="{{ "/img/cc-by-sa.svg" | absURL }}" width="88" height="31"></a><p>This work is licensed under a <a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution Share Alike 4.0 International License</a>.</p>{{ else if in .Page.Params.license "creativecommons.org/licenses/by-nd/4.0" }}<a rel="license" href="https://creativecommons.org/licenses/by-nd/4.0/"><img alt="Creative Commons Attribution No Derivatives License Logo" src="{{ "/img/cc-by-nd.svg" | absURL }}" width="88" height="31"></a><p>This work is licensed under a <a rel="license" href="https://creativecommons.org/licenses/by-nd/4.0/">Creative Commons Attribution No Derivatives 4.0 International License</a>.</p>{{ else if in .Page.Params.license "creativecommons.org/licenses/by-nc-sa/4.0" }}<a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons Attribution NonCommercial Share Alike License Logo" src="{{ "/img/cc-by-nc-sa.svg" | absURL }}" width="88" height="31"></a><p>This work is licensed under a <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution NonCommercial Share Alike 4.0 International License</a>.</p>{{ else if in .Page.Params.license "creativecommons.org/licenses/by-nc-nd/4.0" }}<a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/"><img alt="Creative Commons Attribution NonCommercial No Derivatives License Logo" src="{{ "/img/cc-by-nc-nd.svg" | absURL }}" width="88" height="31"></a><p>This work is licensed under a <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/">Creative Commons Attribution NonCommercial No Derivatives 4.0 International License</a>.</p>{{ else if in .Page.Params.license "creativecommons.org/publicdomain/zero/1.0" }}<a rel="license" href="https://creativecommons.org/publicdomain/zero/1.0/"><img alt="Creative Commons Public Domain Dedication Logo" src="{{ "/img/cc-zero.svg" | absURL }}" width="88" height="31"></a><p>To the extent possible under law, all copyright and related or neighboring rights to this work have been waived under the <a rel="license" href="https://creativecommons.org/publicdomain/zero/1.0/">Creative Commons Public Domain Dedication</a>.</p>{{ end }}
+</div>{{ end }}
+{{ if (and (.Params.canonicalurl) (.Site.Params.mirrorfor)) }}<div class="article-details-block">
+<h3 class="label">
+Downloads
+</h3>
+<div>This is an archival static mirror of the journal website. For article statistics, please visit the <a href="{{ .Page.Params.canonicalurl }}">main website</a>.</div>
+</div>{{ end }}
+</div>
+</div>
+</div>
+

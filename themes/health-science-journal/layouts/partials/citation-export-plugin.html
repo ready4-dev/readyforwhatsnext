@@ -1,0 +1,62 @@
+<div class="article-details-block article-details-how-to-cite">
+<h2 class="article-details-heading">
+How to Cite
+</h2>
+<div id="citationOutput" class="article-details-how-to-cite-citation" role="region" aria-live="polite">
+<div class="csl-bib-body">
+<div class="csl-entry" id="citationtext">{{ range $elem_index, $elem_val := .Page.Params.authors }}{{ .surname }}, {{ replaceRE "[[:lower:]]+" "." .given_name }}{{ if lt $elem_index (sub (len $.Params.authors) 2) }}, {{ else if lt $elem_index (sub (len $.Params.authors) 1) }}, & {{ end }}{{ end }} ({{ dateFormat "2006" .Date }}). {{ .Title }}. <i>{{ .Site.Title }}</i>, <i>{{ .Page.Params.volume }}</i>, {{ .Page.Params.firstpage }}{{ with .Page.Params.lastpage }}-{{ . }}{{ end }}.{{ with .Page.Params.DOI}} https://doi.org/{{ . }}{{ end }}</div>
+</div>
+</div>
+<div class="dropdown show">
+<button class="btn dropdown-toggle" type="button" id="cslCitationFormatsButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+More Citation Formats
+</button>
+<div class="dropdown-menu" aria-labelledby="cslCitationFormatsButton">
+<a id="acm" class="dropdown-item" href="{{ .Permalink }}">
+ACM
+</a>
+<a id="acs" class="dropdown-item" href="{{ .Permalink }}">
+ACS
+</a>
+<a id="apa" class="dropdown-item" href="{{ .Permalink }}">
+APA
+</a>
+<a id="abnt" class="dropdown-item" href="{{ .Permalink }}">
+ABNT
+</a>
+<a id="chicago" class="dropdown-item" href="{{ .Permalink }}">
+Chicago
+</a>
+<a id="harvard" class="dropdown-item" href="{{ .Permalink }}">
+Harvard
+</a>
+<a id="ieee" class="dropdown-item" href="{{ .Permalink }}">
+IEEE
+</a>
+<a id="mla" class="dropdown-item" href="{{ .Permalink }}">
+MLA
+</a>
+<a id="turabian" class="dropdown-item" href="{{ .Permalink }}">
+Turabian
+</a>
+<a id="vancouver" class="dropdown-item" href="{{ .Permalink }}">
+Vancouver
+</a>
+<h3 class="dropdown-header">
+Download Citation
+</h3>
+<a class="dropdown-item" href="{{ .Permalink }}export-citation.ris">
+Zotero/Mendeley/Endnote (RIS)
+</a>
+<a class="dropdown-item" href="{{ .Permalink }}export-citation.enw">
+Endnote Export (ENW)
+</a>
+<a class="dropdown-item" href="{{ .Permalink }}export-citation.bib">
+BibTeX
+</a>
+<a class="dropdown-item" href="{{ .Permalink }}export-citation.json">
+CSL-JSON
+</a>
+</div>
+</div>
+</div>

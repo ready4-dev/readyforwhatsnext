@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="{{ if $.Params.language }}{{ slicestr $.Params.language  0 2 }}{{ else }}{{ $.Site.Language }}{{ end }}">
+<head>
+{{ partial "relcanonical.html" . }}
+{{ partial "head.html" . }}
+{{ partial "social-meta.html" . }}
+{{ partial "stylesheets.html" . }}
+</head>
+<body>
+{{ partial "global-header.html" . }}
+<div class="container page-archives">
+<div class="page-header page-archives-header">
+<h1>{{ .Title }}</h1>
+</div>
+<div class="row justify-content-around">
+{{ range (.Paginator 12).Pages }}
+<div class="col-md-3 col-lg-2">
+	<div class="card issue-summary">
+		<div class="card-body">
+			<h2 class="card-title issue-summary-series"><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
+			<div class="card-text"><p class="issue-summary-date">{{ dateFormat "January 2, 2006" .Date }}</p><p class="issue-summary-title">{{ .Summary }}</p></div>
+		</div>
+	</div>
+</div>
+{{ end }}
+</div>
+</div>
+{{ partial "footer.html" . }}
+{{ partial "javascript-libraries.html" . }}
+</body>
+</html>

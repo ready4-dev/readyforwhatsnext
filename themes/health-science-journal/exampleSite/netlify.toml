@@ -1,0 +1,7 @@
+[build]
+  publish = "exampleSite/public"
+  command = "hugo --gc --minify --source exampleSite --themesDir ../.. --theme repo --baseURL https://health-sci-j-demo.netlify.app"
+
+[context.production.environment]
+HUGO_VERSION = "0.79.1"
+HUGO_ENV = "production"

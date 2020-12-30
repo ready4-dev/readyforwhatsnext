@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="{{ if $.Params.language }}{{ slicestr $.Params.language  0 2 }}{{ else }}{{ $.Site.Language }}{{ end }}">
+<head>
+{{ partial "relcanonical.html" . }}
+{{ partial "head.html" . }}
+{{ partial "social-meta.html" . }}
+{{ partial "stylesheets.html" . }}
+</head>
+<body>
+{{ partial "global-header.html" . }}
+{{ if eq .Page.Params.listtype "archives" }}{{ partial "archives-toc.html" . }}
+{{ else }}
+<div class="container page-issue">
+{{ partial "issue-header.html" . }}
+{{ partial "issue-description.html" . }}
+{{ partial "issue-contents.html" . }}
+</div>
+{{ end }}
+{{ partial "footer.html" . }}
+{{ partial "javascript-libraries.html" . }}
+</body>
+</html>

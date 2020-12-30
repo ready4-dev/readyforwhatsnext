@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="{{ if $.Params.language }}{{ slicestr $.Params.language  0 2 }}{{ else }}{{ $.Site.Language }}{{ end }}">
+<head>
+{{ partial "relcanonical.html" . }}
+{{ partial "head.html" . }}
+{{ partial "social-meta.html" . }}
+{{ partial "stylesheets.html" . }}
+</head>
+<body>
+{{ partial "global-header.html" . }}
+<div class="container page-issue">
+{{ if .Site.Params.currentissuepath }}
+{{ with .Site.GetPage "article" }}
+{{ with .Site.GetPage .Site.Params.currentissuepath }}
+{{ partial "issue-header.html" . }}
+{{ partial "issue-description.html" . }}
+{{ partial "issue-contents.html" . }}
+{{ end }}
+{{ end }}
+{{ else }}
+{{ with .Site.GetPage "article" }}
+{{ range first 1 .Pages }}
+{{ partial "issue-header.html" . }}
+{{ partial "issue-description.html" . }}
+{{ partial "issue-contents.html" . }}
+{{ end }}
+{{ end }}
+{{ end }}
+</div>
+{{ partial "footer.html" . }}
+{{ partial "javascript-libraries.html" . }}
+</body>
+</html>

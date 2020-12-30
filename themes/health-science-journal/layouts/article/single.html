@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="{{ if $.Params.language }}{{ slicestr $.Params.language  0 2 }}{{ else }}{{ $.Site.Language }}{{ end }}">
+<head>
+{{ partial "relcanonical.html" . }}
+{{ partial "head.html" . }}
+{{ partial "head_custom.html" . }}{{ partial "social-meta.html" . }}
+{{ partial "stylesheets.html" . }}
+</head>
+<body>
+{{ partial "global-header.html" . }}
+<div class="container page-article">
+<div class="article-details">
+{{ partial "article-header.html" . }}
+{{ partial "article-main.html" . }}
+</div>
+</div>
+{{ partial "footer.html" . }}
+{{ partial "citation-export-script.html" . }}
+{{ partial "javascript-libraries.html" . }}
+{{ partial "COinS.html" . }}
+</body>
+</html>

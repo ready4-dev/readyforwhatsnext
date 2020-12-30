@@ -1,0 +1,20 @@
+# Health Science Journal
+
+name = "Health Science Journal"
+license = "GPL v3+"
+licenselink = "https://github.com/epistemehealth/health-sciences-theme/blob/master/LICENSE.md"
+description = "Hugo port of the Health Sciences theme for Open Journal systems."
+homepage = "https://github.com/epistemehealth/health-sciences-theme"
+tags = ["journal", "health sciences"]
+features = ["journal", "publishing", "academic", "responsive"]
+min_version = "0.70.0"
+
+authors = [
+  {name = "Shaun Khoo", homepage = "https://orcid.org/0000-0002-0972-3788"},
+  {name = "Episteme Health Inc.", homepage = "https://about.epistemehealth.com/"}
+]
+
+[original]
+  name = "Health Science Journal"
+  homepage = "https://github.com/pkp/healthSciences"
+  repo = "https://github.com/pkp/healthSciences"

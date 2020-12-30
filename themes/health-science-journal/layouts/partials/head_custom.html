@@ -1,0 +1,54 @@
+<link rel="schema.DC" href="https://purl.org/dc/elements/1.1/" />
+{{ range $.Params.authors }}<meta name="DC.Creator.PersonalName" content="{{ .given_name }} {{ .surname }}" />
+{{ end }}{{ with .Date }}<meta name="DC.Date.created" scheme="ISO8601" content="{{ dateFormat "2006-01-02" . }}" />
+{{ end }}{{ with .Params.submitdate }}<meta name="DC.Date.dateSubmitted" scheme="ISO8601" content="{{ . }}" />
+{{ end }}{{ with .Params.issuedate }}<meta name="DC.Date.issuedate" scheme="ISO8601" content="{{ dateFormat "2006-01-02" . }}" />
+{{ end }}{{ with .Params.modifieddate }}<meta name="DC.Date.modified" scheme="ISO8601" content="{{ . }}" />
+{{ end }}{{ with .Params.abstract }}<meta name="DC.Description"  xml:lang="{{ if $.Params.language }}{{ slicestr $.Params.language  0 2 }}{{ else }}{{ $.Site.Language }}{{ end }}" content="{{ . }}" />
+{{ end }}{{ with .Params.PDF }}<meta name="DC.Format" scheme="IMT" content="application/pdf" />
+{{ end }}{{ with .Params.XML }}<meta name="DC.Format" scheme="IMT" content="text/xml" />
+{{ end }}{{ with .Params.HTML }}<meta name="DC.Format" scheme="IMT" content="text/html" />
+{{ end }}{{ with .Params.EPUB }}<meta name="DC.Format" scheme="IMT" content="application/epub+zip" />
+{{ end }}{{ with .Params.articleID }}<meta name="DC.Identifier" content="{{ . }}" />
+{{ end }}{{ with .Params.DOI }}<meta name="DC.Identifier.DOI" content="{{ . }}" />
+{{ end }}{{ with .Params.firstpage }}<meta name="DC.Identifier.pageNumber" content="{{ . }}" />
+{{ end }}{{ if (and (.Params.canonicalurl) (.Site.Params.mirrorfor)) -}}<meta name="DC.Identifier.URI" content="{{ .Params.canonicalurl }}" />
+{{ else }}<meta name="DC.Identifier.URI" content="{{ .Permalink }}" />
+{{ end }}{{ if .Params.language }}<meta name="DC.Language" scheme="ISO639-1" content="{{ slicestr .Params.language  0 2 }}" />
+{{ else }}<meta name="DC.Language" scheme="ISO639-1" content="{{ .Language  }}" />
+{{ end }}<meta name="DC.Rights" content="Copyright (c) {{ dateFormat "2006" .Date }} {{ range $elem_index, $elem_val := $.Params.authors }}{{ .given_name }} {{ .surname }}{{ if lt $elem_index (sub (len $.Params.authors) 1) }}, {{ end }}{{ end }}" />
+{{ with .Params.license }}<meta name="DC.Rights" content="{{ . }}" />
+{{ end }}<meta name="DC.Source" content="{{ .Site.Title }}" />
+{{ with .Site.Params.eISSN }}<meta name="DC.Source.ISSN" content="{{ . }}" />
+{{ end }}{{ with .Site.Params.printISSN }}<meta name="DC.Source.ISSN" content="{{ . }}" />
+{{ end }}{{ with .Params.volume }}<meta name="DC.Source.Volume" content="{{ . }}" />
+{{ end }}{{ with .Params.issue }}<meta name="DC.Source.Issue" content="{{ . }}" />
+{{ end }}{{ if .Site.Params.mirrorfor }}<meta name="DC.Source.URI" content="{{ .Site.Params.mirrorfor }}" />
+{{ else }}<meta name="DC.Source.URI" content="{{ .Site.BaseURL }}" />
+{{ end }}{{ range $.Params.keywords }}<meta name="DC.Subject" xml:lang="{{ if $.Params.language }}{{ slicestr $.Params.language  0 2 }}{{ else }}{{ $.Site.Language }}{{ end }}" content="{{ . }}" />
+{{ end }}{{ with .Title }}<meta name="DC.Title" content="{{ . }}" />
+{{ end }}<meta name="DC.Type" content="Text.Serial.Journal" />
+<meta name="DC.Type" xml:lang="{{ if $.Params.language }}{{ slicestr $.Params.language  0 2 }}{{ else }}{{ $.Site.Language }}{{ end }}" content="text" />
+{{ with .Params.articleType }}<meta name="DC.Type.articleType" content="{{ . }}" />
+{{ end }}<meta name="gs_meta_revision" content="1.1" />
+{{ with .Site.Title }}<meta name="citation_journal_title" content="{{ . }}" />
+{{ end }}{{ with .Site.Params.abbreviatedTitle }}<meta name="citation_journal_abbrev" content="{{ . }}" />
+{{ end }}{{ with .Site.Params.eISSN }}<meta name="citation_issn" content="{{ . }}" />
+{{ end }}{{ with .Site.Params.printISSN }}<meta name="citation_issn" content="{{ . }}" />
+{{ end }}{{ range $.Params.authors }}<meta name="citation_author" content="{{ .given_name }} {{ .surname }}" />
+{{ range .affiliations }}<meta name="citation_author_institution" content="{{ $affil_index := sub (int . ) 1 }}{{ range $elem_index, $elem_val := $.Page.Params.affiliations }}{{ if (eq $elem_index $affil_index ) }}{{ .name }}{{ end }}{{ end }}" />
+{{ end }}{{ end }}{{ with .Title }}<meta name="citation_title" content="{{ . }}" />
+{{ end }}{{ with .Date }}<meta name="citation_date" content="{{ dateFormat "2006/01/02" . }}" />
+{{ end }}{{ with .Params.volume }}<meta name="citation_volume" content="{{ . }}" />
+{{ end }}{{ with .Params.issue }}<meta name="citation_issue" content="{{ . }}" />
+{{ end }}{{ with .Params.firstpage }}<meta name="citation_firstpage" content="{{ . }}" />
+{{ end }}{{ if .Params.lastpage }}<meta name="citation_lastpage" content="{{ .Params.lastpage }}" />{{ else if .Params.firstpage }}<meta name="citation_lastpage" content="{{ .Params.firstpage }}" />
+{{ end }}{{ with .Params.DOI }}<meta name="citation_doi" content="{{ . }}" />
+{{ end }}{{ if (and (.Params.canonicalurl) (.Site.Params.mirrorfor)) -}}<meta name="citation_abstract_html_url" content="{{ .Params.canonicalurl }}" />
+{{ else }}<meta name="citation_abstract_html_url" content="{{ .Permalink }}" />
+{{ end }}{{ if .Params.language }}<meta name="citation_language" content="{{ slicestr .Params.language  0 2 }}" />
+{{ else }}<meta name="citation_language" content="{{ .Language  }}" />
+{{ end }}{{ range $.Params.keywords }}<meta name="citation_keywords" xml:lang="{{ if $.Params.language }}{{ slicestr $.Params.language  0 2 }}{{ else }}{{ $.Site.Language }}{{ end }}" content="{{ . }}" />
+{{ end }}{{ with .Params.PDF }}<meta name="citation_pdf_url" content="{{ $.Permalink }}{{ . }}" />
+{{ end }}{{ range.Params.references }}<meta name="citation_reference" content="{{ htmlUnescape . }}" />
+{{ end }}

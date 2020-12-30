@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="{{ if $.Params.language }}{{ slicestr $.Params.language  0 2 }}{{ else }}{{ $.Site.Language }}{{ end }}">
+<head>
+{{ partial "favicon.html" . }}
+{{ partial "relcanonical.html" . }}
+{{ partial "head.html" . }}
+{{ partial "head_custom.html" . }}
+{{ partial "social-meta.html" . }}
+{{ partial "stylesheets.html" . }}
+</head>
+<body class="pkp_page_article pkp_op_view">
+<header class="header_view">
+<a href="{{ .Permalink }}" class="return">
+
+<span class="pkp_screen_reader">
+Return to Article Details
+</span></a>
+<a href ="{{ .Permalink }}" class="title">{{ .Title }}</a>
+</header>
+<div id="htmlContainer" class="galley_view" style="overflow:visible;-webkit-overflow-scrolling:touch">
+	<iframe id="htmlGalleyFrame" name="htmlFrame" src="{{ .Permalink }}{{ .Page.Params.HTML }}" allowfullscreen webkitallowfullscreen></iframe>
+</div>
+</body>
+</html>

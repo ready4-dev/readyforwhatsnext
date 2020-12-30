@@ -1,0 +1,19 @@
+<div class="page-header row">
+	<div class="col-lg article-meta-mobile">
+		<div class="article-details-issue-section small-screen"><a href="{{ with .GetPage "./" }}{{ .Permalink }}{{ end }}">{{ with .Page.Params.volume }}Vol. {{ . }}{{ end }}{{ with .Page.Params.issue }} No. {{ . }}{{ end }} ({{ dateFormat "2006" .Page.Params.issuedate }})</a>, <span>{{ .Page.Params.articleType }}</span></div>
+		<div class="article-details-issue-identifier large-screen"><a href="{{ with .GetPage "./" }}{{ .Permalink }}{{ end }}">{{ with .Page.Params.volume }}Vol. {{ . }}{{ end }}{{ with .Page.Params.issue }} No. {{ . }}{{ end }} ({{ dateFormat "2006" .Page.Params.issuedate }})</a></div>
+		<h1 class="article-details-fulltitle">{{ .Title }}</h1>
+		<div class="article-details-issue-section large-screen">{{ .Page.Params.articleType }}</div>
+		<div class="article-details-doi large-screen"><a href="https://doi.org/{{ .Page.Params.DOI }}">https://doi.org/{{ .Page.Params.DOI }}</a></div>										<div class="article-details-published">Published {{ dateFormat "January 2, 2006" .Params.date }}</div>
+		<ul class="authors-string">{{ range $elem_index, $elem_val := $.Params.authors }}
+		<li><a class="author-string-href" href="#author-{{ add (int $elem_index) 1 }}"><span>{{ .given_name }} {{ .surname }}</span><sup class="author-symbol author-plus">&plus;</sup><sup class="author-symbol author-minus hide">&minus;</sup></a>{{ with .ORCID }}<a class="orcidImage" href="https://orcid.org/{{ . }}"><img src="{{ "/img/orcid.png" | absURL }}"></a>{{ end }}</li>{{ end }}
+		</ul>
+		<div class="article-details-authors">{{ range $elem_index, $elem_val := $.Params.authors }}
+			<div class="article-details-author hideAuthor" id="author-{{ add (int $elem_index) 1 }}">
+				<div class="article-details-author-name small-screen">{{ .given_name }} {{ .surname }}</div>
+				{{ range .affiliations }}{{ $affil_index := sub (int . ) 1 }}{{ range $elem_index, $elem_val := $.Page.Params.affiliations }}{{ if (eq $elem_index $affil_index ) }}<div class="article-details-author-affiliation">{{ .name }}</div>
+				{{ end }}{{ end }}{{ end }}{{ with .ORCID }}<div class="article-details-author-orcid"><a href="https://orcid.org/{{ . }}" target="_blank">https://orcid.org/{{ . }}</a></div>
+			{{ end }}</div>{{ end }}
+		</div>
+	</div>
+</div>

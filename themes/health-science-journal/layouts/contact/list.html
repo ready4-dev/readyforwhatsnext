@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="{{ if $.Params.language }}{{ slicestr $.Params.language  0 2 }}{{ else }}{{ $.Site.Language }}{{ end }}">
+<head>
+{{ partial "relcanonical.html" . }}
+{{ partial "head.html" . }}
+{{ partial "social-meta.html" . }}
+{{ partial "stylesheets.html" . }}
+</head>
+<body>
+{{ partial "global-header.html" . }}
+<div class="container page-contact">
+<div class="page-header">
+<h1>{{ .Title }}</h1>
+</div>
+<div class="row justify-content-md-center">
+<div class="col-md-6">
+<div class="page-content">
+<div class="contact-section">
+<div class="address">
+{{ range $elem_index, $elem_val := .Page.Params.addresslines }}{{ . }}{{ if lt $elem_index (sub (len $.Params.addresslines) 1) }} <br>{{ end }}{{ end }}
+</div>
+{{ if .Page.Params.principalcontact }}
+<div class="contact-primary"><h2>Principal Contact</h2></div>
+<div class="contact-name">{{ .Page.Params.principalcontact }}</div>
+{{ with .Page.Params.principalaffiliation }}<div class="contact-affiliation">{{ . }}</div>{{ end }}
+{{ with .Page.Params.principalemail }}<div class="contact-email"><a href="mailto:{{ . }}">{{ . }}</a></div>{{ end }}
+</div>{{ end }}
+{{ if .Page.Params.supportcontact }}
+<div class="contact-support">
+<h2>Support Contact</h2>
+<div class="contact-name">{{ .Page.Params.supportcontact }}</div>
+{{ with .Page.Params.supportemail }}<div class="contact-email"><a href="mailto:{{ . }}">{{ . }}</a></div>{{ end }}
+</div>
+</div>
+</div>{{ end }}
+</div>
+</div>
+</div>
+</div>
+</div>
+{{ partial "footer.html" . }}
+{{ partial "javascript-libraries.html" . }}
+</body>
+</html>

@@ -1,0 +1,17 @@
+TY  - JOUR
+{{ range .Page.Params.authors }}AU  - {{ .surname }}, {{ .given_name }}
+{{ end }}PY  - {{ dateFormat "2006" .Date }}
+Y1  - {{ dateFormat "2006/01/02" .Date }}
+TI  - {{ .Title }}
+JF  - {{ .Site.Title }}
+{{ with .Site.Params.abbreviatedTitle }}JA  - {{ . }}
+{{ end }}{{ with .Page.Params.volume }}VL  - {{ . }}
+{{ end }}{{ with .Page.Params.issue }}IS  - {{ . }}
+{{ end }}{{ with .Page.Params.DOI}}DO  - {{ . }}
+{{ end }}UR  - {{ .Permalink }}
+{{ with .Page.Params.firstpage }}SP  - {{ . }}
+{{ end }}{{ with .Page.Params.lastpage }}LP  - {{ . }}
+{{ end }}{{ with .Site.Params.eISSN }}SN  - {{ . }}
+{{ end }}{{ with .Site.Params.printISSN }}SN  - {{ . }} (Print)
+{{ end }}{{ with .Page.Params.abstract }}AB  - {{ . }}
+{{ end }}ER  -

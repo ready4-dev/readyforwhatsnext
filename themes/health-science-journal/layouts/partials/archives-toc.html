@@ -1,0 +1,19 @@
+<div class="container page-archives">
+<div class="page-header page-archives-header">
+<h1>Archives</h1>
+</div>
+<div class="row justify-content-around">{{ range .Pages }}
+<div class="col-md-3 col-lg-2">
+<div class="card issue-summary">
+{{ if .Params.issuecover }}<a href="{{ .Permalink }}"><img class="card-img-top issue-summary-cover" src="{{ .Params.issuecover | absURL }}"></a>{{ end }}
+<div class="card-body">
+<h2 class="card-title issue-summary-series"><a href="{{ .Permalink }}">{{ with .Page.Params.volume }}Vol. {{ . }}{{ end }}{{ with .Page.Params.issue }} No. {{ . }}{{ end }} ({{ dateFormat "2006" .Page.Params.issuedate }})</a></h2>
+<div class="card-text">
+<p class="issue-summary-date">{{ dateFormat "January 2, 2006" .Params.issuedate }}</p>
+{{ with .Title }}<p class="issue-summary-title">{{ . }}</p>{{ end }}
+</div>
+</div>
+</div>
+</div>{{ end }}
+</div>
+</div>
