@@ -1,4 +1,4 @@
-+++
-listtype = "archives"
-canonicalurl = ""
-+++
+---
+canonicalurl: ""
+listtype: archives
+---

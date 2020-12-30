@@ -84,13 +84,13 @@ theme = "health-science-journal"
       hasChildren = true
     [[menu.main]]
       parent = "About"
-      name = "About ready4"
-      url = "about/ready4"
+      name = "About the Journal"
+      url = "about/journal"
       weight = 6
     [[menu.main]]
       parent = "About"
-      name = "Code"
-      url = "about/code"
+      name = "Editorial Team"
+      url = "about/editorial-team"
       weight = 7
     [[menu.main]]
       parent = "About"

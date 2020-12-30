@@ -1,4 +1,4 @@
-title = "ready4 Open Science Mental Health Models"
+title = "ready4 Open Science Mental Health"
 baseURL = "https://ready4-dev.github.io/ready4/index.html"
 languageCode = "en-US"
 theme = "health-science-journal"
@@ -43,8 +43,7 @@ theme = "health-science-journal"
   useCDN = false
   
   ## Custom blocks for the footer
-  customblocks = [{ name = "Custom Block", content = "Website footer custom block."},
-  {name = "Github", content = "All our code is available on [GitHub](https://github.com/ready4-dev)"},
+  customblocks = [{name = "Github", content = "All our code is available on [GitHub](https://github.com/ready4-dev)"},
   {name = "Dataverse", content = "Replication data for our projects is available on our [Dataverse](https://dataverse.harvard.edu/dataverse/ready4)."},
   {name = "Contact Us", content = "For more information on this project contact [Matthew Hamilton](https://orcid.org/0000-0001-7407-9194), at [Orygen](https://www.orygen.org.au/)."}]
   
@@ -81,23 +80,33 @@ theme = "health-science-journal"
       url = "code/developer"
       weight = 4
     [[menu.main]]
+      parent = "Code"
+      name = "Modelling tools"
+      url = "code/modelling"
       weight = 5
-      name = "Data"
-      url = "about/submissions"
     [[menu.main]]
+      parent = "Code"
+      name = "Prediction tools"
+      url = "code/prediction"
       weight = 6
+    [[menu.main]]
+      weight = 7
+      name = "Data"
+      url = "about/data"
+    [[menu.main]]
+      weight = 8
       name = "About"
       hasChildren = true
     [[menu.main]]
       parent = "About"
       name = "About ready4"
       url = "about/ready4"
-      weight = 7
+      weight = 9
     [[menu.main]]
       parent = "About"
       name = "Contact"
       url = "contact"
-      weight = 8
+      weight = 10
 
 # Output formats
 [mediaTypes]
