@@ -6,7 +6,6 @@ output:
     theme: journal
 ---
 
-
 ready4 is an open science toolkit for reproducible, replicable and generalisable mental health modelling.
 
 ready4 consists of open access code libraries and datasets.
