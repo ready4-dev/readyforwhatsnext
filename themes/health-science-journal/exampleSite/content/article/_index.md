@@ -1,4 +1,0 @@
-+++
-listtype = "archives"
-canonicalurl = ""
-+++

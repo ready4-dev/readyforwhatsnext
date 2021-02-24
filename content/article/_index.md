@@ -1,4 +1,0 @@
----
-canonicalurl: ""
-listtype: archives
----

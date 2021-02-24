@@ -1,0 +1,51 @@
+[[main]]
+  name = "Home"
+  url = ""
+  weight = -110
+
+# Submenus are done this way: parent -> identifier
+[[main]]
+  name = "Framework"
+  identifier = "Framework"
+  weight = -108
+[[main]]
+  parent = "Framework"
+  name = "Purpose"
+  url = "purpose/"
+  weight = -107
+[[main]]
+  parent = "Framework"
+  name = "Toolkits"
+  url = "toolkits/"
+  weight = -106
+[[main]]
+  parent = "Framework"
+  name = "Datasets"
+  url = "data/"
+  weight = -105
+
+[[main]]
+  name = "Application"
+  identifier = "Application"
+  weight = -104
+[[main]]
+  parent = "Application"
+  name = "Projects"
+  url = "projects/"
+  weight = -103
+[[main]]
+  parent = "Application"
+  name = "Insights"
+  url = "insight/"
+  weight = -102
+
+[[main]]
+  name = "About"
+  url = "about/"
+  weight = -101
+  
+[[social]]
+  name = "github"
+  type = "social"
+  weight = 1
+  url = "https://github.com/ready4-dev"

@@ -1,0 +1,48 @@
+baseurl: "www.test.com/"
+title: ready4
+author: Orygen
+copyright: Copyright © 2021, Orygen.
+paginate: 10
+theme: hugo-clarity
+disqusShortname: ''
+DefaultContentLanguage: en
+taxonomies:
+  category: categories
+  series: series
+  tag: tags
+markup:
+  goldmark:
+    extensions:
+      typographer: no
+    renderer:
+      hardWraps: no
+      unsafe: yes
+      xhtml: no
+  highlight:
+    codeFences: yes
+    guessSyntax: yes
+    hl_Lines: --
+    lineNoStart: 1
+    lineNos: yes
+    lineNumbersInTable: no
+    noClasses: no
+    tabWidth: 2
+params:
+  author: ready4
+  centerLogo: no
+  codeLineNumbers: no
+  codeMaxLines: 7
+  enableMathNotation: no
+  enforceLightMode: no
+  fallBackOgImage: images/thumbnail.png
+  figurePositionLabel: Figure
+  figurePositionShow: no
+  ga_analytics: XXXXXXXXXX
+  introDescription: A framework for modulal, replicable and generalisable mental health models.
+  languageMenuName: "\U0001F310"
+  largeTwitterCard: no
+  logo: "logos/logo.png"
+  mainSections: post
+  mobileNavigation: left
+  numberOfTagsShown: 14
+  twitter: '@orygen_aus'
