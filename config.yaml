@@ -44,5 +44,5 @@ params:
   logo: "logos/logo.png"
   mainSections: post
   mobileNavigation: left
-  numberOfTagsShown: 14
+  numberOfTagsShown: 15
   twitter: '@orygen_aus'
