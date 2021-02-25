@@ -3,7 +3,7 @@ title: ready4
 author: Orygen
 copyright: Copyright © 2021, Orygen.
 paginate: 10
-theme: github.com/chipzoller/hugo-clarity
+theme: hugo-clarity
 disqusShortname: ''
 DefaultContentLanguage: en
 taxonomies:
