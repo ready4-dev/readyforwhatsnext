@@ -1,0 +1,13 @@
+{
+    "dialog-state": {
+        "query": "www.test.com",
+        "path": "C:/Users/61413/Documents/ready4/Insight/Pages/ready4",
+        "regex": false,
+        "caseSensitive": false,
+        "filePatterns": [],
+        "excludeFilePatterns": [],
+        "resultsCount": 0,
+        "errorCount": 0,
+        "replaceErrors": ""
+    }
+}
