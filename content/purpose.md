@@ -9,11 +9,12 @@ title: Purpose
 
 ready4 is an open science framework for modular, replicable and generalisable mental health modelling. 
 
-The motivation for the ready4 framework is the need to develop models that adequately address the complexity inherent in mental health systems. One response to such a significant challenge is to initially model simple representations of discrete sub-components of these systems and, over time, to progressively improve the validity and scope of these sub-component models and begin linking them together. In practice this requires many teams that work independently to solve distinct modelling challenges but use common standards and frameworks to add coherence and efficiency to their collective efforts.
+The motivation for the ready4 framework is the need to develop models that adequately address the complexity inherent in mental health systems. One response to such a significant challenge is to initially model simple representations of individual sub-components of these systems and, over time, to progressively grow the number, scope and validity of these sub-component models and to link them together. 
 
-The ready4 framework consists of open access [toolkits](../toolkits/) and [datasets](../datasets/) that provide practical supports for mental health models that are:
+That is the approach we prefer, but it calls for many hands and medium to long term timeframes. It also requires striking a balance between diverse research teams working competitively to solve distinct modelling challenges and the need to adopt common standards and frameworks to add coherence and efficiency to the collective efforts of the field. We have developped the ready4 framework to help make such a vision more achievable, with an emphasis on supporting the development of modelling projects that are:
 
-- **Modular** - i.e. modelling projects can be linked together to model more extensive systems and undertake more comprehensive analysis;
-- **Replicable** - model algorithms and data are freely available to others so that they can reproduce and validate results; and
-- **Generalisable** - model algorithms and data-structures are designed to have multiple applications, so that models can be more readily adapted to a range of spatio-temporal and decision contexts.
+- **Modular** - i.e. multiple modelling projects and their algorithm and data sub-components can be combined to model more extensive systems and undertake more comprehensive analysis;
+- **Replicable** - model algorithms and data are freely available to others so that they can reproduce results and verify model validity; and
+- **Generalisable** - model algorithms and data-structures are sufficiently abstracted to have multiple applications, so that models can be more readily adapted to a range of spatio-temporal and decision contexts.
 
+The current version of the ready4 framework consists of development versions of a range of open access [toolkits](../toolkits/) and [datasets](../datasets/) that support the development mental health models with these attributes.
