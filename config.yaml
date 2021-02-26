@@ -34,7 +34,7 @@ params:
   codeMaxLines: 7
   enableMathNotation: no
   enforceLightMode: no
-  fallBackOgImage: images/thumbnail.png
+  fallBackOgImage: logos/logo.png
   figurePositionLabel: Figure
   figurePositionShow: no
   ga_analytics: XXXXXXXXXX
