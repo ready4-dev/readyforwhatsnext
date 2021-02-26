@@ -1,0 +1,16 @@
+---
+author: Matthew Hamilton
+date: "2021-02-24"
+description: Algorithm generated documentation available for ready4fun function authoring toolkit.
+tags:
+- authoring toolkits
+- ready4fun
+- toolkits
+- readyforwhatsnext
+thumbnail: images/ready4fun_logo.png
+title: Algorithm generated documentation now available for ready4fun function authoring toolkit.
+---
+
+ready4fun provides a set of tools to standardise and automate a number of workflows for authoring and documenting the funcitons in R code-libraries. The development version of the ready4fun function authoring toolkit now includes [algorithm generated documentation](https://ready4-dev.github.io/ready4fun/). That means the main functions have bare bones documentation available, but no vignettes have yet been written to demonstrate the practical applications of the toolkit. However, it is still possible to find real-world use examples of the ready4fun functions, by viewing the DATASET.R file (in the data-raw directory of each package's source code) in any of the ready4 code libraries that we have authored. For example, how we used ready4fun functions to help author and document the ready4class code-library can be seen [here](https://github.com/ready4-dev/ready4class/blob/master/data-raw/DATASET.R). ready4fun is an output of the [readyforwhatsnext](../readyforwhatsnext/) project.
+
+

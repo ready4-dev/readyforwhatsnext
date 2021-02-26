@@ -1,0 +1,17 @@
+---
+author: Matthew Hamilton
+date: "2021-02-24"
+description: Algorithm generated documentation available for ready4show report authoring toolkit.
+tags:
+- authoring toolkits
+- ready4show
+- toolkits
+- readyforwhatsnext
+thumbnail: images/ready4show_logo.png
+title: Algorithm generated documentation now available for ready4show data authoring toolkit.
+---
+
+ready4show provides a set of tools to standardise and automate a number of workflows for authoring and documenting report templates that are included or used in conjunction with R code-libraries.  The development version of the ready4show dataset authoring toolkit now includes [algorithm generated documentation](https://ready4-dev.github.io/ready4show/). That means the main functions have bare bones documentation available, but no vignettes have yet been written to demonstrate the practical applications of the toolkit. However, it is still possible to find real-world use examples of the ready4show functions in the vignettes of a number of other ready4 code libraries that we have authored. For example, one function in the ready4show package - print_table - renders tables suitable for HTML, Word and PDF outputs. The use of this function can be seen in [this vignette](https://ready4-dev.github.io/TTU/articles/Model_TTU.html) from the [TTU package](../../tags/ttu/).
+
+
+

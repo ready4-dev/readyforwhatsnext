@@ -24,7 +24,7 @@ The project has two goals:
 - Develop the novel [ready4 framework](../../about-us/) that is the principal focus of this website; and
 - Apply that framework to developping a simulation model exploring the potential costs and impacts of a range of policy options for improving the resilience of children and young people in Victoria, Australia.
 
-The simulation model is a hybrid of systems dynamics (for modelling demographic change) and agent based (for modelling the behaviours and outcomes of individuals and households). To date, the project has achieved milestones that include development of a conceptual model, stakeholder consultations, creation of a synthetic dataset representative of Victorian households and the initial versions of the systems dynamics component of the model. Remaining project milestones and public dissemination of project outputs is due for completion by the end of 2021.
+The simulation model is a hybrid of systems dynamics (for modelling demographic change) and agent based (for modelling the behaviours and outcomes of individuals and households). To date, the project has achieved milestones that include development of a [conceptual model](https://dataverse.harvard.edu/file.xhtml?fileId=4419933&version=1.0), stakeholder consultations, creation of a synthetic dataset representative of Victorian households and the initial version of the [systems dynamics component of the model](https://dataverse.harvard.edu/file.xhtml?fileId=4419934&version=1.0). Remaining project milestones and public dissemination of project outputs is due for completion by the end of 2021.
 
 
 

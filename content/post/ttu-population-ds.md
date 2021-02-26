@@ -9,6 +9,7 @@ tags:
 - replication
 - synthetic populations
 - transfer to utility
+- TTU
 thumbnail: images/TTU_logo.png
 title: Transfer to utility study replication dataset now available
 ---

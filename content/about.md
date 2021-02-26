@@ -9,7 +9,7 @@ description: ready4 - a framework for replicable, modular and generalisable ment
 title: About
 ---
 
-ready4 is an open science framework for modular, replicable and generalisable mental health modelling. The development of the ready4 framework is being led by the Health Services and Outcomes Research unit at Orygen. 
+ready4 is an open science framework for [modular, replicable and generalisable mental health modelling](../purpose/). The development of the ready4 framework is being led by the Health Services and Outcomes Research unit at Orygen. 
 
 The ready4 framework is an output of the [readyforwhatsnext](../post/readyforwhatsnext/) project that has been funded by VicHealth, Orygen and Victoria University and which is led by researchers in Orygen, Victoria University, Deakin University and Flinders University. The framework is being applied to and developed in conjunction with [projects](../tags/project-descriptions/) from other funders, led by other project teams involving a large group of collaborators. The core technical development group for the toolkits that implement this framework is small however, with all code written by [Matthew Hamilton](https://github.com/matthewphamilton), Caroline Gao and Glen Wiesner.
 
