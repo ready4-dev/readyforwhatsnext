@@ -33,7 +33,11 @@
   name = "Projects"
   url = "tags/project-descriptions/"
   weight = -103
-
+[[main]]
+  parent = "Application"
+  name = "Insights"
+  url = "tags/insights/"
+  weight = -102
 [[main]]
   name = "About"
   url = "about/"

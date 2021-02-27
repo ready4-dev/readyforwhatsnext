@@ -1,6 +1,6 @@
 ---
 author: Matthew Hamilton
-date: "2021-02-24"
+date: "2021-02-11"
 description: Readyforwhatsnext project description.
 tags:
 - agent based models

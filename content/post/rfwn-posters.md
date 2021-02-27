@@ -1,6 +1,6 @@
 ---
 author: Matthew Hamilton
-date: "2021-02-24"
+date: "2021-02-12"
 description: Readyforwhatsnext scientific summaries dataset launched.
 tags:
 - agent based models
