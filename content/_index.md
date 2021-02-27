@@ -1,5 +1,4 @@
 ---
-author: Hugo Authors
-description: A theme based on VMware's Clarity Design System for publishing technical
-  blogs with Hugo.
+author: Matthew Hamilton
+description: Website of the ready4 open science framework for modular, replicable and generalisable mental health models.
 ---
