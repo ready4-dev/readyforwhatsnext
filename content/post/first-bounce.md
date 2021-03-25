@@ -8,7 +8,6 @@ tags:
 - first bounce
 - primary mental health care
 - project descriptions
-- projects
 - transfer to utility
 
 thumbnail: images/firstbounce_logo.png

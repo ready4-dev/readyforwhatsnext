@@ -5,7 +5,6 @@ description: Springtides project page.
 tags:
 - epidemiology
 - project descriptions
-- projects
 - springtides
 - spatial epidemiology
 - systems dynamics models

@@ -5,7 +5,6 @@ description: Readyforwhatsnext project description.
 tags:
 - agent based models
 - prevention
-- projects
 - project descriptions
 - readyforwhatsnext
 - resilience

@@ -8,7 +8,6 @@ tags:
 - datasets
 - dataverses
 - prevention
-- projects
 - readyforwhatsnext
 - resilience
 - spatial epidemiology
