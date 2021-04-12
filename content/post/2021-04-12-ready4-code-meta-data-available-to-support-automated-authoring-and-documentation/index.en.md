@@ -1,6 +1,7 @@
 ---
 title: ready4 code meta-data for automated authoring and documentation
 author: Matthew Hamilton
+thumbnail: images/RFWN_logo.png
 date: '2021-04-12'
 slug: []
 categories: []
