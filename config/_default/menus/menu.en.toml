@@ -5,44 +5,84 @@
 
 # Submenus are done this way: parent -> identifier
 [[main]]
-  name = "Framework"
-  identifier = "Framework"
-  weight = -108
-[[main]]
-  parent = "Framework"
-  name = "Purpose"
-  url = "purpose/"
-  weight = -107
-[[main]]
-  parent = "Framework"
   name = "Toolkits"
-  url = "toolkits/"
-  weight = -106
+  identifier = "Toolkits"
+  #url = "toolkits/"
+  weight = -100
 [[main]]
-  parent = "Framework"
+  parent = "Toolkits"
+  name = "About ready4 toolkits"
+  url = "toolkits/"
+  weight = -98
+[[main]]
+  parent = "Toolkits"
+  name = "Authoring toolkits"
+  url = "tags/authoring-toolkits/"
+  weight = -96
+[[main]]
+  parent = "Toolkits"
+  name = "Description toolkits"
+  url = "tags/description-toolkits/"
+  weight = -95
+[[main]]
+  parent = "Toolkits"
+  name = "Modelling toolkits"
+  url = "tags/modelling-toolkits/"
+  weight = -94
+[[main]]
+  parent = "Toolkits"
+  name = "Prediction toolkits"
+  url = "tags/prediction-toolkits/"
+  weight = -92
+[[main]]
+  identifier = "Datasets"
   name = "Datasets"
   url = "data/"
-  weight = -105
-
+  weight = -90
+[[main]]
+  parent = "Datasets"
+  name = "About ready4 datasets"
+  url = "data/"
+  weight = -88
+[[main]]
+  parent = "Datasets"
+  name = "Package datasets"
+  url = "tags/package-datasets/"
+  weight = -86
+[[main]]
+  parent = "Datasets"
+  name = "Dataverses"
+  url = "tags/dataverses"
+  weight = -84
 [[main]]
   name = "Application"
   identifier = "Application"
-  weight = -104
+  weight = -80
 [[main]]
   parent = "Application"
   name = "Projects"
   url = "tags/project-descriptions/"
-  weight = -103
+  weight = -78
 [[main]]
   parent = "Application"
   name = "Insights"
   url = "tags/insights/"
-  weight = -102
+  weight = -76
 [[main]]
   name = "About"
+  identifier = "About"
   url = "about/"
-  weight = -101
-  
+  weight = -70
+[[main]]
+  parent = "About"
+  name = "About ready4"
+  url = "about/"
+  weight = -68 
+[[main]]
+  parent = "About"
+  name = "ready4 purpose"
+  url = "purpose/"
+  weight = -66  
 [[social]]
   name = "github"
   type = "social"

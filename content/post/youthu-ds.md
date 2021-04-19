@@ -6,7 +6,6 @@ tags:
 - datasets
 - dataverses
 - First Bounce
-- prediction toolkits
 - projects
 - transfer to utility
 thumbnail: images/youthu_logo.png

@@ -5,7 +5,7 @@ description: youthvars package documentation now available
 tags:
 - classes
 - First Bounce
-- modelling toolkits
+- description toolkits
 - synthetic populations
 - utility scoring
 - youthvars
