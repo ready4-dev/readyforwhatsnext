@@ -2,13 +2,13 @@
 author: Matthew Hamilton
 date: "2021-03-25"
 description: youthvars package documentation now available
+categories:
+- description toolkits
+- first bounce toolkits
 tags:
 - classes
-- First Bounce
-- description toolkits
 - synthetic populations
 - utility scoring
-- youthvars
 thumbnail: images/youthvars_logo.png
 title: youthvars variable classes and scoring algorithms toolkit is now available with vignette based documentation
 ---

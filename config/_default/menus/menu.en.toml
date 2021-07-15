@@ -17,22 +17,22 @@
 [[main]]
   parent = "Toolkits"
   name = "Authoring toolkits"
-  url = "tags/authoring-toolkits/"
+  url = "categories/authoring-toolkits/"
   weight = -96
 [[main]]
   parent = "Toolkits"
   name = "Description toolkits"
-  url = "tags/description-toolkits/"
+  url = "categories/description-toolkits/"
   weight = -95
 [[main]]
   parent = "Toolkits"
   name = "Modelling toolkits"
-  url = "tags/modelling-toolkits/"
+  url = "categories/modelling-toolkits/"
   weight = -94
 [[main]]
   parent = "Toolkits"
   name = "Prediction toolkits"
-  url = "tags/prediction-toolkits/"
+  url = "categories/prediction-toolkits/"
   weight = -92
 [[main]]
   identifier = "Datasets"
@@ -47,12 +47,12 @@
 [[main]]
   parent = "Datasets"
   name = "Dataverse Datasets"
-  url = "tags/dataverses"
+  url = "categories/dataverse-datasets"
   weight = -86
 [[main]]
   parent = "Datasets"
   name = "Package datasets"
-  url = "tags/package-datasets/"
+  url = "categories/package-datasets/"
   weight = -84
 [[main]]
   name = "Application"
@@ -61,12 +61,12 @@
 [[main]]
   parent = "Application"
   name = "Insights"
-  url = "tags/insights/"
+  url = "categories/insights/"
   weight = -78
 [[main]]
   parent = "Application"
-  name = "Projects"
-  url = "tags/project-descriptions/"
+  name = "Models"
+  url = "categories/models/"
   weight = -76
 [[main]]
   name = "About"
@@ -75,13 +75,13 @@
   weight = -70
 [[main]]
   parent = "About"
-  name = "About ready4"
+  name = "Framework"
   url = "about/"
   weight = -68 
 [[main]]
   parent = "About"
-  name = "ready4 purpose"
-  url = "purpose/"
+  name = "readyforwhatsnext"
+  url = "readyforwhatsnext/"
   weight = -66  
 [[social]]
   name = "github"

@@ -2,11 +2,12 @@
 author: Matthew Hamilton
 date: "2021-02-27"
 description: Data repository with placeholder models for predicting AQoL-6D health utility now available
-tags:
+categories:
 - datasets
-- dataverses
-- First Bounce
-- projects
+- dataverse datasets
+- fake datasets
+- first bounce datasets
+tags:
 - transfer to utility
 thumbnail: images/youthu_logo.png
 title: Data repository with placeholder models for predicting AQoL-6D health utility now available

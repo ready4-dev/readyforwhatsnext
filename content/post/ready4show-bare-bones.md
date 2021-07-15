@@ -2,11 +2,11 @@
 author: Matthew Hamilton
 date: "2021-02-14"
 description: Algorithm generated documentation available for ready4show report authoring toolkit.
-tags:
+categories:
 - authoring toolkits
-- ready4show
+- readyforwhatsnext toolkits
 - toolkits
-- readyforwhatsnext
+tags: []
 thumbnail: images/ready4show_logo.png
 title: Algorithm generated documentation now available for ready4show data authoring toolkit.
 ---

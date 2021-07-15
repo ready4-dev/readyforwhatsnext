@@ -2,11 +2,11 @@
 author: Matthew Hamilton
 date: "2021-07-13"
 description: Repository of models for predicting AQoL-6D health utility now available.
-tags:
+categories:
 - datasets
-- dataverses
-- First Bounce
-- projects
+- dataverse datasets
+- first bounce datasets
+tags:
 - transfer to utility
 thumbnail: images/youthu_logo.png
 title: Repository of models for predicting AQoL-6D health utility now available.

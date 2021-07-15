@@ -2,10 +2,11 @@
 author: Matthew Hamilton
 date: "2021-07-13"
 description: New vignettes for youthu toolkit
+categories:
+- First Bounce toolkits
+- prediction toolkits
 tags:
 - toolkits
-- First Bounce
-- prediction toolkits
 - transfer to utility
 thumbnail: images/youthu_logo.png
 title: Youth Outcomes to Health Utility (youthu) prediction toolkit

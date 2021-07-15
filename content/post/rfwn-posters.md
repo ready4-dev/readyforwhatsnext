@@ -2,13 +2,14 @@
 author: Matthew Hamilton
 date: "2021-02-12"
 description: Readyforwhatsnext scientific summaries dataset launched.
+categories:
+- datasets
+- dataverse datasets
+- readyforwhatsnext datasets
 tags:
 - agent based models
 - conceptual model
-- datasets
-- dataverses
 - prevention
-- readyforwhatsnext
 - resilience
 - spatial epidemiology
 - systems dynamics models

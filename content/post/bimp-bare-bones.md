@@ -2,12 +2,13 @@
 author: Matthew Hamilton
 date: "2021-02-17"
 description: Algorithm generated documentation available for bimp budget impact modelling toolkit.
-tags:
-- bimp
-- budget impact
+categories:
 - toolkits
 - modelling toolkits
-- readyforwhatsnext
+- readyforwhatsnext toolkits
+tags:
+- budget impact
+
 thumbnail: images/bimp_logo.png
 title: Algorithm generated documentation now available for bimp budget impact modelling toolkit.
 ---

@@ -2,12 +2,12 @@
 author: Matthew Hamilton
 date: "2021-02-18"
 description: Modelling the mental health impacts of COVID-19.
+categories:
+- insights
+- springtides insights
 tags:
 - covid
 - epidemiology
-- insights
-- projects
-- springtides
 - spatial epidemiology
 - systems dynamics models
 thumbnail: images/springtides_logo.png

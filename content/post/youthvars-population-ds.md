@@ -2,12 +2,13 @@
 author: Matthew Hamilton
 date: "2021-03-24"
 description: youthvars synthetic dataset
-tags:
+categories:
 - datasets
-- First Bounce
+- fake datasets
+- first bounce datasets
 - package datasets
+tags:
 - synthetic populations
-- youthvars
 thumbnail: images/youthvars_logo.png
 title: youthvars synthetic dataset now available
 ---
