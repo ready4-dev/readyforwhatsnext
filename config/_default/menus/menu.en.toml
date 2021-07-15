@@ -46,13 +46,13 @@
   weight = -88
 [[main]]
   parent = "Datasets"
-  name = "Package datasets"
-  url = "tags/package-datasets/"
+  name = "Dataverse Datasets"
+  url = "tags/dataverses"
   weight = -86
 [[main]]
   parent = "Datasets"
-  name = "Dataverses"
-  url = "tags/dataverses"
+  name = "Package datasets"
+  url = "tags/package-datasets/"
   weight = -84
 [[main]]
   name = "Application"
@@ -60,13 +60,13 @@
   weight = -80
 [[main]]
   parent = "Application"
-  name = "Projects"
-  url = "tags/project-descriptions/"
+  name = "Insights"
+  url = "tags/insights/"
   weight = -78
 [[main]]
   parent = "Application"
-  name = "Insights"
-  url = "tags/insights/"
+  name = "Projects"
+  url = "tags/project-descriptions/"
   weight = -76
 [[main]]
   name = "About"
