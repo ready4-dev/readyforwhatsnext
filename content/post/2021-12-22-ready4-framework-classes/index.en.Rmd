@@ -1,0 +1,178 @@
+---
+title: ready4 framework classes
+author: Matthew Hamilton
+date: '2021-12-22'
+slug: []
+categories:
+  - Technology
+tags:
+  - classes
+description: Article description.
+featured: yes
+toc: no
+featureImage: /images/path/file.jpg
+thumbnail: /images/path/new_thumbnail.png
+shareImage: /images/path/share.png
+codeMaxLines: 10
+codeLineNumbers: no
+figurePositionShow: yes
+---
+
+**Insert Lead paragraph here.**
+
+```{r echo = F}
+library("ready4") # Foundation
+library("ready4show") # Program authoring
+library("ready4use") # Dataset authoring
+library("ready4fun") 
+library("ready4class") 
+library("ready4pack") # Library authoring
+library("youthvars")
+library("scorz") # Description
+library("specific")#"heterodox", "TTU", # Modelling
+# "youthu" # Prediction
+
+```
+
+```{r}
+libraries_tb <- tibble::tibble(pt_ns_chr = c("scorz","specific","TTU", "youthvars","ready4show","ready4use","ready4fun","ready4class","ready4pack","youthu")) %>%
+  dplyr::mutate(Purpose = dplyr::case_when(pt_ns_chr == "ready4class" ~ "Authoring (code - classes)",
+                                           pt_ns_chr == "ready4fun" ~ "Authoring (code - functions)",
+                                           pt_ns_chr == "ready4pack" ~ "Authoring (code - libraries)",
+                                           pt_ns_chr == "ready4show" ~ "Authoring (code - programs)",
+                                           pt_ns_chr == "ready4use" ~ "Authoring (datasets)",
+                                           pt_ns_chr == "youthvars" ~ "Description (datasets)",
+                                           pt_ns_chr == "scorz" ~ "Description (variable scoring)",
+                                           pt_ns_chr == "specific" ~ "Modelling (inverse problems)",
+                                           pt_ns_chr == "heterodox" ~ "Modelling (heterogeneity)",
+                                           pt_ns_chr == "TTU" ~ "Modelling (health utility)",
+                                           pt_ns_chr == "youthu" ~ "Prediction (health utility)",
+                                           T ~ "")) %>%
+    dplyr::arrange(Purpose) %>%
+  dplyr::mutate(Link = purrr::map_chr(pt_ns_chr,
+                                      ~ paste0("https://ready4-dev.github.io/",.x,"/articles/",.x,".html"))) %>%
+  dplyr::mutate(Library = kableExtra::cell_spec(pt_ns_chr, "html", link = Link)) %>%
+  dplyr::mutate(Vignettes = purrr::map(pt_ns_chr,~as.vector(browseVignettes(.x)[[.x]][,7]) %>% purrr::keep(~startsWith(.x,"V_")) %>% sort()))
+examples_1L_int <- libraries_tb$Vignettes %>% 
+  purrr::compact() %>% 
+  purrr::flatten_chr() %>% 
+  length()
+libraries_tb <- libraries_tb %>%
+  dplyr::mutate(Reference = Vignettes %>% 
+  purrr::reduce(.init = list(ref_int = c(0,0),
+                             content_ls = NULL),
+                ~{
+                  if(is.null(.y)|identical(.y, character(0))){
+                    .x$content_ls <- append(.x$content_ls,list(NA_integer_))
+                    }else{
+                      .x$ref_int <- .x$ref_int + 1:length(.y)
+                      .x$content_ls <- append(.x$content_ls,
+                                              list((1:examples_1L_int)[.x$ref_int]))
+                      }
+                  .x
+                  }) %>%
+    purrr::pluck(2)) %>%
+  dplyr::mutate(Reference = purrr::pmap(list(pt_ns_chr,
+                                                 Vignettes,
+                                                 Reference),
+                                            
+                                      ~ {
+                                        if(is.na(..3[1])){
+                                          NA_character_
+                                        }else{
+                                                                                  kableExtra::cell_spec(..3, 
+                                                              "html", 
+                                                              link = paste0("https://ready4-dev.github.io/",..1,"/articles/",..2,".html"))
+                                        }
+
+                                        }
+                                      ))
+
+```
+
+```{r echo = FALSE}
+x <- ready4use::Ready4useRepos(gh_repo_1L_chr = "ready4-dev/ready4",
+                               gh_tag_1L_chr = "Documentation_0.0") %>%
+  ingest(fls_to_ingest_chr = "prototype_lup",
+         metadata_1L_lgl = F)
+```
+
+```{r echo = FALSE}
+x <- x %>%
+  dplyr::filter(pt_ns_chr %in% c("ready4","scorz","specific","TTU", "youthvars","ready4show","ready4use","ready4fun","ready4class","ready4pack","youthu")) %>%
+  dplyr::arrange(pt_ns_chr) %>%
+    dplyr::select(type_chr, pt_ns_chr, old_class_lgl)
+```
+
+```{r echo = FALSE}
+x %>%
+  dplyr::filter(pt_ns_chr == "ready4")
+```
+
+
+# Libraries that extend ready4
+
+```{r}
+libraries_tb %>%
+  dplyr::select(Purpose, Library)
+```
+
+
+```{r}
+as.vector(browseVignettes("ready4fun")[["ready4fun"]][,7]) %>% purrr::keep(~startsWith(.x,"V_"))
+```
+
+```{r echo = FALSE}
+x <- x %>%
+  dplyr::filter(pt_ns_chr %in% c("scorz","specific","TTU", "youthvars","ready4show","ready4use","ready4fun","ready4class","ready4pack","youthu")) %>%
+  dplyr::mutate(Purpose = dplyr::case_when(pt_ns_chr == "ready4class" ~ "Authoring (code - classes)",
+                                           pt_ns_chr == "ready4fun" ~ "Authoring (code - functions)",
+                                           pt_ns_chr == "ready4pack" ~ "Authoring (code - libraries)",
+                                           pt_ns_chr == "ready4show" ~ "Authoring (code - programs)",
+                                           pt_ns_chr == "ready4use" ~ "Authoring (datasets)",
+                                           pt_ns_chr == "youthvars" ~ "Description (datasets)",
+                                           pt_ns_chr == "scorz" ~ "Description (variable scoring)",
+                                           pt_ns_chr == "specific" ~ "Modelling (inverse problems)",
+                                           pt_ns_chr == "heterodox" ~ "Modelling (heterogeneity)",
+                                           pt_ns_chr == "TTU" ~ "Authoring (utility mapping)",
+                                           pt_ns_chr == "youthu" ~ "Prediction (utility)",
+                                           T ~ "")) %>%
+    dplyr::arrange(Purpose) %>%
+  dplyr::mutate(Link = purrr::map_chr(pt_ns_chr,
+                                      ~ paste0("https://ready4-dev.github.io/",.x,"/articles/",.x,".html"))) %>%
+  dplyr::mutate(Examples = kableExtra::cell_spec(row.names(.), "html", link = Link)) %>%
+  dplyr::rename(Class = type_chr,
+                Package = pt_ns_chr) %>%
+  dplyr::select(Purpose,Class,Package,Examples,old_class_lgl)
+# Add help link
+```
+
+S3 Classes
+
+```{r echo = FALSE}
+y <- x %>%
+  dplyr::filter(old_class_lgl) %>%
+  dplyr::select(-old_class_lgl)
+```
+
+```{r echo = FALSE}
+y %>%
+  kableExtra::kable("html", escape = FALSE) %>%
+  kableExtra::kable_styling(bootstrap_options = c("hover", "condensed"))
+```
+
+S4 Classes
+
+```{r echo = FALSE}
+z <- x %>%
+  dplyr::filter(!old_class_lgl) %>%
+  dplyr::select(-old_class_lgl)
+```
+```{r echo = FALSE}
+z %>%
+  kableExtra::kable("html", escape = FALSE) %>%
+  kableExtra::kable_styling(bootstrap_options = c("hover", "condensed"))
+```
+
+
+

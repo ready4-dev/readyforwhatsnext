@@ -1,0 +1,918 @@
+---
+title: ready4 framework classes
+author: Matthew Hamilton
+date: '2021-12-22'
+slug: []
+categories:
+  - Technology
+tags:
+  - classes
+description: Article description.
+featured: yes
+toc: no
+featureImage: /images/path/file.jpg
+thumbnail: /images/path/new_thumbnail.png
+shareImage: /images/path/share.png
+codeMaxLines: 10
+codeLineNumbers: no
+figurePositionShow: yes
+---
+
+<script src="{{< blogdown/postref >}}index.en_files/kePrint/kePrint.js"></script>
+<link href="{{< blogdown/postref >}}index.en_files/lightable/lightable.css" rel="stylesheet" />
+
+<div id="TOC">
+
+</div>
+
+<p><strong>Insert Lead paragraph here.</strong></p>
+<pre><code>## Loading required package: generics</code></pre>
+<pre><code>## 
+## Attaching package: &#39;generics&#39;</code></pre>
+<pre><code>## The following objects are masked from &#39;package:base&#39;:
+## 
+##     as.difftime, as.factor, as.ordered, intersect, is.element, setdiff,
+##     setequal, union</code></pre>
+<pre><code>## 
+## Attaching package: &#39;ready4fun&#39;</code></pre>
+<pre><code>## The following object is masked from &#39;package:ready4&#39;:
+## 
+##     write_all_tbs_in_tbs_r4_to_csvs</code></pre>
+<pre><code>## 
+## Attaching package: &#39;youthvars&#39;</code></pre>
+<pre><code>## The following object is masked from &#39;package:ready4show&#39;:
+## 
+##     write_all_outp_dirs</code></pre>
+<pre><code>## 
+## Attaching package: &#39;scorz&#39;</code></pre>
+<pre><code>## The following objects are masked from &#39;package:youthvars&#39;:
+## 
+##     add_adol6d_scores, add_aqol6d_adol_dim_scrg_eqs,
+##     add_aqol6d_items_to_aqol6d_tbs_ls, add_aqol6dU_to_aqol6d_items_tb,
+##     add_aqol6dU_to_aqol6d_tbs_ls, add_cors_and_utls_to_aqol6d_tbs_ls,
+##     add_dim_disv_to_aqol6d_items_tb, add_dim_scores_to_aqol6d_items_tb,
+##     add_itm_disv_to_aqol6d_itms_tb, add_labels_to_aqol6d_tb,
+##     add_unwtd_dim_tots, add_wtd_dim_tots, calculate_adol_aqol6dU,
+##     calculate_adult_aqol6dU, calculate_aqol6d_dim_1_disv,
+##     calculate_aqol6d_dim_2_disv, calculate_aqol6d_dim_3_disv,
+##     calculate_aqol6d_dim_4_disv, calculate_aqol6d_dim_5_disv,
+##     calculate_aqol6d_dim_6_disv, get_aqol6d_scrg_dss,
+##     impute_adult_aqol6d_items_tb, impute_unscrd_adol_aqol6d_ds,
+##     make_adol_aqol6d_disv_lup, make_aqol6d_adol_pop_tbs_ls,
+##     make_aqol6d_fns_ls, make_aqol6d_items_tb, make_dim_sclg_cons_dbl,
+##     make_domain_items_ls</code></pre>
+<pre><code>## Registered S3 methods overwritten by &#39;ggalt&#39;:
+##   method                  from   
+##   grid.draw.absoluteGrob  ggplot2
+##   grobHeight.absoluteGrob ggplot2
+##   grobWidth.absoluteGrob  ggplot2
+##   grobX.absoluteGrob      ggplot2
+##   grobY.absoluteGrob      ggplot2</code></pre>
+<pre><code>## # A tibble: 3 x 3
+##   type_chr      pt_ns_chr old_class_lgl
+##   &lt;chr&gt;         &lt;chr&gt;     &lt;lgl&gt;        
+## 1 Ready4Module  ready4    FALSE        
+## 2 Ready4Private ready4    FALSE        
+## 3 Ready4Public  ready4    FALSE</code></pre>
+<pre class="r"><code>as.vector( browseVignettes(&quot;ready4fun&quot;)[[&quot;ready4fun&quot;]][,7])</code></pre>
+<pre><code>## [1] &quot;V_01.html&quot;      &quot;ready4fun.html&quot;</code></pre>
+<p>S3 Classes</p>
+<table class="table table-hover table-condensed" style="margin-left: auto; margin-right: auto;">
+<thead>
+<tr>
+<th style="text-align:left;">
+Purpose
+</th>
+<th style="text-align:left;">
+Class
+</th>
+<th style="text-align:left;">
+Package
+</th>
+<th style="text-align:left;">
+Examples
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+Authoring (code - classes)
+</td>
+<td style="text-align:left;">
+ready4class_constructor
+</td>
+<td style="text-align:left;">
+ready4class
+</td>
+<td style="text-align:left;">
+<a href="https://ready4-dev.github.io/ready4class/articles/ready4class.html" style="     ">1</a>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Authoring (code - classes)
+</td>
+<td style="text-align:left;">
+ready4class_pt_lup
+</td>
+<td style="text-align:left;">
+ready4class
+</td>
+<td style="text-align:left;">
+<a href="https://ready4-dev.github.io/ready4class/articles/ready4class.html" style="     ">2</a>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Authoring (code - classes)
+</td>
+<td style="text-align:left;">
+ready4class_manifest
+</td>
+<td style="text-align:left;">
+ready4class
+</td>
+<td style="text-align:left;">
+<a href="https://ready4-dev.github.io/ready4class/articles/ready4class.html" style="     ">3</a>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Authoring (code - functions)
+</td>
+<td style="text-align:left;">
+ready4fun_badges
+</td>
+<td style="text-align:left;">
+ready4fun
+</td>
+<td style="text-align:left;">
+<a href="https://ready4-dev.github.io/ready4fun/articles/ready4fun.html" style="     ">4</a>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Authoring (code - functions)
+</td>
+<td style="text-align:left;">
+ready4fun_abbreviations
+</td>
+<td style="text-align:left;">
+ready4fun
+</td>
+<td style="text-align:left;">
+<a href="https://ready4-dev.github.io/ready4fun/articles/ready4fun.html" style="     ">5</a>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Authoring (code - functions)
+</td>
+<td style="text-align:left;">
+ready4fun_executor
+</td>
+<td style="text-align:left;">
+ready4fun
+</td>
+<td style="text-align:left;">
+<a href="https://ready4-dev.github.io/ready4fun/articles/ready4fun.html" style="     ">6</a>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Authoring (code - functions)
+</td>
+<td style="text-align:left;">
+ready4fun_description
+</td>
+<td style="text-align:left;">
+ready4fun
+</td>
+<td style="text-align:left;">
+<a href="https://ready4-dev.github.io/ready4fun/articles/ready4fun.html" style="     ">7</a>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Authoring (code - functions)
+</td>
+<td style="text-align:left;">
+ready4fun_metadata_a
+</td>
+<td style="text-align:left;">
+ready4fun
+</td>
+<td style="text-align:left;">
+<a href="https://ready4-dev.github.io/ready4fun/articles/ready4fun.html" style="     ">8</a>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Authoring (code - functions)
+</td>
+<td style="text-align:left;">
+ready4fun_metadata_b
+</td>
+<td style="text-align:left;">
+ready4fun
+</td>
+<td style="text-align:left;">
+<a href="https://ready4-dev.github.io/ready4fun/articles/ready4fun.html" style="     ">9</a>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Authoring (code - functions)
+</td>
+<td style="text-align:left;">
+ready4fun_manifest
+</td>
+<td style="text-align:left;">
+ready4fun
+</td>
+<td style="text-align:left;">
+<a href="https://ready4-dev.github.io/ready4fun/articles/ready4fun.html" style="     ">10</a>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Authoring (code - functions)
+</td>
+<td style="text-align:left;">
+ready4fun_dataset
+</td>
+<td style="text-align:left;">
+ready4fun
+</td>
+<td style="text-align:left;">
+<a href="https://ready4-dev.github.io/ready4fun/articles/ready4fun.html" style="     ">11</a>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Authoring (code - libraries)
+</td>
+<td style="text-align:left;">
+ready4pack_manifest
+</td>
+<td style="text-align:left;">
+ready4pack
+</td>
+<td style="text-align:left;">
+<a href="https://ready4-dev.github.io/ready4pack/articles/ready4pack.html" style="     ">12</a>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Authoring (code - programs)
+</td>
+<td style="text-align:left;">
+ready4show_authors
+</td>
+<td style="text-align:left;">
+ready4show
+</td>
+<td style="text-align:left;">
+<a href="https://ready4-dev.github.io/ready4show/articles/ready4show.html" style="     ">13</a>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Authoring (code - programs)
+</td>
+<td style="text-align:left;">
+ready4show_institutes
+</td>
+<td style="text-align:left;">
+ready4show
+</td>
+<td style="text-align:left;">
+<a href="https://ready4-dev.github.io/ready4show/articles/ready4show.html" style="     ">14</a>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Authoring (datasets)
+</td>
+<td style="text-align:left;">
+ready4use_distributions
+</td>
+<td style="text-align:left;">
+ready4use
+</td>
+<td style="text-align:left;">
+<a href="https://ready4-dev.github.io/ready4use/articles/ready4use.html" style="     ">15</a>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Authoring (datasets)
+</td>
+<td style="text-align:left;">
+ready4use_dataverses
+</td>
+<td style="text-align:left;">
+ready4use
+</td>
+<td style="text-align:left;">
+<a href="https://ready4-dev.github.io/ready4use/articles/ready4use.html" style="     ">16</a>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Authoring (datasets)
+</td>
+<td style="text-align:left;">
+ready4use_imports
+</td>
+<td style="text-align:left;">
+ready4use
+</td>
+<td style="text-align:left;">
+<a href="https://ready4-dev.github.io/ready4use/articles/ready4use.html" style="     ">17</a>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Authoring (datasets)
+</td>
+<td style="text-align:left;">
+ready4use_mapes
+</td>
+<td style="text-align:left;">
+ready4use
+</td>
+<td style="text-align:left;">
+<a href="https://ready4-dev.github.io/ready4use/articles/ready4use.html" style="     ">18</a>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Authoring (datasets)
+</td>
+<td style="text-align:left;">
+ready4use_dictionary
+</td>
+<td style="text-align:left;">
+ready4use
+</td>
+<td style="text-align:left;">
+<a href="https://ready4-dev.github.io/ready4use/articles/ready4use.html" style="     ">19</a>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Authoring (utility mapping)
+</td>
+<td style="text-align:left;">
+TTU_predictors_lup
+</td>
+<td style="text-align:left;">
+TTU
+</td>
+<td style="text-align:left;">
+<a href="https://ready4-dev.github.io/TTU/articles/TTU.html" style="     ">29</a>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Description (datasets)
+</td>
+<td style="text-align:left;">
+youthvars_aqol6d_adol
+</td>
+<td style="text-align:left;">
+youthvars
+</td>
+<td style="text-align:left;">
+<a href="https://ready4-dev.github.io/youthvars/articles/youthvars.html" style="     ">30</a>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Description (datasets)
+</td>
+<td style="text-align:left;">
+youthvars_phq9
+</td>
+<td style="text-align:left;">
+youthvars
+</td>
+<td style="text-align:left;">
+<a href="https://ready4-dev.github.io/youthvars/articles/youthvars.html" style="     ">31</a>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Description (datasets)
+</td>
+<td style="text-align:left;">
+youthvars_bads
+</td>
+<td style="text-align:left;">
+youthvars
+</td>
+<td style="text-align:left;">
+<a href="https://ready4-dev.github.io/youthvars/articles/youthvars.html" style="     ">32</a>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Description (datasets)
+</td>
+<td style="text-align:left;">
+youthvars_gad7
+</td>
+<td style="text-align:left;">
+youthvars
+</td>
+<td style="text-align:left;">
+<a href="https://ready4-dev.github.io/youthvars/articles/youthvars.html" style="     ">33</a>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Description (datasets)
+</td>
+<td style="text-align:left;">
+youthvars_oasis
+</td>
+<td style="text-align:left;">
+youthvars
+</td>
+<td style="text-align:left;">
+<a href="https://ready4-dev.github.io/youthvars/articles/youthvars.html" style="     ">34</a>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Description (datasets)
+</td>
+<td style="text-align:left;">
+youthvars_scared
+</td>
+<td style="text-align:left;">
+youthvars
+</td>
+<td style="text-align:left;">
+<a href="https://ready4-dev.github.io/youthvars/articles/youthvars.html" style="     ">35</a>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Description (datasets)
+</td>
+<td style="text-align:left;">
+youthvars_k6
+</td>
+<td style="text-align:left;">
+youthvars
+</td>
+<td style="text-align:left;">
+<a href="https://ready4-dev.github.io/youthvars/articles/youthvars.html" style="     ">36</a>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Description (datasets)
+</td>
+<td style="text-align:left;">
+youthvars_sofas
+</td>
+<td style="text-align:left;">
+youthvars
+</td>
+<td style="text-align:left;">
+<a href="https://ready4-dev.github.io/youthvars/articles/youthvars.html" style="     ">37</a>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Modelling (inverse problems)
+</td>
+<td style="text-align:left;">
+specific_models
+</td>
+<td style="text-align:left;">
+specific
+</td>
+<td style="text-align:left;">
+<a href="https://ready4-dev.github.io/specific/articles/specific.html" style="     ">46</a>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Modelling (inverse problems)
+</td>
+<td style="text-align:left;">
+specific_predictors
+</td>
+<td style="text-align:left;">
+specific
+</td>
+<td style="text-align:left;">
+<a href="https://ready4-dev.github.io/specific/articles/specific.html" style="     ">47</a>
+</td>
+</tr>
+</tbody>
+</table>
+<p>S4 Classes</p>
+<table class="table table-hover table-condensed" style="margin-left: auto; margin-right: auto;">
+<thead>
+<tr>
+<th style="text-align:left;">
+Purpose
+</th>
+<th style="text-align:left;">
+Class
+</th>
+<th style="text-align:left;">
+Package
+</th>
+<th style="text-align:left;">
+Examples
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+Authoring (datasets)
+</td>
+<td style="text-align:left;">
+Ready4useFiles
+</td>
+<td style="text-align:left;">
+ready4use
+</td>
+<td style="text-align:left;">
+<a href="https://ready4-dev.github.io/ready4use/articles/ready4use.html" style="     ">20</a>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Authoring (datasets)
+</td>
+<td style="text-align:left;">
+Ready4useRaw
+</td>
+<td style="text-align:left;">
+ready4use
+</td>
+<td style="text-align:left;">
+<a href="https://ready4-dev.github.io/ready4use/articles/ready4use.html" style="     ">21</a>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Authoring (datasets)
+</td>
+<td style="text-align:left;">
+Ready4useProcessed
+</td>
+<td style="text-align:left;">
+ready4use
+</td>
+<td style="text-align:left;">
+<a href="https://ready4-dev.github.io/ready4use/articles/ready4use.html" style="     ">22</a>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Authoring (datasets)
+</td>
+<td style="text-align:left;">
+Ready4useArguments
+</td>
+<td style="text-align:left;">
+ready4use
+</td>
+<td style="text-align:left;">
+<a href="https://ready4-dev.github.io/ready4use/articles/ready4use.html" style="     ">23</a>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Authoring (datasets)
+</td>
+<td style="text-align:left;">
+Ready4useDyad
+</td>
+<td style="text-align:left;">
+ready4use
+</td>
+<td style="text-align:left;">
+<a href="https://ready4-dev.github.io/ready4use/articles/ready4use.html" style="     ">24</a>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Authoring (datasets)
+</td>
+<td style="text-align:left;">
+Ready4useIngest
+</td>
+<td style="text-align:left;">
+ready4use
+</td>
+<td style="text-align:left;">
+<a href="https://ready4-dev.github.io/ready4use/articles/ready4use.html" style="     ">25</a>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Authoring (datasets)
+</td>
+<td style="text-align:left;">
+Ready4useRepos
+</td>
+<td style="text-align:left;">
+ready4use
+</td>
+<td style="text-align:left;">
+<a href="https://ready4-dev.github.io/ready4use/articles/ready4use.html" style="     ">26</a>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Authoring (datasets)
+</td>
+<td style="text-align:left;">
+Ready4usePointer
+</td>
+<td style="text-align:left;">
+ready4use
+</td>
+<td style="text-align:left;">
+<a href="https://ready4-dev.github.io/ready4use/articles/ready4use.html" style="     ">27</a>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Authoring (datasets)
+</td>
+<td style="text-align:left;">
+Ready4useRecord
+</td>
+<td style="text-align:left;">
+ready4use
+</td>
+<td style="text-align:left;">
+<a href="https://ready4-dev.github.io/ready4use/articles/ready4use.html" style="     ">28</a>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Description (datasets)
+</td>
+<td style="text-align:left;">
+YouthvarsDescriptives
+</td>
+<td style="text-align:left;">
+youthvars
+</td>
+<td style="text-align:left;">
+<a href="https://ready4-dev.github.io/youthvars/articles/youthvars.html" style="     ">38</a>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Description (datasets)
+</td>
+<td style="text-align:left;">
+YouthvarsProfile
+</td>
+<td style="text-align:left;">
+youthvars
+</td>
+<td style="text-align:left;">
+<a href="https://ready4-dev.github.io/youthvars/articles/youthvars.html" style="     ">39</a>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Description (datasets)
+</td>
+<td style="text-align:left;">
+YouthvarsSeries
+</td>
+<td style="text-align:left;">
+youthvars
+</td>
+<td style="text-align:left;">
+<a href="https://ready4-dev.github.io/youthvars/articles/youthvars.html" style="     ">40</a>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Description (variable scoring)
+</td>
+<td style="text-align:left;">
+ScorzProfile
+</td>
+<td style="text-align:left;">
+scorz
+</td>
+<td style="text-align:left;">
+<a href="https://ready4-dev.github.io/scorz/articles/scorz.html" style="     ">41</a>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Description (variable scoring)
+</td>
+<td style="text-align:left;">
+ScorzAqol6
+</td>
+<td style="text-align:left;">
+scorz
+</td>
+<td style="text-align:left;">
+<a href="https://ready4-dev.github.io/scorz/articles/scorz.html" style="     ">42</a>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Description (variable scoring)
+</td>
+<td style="text-align:left;">
+ScorzAqol6Adol
+</td>
+<td style="text-align:left;">
+scorz
+</td>
+<td style="text-align:left;">
+<a href="https://ready4-dev.github.io/scorz/articles/scorz.html" style="     ">43</a>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Description (variable scoring)
+</td>
+<td style="text-align:left;">
+ScorzAqol6Adult
+</td>
+<td style="text-align:left;">
+scorz
+</td>
+<td style="text-align:left;">
+<a href="https://ready4-dev.github.io/scorz/articles/scorz.html" style="     ">44</a>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Description (variable scoring)
+</td>
+<td style="text-align:left;">
+ScorzEuroQol5
+</td>
+<td style="text-align:left;">
+scorz
+</td>
+<td style="text-align:left;">
+<a href="https://ready4-dev.github.io/scorz/articles/scorz.html" style="     ">45</a>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Modelling (inverse problems)
+</td>
+<td style="text-align:left;">
+SpecificParameters
+</td>
+<td style="text-align:left;">
+specific
+</td>
+<td style="text-align:left;">
+<a href="https://ready4-dev.github.io/specific/articles/specific.html" style="     ">48</a>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Modelling (inverse problems)
+</td>
+<td style="text-align:left;">
+SpecificPrivate
+</td>
+<td style="text-align:left;">
+specific
+</td>
+<td style="text-align:left;">
+<a href="https://ready4-dev.github.io/specific/articles/specific.html" style="     ">49</a>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Modelling (inverse problems)
+</td>
+<td style="text-align:left;">
+SpecificShareable
+</td>
+<td style="text-align:left;">
+specific
+</td>
+<td style="text-align:left;">
+<a href="https://ready4-dev.github.io/specific/articles/specific.html" style="     ">50</a>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Modelling (inverse problems)
+</td>
+<td style="text-align:left;">
+SpecificResults
+</td>
+<td style="text-align:left;">
+specific
+</td>
+<td style="text-align:left;">
+<a href="https://ready4-dev.github.io/specific/articles/specific.html" style="     ">51</a>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Modelling (inverse problems)
+</td>
+<td style="text-align:left;">
+SpecificProject
+</td>
+<td style="text-align:left;">
+specific
+</td>
+<td style="text-align:left;">
+<a href="https://ready4-dev.github.io/specific/articles/specific.html" style="     ">52</a>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Modelling (inverse problems)
+</td>
+<td style="text-align:left;">
+SpecificInitiator
+</td>
+<td style="text-align:left;">
+specific
+</td>
+<td style="text-align:left;">
+<a href="https://ready4-dev.github.io/specific/articles/specific.html" style="     ">53</a>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Modelling (inverse problems)
+</td>
+<td style="text-align:left;">
+SpecificModels
+</td>
+<td style="text-align:left;">
+specific
+</td>
+<td style="text-align:left;">
+<a href="https://ready4-dev.github.io/specific/articles/specific.html" style="     ">54</a>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Modelling (inverse problems)
+</td>
+<td style="text-align:left;">
+SpecificPredictors
+</td>
+<td style="text-align:left;">
+specific
+</td>
+<td style="text-align:left;">
+<a href="https://ready4-dev.github.io/specific/articles/specific.html" style="     ">55</a>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Modelling (inverse problems)
+</td>
+<td style="text-align:left;">
+SpecificFixed
+</td>
+<td style="text-align:left;">
+specific
+</td>
+<td style="text-align:left;">
+<a href="https://ready4-dev.github.io/specific/articles/specific.html" style="     ">56</a>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Modelling (inverse problems)
+</td>
+<td style="text-align:left;">
+SpecificMixed
+</td>
+<td style="text-align:left;">
+specific
+</td>
+<td style="text-align:left;">
+<a href="https://ready4-dev.github.io/specific/articles/specific.html" style="     ">57</a>
+</td>
+</tr>
+</tbody>
+</table>
