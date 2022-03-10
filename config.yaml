@@ -1,7 +1,7 @@
 baseurl: "https://www.ready4-dev.com"
-title: ready4
+title: ready4-dev
 author: Orygen
-copyright: Copyright © 2021, Orygen.
+copyright: Copyright © 2022, Orygen.
 paginate: 10
 theme: hugo-clarity
 disqusShortname: ''
@@ -28,7 +28,7 @@ markup:
     noClasses: no
     tabWidth: 2
 params:
-  author: ready4
+  author: ready4-dev
   centerLogo: no
   codeLineNumbers: no
   codeMaxLines: 7
@@ -38,7 +38,7 @@ params:
   figurePositionLabel: Figure
   figurePositionShow: no
   ga_analytics: XXXXXXXXXX
-  introDescription: A framework for modulal, replicable and generalisable mental health models.
+  introDescription: Documenting the development of an open souce youth mental health systems model.
   languageMenuName: "\U0001F310"
   largeTwitterCard: no
   logo: "logos/logo.png"

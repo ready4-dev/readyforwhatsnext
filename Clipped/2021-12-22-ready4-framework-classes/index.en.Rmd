@@ -1,12 +1,10 @@
 ---
-title: ready4 framework classes
-author: Matthew Hamilton
+title: "ready4 framework classes"
+author: "Matthew Hamilton"
 date: '2021-12-22'
 slug: []
-categories:
-  - Technology
-tags:
-  - classes
+categories: Technology
+tags: classes
 description: Article description.
 featured: yes
 toc: no

@@ -1,36 +1,98 @@
 [[main]]
   name = "Home"
   url = ""
+  weight = -130
+[[main]]
+  name = "About"
+  identifier = "About"
+  #url = "about/"
+  weight = -125
+[[main]]
+  parent = "About"
+  name = "About ready4-dev"
+  url = "about/"
+  weight = -124
+[[main]]
+  parent = "About"
+  name = "Motivation"
+  url = "motivation/"
+  weight = -123
+[[main]]
+  parent = "About"
+  name = "Team"
+  url = "team/"
+  weight = -122
+[[main]]
+  parent = "About"
+  name = "Contribute"
+  url = "contribute/"
+  weight = -121
+[[main]]
+  name = "Framework"
+  url = "project/a_ready4-project/"#"framework/"
+  weight = -115 
+[[main]]
+  name = "Models"
+  url = "categories/models/"
   weight = -110
-
+#[[main]]
+#  parent = "Models"
+#  name = "Overview"
+#  url = "models"
+#  weight = -109
+[[main]]
+  parent = "Models"
+  name = "Spring To Life - a model of people"
+  url = "project/c_springtolife-project/"
+  weight = -108
+[[main]]
+  parent = "Models"
+  name = "Springtides - a model of places"
+  url = "project/b_springtides-project/"
+  weight = -107
+[[main]]
+  parent = "Models"
+  name = "First Bounce - a model of platforms"
+  url = "project/e_firstbounce-project/"
+  weight = -106
+[[main]]
+  parent = "Models"
+  name = "On Target - a model of programs"
+  url = "project/d_ontarget-project/"
+  weight = -106
+[[main]]
+  parent = "Models"
+  name = "readyforwhatsnext - a systems model of people, places, platforms and programs"
+  url = "project/f_readyforwhatsnext-project/"#"readyforwhatsnext/"
+  weight = -104 
 # Submenus are done this way: parent -> identifier
 [[main]]
-  name = "Toolkits"
-  identifier = "Toolkits"
+  name = "Software"
+  identifier = "Software"
   #url = "toolkits/"
   weight = -100
 [[main]]
-  parent = "Toolkits"
+  parent = "Software"
   name = "About ready4 toolkits"
   url = "toolkits/"
   weight = -98
 [[main]]
-  parent = "Toolkits"
+  parent = "Software"
   name = "Authoring toolkits"
   url = "categories/authoring-toolkits/"
   weight = -96
 [[main]]
-  parent = "Toolkits"
+  parent = "Software"
   name = "Description toolkits"
   url = "categories/description-toolkits/"
   weight = -95
 [[main]]
-  parent = "Toolkits"
+  parent = "Software"
   name = "Modelling toolkits"
   url = "categories/modelling-toolkits/"
   weight = -94
 [[main]]
-  parent = "Toolkits"
+  parent = "Software"
   name = "Prediction toolkits"
   url = "categories/prediction-toolkits/"
   weight = -92
@@ -55,34 +117,9 @@
   url = "categories/package-datasets/"
   weight = -84
 [[main]]
-  name = "Application"
-  identifier = "Application"
-  weight = -80
-[[main]]
-  parent = "Application"
   name = "Insights"
   url = "categories/insights/"
   weight = -78
-[[main]]
-  parent = "Application"
-  name = "Models"
-  url = "categories/models/"
-  weight = -76
-[[main]]
-  name = "About"
-  identifier = "About"
-  url = "about/"
-  weight = -70
-[[main]]
-  parent = "About"
-  name = "Framework"
-  url = "about/"
-  weight = -68 
-[[main]]
-  parent = "About"
-  name = "readyforwhatsnext"
-  url = "readyforwhatsnext/"
-  weight = -66  
 [[social]]
   name = "github"
   type = "social"
