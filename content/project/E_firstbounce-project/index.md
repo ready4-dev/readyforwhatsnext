@@ -9,17 +9,21 @@ links:
 #slides: ""
 summary: A model of platforms.
 weight: 5
+categories:
+- MODELS
+- MODELS (PLATFORMS)
+- MODELS (SEGMENTS)
 tags:
-- PRIMARY MENTAL HEALTH
+- MENTAL HEALTH
 - HEALTH SERVICES
 - DISCRETE EVENT SIMULATION
-- MODEL MODULES
-- MODELS
+- RESOURCE CONSTRAINTS
 title: First Bounce
 url_code: ""
 url_pdf: ""
 url_slides: ""
 url_video: ""
+thumbnail: images/firstbounce_logo.png
 ---
 
 ![](featured.png)

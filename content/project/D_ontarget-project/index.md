@@ -9,16 +9,19 @@ links:
 # slides: example
 summary: A model of programs.
 weight: 4
+categories:
+- MODELS
+- MODELS (PROGRAMS)
+- MODELS (SEGMENTS)
 tags:
 - PROGRAMS
 - TREATMENTS
-- MODEL MODULES
-- MODELS
 title: On target
 url_code: ""
 url_pdf: ""
 url_slides: ""
 url_video: ""
+thumbnail: images/ontarget_logo.png
 ---
 
 ![](featured.png)

@@ -9,18 +9,21 @@ external_link: ""
 # slides: ""
 summary: A model of people.
 weight: 3
+categories:
+- MODELS
+- MODELS (PEOPLE)
+- MODELS (SEGMENTS)
 tags:
+- AGENT BASED MODELS
 - CHOICE MODELS
 - MICROSIMULATION
-- MODEL MODULES
-- OUTCOME MEASUREMENT
 - UTILITY MAPPING
-- MODELS
 title: Spring To Life
 url_code: ""
 url_pdf: ""
 url_slides: ""
 url_video: ""
+thumbnail: images/springtolife_logo.png
 ---
 
 ![](featured.png)

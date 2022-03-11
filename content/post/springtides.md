@@ -2,8 +2,6 @@
 author: Matthew Hamilton
 date: "2021-02-18"
 description: Springtides project page.
-categories:
-- models
 tags:
 - epidemiology
 - springtides

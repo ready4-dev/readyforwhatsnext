@@ -4,7 +4,6 @@ date: "2021-02-20"
 description: First Bounce project page.
 categories:
 - first bounce model
-- models
 tags:
 - discrete event simulation
 - economic evaluation

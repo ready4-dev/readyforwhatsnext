@@ -7,5 +7,5 @@ description: How you can contribute
 title: Contribute
 ---
 
-We also welcome approaches from potential collaborators interested in contributing to the development of the project - [contact Matthew Hamilton](https://mph-economist.netlify.app/#contact).
+We welcome approaches from potential funders and collaborators interested in contributing to the development of the project - [contact Matthew Hamilton](https://mph-economist.netlify.app/#contact).
 

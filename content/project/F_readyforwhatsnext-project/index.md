@@ -9,14 +9,19 @@ external_link: ""
 # slides: ""
 summary: A model of systems.
 weight: 6
-tags:
-- SYSTEMS MODELS
+categories:
 - MODELS
+- MODELS (SYSTEMS)
+tags:
+- RESILIENCE
+- SYSTEM FINANCING
+- SYSTEM ORGANISATION
 title: Readyforwhatsnext
 url_code: ""
 url_pdf: ""
 url_slides: ""
 url_video: ""
+thumbnail: images/RFWN_logo.png
 ---
 
 ![](featured.jpg)

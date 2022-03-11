@@ -7,7 +7,6 @@ description: ready4 datasets.
 title: Datasets
 ---
 
-ready4 datasets that are currently freely available include:
+ready4 datasets that are currently hosted within our collection of [Dataverses](https://dataverse.harvard.edu/dataverse/ready4). 
 
-- [Package datasets](../categories/package-datasets/) that are bundled as part of the R code-libraries that comprise ready4 [toolkits](../toolkits/). These are typically quite small in file size and may include synthetic agent populations.
-- [Dataverse datasets](../categories/dataverse-datasets/) hosted within our collection of [Dataverses](https://dataverse.harvard.edu/dataverse/ready4). These datasets can include larger size files and may include the shareable versions of model analysis results.
+Our datasets are a combination of [model datasets](../categories/datasets-model/) (input and output data for modelling studies) and [instructional datasets](../categories/datasets-instructional/) (synthetic [fake] data used to demonstrate the generalised application of model algorithms).

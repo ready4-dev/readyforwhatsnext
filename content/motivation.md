@@ -13,7 +13,7 @@ We have developed the ready4 framework so that the readyforwhatsnext model can b
 - **Replicable** - model algorithms and data are freely available to others so that they can reproduce results and verify model validity; and
 - **Generalisable** - model algorithms and data-structures are sufficiently abstracted to have multiple applications, so that models can be more readily adapted to a range of spatio-temporal and decision contexts.
 
-The current version of the ready4 framework consists of development versions of a range of open access [toolkits](../toolkits/) and [datasets](../datasets/). Furthermore, each of the [models](../categories/models/) developed with the framework is also a module of the overarching readyforwhatsnext model.
+The current version of the ready4 framework consists of development versions of a range of open access [software](../software/) and [datasets](../data/). Furthermore, each of the [models](../categories/models/) developed with the framework is also a module of the overarching readyforwhatsnext model.
 
 
 

@@ -73,52 +73,77 @@
   weight = -100
 [[main]]
   parent = "Software"
-  name = "About ready4 toolkits"
+  name = "About our open source software"
+  url = "software/"
+  weight = -99
+[[main]]
+  parent = "Software"
+  name = "Libraries"
   url = "toolkits/"
   weight = -98
 [[main]]
   parent = "Software"
-  name = "Authoring toolkits"
-  url = "categories/authoring-toolkits/"
-  weight = -96
-[[main]]
-  parent = "Software"
-  name = "Description toolkits"
-  url = "categories/description-toolkits/"
-  weight = -95
-[[main]]
-  parent = "Software"
-  name = "Modelling toolkits"
-  url = "categories/modelling-toolkits/"
-  weight = -94
-[[main]]
-  parent = "Software"
-  name = "Prediction toolkits"
-  url = "categories/prediction-toolkits/"
-  weight = -92
+  name = "Programs"
+  url = "programs/"
+  weight = -97
+#[[main]]
+#  parent = "Software"
+#  name = "Authoring toolkits"
+#  url = "categories/authoring-toolkits/"
+#  weight = -96
+#[[main]]
+#  parent = "Software"
+#  name = "Description toolkits"
+#  url = "categories/description-toolkits/"
+#  weight = -95
+#[[main]]
+#  parent = "Software"
+#  name = "Modelling toolkits"
+#  url = "categories/modelling-toolkits/"
+#  weight = -94
+#[[main]]
+#  parent = "Software"
+#  name = "Prediction toolkits"
+#  url = "categories/prediction-toolkits/"
+#  weight = -92
 [[main]]
   identifier = "Datasets"
   name = "Datasets"
-  url = "data/"
+  #url = "data/"
   weight = -90
 [[main]]
   parent = "Datasets"
   name = "About ready4 datasets"
   url = "data/"
+  weight = -89
+[[main]]
+  parent = "Datasets"
+  name = "Model data packs"
+  url = "categories/datasets-model/"
   weight = -88
 [[main]]
   parent = "Datasets"
-  name = "Dataverse Datasets"
-  url = "categories/dataverse-datasets"
-  weight = -86
-[[main]]
-  parent = "Datasets"
-  name = "Package datasets"
-  url = "categories/package-datasets/"
-  weight = -84
+  name = "Instructional data packs"
+  url = "categories/datasets-instructional/"
+  weight = -87
+#[[main]]
+#  parent = "Datasets"
+#  name = "Abbreviations and Taxonomies"
+#  url = "frameworkdata/"
+#  weight = -86
+#[[main]]
+#  parent = "Datasets"
+#  name = "Dataverse Datasets"
+#  url = "categories/dataverse-datasets"
+#  weight = -86
+#[[main]]
+#  parent = "Datasets"
+#  name = "Package datasets"
+#  url = "categories/package-datasets/"
+#  weight = -84
 [[main]]
   name = "Insights"
-  url = "categories/insights/"
+  url = "categories/insights/"#"insights/"#
   weight = -78
 [[social]]
   name = "github"

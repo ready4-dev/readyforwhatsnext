@@ -9,6 +9,10 @@ external_link: ""
 # slides: ""
 summary: A model of places.
 weight: 2
+categories:
+- MODELS
+- MODELS (PLACES)
+- MODELS (SEGMENTS)
 tags:
 - SPATIAL MODELS
 - MODEL MODULES
@@ -18,6 +22,7 @@ url_code: ""
 url_pdf: "https://dataverse.harvard.edu/file.xhtml?fileId=4419934&version=1.0#"
 url_slides: ""
 url_video: "https://www.youtube.com/watch?v=b6g_DzBPOqo"
+thumbnail: images/springtides_logo.png
 ---
 
 ![](featured.png)
