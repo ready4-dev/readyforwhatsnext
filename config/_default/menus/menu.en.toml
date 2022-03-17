@@ -29,17 +29,12 @@
   weight = -121
 [[main]]
   name = "Framework"
-  url = "project/a_ready4-project/"#"framework/"
+  url = "project/a_ready4-project/foundation/"#"framework/"
   weight = -115 
 [[main]]
   name = "Models"
   url = "categories/models/"
   weight = -110
-#[[main]]
-#  parent = "Models"
-#  name = "Overview"
-#  url = "models"
-#  weight = -109
 [[main]]
   parent = "Models"
   name = "Spring To Life - a model of people"
@@ -67,83 +62,67 @@
   weight = -104 
 # Submenus are done this way: parent -> identifier
 [[main]]
-  name = "Software"
-  identifier = "Software"
+  name = "Datasets"
+  identifier = "Datasets"
   #url = "toolkits/"
-  weight = -100
+  weight = -101
+[[main]]
+  parent = "Datasets"
+  name = "Datasets (Overview)"
+  url = "publications_ov/datasets/"
+  weight = -99
+[[main]]
+  parent = "Datasets"
+  name = "Model Datasets"
+  url = "publications/datasets/model/"
+  weight = -98
+[[main]]
+  parent = "Datasets"
+  name = "Instructional Datasets"
+  url = "publications/datasets/instructional/"
+  weight = -97
+[[main]]
+  identifier = "Software"
+  name = "Software"
+  weight = -90
 [[main]]
   parent = "Software"
-  name = "About our open source software"
-  url = "software/"
-  weight = -99
+  name = "Software (Overview)"
+  url = "publications_ov/software/"
+  weight = -89
 [[main]]
   parent = "Software"
   name = "Libraries"
-  url = "toolkits/"
-  weight = -98
+  url = "publications/libraries/"
+  weight = -88
 [[main]]
   parent = "Software"
   name = "Programs"
-  url = "programs/"
-  weight = -97
-#[[main]]
-#  parent = "Software"
-#  name = "Authoring toolkits"
-#  url = "categories/authoring-toolkits/"
-#  weight = -96
-#[[main]]
-#  parent = "Software"
-#  name = "Description toolkits"
-#  url = "categories/description-toolkits/"
-#  weight = -95
-#[[main]]
-#  parent = "Software"
-#  name = "Modelling toolkits"
-#  url = "categories/modelling-toolkits/"
-#  weight = -94
-#[[main]]
-#  parent = "Software"
-#  name = "Prediction toolkits"
-#  url = "categories/prediction-toolkits/"
-#  weight = -92
-[[main]]
-  identifier = "Datasets"
-  name = "Datasets"
-  #url = "data/"
-  weight = -90
-[[main]]
-  parent = "Datasets"
-  name = "About ready4 datasets"
-  url = "data/"
-  weight = -89
-[[main]]
-  parent = "Datasets"
-  name = "Model data packs"
-  url = "categories/datasets-model/"
-  weight = -88
-[[main]]
-  parent = "Datasets"
-  name = "Instructional data packs"
-  url = "categories/datasets-instructional/"
+  url = "publications/programs/"
   weight = -87
-#[[main]]
-#  parent = "Datasets"
-#  name = "Abbreviations and Taxonomies"
-#  url = "frameworkdata/"
-#  weight = -86
-#[[main]]
-#  parent = "Datasets"
-#  name = "Dataverse Datasets"
-#  url = "categories/dataverse-datasets"
-#  weight = -86
-#[[main]]
-#  parent = "Datasets"
-#  name = "Package datasets"
-#  url = "categories/package-datasets/"
-#  weight = -84
 [[main]]
-  name = "Insights"
-  url = "categories/insights/"#"insights/"#
+  parent = "Software"
+  name = "Sub-Routines"
+  url = "publications/subroutines/"
+  weight = -87
+[[main]]
+  identifier = "Reports"
+  name = "Reports"
+  weight = -80
+[[main]]
+  parent = "Reports"
+  name = "Reports (Overview)"#
+  url = "publications_ov/reports/"#"insights/"#
+  weight = -79
+[[main]]
+  parent = "Reports"
+  name = "Scientific"#publications/reports/
+  url = "publications/reports/scientific/"#"insights/"#
+  weight = -78
+[[main]]
+  parent = "Reports"
+  name = "Policy"#publications/reports/
+  url = "publications/reports/policy/"#"insights/"#
   weight = -78
 [[social]]
   name = "github"

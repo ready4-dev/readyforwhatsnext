@@ -1,36 +1,25 @@
 ---
 date: "2022-03-10"
 external_link: ""
-links:
-# - icon: twitter
-#   icon_pack: fab
-#   name: Follow
-#   url: https://www.ready4-dev.com/post/first-bounce/
-# slides: example
-summary: A modelling framework.
+summary: Tools for standardised development of framework modules, data-packs and models.
 weight: 1
 tags:
 - READY4 FRAMEWORK
-title: ready4
-url_code: "https://ready4-dev.github.io/ready4/"
-url_pdf: ""
-url_slides: ""
-url_video: ""
+- AUTHORING TOOLS
+title: Authoring framework extensions
 ---
 
 ![](featured.png)
 
 ## Purpose
-ready4 is a framework for open and modular development of mental health systems models. It provides a set of tools to enable models of [places](/project/b_springtides-project/), [people](/project/c_springtolife-project/), [programs](/project/d_ontarget-project/) and [platforms](/project/e_firstbounce-project/) to be flexibly combined as modules of overarching [systems models](/project/f_readyforwhatsnext-project/).
+......
 
 ## Published output
 Published work to date includes software and a dataset.
 
 ### Software
 
-The foundation of the ready4 framework is provided by the [ready4](https://ready4-dev.github.io/ready4/) R package (development version).
-
-The bare-bones framework provided by `ready4` can be extended using tools contained in the following development version R packages:
+The bare bones [foundation of the ready4 framework](../project/a_ready4-project/) can be extended using tools contained in the following development version R packages:
 
 - [ready4fun](https://ready4-dev.github.io/ready4fun/index.html), [ready4class](https://ready4-dev.github.io/ready4class/index.html) and [ready4pack](https://ready4-dev.github.io/ready4pack/index.html) (for authoring and documenting code libraries);
 - [ready4show](https://ready4-dev.github.io/ready4show/index.html) (for authoring self-documenting programs); and 
