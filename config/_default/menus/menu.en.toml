@@ -29,12 +29,39 @@
   weight = -121
 [[main]]
   name = "Framework"
-  url = "project/a_ready4-project/foundation/"#"framework/"
-  weight = -115 
+  identifier = "Framework"
+  #url = "project/a_ready4-project/foundation/"#"framework/"
+  weight = -118 
+[[main]]
+  parent = "Framework"
+  name = "Framework (Overview)"
+  url = "framework"
+  weight = -117
+[[main]]
+  parent = "Framework"
+  name = "Modules"
+  url = "project/a_ready4-project/modules/"
+  weight = -116
+[[main]]
+  parent = "Framework"
+  name = "Syntax"
+  url = "project/a_ready4-project/syntax/"
+  weight = -115
+[[main]]
+  parent = "Framework"
+  name = "Authoring framework extensions"
+  url = "project/a_ready4-project/developer/"
+  weight = -112
 [[main]]
   name = "Models"
-  url = "categories/models/"
+  identifier = "Models"
+  #url = "categories/models/"
   weight = -110
+[[main]]
+  parent = "Models"
+  name = "Models (Overview)"
+  url = "models/"
+  weight = -108
 [[main]]
   parent = "Models"
   name = "Spring To Life - a model of people"
@@ -60,6 +87,11 @@
   name = "readyforwhatsnext - a systems model of people, places, platforms and programs"
   url = "project/f_readyforwhatsnext-project/"#"readyforwhatsnext/"
   weight = -104 
+[[main]]
+  parent = "Models"
+  name = "Authoring models"
+  url = "project/a_ready4-project/modeller/"
+  weight = -102
 # Submenus are done this way: parent -> identifier
 [[main]]
   name = "Datasets"
@@ -73,14 +105,19 @@
   weight = -99
 [[main]]
   parent = "Datasets"
+  name = "Framework Datasets"
+  url = "publications/datasets/framework/"
+  weight = -97
+[[main]]
+  parent = "Datasets"
   name = "Model Datasets"
   url = "publications/datasets/model/"
-  weight = -98
+  weight = -97
 [[main]]
   parent = "Datasets"
   name = "Instructional Datasets"
   url = "publications/datasets/instructional/"
-  weight = -97
+  weight = -96
 [[main]]
   identifier = "Software"
   name = "Software"

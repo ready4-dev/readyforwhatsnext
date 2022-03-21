@@ -1,0 +1,29 @@
+---
+date: "2022-03-10"
+external_link: ""
+summary: Tools for standardised development of framework modules, data-packs and models.
+weight: 1
+tags:
+- READY4 FRAMEWORK
+- AUTHORING TOOLS
+title: Authoring framework extensions
+---
+
+![](featured.png)
+
+## Purpose
+To provide tools for standardised development of datasets, programs and sub-routines that implement models using the ready4 framework.
+
+## Published output
+Published work to date includes software.
+
+### Software
+
+Modellers can avail of the following development version R packages to develop models using the ready4 framework:
+
+- [ready4use](https://ready4-dev.github.io/ready4use/index.html) (for authoring, curating and labelling datasets); and
+- [ready4show](https://ready4-dev.github.io/ready4show/index.html) (for authoring self-documenting programs and sub-routines).
+
+
+## Future releases
+The priority for development of the framework is to improve the documentation and ease of use of the current framework toolkits and to prepare each R package for submission to [CRAN](https://cran.r-project.org/).

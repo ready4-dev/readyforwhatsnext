@@ -9,7 +9,7 @@ summary: "An R Markdown program that can be used as a template for generating re
 categories:
  - SOFTWARE
  - SOFTWARE (PROGRAMS)
- - SOFTWARE (PROGRAMS-SUBROUTINES)
+ - SOFTWARE (PROGRAMS - SUBROUTINES)
 tags:
  - MENTAL DISORDERS
  - MODULAR MODELS

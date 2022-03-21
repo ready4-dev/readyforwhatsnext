@@ -3,29 +3,19 @@ authors:
  - Caroline Gao
  - admin
 date: "2022-02-04T00:00:00Z"
-featured: true
-publication: '*Zenodo*'
-publication_short: "Zenodo"
-publication_types:
-- "9"
-publishDate: "2022-02-04T00:00:00Z"
 summary: "An R package that contains tools for creating model catalogues and scientific summaries for utility mapping studies and uploading study outputs to online repositories..."
 categories:
  - SOFTWARE
  - SOFTWARE (LIBRARIES)
+ - SOFTWARE (LIBRARIES - MODELLING)
  - FRAMEWORK
  - FRAMEWORK (MODULES)
  - FRAMEWORK (MODULES - PEOPLE)
- - FRAMEWORK (TOOLS - MODELLING)
 tags:
- - MENTAL DISORDERS
- - ADOLESCENCE
- - SIMULATION
- - HEALTH SERVICES
- - HEALTH ECONOMICS
- - UTILITY MAPPING
  - READY4 FRAMEWORK
- - MODELLING TOOLS
+ - TTU R PACKAGE
+ - UTILITY MAPPING
+
 thumbnail: images/TTU_logo.png
 title: "TTU: Implement Transfer to Utility Mapping Algorithms"
 ---

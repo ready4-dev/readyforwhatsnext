@@ -1,7 +1,7 @@
 ---
 abstract: "An R program that provides a worked example of how AQoL-6D mapping models intended for use in clinical youth mental health samples can be used to make health utility predictions using new data."
 authors:
- - admin
+ - Matthew Hamilton
  - Caroline Gao
 date: "2022-02-02T00:00:00Z"
 featured: true
@@ -10,7 +10,7 @@ summary: "An R program that provides a worked example of how AQoL-6D mapping mod
 categories:
  - SOFTWARE
  - SOFTWARE (PROGRAMS)
- - SOFTWARE (PROGRAMS-SELF-CONTAINED)
+ - SOFTWARE (PROGRAMS - SELF-CONTAINED)
 tags:
  - MENTAL DISORDERS
  - HEALTH UTILITY

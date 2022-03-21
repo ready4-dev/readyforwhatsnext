@@ -18,15 +18,8 @@ categories:
  - FRAMEWORK (MODULES - PEOPLE)
  - FRAMEWORK (TOOLS - PREDICTION)
 tags:
- - MENTAL DISORDERS
- - ADOLESCENCE
- - PREDICTION TOOLS
- - HEALTH SERVICES
- - HEALTH ECONOMICS
- - POLICY ANALYSIS
- - MODULAR MODELS
- - REPRODUCIBLE RESEARCH
  - READY4 FRAMEWORK
+ - YOUTHU R PACKAGE
 thumbnail: images/youthu_logo.png
 title: "youthu: Transform Youth Outcomes to Health Utility Predictions"
 ---

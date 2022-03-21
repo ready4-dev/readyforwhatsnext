@@ -12,16 +12,11 @@ summary: "An R package that provides a framework, syntax and tools to support th
 categories:
  - SOFTWARE
  - SOFTWARE (LIBRARIES)
+ - SOFTWARE (LIBRARIES - FOUNDATION)
  - FRAMEWORK
- - FRAMEWORK (TOOLS - FOUNDATION)
 tags:
- - MENTAL DISORDERS
- - ADOLESCENCE
- - MODULAR MODELS
- - SIMULATION
- - HEALTH SERVICES
- - HEALTH ECONOMICS
  - READY4 FRAMEWORK
+ - READY4 R PACKAGE
 thumbnail: images/logo.png
 title: "ready4: Implement Open Science Computational Models of Mental Health Systems"
 ---
