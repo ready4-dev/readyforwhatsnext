@@ -20,6 +20,6 @@ DOI / URL: https://doi.org/10.7910/DVN/612HDC
 Repository: [Harvard Dataverse (ready4)](https://dataverse.harvard.edu/dataverse/ready4)
 
 Authors:
- - [Matthew Hamilton](https://mph-economist.netlify.app/)
+ - [Matthew P Hamilton](https://mph-economist.netlify.app/)
 
 An [instructional dataset](../) of fake [utility mapping](../../../../tags/utility-mapping/) models generated from supplying a synthetic dataset of [EQ-5D](../../../../tags/eq-5d/) and mental health measures as inputs to [ready4 framework](../../../../framework/) [modules](../../../../project/a_ready4-project/modules/) from the [TTU R package](../../../../tags/ttu-r-package/). The dataset is used to help illustrate aspects of the [Spring To Life model of people](../../../../project/c_springtolife-project/).

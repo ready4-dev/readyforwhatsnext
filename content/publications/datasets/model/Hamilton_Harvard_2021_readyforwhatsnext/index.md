@@ -13,6 +13,7 @@ tags:
  - CONCEPTUAL MODEL
  - DEMOGRAPHY
  - SPATIAL EPIDEMIOLOGY
+weight: 510
 thumbnail: images/RFWN_logo.png
 title: "readyforwhatsnext posters"
 ---
@@ -22,6 +23,6 @@ DOI / URL: https://doi.org/10.7910/DVN/QBZFQV
 Repository: [Harvard Dataverse (ready4)](https://dataverse.harvard.edu/dataverse/ready4)
 
 Authors:
- - [Matthew Hamilton](https://mph-economist.netlify.app/)
+ - [Matthew P Hamilton](https://mph-economist.netlify.app/)
 
 A [model dataset](../) of posters that summarise work to scope and  [conceptualise](../../../../categories/datasets-models-conceptualisation) the [readyforwhatsnext model of systems](../../../../project/f_readyforwhatsnext-project/).

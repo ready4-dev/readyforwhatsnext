@@ -13,29 +13,27 @@ summary: "An R package that includes tools to describe and quality assure types 
 categories:
  - SOFTWARE
  - SOFTWARE (LIBRARIES)
+ - SOFTWARE (LIBRARIES - DESCRIPTION
  - FRAMEWORK
  - FRAMEWORK (MODULES)
  - FRAMEWORK (MODULES - PEOPLE)
- - FRAMEWORK (TOOLS - DESCRIPTION)
 tags:
- - MENTAL DISORDERS
- - ADOLESCENCE
- - HEALTH SERVICES
- - HEALTH ECONOMICS
- - POLICY ANALYSIS
- - SIMULATION
- - DESCRIPTIVE TOOLS
- - MODULAR MODELS
  - READY4 FRAMEWORK
- - REPRODUCIBLE RESEARCH
+ - READY4 FRAMEWORK (MODULES - PEOPLE)
+ - YOUTHVARS R PACKAGE
+weight: 20
 thumbnail: images/youthvars_logo.png
 title: "youthvars: Describe and Validate Youth Mental Health Datasets"
 ---
-
-An R package of [ready4 framework](../../project/a_ready4-project/) [modules](../../project/a_ready4-project/modules/) to describe and quality assure microdata for use in [a model of people](../../project/c_springtolife-project/).
 
 Archive: https://doi.org/10.5281/ZENODO.5646550
 
 Development: https://github.com/ready4-dev/youthvars
 
 Documentation: https://ready4-dev.github.io/youthvars/
+
+Authors:
+ - [Matthew P Hamilton](https://mph-economist.netlify.app/)
+ - Caroline Gao
+
+An [R package](../) of tools to describe and quality assure youth mental health microdata.  Provides [ready4 framework](../../project/a_ready4-project/) [modules](../../project/a_ready4-project/modules/) for the [Spring To Life model of people](../../project/c_springtolife-project/).

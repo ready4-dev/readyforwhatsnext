@@ -1,6 +1,8 @@
 ---
 date: "2022-03-10"
 external_link: ""
+aliases:
+- /post/springtides/
 # links:
 # - icon: twitter
 #   icon_pack: fab

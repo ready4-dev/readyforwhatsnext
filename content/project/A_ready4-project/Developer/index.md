@@ -1,12 +1,13 @@
 ---
 date: "2022-03-10"
 external_link: ""
-summary: Tools for standardised development of framework modules.
-weight: 1
+summary: Tools for standardised approaches to extending the ready4 framework.
+weight: 8
 tags:
-- READY4 FRAMEWORK
 - AUTHORING TOOLS
-title: Authoring framework extensions
+- READY4 FRAMEWORK
+thumbnail: images/logo.png
+title: Authoring ready4 framework modules
 ---
 
 ![](featured.png)

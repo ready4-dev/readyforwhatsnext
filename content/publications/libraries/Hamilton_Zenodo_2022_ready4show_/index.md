@@ -1,30 +1,30 @@
 ---
-abstract: "An R package that provides tools for authoring R Markdown programs and subroutines that implement or report mental helath modelling analysis developed with ready4 framework tools."
-authors:
- - Matthew Hamilton
- - Glen Wiesner
-date: "2022-02-08T00:00:00Z"
-featured: true
-publishDate: "2022-02-08T00:00:00Z"
+date: "2022-02-15T00:00:00Z"
 summary: "An R package that provides tools for authoring R Markdown programs and subroutines that implement or report mental helath modelling analysis developed with ready4 framework tools..."
 categories:
  - SOFTWARE
  - SOFTWARE (LIBRARIES)
  - SOFTWARE (LIBRARIES - AUTHORING)
 tags:
- - MENTAL DISORDERS
- - HEALTH SERVICES
- - HEALTH ECONOMICS
- - POLICY ANALYSIS
- - MODULAR MODELS
- - AUTHORING TOOLS
  - LITERATE PROGRAMMING
- - MARKDOWN
- - REPRODUCIBLE RESEARCH
+ - R MARKDOWN
  - READY4 FRAMEWORK
+ - READY4 FRAMEWORK (AUTHORING TOOLS - PROGRAMS)
+ - READY4SHOW R PACKAGE
+weight: 11
+thumbnail: images/ready4show_logo.png
 title: "ready4show: Author Literate Programs to Share Insights from Applying the Ready4 Framework"
 ---
 
-An R package that provides tools for authoring R Markdown programs and subroutines that implement or report mental health modelling analysis developed with ready4 framework tools.
+Archive: https://doi.org/10.5281/ZENODO.5644568
 
-doi: https://doi.org/10.5281/ZENODO.5644568
+Development: https://github.com/ready4-dev/ready4show
+
+Documentation: https://ready4-dev.github.io/ready4show/
+
+Authors:
+ - [Matthew P Hamilton](https://mph-economist.netlify.app/)
+ - Glen Wiesner
+
+An [R package](../) that provides tools for authoring R Markdown [programs](../../programs) and [subroutines](../../subroutines) that implement [models](../../../../models) developed with the [ready4 framework](../../../../framework).
+

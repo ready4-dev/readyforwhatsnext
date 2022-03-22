@@ -1,12 +1,13 @@
 ---
 date: "2022-03-10"
 external_link: ""
-summary: Tools for standardised development of framework modules, data-packs and models.
-weight: 1
+summary: Tools for standardised development of model data-packs, programs and sub-routines.
+weight: 15
 tags:
 - READY4 FRAMEWORK
 - AUTHORING TOOLS
-title: Authoring framework extensions
+thumbnail: images/RFWN_logo.png
+title: Authoring models using the ready4 framework
 ---
 
 ![](featured.png)

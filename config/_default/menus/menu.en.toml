@@ -9,7 +9,7 @@
   weight = -125
 [[main]]
   parent = "About"
-  name = "About ready4-dev"
+  name = "ready4-dev (Overview)"
   url = "about/"
   weight = -124
 [[main]]

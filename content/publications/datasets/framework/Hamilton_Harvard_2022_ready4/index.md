@@ -6,6 +6,7 @@ categories:
  - DATASETS (FRAMEWORK)
 tags:
  - TAXONOMIES
+thumbnail: images/logo.png
 title: "ready4 Framework Abbreviations and Definitions"
 ---
 
@@ -14,6 +15,6 @@ DOI / URL: https://doi.org/10.7910/DVN/RIQTKK
 Repository: [Harvard Dataverse (ready4)](https://dataverse.harvard.edu/dataverse/ready4)
 
 Authors:
- - [Matthew Hamilton](https://mph-economist.netlify.app/)
+ - [Matthew P Hamilton](https://mph-economist.netlify.app/)
 
 A [framework dataset](../) of [ready4 framework](../../../../framework/) [taxonomies](../../../../tags/taxonomies/).

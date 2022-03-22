@@ -2,14 +2,8 @@
 author: Matthew Hamilton
 date: "2021-02-26"
 description: TTU package documentation now available
-categories:
-- first bounce toolkits
-- modelling toolkits
 tags:
-- replication
-- synthetic populations
-- transfer to utility
-- TTU
+- TTU R package
 thumbnail: images/TTU_logo.png
 title: Transfer to utility toolkit is now available with vignette based documentation
 ---

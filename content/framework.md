@@ -5,7 +5,7 @@ aliases:
 author: Matthew Hamilton
 date: "2022-03-10"
 description: ready4 framework.
-title: Framework
+title: The ready4 framework
 summary: A modelling framework.
 weight: 1
 tags:
@@ -13,7 +13,7 @@ tags:
 ---
 
 ## Purpose
-ready4 is a framework for open and modular development of mental health systems models. It provides a set of tools to enable models of [people](/project/c_springtolife-project/),  [places](/project/b_springtides-project/), [platforms](/project/e_firstbounce-project/) and [programs](/project/d_ontarget-project/) to be flexibly combined as modules of an overarching [systems model](/project/f_readyforwhatsnext-project/).
+ready4 is a framework for transparent and modular development of mental health systems models. It provides a set of tools to enable models of [people](/project/c_springtolife-project/),  [places](/project/b_springtides-project/), [platforms](/project/e_firstbounce-project/) and [programs](/project/d_ontarget-project/) to be flexibly combined as modules of an overarching [systems model](/project/f_readyforwhatsnext-project/).
 
 ## Published output
 Published work to date includes software and a dataset.

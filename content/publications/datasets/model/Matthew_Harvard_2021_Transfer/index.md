@@ -11,6 +11,7 @@ tags:
  - AQOL-6D
  - AUSTRALIA
  - UTILITY MAPPING
+weight: 110
 thumbnail: images/springtolife_logo.png
 title: "Transfer to AQoL-6D Utility Mapping Algorithms"
 ---
@@ -20,7 +21,7 @@ DOI / URL: https://doi.org/10.7910/DVN/DKDIB0
 Repository: [Harvard Dataverse (ready4)](https://dataverse.harvard.edu/dataverse/ready4)
 
 Authors:
- - [Matthew Hamilton](https://mph-economist.netlify.app/)
+ - [Matthew P Hamilton](https://mph-economist.netlify.app/)
  - Caroline X Gao
  - Kate M Filia
  - Jana M Menssink

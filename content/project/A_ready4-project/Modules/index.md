@@ -2,10 +2,11 @@
 date: "2022-03-10"
 external_link: ""
 summary: The building blocks of the ready4 framework.
-weight: 1
+weight: 2
 tags:
 - READY4 FRAMEWORK
-title: Modules
+thumbnail: images/logo.png
+title: ready4 Framework Modules
 ---
 
 The [ready4 framework](../../../../framework/) facilitates a modular approach to [mental health system model](../../../../project/f_readyforwhatsnext-project/) development.
