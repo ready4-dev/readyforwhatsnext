@@ -5,6 +5,10 @@ date: "2021-02-24T00:00:00Z"
 featured: true
 summary: "A dataset of posters summarising conceptual and development work on the readyforwhatsnext model..."
 categories:
+ - MODEL CONCEPTUALISATION
+ - MODEL CONCEPTUALISATION (PEOPLE)
+ - MODEL CONCEPTUALISATION (PLACES)
+ - MODEL CONCEPTUALISATION (SYSTEMS)
  - DATASETS
  - DATASETS (MODELS)
  - DATASETS (MODELS - READYFORWHATSNEXT)

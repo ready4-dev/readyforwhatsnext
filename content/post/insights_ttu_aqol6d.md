@@ -7,6 +7,7 @@ tags:
 - AQOL-6D
 - DEPRESSION
 - PSYCHOLOGICAL DISTRESS
+- TTU R PACKAGE
 - UTILITY MAPPING
 thumbnail: images/springtolife_logo.png
 title: Predicting Quality Adjusted Life Years in young people attending primary mental health services

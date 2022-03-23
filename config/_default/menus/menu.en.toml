@@ -61,35 +61,40 @@
   parent = "Models"
   name = "Models (Overview)"
   url = "models/"
+  weight = -109
+[[main]]
+  parent = "Models"
+  name = "System Section Models"
+  url = "categories/models-system-sections/"
   weight = -108
+#[[main]]
+#  parent = "Models"#categories/models-system-sections/
+#  name = "Spring To Life - a model of people"
+#  url = "project/c_springtolife-project/"
+#  weight = -108
+#[[main]]
+#  parent = "Models"
+#  name = "Springtides - a model of places"
+#  url = "project/b_springtides-project/"
+#  weight = -107
+#[[main]]
+#  parent = "Models"
+#  name = "First Bounce - a model of platforms"
+#  url = "project/e_firstbounce-project/"
+ # weight = -106
+#[[main]]
+#  parent = "Models"
+#  name = "On Target - a model of programs"
+#  url = "project/d_ontarget-project/"
+#  weight = -106
 [[main]]
   parent = "Models"
-  name = "Spring To Life - a model of people"
-  url = "project/c_springtolife-project/"
-  weight = -108
-[[main]]
-  parent = "Models"
-  name = "Springtides - a model of places"
-  url = "project/b_springtides-project/"
-  weight = -107
-[[main]]
-  parent = "Models"
-  name = "First Bounce - a model of platforms"
-  url = "project/e_firstbounce-project/"
-  weight = -106
-[[main]]
-  parent = "Models"
-  name = "On Target - a model of programs"
-  url = "project/d_ontarget-project/"
-  weight = -106
-[[main]]
-  parent = "Models"
-  name = "readyforwhatsnext - a systems model of people, places, platforms and programs"
+  name = "readyforwhatsnext"# - a systems model of people, places, platforms and programs"
   url = "project/f_readyforwhatsnext-project/"#"readyforwhatsnext/"
   weight = -104 
 [[main]]
   parent = "Models"
-  name = "Authoring models"
+  name = "Configuring models"
   url = "project/a_ready4-project/modeller/"
   weight = -102
 # Submenus are done this way: parent -> identifier

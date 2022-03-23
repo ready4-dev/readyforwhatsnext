@@ -7,20 +7,20 @@ tags:
 - READY4 FRAMEWORK
 - AUTHORING TOOLS
 thumbnail: images/RFWN_logo.png
-title: Authoring models using the ready4 framework
+title: Configuring ready4 framework models
 ---
 
 ![](featured.png)
 
 ## Purpose
-To provide tools for standardised development of datasets, programs and sub-routines that implement models using the ready4 framework.
+To provide tools for standardised development of datasets, programs and sub-routines that implement ready4 framework model configurations.
 
 ## Published output
 Published work to date includes software.
 
 ### Software
 
-Modellers can avail of the following development version R packages to develop models using the ready4 framework:
+Modellers can avail of the following development version R packages to implement bespoke configurations of ready4 framework models:
 
 - [ready4use](https://ready4-dev.github.io/ready4use/index.html) (for authoring, curating and labelling datasets); and
 - [ready4show](https://ready4-dev.github.io/ready4show/index.html) (for authoring self-documenting programs and sub-routines).

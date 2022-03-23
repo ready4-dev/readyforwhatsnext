@@ -2,11 +2,8 @@
 author: Matthew Hamilton
 date: "2021-02-14"
 description: Algorithm generated documentation available for ready4fun function authoring toolkit.
-categories:
-- authoring toolkits
-- readyforwhatsnext toolkits
-- toolkits
-tags: []
+tags: 
+- READY4FUN R PACKAGE
 thumbnail: images/ready4fun_logo.png
 title: Algorithm generated documentation now available for ready4fun function authoring toolkit.
 ---

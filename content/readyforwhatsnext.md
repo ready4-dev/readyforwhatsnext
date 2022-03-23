@@ -3,13 +3,11 @@ author: Matthew Hamilton
 date: "2021-02-11"
 description: Readyforwhatsnext model description.
 categories:
-- readyforwhatsnext model
+- MODELS (SYSTEMS)
 tags:
-- agent based models
 - prevention
 - resilience
 - spatial epidemiology
-- systems dynamics models
 thumbnail: images/RFWN_logo.png
 title: readyforwhatsnext - modelling better futures for young people.
 ---
