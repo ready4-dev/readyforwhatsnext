@@ -152,9 +152,11 @@ All methods associated with ready4 modules and sub-modules adopt [a common synta
 <div class="highlight">
 
 <pre class='chroma'><code class='language-r' data-lang='r'><span><span class='nf'><a href='https://ready4-dev.github.io/ready4/reference/get_methods.html'>get_methods</a></span><span class='o'>(</span><span class='o'>)</span></span>
-<span><span class='c'>#&gt;  [1] "authorSlot"        "characterizeSlot"  "depictSlot"        "enhanceSlot"       "exhibitSlot"       "ingestSlot"        "investigateSlot"  </span></span>
-<span><span class='c'>#&gt;  [8] "manufactureSlot"   "metamorphoseSlot"  "procureSlot"       "prognosticateSlot" "ratifySlot"        "reckonSlot"        "renewSlot"        </span></span>
-<span><span class='c'>#&gt; [15] "shareSlot"</span></span></code></pre>
+<span><span class='c'>#&gt;  [1] "authorSlot"        "characterizeSlot"  "depictSlot"       </span></span>
+<span><span class='c'>#&gt;  [4] "enhanceSlot"       "exhibitSlot"       "ingestSlot"       </span></span>
+<span><span class='c'>#&gt;  [7] "investigateSlot"   "manufactureSlot"   "metamorphoseSlot" </span></span>
+<span><span class='c'>#&gt; [10] "procureSlot"       "prognosticateSlot" "ratifySlot"       </span></span>
+<span><span class='c'>#&gt; [13] "reckonSlot"        "renewSlot"         "shareSlot"</span></span></code></pre>
 
 </div>
 

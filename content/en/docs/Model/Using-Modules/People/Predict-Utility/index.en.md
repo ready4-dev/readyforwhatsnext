@@ -913,8 +913,10 @@ Our health utility predictions are now available for use and are summarised belo
 <div class="highlight">
 
 <pre class='chroma'><code class='language-r' data-lang='r'><span><span class='nf'><a href='https://rdrr.io/r/base/summary.html'>summary</a></span><span class='o'>(</span><span class='nv'>data_tb</span><span class='o'>$</span><span class='nv'>AQoL6D_HU</span><span class='o'>)</span></span>
-<span><span class='c'>#&gt;    Min. 1st Qu.  Median    Mean 3rd Qu.    Max. </span></span>
-<span><span class='c'>#&gt; 0.06646 0.42781 0.63403 0.62335 0.83351 1.00000</span></span></code></pre>
+<span><span class='c'>#&gt;    Min. 1st Qu.  Median    Mean 3rd Qu. </span></span>
+<span><span class='c'>#&gt; 0.06646 0.42781 0.63403 0.62335 0.83351 </span></span>
+<span><span class='c'>#&gt;    Max. </span></span>
+<span><span class='c'>#&gt; 1.00000</span></span></code></pre>
 
 </div>
 

@@ -61,7 +61,8 @@ Importantly (and a requirement for subsequent steps), the data dictionary we ing
 <div class="highlight">
 
 <pre class='chroma'><code class='language-r' data-lang='r'><span><span class='nf'><a href='https://rdrr.io/r/base/class.html'>class</a></span><span class='o'>(</span><span class='nv'>objects_ls</span><span class='o'>$</span><span class='nv'>eq5d_ds_dict</span><span class='o'>)</span></span>
-<span><span class='c'>#&gt; [1] "ready4use_dictionary" "ready4_dictionary"    "tbl_df"               "tbl"                  "data.frame"</span></span></code></pre>
+<span><span class='c'>#&gt; [1] "ready4use_dictionary" "ready4_dictionary"    "tbl_df"              </span></span>
+<span><span class='c'>#&gt; [4] "tbl"                  "data.frame"</span></span></code></pre>
 
 </div>
 

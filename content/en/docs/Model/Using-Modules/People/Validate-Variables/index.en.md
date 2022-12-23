@@ -57,7 +57,8 @@ The `youthvars_aqol6d_adol` class is defined for numeric vectors with a minimum 
 <pre class='chroma'><code class='language-r' data-lang='r'><span><span class='nf'><a href='https://ready4-dev.github.io/youthvars/reference/youthvars_aqol6d_adol.html'>youthvars_aqol6d_adol</a></span><span class='o'>(</span><span class='m'>0.4</span><span class='o'>)</span></span>
 <span><span class='c'>#&gt; [1] 0.4</span></span>
 <span><span class='c'>#&gt; attr(,"class")</span></span>
-<span><span class='c'>#&gt; [1] "youthvars_aqol6d_adol" "numeric"</span></span></code></pre>
+<span><span class='c'>#&gt; [1] "youthvars_aqol6d_adol"</span></span>
+<span><span class='c'>#&gt; [2] "numeric"</span></span></code></pre>
 
 </div>
 
@@ -66,7 +67,8 @@ The `youthvars_aqol6d_adol` class is defined for numeric vectors with a minimum 
 <pre class='chroma'><code class='language-r' data-lang='r'><span><span class='nf'><a href='https://ready4-dev.github.io/youthvars/reference/youthvars_aqol6d_adol.html'>youthvars_aqol6d_adol</a></span><span class='o'>(</span><span class='nf'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='o'>(</span><span class='m'>0.03</span>,<span class='m'>0.2</span>,<span class='m'>1</span><span class='o'>)</span><span class='o'>)</span></span>
 <span><span class='c'>#&gt; [1] 0.03 0.20 1.00</span></span>
 <span><span class='c'>#&gt; attr(,"class")</span></span>
-<span><span class='c'>#&gt; [1] "youthvars_aqol6d_adol" "numeric"</span></span></code></pre>
+<span><span class='c'>#&gt; [1] "youthvars_aqol6d_adol"</span></span>
+<span><span class='c'>#&gt; [2] "numeric"</span></span></code></pre>
 
 </div>
 
