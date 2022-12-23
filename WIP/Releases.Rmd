@@ -1,0 +1,45 @@
+---
+title: "New releases"
+author: "Matthew Hamilton"
+date: "7/8/2022"
+output: 
+  html_document:
+    toc: true
+type: docs
+weight: 67
+---
+
+
+
+# ready4 framework
+
+## Model development kit (R packages)
+
+```{r echo=F, message=FALSE, warning=FALSE}
+#releases_tb <- 
+  # fw_repos %>%
+  make_code_releases_tbl("Framework")
+  # purrr::map_dfr(~tidyRSS::tidyfeed(paste0("https://github.com/ready4-dev/",.x,"/releases.atom"))) %>%
+  # dplyr::arrange(dplyr::desc(entry_last_updated))
+```
+
+
+## Datasets
+
+
+# readyforwhatsnext project
+
+## Model modules (R packages)
+
+```{r echo=F, message=FALSE, warning=FALSE}
+make_code_releases_tbl("Module")
+```
+
+## Model datasets
+
+## Analyses (R Markdown)
+
+```{r echo=F, message=FALSE, warning=FALSE}
+make_code_releases_tbl("Program",
+                as_kbl_1L_lgl = F) ->ds_tb
+```

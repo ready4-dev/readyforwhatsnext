@@ -1,0 +1,33 @@
+---
+title: "Add metadata to datasets of individual human records"
+linkTitle: "Describe data"
+date: "`r Sys.Date()`"
+description: "Appending appropriate metadata to datasets of individual unit records can facilitate partial automation of some modelling tasks. This tutorial describes how a module from the youthvars R package can help you to add metadata to a youth mental health dataset so that it can be more readily used by other ready4 modules."
+weight: 92
+categories: 
+- Documentation
+tags: 
+- Data management
+- Metadata
+- Model - People
+- youthvars
+output: hugodown::md_document
+---
+
+{{% pageinfo %}}
+This below section renders a vignette article from the youthvars library. You can use the following links to:
+
+* [view the vignette on the library website (adds useful hyperlinks to code blocks)](https://ready4-dev.github.io/youthvars/articles/V_02.html)
+* [view the source file](https://github.com/ready4-dev/youthvars/blob/main/vignettes/V_02.Rmd) from that article, and;
+* [edit its contents](https://github.com/ready4-dev/youthvars/edit/main/vignettes/V_02.Rmd) (requires a GitHub account).
+{{% /pageinfo %}}
+
+```{r echo=FALSE, results='hide'}
+# x <- "UntitledRMD.Rmd"
+x <- tempfile(fileext = "Rmd")
+on.exit(unlink(x))
+download.file("https://raw.githubusercontent.com/ready4-dev/youthvars/master/vignettes/V_02.Rmd", x)
+```
+
+```{r test-main, child=x}
+```

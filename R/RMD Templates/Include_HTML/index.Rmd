@@ -1,0 +1,21 @@
+---
+title: "TITLE"
+linkTitle: "LINK_TITLE"
+date: "`r Sys.Date()`"
+description: "DESCRIPTION."
+weight: 3
+categories: 
+- CATEGORY
+tags: 
+- TAG
+output: hugodown::md_document
+---
+
+TEXT_GOES_HERE
+
+````{=html}
+```{r, echo=FALSE, message=F,results='asis'}
+xfun::file_string('index_Body.html')
+```
+````
+

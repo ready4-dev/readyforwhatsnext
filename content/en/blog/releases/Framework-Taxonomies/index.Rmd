@@ -1,0 +1,22 @@
+---
+title: "ready4 framework taxonomies"
+linkTitle: "Framework taxonomies"
+date: "`r Sys.Date()`"
+description: "Releases of taxonomies used to help standardise computational models developed with the ready4 framework."
+weight: 2
+categories: 
+- Releases
+tags: 
+- Datasets
+- Framework - Taxonomies
+output: hugodown::md_document
+---
+
+Developers using the ready4 framework can either use the same taxonomies as we do in our computational models or else develop their own. We periodically release updated versions of our taxonomies. Currently available releases are described below.
+
+````{=html}
+```{r, echo=FALSE, message=F, results='asis'}
+xfun::file_string('index_Body.html')
+```
+````
+

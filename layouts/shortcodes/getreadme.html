@@ -1,0 +1,3 @@
+{{ $repo := .Get 0 }} <!--Based on: https://discourse.gohugo.io/t/include-content-of-a-url/27357/6-->
+{{ $json := getJSON "https://api.github.com/repos/ready4-dev/" $repo "/readme" }}
+{{ $json.content | base64Decode | markdownify }}

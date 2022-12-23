@@ -1,6 +1,5 @@
-# ready4 website
+# ready4-dev
+Website for documenting the development status of the ready4 modular, open source model of youth mental health.
 
-This is the source code for the [website of the ready4 open science framework](https://www.ready4-dev.com/) for modular, replicable and generalisable mental health models. 
-
-The website was built using blogdown and the Hugo Clarity theme.
+This website provides a source of consolidated documentation for all ready4 projects managed by the core ready4 team. It also provides background information about the project, news and latest release information and details about how you can contribute to the project.
 

@@ -1,0 +1,11 @@
+name: dependencies
+title:
+username:
+account: orygen
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 7779209
+bundleId: 6575861
+url: https://orygen.shinyapps.io/dependencies/
+when: 1669870090.77888
+lastSyncTime: 1669870090.77891

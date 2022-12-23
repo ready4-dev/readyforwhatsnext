@@ -1,0 +1,32 @@
+---
+title: "Use utility mapping algorithms to help implement cost-utility analyses"
+linkTitle: "Assess cost-utility"
+date: "`r Sys.Date()`"
+description: "Using tools (soon to be formalised into ready4 framework modules) from the youthu R package, it is possible to use utility mapping algorithms to help implement cost-utility analyses. This tutorial illustrates the main steps for doing so using psychological and functional measures collected on clinical samples of young people."
+weight: 97
+categories: 
+- Documentation
+tags: 
+- Cost-utility analyses
+- Model - People
+- Utility mapping
+- youthu
+output: hugodown::md_document
+---
+
+{{% pageinfo %}}
+This below section renders a vignette article from the youthu library. You can use the following links to:
+
+* [view the vignette on the library website (adds useful hyperlinks to code blocks)](https://ready4-dev.github.io/youthu/articles/Economic_Analysis.html)
+* [view the source file](https://github.com/ready4-dev/youthu/blob/main/vignettes/Economic_Analysis.Rmd) from that article, and;
+* [edit its contents](https://github.com/ready4-dev/youthu/edit/main/vignettes/Economic_Analysis.Rmd) (requires a GitHub account).
+{{% /pageinfo %}}
+
+```{r echo=FALSE, results='hide'}
+x <- tempfile(fileext = "Rmd")
+on.exit(unlink(x))
+download.file("https://raw.githubusercontent.com/ready4-dev/youthu/master/vignettes/Economic_Analysis.Rmd", x)
+```
+
+```{r test-main, child=x}
+```

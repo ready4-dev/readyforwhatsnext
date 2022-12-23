@@ -1,0 +1,33 @@
+---
+title: "Find and deploy utility mapping models"
+linkTitle: "Predict utility"
+date: "`r Sys.Date()`"
+description: "Using tools (soon to be formalised into ready4 framework modules) from the youthu R package, it is possible to find and deploy relevant utility mapping algorithms. This tutorial illustrates the main steps for predicting AQoL-6D utility from psychological and functional measures collected on clinical samples of young people."
+weight: 96
+categories: 
+- Documentation
+tags: 
+- Model - People
+- Utility mapping
+- youthu
+params:
+  output_type_1L_chr: HTML
+output: hugodown::md_document
+---
+
+{{% pageinfo %}}
+This below section renders a vignette article from the youthu library. You can use the following links to:
+
+* [view the vignette on the library website (adds useful hyperlinks to code blocks)](https://ready4-dev.github.io/youthu/articles/Prediction_With_Mdls.html)
+* [view the source file](https://github.com/ready4-dev/youthu/blob/main/vignettes/Prediction_With_Mdls.Rmd) from that article, and;
+* [edit its contents](https://github.com/ready4-dev/youthu/edit/main/vignettes/Prediction_With_Mdls.Rmd) (requires a GitHub account).
+{{% /pageinfo %}}
+
+```{r echo=FALSE, results='hide'}
+x <- tempfile(fileext = "Rmd")
+on.exit(unlink(x))
+download.file("https://raw.githubusercontent.com/ready4-dev/youthu/master/vignettes/Prediction_With_Mdls.Rmd", x)
+```
+
+```{r test-main, child=x}
+```

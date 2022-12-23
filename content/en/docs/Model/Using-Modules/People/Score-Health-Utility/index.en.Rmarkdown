@@ -1,0 +1,33 @@
+---
+title: "Score health utility"
+linkTitle: "Score health utility"
+date: "`r Sys.Date()`"
+description: "Using modules from the scorz R package, individual responses to a multi-attribute utility instrument survey can be converted into health utility total scores. This tutorial describes how to do for adolescent AQoL-6D health utility."
+weight: 93
+categories: 
+- Documentation
+tags: 
+- AQoL-6D
+- EQ-5D
+- Model - People
+- scorz
+- Utility scoring
+output: hugodown::md_document
+---
+
+{{% pageinfo %}}
+This below section renders a vignette article from the scorz library. You can use the following links to:
+
+* [view the vignette on the library website (adds useful hyperlinks to code blocks)](https://ready4-dev.github.io/scorz/articles/V_01.html)
+* [view the source file](https://github.com/ready4-dev/scorz/blob/main/vignettes/V_01.Rmd) from that article, and;
+* [edit its contents](https://github.com/ready4-dev/scorz/edit/main/vignettes/V_01.Rmd) (requires a GitHub account).
+{{% /pageinfo %}}
+
+```{r echo=FALSE, results='hide'}
+x <- tempfile(fileext = "Rmd")
+on.exit(unlink(x))
+download.file("https://raw.githubusercontent.com/ready4-dev/scorz/master/vignettes/V_01.Rmd", x)
+```
+
+```{r test-main, child=x}
+```

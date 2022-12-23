@@ -1,0 +1,32 @@
+---
+title: "Develop choice models"
+linkTitle: "Predict choice"
+date: "`r Sys.Date()`"
+description: "Using tools (soon to be formalised into ready4 framework modules) from the mychoice R package, it is possible to develop choice models from responses to a discrete choice experiment survey."
+weight: 97
+categories: 
+- Documentation
+tags: 
+- Choice modelling
+- Discrete choice experiments
+- Model - People
+- mychoice
+output: hugodown::md_document
+---
+
+{{% pageinfo %}}
+This below section renders a vignette article from the mychoice library. You can use the following links to:
+
+* [view the vignette on the library website (adds useful hyperlinks to code blocks)](https://ready4-dev.github.io/youthu/articles/mychoice.html)
+* [view the source file](https://github.com/ready4-dev/youthu/blob/main/vignettes/mychoice.Rmd) from that article, and;
+* [edit its contents](https://github.com/ready4-dev/youthu/edit/main/vignettes/mychoice.Rmd) (requires a GitHub account).
+{{% /pageinfo %}}
+
+```{r echo=FALSE, results='hide'}
+x <- tempfile(fileext = "Rmd")
+on.exit(unlink(x))
+download.file("https://raw.githubusercontent.com/ready4-dev/mychoice/master/vignettes/mychoice.Rmd", x)
+```
+
+```{r test-main, child=x}
+```
