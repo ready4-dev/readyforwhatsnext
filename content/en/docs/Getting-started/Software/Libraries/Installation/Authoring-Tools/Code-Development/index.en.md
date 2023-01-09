@@ -2,7 +2,7 @@
 title: Installing tools for authoring computational models
 linkTitle: "Models"
 author: Matthew Hamilton
-date: "2022-12-24"
+date: "2023-01-09"
 description: Instructions for installing the ready4class, ready4fun and ready4pack libraries.
 weight: 1
 categories: 
@@ -16,19 +16,19 @@ tags:
 - ready4fun
 - ready4pack
 output: hugodown::md_document
-rmd_hash: 2ec1d87f1b543e54
+rmd_hash: eeb0b48a429fc491
 
 ---
 
 ## Before you install
 
-If you are a [coder](../../../../../users/coder) planning on using ready4 to author computational models, then you may wish to install the [ready4class](https://ready4-dev.github.io/ready4class/), [ready4fun](https://ready4-dev.github.io/ready4fun/) and [ready4pack](https://ready4-dev.github.io/ready4pack/) libraries.
+If you are a [coder](/docs/getting-started/users/coder/) planning on using ready4 to author computational models, then you may wish to install the [ready4class](https://ready4-dev.github.io/ready4class/), [ready4fun](https://ready4-dev.github.io/ready4fun/) and [ready4pack](https://ready4-dev.github.io/ready4pack/) libraries.
 
-**However, please note that none of these libraries are yet available as a [production release](../../../../status/production-releases/). You should therefore understand the limitations of using ready4 software [development releases](../../../../status/development-releases/) before you make the decision to install this software.** Although we use these authoring tools intensively to help us write highly standardised model modules, we feel that these tools are only likely to be helpful to others once much more comprehensive documentation and training resources become available. Without this training and support, these packages are unlikely to appear to be very user-friendly. Furthermore, the initial burden of complying with house-style, file-naming and directory structure requirements of these packages is only likely to be worthwhile if you plan on developing multiple ready4 module libraries. If you still think these tools could be useful to you, consider contacting us first to discuss what additional information may be most helpful to you.
+**However, please note that none of these libraries are yet available as a [production release](/docs/getting-started/software/status/production-releases/). You should therefore understand the limitations of using ready4 software [development releases](/docs/getting-started/software/status/development-releases/) before you make the decision to install this software.** Although we use these authoring tools intensively to help us write highly standardised model modules, we feel that these tools are only likely to be helpful to others once much more comprehensive documentation and training resources become available. Without this training and support, these packages are unlikely to appear to be very user-friendly. Furthermore, the initial burden of complying with house-style, file-naming and directory structure requirements of these packages is only likely to be worthwhile if you plan on developing multiple ready4 module libraries. If you still think these tools could be useful to you, consider contacting us first to discuss what additional information may be most helpful to you.
 
 ## Installation
 
-As ready4class and ready4fun are bundled as [dependencies](../../../dependencies/)) of ready4pack, you can install all three from [our GitHub organisation](https://github.com/ready4-dev) using one command.
+As ready4class and ready4fun are bundled as [dependencies](/docs/getting-started/software/libraries/dependencies/) of ready4pack, you can install all three from [our GitHub organisation](https://github.com/ready4-dev) using one command.
 
 <div class="highlight">
 

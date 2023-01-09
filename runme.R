@@ -64,8 +64,8 @@ c("Programs",
   "Subroutines") %>%
   write_to_render_post("~/Documents/WIP/ready4/Code/Brochure/HTML/ready4web/content/en/docs/Getting-started/Software/Executables",
                        consent_1L_chr = "Y")
-c("Make-Fakes") %>% # Do not evaluate write fns, add scroll text and then restore link to online RMD
-  write_to_render_post(path_to_main_dir_1L_chr = "~/Documents/WIP/ready4/Code/Brochure/HTML/ready4web/content/en/docs/Analyses/Replication-Code",
+c("Clinical-Primary") %>% # Do not evaluate write fns, add scroll text and then restore link to online RMD
+  write_to_render_post(path_to_main_dir_1L_chr = "~/Documents/WIP/ready4/Code/Brochure/HTML/ready4web/content/en/docs/Analyses/Replication-Code/Make-Fakes",
                        consent_1L_chr = "Y",
                        is_rmd_1L_lgl = F)
 #write_to_trim_html("~/Documents/WIP/ready4/Code/Brochure/HTML/ready4web/content/en/docs/Analyses/Replication-Code/Make-Fakes/Clincal_Primary.md")

@@ -1,7 +1,7 @@
 
 ---
 title: "Code to reproduce and/or replicate scientific studies"
-linkTitle: "Replication Code"
+linkTitle: "Replication code"
 date: 2017-01-05
 weight: 68
 description: >

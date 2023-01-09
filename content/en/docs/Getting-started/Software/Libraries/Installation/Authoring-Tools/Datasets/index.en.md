@@ -2,7 +2,7 @@
 title: Installing tools for authoring and managing model datasets
 linkTitle: "Datasets"
 author: Matthew Hamilton
-date: "2022-12-24"
+date: "2023-01-09"
 description: Instructions for installing the ready4use library.
 weight: 2
 categories: 
@@ -14,17 +14,17 @@ tags:
 - Framework authoring datasets
 - ready4use
 output: hugodown::md_document
-rmd_hash: b7459af56a63994b
+rmd_hash: fa4260597eaffa00
 
 ---
 
 ## Before you install
 
-If you are a [coder](../../../../../users/coder) or [modeller](../../../../../users/modeller) planning to create, share and access model datasets with ready4, then you will need the [ready4use](https://ready4-dev.github.io/ready4use/) library.
+If you are a [coder](/docs/getting-started/users/coder/) or [modeller](/docs/getting-started/users/modeller) planning to create, share and access model datasets with ready4, then you will need the [ready4use](https://ready4-dev.github.io/ready4use/) library.
 
-**However, please note that ready4use is not yet available as a [production release](../../../../status/production-releases/). You should therefore understand the limitations of using ready4 software [development releases](../../../../status/development-releases/) before you make the decision to install this software.**
+**However, please note that ready4use is not yet available as a [production release](/docs/getting-started/software/status/production-releases/). You should therefore understand the limitations of using ready4 software [development releases](/docs/getting-started/software/status/development-releases/) before you make the decision to install this software.**
 
-You may already have ready4use installed on your machine (e.g. if you have previously installed other ready4 framework and module libraries that include ready4use as a [dependency](../../../dependencies/)). If you can run the following command without producing an error message, then you already have it.
+You may already have ready4use installed on your machine (e.g. if you have previously installed other ready4 framework and module libraries that include ready4use as a [dependency](/docs/getting-started/software/libraries/dependencies/)). If you can run the following command without producing an error message, then you already have it.
 
 <div class="highlight">
 

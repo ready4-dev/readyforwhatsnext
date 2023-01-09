@@ -1,6 +1,6 @@
 ---
-title: "Modules"
-linkTitle: "Modules"
+title: "Modularity"
+linkTitle: "Modularity"
 date: "2022-12-24"
 description: "ready4 supports a modular approach to computational model development."
 weight: 62

@@ -2,7 +2,7 @@
 title: Installing the ready4 framework foundation library
 linkTitle: "Foundation"
 author: Matthew Hamilton
-date: "2022-12-24"
+date: "2023-01-09"
 description: The ready4 framework foundation is the first ready4 library you should install.
 slug: Foundation
 weight: 1
@@ -13,7 +13,7 @@ tags:
 - Framework
 - Framework foundation
 output: hugodown::md_document
-rmd_hash: c6b2050e0f2acdc7
+rmd_hash: 319a8040ac34efe2
 
 ---
 
@@ -21,9 +21,9 @@ rmd_hash: c6b2050e0f2acdc7
 
 If you plan to use ready4 for any purpose, you will need to install the [ready4 foundation library](https://ready4-dev.github.io/ready4/).
 
-**However, please note that the ready4 library is not yet available as a [production release](../../../../status/production-releases/). You should therefore understand the limitations of using ready4 software [development releases](../../../../status/development-releases/) before you make the decision to install this software.**
+**However, please note that the ready4 library is not yet available as a [production release](/docs/getting-started/software/status/production-releases/). You should therefore understand the limitations of using ready4 software [development releases](/docs/getting-started/software/status/development-releases/) before you make the decision to install this software.**
 
-As all software in the ready4 suite [depends](../../dependencies/) on the ready4 library, so in most cases you do not need to install this library directly (it will come bundled with whatever other ready4 suite software you install).
+As all software in the ready4 suite [depends](/docs/getting-started/software/libraries/dependencies/) on the ready4 library, so in most cases you do not need to install this library directly (it will come bundled with whatever other ready4 suite software you install).
 
 If you can run the following command without producing an error message, then you already have it.
 

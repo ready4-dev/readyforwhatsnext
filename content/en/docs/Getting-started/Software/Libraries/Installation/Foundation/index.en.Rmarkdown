@@ -18,9 +18,9 @@ output: hugodown::md_document
 ## Before you install
 If you plan to use ready4 for any purpose, you will need to install the [ready4 foundation library](https://ready4-dev.github.io/ready4/). 
 
-**However, please note that the ready4 library is not yet available as a [production release](../../../../status/production-releases/). You should therefore understand the limitations of using ready4 software [development releases](../../../../status/development-releases/) before you make the decision to install this software.**
+**However, please note that the ready4 library is not yet available as a [production release](/docs/getting-started/software/status/production-releases/). You should therefore understand the limitations of using ready4 software [development releases](/docs/getting-started/software/status/development-releases/) before you make the decision to install this software.**
 
-As all software in the ready4 suite [depends](../../dependencies/) on the ready4 library, so in most cases you do not need to install this library directly (it will come bundled with whatever other ready4 suite software you install).
+As all software in the ready4 suite [depends](/docs/getting-started/software/libraries/dependencies/) on the ready4 library, so in most cases you do not need to install this library directly (it will come bundled with whatever other ready4 suite software you install).
 
 If you can run the following command without producing an error message, then you already have it.
 
