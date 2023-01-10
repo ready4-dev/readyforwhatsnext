@@ -2,6 +2,12 @@
 title: "Repositories"
 linkTitle: "Repositories"
 weight: 261
+tags:
+- Repositories
+- Repositories - code
+- Software
+categories:
+- Documentation
 description: >
   ready4 software is freely available from multiple open access repositories.
 ---

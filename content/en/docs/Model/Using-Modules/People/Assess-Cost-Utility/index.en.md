@@ -7,10 +7,18 @@ weight: 97
 categories: 
 - Documentation
 tags: 
-- Cost-utility analyses
-- Model - People
-- Utility mapping
-- youthu
+- Analyses
+- Analyses - tutorials
+- Model
+- Model - modules
+- Model - modules (people)
+- Software
+- Software - executable
+- Software - executable (programs)
+- Software - libraries
+- Software - libraries (youthu)
+- Use - cost-utility
+- Use - utility mapping
 output: hugodown::md_document
 rmd_hash: 7449b7285653484c
 html_dependencies:

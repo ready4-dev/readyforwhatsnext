@@ -8,14 +8,15 @@ weight: 2
 categories: 
 - Documentation
 tags: 
-- Installing libraries
 - Framework
-- Framework authoring
-- Framework authoring datasets
-- ready4use
+- Framework - authoring tools
+- Framework - authoring tools (datasets)
+- Software
+- Software - libraries
+- Software - libraries (installation)
+- Software - libraries (ready4use)
 output: hugodown::md_document
 rmd_hash: fa4260597eaffa00
-
 ---
 
 ## Before you install

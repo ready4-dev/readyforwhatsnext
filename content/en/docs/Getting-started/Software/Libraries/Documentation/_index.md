@@ -2,6 +2,12 @@
 title: "Code library documentation"
 linkTitle: "Documentation"
 weight: 266
+categories: 
+- Documentation
+tags: 
+- Software
+- Software - libraries
+- Software - libraries (documentation)
 description: >
   Each ready4 code library is supported by a standardised set of documentation resources.
 ---

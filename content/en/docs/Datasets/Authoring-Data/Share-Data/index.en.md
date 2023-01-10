@@ -7,8 +7,14 @@ weight: 91
 categories: 
 - Documentation
 tags: 
-- Data management
-- Library - ready4use
+- Data
+- Data - management
+- Framework
+- Framework - authoring-tools
+- Framework - authoring-tools (datasets)
+- Software
+- Software - libraries
+- Software - libraries (ready4use)
 output: hugodown::md_document
 rmd_hash: 46f9f142fe10e9b3
 

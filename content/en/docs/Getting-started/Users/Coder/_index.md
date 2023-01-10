@@ -2,6 +2,11 @@
 title: "Coders"
 linkTitle: "Coders"
 weight: 24
+categories: 
+- Documentation
+tags:
+- Project
+- Project - users
 description: >
   Coders can use ready4 to enhance the impact and re-usability of their algorithms.
 ---

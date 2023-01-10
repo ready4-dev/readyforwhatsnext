@@ -8,9 +8,10 @@ description: >
 categories: 
 - Documentation
 tags: 
-- Model - Places
-- Pipeline
-- Pipeline - Places
+- Model
+- Model - modules
+- Model - modules (places)
+- Software - pipeline
 ---
 
 Work is underway to add to develop ready4 modules for modelling places. All of this work currently exists as [unreleased code](/docs/getting-started/software/status/unreleased/), although a (currently deprecated) app abuild using this unreleased code is [publicly available](/docs/analyses/decision-aids/springtides-app/). The same code was also used to [generate analysis during the early phase of the COVUID-19 pandemic](/blog/2021/02/18/modelling-the-mental-health-impacts-of-covid-19/). This code is principally focused on:

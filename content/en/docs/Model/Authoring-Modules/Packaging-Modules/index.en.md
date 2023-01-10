@@ -1,15 +1,17 @@
 ---
-title: "Dissemating citable, documented and quality assured model modules"
-linkTitle: "Packages"
+title: "Dissemating citable, documented and quality assured model module libraries"
+linkTitle: "Libraries"
 date: "2022-12-24"
 description: "ready4 supports tools to streamline the testing, description and distribution of computational model modules."
 weight: 66
 categories: 
 - Documentation
 tags: 
-- Developer tools
-- R packages
-- ready4pack
+- Framework - authoring tools
+- Framework - authoring tools (modules)
+- Software
+- Software - libraries
+- Software - libraries (ready4pack)
 output: hugodown::md_document
 rmd_hash: 569fe66e4279a51a
 

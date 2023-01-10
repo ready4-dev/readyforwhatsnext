@@ -8,7 +8,11 @@ categories:
 - Documentation
 tags: 
 - Framework
-- ready4 (library)
+- Framework - foundation
+- Framework - foundation (modularity)
+- Software
+- Software - libraries
+- Software - libraries (ready4)
 output: hugodown::md_document
 rmd_hash: 9ce644e9b78dff37
 

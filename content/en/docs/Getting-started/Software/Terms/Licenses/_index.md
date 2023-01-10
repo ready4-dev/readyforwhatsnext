@@ -2,6 +2,12 @@
 title: "Open source licensing"
 linkTitle: "Licenses"
 weight: 267
+categories: 
+- Documentation
+tags:
+- Project
+- Project - terms
+- Software
 description: >
   ready4 is freely available to all under copy-left licensing arrangements.
 ---

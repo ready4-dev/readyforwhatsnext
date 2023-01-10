@@ -3,12 +3,18 @@ title: "Analyse the results of a Discrete Choice Experiment"
 linkTitle: "DCE Analysis"
 date: 2017-01-05
 tags:
-- Choice modelling
-- Discrete choice experiments
-- Model - People
-- mychoice
+- Analyses
+- Analyses - replication code
+- Model
+- Model - modules
+- Model - modules (people)
+- Software
+- Software - executable
+- Software - executable (programs)
+- Software - libraries
+- Software - libraries (mychoice)
+- Use - choice modelling
 categories:
-- Analysis programs
 - Documentation
 weight: 97
 description: >

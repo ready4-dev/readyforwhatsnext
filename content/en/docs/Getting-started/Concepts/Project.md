@@ -1,7 +1,13 @@
 ---
-title: "Project"
-linkTitle: "Project"
+title: "Modelling project"
+linkTitle: "Modelling project"
 weight: 24
+categories: 
+- Documentation
+tags:
+- Modelling projects
+- Project
+- Project - concepts
 description: >
   A ready4 modelling project develops a computational model, adds data and runs analyses.
 ---
@@ -10,13 +16,13 @@ As a [complex, collaborative and long-term undertaking](/docs/getting-started/mo
 
 A ready4 modelling project will involve the three steps of:
 
-- Developing and validating a [*computational model*](../model);
+- Developing and validating a [computational model](../model);
 
 - Adding context-specific [data](/docs/datasets/) to that computational model; and
 
 - Applying the computational model to the supplied data to undertake [analyses](/docs/analyses/).
 
-### Develop model
+### Step 1: Develop model
 Each project's computational model is constructed by adopting one or more of the following strategies:
 
 - selecting a subset of [existing ready4 modules](/docs/model/finding-modules/) and [using them](/docs/model/using-modules/) in unmodified form;
@@ -26,14 +32,14 @@ Each project's computational model is constructed by adopting one or more of the
 
 As part of the validation and verification process for all new and derived modules, tests should be defined, bundled as part of the relevant module libraries and rerun every time these libraries are edited.
 
-### Add data
+### Step 2: Add data
 By data we typically mean digitally stored information, principally relating to model parameter values, that can be added to the ready4 computational model to tailor it to a specific decision context (e.g. a particular population / jurisdiction / service / intervention) and set of underpinning beliefs (e.g. preferred evidence sources). Data for a ready4 modelling project will be from one or both of the following options:
 
 - [finding and using existing open access data](/docs/datasets/finding-data/) from other ready4 projects;
 - supplying new project specific data, [appropriately describing these data](/docs/datasets/authoring-data/label-data/) and (for non-confidential records) [sharing these data publicly](/docs/datasets/authoring-data/share-data/).
 
 
-### Run analyses
+### Step 3: Run analyses
 ready4 project analyses apply algorithms contained in ready4 modules to supplied data to generate insight and can be implemented by:
 
 - adapting existing [replication programs](/docs/analyses/replication-code/); 

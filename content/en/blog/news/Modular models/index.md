@@ -8,7 +8,7 @@ aliases: /post/2022-01-14-introducing-ready4-framework-modules-and-syntax/
 tags:
 - Framework
 - Model
-- Model Modules
+- Model - modules
 categories:
 - News
 resources:

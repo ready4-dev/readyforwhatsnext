@@ -7,10 +7,13 @@ weight: 64
 categories: 
 - Documentation
 tags: 
-- Developer tools
-- Functions
-- House style
-- ready4fun
+- Framework - authoring tools
+- Framework - authoring tools (modules)
+- Framework - conventions
+- Software
+- Software - functions
+- Software - libraries
+- Software - libraries (ready4fun)
 output: hugodown::md_document
 ---
 

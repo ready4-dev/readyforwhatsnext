@@ -7,8 +7,11 @@ weight: 1
 categories: 
 - Releases
 tags: 
-- R packages
-- Framework - Software
+- Framework
+- Framework - authoring tools
+- Framework - foundation
+- Software
+- Software - libraries
 output: hugodown::md_document
 rmd_hash: c0087eacf820171f
 

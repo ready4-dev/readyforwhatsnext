@@ -8,7 +8,10 @@ categories:
 - Documentation
 tags: 
 - Framework
-- R packages
+- Framework - authoring tools
+- Framework - foundation
+- Software
+- Software - libraries
 output: hugodown::md_document
 ---
 

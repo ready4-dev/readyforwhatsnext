@@ -2,11 +2,16 @@
 title: "User interfaces"
 linkTitle: "UIs"
 weight: 264
+categories: 
+- Documentation
+tags:
+- Software
+- Software - apps
 description: >
   User interfaces make it easier for non-technical users to explore and use ready4 models.
 ---
 
-ready4 user-interfaces (UIs) enable individuals, especially planners, to explore, configure and use ready4 tools without needing to enter any computer code. Our applications are typically deployed as Shiny apps an may have deployments via the web (accessed through your browser) or to your desktop (installed as part of a ready4 [library](../libraries/)). 
+ready4 user-interfaces (UIs) enable individuals, especially planners, to explore, configure and use ready4 tools without needing to enter any computer code. Our UIs are typically deployed as Shiny apps an may have deployments via the web (accessed through your browser) or to your desktop (installed as part of a ready4 [library](../libraries/)). 
 
 The main purposes of ready4 user-interfaces are:
 

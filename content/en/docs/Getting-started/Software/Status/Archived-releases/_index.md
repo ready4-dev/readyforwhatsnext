@@ -2,6 +2,12 @@
 title: "Archived releases"
 linkTitle: "Archived"
 weight: 2614
+categories: 
+- Documentation
+tags: 
+- Software
+- Status
+- Status (archived)
 description: >
   Archived releases are permanent, uniquely identified records of key project milestones.
 ---

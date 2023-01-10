@@ -9,8 +9,11 @@ weight: 3
 categories: 
 - Documentation
 tags: 
-- Installing libraries
-- Modules
+- Model
+- Model - modules
+- Software
+- Software - libraries
+- Software - libraries (installation)
 output: hugodown::md_document
 rmd_hash: 1d067aaf85823d23
 

@@ -3,12 +3,15 @@ title: "Predicting the spatial epidemiology of emerging mental disorders"
 linkTitle: "Geospatial"
 date: 2017-01-05
 tags:
-- Choice modelling
-- Discrete choice experiments
-- Model - People
-- mychoice
+- Analyses
+- Analyses - decision-aids
+- Model
+- Model - modules
+- Model - modules (people)
+- Software
+- Software - apps
+- Use - epidemiology
 categories:
-- Decision aids
 - Documentation
 weight: 97
 description: >

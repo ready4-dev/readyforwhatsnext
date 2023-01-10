@@ -7,8 +7,9 @@ weight: 2
 categories: 
 - Documentation
 tags: 
-- Modules
-- Sub-modules
+- Model
+- Model - modules
+- Model - sub-modules
 output: hugodown::md_document
 rmd_hash: beec8ab0793418ab
 html_dependencies:

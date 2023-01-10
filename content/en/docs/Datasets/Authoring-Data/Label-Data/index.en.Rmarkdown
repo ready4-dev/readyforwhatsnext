@@ -7,9 +7,15 @@ weight: 92
 categories: 
 - Documentation
 tags: 
-- Data management
-- Library - ready4use
-- Metadata
+- Data
+- Data - management
+- Data - metadata
+- Framework
+- Framework - authoring-tools
+- Framework - authoring-tools (datasets)
+- Software
+- Software - libraries
+- Software - libraries (ready4use)
 output: hugodown::md_document
 ---
 

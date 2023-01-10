@@ -6,9 +6,15 @@ description: Applying the Springtides model to predict the potential mental heal
 author: Matthew Hamilton ([Website](https://mph-economist.netlify.app)) 
 aliases: /post/insights_springtides/
 tags:
-- COVID-19
-- Model - System
-- Model - Places
+- Analyses
+- Model
+- Model - modules
+- Model - modules (places)
+- Reporting
+- Reporting - insights
+- Reporting - talks
+- Use - COVID-19
+- Use - epidemiology
 categories:
 - News
 resources:

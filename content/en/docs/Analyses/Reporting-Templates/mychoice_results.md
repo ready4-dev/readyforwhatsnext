@@ -3,14 +3,18 @@ title: "Make results summary for a Discrete Choice Experiment"
 linkTitle: Results (DCE)
 date: 2017-01-05
 tags:
-- Choice modelling
-- Model - People
-- mychoice
+- Model
+- Model - modules (people)
+- Reporting
+- Reporting - templates
+- Software
+- Software - executable
+- Software - executable (subroutines)
+- Software - libraries
+- Software - libraries (mychoice)
+- Use - choice modelling
 categories:
-- Analyses
 - Documentation
-- Reporting templates
-- Subroutines
 weight: 1040
 description: >
   A subroutine for a summary of the main results from a Discrete Choice Experiment implemented with the mychoice library.

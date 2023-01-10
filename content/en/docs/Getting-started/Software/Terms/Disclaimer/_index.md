@@ -2,6 +2,12 @@
 title: "Disclaimer"
 linkTitle: "Disclaimer"
 weight: 268
+categories: 
+- Documentation
+tags:
+- Project
+- Project - terms
+- Software
 description: >
   ready4 is distributed without any warranties.
 ---

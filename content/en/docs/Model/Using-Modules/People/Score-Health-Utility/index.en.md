@@ -7,11 +7,17 @@ weight: 93
 categories: 
 - Documentation
 tags: 
-- AQoL-6D
-- EQ-5D
-- Model - People
-- scorz
-- Utility scoring
+- Analyses
+- Analyses - tutorials
+- Model
+- Model - modules
+- Model - modules (people)
+- Software
+- Software - executable
+- Software - executable (programs)
+- Software - libraries
+- Software - libraries (scorz)
+- Use - utility scoring
 output: hugodown::md_document
 rmd_hash: c5cf63329ea93739
 html_dependencies:

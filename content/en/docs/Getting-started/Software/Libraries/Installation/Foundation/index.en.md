@@ -9,9 +9,11 @@ weight: 1
 categories: 
 - Documentation
 tags: 
-- Installing libraries
 - Framework
-- Framework foundation
+- Framework - foundation
+- Software
+- Software - libraries
+- Software - libraries (installation)
 output: hugodown::md_document
 rmd_hash: 319a8040ac34efe2
 

@@ -2,6 +2,12 @@
 title: "Citing ready4"
 linkTitle: "Citation"
 weight: 268
+categories: 
+- Documentation
+tags:
+- Project
+- Project - terms
+- Software
 description: >
   If you find ready4 useful, please cite it appropriately - it is easy to do!
 ---

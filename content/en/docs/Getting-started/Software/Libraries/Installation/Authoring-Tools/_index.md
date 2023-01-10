@@ -8,9 +8,11 @@ weight: 2
 categories: 
 - Documentation
 tags: 
-- Installing libraries
 - Framework
-- Framework authoring
+- Framework - authoring tools
+- Software
+- Software - libraries
+- Software - libraries (installation)
 ---
 
 

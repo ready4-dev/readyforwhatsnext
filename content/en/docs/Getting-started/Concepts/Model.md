@@ -2,6 +2,12 @@
 title: "Model"
 linkTitle: "Model"
 weight: 22
+categories: 
+- Documentation
+tags:
+- Model
+- Project
+- Project - concepts
 description: >
   ready4 represents youth mental health systems in computer code.
 ---

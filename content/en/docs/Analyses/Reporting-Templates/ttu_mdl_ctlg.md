@@ -3,14 +3,17 @@ title: "Make a catalogue of utility mapping models"
 linkTitle: "Catalogue (mapping)"
 date: 2017-01-05
 tags:
-- Model - People
-- TTU
-- Utility Mapping
+- Model
+- Model - modules
+- Model - modules (people)
+- Reporting
+- Reporting - templates
+- Software
+- Software - libraries
+- Software - libraries (TTU)
+- Use - utility mapping
 categories:
-- Analyses
 - Documentation
-- Reporting templates
-- Subroutines
 weight: 1010
 description: >
   A subroutine for generating catalogues of utility mapping models created with the TTU library.

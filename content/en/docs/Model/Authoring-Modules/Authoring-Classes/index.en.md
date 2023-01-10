@@ -7,9 +7,13 @@ weight: 62
 categories: 
 - Documentation
 tags: 
-- Developer tools
-- Modules
-- ready4class
+- Framework - authoring tools
+- Framework - authoring tools (modules)
+- Model
+- Model - modules
+- Software
+- Software - libraries
+- Software - libraries (ready4class)
 output: hugodown::md_document
 rmd_hash: ad8ed2bbfcbb6261
 html_dependencies:

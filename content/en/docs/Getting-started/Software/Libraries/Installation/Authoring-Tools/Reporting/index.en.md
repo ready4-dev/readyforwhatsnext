@@ -8,10 +8,12 @@ weight: 3
 categories: 
 - Documentation
 tags: 
-- Installing libraries
 - Framework
-- Framework authoring
-- ready4show
+- Framework - authoring tools
+- Software
+- Software - libraries
+- Software - libraries (installation)
+- Software - libraries (ready4show)
 output: hugodown::md_document
 rmd_hash: 5f367b3b293b00e7
 

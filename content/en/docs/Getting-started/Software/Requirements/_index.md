@@ -2,6 +2,10 @@
 title: "System requirements"
 linkTitle: "Requirements"
 weight: 260
+categories: 
+- Documentation
+tags: 
+- Software
 description: >
   What you need in order to be able to use ready4 software on your machine.
 ---

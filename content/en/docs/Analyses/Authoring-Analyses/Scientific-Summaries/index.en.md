@@ -7,9 +7,11 @@ weight: 92
 categories: 
 - Documentation
 tags: 
-- Automated reports
-- Library - ready4show
-- Reproducibility
+- Reporting
+- Reporting - tutorials
+- Software
+- Software - libraries
+- Software - libraries (ready4show)
 output: hugodown::md_document
 rmd_hash: fca3abb8efc9e205
 html_dependencies:

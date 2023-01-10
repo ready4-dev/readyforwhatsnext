@@ -2,6 +2,13 @@
 title: "Module"
 linkTitle: "Module"
 weight: 23
+categories: 
+- Documentation
+tags:
+- Model
+- Model - modules
+- Project
+- Project - concepts
 description: >
   ready4 is comprised of self-contained, reusable components called "modules".
 ---

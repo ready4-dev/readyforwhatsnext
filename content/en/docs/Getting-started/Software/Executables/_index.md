@@ -2,6 +2,11 @@
 title: "Executables"
 linkTitle: "Executables"
 weight: 264
+categories: 
+- Documentation
+tags: 
+- Software
+- Software - executable
 description: >
   Executables (programs and sub-routines) are used to apply computational models to data and to report the resulting analyses.
 ---

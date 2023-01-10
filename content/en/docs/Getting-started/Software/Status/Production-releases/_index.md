@@ -2,6 +2,12 @@
 title: "Production releases"
 linkTitle: "Production"
 weight: 2613
+categories: 
+- Documentation
+tags:
+- Software
+- Status
+- Status (production)
 description: >
   Production releases are the versions of software intended for end-users.
 ---

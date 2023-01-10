@@ -8,13 +8,15 @@ weight: 1
 categories: 
 - Documentation
 tags: 
-- Installing libraries
 - Framework
-- Framework authoring
-- Framework authoring modules
-- ready4class
-- ready4fun
-- ready4pack
+- Framework - authoring tools
+- Framework - authoring tools (modules)
+- Software
+- Software - libraries
+- Software - libraries (installation)
+- Software - libraries (ready4class)
+- Software - libraries (ready4fun)
+- Software - libraries (ready4pack)
 output: hugodown::md_document
 ---
 

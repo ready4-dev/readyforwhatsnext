@@ -7,7 +7,9 @@ slug: test
 categories: 
 - Documentation
 tags: 
-- Installing libraries
+- Software
+- Software - libraries
+- Software - libraries (installation)
 output: hugodown::md_document
 ---
 

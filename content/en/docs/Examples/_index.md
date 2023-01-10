@@ -4,8 +4,20 @@ title: "Examples"
 linkTitle: "Examples"
 weight: 18
 date: 2017-01-05
+categories: 
+- Documentation
+tags: 
+- Analyses
+- Analyses - replication code
+- Reporting
+- Reporting - insights
+- Use - choice modelling
+- Use - COVID-19
+- Use - epidemiology
+- Use - heterogeneity
+- Use - utility mapping
 description: >
-  See ready4 in action!
+  See how ready4 has been applied to real world decision problems.
 ---
 
 Some examples of practical applications of ready4 include:

@@ -3,11 +3,18 @@ title: "Develop health utility mapping algorithms"
 linkTitle: "Map to utility"
 date: 2017-01-05
 tags:
-- Model - People
-- Utility Mapping
-- youthu
+- Analyses
+- Analyses - replication code
+- Model
+- Model - modules
+- Model - modules (people)
+- Software
+- Software - executable
+- Software - executable (programs)
+- Software - libraries
+- Software - libraries (youthu)
+- Use - utility mapping
 categories:
-- Analysis programs
 - Documentation
 weight: 97
 description: >

@@ -6,10 +6,9 @@ description: Announcing the ready4 Zenodo community.
 author: Matthew Hamilton ([Website](https://mph-economist.netlify.app)) 
 aliases: /post/2022-03-23-ready4-software-now-archived-on-zenodo/
 tags:
-- Framework
-- Model
+- Repositories
+- Repositories - code
 categories:
-- Code repositories
 - News
 resources:
 - src: "**.{png,jpg}"

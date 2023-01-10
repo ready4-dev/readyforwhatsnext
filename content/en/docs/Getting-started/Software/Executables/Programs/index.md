@@ -7,7 +7,9 @@ weight: 3
 categories: 
 - Documentation
 tags: 
-- Programs
+- Software
+- Software - executable
+- Software - executable (programs)
 output: hugodown::md_document
 rmd_hash: 320c76ce6fb4ee8b
 

@@ -7,10 +7,14 @@ weight: 92
 categories: 
 - Documentation
 tags: 
-- Data management
-- Metadata
-- Model - People
-- youthvars
+- Data - management
+- Data - metadata
+- Model
+- Model - modules
+- Model - modules (people)
+- Software
+- Software - libraries
+- Software - libraries (youthvars)
 output: hugodown::md_document
 ---
 

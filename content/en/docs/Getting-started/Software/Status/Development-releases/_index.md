@@ -2,6 +2,12 @@
 title: "Development releases"
 linkTitle: "Development"
 weight: 2611
+categories: 
+- Documentation
+tags:
+- Software
+- Status
+- Status (development)
 description: >
   Development releases provide the most comprehensive and up to date public record of a ready4 project's source code but may be poorly documented and tested.
 ---

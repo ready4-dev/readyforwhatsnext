@@ -3,16 +3,22 @@ title: "Design a Discrete Choice Experiment"
 linkTitle: "DCE Design"
 date: 2017-01-05
 tags:
-- Choice modelling
-- Discrete choice experiments
-- Model - People
-- mychoice
-categories:
 - Analyses
+- Analyses - replication code
+- Model
+- Model - modules
+- Model - modules (people)
+- Software
+- Software - executable
+- Software - executable (programs)
+- Software - libraries
+- Software - libraries (mychoice)
+- Use - choice modelling
+categories:
 - Documentation
 weight: 96
 description: >
-  We used functions (soon to be formalised into ready4 framework modules) from the mychoice R package to design to a discrete choice experiment.
+  We used functions (soon to be formalised into ready4 modules) from the mychoice R package to design to a discrete choice experiment.
 ---
 
 {{% pageinfo %}}

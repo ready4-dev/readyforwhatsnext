@@ -6,8 +6,19 @@ description: Applying Spring To Life model modules to map psychological and func
 author: Matthew Hamilton ([Website](https://mph-economist.netlify.app)) 
 aliases: /post/insights_ttu_aqol6d/
 tags:
-- COVID-19
-- Model - People
+- Analyses
+- Analyses - tutorials
+- Data
+- Data - datasets
+- Model
+- Model - modules (people)
+- Reporting
+- Reporting - insights
+- Software
+- Software - libraries
+- Software - libraries (TTU)
+- Software - libraries (youthvars)
+- Use - utility mapping
 categories:
 - News
 resources:

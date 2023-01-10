@@ -7,10 +7,17 @@ weight: 97
 categories: 
 - Documentation
 tags: 
-- Choice modelling
-- Discrete choice experiments
-- Model - People
-- mychoice
+- Analyses
+- Analyses - tutorials
+- Model
+- Model - modules
+- Model - modules (people)
+- Software
+- Software - executable
+- Software - executable (programs)
+- Software - libraries
+- Software - libraries (mychoice)
+- Use - choice modelling
 output: hugodown::md_document
 ---
 

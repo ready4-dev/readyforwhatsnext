@@ -3,14 +3,18 @@ title: "Author a draft scientific manuscript for a utility mapping study"
 linkTitle: "Manuscript (mapping)"
 date: 2017-01-05
 tags:
-- Model - People
-- TTU
-- Utility Mapping
+- Model
+- Model - modules
+- Model - modules (people)
+- Reporting
+- Reporting - templates
+- Reporting - templates
+- Software
+- Software - libraries
+- Software - libraries (TTU)
+- Use - utility mapping
 categories:
-- Analyses
 - Documentation
-- Reporting templates
-- Subroutines
 weight: 1030
 description: >
   A subroutine for generating a scientific manuscript of a longitudinal utility mapping study undertaken with the TTU library.

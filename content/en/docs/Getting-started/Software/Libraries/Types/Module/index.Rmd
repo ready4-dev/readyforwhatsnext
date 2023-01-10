@@ -7,8 +7,10 @@ weight: 2662
 categories: 
 - Documentation
 tags: 
-- Modules
-- R packages
+- Model
+- Model - modules
+- Software
+- Software - libraries
 output: hugodown::md_document
 ---
 

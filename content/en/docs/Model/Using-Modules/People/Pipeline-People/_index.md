@@ -8,15 +8,16 @@ description: >
 categories: 
 - Documentation
 tags: 
-- Model - People
-- Pipeline
-- Pipeline - People
+- Model
+- Model - modules
+- Model - modules (people)
+- Software - pipeline
 ---
 
 Work is underway to add to develop additional ready4 modules for modelling people. All of this work currently exists as [unreleased code](/docs/getting-started/software/status/unreleased/). The pipeline of projects is as follows:
 
-- Modules for creating synthetic household datasets from multiple longitudinal datasets of varying structure, including modules specifically designed to streamline wrangling data from the HILDA and LSAC datasets (both from Australia); and
+- modules for creating synthetic household datasets from multiple longitudinal datasets of varying structure, including modules specifically designed to streamline wrangling data from the HILDA and LSAC datasets (both from Australia); and
 
-- Modules to implement agent based model simulations.
+- modules to implement agent based model simulations.
 
 A significant amount of work has already been completed on both projects and initial [development releases](/docs/getting-started/software/status/development-releases/) of each, along with one scientific manuscript, are anticipated in the second half of 2023.

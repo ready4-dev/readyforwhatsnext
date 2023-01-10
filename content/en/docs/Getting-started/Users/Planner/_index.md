@@ -2,6 +2,11 @@
 title: "Planners"
 linkTitle: "Planners"
 weight: 24
+categories: 
+- Documentation
+tags:
+- Project
+- Project - users
 description: >
   Planners can use ready4 decision aids to generate useful insights.
 ---

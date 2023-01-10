@@ -3,9 +3,11 @@ title: "Authoring reproducible analyses"
 linkTitle: "Authoring"
 date: 2017-01-05
 tags:
-- Library - ready4show
-- Reproducibility
-- Self-documenting programs
+- Programming
+- Programming - literate
+- Software
+- Software - libraries
+- Software - libraries (ready4show)
 categories:
 weight: 92
 description: >

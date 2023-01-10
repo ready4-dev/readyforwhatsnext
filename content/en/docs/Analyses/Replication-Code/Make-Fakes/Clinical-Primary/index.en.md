@@ -5,11 +5,14 @@ date: "2023-01-09"
 description: "We created a basic synthetic dataset of to represent a clinical youth mental health sample."
 weight: 3
 categories: 
-- Synthetic populations
+- Documentation
 tags: 
 - Analyses
-- Analyses - Replication
-- Documentation
+- Analyses - replication code
+- Software
+- Software - executable
+- Software - executable (programs)
+- Use - synthetic populations
 output: hugodown::md_document
 rmd_hash: 6da8ebef761cc8d6
 

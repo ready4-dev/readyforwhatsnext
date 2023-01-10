@@ -3,11 +3,12 @@ title: "Dependencies"
 linkTitle: "Dependencies"
 weight: 267
 tags:
-- Dependencies
-- Functions
-- R packages
-categories:
 - Software
+- Software - apps
+- Software - functions
+- Software - libraries
+- Software - libraries (dependencies)
+categories:
 - Documentation
 description: >
   Search for ready4 library and function dependencies using our interactive app.

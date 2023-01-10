@@ -2,6 +2,12 @@
 title: "Installation and set-up"
 linkTitle: "Installation"
 weight: 268
+categories: 
+- Documentation
+tags: 
+- Software
+- Software - libraries
+- Software - libraries (installation)
 description: >
   Important information to review before installing and using our software
 ---

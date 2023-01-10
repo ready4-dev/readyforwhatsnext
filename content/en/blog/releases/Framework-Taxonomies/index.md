@@ -7,8 +7,11 @@ weight: 2
 categories: 
 - Releases
 tags: 
-- Datasets
-- Framework - Taxonomies
+- Data
+- Data - datasets
+- Framework
+- Framework - conventions
+- Framework - conventions (taxonomies)
 output: hugodown::md_document
 rmd_hash: 0df86460f4006b94
 

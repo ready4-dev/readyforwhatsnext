@@ -8,8 +8,13 @@ categories:
 - Documentation
 tags: 
 - Framework
-- ready4 (library)
-- Syntax
+- Framework - foundation
+- Framework - foundation (syntax)
+- Programming
+- Programming - object-oriented
+- Software
+- Software - libraries
+- Software - libraries (ready4)
 output: hugodown::md_document
 rmd_hash: 3d4f54c5eed2d91e
 html_dependencies:

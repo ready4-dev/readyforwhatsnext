@@ -7,10 +7,17 @@ weight: 95
 categories: 
 - Documentation
 tags: 
-- Exploratory analysis
-- Model - People
-- Utility mapping
-- specific
+- Analyses
+- Analyses - tutorials
+- Model
+- Model - modules
+- Model - modules (people)
+- Software
+- Software - executable
+- Software - executable (programs)
+- Software - libraries
+- Software - libraries (specific)
+- Use - utility mapping
 output: hugodown::md_document
 rmd_hash: 5429b6a80b16b0f0
 html_dependencies:

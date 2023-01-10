@@ -1,10 +1,14 @@
 
 ---
-title: "Add and share data"
+title: "Data"
 linkTitle: "Data"
 date: 2017-01-05
 weight: 67
+categories: 
+- Documentation
+tags: 
+- Data
 description: >
-  ready4 modules are designed to access and share model data via open access data repositories.
+  To the greatest extent feasible, the data supplied to ready4 [modules](/docs/getting-started/concepts/module/) is accessed and shared via open access data repositories.
 ---
 

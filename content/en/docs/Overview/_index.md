@@ -2,6 +2,10 @@
 title: "Overview"
 linkTitle: "Overview"
 weight: 10
+categories:
+- Documentation
+tags:
+- Project
 description: >
   How ready4 aims to improve policy and system planning in youth mental health.
 ---
@@ -31,6 +35,6 @@ ready4 is a collaborative project and we'd love your help in progressing our [pr
 ready4 is shorthand for "readyforwhatsnext", the title of [the research project that catalysed this model](/about/) and a reference to both how good mental health can equip young people for better lives and how computational models can improve the preparedness of decision makers and system planners.
 
 ## Where should I go next?
-We'd recommend reading the documentation in the order in which sections appear in the table of contents (so go next to [Examples](/docs/examples/), then to [Getting Started](/docs/getting-started/) and so on). Some sections of the documentation are labelled as being written for a specific type of reader. 
+We'd recommend reading the documentation in the order in which sections appear in the table of contents (so go next to [Examples](/docs/examples/), then to [Getting Started](/docs/getting-started/) and so on). 
 
 

@@ -2,6 +2,11 @@
 title: "Modellers"
 linkTitle: "Modellers"
 weight: 24
+categories: 
+- Documentation
+tags:
+- Project
+- Project - users
 description: >
   Modellers can use ready4 to leverage the work of other modellers and to implement reproducible modelling analyses.
 ---

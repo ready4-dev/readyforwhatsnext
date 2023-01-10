@@ -2,6 +2,11 @@
 title: "Motivation"
 linkTitle: "Motivation"
 weight: 21
+categories: 
+- Documentation
+tags:
+- Project
+- Project - purpose
 description: >
   ready4 aims to be a valid and useful youth mental health systems model.
 ---

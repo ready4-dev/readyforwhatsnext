@@ -3,12 +3,13 @@ title: "Author a template scientific manuscript"
 linkTitle: "Manuscript (template)"
 date: 2017-01-05
 tags:
-- Templates
+- Reporting
+- Reporting - templates
+- Software
+- Software - executable
+- Software - executable (subroutines)
 categories:
-- Analyses
 - Documentation
-- Reporting templates
-- Subroutines
 weight: 1030
 description: >
   A template subroutine for generating a scientific manuscript for use with the ready4show library.

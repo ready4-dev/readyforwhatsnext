@@ -2,6 +2,12 @@
 title: "Unreleased code"
 linkTitle: "Unreleased"
 weight: 2610
+categories: 
+- Documentation
+tags:
+- Software
+- Status
+- Status (unreleased)
 description: >
   Some work in progress code has yet to be publicly released or fornmally acknowledged as part of the ready4 suite.
 ---

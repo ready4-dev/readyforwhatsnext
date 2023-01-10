@@ -2,14 +2,24 @@
 title: "Find and deploy utility mapping models"
 linkTitle: "Predict utility"
 date: "2022-12-24"
-description: "Using tools (soon to be formalised into ready4 framework modules) from the youthu R package, it is possible to find and deploy relevant utility mapping algorithms. This tutorial illustrates the main steps for predicting AQoL-6D utility from psychological and functional measures collected on clinical samples of young people."
+description: "Using tools (soon to be formalised into ready4 modules) from the youthu R package, it is possible to find and deploy relevant utility mapping algorithms. This tutorial illustrates the main steps for predicting AQoL-6D utility from psychological and functional measures collected on clinical samples of young people."
 weight: 96
 categories: 
 - Documentation
 tags: 
-- Model - People
-- Utility mapping
-- youthu
+- Analyses
+- Analyses - tutorials
+- Model
+- Model - modules
+- Model - modules (people)
+- Software
+- Software - executable
+- Software - executable (programs)
+- Software - libraries
+- Software - libraries (youthu)
+- Software - libraries (scorz)
+- Software - libraries (specific)
+- Use - utility mapping
 params:
   output_type_1L_chr: HTML
 output: hugodown::md_document

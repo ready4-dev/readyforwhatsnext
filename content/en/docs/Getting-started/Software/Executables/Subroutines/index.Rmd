@@ -7,7 +7,9 @@ weight: 4
 categories: 
 - Documentation
 tags: 
-- Subroutines
+- Software
+- Software - executable
+- Software - executable (subroutines)
 output: hugodown::md_document
 ---
 
