@@ -1,6 +1,6 @@
 ---
 title: "Author a template scientific manuscript"
-linkTitle: "Manuscript (template)"
+linkTitle: "Manuscript (empty)"
 date: 2017-01-05
 tags:
 - Reporting
@@ -8,6 +8,8 @@ tags:
 - Software
 - Software - executable
 - Software - executable (subroutines)
+- Software - libraries
+- Software - libraries (ready4show)
 categories:
 - Documentation
 weight: 1030

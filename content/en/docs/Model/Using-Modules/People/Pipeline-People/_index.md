@@ -11,7 +11,8 @@ tags:
 - Model
 - Model - modules
 - Model - modules (people)
-- Software - pipeline
+- Status
+- Status - unreleased
 ---
 
 Work is underway to add to develop additional ready4 modules for modelling people. All of this work currently exists as [unreleased code](/docs/getting-started/software/status/unreleased/). The pipeline of projects is as follows:

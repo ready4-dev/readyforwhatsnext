@@ -7,7 +7,7 @@ categories:
 tags:
 - Software
 - Status
-- Status (production)
+- Status - production
 description: >
   Production releases are the versions of software intended for end-users.
 ---

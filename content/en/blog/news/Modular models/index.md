@@ -7,6 +7,8 @@ author: Matthew Hamilton ([Website](https://mph-economist.netlify.app))
 aliases: /post/2022-01-14-introducing-ready4-framework-modules-and-syntax/
 tags:
 - Framework
+- Framework - foundation
+- Framework - foundation (modularity)
 - Model
 - Model - modules
 categories:

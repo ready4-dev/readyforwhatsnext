@@ -4,14 +4,16 @@ linkTitle: "Authoring manuscripts"
 date: "2023-01-09"
 description: "Tools from the ready4show R package support authoring of scientific summaries of analyses with ready4."
 weight: 92
-categories: 
-- Documentation
-tags: 
+tags:
+- Programming
+- Programming - literate
 - Reporting
 - Reporting - tutorials
 - Software
 - Software - libraries
 - Software - libraries (ready4show)
+categories:
+- Documentation
 output: hugodown::md_document
 rmd_hash: fca3abb8efc9e205
 html_dependencies:

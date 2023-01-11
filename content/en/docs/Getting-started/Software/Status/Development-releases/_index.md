@@ -7,7 +7,7 @@ categories:
 tags:
 - Software
 - Status
-- Status (development)
+- Status - development
 description: >
   Development releases provide the most comprehensive and up to date public record of a ready4 project's source code but may be poorly documented and tested.
 ---

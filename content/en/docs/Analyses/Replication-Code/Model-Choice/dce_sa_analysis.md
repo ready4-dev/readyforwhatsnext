@@ -13,6 +13,7 @@ tags:
 - Software - executable (programs)
 - Software - libraries
 - Software - libraries (mychoice)
+- Use
 - Use - choice modelling
 categories:
 - Documentation

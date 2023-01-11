@@ -3,6 +3,12 @@ title: "Priority project goals"
 linkTitle: "Priorities"
 date: 2017-01-05
 weight: 3
+tags:
+- Project
+- Project - contributions
+- Project - contributions (priorities)
+categories:
+- Documentation
 description: >
   There are a number of priority project development areas for ready4 that we'd love your help with.
 ---

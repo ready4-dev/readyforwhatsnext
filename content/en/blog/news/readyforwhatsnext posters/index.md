@@ -6,9 +6,14 @@ description: Initial set of academic posters relating to the development of the 
 author: Matthew Hamilton ([Website](https://mph-economist.netlify.app)) 
 aliases: /post/rfwn-posters/
 tags:
+- Analyses
+- Analyses - decision-aids
 - Model
 - Model - conceptual
+- Model - modules
 - Model - modules (places)
+- Software
+- Software - apps
 resources:
 - src: "**.{png,jpg}"
   title: "Image #:counter"

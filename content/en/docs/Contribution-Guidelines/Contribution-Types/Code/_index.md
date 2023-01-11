@@ -2,6 +2,12 @@
 title: "Contribute code"
 linkTitle: "Code"
 weight: 110
+tags:
+- Project
+- Project - contributions
+- Project - contributions (types)
+categories:
+- Documentation
 description: >
   Help improve the reliability, functionality and ease of use of ready4 software.
 ---

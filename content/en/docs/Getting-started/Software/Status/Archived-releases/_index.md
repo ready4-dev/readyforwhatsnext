@@ -7,7 +7,7 @@ categories:
 tags: 
 - Software
 - Status
-- Status (archived)
+- Status - archived
 description: >
   Archived releases are permanent, uniquely identified records of key project milestones.
 ---

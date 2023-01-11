@@ -12,6 +12,7 @@ tags:
 - Software - executable (subroutines)
 - Software - libraries
 - Software - libraries (mychoice)
+- Use
 - Use - choice modelling
 categories:
 - Documentation

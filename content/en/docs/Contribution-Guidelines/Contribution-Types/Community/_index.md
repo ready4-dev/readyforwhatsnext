@@ -3,6 +3,12 @@ title: "Improve support"
 linkTitle: "Community"
 date: 2017-01-05
 weight: 111
+tags:
+- Project
+- Project - contributions
+- Project - contributions (types)
+categories:
+- Documentation
 description: >
   Help develop high quality, clear and comprehensive documentation, instruction and responsive help.
 ---

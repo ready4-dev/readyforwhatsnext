@@ -2,6 +2,12 @@
 title: "Contributor covenant code of conduct"
 linkTitle: "Code of conduct"
 weight: 264
+tags:
+- Project
+- Project - contributions
+- Project - contributions (conduct)
+categories:
+- Documentation
 description: >
   To foster an inclusive and respectful community, all contributors to ready4 are expected to adhere to the Contributor Covenant.
 ---
