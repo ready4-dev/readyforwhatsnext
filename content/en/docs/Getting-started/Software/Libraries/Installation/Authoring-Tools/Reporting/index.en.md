@@ -14,6 +14,8 @@ tags:
 - Software - libraries
 - Software - libraries (installation)
 - Software - libraries (ready4show)
+- Status
+- Status - development
 output: hugodown::md_document
 rmd_hash: 5f367b3b293b00e7
 

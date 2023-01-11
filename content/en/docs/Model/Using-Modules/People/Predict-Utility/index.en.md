@@ -19,6 +19,9 @@ tags:
 - Software - libraries (youthu)
 - Software - libraries (scorz)
 - Software - libraries (specific)
+- Status
+- Status - development
+- Use
 - Use - utility mapping
 params:
   output_type_1L_chr: HTML

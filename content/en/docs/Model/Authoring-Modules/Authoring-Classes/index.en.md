@@ -14,6 +14,8 @@ tags:
 - Software
 - Software - libraries
 - Software - libraries (ready4class)
+- Status
+- Status - development
 output: hugodown::md_document
 rmd_hash: ad8ed2bbfcbb6261
 html_dependencies:

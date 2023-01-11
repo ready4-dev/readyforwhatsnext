@@ -17,6 +17,8 @@ tags:
 - Software - libraries (ready4class)
 - Software - libraries (ready4fun)
 - Software - libraries (ready4pack)
+- Status
+- Status - development
 output: hugodown::md_document
 rmd_hash: eeb0b48a429fc491
 

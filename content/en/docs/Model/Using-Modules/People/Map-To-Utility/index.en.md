@@ -18,7 +18,9 @@ tags:
 - Software - executable (programs)
 - Software - libraries
 - Software - libraries (specific)
-- Software - libraries (specific)
+- Status
+- Status - development
+- Use
 - Use - utility mapping
 output: hugodown::md_document
 rmd_hash: ab6ef0bce55c99d0

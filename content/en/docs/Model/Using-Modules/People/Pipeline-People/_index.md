@@ -1,5 +1,5 @@
 ---
-title: "Pipeline of forthcoming people modules"
+title: "Pipeline of people modules"
 linkTitle: "Pipeline"
 date: 2017-01-05
 weight: 999

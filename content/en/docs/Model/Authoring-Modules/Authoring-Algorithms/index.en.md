@@ -14,6 +14,8 @@ tags:
 - Software - functions
 - Software - libraries
 - Software - libraries (ready4fun)
+- Status
+- Status - development
 output: hugodown::md_document
 rmd_hash: 481afc8d670cccda
 html_dependencies:

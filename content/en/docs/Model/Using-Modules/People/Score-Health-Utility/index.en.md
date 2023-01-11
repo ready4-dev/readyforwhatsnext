@@ -17,6 +17,9 @@ tags:
 - Software - executable (programs)
 - Software - libraries
 - Software - libraries (scorz)
+- Status
+- Status - development
+- Use
 - Use - utility scoring
 output: hugodown::md_document
 rmd_hash: c5cf63329ea93739

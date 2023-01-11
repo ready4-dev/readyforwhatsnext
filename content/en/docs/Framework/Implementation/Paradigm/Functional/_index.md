@@ -16,6 +16,8 @@ tags:
 - Software
 - Software - libraries
 - Software - libraries (ready4fun)
+- Status
+- Status - development
 ---
 
 Although the [object-oriented programming (OOP)](/docs/framework/implementation/paradigm/object-oriented/) approach ready4 implements has many advantages, it can also have some limitations. Some of these limitations have been colorfully highlighted by a popular quote attributed to Joe Armstrong:

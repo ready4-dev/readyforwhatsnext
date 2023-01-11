@@ -13,6 +13,8 @@ tags:
 - Software - executable (programs)
 - Software - libraries
 - Software - libraries (youthu)
+- Status
+- Status - development
 - Use
 - Use - utility mapping
 categories:

@@ -17,6 +17,9 @@ tags:
 - Software - executable (programs)
 - Software - libraries
 - Software - libraries (mychoice)
+- Status
+- Status - development
+- Use
 - Use - choice modelling
 output: hugodown::md_document
 rmd_hash: 23a1849f0442c087
