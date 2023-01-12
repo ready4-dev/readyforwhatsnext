@@ -14,7 +14,7 @@ description: >
 
 ## What do I need to know to help?
 
-If you are looking to improve [our existing software](../getting-started/software) with a code contribution, you will need familiarity with R, R Markdown () and git. You will also need a GitHub account.
+If you are looking to improve [our existing software](/docs/getting-started/software/) with a code contribution, you will need familiarity with R, R Markdown () and git. You will also need a GitHub account.
 
 ## How do I make a code contribution?
 

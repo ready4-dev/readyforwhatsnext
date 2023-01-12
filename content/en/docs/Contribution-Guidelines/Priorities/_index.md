@@ -1,5 +1,5 @@
 ---
-title: "Priority project goals"
+title: "Project development priorities"
 linkTitle: "Priorities"
 date: 2017-01-05
 weight: 3
@@ -10,14 +10,7 @@ tags:
 categories:
 - Documentation
 description: >
-  There are a number of priority project development areas for ready4 that we'd love your help with.
+  Our current list of priorities for the development of ready4 shape when and how we need your help.
 ---
 
-
-Our four priority areas are:
-
-- Get all our code to production releases;
-- Apply existing ready4 modules to new problems; 
-- Develop and apply new ready4 modules; and
-- Build a ready4 user community.
 
