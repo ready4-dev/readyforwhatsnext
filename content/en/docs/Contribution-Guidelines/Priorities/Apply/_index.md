@@ -10,7 +10,14 @@ tags:
 categories:
 - Documentation
 description: >
-  We want all maintained production releases of our software to be used to help improve the transparency, quality, availability and usefulness of replications and generalisations of the original studies for which that software was developed.
+  We want all maintained [production releases](/docs/getting-started/software/status/production-releases/) of our [software](/docs/getting-started/software/) to be used to implement replications and generalisations of the original studies for which that software was developed.
 ---
 
+## Why?
 
+## What?
+The most important types of help we need with this priority area are [code contributions](/docs/contribution-guidelines/contribution-types/code/), [community support](/docs/contribution-guidelines/contribution-types/community/), [advice](/docs/contribution-guidelines/contribution-types/advisory/) and [funding](/docs/contribution-guidelines/contribution-types/funding/).
+
+## How?
+
+## When?

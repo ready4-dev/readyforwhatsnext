@@ -6,7 +6,7 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$","_cache$",'\.knit\.md$', '\.utf8\.md$'
 # Language settings
 contentDir = "content/en"
 defaultContentLanguage = "en"
-defaultContentLanguageInSubdir = false
+defaultContentLanguageInSubdir = true
 # Useful when translating.
 enableMissingTranslationPlaceholders = true
 
@@ -174,26 +174,26 @@ enable = false
   icon = "fa fa-envelope"
   desc = "Contact the ready4 project lead."
 #[[params.links.user]]
-#  name ="Twitter"
-#  url = "https://example.org/twitter"
-#  icon = "fab fa-twitter"
-#  desc = "Follow us on Twitter to get the latest news!"
-#[[params.links.user]]
 #  name = "Stack Overflow"
 #  url = "https://example.org/stack"
 #  icon = "fab fa-stack-overflow"
 #  desc = "Practical questions and curated answers"
 # Developer relevant links. These will show up on right side of footer and in the community page if you have one.
 [[params.links.developer]]
-  name = "GitHub"
+  name = "ready4 GitHub organisation"
   url = "https://github.com/ready4-dev"
   icon = "fab fa-github"
-  desc = "Development takes place here!"
-#[[params.links.developer]]
-#  name = "Slack"
-#  url = "https://example.org/slack"
-#  icon = "fab fa-slack"
-#  desc = "Chat with other project developers"
+  desc = "Contribute to the core ready4 codebase."
+[[params.links.developer]]
+  name ="ready4 Zenodo community"
+  url = "https://example.org/twitter"
+  icon = "fa fa-archive"
+  desc = "Share code from modelling projects that you implement with ready4."
+[[params.links.developer]]
+  name = "ready4 Dataverse"
+  url = "https://dataverse.harvard.edu/dataverse/ready4"
+  icon = "fa fa-database"
+  desc = "Access and share ready4 model datasets"
 #[[params.links.developer]]
 #  name = "Developer mailing list"
 #  url = "https://example.org/mail"
