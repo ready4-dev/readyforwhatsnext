@@ -186,7 +186,7 @@ enable = false
   desc = "Contribute to the core ready4 codebase."
 [[params.links.developer]]
   name ="ready4 Zenodo community"
-  url = "https://example.org/twitter"
+  url = "https://zenodo.org/communities/ready4/"
   icon = "fa fa-archive"
   desc = "Share code from modelling projects that you implement with ready4."
 [[params.links.developer]]
@@ -209,10 +209,10 @@ enable = false
     min = "0.75.0"
   [[module.imports]]
     path = "github.com/google/docsy"
-    disable = false
+    disable = true
   [[module.imports]]
     path = "github.com/google/docsy/dependencies"
-    disable = false
+    disable = true
 [menu]
 [[menu.main]]
 name = "Documentation"
