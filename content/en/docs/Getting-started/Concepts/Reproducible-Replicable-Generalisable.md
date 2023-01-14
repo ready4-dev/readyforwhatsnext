@@ -1,6 +1,6 @@
 ---
-title: "Reproducible science"
-linkTitle: "Reproducible science"
+title: "Reproducible research"
+linkTitle: "Reproducible research"
 weight: 24
 categories: 
 - Documentation
@@ -11,7 +11,7 @@ description: >
   Some core concepts relating to reproducible research have multiple conflicting definitions - this is how we use them.
 ---
 
-Although there is widespread support from the scientific community on the importance of reproducible research, the definition of key terms such as reproducibility, replicability and generalisability across disciplines and methodologies (e.g. the extent to which computational modelling is used). In some cases, entirely different terms (e.g. repeatability) are preferred. The meanings we intend when using these terms are described below.
+Although there is widespread support from the scientific community on the importance of reproducible research, the definition of key terms such as reproducibility, replicability and generalisability can vary across disciplines and methodologies (e.g. the extent to which computational modelling is used). In some cases, entirely different terms (e.g. repeatability) are preferred. The meanings we intend when using these terms are described below.
 
 ## Reproduction and Replication
 The distinctions we make between reproduction and replication have been guided by the approach outlined in a report by the [National Academies of Sciences, Engineering and Medicine](https://nap.nationalacademies.org/catalog/25303/reproducibility-and-replicability-in-science). However, we have adapted their definitions slightly as the meanings in that report were framed in terms of study findings / outcomes, whereas our usage relates more to intended objectives when deploying tools.
@@ -31,7 +31,7 @@ Applying analysis code used in a study to new input data. The analysis code is r
 2. If the data required to re-run a study analysis are not publicly available, we publish the replication version of the code. The replication version of the code may be configured to ingest a synthetic (fake) representation of the study dataset as with this [utility mapping replication program](/docs/analyses/replication-code/map-utility/ttu_lng_aqol6d_csp/). Details of the (minimal) steps required to revert the replication code to a version that can be used for reproduction purposes are typically embedded within the program itself.
 
 ## Generalising
-It is common for discussions of scientific studies in mental health to consider the extent to which **findings** can be generalised (e.g. if a well conducted study concludes with high confidence that an intervention is cost-effective in Australia, is it valid to infer that it is likely to be cost-effective in the United Kingdom?). However, we are more interested in the generalisability of computational models (e.g. the extent to which the data-structures and algorithms expressed in computer code can be used to explore similar topics in both Australia and the United Kingdom). Our usage of the term "generalising" (and by extention "generalisability", "generalised", "generalisation") reflects this motivation.
+It is common for discussions of scientific studies to consider the extent to which **findings** can be generalised (e.g. if a well conducted study concludes with high confidence that an intervention is cost-effective in Australia, is it valid to infer that it is likely to be cost-effective in the United Kingdom?). However, we are more interested in the generalisability of computational models (e.g. the extent to which the data-structures and algorithms expressed in computer code can be used to explore similar topics in both Australia and the United Kingdom). Our usage of the term "generalising" (and by extention "generalisability", "generalised", "generalisation") reflects this motivation.
 
 ### Meaning 
 Adapting a computational model, in whole or in part, to extend the types of data and/or research questions to which it can be applied. The new types of data will possess some differences in structure and / or concepts from that to which the computational model had previously been applied and these differences may be why research questions need to be reformulated.
