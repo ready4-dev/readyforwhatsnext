@@ -66,15 +66,15 @@ other = "Print entire section"
 [community_join]
 other = "Join the {{ .Site.Title }} community"
 [community_introduce]
-other = "{{ .Site.Title }} is an open source project that anyone in the community can use, improve, and enjoy. We'd love you to join us! Here's a few ways to find out what's happening and get involved."
+other = "{{ .Site.Title }} is an open source project that anyone in the community can use and improve. We'd love you to join us! Here's a few ways to find out what's happening and how to get involved."
 [community_learn]
 other = "Connect"
 [community_using]
-other = "Using or want to use {{ .Site.Title }}? Find out more here:"
+other = "Have a query or proposal about {{ .Site.Title }} that you'd like to discuss?"
 [community_develop]
 other = "Develop and Contribute"
 [community_contribute]
-other = "If you want to get more involved by contributing to {{ .Site.Title }}, join us here:"
+other = "If you want to contribute code and data to {{ .Site.Title }}, do so here:"
 [community_how_to]
 other = "You can find out how to contribute in our"
 [community_guideline]

@@ -51,13 +51,13 @@ The planned sequence for bringing current development release code libraries to 
 
 - the seven [module libraries](docs/getting-started/software/libraries/types/module/) that are sufficiently developed to have been used in [real world scientific studies](/docs/examples/), in the following order: [youthvars](https://ready4-dev.github.io/youthvars/), [scorz](https://ready4-dev.github.io/scorz/), [specific](https://ready4-dev.github.io/specific/), [TTU](https://ready4-dev.github.io/TTU/), [youthu](https://ready4-dev.github.io/youthu/), [mychoice](https://ready4-dev.github.io/mychoice/) and [heterodox](https://ready4-dev.github.io/heterodox/), 
 
-- the very early stage [bimp](https://ready4-dev.github.io/bimp/) library from the [modelling programs pipeline](/docs/model/using-modules/places/pipeline-programs/), 
+- the very early stage [bimp](https://ready4-dev.github.io/bimp/) library from the [modelling programs pipeline](/docs/model/pipeline/pipeline-programs/), 
 
 - the three computational model authoring tools framework libraries, starting with [ready4fun](https://ready4-dev.github.io/ready4fun/), then [ready4class](https://ready4-dev.github.io/ready4class/) and finally [ready4pack](https://ready4-dev.github.io/ready4pack/).
 
 The planned sequence for bringing unreleased code first to development releases and then to production releases is:
 
-- all four in development module libraries from the [modelling places pipeline](/docs/model/using-modules/places/pipeline-places/);
-- both in development module libraries from the [modelling people pipeline](/docs/model/using-modules/people/pipeline-people/) (the synthetic household creation library and that agent based modelling library); and
-- all three in development module libraries from the [modelling platforms pipeline](docs/model/using-modules/platforms/pipeline-platforms/) (the primary mental health service discrete event simulation, followed by the early psychosis cohort model, followed by the service system eligibility and referral policy optimisation model).
+- all four in development module libraries from the [modelling places pipeline](/docs/model/pipeline/pipeline-places/);
+- both in development module libraries from the [modelling people pipeline](/docs/model/pipeline/pipeline-people/) (the synthetic household creation library and that agent based modelling library); and
+- all three in development module libraries from the [modelling platforms pipeline](/docs/model/pipeline/pipeline-platforms/) (the primary mental health service discrete event simulation, followed by the early psychosis cohort model, followed by the service system eligibility and referral policy optimisation model).
 

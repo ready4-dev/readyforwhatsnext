@@ -10,7 +10,7 @@ tags:
 - Model - modules
 - Model - modules (platforms)
 description: >
-  Modules that model the processes, eligibility requirements, staffing and configurations of youth service platforms are collectively referred to as the "First Bounce" model.
+  Modules that model the processes, eligibility requirements, staffing and configurations of youth service platforms are collectively referred to as the "First Bounce" model. No platforms modules are yet available - see details on [unreleased work in progress](/docs/model/pipeline/pipeline-platforms/).
 ---
 
 

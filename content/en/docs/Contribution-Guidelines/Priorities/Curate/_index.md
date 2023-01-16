@@ -32,7 +32,7 @@ The main tasks for the curation of [ready4 software](/docs/getting-started/softw
 
 - make [archived releases](/docs/getting-started/software/status/archived-releases/) of development milestones in the [ready4 Zenodo community](https://zenodo.org/communities/ready4); and
 
-- submit new [production releases] to the Comprehensive R Archive Network (CRAN).
+- submit new production releases to the Comprehensive R Archive Network (CRAN).
 
 3. *Reactively* review and address feedback and contributions from ready4 community (e.g. bugs, issues and feature-requests).
 
