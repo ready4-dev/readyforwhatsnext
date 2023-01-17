@@ -188,7 +188,7 @@ enable = false
   name = "ready4 Dataverse"
   url = "https://dataverse.harvard.edu/dataverse/ready4"
   icon = "fa fa-database"
-  desc = "Access and share ready4 model datasets"
+  desc = "Access and share ready4 model datasets."
 #[[params.links.developer]]
 #  name = "Developer mailing list"
 #  url = "https://example.org/mail"

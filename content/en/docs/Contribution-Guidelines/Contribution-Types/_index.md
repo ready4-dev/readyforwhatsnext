@@ -1,6 +1,6 @@
 ---
-title: "Ways to contribute to ready4"
-linkTitle: "Contribution types"
+title: "Contribution types"
+linkTitle: "Types"
 date: 2017-01-05
 weight: 3
 tags:

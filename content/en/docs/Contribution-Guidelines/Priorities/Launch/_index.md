@@ -26,7 +26,7 @@ The main tasks to be completed to bring all of our existing [code libraries](/do
 
 1. *(For unreleased software)* Address all issues preventing public release of code repositories (e.g. fixing errors preventing core functions working, removing all traces of potentially confidential artefacts from all versions/branches of repository, etc.).
 
-2. *(For code libraries are implemented using only the [functional programming](/docs/framework/implementation/paradigm/functional/) paradigm)* Create and test new [modules](/docs/getting-started/concepts/module/).
+2. *(For code libraries are implemented using only the [functional programming](/docs/framework/implementation/paradigm/functional/) paradigm)* [Author](/docs/model/authoring-modules/) and test new [modules](/docs/getting-started/concepts/module/).
 
 3. Write / update unit tests (tests of individual functions / modules for multiple potential uses / inputs that will be automatically run every time a new version of a library is pushed to the main branch of its development release repository).
 
@@ -36,7 +36,7 @@ The main tasks to be completed to bring all of our existing [code libraries](/do
 
 - updating the [taxonomies datasets used in the documentation writing algorithm](/docs/model/authoring-modules/authoring-algorithms/); and/or 
 
-- updating the algorithms itself (within the [ready4fun](https://ready4-dev.github.io/ready4fun/) and [ready4class](https://ready4-dev.github.io/ready4class/) packages).
+- updating the documentation authoring algorithms (within the [ready4fun](https://ready4-dev.github.io/ready4fun/) and [ready4class](https://ready4-dev.github.io/ready4class/) packages).
 
 5. Adding human authored documentation for the modules contained in each library.
 
@@ -47,17 +47,20 @@ Our production releases will be submitted to the Comprehensive R Archive Network
 
 The planned sequence for bringing current development release code libraries to production releases is: 
 
-- three [framework libraries](/docs/getting-started/software/libraries/types/framework/) - the [ready4](https://ready4-dev.github.io/ready4/) foundation followed by the [ready4show](https://ready4-dev.github.io/ready4show/) and [ready4use](https://ready4-dev.github.io/ready4use/) authoring tools;
+1. Three of the six [framework libraries](/docs/getting-started/software/libraries/types/framework/) - the [ready4](https://ready4-dev.github.io/ready4/) foundation followed by the [ready4show](https://ready4-dev.github.io/ready4show/) and [ready4use](https://ready4-dev.github.io/ready4use/) authoring tools.
 
-- the seven [module libraries](docs/getting-started/software/libraries/types/module/) that are sufficiently developed to have been used in [real world scientific studies](/docs/examples/), in the following order: [youthvars](https://ready4-dev.github.io/youthvars/), [scorz](https://ready4-dev.github.io/scorz/), [specific](https://ready4-dev.github.io/specific/), [TTU](https://ready4-dev.github.io/TTU/), [youthu](https://ready4-dev.github.io/youthu/), [mychoice](https://ready4-dev.github.io/mychoice/) and [heterodox](https://ready4-dev.github.io/heterodox/), 
+2. The seven [module libraries](docs/getting-started/software/libraries/types/module/) that are sufficiently developed to have been used in [real world scientific studies](/docs/examples/), in the following order: [youthvars](https://ready4-dev.github.io/youthvars/), [scorz](https://ready4-dev.github.io/scorz/), [specific](https://ready4-dev.github.io/specific/), [TTU](https://ready4-dev.github.io/TTU/), [youthu](https://ready4-dev.github.io/youthu/), [mychoice](https://ready4-dev.github.io/mychoice/) and [heterodox](https://ready4-dev.github.io/heterodox/). 
 
-- the very early stage [bimp](https://ready4-dev.github.io/bimp/) library from the [modelling programs pipeline](/docs/model/pipeline/pipeline-programs/), 
+3. The very early stage [bimp](https://ready4-dev.github.io/bimp/) library from the [modelling programs pipeline](/docs/model/pipeline/pipeline-programs/), 
 
-- the three computational model authoring tools framework libraries, starting with [ready4fun](https://ready4-dev.github.io/ready4fun/), then [ready4class](https://ready4-dev.github.io/ready4class/) and finally [ready4pack](https://ready4-dev.github.io/ready4pack/).
+4. The three remaining computational model authoring tools framework libraries, starting with [ready4fun](https://ready4-dev.github.io/ready4fun/), then [ready4class](https://ready4-dev.github.io/ready4class/) and finally [ready4pack](https://ready4-dev.github.io/ready4pack/).
 
 The planned sequence for bringing unreleased code first to development releases and then to production releases is:
 
-- all four in development module libraries from the [modelling places pipeline](/docs/model/pipeline/pipeline-places/);
-- both in development module libraries from the [modelling people pipeline](/docs/model/pipeline/pipeline-people/) (the synthetic household creation library and that agent based modelling library); and
-- all three in development module libraries from the [modelling platforms pipeline](/docs/model/pipeline/pipeline-platforms/) (the primary mental health service discrete event simulation, followed by the early psychosis cohort model, followed by the service system eligibility and referral policy optimisation model).
+1. Four development module libraries from the [modelling places pipeline](/docs/model/pipeline/pipeline-places/).
 
+2. Two module libraries from the [modelling people pipeline](/docs/model/pipeline/pipeline-people/) (the synthetic household creation library and that agent based modelling library).
+
+3. Three libraries from the [modelling platforms pipeline](/docs/model/pipeline/pipeline-platforms/) (the primary mental health service discrete event simulation, followed by the early psychosis cohort model, followed by the service system eligibility and referral policy optimisation model).
+
+How quickly we can launch production releases of all our code depends on how much and [what type of help](/docs/contribution-guidelines/contribution-types/) we get. Working within our current resources we expect to get all current projects to production releases within the 2023-2025 window. With help this release schedule can be sped up.

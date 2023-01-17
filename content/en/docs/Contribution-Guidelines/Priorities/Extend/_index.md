@@ -1,8 +1,8 @@
 ---
-title: "Priority 5: Extend the scope of the ready4 model"
+title: "Priority 4: Extend the scope of the ready4 model"
 linkTitle: "Extend"
 date: 2017-01-05
-weight: 305
+weight: 304
 tags:
 - Project
 - Project - contributions

@@ -1,5 +1,5 @@
 ---
-title: "Priority 3: Apply production software"
+title: "Priority 3: Apply ready4 to undertake novel analyses"
 linkTitle: "Apply"
 date: 2017-01-05
 weight: 303
@@ -10,7 +10,7 @@ tags:
 categories:
 - Documentation
 description: >
-  We want all maintained [production releases](/docs/getting-started/software/status/production-releases/) of our [software](/docs/getting-started/software/) to be used to implement replications and generalisations of the original studies for which that software was developed.
+  We want all maintained [production releases](/docs/getting-started/software/status/production-releases/) of ready4 [module libraries](/docs/getting-started/software/libraries/types/module/) to be used to implement [replications and generalisations](/docs/getting-started/concepts/reproducible-replicable-generalisable/) of the original studies for which that software was developed.
 ---
 
 ## Why?

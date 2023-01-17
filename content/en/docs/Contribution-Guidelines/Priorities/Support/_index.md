@@ -1,8 +1,8 @@
 ---
-title: "Priority 4: Support the development of a ready4 community"
-linkTitle: "Support"
+title: "Priority 5: Grow a ready4 support community"
+linkTitle: "Grow"
 date: 2017-01-05
-weight: 304
+weight: 305
 tags:
 - Project
 - Project - contributions

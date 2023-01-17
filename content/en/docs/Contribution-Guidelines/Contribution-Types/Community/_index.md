@@ -1,6 +1,6 @@
 ---
-title: "Improve support"
-linkTitle: "Community"
+title: "Help support the ready4 community"
+linkTitle: "Help"
 date: 2017-01-05
 weight: 111
 tags:

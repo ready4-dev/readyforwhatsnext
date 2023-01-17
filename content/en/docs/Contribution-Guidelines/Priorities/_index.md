@@ -1,8 +1,8 @@
 ---
-title: "Project development priorities"
+title: "Our priorities"
 linkTitle: "Priorities"
 date: 2017-01-05
-weight: 3
+weight: 2
 tags:
 - Project
 - Project - contributions
