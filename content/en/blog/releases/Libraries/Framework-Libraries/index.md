@@ -1,8 +1,8 @@
 ---
-title: "ready4 framework software releases"
-linkTitle: "Framework software"
-date: "2022-12-24"
-description: "Releases of software to help standardise implementation of modelling projects that use the ready4 framework."
+title: "Framework library releases"
+linkTitle: "Framework libraries"
+date: "2023-01-18"
+description: "Releases of foundation and authoring tools libraries to implement the ready4 framework."
 weight: 1
 categories: 
 - Releases
@@ -13,11 +13,11 @@ tags:
 - Software
 - Software - libraries
 output: hugodown::md_document
-rmd_hash: c0087eacf820171f
+rmd_hash: 7a8f0efb23baf01c
 
 ---
 
-A key aspect of the ready4 framework is support for standardised and partially automated workflows for computational model development. The ready4 modelling toolkit is a set of tools to support implementation of these workflows. Currently available (as at 24-Dec-2022) releases of the R packages that collectively comprise the ready4 modelling toolkit are described below.
+Currently available (as at 18-Jan-2023) releases of [framework libraries](/docs/getting-started/software/libraries/types/framework/) are described below.
 
 <html>
 

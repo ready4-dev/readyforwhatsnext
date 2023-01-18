@@ -1,0 +1,25 @@
+---
+title: "Framework taxonomies dataset releases"
+linkTitle: "Framework data"
+date: "`r Sys.Date()`"
+description: "Releases of the dataset of taxonomies used to help standardise code authoring and documentation."
+weight: 2
+categories: 
+- Releases
+tags: 
+- Data
+- Data - datasets
+- Framework
+- Framework - conventions
+- Framework - conventions (taxonomies)
+output: hugodown::md_document
+---
+
+Releases of the [datasets](/docs/datasets/) of the taxonomies that support a [consistent code house-style and automation of documentation autoring](/docs/model/authoring-modules/authoring-algorithms/) are described below.
+
+````{=html}
+```{r, echo=FALSE, message=F, results='asis'}
+xfun::file_string('index_Body.html')
+```
+````
+

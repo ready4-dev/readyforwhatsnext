@@ -1,0 +1,23 @@
+---
+title: "Synthetic (fake) datasets releases"
+linkTitle: "Fake datasets"
+date: "`r Sys.Date()`"
+description: "Releases of synthetic (fake) datasets used for teaching and demonstration."
+weight: 700
+categories: 
+- Releases
+tags: 
+- Data
+- Data - datasets
+- Data - datasets (fake)
+output: hugodown::md_document
+---
+
+Releases of the [datasets](/docs/datasets/) that are intended inputs or outputs of hypothetical applications of [modules](/docs/getting-started/concepts/module/) are reproduced below.
+
+````{=html}
+```{r, echo=FALSE, message=F, results='asis'}
+xfun::file_string('index_Body.html')
+```
+````
+

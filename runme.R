@@ -73,10 +73,26 @@ c("Clinical-Primary") %>% # Do not evaluate write fns, add scroll text and then 
 ###
 ### BLOG SECTION
 # Render release summaries
-c("Framework-Software",
-  "Framework-Taxonomies", 
-  "Module-Libraries") %>%
-  write_to_render_post("~/Documents/WIP/ready4/Code/Brochure/HTML/ready4web/content/en/blog/releases",
+c("Posters-Datasets",
+  "Instructional-Datasets",
+  "Framework-Taxonomies"
+  ) %>%
+  write_to_render_post("~/Documents/WIP/ready4/Code/Brochure/HTML/ready4web/content/en/blog/releases/datasets",
+                       consent_1L_chr = "Y")
+c("People-Datasets",
+  "Places-Datasets"
+  ) %>%
+  write_to_render_post("~/Documents/WIP/ready4/Code/Brochure/HTML/ready4web/content/en/blog/releases/datasets/model-data",
+                       consent_1L_chr = "Y")
+c("Framework-Libraries") %>%
+  write_to_render_post("~/Documents/WIP/ready4/Code/Brochure/HTML/ready4web/content/en/blog/releases/libraries",
+                       consent_1L_chr = "Y")
+c("People-Module-Libraries") %>%
+  write_to_render_post("~/Documents/WIP/ready4/Code/Brochure/HTML/ready4web/content/en/blog/releases/libraries/module-libraries",
+                       consent_1L_chr = "Y")
+c("Programs",
+  "Subroutines") %>%
+  write_to_render_post("~/Documents/WIP/ready4/Code/Brochure/HTML/ready4web/content/en/blog/releases/executables",
                        consent_1L_chr = "Y")
 #
 # write_to_copy_rmds(dir_path_1L_chr = "~/Documents/WIP/ready4/Code/Brochure/HTML/ready4web/content/en/docs/Model/Using-Modules/People",

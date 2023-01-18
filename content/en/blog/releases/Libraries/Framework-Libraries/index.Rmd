@@ -1,0 +1,25 @@
+---
+title: "Framework library releases"
+linkTitle: "Framework libraries"
+date: "`r Sys.Date()`"
+description: "Releases of foundation and authoring tools libraries to implement the ready4 framework."
+weight: 1
+categories: 
+- Releases
+tags: 
+- Framework
+- Framework - authoring tools
+- Framework - foundation
+- Software
+- Software - libraries
+output: hugodown::md_document
+---
+
+Currently available (as at  `r format(Sys.Date(),"%d-%b-%Y")`) releases of [framework libraries](/docs/getting-started/software/libraries/types/framework/) are described below.
+
+````{=html}
+```{r, echo=FALSE, message=F,results='asis'}
+xfun::file_string('index_Body.html')
+```
+````
+

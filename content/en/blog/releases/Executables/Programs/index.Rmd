@@ -1,0 +1,25 @@
+---
+title: "Programs releases"
+linkTitle: "Programs"
+date: "`r Sys.Date()`"
+description: "Releases of programs for implementing modelling analyses."
+weight: 1
+categories: 
+- Releases
+tags: 
+- Analyses
+- Analyses - replication code
+- Software
+- Software - executable 
+- Software - executable (programs)
+output: hugodown::md_document
+---
+
+Currently available (as at  `r format(Sys.Date(),"%d-%b-%Y")`) releases of [analysis programs](/docs/analyses/replication-code/) are described below.
+
+````{=html}
+```{r, echo=FALSE, message=F,results='asis'}
+xfun::file_string('index_Body.html')
+```
+````
+

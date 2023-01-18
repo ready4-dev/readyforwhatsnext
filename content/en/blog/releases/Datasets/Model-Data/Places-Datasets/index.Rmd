@@ -1,0 +1,23 @@
+---
+title: "Datasets for modelling places releases"
+linkTitle: "Places datasets"
+date: "`r Sys.Date()`"
+description: "Releases of datasets used in conjunction with modules from the Springtides model of places."
+weight: 22
+categories: 
+- Releases
+tags: 
+- Data
+- Data - datasets
+- Data - datasets (places)
+output: hugodown::md_document
+---
+
+Releases of the [datasets](/docs/datasets/) that can be used with [modules](/docs/getting-started/concepts/module/) for [modelling places](/docs/model/using-modules/places/) are reproduced below.
+
+````{=html}
+```{r, echo=FALSE, message=F, results='asis'}
+xfun::file_string('index_Body.html')
+```
+````
+

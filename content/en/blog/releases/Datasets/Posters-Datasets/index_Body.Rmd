@@ -1,0 +1,15 @@
+---
+output: html_document
+---
+
+```{r, include=FALSE}
+source("../../../../../../R/Functions.R", local = knitr::knit_global())
+```
+
+```{r echo=F, message=FALSE, warning=FALSE, results='asis'}
+make_ds_releases_tbl("https://doi.org/10.7910/DVN/QBZFQV",
+                     bootstrap_options = "striped")
+```
+
+
+

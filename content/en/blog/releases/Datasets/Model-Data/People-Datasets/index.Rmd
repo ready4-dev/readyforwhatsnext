@@ -1,0 +1,23 @@
+---
+title: "Datasets for modelling people releases"
+linkTitle: "People datasets"
+date: "`r Sys.Date()`"
+description: "Releases of datasets used in conjunction with modules from the Spring To Life model of people."
+weight: 21
+categories: 
+- Releases
+tags: 
+- Data
+- Data - datasets
+- Data - datasets (people)
+output: hugodown::md_document
+---
+
+Releases of the [datasets](/docs/datasets/) that can be used with [modules](/docs/getting-started/concepts/module/) for [modelling people](/docs/model/using-modules/people/) are reproduced below.
+
+````{=html}
+```{r, echo=FALSE, message=F, results='asis'}
+xfun::file_string('index_Body.html')
+```
+````
+

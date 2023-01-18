@@ -3,9 +3,9 @@ output: html_document
 ---
 
 ```{r, include=FALSE}
-# source("../../../../../R/Functions.R", local = knitr::knit_global())
+# source("../../../../../../R/Functions.R", local = knitr::knit_global())
+# or sys.source("../../../../../../R/Functions.R"", envir = knitr::knit_global())
 library(ready4)
-# or sys.source("your-script.R", envir = knitr::knit_global())
 ```
 
 ```{r echo=F, message=FALSE, warning=FALSE}

@@ -1,8 +1,8 @@
 ---
-title: "ready4 framework taxonomies"
-linkTitle: "Framework taxonomies"
-date: "2022-12-24"
-description: "Releases of taxonomies used to help standardise computational models developed with the ready4 framework."
+title: "Framework taxonomies dataset releases"
+linkTitle: "Framework data"
+date: "2023-01-18"
+description: "Releases of the dataset of taxonomies used to help standardise code authoring and documentation."
 weight: 2
 categories: 
 - Releases
@@ -13,11 +13,11 @@ tags:
 - Framework - conventions
 - Framework - conventions (taxonomies)
 output: hugodown::md_document
-rmd_hash: 0df86460f4006b94
+rmd_hash: af781db2d85ff8c8
 
 ---
 
-Developers using the ready4 framework can either use the same taxonomies as we do in our computational models or else develop their own. We periodically release updated versions of our taxonomies. Currently available releases are described below.
+Releases of the [datasets](/docs/datasets/) of the taxonomies that support a [consistent code house-style and automation of documentation autoring](/docs/model/authoring-modules/authoring-algorithms/) are described below.
 
 <html>
 
@@ -44,7 +44,7 @@ Developers using the ready4 framework can either use the same taxonomies as we d
 Date
 </th>
 <th style="text-align:left;">
-DOI
+Dataset
 </th>
 <th style="text-align:left;">
 Version
@@ -60,7 +60,8 @@ Number of files
 23-Dec-2022
 </td>
 <td style="text-align:left;">
-<a href="https://doi.org/10.7910/DVN/RIQTKK" class="uri">https://doi.org/10.7910/DVN/RIQTKK</a>
+<a href="https://doi.org/10.7910/DVN/RIQTKK" style="     ">ready4
+Framework Abbreviations and Definitions</a>
 </td>
 <td style="text-align:left;">
 3.0
@@ -74,7 +75,8 @@ Number of files
 25-May-2022
 </td>
 <td style="text-align:left;">
-<a href="https://doi.org/10.7910/DVN/RIQTKK" class="uri">https://doi.org/10.7910/DVN/RIQTKK</a>
+<a href="https://doi.org/10.7910/DVN/RIQTKK" style="     ">ready4
+Framework Abbreviations and Definitions</a>
 </td>
 <td style="text-align:left;">
 2.1
@@ -88,7 +90,8 @@ Number of files
 14-Jan-2022
 </td>
 <td style="text-align:left;">
-<a href="https://doi.org/10.7910/DVN/RIQTKK" class="uri">https://doi.org/10.7910/DVN/RIQTKK</a>
+<a href="https://doi.org/10.7910/DVN/RIQTKK" style="     ">ready4
+Framework Abbreviations and Definitions</a>
 </td>
 <td style="text-align:left;">
 2.0
@@ -102,7 +105,8 @@ Number of files
 14-Jan-2022
 </td>
 <td style="text-align:left;">
-<a href="https://doi.org/10.7910/DVN/RIQTKK" class="uri">https://doi.org/10.7910/DVN/RIQTKK</a>
+<a href="https://doi.org/10.7910/DVN/RIQTKK" style="     ">ready4
+Framework Abbreviations and Definitions</a>
 </td>
 <td style="text-align:left;">
 1.0

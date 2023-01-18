@@ -1,8 +1,8 @@
 ---
-title: "Module library releases"
-linkTitle: "Module libraries"
-date: "2022-12-24"
-description: "Releases of model module libraries."
+title: "People module library releases"
+linkTitle: "People"
+date: "2023-01-18"
+description: "Releases of module libraries for modelling people (collectively, the Spring To Life model)."
 weight: 3
 categories: 
 - Releases
@@ -12,11 +12,11 @@ tags:
 - Software
 - Software - libraries
 output: hugodown::md_document
-rmd_hash: f59c1f6007ff08d3
+rmd_hash: 1e4ad3f79fc3da73
 
 ---
 
-Currently available (as at 24-Dec-2022) releases of the ready4 module libraries are reproduced below.
+Currently available (as at 18-Jan-2023) releases of [module libraries](/docs/getting-started/software/libraries/types/module/) for [modelling people](/docs/model/using-modules/people/) are reproduced below.
 
 <html>
 
