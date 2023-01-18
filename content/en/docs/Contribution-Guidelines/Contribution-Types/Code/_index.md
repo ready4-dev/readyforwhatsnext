@@ -12,17 +12,22 @@ description: >
   Help improve the reliability, functionality and ease of use of ready4 software.
 ---
 
-## What do I need to know to help?
+## What? 
+Test, improve or extend [our software](/docs/getting-started/software/).
 
-If you are looking to improve [our existing software](/docs/getting-started/software/) with a code contribution, you will need familiarity with R, R Markdown () and git. You will also need a GitHub account.
+## Who?
+To make a code contribution, you need to be a [coder](/docs/getting-started/users/coder/) familiar with R, R Markdown () and git. You will also need a GitHub account. For many types of contribution, you will also need to use our [framework](/docs/framework/)'s module [authoring tools](/docs/model/authoring-modules/). 
 
-## How do I make a code contribution?
+We have yet to adequately document and refine these tools to make them easier for third parties to use, so if you are interested in making anything other than a relatively minor code edit, we recommend that you first [contact our project lead](https://mph-economist.netlify.app/#contact) to discuss your idea. 
 
-Never made an open source contribution before? Wondering how contributions work in the in our project? Here's a quick rundown!
+As a contributor to ready4, you will also be expected to adhere to the [![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-2.1-4baaaa.svg)](../../code-of-conduct/)
 
-1. Find an issue that you are interested in addressing or a feature that you would like to add.
+## How ?
+The process for making a code contribution, broadly conforms to the steps we itemise below, that we have minimally adapted from [this template](https://opensource.com/life/16/3/contributor-guidelines-template-and-tips). If you need further help to make a contribution, you can contact the ready4 project lead directly.
 
-2. Fork the repository associated with the issue to your local GitHub organization. This means that you will have a copy of the repository under your-GitHub-username/repository-name.
+1. Find an issue that you are interested in addressing or a feature that you would like to add. Ideally consider how your planned contribution matches our [current priorities](/docs/contribution-guidelines/priorities/).
+
+2. Fork the repository associated with the issue from [our GitHub organization](https://github.com/ready4-dev) to your local GitHub organization. This means that you will have a copy of the repository under your-GitHub-username/repository-name.
 
 3. Clone the repository to your local machine using:
 
@@ -79,12 +84,5 @@ Never made an open source contribution before? Wondering how contributions work 
 
 14. Celebrate your success after your pull request is merged!
 
-## Where can I go for help?
 
-If you need further help to make a contribution, you can [contact the ready4 project maintainer directly](https://mph-economist.netlify.app/#contact).
 
-## What does the Code of Conduct mean for me?
-As a contributor to ready4, you will be expected to adhere to the [![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-2.1-4baaaa.svg)](../../code-of-conduct/)
-
-## Attribution
-This guide to contributing code was adapted from the template available at https://opensource.com/life/16/3/contributor-guidelines-template-and-tips

@@ -15,7 +15,7 @@ description: >
 
 
 ## Why?
-A significant limitation of many health economic models is that they are not updated and b[ecome progressively less relevant to current decision-making](/docs/getting-started/motivation/). The importance of maintaining a [computational model](/docs/getting-started/concepts/model/) increases with its potential utility - as it becomes more widely used, its limitations (errors, bugs, restrictive functionality and confusing / inadequate documentation) are more likely to become exposed and to require remediation. Addressing such issues needs to implemented skillfully and considerately to avoid unintended consequences on existing model users (e.g. to ensure software edits to fix one problem do not prevent previously written [replication code](/docs/analyses/replication-code/) or downstream dependencies from executing correctly). [Open source](/docs/getting-started/software/terms/licenses/) projects also need to make changes in response to decisions by third parties - such as edits to upstream dependencies and changes in the policies of hosting [repositories](/docs/getting-started/software/repositories/) and to update citation / acknowledgement information to appropriately reflect new contributors.
+A significant limitation of many health economic models is that they are not updated and [become progressively less relevant to current decision-making](/docs/getting-started/motivation/). The importance of maintaining a [computational model](/docs/getting-started/concepts/model/) increases with its potential utility - as it becomes more widely used, its limitations (errors, bugs, restrictive functionality and confusing / inadequate documentation) are more likely to become exposed and to require remediation. Addressing such issues needs to implemented skillfully and considerately to avoid unintended consequences on existing model users (e.g. to ensure software edits to fix one problem do not prevent previously written [replication code](/docs/analyses/replication-code/) or downstream dependencies from executing correctly). [Open source](/docs/getting-started/software/terms/licenses/) projects also need to make changes in response to decisions by third parties - such as edits to upstream dependencies and changes in the policies of hosting [repositories](/docs/getting-started/software/repositories/) and to update citation / acknowledgement information to appropriately reflect new contributors.
 
 
 ## What?
@@ -24,7 +24,7 @@ The most important types of help we need with this priority area are [code contr
 ## How?
 The main tasks for the curation of [ready4 software](/docs/getting-started/software/) are to:
 
-1. Appropriately configure the settings of the [ready4 GitHub organisation](https://github.com/ready4-dev) and its constituent repositories to facilitate clear and efficient maintenance workflows.
+1. Appropriately configure and update the settings of the [ready4 GitHub organisation](https://github.com/ready4-dev) and its constituent repositories to facilitate easy to follow and efficient maintenance workflows.
 
 2. *Proactively*:
 

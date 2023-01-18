@@ -15,7 +15,7 @@ description: >
 
 
 ## Why?
-All our [software](/docs/getting-started/software/), regardless of [status](/docs/getting-started/software/status/) is supplied [without any warranty](/docs/getting-started/software/terms/disclaimer/). However, our views about whether an item of software is potentially appropriate for others to use in undertaking real world [analyses](/docs/analyses/) is reflected in its release status. If it is not a production release, we probably believe that it needs more development and testing and better documentation before it can be used for any purpose other than the specific studies in which we have already applied it. Partly for this reason, it is unlikely that any item of our software will be widely adopted until it is available as a production release. We also cannot meaningfully track uptake of our software until it becomes available in a dedicated production release [repository](/docs/getting-started/software/repositories/).
+All our [software](/docs/getting-started/software/), regardless of [status](/docs/getting-started/software/status/) is supplied [without any warranty](/docs/getting-started/software/terms/disclaimer/). However, our views about whether an item of software is potentially appropriate for others to use in undertaking real world [analyses](/docs/analyses/) can be inferred from its release status. If it is not a production release, we probably believe that it needs more development and testing and better documentation before it can be used for any purpose other than the specific studies in which we have already applied it. Partly for this reason, it is unlikely that any item of our software will be widely adopted until it is available as a production release. We also cannot meaningfully track uptake of our software until it becomes available in a dedicated production release [repository](/docs/getting-started/software/repositories/).
 
 
 ## What?
@@ -30,7 +30,7 @@ The main tasks to be completed to bring all of our existing [code libraries](/do
 
 3. Write / update unit tests (tests of individual functions / modules for multiple potential uses / inputs that will be automatically run every time a new version of a library is pushed to the main branch of its development release repository).
 
-4. Enhance algorithm generated documentation. This will involve some or all of: 
+4. Enhance the documentation that is automatically authored by algorithms from our [model authoring tools](/docs/getting-started/software/libraries/installation/authoring-tools/code-development/). This will involve some or all of: 
 
 - minor modifications of function names / arguments / code;
 
@@ -49,7 +49,7 @@ The planned sequence for bringing current development release code libraries to 
 
 1. Three of the six [framework libraries](/docs/getting-started/software/libraries/types/framework/) - the [ready4](https://ready4-dev.github.io/ready4/) foundation followed by the [ready4show](https://ready4-dev.github.io/ready4show/) and [ready4use](https://ready4-dev.github.io/ready4use/) authoring tools.
 
-2. The seven [module libraries](docs/getting-started/software/libraries/types/module/) that are sufficiently developed to have been used in [real world scientific studies](/docs/examples/), in the following order: [youthvars](https://ready4-dev.github.io/youthvars/), [scorz](https://ready4-dev.github.io/scorz/), [specific](https://ready4-dev.github.io/specific/), [TTU](https://ready4-dev.github.io/TTU/), [youthu](https://ready4-dev.github.io/youthu/), [mychoice](https://ready4-dev.github.io/mychoice/) and [heterodox](https://ready4-dev.github.io/heterodox/). 
+2. The seven [module libraries](/docs/getting-started/software/libraries/types/module/) that are sufficiently developed to have been used in [real world scientific studies](/docs/examples/), in the following order: [youthvars](https://ready4-dev.github.io/youthvars/), [scorz](https://ready4-dev.github.io/scorz/), [specific](https://ready4-dev.github.io/specific/), [TTU](https://ready4-dev.github.io/TTU/), [youthu](https://ready4-dev.github.io/youthu/), [mychoice](https://ready4-dev.github.io/mychoice/) and [heterodox](https://ready4-dev.github.io/heterodox/). 
 
 3. The very early stage [bimp](https://ready4-dev.github.io/bimp/) library from the [modelling programs pipeline](/docs/model/pipeline/pipeline-programs/), 
 

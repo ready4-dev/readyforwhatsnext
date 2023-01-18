@@ -1,5 +1,5 @@
 ---
-title: "Help support the ready4 community"
+title: "Support the ready4 community"
 linkTitle: "Help"
 date: 2017-01-05
 weight: 111
@@ -14,5 +14,5 @@ description: >
 ---
 
 
- If you don't feel ready to make a code contribution yet, no problem! You can also check out the [documentation issues](https://github.com/ready4-dev/ready4web/labels/documentation).
+If you don't feel ready to make a code contribution yet, no problem! You can also check out the [documentation issues](https://github.com/ready4-dev/ready4web/labels/documentation).
 
