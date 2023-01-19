@@ -1,8 +1,8 @@
 ---
-title: "Priority 5: Grow a ready4 support community"
+title: "Priority 4: Grow a ready4 community"
 linkTitle: "Grow"
 date: 2017-01-05
-weight: 305
+weight: 304
 tags:
 - Project
 - Project - contributions
@@ -10,7 +10,27 @@ tags:
 categories:
 - Documentation
 description: >
-  We want a community of ready4 developers, users and supporters to sustain the growth, continuous improvement and impact of ready4.
+  We want to develop a [community](/community/) of ready4 [users](/docs/getting-started/users/), contributors and [stakeholders](/docs/getting-started/stakeholders/) to sustain the development, maintenance, application, extension and impact of the project.
 ---
 
+## Why?
+An open source project is sustained by its community of users and supporters. ready4 is open source because we believe that transparent and collaborative approaches to model development are more likely to produce [accountable, flexible and up to date models](/docs/getting-started/motivation/). No one modelling team has the resources or breadth of expertise and diversity of values to address all of most important decision topics in youth mental health systems design and policy making. Opportunities for modellers to test, re-use, update and combine each other's work help make modelling projects more valid and tractable. Models have become increasingly complex and simply publishing model code and data may have limited impact on improving model transparency if these aretefacts are poorly understood. Clear documentation and frequent re-use in different contexts by multiple types of stakeholder make it more likely that errors and limitations can be exposed and remedied. Decentralising ownership of a model to an active community can help sustain the maintenance and extension of a model over the long term and mitigate risks and bottlenecks associated with dependency on a small number of team members.
+
+## What?
+Our aim is to enhance the resilience, quality and impact of ready4 by developing a community of users and contributors. The most important initial types of help we need with achieving this goal are [funding](/docs/contribution-guidelines/contribution-types/funding/), [community support](/docs/contribution-guidelines/contribution-types/community/) and [advice](/docs/contribution-guidelines/contribution-types/advisory/).
+
+## How?
+The process of developing the ready4 community involves the following tasks:
+
+1. Creating and recruiting to volunteer advisory structures to elicit guidance on strategic, technical and conceptual topics.
+
+2. Enhancing the ease of use for third parties of existing framework authoring tools.
+
+3. Developing improved documentation and collateral (e.g. video tutorials) for ready4 software and data.
+
+4. Configuring hosting repositories to implement clear collaborative development workflows.
+
+5. Promoting ready4 to potential users and contributors.
+
+6. Continually expanding, diversifying and updating the authorship and maintenance responsibilities of all ready4 software.
 

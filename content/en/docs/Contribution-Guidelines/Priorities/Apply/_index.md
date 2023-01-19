@@ -1,5 +1,5 @@
 ---
-title: "Priority 3: Apply ready4 to undertake novel analyses"
+title: "Priority 3: Apply ready4 to undertake replications and generalisations"
 linkTitle: "Apply"
 date: 2017-01-05
 weight: 303
@@ -10,15 +10,15 @@ tags:
 categories:
 - Documentation
 description: >
-  We want all maintained [production releases](/docs/getting-started/software/status/production-releases/) of ready4 [module libraries](/docs/getting-started/software/libraries/types/module/) to be used to implement [replications and generalisations](/docs/getting-started/concepts/reproducible-replicable-generalisable/) of the original studies for which that software was developed.
+  We want [maintained](/docs/contribution-guidelines/priorities/curate/) [production releases](/docs/getting-started/software/status/production-releases/) of ready4 [module libraries](/docs/getting-started/software/libraries/types/module/) to be used to implement [replications and generalisations](/docs/getting-started/concepts/reproducible-replicable-generalisable/) of the original studies for which that software was developed.
 ---
 
 ## Why?
-In this relatively early stage of ready4's development, the [authoring of new ready4 modules](/docs/model/authoring-modules/) can involve a significant investment of time and skills, an investment that is typically made in the context of implementing a [modelling project](/docs/getting-started/concepts/project/) for a scientific study. However, once authored these modules may significantly streamline the implementation of
+In this relatively early stage of ready4's development, the [authoring of new ready4 modules](/docs/model/authoring-modules/) can involve a significant investment of time and skills, an investment that is typically made in the context of implementing a [modelling project](/docs/getting-started/concepts/project/) for a scientific study. However, once authored, these modules may significantly streamline the implementation of
 modelling [analyses](/docs/analyses/) that replicate or generalise the studies for which they were developed. For [modellers](/docs/getting-started/users/modeller/) and other [researchers](/docs/getting-started/stakeholders/researchers/), using ready4 for this purpose may provide the highest reward to effort ratio of any contribution to the ready4 [community](/community/). Network effects also kick in - more replications and generalisations mean more [open access data](//docs/datasets/) and module customisations available to other [users](/docs/getting-started/users/), enhancing the practical utility of ready4.
 
 ## What?
-The most important initial types of help we need with this priority area are [funding](/docs/contribution-guidelines/contribution-types/funding/), [advice](/docs/contribution-guidelines/contribution-types/advisory/), [code contributions](/docs/contribution-guidelines/contribution-types/code/)  and [projects](/docs/contribution-guidelines/contribution-types/use/).
+We plan to demonstrate that studies implemented with ready4 are relatively straightforward and efficient to replicate and generalise. The most important initial types of help we need with achieving this goal are [funding](/docs/contribution-guidelines/contribution-types/funding/), [projects](/docs/contribution-guidelines/contribution-types/use/), [code contributions](/docs/contribution-guidelines/contribution-types/code/) and [advice](/docs/contribution-guidelines/contribution-types/advisory/).
 
 ## How?
 The main tasks for implementing study replications and generalisations are:

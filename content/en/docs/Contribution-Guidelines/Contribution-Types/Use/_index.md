@@ -18,7 +18,7 @@ A ready4 modelling project undertakes novel analysis of [youth mental health top
 Each ready4 modelling project has its own unique [funder(s)](/docs/getting-started/stakeholders/funders/), governance, objectives and team. The links between modelling projects are in the form of a common [framework](/docs/framework/) and membership of a collaborative [community](/community/).
 
 ## Who?
-Modelling projects will typically be led by a [researcher](/docs/getting-started/stakeholders/researchers/) (who may or may not be a [modeller](/docs/getting-started/users/modeller/)). The core project team will always include modeller(s) and, should authorship of new modules (or extensions to existing modules) be required, will also need to include [coder(s)](/docs/getting-started/users/coder/). Advisory structures to engage [young people](/docs/getting-started/stakeholders/young-people/) and [planners](/docs/getting-started/users/planner/) is also recommended.
+Modelling projects will typically be led by a [researcher](/docs/getting-started/stakeholders/researchers/) (who may or may not be a [modeller](/docs/getting-started/users/modeller/)). The core project team will always include modelling expertise and, should authorship of new modules (or extensions to existing modules) be required, will also need to include [coders](/docs/getting-started/users/coder/). Advisory structures to engage [young people](/docs/getting-started/stakeholders/young-people/) and [planners](/docs/getting-started/users/planner/) are also recommended.
 
 ## How?
 There are three main steps in implementing a ready4 modelling project.

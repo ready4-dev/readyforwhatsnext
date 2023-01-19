@@ -1,8 +1,8 @@
 ---
-title: "Priority 4: Extend the scope of the ready4 model"
+title: "Priority 5: Extend the scope of the ready4 model"
 linkTitle: "Extend"
 date: 2017-01-05
-weight: 304
+weight: 305
 tags:
 - Project
 - Project - contributions
@@ -15,14 +15,14 @@ description: >
 
 
 ## Why?
-Collectively, our initial three [priorities](/docs/contribution-guidelines/priorities/extend/) aim to develop the ready4 Minimum Viable Product (MVP) systems model - our [modelling framework](/docs/framework/) plus a relatively small number of [production release](/docs/getting-started/software/status/production-releases/) modules for modelling [people](/docs/model/using-modules/people/), [places](/docs/model/using-modules/places/), [platforms](/docs/model/using-modules/platforms/) and [programs](/docs/model/using-modules/programs/). We hope that the ready4 MVP systems model will be an [accountable, flexible and up to date](/docs/getting-started/motivation/) model that can be usefully be applied to some important topics in youth mental health. However, there will inevitably be a much greater number of topics to which that the ready4 lacks the scope to adequately address. The two main scope limitations of the ready4 MVP systems model are expected to be omissions and level of abstraction. Some relevant system features will be ommitted from representation by the ready4 MVP systems model - for example our [pipeline of platforms modules](/docs/model/pipeline/pipeline-platforms/) does not currently include any planned modules for modelling the operations of digital mental health services or schools. System features that are represented in the ready4 MVP systems model may only have one level of abstraction, which may be either too simple or too complex to be appropriately applied to some modelling goals. Our fourth priority is to therefore progressively extend the scope of ready4 and the range of decision topics to which it can validly be applied.
+We hope that once launched, the [ready4 MVP systems model](/docs/contribution-guidelines/priorities/launch/) will be [accountable, flexible and up to date](/docs/getting-started/motivation/) model that can [demonstrate its usefulness](/docs/contribution-guidelines/priorities/apply/) for addressing some important topics in youth mental health. However, there will inevitably be a much greater number of topics for which that the MVP model lacks the scope to adequately address. The two main scope limitations of the MVP model are expected to be omissions and level of abstraction. Some relevant system features will be ommitted from representation by the MVP model - for example our [pipeline of platforms modules](/docs/model/pipeline/pipeline-platforms/) does not currently include any planned modules for modelling the operations of digital mental health services or schools. System features that are represented in the MVP model may only have one level of abstraction, which may be either too simple or too complex to be appropriately applied to some modelling goals. 
 
 ## What?
-The most important initial types of help we need with this priority area are [funding](/docs/contribution-guidelines/contribution-types/funding/),
+We plan to progressively extend the scope of ready4 and the range of decision topics to which it can validly be applied. The most important initial types of help we need to achieve this goal are [funding](/docs/contribution-guidelines/contribution-types/funding/),
 [projects](/docs/contribution-guidelines/contribution-types/use/) and [advice](/docs/contribution-guidelines/contribution-types/advisory/).
 
 ## How?
-The two main strategies for extending ready4 are to translate existing models and develop new models. The process for developing new models is via the steps required [to undertake a modelling project](/docs/contribution-guidelines/contribution-types/use/).
+The two main strategies for extending ready4 are to translate existing models and develop new models. The process for developing new models is outlined elsewhere as the [steps required to undertake a modelling project](/docs/contribution-guidelines/contribution-types/use/).
 
 Translating existing models involves the following steps:
 
@@ -51,5 +51,5 @@ Translating existing models involves the following steps:
  8. *(If not already done)* Publish / link to datasets on the [ready4 Dataverse](https://dataverse.harvard.edu/dataverse/ready4) and share releases of libraries and programs in the [ready4 Zenodo community](https://zenodo.org/communities/ready4/).
 
 ## When?
-As our current focus in on developing the ready4 MVP systems model, we are not yet actively pursuing this priority. That will change if we are successful in securing more support from [funders](/docs/getting-started/stakeholders/funders/). In the mean time, if you are a [researcher](/docs/getting-started/stakeholders/researchers/) and/or [modeller](/docs/getting-started/users/modeller/) who is interested in leading a project to help extend ready4, you can [contact our project lead](https://mph-economist.netlify.app/#contact) for guidance and/or to discuss the potential for collaborations.
+As our current focus in on developing the MVP model, we are not yet actively pursuing this priority. That will change if we are successful in securing more support from [funders](/docs/getting-started/stakeholders/funders/). In the mean time, if you are a [researcher](/docs/getting-started/stakeholders/researchers/) and/or [modeller](/docs/getting-started/users/modeller/) who is interested in leading a project that can help extend ready4, you can [contact our project lead](https://mph-economist.netlify.app/#contact) for guidance and/or to discuss the potential for collaborations.
 
