@@ -65,4 +65,4 @@ The main tasks for curating decision aids include:
 6. Informing the ready4 [community](/community/) of the updated decision aid.
 
 ## When?
-Curation is an ongoing and current responsibility. Our curation obligations are expected to grow considerably as we [launch more production releases](/docs/contribution-guidelines/priorities/launch/), [extend the ready4 model](/docs/contribution-guidelines/priorities/extend/) and [grow the ready4 community](/docs/contribution-guidelines/priorities/support/).
+Maintenance is an ongoing and current responsibility. Maintenance obligations are expected to grow considerably as we [launch more production releases](/docs/contribution-guidelines/priorities/launch/), [extend the ready4 model](/docs/contribution-guidelines/priorities/extend/) and [grow the ready4 community](/docs/contribution-guidelines/priorities/support/).

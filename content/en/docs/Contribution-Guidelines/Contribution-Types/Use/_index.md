@@ -15,10 +15,16 @@ description: >
 
 ## What?
 A ready4 modelling project undertakes novel analysis of [youth mental health topics](/docs/examples/) by using, enhancing and/or authoring model [modules](/docs/getting-started/concepts/module/), [datasets](/docs/datasets/) and [executables](/docs/getting-started/software/executables/). 
-Each ready4 modelling project has its own unique [funder(s)](/docs/getting-started/stakeholders/funders/), governance, objectives and team. The links between modelling projects are in the form of a common [framework](/docs/framework/) and membership of a collaborative [community](/community/).
+Each ready4 modelling project has its own unique [funder(s)](/docs/getting-started/stakeholders/funders/), governance, objectives and team. The links between modelling projects are in the form of a common [framework](/docs/framework/) and membership of a collaborative [community](/community/). 
+
+Undertaking modelling projects will help us achieve our following priority goals:
+
+3\. [Applying ready4](/docs/contribution-guidelines/priorities/apply/).
+
+5\. [Extending ready4](/docs/contribution-guidelines/priorities/extend/).
 
 ## Who?
-Modelling projects will typically be led by a [researcher](/docs/getting-started/stakeholders/researchers/) (who may or may not be a [modeller](/docs/getting-started/users/modeller/)). The core project team will always include modelling expertise and, should authorship of new modules (or extensions to existing modules) be required, will also need to include [coders](/docs/getting-started/users/coder/). Advisory structures to engage [young people](/docs/getting-started/stakeholders/young-people/) and [planners](/docs/getting-started/users/planner/) are also recommended.
+Modelling projects should typically be led by a [researcher](/docs/getting-started/stakeholders/researchers/) (who may or may not be a [modeller](/docs/getting-started/users/modeller/)). The core project team will always include modelling expertise and, should authorship of new modules (or extensions to existing modules) be required, will also need to include [coders](/docs/getting-started/users/coder/). Advisory structures to engage [young people](/docs/getting-started/stakeholders/young-people/) and [planners](/docs/getting-started/users/planner/) are also recommended.
 
 ## How?
 There are three main steps in implementing a ready4 modelling project.

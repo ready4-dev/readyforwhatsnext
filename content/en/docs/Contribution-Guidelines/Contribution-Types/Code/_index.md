@@ -13,12 +13,19 @@ description: >
 ---
 
 ## What? 
-Test, improve or extend [our software](/docs/getting-started/software/).
+Test, improve or extend [our software](/docs/getting-started/software/). This is essential to us achieving our following priority goals:
+
+1. [Launching the ready4 MVP systems model](/docs/contribution-guidelines/priorities/launch/).
+
+2. [Maintaining ready4](/docs/contribution-guidelines/priorities/curate/).
+
+3. [Applying ready4](/docs/contribution-guidelines/priorities/apply/).
+
+4. [Growing a ready4 community](/docs/contribution-guidelines/priorities/support/).
+
 
 ## Who?
-To make a code contribution, you need to be a [coder](/docs/getting-started/users/coder/) familiar with R, R Markdown () and git. You will also need a GitHub account. For many types of contribution, you will also need to use our [framework](/docs/framework/)'s module [authoring tools](/docs/model/authoring-modules/). 
-
-We have yet to adequately document and refine these tools to make them easier for third parties to use, so if you are interested in making anything other than a relatively minor code edit, we recommend that you first [contact our project lead](https://mph-economist.netlify.app/#contact) to discuss your idea. 
+To make a code contribution, you need to be a [coder](/docs/getting-started/users/coder/) familiar with R, R Markdown and git. You will also need a GitHub account. For many types of contribution, you will also need to use our [framework](/docs/framework/)'s module [authoring tools](/docs/model/authoring-modules/). We have yet to adequately document and refine these tools to make them easier for third parties to use ([we plan to do this](/docs/contribution-guidelines/priorities/support/)), so if you are interested in making anything other than a relatively minor code edit, we recommend that you first [contact our project lead](https://mph-economist.netlify.app/#contact) to discuss your idea. 
 
 As a contributor to ready4, you will also be expected to adhere to the [![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-2.1-4baaaa.svg)](../../code-of-conduct/)
 

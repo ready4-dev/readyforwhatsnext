@@ -13,6 +13,11 @@ description: >
   Help develop high quality, clear and comprehensive documentation, instruction and responsive help.
 ---
 
+## What?
+Help other members of the ready4 community to apply ready4 by authoring documentation, developing training and posting answers in online help. This support is essential for us to advance the following project goals:
 
-If you don't feel ready to make a code contribution yet, no problem! You can also check out the [documentation issues](https://github.com/ready4-dev/ready4web/labels/documentation).
+2\. [Maintaining ready4](/docs/contribution-guidelines/priorities/curate/).
 
+4\. [Growing a ready4 community](/docs/contribution-guidelines/priorities/support/).
+
+5\. [Extending ready4](/docs/contribution-guidelines/priorities/extend/).

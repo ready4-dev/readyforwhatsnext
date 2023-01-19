@@ -1,6 +1,6 @@
 ---
-title: "Contribute"
-linkTitle: "Contribute"
+title: "Contributions"
+linkTitle: "Contributions"
 weight: 110
 tags:
 - Project
