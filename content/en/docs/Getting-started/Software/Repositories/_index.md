@@ -1,5 +1,5 @@
 ---
-title: "Repositories"
+title: "Code repositories"
 linkTitle: "Repositories"
 weight: 261
 tags:

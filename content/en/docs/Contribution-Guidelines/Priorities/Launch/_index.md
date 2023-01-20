@@ -59,10 +59,10 @@ The planned sequence for bringing current development release code libraries to 
 
 The planned sequence for bringing unreleased code first to development releases and then to production releases is:
 
-1. Four development module libraries from the [modelling places pipeline](/docs/model/pipeline/pipeline-places/).
+1. The four development module libraries from the [modelling places pipeline](/docs/model/pipeline/pipeline-places/) (the library for synthesising geometry and spatial attribute data, followed by the spatial attribute simulator, the prevalence predictor and user interface libraries).
 
-2. Two module libraries from the [modelling people pipeline](/docs/model/pipeline/pipeline-people/) (the synthetic household creation library and that agent based modelling library).
+2. The two module libraries from the [modelling people pipeline](/docs/model/pipeline/pipeline-people/) (the synthetic household creation library and that agent based modelling library).
 
-3. Three libraries from the [modelling platforms pipeline](/docs/model/pipeline/pipeline-platforms/) (the primary mental health service discrete event simulation, followed by the early psychosis cohort model, followed by the service system eligibility and referral policy optimisation model).
+3. The three module libraries from the [modelling platforms pipeline](/docs/model/pipeline/pipeline-platforms/) (the primary mental health service discrete event simulation, followed by the early psychosis cohort model, followed by the service system eligibility and referral policy optimisation model).
 
 How quickly we can launch production releases of all our code depends on how much and [what type of help](/docs/contribution-guidelines/contribution-types/) we get. Working within our current resources we expect the first of the 23 libraries listed to be released early in 2023 and the last during late 2025. With your help this release schedule can be sped up.

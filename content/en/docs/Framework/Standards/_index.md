@@ -16,7 +16,7 @@ An essential component of the ready4 framework is standardisation. Defining and 
 
 - explicit, measurable standards are good modelling practice;
 
-- to implement [a modular computational model](/docs/getting-started/concepts/module/), ready4 model modules need to be interoperable (ie [they can easily and safely be combined](/docs/framework/implementation/paradigm/));
+- to implement [a modular computational model](/docs/getting-started/concepts/module/), ready4 model modules need to be interoperable (ie [they can easily and safely be combined](/docs/framework/implementation/paradigm/object-oriented/#modular-computational-models));
 
 - as an open source project with multiple [users](/docs/getting-started/users/) and [contributors](/docs/contribution-guidelines/), consistency in implementation and documentation facilitates collaboration and ease of use;
 

@@ -1,8 +1,8 @@
 ---
 title: "Support the ready4 community"
-linkTitle: "Help"
+linkTitle: "Support"
 date: 2017-01-05
-weight: 111
+weight: 115
 tags:
 - Project
 - Project - contributions
@@ -35,7 +35,11 @@ The types of support that we welcome contributions on include:
 
 - suggest edits to a specific page by clicking on the "Edit this page" link.
 
-2. Improve the documentation for specific library, executable or dataset. We have yet to set up a streamlined workflow for this process, so for moment please contact the project lead directly if you ar interested in making this type of contribution.
+2. Improve the documentation for specific library, executable or dataset:
+
+- for software documentation edits, you can use the same workflow as that for [making a code contribution](/docs/contribution-guidelines/contribution-types/code/); and
+
+- for improvements to dataset documentation, we have yet to set up a streamlined workflow for this process, so for moment please [contact the ready4 project lead](https://mph-economist.netlify.app/#contact) directly if you ar interested in making this type of contribution.
 
 3. Contributing to developing other training and support resources (e.g. answering questions in online help, video turorials, etc). We believe that this type of content is most likely to become relevant when we have made more progress in developing the ready4 community. But again, if you are interested in this area, please contact the project lead to discuss.
  

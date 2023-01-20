@@ -21,6 +21,6 @@ The advantages of developing ready4 as a modular model include:
 
 - a complex model can be developed iteratively, beginning with a simple representation that is easier to validate and then progressively expanding in scope and functionality through the [addition of new modules](/docs/model/authoring-modules/), to be validated independently and jointly; and
 
-- long term and resource intensive model development is more feasible through combining multiple [independently managed and financed modelling projects](/docs/getting-started/concepts/project/) from [multiple contributors](/docs/contribution-guidelines/).
+- long term and resource intensive model development is more feasible through combining multiple [independently managed and financed modelling projects](/docs/getting-started/concepts/project/).
 
-To ensure that all ready4 modules can be [safely and flexibly combined](/docs/framework/implementation/paradigm/#modular-computational-models), each module is created from a [template](/docs/framework/implementation/modularity/) using [authoring tools that support standardisation](/docs/getting-started/software/libraries/installation/authoring-tools/code-development/). 
+To ensure that all ready4 modules can be [safely and flexibly combined](/docs/framework/implementation/paradigm/object-oriented/#modular-computational-models/), each module is created from a [template](/docs/framework/implementation/modularity/) using [authoring tools that support standardisation](/docs/getting-started/software/libraries/installation/authoring-tools/code-development/). 

@@ -1,5 +1,5 @@
 ---
-title: Installing tools for authoring computational models
+title: Installing tools for authoring model modules
 linkTitle: "Models"
 author: Matthew Hamilton
 date: "2023-01-09"
@@ -26,9 +26,9 @@ rmd_hash: eeb0b48a429fc491
 
 ## Before you install
 
-If you are a [coder](/docs/getting-started/users/coder/) planning on using ready4 to author computational models, then you may wish to install the [ready4class](https://ready4-dev.github.io/ready4class/), [ready4fun](https://ready4-dev.github.io/ready4fun/) and [ready4pack](https://ready4-dev.github.io/ready4pack/) libraries.
+If you are a [coder](/docs/getting-started/users/coder/) planning on using ready4 to author model [modules](/docs/getting-started/concepts/module/), then you may wish to install the [ready4class](https://ready4-dev.github.io/ready4class/), [ready4fun](https://ready4-dev.github.io/ready4fun/) and [ready4pack](https://ready4-dev.github.io/ready4pack/) libraries.
 
-**However, please note that none of these libraries are yet available as a [production release](/docs/getting-started/software/status/production-releases/). You should therefore understand the limitations of using ready4 software [development releases](/docs/getting-started/software/status/development-releases/) before you make the decision to install this software.** Although we use these authoring tools intensively to help us write highly standardised model modules, we feel that these tools are only likely to be helpful to others once much more comprehensive documentation and training resources become available. Without this training and support, these packages are unlikely to appear to be very user-friendly. Furthermore, the initial burden of complying with house-style, file-naming and directory structure requirements of these packages is only likely to be worthwhile if you plan on developing multiple ready4 module libraries. If you still think these tools could be useful to you, consider contacting us first to discuss what additional information may be most helpful to you.
+**However, please note that none of these libraries are yet available as a [production release](/docs/getting-started/software/status/production-releases/). You should therefore understand the limitations of using ready4 software [development releases](/docs/getting-started/software/status/development-releases/) before you make the decision to install this software.** We use these authoring tools intensively to help us write highly standardised model modules. However, we feel that these tools are most likely to be helpful to you once much more comprehensive documentation and training resources become available. Without this training and support, the requirements for complying with our house-style, file-naming, directory structure and workflow standards are unlikely to be sufficiently clear. [We will be making these improvements](/docs/contribution-guidelines/priorities/support/), but for the mean time we recommend that, if you wish to use these authoring tools, you first [get in touch with the project lead](https://mph-economist.netlify.app/#contact).
 
 ## Installation
 

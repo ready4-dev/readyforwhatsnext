@@ -70,12 +70,12 @@ other = "{{ .Site.Title }} is an open source project that anyone in the communit
 [community_learn]
 other = "Connect"
 [community_using]
-other = "Have a query or proposal about {{ .Site.Title }} that you'd like to discuss?"
+other = "Have a query or proposal that you'd like to discuss?"
 [community_develop]
-other = "Develop and Contribute"
+other = "Contribute"
 [community_contribute]
 other = "If you want to contribute code and data to {{ .Site.Title }}, do so here:"
 [community_how_to]
-other = "You can find out how to contribute in our"
+other = "Find out more about "
 [community_guideline]
-other = "Contribution Guidelines"
+other = "how to contribute."

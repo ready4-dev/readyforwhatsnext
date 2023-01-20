@@ -1,5 +1,5 @@
 ---
-title: "Types of user"
+title: "Users"
 linkTitle: "Users"
 weight: 24
 categories: 
@@ -8,6 +8,6 @@ tags:
 - Project
 - Project - users
 description: >
-  How you use ready4 will depend on the type of work you do.
+  How you use and [contribute](/docs/contribution-guidelines/contribution-types/) to ready4 will depend on the type of work you do.
 ---
 
