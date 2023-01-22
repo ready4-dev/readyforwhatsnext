@@ -31,15 +31,15 @@ Improving the mental health and wellbeing of young people is a global public hea
 - *Growing stale*: health economic models are rarely updated, meaning they can lose validity with time (e.g. input data becomes less relevant, new better performing algorithms are not incorporated, sudden major changes in environment / epidemiology / policy / service system are not accounted for).
 
 ## Reponse
-To help address these issues, ready4 is being implemented as a modular and open source computational model of youth mental health that aims to be accountable, flexible and up to date.
+To help address these issues, ready4 is being implemented as a modular and open source computational model of youth mental health that aims to be accountable, reusable and updatable.
 
 ### Accountable
 Model code and data are publicly available in online [code repositories](/docs/getting-started/software/repositories/) and [data collections](/docs/datasets/finding-data/search/). Algorithms are [documented and transparently and regularly tested](/docs/getting-started/software/libraries/documentation/). Model development occurs [in the open](https://github.com/ready4-dev) and [invites community participation](/community/), with each individual's [contribution](/docs/contribution-guidelines/) publicly identifiable. [Analyses](/docs/analyses/) are [reproducible and replicable](/docs/getting-started/concepts/reproducible-replicable-generalisable/#reproduction-and-replication).
 
-### Flexible
-[Model modules](/docs/model/) and [datasets](/docs/datasets/) are independently [re-usable](/docs/model/using-modules/) to address [multiple topics](/docs/examples/). As they share a common [framework](/docs/framework/), model modules can be combined in other models and analyses. Due to ready4's [code implementation paradigms](/docs/framework/implementation/paradigm/), model modules are easier to [generalise](/docs/getting-started/concepts/reproducible-replicable-generalisable/#generalising) for use in other decision contexts.
+### Reusable
+[Model modules](/docs/model/) and [datasets](/docs/datasets/) originally developed in one modelling project can be independently [reused](/docs/model/using-modules/) in other projects. As they share a common [framework](/docs/framework/), model modules can be combined in other models and analyses to address [multiple topics](/docs/examples/). Due to ready4's [code implementation paradigms](/docs/framework/implementation/paradigm/), model modules are easier to [generalise](/docs/getting-started/concepts/reproducible-replicable-generalisable/#generalising) for use in other decision contexts.
 
-### Up to date
+### Updatable
 Model code, data and analyses are versioned, with an ongoing program of making [new and updated releases](/blog/releases/). Software is [maintained](/docs/contribution-guidelines/priorities/curate/), with opportunities for users and contributors to flag issues, request features and supply [code contributions](/docs/contribution-guidelines/contribution-types/code/).
 
 
