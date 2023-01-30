@@ -101,6 +101,11 @@ github_repo = "https://github.com/ready4-dev/ready4web"
 # An optional link to a related project repo. For example, the sibling repository where your product code lives.
 github_project_repo = "https://github.com/ready4-dev/ready4"
 
+# Menu title if your navbar has a versions selector to access old versions of your site.
+# This menu appears only if you have at least one [params.versions] set.
+version_menu = "Release"
+
+
 # Specify a value here if your content directory is not in your repo's root directory
 #github_subdir = ""
 
@@ -114,7 +119,7 @@ algolia_docsearch = false
 offlineSearch = false
 
 # Enable syntax highlighting and copy buttons on code blocks with Prism
-prism_syntax_highlighting = true
+prism_syntax_highlighting = false #  Consider order with Release menu item
 
 # User interface configuration
 [params.ui]
@@ -222,10 +227,6 @@ weight = 14
 # Uncomment this if your GitHub repo does not have "main" as the default branch,
 # or specify a new value if you want to reference another branch in your GitHub links
 github_branch= "master"
-
-# Menu title if your navbar has a versions selector to access old versions of your site.
-# This menu appears only if you have at least one [params.versions] set.
-version_menu = "ready4 version"
 
 # Flag used in the "version-banner" partial to decide whether to display a 
 # banner on every page indicating that this is an archived version of the docs.
