@@ -207,8 +207,8 @@ enable = false
 
 # hugo module configuration
 [module]
-   uncomment line below for temporary local development of module
-  replacements = "github.com/google/docsy -> ../../docsy"
+#   uncomment line below for temporary local development of module
+#   replacements = "github.com/google/docsy -> ../../docsy"
   [module.hugoVersion]
     extended = true
     min = "0.75.0"
