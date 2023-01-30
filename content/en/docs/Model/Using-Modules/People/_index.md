@@ -1,6 +1,6 @@
 ---
 title: "Modules for modelling people"
-linkTitle: "Modelling people"
+linkTitle: "People"
 date: 2017-01-05
 weight: 91
 categories: 

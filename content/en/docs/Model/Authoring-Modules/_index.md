@@ -1,7 +1,7 @@
 
 ---
 title: "Authoring ready4 modules"
-linkTitle: "Authoring modules"
+linkTitle: "Authoring"
 date: 2017-01-05
 weight: 4
 categories: 

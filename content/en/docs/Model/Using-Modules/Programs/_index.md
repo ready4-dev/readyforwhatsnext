@@ -1,6 +1,6 @@
 ---
 title: "Modules for modelling programs"
-linkTitle: "Modelling programs"
+linkTitle: "Programs"
 date: 2017-01-05
 weight: 94
 categories: 

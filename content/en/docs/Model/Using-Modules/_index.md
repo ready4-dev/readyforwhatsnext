@@ -1,7 +1,7 @@
 
 ---
 title: "Using ready4 modules"
-linkTitle: "Using modules"
+linkTitle: "Modelling"
 date: 2017-01-05
 weight: 2
 categories: 

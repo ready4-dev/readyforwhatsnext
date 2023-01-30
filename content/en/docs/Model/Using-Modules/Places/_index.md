@@ -1,6 +1,6 @@
 ---
 title: "Modules for modelling places"
-linkTitle: "Modelling places"
+linkTitle: "Places"
 date: 2017-01-05
 weight: 92
 categories: 

@@ -1,6 +1,6 @@
 ---
 title: "Modules for modelling platforms"
-linkTitle: "Modelling platforms"
+linkTitle: "Platforms"
 date: 2017-01-05
 weight: 93
 categories: 
