@@ -99,7 +99,7 @@ version_menu = "Releases"
 # Flag used in the "version-banner" partial to decide whether to display a 
 # banner on every page indicating that this is an archived version of the docs.
 # Set this flag to "true" if you want to display the banner.
-archived_version = false
+archived_version = true
 
 # The version number for the version of the docs represented in this doc set.
 # Used in the "version-banner" partial to display a version number for the 
@@ -114,7 +114,7 @@ version = "Current"
 [[params.versions]]
   version = "v0.0"
   githubbranch = "v0.0-branch"
-  url = "https://v0-0.ready4-dev.com"
+  url = "https://v0-0-branch.ready4-dev.com"
 
 # Uncomment this if your GitHub repo does not have "main" as the default branch,
 # or specify a new value if you want to reference another branch in your GitHub links
