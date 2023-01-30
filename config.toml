@@ -225,7 +225,7 @@ github_branch= "master"
 
 # Menu title if your navbar has a versions selector to access old versions of your site.
 # This menu appears only if you have at least one [params.versions] set.
-version_menu = "Releases"
+version_menu = "ready4 version"
 
 # Flag used in the "version-banner" partial to decide whether to display a 
 # banner on every page indicating that this is an archived version of the docs.
@@ -235,10 +235,10 @@ archived_version = false
 # The version number for the version of the docs represented in this doc set.
 # Used in the "version-banner" partial to display a version number for the 
 # current doc set.
-version = "Current"
+version = "Latest"
 
 [[params.versions]]
-   version = "Current"
+   version = "Latest"
    githubbranch = "master"
    url = "https://ready4-dev.com"
   
