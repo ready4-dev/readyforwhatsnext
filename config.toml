@@ -107,7 +107,7 @@ archived_version = true
 version = "0.0"
 
 [[params.versions]]
-  version = "Current"
+  version = "v0.1"
   url = "https://ready4-dev.com"
 
 [[params.versions]]
