@@ -123,15 +123,6 @@ version_menu = "Release"
 # Specify a value here if your content directory is not in your repo's root directory
 #github_subdir = ""
 
-# Google Custom Search Engine ID. Remove or comment out to disable search.
-#gcs_engine_id = "e6016631274b04241"
-
-# Enable Algolia DocSearch
-algolia_docsearch = true
-
-# Enable Lunr.js offline search
-offlineSearch = false
-
 # Enable syntax highlighting and copy buttons on code blocks with Prism
 prism_syntax_highlighting = false #  Consider order with Release menu item
 
@@ -237,7 +228,6 @@ url = "/community/"
 pre = "<i class='fas fa-globe'></i>"
 weight = 14
 
-
 [[params.versions]]
    version = "Latest"
    githubbranch = "master"
@@ -247,3 +237,10 @@ weight = 14
   version = "v0.0"
   githubbranch = "v0.0-branch"
   url = "https://v0-0-branch.ready4-dev.com"
+
+# Google Custom Search Engine ID. Remove or comment out to disable search.
+#gcs_engine_id = "e6016631274b04241"
+# Enable Algolia DocSearch
+algolia_docsearch = true
+# Enable Lunr.js offline search
+offlineSearch = false
