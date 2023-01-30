@@ -124,10 +124,10 @@ version_menu = "Release"
 #github_subdir = ""
 
 # Google Custom Search Engine ID. Remove or comment out to disable search.
-gcs_engine_id = "e6016631274b04241"
+#gcs_engine_id = "e6016631274b04241"
 
 # Enable Algolia DocSearch
-algolia_docsearch = false
+algolia_docsearch = true
 
 # Enable Lunr.js offline search
 offlineSearch = false
