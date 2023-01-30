@@ -94,7 +94,7 @@ privacy_policy = "https://www.orygen.org.au/privacy-policy" # Change this
 
 # Menu title if your navbar has a versions selector to access old versions of your site.
 # This menu appears only if you have at least one [params.versions] set.
-version_menu = "Versions"
+version_menu = "Releases"
 
 # Flag used in the "version-banner" partial to decide whether to display a 
 # banner on every page indicating that this is an archived version of the docs.
@@ -114,10 +114,9 @@ version = "0.0"
   version = "v0.0"
   url = "https://v0-0.ready4-dev.com"
 
-
 # A link to latest version of the docs. Used in the "version-banner" partial to
 # point people to the main doc site.
-url_latest_version = "https://ready4-dev.com/"
+url_latest_version = "https://ready4-dev.com"
 
 # Repository configuration (URLs for in-page links to opening issues and suggesting changes)
 github_repo = "https://github.com/ready4-dev/ready4web"
