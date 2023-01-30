@@ -108,7 +108,7 @@ version = "0.0"
 
 [[params.versions]]
   version = "Current"
-  url = "https://current.ready4-dev.com"
+  url = "https://ready4-dev.com"
   
 [[params.versions]]
   version = "v0.0"
