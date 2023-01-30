@@ -206,18 +206,18 @@ enable = false
 #  desc = "Discuss development issues around the project"
 
 # hugo module configuration
-#[module]
-  # uncomment line below for temporary local development of module
-  #replacements = "github.com/google/docsy -> ../../docsy"
-#  [module.hugoVersion]
-#    extended = true
-#    min = "0.75.0"
- # [[module.imports]]
- #   path = "github.com/google/docsy"
- #   disable = false
- # [[module.imports]]
- #   path = "github.com/google/docsy/dependencies"
- #   disable = false
+[module]
+   uncomment line below for temporary local development of module
+  replacements = "github.com/google/docsy -> ../../docsy"
+  [module.hugoVersion]
+    extended = true
+    min = "0.75.0"
+  [[module.imports]]
+    path = "github.com/google/docsy"
+    disable = false
+  [[module.imports]]
+    path = "github.com/google/docsy/dependencies"
+    disable = false
 
 [menu]
 [[menu.main]]
