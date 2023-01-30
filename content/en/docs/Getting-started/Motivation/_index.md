@@ -20,7 +20,7 @@ Improving the mental health and wellbeing of young people is a global public hea
 
 - *Contested legitimacy*: the value judgments of the model development team (e.g. what types of question are most important for a model to address, what parts of the workings of the system of interest to represent and in what detail, what outcome variables to include, which stakeholders to consult, etc) may differ from those using or affected by model outputs;
 
-- *Narrow applicability*: a model might be too simple to adequately explore some problems and too complex to reliably address others and be hard to generalise beyond a very specific decision context (e.g. within a specific jurisdiction);
+- *Narrow applicability*: a model might be too simple to adequately explore some problems and too complex to reliably address others and be hard to transfer beyond a very specific decision context (e.g. within a specific jurisdiction);
 
 - *Limited interoperability*: different approaches to model implementation, dissemination, ownership and reporting makes it more difficult for multiple models to be efficiently and safely combined;
 
@@ -37,7 +37,7 @@ To help address these issues, ready4 is being implemented as a modular and open 
 Model code and data are publicly available in online [code repositories](/docs/getting-started/software/repositories/) and [data collections](/docs/datasets/finding-data/search/). Algorithms are [documented and transparently and regularly tested](/docs/getting-started/software/libraries/documentation/). Model development occurs [in the open](https://github.com/ready4-dev) and [invites community participation](/community/), with each individual's [contribution](/docs/contribution-guidelines/) publicly identifiable. [Analyses](/docs/analyses/) are [reproducible and replicable](/docs/getting-started/concepts/reproducible-replicable-generalisable/#reproduction-and-replication).
 
 ### Reusable
-[Model modules](/docs/model/) and [datasets](/docs/datasets/) originally developed in one modelling project can be independently [reused](/docs/model/using-modules/) in other projects. As they share a common [framework](/docs/framework/), model modules can be combined in other models and analyses to address [multiple topics](/docs/examples/). Due to ready4's [code implementation paradigms](/docs/framework/implementation/paradigm/), model modules are easier to [generalise](/docs/getting-started/concepts/reproducible-replicable-generalisable/#generalising) for use in other decision contexts.
+[Model modules](/docs/model/) and [datasets](/docs/datasets/) originally developed in one modelling project can be independently [reused](/docs/model/using-modules/) in other projects. As they share a common [framework](/docs/framework/), model modules can be combined in other models and analyses to address [multiple topics](/docs/examples/). Due to ready4's [code implementation paradigms](/docs/framework/implementation/paradigm/), model modules are easier to [transfer](/docs/getting-started/concepts/transferable/) for use in other decision contexts.
 
 ### Updatable
 Model code, data and analyses are versioned, with an ongoing program of making [new and updated releases](/blog/releases/). Software is [maintained](/docs/contribution-guidelines/priorities/curate/), with opportunities for users and contributors to flag issues, request features and supply [code contributions](/docs/contribution-guidelines/contribution-types/code/).

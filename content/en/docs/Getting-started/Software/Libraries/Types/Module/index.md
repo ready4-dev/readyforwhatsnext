@@ -18,7 +18,7 @@ rmd_hash: 937d40471c432e8b
 
 ---
 
-Computational models developed with ready4 are intended to be both generalisable (they are tools that can be used in multiple decision contexts) and modular (they are comprised of self-contained components, each of which performs a narrow sub-set of tasks). For these reasons, ready4 computational models are developed and distributed as libraries of modules.
+Computational models developed with ready4 are intended to be both [transferable](/docs/getting-started/concepts/transferable/)  (they are tools that can be used in multiple decision contexts) and [modular](/docs/getting-started/concepts/module/)  (they are comprised of self-contained components, each of which performs a narrow sub-set of tasks). For these reasons, ready4 computational models are developed and distributed as libraries of modules.
 
 The three types of computational module libraries are:
 
