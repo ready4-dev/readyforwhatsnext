@@ -1,7 +1,7 @@
 
 ---
 title: "Modules pipeline"
-linkTitle: "Modules pipeline"
+linkTitle: "Pipeline"
 date: 2017-01-05
 weight: 3
 categories: 
