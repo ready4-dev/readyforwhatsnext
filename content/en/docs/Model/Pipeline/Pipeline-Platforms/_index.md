@@ -4,7 +4,7 @@ linkTitle: "Platforms"
 date: 2017-01-05
 weight: 999
 description: >
-  Current [unreleased](/docs/getting-started/software/status/unreleased/) work to develop [modules](/docs/getting-started/concepts/module/) for modelling the optimal staffing and configuration of support services for young people.
+  Current [unreleased](/docs/software/status/unreleased/) work to develop [modules](/docs/getting-started/concepts/module/) for modelling the optimal staffing and configuration of support services for young people.
 categories: 
 - Documentation
 tags: 
@@ -21,5 +21,5 @@ Our current pipeline of modules for modelling platforms includes code for implem
 - a simple cohort model of early psychosis services; and
 - a blended (systems dynamics / discrete event simulation) model for optimising eligibility and referral policies across multiple services. 
 
-The first two of the above models are currently implemented in R and are sufficiently advanced to produce exploratory analysis. However, neither are adequately documented or tested and need to be redeveloped as ready4 model modules and re-validated prior to [development releases](/docs/getting-started/software/status/development-releases/).  The optimisation model was implemented in Java and was populated with toy data - this will require more substantial development prior to public release.
+The first two of the above models are currently implemented in R and are sufficiently advanced to produce exploratory analysis. However, neither are adequately documented or tested and need to be redeveloped as ready4 model modules and re-validated prior to [development releases](/docs/software/status/development-releases/).  The optimisation model was implemented in Java and was populated with toy data - this will require more substantial development prior to public release.
 

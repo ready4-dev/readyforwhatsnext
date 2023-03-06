@@ -18,11 +18,11 @@ Adapting a computational model, in whole or in part, to extend the types of data
 
 When we use the term transferring, we are typically referring to either (a) authoring or (b) using on of the following:
 
-1. An analysis [program](/docs/getting-started/software/executables/programs/) (or [sub-routine](/docs/getting-started/software/executables/subroutines/)) that has been adapted from an [executable](/docs/getting-started/software/executables/) from another study to account for differences in the input data / research question. 
+1. An analysis [program](/docs/software/executables/programs/) (or [sub-routine](/docs/software/executables/subroutines/)) that has been adapted from an [executable](/docs/software/executables/) from another study to account for differences in the input data / research question. 
 
 2. [Inheriting data-structures and algorithms](/docs/framework/implementation/paradigm/object-oriented/) that selectively re-use, discard and replace elements of a study's computational model based on an alternative use-case.
 
-3. (Multi-purpose) function [libraries](/docs/getting-started/software/libraries/) that have been created by [decomposing a study's (single purpose) analysis program](/docs/framework/implementation/paradigm/functional/).
+3. (Multi-purpose) function [libraries](/docs/software/libraries/) that have been created by [decomposing a study's (single purpose) analysis program](/docs/framework/implementation/paradigm/functional/).
 
 
 ### Examples

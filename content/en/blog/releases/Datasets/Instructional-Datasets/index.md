@@ -1,7 +1,7 @@
 ---
 title: "Synthetic (fake) datasets releases"
 linkTitle: "Fake datasets"
-date: "2023-01-18"
+date: "2023-03-06"
 description: "Releases of synthetic (fake) datasets used for teaching and demonstration."
 weight: 700
 categories: 

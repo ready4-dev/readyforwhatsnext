@@ -1,0 +1,20 @@
+---
+output: html_document
+---
+
+```{r, include=FALSE}
+#source("../../../../../../../../R/Functions.R", local = knitr::knit_global())
+```
+
+```{r include=FALSE}
+library(ready4)
+```
+
+```{r include=FALSE}
+libraries_tb <- make_libraries_tb("framework")
+```
+
+```{r echo=F}
+print_packages(libraries_tb,
+               include_1L_chr = "framework")
+```

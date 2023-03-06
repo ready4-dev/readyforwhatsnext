@@ -14,7 +14,7 @@ description: >
 ---
 
 ## What?
-A ready4 modelling project undertakes novel analysis of [youth mental health topics](/docs/examples/) by using, enhancing and/or authoring model [modules](/docs/getting-started/concepts/module/), [datasets](/docs/datasets/) and [executables](/docs/getting-started/software/executables/). 
+A ready4 modelling project undertakes novel analysis of [youth mental health topics](/docs/examples/) by using, enhancing and/or authoring model [modules](/docs/getting-started/concepts/module/), [datasets](/docs/datasets/) and [executables](/docs/software/executables/). 
 Each ready4 modelling project has its own unique [funder(s)](/docs/getting-started/stakeholders/funders/), governance, objectives and team. The links between modelling projects are in the form of a common [framework](/docs/framework/) and membership of a collaborative [community](/community/). 
 
 Undertaking modelling projects will help us achieve our following priority goals:
@@ -34,7 +34,7 @@ Each project's [computational model](/docs/getting-started/concepts/model/) is c
 
 - selecting a subset of [existing ready4 modules](/docs/model/finding-modules/) and [using them](/docs/model/using-modules/) in unmodified form;
 - selecting a subset of existing ready4 modules and [contributing code edits](/docs/contribution-guidelines/contribution-types/code/) to these modules to add desired functionality;
-- selecting a subset of existing ready4 modules and using them as templates from which to author new [inheriting modules](/docs/framework/implementation/paradigm/#inheritence) (which can be code contributions to an existing [module library](/docs/getting-started/software/libraries/types/module/) or [distributed as part of a new library](/docs/model/authoring-modules/packaging-modules/)); and/or
+- selecting a subset of existing ready4 modules and using them as templates from which to author new [inheriting modules](/docs/framework/implementation/paradigm/#inheritence) (which can be code contributions to an existing [module library](/docs/software/libraries/types/module/) or [distributed as part of a new library](/docs/model/authoring-modules/packaging-modules/)); and/or
 - [authoring new ready4 modules](/docs/model/authoring-modules/) (most likely to be distributed in new code libraries). 
 
 As part of the validation and verification process for all new and derived modules, tests should be defined, bundled as part of the relevant module libraries and rerun every time these libraries are edited.

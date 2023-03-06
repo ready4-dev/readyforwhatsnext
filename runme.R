@@ -6,7 +6,7 @@ library(ready4)
 ## Render itemisation of currently available ready4 libraries
 c("Framework",
   "Module") %>%
-  write_to_render_post(path_to_main_dir_1L_chr = "~/Documents/WIP/ready4/Code/Brochure/HTML/ready4web/content/en/docs/Getting-started/Software/Libraries/Types",
+  write_to_render_post(path_to_main_dir_1L_chr = "~/Documents/WIP/ready4/Code/Brochure/HTML/ready4web/content/en/docs/software/Libraries/Types",
                        consent_1L_chr = "Y")  
 # Render ready4 library installation instructions
 c("Foundation",
@@ -14,7 +14,7 @@ c("Foundation",
   "Authoring-Tools/Datasets",
   "Authoring-Tools/Code-Development",
   "Modules") %>%
-write_to_render_post(path_to_main_dir_1L_chr = "~/Documents/WIP/ready4/Code/Brochure/HTML/ready4web/content/en/docs/Getting-started/Software/Libraries/Installation",
+write_to_render_post(path_to_main_dir_1L_chr = "~/Documents/WIP/ready4/Code/Brochure/HTML/ready4web/content/en/docs/software/Libraries/Installation",
                      consent_1L_chr = "Y",
                      is_rmd_1L_lgl = F)
 # Render framework articles
@@ -62,7 +62,7 @@ c("Scientific-Summaries") %>% # Do not evaluate write fns, add scroll text and t
 # Render program and sub-routine summaries
 c("Programs",
   "Subroutines") %>%
-  write_to_render_post("~/Documents/WIP/ready4/Code/Brochure/HTML/ready4web/content/en/docs/Getting-started/Software/Executables",
+  write_to_render_post("~/Documents/WIP/ready4/Code/Brochure/HTML/ready4web/content/en/docs/software/Executables",
                        consent_1L_chr = "Y")
 c("Clinical-Primary") %>% # Do not evaluate write fns, add scroll text and then restore link to online RMD
   write_to_render_post(path_to_main_dir_1L_chr = "~/Documents/WIP/ready4/Code/Brochure/HTML/ready4web/content/en/docs/Analyses/Replication-Code/Make-Fakes",
@@ -87,7 +87,7 @@ c("People-Datasets",
 c("Framework-Libraries") %>%
   write_to_render_post("~/Documents/WIP/ready4/Code/Brochure/HTML/ready4web/content/en/blog/releases/libraries",
                        consent_1L_chr = "Y")
-c("People-Module-Libraries") %>%
+c("People-Module-Libraries","Places-Module-Libraries") %>%
   write_to_render_post("~/Documents/WIP/ready4/Code/Brochure/HTML/ready4web/content/en/blog/releases/libraries/module-libraries",
                        consent_1L_chr = "Y")
 c("Programs",

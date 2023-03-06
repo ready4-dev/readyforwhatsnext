@@ -10,7 +10,7 @@ tags:
 categories:
 - Documentation
 description: >
-  Help develop high quality, clear and comprehensive [documentation](/docs/getting-started/software/libraries/documentation/), instruction and responsive help.
+  Help develop high quality, clear and comprehensive [documentation](/docs/software/libraries/documentation/), instruction and responsive help.
 ---
 
 ## What?

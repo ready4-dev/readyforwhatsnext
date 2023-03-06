@@ -17,7 +17,7 @@ If you are a coder, you may be a data scientist or software engineer by training
 The primary role of coders in ready4 [modelling projects](/docs/getting-started/concepts/project/) is to author [modules](/docs/getting-started/concepts/module/) that implement [computational models](/docs/getting-started/concepts/model/).
 
 ## Benefits of using ready4
-ready4 provides an opportunity to write [software](/docs/getting-started/software/) that matters! Our aim is to help improve the lives of young people through [empowering decision makers with better models](/docs/getting-started/motivation/). If you already write code for youth mental health modelling projects, ready4 may also be helpful to you by enhancing your impact (providing a [framework](/docs/framework/) for modular models that facilitate re-use by others) and efficiency (through partial automation of code development and quality-assurance workflows). 
+ready4 provides an opportunity to write [software](/docs/software/) that matters! Our aim is to help improve the lives of young people through [empowering decision makers with better models](/docs/getting-started/motivation/). If you already write code for youth mental health modelling projects, ready4 may also be helpful to you by enhancing your impact (providing a [framework](/docs/framework/) for modular models that facilitate re-use by others) and efficiency (through partial automation of code development and quality-assurance workflows). 
 
 ## Contributing to ready4
 The types of [contribution](/docs/contribution-guidelines/) you can make to ready4 include:

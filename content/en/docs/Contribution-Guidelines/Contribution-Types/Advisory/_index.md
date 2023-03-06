@@ -20,7 +20,7 @@ We need advice:
 
 - to help plan and execute [modelling projects](docs/getting-started/concepts/project/) that produce [accountable, reusable and updatable](/docs/getting-started/motivation/) models; and
 
-- to identify how our existing [software](/docs/getting-started/software/) and [data](/docs/datasets/finding-data/) can be usefully improved.
+- to identify how our existing [software](/docs/software/) and [data](/docs/datasets/finding-data/) can be usefully improved.
 
 ## Who?
 We wan advice from our [users](/docs/getting-started/users/) ([coders](/docs/getting-started/users/coder/), [modellers](/docs/getting-started/users/modeller/) and [planners](/docs/getting-started/users/planner/)), [stakeholders](/docs/getting-started/stakeholders/) ([funders](/docs/getting-started/stakeholders/funders/), [researchers](/docs/getting-started/stakeholders/researchers/) and [young people](/docs/getting-started/stakeholders/young-people/)) and other supporters (those with relevant expertise in technical communication, building open source communities, product development, etc).

@@ -9,7 +9,7 @@ categories:
 tags:
 - Framework
 description: >
-  The ready4 framework comprises a set of standards and the [software](/docs/getting-started/software/) to implement it.
+  The ready4 framework comprises a set of standards and the [software](/docs/software/) to implement it.
 ---
 
 

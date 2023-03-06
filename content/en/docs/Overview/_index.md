@@ -11,7 +11,7 @@ description: >
 ---
 
 ## What is ready4?
-ready4 is a [modular](/docs/getting-started/concepts/module/) computational model of the systems that shape young people's mental health that is being developed as an [open source](/docs/getting-started/software/terms/licenses/) project led by [researchers at Orygen and Monash University](/about/). 
+ready4 is a [modular](/docs/getting-started/concepts/module/) computational model of the systems that shape young people's mental health that is being developed as an [open source](/docs/software/terms/licenses/) project led by [researchers at Orygen and Monash University](/about/). 
 
 ## What is a computational model?
 A [computational model](/docs/getting-started/concepts/model) is a simplified representation of a system of interest that is implemented in computer code.
@@ -29,7 +29,7 @@ Modelling youth mental health systems is a complex task - that means it is easy 
 ready4 is designed to be primarily used by [coders](/docs/getting-started/users/coder), [modellers](/docs/getting-started/users/modeller) and [planners](/docs/getting-started/users/planner), working collaboratively on [computational modelling projects](/docs/getting-started/concepts/project/) in which other stakeholders such as [funders](/docs/getting-started/stakeholders/funders/), [researchers](/docs/getting-started/stakeholders/researchers/) and [young people](/docs/getting-started/stakeholders/young-people/) make essential contributions. 
 
 ## Can I use it?
-ready4 is free for you to assess (to verify and validate), apply (to generate novel insights into decision problems of interest to you) and to derive your own derivative works from (to leverage and enhance the work of others) [under liberal terms of use](/docs/getting-started/software/terms/).
+ready4 is free for you to assess (to verify and validate), apply (to generate novel insights into decision problems of interest to you) and to derive your own derivative works from (to leverage and enhance the work of others) [under liberal terms of use](/docs/software/terms/).
 
 ## Can I help?
 ready4 is a collaborative project and we'd love your help in progressing our [priorty project goals](/docs/contribution-guidelines/priorities/)! You can help [fund our development](/docs/contribution-guidelines/contribution-types/funding/), [contribute code improvements](/docs/contribution-guidelines/contribution-types/code/), enhance our [documentation and community support](/docs/contribution-guidelines/contribution-types/community/), give us [advice](/docs/contribution-guidelines/contribution-types/advisory/) and/or [lead a modelling project](/docs/contribution-guidelines/contribution-types/use/).

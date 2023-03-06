@@ -13,15 +13,15 @@ tags:
 output: hugodown::md_document
 ---
 
-```{r, include=FALSE}
-source("../../../../../R/Functions.R", local = knitr::knit_global())
-```
-
 You can search for ready4 modules and sub-modules using tools from the ready4 R package. 
 
 
 ```{r message=FALSE, warning=FALSE}
 library(ready4)
+```
+
+```{r, include=FALSE}
+source("../../../../../R/Functions.R", local = knitr::knit_global())
 ```
 
 
@@ -44,7 +44,21 @@ A slightly quicker method to achieve a similar (but potentially less up to date)
 ```
 
 
-If you wish to display the table of modules as HTML, you can use the `print_modules` function. You can choose to display only ready4 sub-modules (which always use R's "S3" class type).
+The `modules_tb` object itemises both ready4 modules (which always use R's "S4" class type) and sub-modules ("S3" class type). To display a HTML summary of just ready4 modules, you can use the `print_modules` function. 
+
+
+```{r eval=FALSE}
+print_modules(modules_tb,
+              what_1L_chr = "S4")
+```
+
+
+```{r echo=FALSE}
+print_modules(modules_tb,
+              what_1L_chr = "S4")
+```
+
+You can use the same function to display only ready4 sub-modules.
 
 
 ```{r eval=FALSE}
@@ -58,18 +72,4 @@ print_modules(modules_tb,
               what_1L_chr = "S3")
 ```
 
-
-To display only ready4 modules, restrict returns to R's "S4" class type.
-
-
-```{r eval=FALSE}
-print_modules(modules_tb,
-              what_1L_chr = "S4")
-```
-
-
-```{r echo=FALSE}
-print_modules(modules_tb,
-              what_1L_chr = "S4")
-```
 

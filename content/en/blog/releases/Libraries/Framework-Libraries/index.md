@@ -17,7 +17,7 @@ rmd_hash: 7a8f0efb23baf01c
 
 ---
 
-Currently available (as at 18-Jan-2023) releases of [framework libraries](/docs/getting-started/software/libraries/types/framework/) are described below.
+Currently available (as at 18-Jan-2023) releases of [framework libraries](/docs/software/libraries/types/framework/) are described below.
 
 <html>
 

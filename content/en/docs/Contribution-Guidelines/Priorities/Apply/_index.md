@@ -10,7 +10,7 @@ tags:
 categories:
 - Documentation
 description: >
-  We want [maintained](/docs/contribution-guidelines/priorities/curate/) [production releases](/docs/getting-started/software/status/production-releases/) of ready4 [module libraries](/docs/getting-started/software/libraries/types/module/) to be used to implement [replications](/docs/getting-started/concepts/reproducible-replicable-generalisable/) and [transfers](/docs/getting-started/concepts/transferable/) of the original studies for which that software was developed.
+  We want [maintained](/docs/contribution-guidelines/priorities/curate/) [production releases](/docs/software/status/production-releases/) of ready4 [module libraries](/docs/software/libraries/types/module/) to be used to implement [replications](/docs/getting-started/concepts/reproducible-replicable-generalisable/) and [transfers](/docs/getting-started/concepts/transferable/) of the original studies for which that software was developed.
 ---
 
 ## Why?
@@ -27,7 +27,7 @@ The main tasks for implementing study replications and transfers are:
 
 2. Review that study's [analysis program](/docs/analyses/replication-code/):
 - do the data used in this program have similar structure / concepts / sampling to the data for which a new analysis is planned?
-- are [modules](/docs/getting-started/concepts/module/) used in that program from [production release](/docs/getting-started/software/status/production-releases/) module libraries and do any of them require authoring of [inheriting modules](/docs/framework/implementation/paradigm/object-oriented/#inheritence) to selectively update aspects of module data-structures or algorithms?
+- are [modules](/docs/getting-started/concepts/module/) used in that program from [production release](/docs/software/status/production-releases/) module libraries and do any of them require authoring of [inheriting modules](/docs/framework/implementation/paradigm/object-oriented/#inheritence) to selectively update aspects of module data-structures or algorithms?
 
 3. [Create a new input dataset](/docs/datasets/authoring-data/), labelling and (for non-confidential data) storing the data in an online repository (which can be kept private for now).
 
@@ -41,4 +41,4 @@ The main tasks for implementing study replications and transfers are:
 
 
 ## When?
-In most cases, we recommend waiting until production releases of relevant module libraries are available. However, we are currently planning or actively undertaking some initial study analysis transfers using the [development versions](/docs/getting-started/software/status/development-releases/) of our [utility mapping](/docs/model/using-modules/people/map-to-utility/) and [choice modelling](/docs/model/using-modules/people/predict-choice/) module libraries. We are undertaking this work in parallel with testing and, where necessary, extending the required modules. We suggest that, should you believe that any of our development version software is potentially relevant to a study you wish to undertake, you first [get in touch with our project lead](https://mph-economist.netlify.app/#contact) to discuss the pros / cons and timing of using this software.
+In most cases, we recommend waiting until production releases of relevant module libraries are available. However, we are currently planning or actively undertaking some initial study analysis transfers using the [development versions](/docs/software/status/development-releases/) of our [utility mapping](/docs/model/using-modules/people/map-to-utility/) and [choice modelling](/docs/model/using-modules/people/predict-choice/) module libraries. We are undertaking this work in parallel with testing and, where necessary, extending the required modules. We suggest that, should you believe that any of our development version software is potentially relevant to a study you wish to undertake, you first [get in touch with our project lead](https://mph-economist.netlify.app/#contact) to discuss the pros / cons and timing of using this software.

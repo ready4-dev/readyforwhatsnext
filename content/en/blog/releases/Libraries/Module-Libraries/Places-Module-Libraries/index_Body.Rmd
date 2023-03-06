@@ -1,0 +1,18 @@
+---
+output: html_document
+---
+
+```{r, include=FALSE}
+library(ready4)
+```
+
+```{r echo=F, message=FALSE, warning=FALSE}
+make_code_releases_tbl("Module",
+                       model_repos_chr = c("aus","vicinity"),
+                       as_kbl_1L_lgl = T,
+                       bootstrap_options = c("hover", 
+                                             "condensed"))
+```
+
+
+

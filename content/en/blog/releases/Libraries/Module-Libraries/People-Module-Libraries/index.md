@@ -1,7 +1,7 @@
 ---
 title: "People module library releases"
 linkTitle: "People"
-date: "2023-01-18"
+date: "2023-03-06"
 description: "Releases of module libraries for modelling people (collectively, the Spring To Life model)."
 weight: 3
 categories: 
@@ -12,11 +12,11 @@ tags:
 - Software
 - Software - libraries
 output: hugodown::md_document
-rmd_hash: 1e4ad3f79fc3da73
+rmd_hash: cf8e13b0f3e9ce7c
 
 ---
 
-Currently available (as at 18-Jan-2023) releases of [module libraries](/docs/getting-started/software/libraries/types/module/) for [modelling people](/docs/model/using-modules/people/) are reproduced below.
+Currently available (as at 06-Mar-2023) releases of [module libraries](/docs/software/libraries/types/module/) for [modelling people](/docs/model/using-modules/people/) are reproduced below.
 
 <html>
 

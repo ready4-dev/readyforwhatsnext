@@ -13,7 +13,7 @@ description: >
 ---
 
 ## What? 
-Test, improve or extend [our software](/docs/getting-started/software/). This is essential to us achieving our following priority goals:
+Test, improve or extend [our software](/docs/software/). This is essential to us achieving our following priority goals:
 
 1. [Launching the ready4 MVP systems model](/docs/contribution-guidelines/priorities/launch/).
 

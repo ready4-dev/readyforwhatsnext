@@ -11,7 +11,7 @@ tags:
 - Programming
 - Software
 description: >
-  ready4 [software](/docs/getting-started/software/) is implemented using a combination of object-oriented  and functional programming paradigms.
+  ready4 [software](/docs/software/) is implemented using a combination of object-oriented  and functional programming paradigms.
 ---
 
 

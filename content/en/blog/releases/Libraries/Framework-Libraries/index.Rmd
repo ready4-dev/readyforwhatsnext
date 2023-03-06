@@ -15,7 +15,7 @@ tags:
 output: hugodown::md_document
 ---
 
-Currently available (as at  `r format(Sys.Date(),"%d-%b-%Y")`) releases of [framework libraries](/docs/getting-started/software/libraries/types/framework/) are described below.
+Currently available (as at  `r format(Sys.Date(),"%d-%b-%Y")`) releases of [framework libraries](/docs/software/libraries/types/framework/) are described below.
 
 ````{=html}
 ```{r, echo=FALSE, message=F,results='asis'}

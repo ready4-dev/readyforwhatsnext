@@ -15,7 +15,7 @@ description: >
 
 
 ## Why?
-Currently all ready4 [software](/docs/getting-started/software/) is developed using the R language. Although R is powerful, popular and flexible, there are limitations to relying on this toolkit alone. For some tasks, tools written in other languages provide superior performance. Requiring coders to have knowledge of R erects barriers to participation that thus the rate and quality of ready4's development.
+Currently all ready4 [software](/docs/software/) is developed using the R language. Although R is powerful, popular and flexible, there are limitations to relying on this toolkit alone. For some tasks, tools written in other languages provide superior performance. Requiring coders to have knowledge of R erects barriers to participation that thus the rate and quality of ready4's development.
 
 ## What?
 We aim to support and integrate the development and use of tools to implement and extend the ready4 [model](/docs/model/) in multiple languages, with an initial focus on python. The most important initial types of help we need with achieving this goal are [advice](/docs/contribution-guidelines/contribution-types/advisory/), [funding](/docs/contribution-guidelines/contribution-types/funding/) and [code contributions](/docs/contribution-guidelines/contribution-types/code/). 
