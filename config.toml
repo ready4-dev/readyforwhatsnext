@@ -2,6 +2,7 @@ baseURL = "/"
 title = "ready4-dev"
 description = "A modular, open source computational model of youth mental health"
 ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$","_cache$",'\.knit\.md$', '\.utf8\.md$', '_files$']
+ignoreErrors = ["error-remote-getjson"]
 
 # Language settings
 contentDir = "content/en"
