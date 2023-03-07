@@ -129,7 +129,7 @@ sidebar_search_disable = true
 # Enable Lunr.js offline search
 #offlineSearch = false
 # Enable Algolia DocSearch
-algolia_docsearch = false
+algolia_docsearch = true
 
 # Enable syntax highlighting and copy buttons on code blocks with Prism
 prism_syntax_highlighting = false #  Consider order with Release menu item
