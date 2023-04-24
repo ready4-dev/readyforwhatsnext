@@ -8,7 +8,7 @@ tags:
 - Project
 - Project - purpose
 description: >
-  To be accountable, flexible and up to date, ready4 is being implemented as a [modular](/docs/getting-started/concepts/module/) and [open source](/docs/software/terms/licenses/) [computational model](/docs/getting-started/concepts/model/#computational-model).
+  To be transparent, reusable and updatable, ready4 is being implemented as a [modular](/docs/getting-started/concepts/module/) and [open source](/docs/software/terms/licenses/) [computational model](/docs/getting-started/concepts/model/#computational-model).
 ---
 
 ## Problem
@@ -31,9 +31,9 @@ Improving the mental health and wellbeing of young people is a global public hea
 - *Growing stale*: health economic models are rarely updated, meaning they can lose validity with time (e.g. input data becomes less relevant, new better performing algorithms are not incorporated, sudden major changes in environment / epidemiology / policy / service system are not accounted for).
 
 ## Reponse
-To help address these issues, ready4 is being implemented as a modular and open source computational model of youth mental health that aims to be accountable, reusable and updatable.
+To help address these issues, ready4 is being implemented as a modular and open source computational model of youth mental health that aims to be transparent, reusable and updatable.
 
-### Accountable
+### Transparent
 Model code and data are publicly available in online [code repositories](/docs/software/repositories/) and [data collections](/docs/datasets/finding-data/search/). Algorithms are [documented and transparently and regularly tested](/docs/software/libraries/documentation/). Model development occurs [in the open](https://github.com/ready4-dev) and [invites community participation](/community/), with each individual's [contribution](/docs/contribution-guidelines/) publicly identifiable. [Analyses](/docs/analyses/) are [reproducible and replicable](/docs/getting-started/concepts/reproducible-replicable-generalisable/#reproduction-and-replication).
 
 ### Reusable

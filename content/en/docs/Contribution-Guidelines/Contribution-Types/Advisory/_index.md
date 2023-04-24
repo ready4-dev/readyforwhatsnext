@@ -18,7 +18,7 @@ We need advice:
 
 - to help review and update our [priority goals](/docs/contribution-guidelines/priorities/) and develop, refine and implement strategies for achieving these goals;
 
-- to help plan and execute [modelling projects](docs/getting-started/concepts/project/) that produce [accountable, reusable and updatable](/docs/getting-started/motivation/) models; and
+- to help plan and execute [modelling projects](docs/getting-started/concepts/project/) that produce [transparent, reusable and updatable](/docs/getting-started/motivation/) computational models; and
 
 - to identify how our existing [software](/docs/software/) and [data](/docs/datasets/finding-data/) can be usefully improved.
 

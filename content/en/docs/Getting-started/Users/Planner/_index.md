@@ -17,7 +17,7 @@ If you are an planner, you contribute to policy development or service planning 
 The primary role of planners in ready4 [modelling projects](/docs/getting-started/concepts/project/) is co-design of decision aids that provide [user-interfaces](/docs/software/user-interfaces/) for allow easy configuration of models to run bespoke [analyses](/docs/analyses/).
 
 ## Benefits of using ready4
-We hope that ready4 can provide you with [accountable, reusable and updatable](/docs/getting-started/motivation/) decision support.
+We hope that ready4 can provide you with [transparent reusable and updatable](/docs/getting-started/motivation/) decision support.
 
 ## Contributing to ready4
 The types of [contribution](/docs/contribution-guidelines/) you can make to ready4 include:

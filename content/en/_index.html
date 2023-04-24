@@ -8,8 +8,9 @@ linkTitle =  "ready4"
 <div class="row justify-content-center align-items-center">
                 <div class="col-xl-7 col-lg-6 col-md-6">
                           <h1>
-                            A modular, open source<br />
-                            computational model<br />
+                            A software framework<br />
+                            and computational<br />
+                            economic model<br />
                             of youth mental health
                             </h1>
                             <br />
@@ -30,39 +31,9 @@ linkTitle =  "ready4"
           </div>
             {{< /blocks/cover >}}
 
-{{% blocks/lead color="primary" %}}
-<h1 class="text-center">ready4 takes an <a href="/docs/getting-started/motivation/">accountable, reusable and updatable</a> approach to modelling systems that shape the mental health and wellbeing of young people.</h1>
-
-{{% /blocks/lead %}}
-
-{{< blocks/section color="light">}}
-
-{{< cardpane >}}
-
-{{< card header="<b>People</b>" >}}
-<a href = "/docs/model/using-modules/people/">Currently available modules</a> and <a href = "/docs/model/pipeline/pipeline-people/">unreleased work-in-progress modules</a> for modelling human characteristics, relationships, behaviours, risk factors and outcomes.
-{{< /card >}}
-{{< card header="<b>Places</b>" >}}
-<a href = "/docs/model/using-modules/places/">Currently available modules</a>, an <a href = "/docs/analyses/decision-aids/springtides-app/">illustrative app</a> and <a href = "/docs/model/pipeline/pipeline-places/">unreleased work-in-progress modules</a> for modelling environmental and proximity drivers of access, equity and outcomes.
-{{< /card >}}
-{{< /cardpane >}}
-
-{{< cardpane >}}
-
-{{< card header="<b>Platforms</b>" >}}
-<a href = "/docs/model/pipeline/pipeline-platforms/">Unreleased work-in-progress modules</a> for modelling the staffing, eligibility, processes, referral networks and resource use of support services.
-{{< /card >}}
-{{< card header="<b>Programs</b>" >}}
-<a href = "/docs/model/pipeline/pipeline-programs/">Highly preliminary modules</a> for modelling the affordability, value for money and appropriate targeting of interventions.
-{{< /card >}}
-{{< /cardpane >}}
-
-{{< /blocks/section >}}
-
-
 {{< blocks/lead >}}
 <div class="col">
-<h1 class="text-center">ready4 is advanced through multiple independent <a href="/docs/getting-started/concepts/project/">modelling projects</a>, that can be combined because they adopt a common <a href="/docs/framework/">framework</a> and which are implemented in three steps.</h1>
+<h1 class="text-center">The ready4 <a href="/docs/framework/">software framework</a> supports transparent, reusable and updatable computational models that are implemented in three steps.</h1>
 </div>
 
 {{< /blocks/lead >}}
@@ -76,60 +47,43 @@ Abstract and [transferable](/docs/getting-started/concepts/transferable/) data s
 Data specific to a decision context and set of assumptions are added to data structures.
 {{% /blocks/feature %}}
 
-{{% blocks/feature icon="fas fa-chart-line" title="[3. Run Analyses](/docs/analyses/)" %}}
+{{% blocks/feature icon="fas fa-chart-bar" title="[3. Run Analyses](/docs/analyses/)" %}}
 Algorithms are applied to data contained in data structures to generate insight.
 {{% /blocks/feature %}}
 
-
 {{< /blocks/section >}}
 
+{{% blocks/lead color="primary" %}}
+<h1 class="text-center">The ready4 <a href="/docs/model/">computational model</a> is being implemented by developing and combining models in six economic domains (<a href ="https://doi.org/10.1016/j.jhealeco.2012.03.002">Wagstaff and Culyer</a>) of youth mental health.</h1>
 
-{{< blocks/lead>}}
-
-<div class="col-12">
-<h1 class="text-center">ready4 has been developed for three main <a href = "/docs/getting-started/users/">types of user.</h1>
-</div>
-
-{{< /blocks/lead >}}
+{{% /blocks/lead %}}
 
 {{< blocks/section color="dark">}}
 
-{{% blocks/feature icon="fas fa-chalkboard-teacher" title="[Coders](/docs/getting-started/users/coder/)"  %}}
-[Contribute](/docs/contribution-guidelines/contribution-types/code/) to [software](/docs/software/) with a social purpose - help [author](/docs/model/authoring-modules/) ready4 [modules](/docs/getting-started/concepts/module/).
+{{% blocks/feature icon="fas fa-heartbeat" title="Health and its value"  %}}
+Valuation of youth mental health outcomes through the [development](/docs/model/using-modules/people/map-to-utility/) and [use](/docs/model/using-modules/people/predict-utility/) of utility mapping models.
 {{% /blocks/feature %}}
 
-
-{{% blocks/feature icon="fas fa-user-cog" title="[Modellers](/docs/getting-started/users/modeller/)"  %}}
-[Use ready4 modules](/docs/model/using-modules/) to undertake novel modelling analyses and to [author and share model datasets](/docs/datasets/authoring-data/).
+{{% blocks/feature icon="fas fa-arrows-alt" title="Determinants of health"  %}}
+[Synthetic populations with risk and protective factors](/docs/model/pipeline/pipeline-people/) for mental disorders.
 {{% /blocks/feature %}}
 
-
-{{% blocks/feature icon="fas fa-handshake" title="[Planners](/docs/getting-started/users/planner/)"  %}}
-Co-develop, commission and use [decision-aids](/docs/analyses/decision-aids/) built from ready4 modules and data.
+{{% blocks/feature icon="fa-chart-area" title="Demand for  healthcare"  %}}
+[Spatial epidemiology](/docs/model/using-modules/places/) and [helpseeking choice](/docs/model/using-modules/people/predict-choice/) models.
 {{% /blocks/feature %}}
 
-{{< /blocks/section >}}
-
-{{< blocks/lead >}}
-
-<div class="col-12">
-<h1 class="text-center">Other <a href = "/docs/getting-started/stakeholders/">stakeholders</a> are invited to join and <a href = "/docs/contribution-guidelines/contribution-types/">contribute</a> to the ready4  <a href = "/community/">community</a>.</h1>
-</div>
-
-{{< /blocks/lead >}}
-
-{{< blocks/section >}}
-
-{{% blocks/feature icon="fas fa-comment-dollar" title="[Funders](/docs/getting-started/stakeholders/funders/)"  %}}
-Accelerate and enhance our impact by [financing our development](/docs/contribution-guidelines/contribution-types/funding/).
+{{% blocks/feature icon="fa-chart-line" title="Supply of healthcare"  %}}
+Models of [primary and specialist youth mental health services](/docs/model/pipeline/pipeline-platforms/).
 {{% /blocks/feature %}}
 
-{{% blocks/feature icon="fas fa-book-reader" title="[Researchers](/docs/getting-started/stakeholders/researchers/)" %}}
-Develop and implement [reproducible, replicable](/docs/getting-started/concepts/reproducible-replicable-generalisable/) and [generalisable](/docs/getting-started/concepts/transferable/) research.
+{{% blocks/feature icon="fas fa-people-carry" title="Efficiency and equity" %}}
+Models to assess distributional impacts and optimal targeting of [youth mental health care provision](/docs/model/pipeline/pipeline-platforms/).
 {{% /blocks/feature %}}
 
-{{% blocks/feature icon="fas fa-user-friends" title="[Young people](/docs/getting-started/stakeholders/young-people/)" %}}
-[Help shape our priorities](/docs/contribution-guidelines/contribution-types/advisory/).
+{{% blocks/feature icon="fas fa-comment-dollar" title="Economic evaluation" %}}
+Models to assess the [cost](/docs/model/pipeline/pipeline-programs/) and [cost-utility](docs/model/using-modules/people/assess-cost-utility/) of competing youth mental health policy and system design options.
 {{% /blocks/feature %}}
 
 {{< /blocks/section >}}
+
+

@@ -11,19 +11,19 @@ description: >
 ---
 
 ## What is ready4?
-ready4 is a [modular](/docs/getting-started/concepts/module/) computational model of the systems that shape young people's mental health that is being developed as an [open source](/docs/software/terms/licenses/) project led by [researchers at Orygen and Monash University](/about/). 
+ready4 is a software framework and computational model of the economic dimensions of young people's mental health that is being developed as an [open source](/docs/software/terms/licenses/) project led by [researchers at Orygen and Monash University](/about/). 
+
+## What is a software framework?
+A [software framework](/docs/framework/) is a shared technology that can be used by multiple teams to collaboratively author [software](/docs/getting-started/software). The ready4 framework is implemented in R and aims to support the development of computational models that are [transparent, reusable and updatable](/docs/getting-started/motivation/).
 
 ## What is a computational model?
 A [computational model](/docs/getting-started/concepts/model) is a simplified representation of a system of interest that is implemented in computer code.
 
-## What makes it modular?
+## What makes ready4 modular?
 The [paradigms we use](/docs/framework/implementation/paradigm/) for computational model development allow individual model components ([modules](/docs/framework/implementation/modularity/)) to be independently [reused](/docs/model/using-modules/) (in other models) and safely and flexibly [combined](/docs/framework/implementation/paradigm/object-oriented/#modular-computational-models) (to model more extensive systems).
 
-## How is that achieved?
-To facilitate interoperability between modules developed by multiple modelling teams, we have defined a [framework](/docs/framework/) for model development that comprises a set of explicit [standards](/docs/framework/standards) and the [software](/docs/getting-started/software) ([currently](/docs/contribution-guidelines/priorities/integrate/), written in R) to implement modules that adhere to those standards.
-
 ## Why is that useful?
-Modelling youth mental health systems is a complex task - that means it is easy to make mistakes and is more likely to be done well if models are implemented to be [accountable, reusable and updatable](/docs/getting-started/motivation/). We hope that ready4 will support these goals and in so doing help to [share data](/docs/datasets), improve the [replicability](/docs/getting-started/concepts/reproducible-replicable-generalisable/) and [transferability](/docs/getting-started/concepts/transferable/) of [modelling analyses](/docs/analyses) and [generate valuable insights](/docs/examples) for youth mental health policymakers and system planners.
+We hope that ready4 will help to [share data](/docs/datasets), improve the [replicability](/docs/getting-started/concepts/reproducible-replicable-generalisable/) and [transferability](/docs/getting-started/concepts/transferable/) of [modelling analyses](/docs/analyses) and [generate valuable insights](/docs/examples) for youth mental health policymakers and system planners.
 
 ## Who is it for?
 ready4 is designed to be primarily used by [coders](/docs/getting-started/users/coder), [modellers](/docs/getting-started/users/modeller) and [planners](/docs/getting-started/users/planner), working collaboratively on [computational modelling projects](/docs/getting-started/concepts/project/) in which other stakeholders such as [funders](/docs/getting-started/stakeholders/funders/), [researchers](/docs/getting-started/stakeholders/researchers/) and [young people](/docs/getting-started/stakeholders/young-people/) make essential contributions. 
