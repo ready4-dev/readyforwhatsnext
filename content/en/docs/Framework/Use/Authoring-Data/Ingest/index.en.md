@@ -3,7 +3,7 @@ title: "Ingest data from an open access repository"
 linkTitle: "Ingest"
 date: "2022-12-24"
 description: "A tutorial from the Acumen website about using ready4 to search and retrieve data from the Australian Mental Health Systems Models Dataverse."
-weight: 92
+weight: 91
 categories: 
 - Documentation
 tags: 

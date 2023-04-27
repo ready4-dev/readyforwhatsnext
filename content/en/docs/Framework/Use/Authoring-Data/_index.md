@@ -1,6 +1,6 @@
 
 ---
-title: "Author and share model data"
+title: "Ingest, label and share model data"
 linkTitle: "Add data"
 date: 2017-01-05
 weight: 70
