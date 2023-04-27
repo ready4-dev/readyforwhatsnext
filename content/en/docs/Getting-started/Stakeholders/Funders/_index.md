@@ -17,7 +17,7 @@ There are six main types of funder that can [provide cash and/or in kind support
 
 2. Government departments can support the development of ready4 as part of programs to enhance data analysis and modelling capability in youth mental health by providing support to develop core ready4 infrastructure (e.g. our [software maintenance](/docs/contribution-guidelines/priorities/curate/) and [community development](/docs/contribution-guidelines/priorities/support/) priorities). When commissioning new modelling projects, governments could make providing open access to code and (to the greatest extent feasible, balancing confidentiality considerations) data a requirement of all applicants.
 
-3. Youth mental health service commissioners can commission data analysis and modelling projects that develop novel [decision aids](/docs/analyses/decision-aids/) and to [apply existing ready4 modules to undertake new analyses](/docs/contribution-guidelines/priorities/apply/).
+3. Youth mental health service commissioners can commission data analysis and modelling projects that develop novel [decision aids](/docs/model/analyses/decision-aids/) and to [apply existing ready4 modules to undertake new analyses](/docs/contribution-guidelines/priorities/apply/).
 
 4. Philanthropic donors can help accelerate our development and enhance our impact by supporting us to [bring our existing in-development software to launch](/docs/contribution-guidelines/priorities/launch/) and to further [extend the ready4 model](/docs/contribution-guidelines/priorities/extend/).
 

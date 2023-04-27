@@ -53,7 +53,7 @@ library</a>.</p>
 <pre class="r"><code>library(ready4)</code></pre>
 <pre class="r"><code>libraries_tb &lt;- make_libraries_tb(&quot;modules&quot;)</code></pre>
 <p>Module libraries are thematically grouped under one of four
-“sections” of the ready4 model, one each for modelling <a href="/docs/model/using-modules/people/">People</a>, <a href="/docs/model/using-modules/places/">Places</a>, <a href="/docs/model/using-modules/platforms/">Platforms</a> and <a href="/docs/model/using-modules/programs/">Programs</a>. We can use the
+“sections” of the ready4 model, one each for modelling <a href="/docs/model/modules/using-modules/people/">People</a>, <a href="/docs/model/modules/using-modules/places/">Places</a>, <a href="/docs/model/modules/using-modules/platforms/">Platforms</a> and <a href="/docs/model/modules/using-modules/programs/">Programs</a>. We can use the
 <code>print_packages</code> function to display the module libraries
 currently available for each section (currently, there are no publicly
 available libraries of ready4 modules for modelling platforms).</p>

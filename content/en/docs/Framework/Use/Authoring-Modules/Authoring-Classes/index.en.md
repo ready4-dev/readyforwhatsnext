@@ -1,6 +1,6 @@
 ---
 title: "Authoring model data structures"
-linkTitle: "Data structures"
+linkTitle: "Structures"
 date: "2022-12-24"
 description: "The ready4class R package supports partially automated and standardised workflows for defining the data structures to be used in computational models."
 weight: 62

@@ -14,7 +14,7 @@ tags:
 output: hugodown::md_document
 ---
 
-Currently available (as at  `r format(Sys.Date(),"%d-%b-%Y")`) releases of [module libraries](/docs/software/libraries/types/module/) for [modelling places](/docs/model/using-modules/places/) are reproduced below.
+Currently available (as at  `r format(Sys.Date(),"%d-%b-%Y")`) releases of [module libraries](/docs/software/libraries/types/module/) for [modelling places](/docs/model/modules/using-modules/places/) are reproduced below.
 
 ````{=html}
 ```{r, echo=FALSE, message=F,results='asis'}

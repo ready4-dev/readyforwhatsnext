@@ -17,7 +17,7 @@ rmd_hash: a7986811d965c69a
 
 ---
 
-Currently available (as at 18-Jan-2023) releases of [subroutines](/docs/analyses/reporting-templates/) are described below.
+Currently available (as at 18-Jan-2023) releases of [subroutines](/docs/model/analyses/reporting-templates/) are described below.
 
 <html>
 

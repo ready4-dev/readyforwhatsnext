@@ -15,7 +15,7 @@ rmd_hash: 588f15e2baa7bda0
 
 ---
 
-Releases of the [dataset](/docs/datasets/) of posters from academic conferences are reproduced below.
+Releases of the [dataset](/docs/model/datasets/) of posters from academic conferences are reproduced below.
 
 <html>
 

@@ -16,17 +16,17 @@ description: >
 ## What?
 Provide cash or in-kind resources to support us to achieve any or all of our priority goals: 
 
-1. [Launching the ready4 MVP systems model](/docs/contribution-guidelines/priorities/launch/).
+- Priority 1. [Launching the ready4 MVP systems model](/docs/contribution-guidelines/priorities/launch/).
 
-2. [Maintaining ready4](/docs/contribution-guidelines/priorities/curate/).
+- Priority 2. [Maintaining ready4](/docs/contribution-guidelines/priorities/curate/).
 
-3. [Applying ready4](/docs/contribution-guidelines/priorities/apply/).
+- Priority 3. [Applying ready4](/docs/contribution-guidelines/priorities/apply/).
 
-4. [Growing a ready4 community](/docs/contribution-guidelines/priorities/support/).
+- Priority 4. [Growing a ready4 community](/docs/contribution-guidelines/priorities/support/).
 
-5. [Extending ready4](/docs/contribution-guidelines/priorities/extend/).
+- Priority 5. [Extending ready4](/docs/contribution-guidelines/priorities/extend/).
 
-6. [Integrating ready4 with other tools](/docs/contribution-guidelines/priorities/integrate/).
+- Priority 6. [Integrating ready4 with other tools](/docs/contribution-guidelines/priorities/integrate/).
 
 ## Who?
 We are seeking support from [multiple different types of funder](/docs/getting-started/stakeholders/funders/). At this early stage of our development we would expect that the most impactful way of supporting ready4's development will be to award funding for that purpose directly to ready4's two institutional sponsors: [Orygen](https://www.orygen.org.au) and [Monash University](https://research.monash.edu/en/organisations/sphpm-health-economics-group). Other ways to support ready4 will be to fund [ready4 modelling projects](/docs/getting-started/concepts/project/) led by other research institutions and which may or may not be formally affiliated with us. 

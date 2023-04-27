@@ -14,7 +14,7 @@ tags:
 output: hugodown::md_document
 ---
 
-Currently available (as at  `r format(Sys.Date(),"%d-%b-%Y")`) releases of [module libraries](/docs/software/libraries/types/module/) for [modelling people](/docs/model/using-modules/people/) are reproduced below.
+Currently available (as at  `r format(Sys.Date(),"%d-%b-%Y")`) releases of [module libraries](/docs/software/libraries/types/module/) for [modelling people](/docs/model/modules/using-modules/people/) are reproduced below.
 
 ````{=html}
 ```{r, echo=FALSE, message=F,results='asis'}

@@ -10,7 +10,7 @@ tags:
 categories:
 - Documentation
 description: >
-  We want [coders](/docs/getting-started/users/coder/) and [modellers](/docs/getting-started/users/modeller/) working in languages such as python to be able to readily [use](/docs/model/using-modules/) and contribute to ready4.
+  We want [coders](/docs/getting-started/users/coder/) and [modellers](/docs/getting-started/users/modeller/) working in languages such as python to be able to readily [use](/docs/model/modules/using-modules/) and contribute to ready4.
 ---
 
 

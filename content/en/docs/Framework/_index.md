@@ -9,7 +9,7 @@ categories:
 tags:
 - Framework
 description: >
-  The ready4 framework comprises a set of standards and the [software](/docs/software/) to implement it.
+  The ready4 software framework provides tools for [coders](/docs/getting-started/users/coder/) and [modelers](/docs/getting-started/users/modeller/) to implement [transparent, reusable and updatable](/docs/framework/standards/) computational models.
 ---
 
 

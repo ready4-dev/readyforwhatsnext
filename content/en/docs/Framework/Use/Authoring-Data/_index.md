@@ -1,7 +1,7 @@
 
 ---
-title: "Authoring model data"
-linkTitle: "Authoring data"
+title: "Author and share model data"
+linkTitle: "Add data"
 date: 2017-01-05
 weight: 70
 categories: 

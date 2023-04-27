@@ -17,7 +17,7 @@ rmd_hash: af781db2d85ff8c8
 
 ---
 
-Releases of the [datasets](/docs/datasets/) of the taxonomies that support a [consistent code house-style and automation of documentation autoring](/docs/model/authoring-modules/authoring-algorithms/) are described below.
+Releases of the [datasets](/docs/model/datasets/) of the taxonomies that support a [consistent code house-style and automation of documentation autoring](/docs/framework/use/authoring-modules/authoring-algorithms/) are described below.
 
 <html>
 

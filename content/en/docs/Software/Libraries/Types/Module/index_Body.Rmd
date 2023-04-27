@@ -16,7 +16,7 @@ library(ready4)
 libraries_tb <- make_libraries_tb("modules")
 ```
 
-Module libraries are thematically grouped under one of four "sections" of the ready4 model, one each for modelling [People](/docs/model/using-modules/people/), [Places](/docs/model/using-modules/places/), [Platforms](/docs/model/using-modules/platforms/) and [Programs](/docs/model/using-modules/programs/). We can use the `print_packages` function to display the module libraries currently available for each section (currently, there are no publicly available libraries of ready4 modules for modelling platforms).
+Module libraries are thematically grouped under one of four "sections" of the ready4 model, one each for modelling [People](/docs/model/modules/using-modules/people/), [Places](/docs/model/modules/using-modules/places/), [Platforms](/docs/model/modules/using-modules/platforms/) and [Programs](/docs/model/modules/using-modules/programs/). We can use the `print_packages` function to display the module libraries currently available for each section (currently, there are no publicly available libraries of ready4 modules for modelling platforms).
 
 ### Module libraries for modelling people
 

@@ -24,7 +24,7 @@ c("Modularity","Paradigm", "Syntax") %>%
                        is_rmd_1L_lgl = F)
 # Render Module articles
 c("Authoring-Algorithms","Authoring-Classes", "Packaging-Modules") %>%
-  write_to_render_post(path_to_main_dir_1L_chr = "~/Documents/WIP/ready4/Code/Brochure/HTML/ready4web/content/en/docs/Model/Authoring-Modules",
+  write_to_render_post(path_to_main_dir_1L_chr = "~/Documents/WIP/ready4/Code/Brochure/HTML/ready4web/content/en/docs/framework/use/authoring-modules",
                        consent_1L_chr = "Y",
                        is_rmd_1L_lgl = F)
 c("Add-Metadata",
@@ -36,7 +36,7 @@ c("Add-Metadata",
   "Score-Health-Utility", # Add scroll box args
   "Validate-Variables"
   ) %>%
-  write_to_render_post(path_to_main_dir_1L_chr = "~/Documents/WIP/ready4/Code/Brochure/HTML/ready4web/content/en/docs/Model/Using-Modules/People",
+  write_to_render_post(path_to_main_dir_1L_chr = "~/Documents/WIP/ready4/Code/Brochure/HTML/ready4web/content/en/docs/model/modules/using-modules/People",
                        consent_1L_chr = "Y",
                        is_rmd_1L_lgl = F)
 write_to_render_post("Finding-Modules",
@@ -45,18 +45,18 @@ write_to_render_post("Finding-Modules",
                      is_rmd_1L_lgl = F)
 # Render Dataset articles
 c("Label-Data","Share-Data") %>%
-write_to_render_post(path_to_main_dir_1L_chr = "~/Documents/WIP/ready4/Code/Brochure/HTML/ready4web/content/en/docs/Datasets/Authoring-Data",
+write_to_render_post(path_to_main_dir_1L_chr = "~/Documents/WIP/ready4/Code/Brochure/HTML/ready4web/content/en/docs/framework/use/authoring-data",
                      consent_1L_chr = "Y",
                      is_rmd_1L_lgl = F)
 c("Ingest", "Search") %>%
-  write_to_render_post(path_to_main_dir_1L_chr = "~/Documents/WIP/ready4/Code/Brochure/HTML/ready4web/content/en/docs/Datasets/Finding-Data",
+  write_to_render_post(path_to_main_dir_1L_chr = "~/Documents/WIP/ready4/Code/Brochure/HTML/ready4web/content/en/docs/model/datasets/Finding-Data",
                        consent_1L_chr = "Y",
                        is_rmd_1L_lgl = F)
-write_to_force_links_in("~/Documents/WIP/ready4/Code/Brochure/HTML/ready4web/content/en/docs/Datasets/Finding-Data/Search/index.en.md",
+write_to_force_links_in("~/Documents/WIP/ready4/Code/Brochure/HTML/ready4web/content/en/docs/model/datasets/Finding-Data/Search/index.en.md",
                         consent_1L_chr = "Y")
 # Render Analyses articles
 c("Scientific-Summaries") %>% # Do not evaluate write fns, add scroll text and then restore link to online RMD
-  write_to_render_post(path_to_main_dir_1L_chr = "~/Documents/WIP/ready4/Code/Brochure/HTML/ready4web/content/en/docs/Analyses/Authoring-Analyses",
+  write_to_render_post(path_to_main_dir_1L_chr = "~/Documents/WIP/ready4/Code/Brochure/HTML/ready4web/content/en/docs/framework/use/authoring-analyses",
                        consent_1L_chr = "Y",
                        is_rmd_1L_lgl = F)
 # Render program and sub-routine summaries
@@ -65,10 +65,10 @@ c("Programs",
   write_to_render_post("~/Documents/WIP/ready4/Code/Brochure/HTML/ready4web/content/en/docs/software/Executables",
                        consent_1L_chr = "Y")
 c("Clinical-Primary") %>% # Do not evaluate write fns, add scroll text and then restore link to online RMD
-  write_to_render_post(path_to_main_dir_1L_chr = "~/Documents/WIP/ready4/Code/Brochure/HTML/ready4web/content/en/docs/Analyses/Replication-Code/Make-Fakes",
+  write_to_render_post(path_to_main_dir_1L_chr = "~/Documents/WIP/ready4/Code/Brochure/HTML/ready4web/content/en/docs/model/analyses/Replication-Code/Make-Fakes",
                        consent_1L_chr = "Y",
                        is_rmd_1L_lgl = F)
-#write_to_trim_html("~/Documents/WIP/ready4/Code/Brochure/HTML/ready4web/content/en/docs/Analyses/Replication-Code/Make-Fakes/Clincal_Primary.md")
+#write_to_trim_html("~/Documents/WIP/ready4/Code/Brochure/HTML/ready4web/content/en/docs/model/analyses/Replication-Code/Make-Fakes/Clincal_Primary.md")
 ###
 ###
 ### BLOG SECTION
@@ -95,14 +95,14 @@ c("Programs",
   write_to_render_post("~/Documents/WIP/ready4/Code/Brochure/HTML/ready4web/content/en/blog/releases/executables",
                        consent_1L_chr = "Y")
 #
-# write_to_copy_rmds(dir_path_1L_chr = "~/Documents/WIP/ready4/Code/Brochure/HTML/ready4web/content/en/docs/Model/Using-Modules/People",
+# write_to_copy_rmds(dir_path_1L_chr = "~/Documents/WIP/ready4/Code/Brochure/HTML/ready4web/content/en/docs/model/modules/using-modules/People",
 #                    fl_nm_1L_chr = "TEST",
 #                    rmds_dir_1L_chr = "R/RMD Templates/Include_HTML")
 # c("Map-Utility/aqol6dmap_use.md",
 #   "Map-Utility/ttu_lng_aqol6d_csp.md",
 #   "Model-Choice/dce_sa_analysis.md",
 #   "Model-Choice/dce_sa_design.md") %>%
-#   purrr::walk(~write_new_credentials(paste0("~/Documents/WIP/ready4/Code/Brochure/HTML/ready4web/content/en/docs/Analyses/Replication-Code/",.x),
+#   purrr::walk(~write_new_credentials(paste0("~/Documents/WIP/ready4/Code/Brochure/HTML/ready4web/content/en/docs/model/analyses/Replication-Code/",.x),
 #                                      new_credentials_1L_chr = "d7d86c443e2b45c1b43c7db36ad50bf3",
 #                                      old_credentials_1L_chr = "93f800c0e2594268b9482bea99e2e434", 
 #                                      consent_1L_chr = "Y"))

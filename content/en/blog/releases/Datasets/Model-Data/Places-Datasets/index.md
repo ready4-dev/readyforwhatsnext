@@ -15,7 +15,7 @@ rmd_hash: 6b032a69f6a5570b
 
 ---
 
-Releases of the [datasets](/docs/datasets/) that can be used with [modules](/docs/getting-started/concepts/module/) for [modelling places](/docs/model/using-modules/places/) are reproduced below.
+Releases of the [datasets](/docs/model/datasets/) that can be used with [modules](/docs/getting-started/concepts/module/) for [modelling places](/docs/model/modules/using-modules/places/) are reproduced below.
 
 <html>
 

@@ -15,7 +15,7 @@ tags:
 output: hugodown::md_document
 ---
 
-Currently available (as at  `r format(Sys.Date(),"%d-%b-%Y")`) releases of [subroutines](/docs/analyses/reporting-templates/) are described below.
+Currently available (as at  `r format(Sys.Date(),"%d-%b-%Y")`) releases of [subroutines](/docs/model/analyses/reporting-templates/) are described below.
 
 ````{=html}
 ```{r, echo=FALSE, message=F,results='asis'}

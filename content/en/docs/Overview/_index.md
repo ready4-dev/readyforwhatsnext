@@ -20,10 +20,10 @@ A [software framework](/docs/framework/) is a shared technology that can be used
 A [computational model](/docs/getting-started/concepts/model) is a simplified representation of a system of interest that is implemented in computer code.
 
 ## What makes ready4 modular?
-The [paradigms we use](/docs/framework/implementation/paradigm/) for computational model development allow individual model components ([modules](/docs/framework/implementation/modularity/)) to be independently [reused](/docs/model/using-modules/) (in other models) and safely and flexibly [combined](/docs/framework/implementation/paradigm/object-oriented/#modular-computational-models) (to model more extensive systems).
+The [paradigms we use](/docs/framework/implementation/paradigm/) for computational model development allow individual model components ([modules](/docs/framework/implementation/modularity/)) to be independently [reused](/docs/model/modules/using-modules/) (in other models) and safely and flexibly [combined](/docs/framework/implementation/paradigm/object-oriented/#modular-computational-models) (to model more extensive systems).
 
 ## Why is that useful?
-We hope that ready4 will help to [share data](/docs/datasets), improve the [replicability](/docs/getting-started/concepts/reproducible-replicable-generalisable/) and [transferability](/docs/getting-started/concepts/transferable/) of [modelling analyses](/docs/analyses) and [generate valuable insights](/docs/examples) for youth mental health policymakers and system planners.
+We hope that ready4 will help to [share data](/docs/model/datasets), improve the [replicability](/docs/getting-started/concepts/reproducible-replicable-generalisable/) and [transferability](/docs/getting-started/concepts/transferable/) of [modelling analyses](/docs/model/analyses) and [generate valuable insights](/docs/examples) for youth mental health policymakers and system planners.
 
 ## Who is it for?
 ready4 is designed to be primarily used by [coders](/docs/getting-started/users/coder), [modellers](/docs/getting-started/users/modeller) and [planners](/docs/getting-started/users/planner), working collaboratively on [computational modelling projects](/docs/getting-started/concepts/project/) in which other stakeholders such as [funders](/docs/getting-started/stakeholders/funders/), [researchers](/docs/getting-started/stakeholders/researchers/) and [young people](/docs/getting-started/stakeholders/young-people/) make essential contributions. 

@@ -13,7 +13,7 @@ tags:
 output: hugodown::md_document
 ---
 
-Releases of the [dataset](/docs/datasets/) of posters from academic conferences are reproduced below.
+Releases of the [dataset](/docs/model/datasets/) of posters from academic conferences are reproduced below.
 
 ````{=html}
 ```{r, echo=FALSE, message=F, results='asis'}

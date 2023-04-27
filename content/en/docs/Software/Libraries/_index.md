@@ -8,6 +8,6 @@ tags:
 - Software
 - Software - libraries
 description: >
-  Code libraries are used to distribute software for applying our framework and implementing computational model modules. 
+  Code libraries are used to distribute our [software framework](/docs/framework/) and [modules of our computational model](/docs/model/modules/). 
 ---
 

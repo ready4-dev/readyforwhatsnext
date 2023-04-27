@@ -15,7 +15,7 @@ categories:
 - Documentation
 weight: 97
 description: >
- We previously developed a user interface for the epidemiology modules of our Springtides [model of places](/docs/model/using-modules/places/).
+ We previously developed a user interface for the epidemiology modules of our Springtides [model of places](/docs/model/modules/using-modules/places/).
 ---
 
 {{% pageinfo %}}

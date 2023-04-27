@@ -13,7 +13,7 @@ tags:
 output: hugodown::md_document
 ---
 
-Releases of the [datasets](/docs/datasets/) that can be used with [modules](/docs/getting-started/concepts/module/) for [modelling places](/docs/model/using-modules/places/) are reproduced below.
+Releases of the [datasets](/docs/model/datasets/) that can be used with [modules](/docs/getting-started/concepts/module/) for [modelling places](/docs/model/modules/using-modules/places/) are reproduced below.
 
 ````{=html}
 ```{r, echo=FALSE, message=F, results='asis'}

@@ -15,7 +15,7 @@ rmd_hash: 6ac9ec1a61868610
 
 ---
 
-Releases of the [datasets](/docs/datasets/) that are intended inputs or outputs of hypothetical applications of [modules](/docs/getting-started/concepts/module/) are reproduced below.
+Releases of the [datasets](/docs/model/datasets/) that are intended inputs or outputs of hypothetical applications of [modules](/docs/getting-started/concepts/module/) are reproduced below.
 
 <html>
 

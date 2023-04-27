@@ -18,14 +18,14 @@ The distinctions we make between reproduction and replication have been guided b
 
 ### Meanings
 #### Reproduction
-Applying the same [analysis](/docs/analyses/) code to the same input [data](/docs/datasets/) with the expectation of generating identical outputs (with the exception of trivial artefacts like datestamps for when analysis reports were produced).
+Applying the same [analysis](/docs/model/analyses/) code to the same input [data](/docs/model/datasets/) with the expectation of generating identical outputs (with the exception of trivial artefacts like datestamps for when analysis reports were produced).
 
 #### Replication
 Applying analysis code used in a study to new input data. The analysis code is reused with only minimal edits that are necessary to account for differences in input data paths and variable names and to study metadata (e.g. investigator names, sample descriptions). The new data can be real or fake, but will include the same structure and concepts / measures as those found in the original study's dataset. If the new data is a sample from the same population as the original study, then the expectation when undertaking replications is for results across studies to be broadly similar. 
 
 ### Examples
-[Examples of both reproduction and replication code](/docs/analyses/replication-code/) are available. When publishing analysis code we try to adopt (there are exceptions) the following rules of thumb: 
+[Examples of both reproduction and replication code](/docs/model/analyses/replication-code/) are available. When publishing analysis code we try to adopt (there are exceptions) the following rules of thumb: 
 
-1. If the data required to re-run a study analysis are publicly available (or declared by the analysis program itself), then we publish the code as a reproduction program (e.g. [this program for creating a synthetic population](/docs/analyses/replication-code/make-fakes/clinical-primary/)).
+1. If the data required to re-run a study analysis are publicly available (or declared by the analysis program itself), then we publish the code as a reproduction program (e.g. [this program for creating a synthetic population](/docs/model/analyses/replication-code/make-fakes/clinical-primary/)).
 
-2. If the data required to re-run a study analysis are not publicly available, we publish the replication version of the code. The replication version of the code may be configured to ingest a synthetic (fake) representation of the study dataset as with [this utility mapping replication program](/docs/analyses/replication-code/map-utility/ttu_lng_aqol6d_csp/). Details of the (minimal) steps required to revert the replication code to a version that can be used for reproduction purposes are typically embedded within the program itself.
+2. If the data required to re-run a study analysis are not publicly available, we publish the replication version of the code. The replication version of the code may be configured to ingest a synthetic (fake) representation of the study dataset as with [this utility mapping replication program](/docs/model/analyses/replication-code/map-utility/ttu_lng_aqol6d_csp/). Details of the (minimal) steps required to revert the replication code to a version that can be used for reproduction purposes are typically embedded within the program itself.

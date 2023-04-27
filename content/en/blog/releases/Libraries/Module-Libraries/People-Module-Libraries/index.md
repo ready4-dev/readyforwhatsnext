@@ -16,7 +16,7 @@ rmd_hash: cf8e13b0f3e9ce7c
 
 ---
 
-Currently available (as at 06-Mar-2023) releases of [module libraries](/docs/software/libraries/types/module/) for [modelling people](/docs/model/using-modules/people/) are reproduced below.
+Currently available (as at 06-Mar-2023) releases of [module libraries](/docs/software/libraries/types/module/) for [modelling people](/docs/model/modules/using-modules/people/) are reproduced below.
 
 <html>
 

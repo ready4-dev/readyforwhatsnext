@@ -1,6 +1,6 @@
 ---
-title: "Authoring reproducible analyses"
-linkTitle: "Authoring"
+title: "Author and share reproducible analyses"
+linkTitle: "Run analyses"
 date: 2017-01-05
 tags:
 - Programming
@@ -15,6 +15,6 @@ categories:
 - Documentation
 weight: 92
 description: >
-  Tools from the ready4show R package support authoring of programs and subroutines to implement and report analyses with ready4.
+  Tools from the ready4show R package support authoring of programs and subroutines to implement and report [analyses](/docs/model/analyses/) with ready4.
 ---
 

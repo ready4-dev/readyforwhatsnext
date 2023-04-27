@@ -16,7 +16,7 @@ rmd_hash: 5b65e06cbb759b91
 
 ---
 
-Currently available (as at 06-Mar-2023) releases of [module libraries](/docs/software/libraries/types/module/) for [modelling places](/docs/model/using-modules/places/) are reproduced below.
+Currently available (as at 06-Mar-2023) releases of [module libraries](/docs/software/libraries/types/module/) for [modelling places](/docs/model/modules/using-modules/places/) are reproduced below.
 
 <html>
 

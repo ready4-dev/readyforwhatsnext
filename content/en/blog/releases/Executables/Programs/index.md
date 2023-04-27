@@ -17,7 +17,7 @@ rmd_hash: 0fe54d20a81dd4f6
 
 ---
 
-Currently available (as at 18-Jan-2023) releases of [analysis programs](/docs/analyses/replication-code/) are described below.
+Currently available (as at 18-Jan-2023) releases of [analysis programs](/docs/model/analyses/replication-code/) are described below.
 
 <html>
 
