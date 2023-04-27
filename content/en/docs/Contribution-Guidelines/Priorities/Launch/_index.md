@@ -1,5 +1,5 @@
 ---
-title: "Priority 1: Launch ready4 Minimum Viable Product (MVP) systems model"
+title: "Priority 1: Launch ready4 Minimum Viable Product (MVP)"
 linkTitle: "Launch"
 date: 2017-01-05
 weight: 301
@@ -18,7 +18,7 @@ description: >
 All our [software](/docs/software/), regardless of [status](/docs/software/status/) is supplied [without any warranty](/docs/software/terms/disclaimer/). However, our views about whether an item of software is potentially appropriate for others to use in undertaking real world [analyses](/docs/model/analyses/) can be inferred from its release status. If it is not a production release, we probably believe that it needs more development and testing and better [documentation](/docs/software/libraries/documentation/) before it can be used for any purpose other than the specific studies in which we have already applied it. Partly for this reason, it is unlikely that any item of our software will be widely adopted until it is available as a production release. We also cannot meaningfully track uptake of our software until it becomes available in a dedicated production release [repository](/docs/software/repositories/). We need a critical mass of [modules](/docs/getting-started/concepts/module/) available as production releases so that they can be combined to model moderately complex systems.
 
 ## What?
-By bringing all our [current development version](docs/getting-started/software/libraries/types/) and [pipeline](/docs/model/modules/pipeline/) libraries to production release, we aim to launch the **ready4 Minimum Viable Product (MVP) systems model**. The MVP model will comprise our [modelling framework](/docs/framework/) plus an initial skeleton of production ready modules for modelling [people](/docs/model/modules/using-modules/people/), [places](/docs/model/modules/using-modules/places/), [platforms](/docs/model/modules/using-modules/platforms/) and [programs](/docs/model/modules/using-modules/programs/). 
+By bringing all our [current development version](docs/getting-started/software/libraries/types/) and [pipeline](/docs/model/modules/pipeline/) libraries to production release, we aim to launch the **ready4 Minimum Viable Product (MVP)**. The MVP will comprise our [software framework](/docs/framework/) plus an initial skeleton of production ready modules for modelling [people](/docs/model/modules/using-modules/people/), [places](/docs/model/modules/using-modules/places/), [platforms](/docs/model/modules/using-modules/platforms/) and [programs](/docs/model/modules/using-modules/programs/). 
 
 The most important types of help we need with achieving this goal are [funding](/docs/contribution-guidelines/contribution-types/funding/),
 [code contributions](/docs/contribution-guidelines/contribution-types/code/), [community support](/docs/contribution-guidelines/contribution-types/community/) and [advice](/docs/contribution-guidelines/contribution-types/advisory/).
