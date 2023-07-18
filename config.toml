@@ -247,8 +247,8 @@ weight = 14
   
 [[params.versions]]
   version = "v0.1"
-  githubbranch = "v0.1"
-  url = "https://v0-1.ready4-dev.com" #
+  githubbranch = "v0.1-branch"
+  url = "https://v0-1-branch.ready4-dev.com"
 
 
 
