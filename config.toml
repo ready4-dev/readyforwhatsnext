@@ -129,7 +129,7 @@ sidebar_search_disable = true
 # Enable Lunr.js offline search
 #offlineSearch = false
 # Enable Algolia DocSearch
-algolia_docsearch = true
+algolia_docsearch = false
 
 # Enable syntax highlighting and copy buttons on code blocks with Prism
 prism_syntax_highlighting = false #  Consider order with Release menu item
@@ -244,6 +244,11 @@ weight = 14
   version = "v0.0"
   githubbranch = "v0.0-branch"
   url = "https://v0-0-branch.ready4-dev.com"
+  
+[[params.versions]]
+  version = "v0.1"
+  githubbranch = "v0.1"
+  url = "https://v0-1.ready4-dev.com"
 
 
 
