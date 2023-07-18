@@ -239,16 +239,16 @@ weight = 14
    version = "Latest"
    githubbranch = "master"
    url = "https://ready4-dev.com"
+   
+[[params.versions]]
+  version = "v0.1"
+  githubbranch = "v0.1-branch"
+  url = "https://v0-1-branch.ready4-dev.com"
   
 [[params.versions]]
   version = "v0.0"
   githubbranch = "v0.0-branch"
   url = "https://v0-0-branch.ready4-dev.com"
   
-[[params.versions]]
-  version = "v0.1"
-  githubbranch = "v0.1-branch"
-  url = "https://v0-1-branch.ready4-dev.com"
-
 
 
