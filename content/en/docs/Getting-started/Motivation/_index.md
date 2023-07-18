@@ -12,7 +12,7 @@ description: >
 ---
 
 ## Problem
-Improving the mental health and wellbeing of young people is a global public health priority. However, identifying the optimal policy and system design choices to meet this challenge is not straightforward. [Models](/docs/getting-started/concepts/model/) are a potentially useful tool to help decision makers navigate complexity, but can have significant limitations such as:
+[Health economic models](/docs/getting-started/concepts/model/) are a potentially useful tool to help health decision makers navigate complexity, but can have significant limitations such as:
 
 - *Mistakes*: Errors, common in even relatively simple health economic models, become both more likely to occur and more difficult to detect as model complexity grows;
 
@@ -31,6 +31,6 @@ Improving the mental health and wellbeing of young people is a global public hea
 - *Growing stale*: health economic models are rarely updated, meaning they can lose validity with time (e.g. input data becomes less relevant, new better performing algorithms are not incorporated, sudden major changes in environment / epidemiology / policy / service system are not accounted for).
 
 ## Reponse
-To help address these issues, the [ready4 computational model](/docs/model/) is being developed using a [novel software framework](/docs/framework/) to support [transparent, reusable and updatable](/docs/framework/standards/) model implementations.
+To help address these issues, the ready4 [software framework](/docs/framework/) aims to support [transparent, reusable and updatable](/docs/framework/standards/) model implementations using R.
 
 

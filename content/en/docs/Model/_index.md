@@ -9,7 +9,7 @@ categories:
 tags: 
 - Model
 description: >
-  The ready4 [computational model](/docs/getting-started/concepts/model/) is comprised of [modules](/docs/getting-started/concepts/module/) developed with the ready4 [software framework](/docs/framework/). These modules can be re-used and combined to create other computational models. 
+  The ready4 [software framework](/docs/framework/) is currently being used to develop a [modular](/docs/getting-started/concepts/module/) economic [model of youth mental health](/docs/getting-started/concepts/model/). 
 ---
 
 

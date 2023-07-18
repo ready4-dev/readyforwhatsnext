@@ -17,7 +17,7 @@ tags:
 - Use - heterogeneity
 - Use - utility mapping
 description: >
-  See how the [ready4 computational model](/docs/model/) has been applied to real world decision problems.
+  See how ready4 has been applied to [ model](/docs/model/) real world decision problems in youth mental health.
 ---
 
 Some examples of practical applications of ready4 include:
