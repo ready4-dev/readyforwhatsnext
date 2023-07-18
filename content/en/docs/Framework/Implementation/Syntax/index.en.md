@@ -1,7 +1,7 @@
 ---
 title: "Syntax"
 linkTitle: "Syntax"
-date: "2022-12-24"
+date: "2023-07-11"
 description: "ready4 modules use a simple and consistent syntax."
 weight: 63
 categories: 
@@ -18,7 +18,7 @@ tags:
 - Status
 - Status - development
 output: hugodown::md_document
-rmd_hash: 3d4f54c5eed2d91e
+rmd_hash: de162385352d4bd4
 html_dependencies:
 - <script src="kePrint-0.0.1/kePrint.js"></script>
 - <link href="lightable-0.0.1/lightable.css" rel="stylesheet" />
@@ -37,7 +37,7 @@ html_dependencies:
 
 <div class="highlight">
 
-<pre class='chroma'><code class='language-r' data-lang='r'><span><span class='kr'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='o'>(</span><span class='s'><a href='https://ready4-dev.github.io/ready4/'>"ready4"</a></span><span class='o'>)</span> </span></code></pre>
+<pre class='chroma'><code class='language-r' data-lang='r'><span><span class='kr'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='o'>(</span><span class='nv'><a href='https://ready4-dev.github.io/ready4/'>ready4</a></span><span class='o'>)</span> </span></code></pre>
 
 </div>
 

@@ -1,7 +1,7 @@
 ---
 title: "Synthetic (fake) datasets releases"
 linkTitle: "Fake datasets"
-date: "2023-03-06"
+date: "2023-07-18"
 description: "Releases of synthetic (fake) datasets used for teaching and demonstration."
 weight: 700
 categories: 
@@ -11,7 +11,7 @@ tags:
 - Data - datasets
 - Data - datasets (fake)
 output: hugodown::md_document
-rmd_hash: 6ac9ec1a61868610
+rmd_hash: e6c79b7e83eeffac
 
 ---
 
@@ -55,6 +55,51 @@ Number of files
 <tbody>
 <tr>
 <td style="text-align:left;">
+24-Jun-2023
+</td>
+<td style="text-align:left;">
+<a href="https://doi.org/https://doi.org/10.7910/DVN/D74QMP" style="     ">TTU
+(Transfer to Utility) R package - AQoL-6D vignette output</a>
+</td>
+<td style="text-align:left;">
+15.0
+</td>
+<td style="text-align:right;">
+9
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+23-Jun-2023
+</td>
+<td style="text-align:left;">
+<a href="https://doi.org/https://doi.org/10.7910/DVN/D74QMP" style="     ">TTU
+(Transfer to Utility) R package - AQoL-6D vignette output</a>
+</td>
+<td style="text-align:left;">
+14.0
+</td>
+<td style="text-align:right;">
+9
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+21-Jun-2023
+</td>
+<td style="text-align:left;">
+<a href="https://doi.org/https://doi.org/10.7910/DVN/D74QMP" style="     ">TTU
+(Transfer to Utility) R package - AQoL-6D vignette output</a>
+</td>
+<td style="text-align:left;">
+13.0
+</td>
+<td style="text-align:right;">
+9
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
 09-Sep-2022
 </td>
 <td style="text-align:left;">
@@ -65,7 +110,7 @@ Number of files
 12.0
 </td>
 <td style="text-align:right;">
-6
+9
 </td>
 </tr>
 <tr>
@@ -80,7 +125,7 @@ Number of files
 11.0
 </td>
 <td style="text-align:right;">
-6
+9
 </td>
 </tr>
 <tr>
@@ -95,7 +140,7 @@ Number of files
 10.0
 </td>
 <td style="text-align:right;">
-6
+9
 </td>
 </tr>
 <tr>
@@ -125,7 +170,7 @@ Number of files
 9.2
 </td>
 <td style="text-align:right;">
-6
+9
 </td>
 </tr>
 <tr>
@@ -215,7 +260,7 @@ R Package - AQoL-6D Vignette Output</a>
 9.1
 </td>
 <td style="text-align:right;">
-6
+9
 </td>
 </tr>
 <tr>
@@ -395,7 +440,7 @@ R package vignette output</a>
 9.0
 </td>
 <td style="text-align:right;">
-6
+9
 </td>
 </tr>
 <tr>
@@ -440,7 +485,7 @@ R package vignette output</a>
 8.0
 </td>
 <td style="text-align:right;">
-6
+9
 </td>
 </tr>
 <tr>
@@ -485,7 +530,7 @@ R package vignette output</a>
 7.0
 </td>
 <td style="text-align:right;">
-6
+9
 </td>
 </tr>
 <tr>
@@ -530,7 +575,7 @@ R package vignette output</a>
 6.0
 </td>
 <td style="text-align:right;">
-6
+9
 </td>
 </tr>
 <tr>
@@ -545,7 +590,7 @@ R package vignette output</a>
 5.0
 </td>
 <td style="text-align:right;">
-6
+9
 </td>
 </tr>
 <tr>
@@ -560,7 +605,7 @@ R package vignette output</a>
 4.0
 </td>
 <td style="text-align:right;">
-6
+9
 </td>
 </tr>
 <tr>
@@ -575,7 +620,7 @@ R package vignette output</a>
 3.0
 </td>
 <td style="text-align:right;">
-6
+9
 </td>
 </tr>
 <tr>
@@ -590,7 +635,7 @@ R package vignette output</a>
 2.1
 </td>
 <td style="text-align:right;">
-6
+9
 </td>
 </tr>
 <tr>
@@ -605,7 +650,7 @@ R package vignette output</a>
 2.0
 </td>
 <td style="text-align:right;">
-6
+9
 </td>
 </tr>
 <tr>
@@ -800,7 +845,7 @@ R package vignette output</a>
 1.0
 </td>
 <td style="text-align:right;">
-6
+9
 </td>
 </tr>
 </tbody>

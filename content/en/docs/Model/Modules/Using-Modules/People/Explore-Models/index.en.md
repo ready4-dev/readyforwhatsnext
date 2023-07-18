@@ -1,7 +1,7 @@
 ---
 title: "Explore candidate utility mapping models"
 linkTitle: "Assess models"
-date: "2022-12-24"
+date: "2023-07-11"
 description: "Using modules from the specific R package, it is possible to undertake an exploratory utility mapping analysis. This tutorial illustrates a hypotehtical example of exploring how to map to EQ-5D health utility."
 weight: 95
 categories: 
@@ -22,7 +22,7 @@ tags:
 - Use
 - Use - utility mapping
 output: hugodown::md_document
-rmd_hash: 5429b6a80b16b0f0
+rmd_hash: 8aac675ba7a37211
 html_dependencies:
 - <script src="kePrint-0.0.1/kePrint.js"></script>
 - <link href="lightable-0.0.1/lightable.css" rel="stylesheet" />
@@ -39,18 +39,32 @@ html_dependencies:
 
 </div>
 
-Note: **This vignette uses fake data** - it is for illustrative purposes only and should not be used to inform decision making.
+Note: **This vignette uses fake data** - it is for illustrative purposes only and should not be used to inform decision making. Furthermore, as this packake is optimised only for certain types of utility mapping studies, it is recommended to use the [TTU package](https://ready4-dev.github.io/TTU/index.html) (which depends upon `specific`) instead of using specific modules directly as workflow syntax will be simpler and functionality more complete.
 
 The steps in this exploratory analysis workflow may need to be performed iteratively, both in order to identify the optimal model types, predictors and covariates to use and modify default values to ensure model convergence.
 
 <div class="highlight">
 
 <pre class='chroma'><code class='language-r' data-lang='r'><span><span class='kr'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='o'>(</span><span class='nv'><a href='https://ready4-dev.github.io/ready4/'>ready4</a></span><span class='o'>)</span></span>
-<span><span class='kr'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='o'>(</span><span class='nv'><a href='https://ready4-dev.github.io/ready4show/'>ready4show</a></span><span class='o'>)</span></span>
-<span><span class='kr'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='o'>(</span><span class='nv'><a href='https://ready4-dev.github.io/ready4use/'>ready4use</a></span><span class='o'>)</span></span>
-<span><span class='kr'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='o'>(</span><span class='nv'><a href='https://ready4-dev.github.io/scorz/'>scorz</a></span><span class='o'>)</span></span>
-<span><span class='kr'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='o'>(</span><span class='nv'>betareg</span><span class='o'>)</span></span>
 <span><span class='kr'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='o'>(</span><span class='nv'><a href='https://ready4-dev.github.io/specific/'>specific</a></span><span class='o'>)</span></span></code></pre>
+
+</div>
+
+<div class="highlight">
+
+</div>
+
+## Set consent policy
+
+By default, methods in the `specific` package will request your consent before writing files to your machine. This is the safest option. However, as there are many files that need to be written locally for this program to execute, you can overwrite this default by supplying the value "Y" to methods with a `consent_1L_chr` argument.
+
+<div class="highlight">
+
+<pre class='chroma'><code class='language-r' data-lang='r'><span><span class='nv'>consent_1L_chr</span> <span class='o'>&lt;-</span> <span class='s'>""</span> <span class='c'># Default value - asks for consent prior to writing each file.</span></span></code></pre>
+
+</div>
+
+<div class="highlight">
 
 </div>
 
@@ -62,8 +76,7 @@ We start by ingesting our data. As this example uses EQ-5D data, we import a `Sc
 
 <pre class='chroma'><code class='language-r' data-lang='r'><span><span class='nv'>X</span> <span class='o'>&lt;-</span> <span class='nf'><a href='https://ready4-dev.github.io/specific/reference/SpecificConverter-class.html'>SpecificConverter</a></span><span class='o'>(</span>a_ScorzProfile <span class='o'>=</span> <span class='nf'>ready4use</span><span class='nf'>::</span><span class='nf'><a href='https://ready4-dev.github.io/ready4use/reference/Ready4useRepos-class.html'>Ready4useRepos</a></span><span class='o'>(</span>gh_repo_1L_chr <span class='o'>=</span> <span class='s'>"ready4-dev/scorz"</span>, </span>
 <span>                                                                  gh_tag_1L_chr <span class='o'>=</span> <span class='s'>"Documentation_0.0"</span><span class='o'>)</span> <span class='o'><a href='https://magrittr.tidyverse.org/reference/pipe.html'>%&gt;%</a></span></span>
-<span>                         <span class='nf'><a href='https://ready4-dev.github.io/ready4/reference/ingest-methods.html'>ingest</a></span><span class='o'>(</span>fls_to_ingest_chr <span class='o'>=</span> <span class='s'>"ymh_ScorzEuroQol5"</span>,</span>
-<span>                                metadata_1L_lgl <span class='o'>=</span> <span class='kc'>F</span><span class='o'>)</span><span class='o'>)</span> <span class='o'><a href='https://magrittr.tidyverse.org/reference/pipe.html'>%&gt;%</a></span></span>
+<span>                         <span class='nf'><a href='https://ready4-dev.github.io/ready4/reference/ingest-methods.html'>ingest</a></span><span class='o'>(</span>fls_to_ingest_chr <span class='o'>=</span> <span class='s'>"ymh_ScorzEuroQol5"</span>,  metadata_1L_lgl <span class='o'>=</span> <span class='kc'>F</span><span class='o'>)</span><span class='o'>)</span> <span class='o'><a href='https://magrittr.tidyverse.org/reference/pipe.html'>%&gt;%</a></span> </span>
 <span>  <span class='nf'><a href='https://ready4-dev.github.io/ready4/reference/metamorphose-methods.html'>metamorphose</a></span><span class='o'>(</span><span class='o'>)</span> </span></code></pre>
 
 </div>
@@ -73,7 +86,8 @@ We start by ingesting our data. As this example uses EQ-5D data, we import a `Sc
 <pre class='chroma'><code class='language-r' data-lang='r'><span><span class='nf'><a href='https://rdrr.io/r/base/class.html'>class</a></span><span class='o'>(</span><span class='nv'>X</span><span class='o'>)</span></span>
 <span><span class='c'>#&gt; [1] "SpecificModels"</span></span>
 <span><span class='c'>#&gt; attr(,"package")</span></span>
-<span><span class='c'>#&gt; [1] "specific"</span></span></code></pre>
+<span><span class='c'>#&gt; [1] "specific"</span></span>
+<span></span></code></pre>
 
 </div>
 
@@ -577,9 +591,9 @@ The dependent variable (total EQ-5D utility score) has already been specified wh
 
 <div class="highlight">
 
-<pre class='chroma'><code class='language-r' data-lang='r'><span><span class='nf'><a href='https://ready4-dev.github.io/ready4/reference/procureSlot-methods.html'>procureSlot</a></span><span class='o'>(</span><span class='nv'>X</span>,</span>
-<span>            <span class='s'>"b_SpecificParameters@depnt_var_nm_1L_chr"</span><span class='o'>)</span></span>
-<span><span class='c'>#&gt; [1] "eq5d_total_w"</span></span></code></pre>
+<pre class='chroma'><code class='language-r' data-lang='r'><span><span class='nf'><a href='https://ready4-dev.github.io/ready4/reference/procureSlot-methods.html'>procureSlot</a></span><span class='o'>(</span><span class='nv'>X</span>, <span class='s'>"b_SpecificParameters@depnt_var_nm_1L_chr"</span><span class='o'>)</span></span>
+<span><span class='c'>#&gt; [1] "eq5d_total_w"</span></span>
+<span></span></code></pre>
 
 </div>
 
@@ -587,9 +601,7 @@ We can now add details of the allowable range of dependent variable values.
 
 <div class="highlight">
 
-<pre class='chroma'><code class='language-r' data-lang='r'><span><span class='nv'>X</span> <span class='o'>&lt;-</span> <span class='nf'><a href='https://ready4-dev.github.io/ready4/reference/renewSlot-methods.html'>renewSlot</a></span><span class='o'>(</span><span class='nv'>X</span>,</span>
-<span>               <span class='s'>"b_SpecificParameters@depnt_var_min_max_dbl"</span>,</span>
-<span>               <span class='nf'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='o'>(</span><span class='o'>-</span><span class='m'>1</span>,<span class='m'>1</span><span class='o'>)</span><span class='o'>)</span></span></code></pre>
+<pre class='chroma'><code class='language-r' data-lang='r'><span><span class='nv'>X</span> <span class='o'>&lt;-</span> <span class='nf'><a href='https://ready4-dev.github.io/ready4/reference/renewSlot-methods.html'>renewSlot</a></span><span class='o'>(</span><span class='nv'>X</span>, <span class='s'>"b_SpecificParameters@depnt_var_min_max_dbl"</span>, <span class='nf'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='o'>(</span><span class='o'>-</span><span class='m'>1</span>,<span class='m'>1</span><span class='o'>)</span><span class='o'>)</span></span></code></pre>
 
 </div>
 
@@ -599,9 +611,7 @@ We can now specify the names of candidate predictor variables.
 
 <div class="highlight">
 
-<pre class='chroma'><code class='language-r' data-lang='r'><span><span class='nv'>X</span> <span class='o'>&lt;-</span> <span class='nf'><a href='https://ready4-dev.github.io/ready4/reference/renewSlot-methods.html'>renewSlot</a></span><span class='o'>(</span><span class='nv'>X</span>,</span>
-<span>               <span class='s'>"b_SpecificParameters@candidate_predrs_chr"</span>,</span>
-<span>               new_val_xx <span class='o'>=</span> <span class='nf'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='o'>(</span><span class='s'>"K10_int"</span>,<span class='s'>"Psych_well_int"</span><span class='o'>)</span><span class='o'>)</span> </span></code></pre>
+<pre class='chroma'><code class='language-r' data-lang='r'><span><span class='nv'>X</span> <span class='o'>&lt;-</span> <span class='nf'><a href='https://ready4-dev.github.io/ready4/reference/renewSlot-methods.html'>renewSlot</a></span><span class='o'>(</span><span class='nv'>X</span>, <span class='s'>"b_SpecificParameters@candidate_predrs_chr"</span>, <span class='nf'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='o'>(</span><span class='s'>"K10_int"</span>,<span class='s'>"Psych_well_int"</span><span class='o'>)</span><span class='o'>)</span> </span></code></pre>
 
 </div>
 
@@ -609,18 +619,9 @@ We next add meta-data about each candidate predictor variable in the form of a `
 
 <div class="highlight">
 
-<pre class='chroma'><code class='language-r' data-lang='r'><span><span class='nv'>X</span> <span class='o'>&lt;-</span> <span class='nf'><a href='https://ready4-dev.github.io/ready4/reference/renewSlot-methods.html'>renewSlot</a></span><span class='o'>(</span><span class='nv'>X</span>, </span>
-<span>               <span class='s'>"b_SpecificParameters@predictors_lup"</span>, </span>
-<span>               short_name_chr <span class='o'>=</span> <span class='nf'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='o'>(</span><span class='s'>"K10_int"</span>,<span class='s'>"Psych_well_int"</span><span class='o'>)</span>,</span>
-<span>               long_name_chr <span class='o'>=</span> <span class='nf'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='o'>(</span><span class='s'>"Kessler Psychological Distress - 10 Item Total Score"</span>,</span>
-<span>                                 <span class='s'>"Overall Wellbeing Measure (Winefield et al. 2012)"</span><span class='o'>)</span>,</span>
-<span>               min_val_dbl <span class='o'>=</span> <span class='nf'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='o'>(</span><span class='m'>10</span>,<span class='m'>18</span><span class='o'>)</span>,</span>
-<span>               max_val_dbl <span class='o'>=</span> <span class='nf'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='o'>(</span><span class='m'>50</span>,<span class='m'>90</span><span class='o'>)</span>,</span>
-<span>               class_chr <span class='o'>=</span> <span class='s'>"integer"</span>,</span>
-<span>               increment_dbl <span class='o'>=</span> <span class='m'>1</span>,</span>
-<span>               class_fn_chr <span class='o'>=</span> <span class='s'>"as.integer"</span>,</span>
-<span>               mdl_scaling_dbl <span class='o'>=</span> <span class='m'>0.01</span>,</span>
-<span>               covariate_lgl <span class='o'>=</span> <span class='kc'>F</span><span class='o'>)</span></span></code></pre>
+<pre class='chroma'><code class='language-r' data-lang='r'><span><span class='nv'>X</span> <span class='o'>&lt;-</span> <span class='nf'><a href='https://ready4-dev.github.io/ready4/reference/renewSlot-methods.html'>renewSlot</a></span><span class='o'>(</span><span class='nv'>X</span>, <span class='s'>"b_SpecificParameters@predictors_lup"</span>, class_chr <span class='o'>=</span> <span class='s'>"integer"</span>, class_fn_chr <span class='o'>=</span> <span class='nf'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='o'>(</span><span class='s'>"youthvars::youthvars_k10_aus"</span>,<span class='s'>"as.integer"</span><span class='o'>)</span>, covariate_lgl <span class='o'>=</span> <span class='kc'>F</span>, increment_dbl <span class='o'>=</span> <span class='m'>1</span>,</span>
+<span>               long_name_chr <span class='o'>=</span> <span class='nf'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='o'>(</span><span class='s'>"Kessler Psychological Distress - 10 Item Total Score"</span>, <span class='s'>"Overall Wellbeing Measure (Winefield et al. 2012)"</span><span class='o'>)</span>, max_val_dbl <span class='o'>=</span> <span class='nf'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='o'>(</span><span class='m'>50</span>,<span class='m'>90</span><span class='o'>)</span>, min_val_dbl <span class='o'>=</span> <span class='nf'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='o'>(</span><span class='m'>10</span>,<span class='m'>18</span><span class='o'>)</span>, mdl_scaling_dbl <span class='o'>=</span> <span class='m'>0.01</span>,</span>
+<span>               short_name_chr <span class='o'>=</span> <span class='nf'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='o'>(</span><span class='s'>"K10_int"</span>,<span class='s'>"Psych_well_int"</span><span class='o'>)</span><span class='o'>)</span></span></code></pre>
 
 </div>
 
@@ -628,9 +629,7 @@ The `specific_predictors` object that we have added to `X` can be inspected usin
 
 <div class="highlight">
 
-<pre class='chroma'><code class='language-r' data-lang='r'><span><span class='nf'><a href='https://ready4-dev.github.io/ready4/reference/exhibitSlot-methods.html'>exhibitSlot</a></span><span class='o'>(</span><span class='nv'>X</span>,</span>
-<span>            <span class='s'>"b_SpecificParameters@predictors_lup"</span>,</span>
-<span>            scroll_box_args_ls <span class='o'>=</span> <span class='nf'><a href='https://rdrr.io/r/base/list.html'>list</a></span><span class='o'>(</span>width <span class='o'>=</span> <span class='s'>"100%"</span><span class='o'>)</span><span class='o'>)</span></span>
+<pre class='chroma'><code class='language-r' data-lang='r'><span><span class='nf'><a href='https://ready4-dev.github.io/ready4/reference/exhibitSlot-methods.html'>exhibitSlot</a></span><span class='o'>(</span><span class='nv'>X</span>, <span class='s'>"b_SpecificParameters@predictors_lup"</span>, scroll_box_args_ls <span class='o'>=</span> <span class='nf'><a href='https://rdrr.io/r/base/list.html'>list</a></span><span class='o'>(</span>width <span class='o'>=</span> <span class='s'>"100%"</span><span class='o'>)</span><span class='o'>)</span></span>
 </code></pre>
 
 <div style="border: 1px solid #ddd; padding: 5px; overflow-x: scroll; width:100%; ">
@@ -688,7 +687,7 @@ integer
 1
 </td>
 <td style="text-align:left;">
-as.integer
+youthvars::youthvars_k10_aus
 </td>
 <td style="text-align:right;">
 0.01
@@ -746,9 +745,7 @@ We also specify the covariates that we aim to explore in conjunction with each c
 
 <div class="highlight">
 
-<pre class='chroma'><code class='language-r' data-lang='r'><span><span class='nv'>X</span> <span class='o'>&lt;-</span> <span class='nf'><a href='https://ready4-dev.github.io/ready4/reference/renewSlot-methods.html'>renewSlot</a></span><span class='o'>(</span><span class='nv'>X</span>, </span>
-<span>               <span class='s'>"b_SpecificParameters@candidate_covars_chr"</span>,</span>
-<span>               new_val_xx <span class='o'>=</span> <span class='nf'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='o'>(</span><span class='s'>"d_sex_birth_s"</span>, <span class='s'>"d_age"</span>,  <span class='s'>"d_sexual_ori_s"</span>, <span class='s'>"d_studying_working"</span><span class='o'>)</span><span class='o'>)</span></span></code></pre>
+<pre class='chroma'><code class='language-r' data-lang='r'><span><span class='nv'>X</span> <span class='o'>&lt;-</span> <span class='nf'><a href='https://ready4-dev.github.io/ready4/reference/renewSlot-methods.html'>renewSlot</a></span><span class='o'>(</span><span class='nv'>X</span>, <span class='s'>"b_SpecificParameters@candidate_covars_chr"</span>, <span class='nf'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='o'>(</span><span class='s'>"d_sex_birth_s"</span>, <span class='s'>"d_age"</span>,  <span class='s'>"d_sexual_ori_s"</span>, <span class='s'>"d_studying_working"</span><span class='o'>)</span><span class='o'>)</span></span></code></pre>
 
 </div>
 
@@ -758,10 +755,7 @@ We also specify variables that we will use for generating descriptive statistics
 
 <div class="highlight">
 
-<pre class='chroma'><code class='language-r' data-lang='r'><span><span class='nv'>X</span> <span class='o'>&lt;-</span> <span class='nf'><a href='https://ready4-dev.github.io/ready4/reference/renewSlot-methods.html'>renewSlot</a></span><span class='o'>(</span><span class='nv'>X</span>,</span>
-<span>               <span class='s'>"b_SpecificParameters@descv_var_nms_chr"</span>,</span>
-<span>               <span class='nf'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='o'>(</span><span class='s'>"d_age"</span>,<span class='s'>"Gender"</span>,<span class='s'>"d_relation_s"</span>,</span>
-<span>                 <span class='s'>"d_sexual_ori_s"</span>, <span class='s'>"Region"</span>, <span class='s'>"d_studying_working"</span><span class='o'>)</span><span class='o'>)</span> </span></code></pre>
+<pre class='chroma'><code class='language-r' data-lang='r'><span><span class='nv'>X</span> <span class='o'>&lt;-</span> <span class='nf'><a href='https://ready4-dev.github.io/ready4/reference/renewSlot-methods.html'>renewSlot</a></span><span class='o'>(</span><span class='nv'>X</span>,<span class='s'>"b_SpecificParameters@descv_var_nms_chr"</span>, <span class='nf'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='o'>(</span><span class='s'>"d_age"</span>,<span class='s'>"Gender"</span>,<span class='s'>"d_relation_s"</span>, <span class='s'>"d_sexual_ori_s"</span>, <span class='s'>"Region"</span>, <span class='s'>"d_studying_working"</span><span class='o'>)</span><span class='o'>)</span> </span></code></pre>
 
 </div>
 
@@ -772,14 +766,16 @@ The name of the dataset variable for data collection timepoint and all of its un
 <div class="highlight">
 
 <pre class='chroma'><code class='language-r' data-lang='r'><span><span class='nf'><a href='https://ready4-dev.github.io/ready4/reference/procureSlot-methods.html'>procureSlot</a></span><span class='o'>(</span><span class='nv'>X</span>,<span class='s'>"a_YouthvarsProfile@timepoint_var_nm_1L_chr"</span><span class='o'>)</span></span>
-<span><span class='c'>#&gt; [1] "Timepoint"</span></span></code></pre>
+<span><span class='c'>#&gt; [1] "Timepoint"</span></span>
+<span></span></code></pre>
 
 </div>
 
 <div class="highlight">
 
 <pre class='chroma'><code class='language-r' data-lang='r'><span><span class='nf'><a href='https://ready4-dev.github.io/ready4/reference/procureSlot-methods.html'>procureSlot</a></span><span class='o'>(</span><span class='nv'>X</span>,<span class='s'>"a_YouthvarsProfile@timepoint_vals_chr"</span><span class='o'>)</span></span>
-<span><span class='c'>#&gt; [1] "BL"  "FUP"</span></span></code></pre>
+<span><span class='c'>#&gt; [1] "BL"  "FUP"</span></span>
+<span></span></code></pre>
 
 </div>
 
@@ -787,9 +783,7 @@ However, we also need to specify the name of the variable that contains the date
 
 <div class="highlight">
 
-<pre class='chroma'><code class='language-r' data-lang='r'><span><span class='nv'>X</span> <span class='o'>&lt;-</span> <span class='nf'><a href='https://ready4-dev.github.io/ready4/reference/renewSlot-methods.html'>renewSlot</a></span><span class='o'>(</span><span class='nv'>X</span>,</span>
-<span>               <span class='s'>"b_SpecificParameters@msrmnt_date_var_nm_1L_chr"</span>,</span>
-<span>               <span class='s'>"data_collection_dtm"</span><span class='o'>)</span></span></code></pre>
+<pre class='chroma'><code class='language-r' data-lang='r'><span><span class='nv'>X</span> <span class='o'>&lt;-</span> <span class='nf'><a href='https://ready4-dev.github.io/ready4/reference/renewSlot-methods.html'>renewSlot</a></span><span class='o'>(</span><span class='nv'>X</span>, <span class='s'>"b_SpecificParameters@msrmnt_date_var_nm_1L_chr"</span>, <span class='s'>"data_collection_dtm"</span><span class='o'>)</span></span></code></pre>
 
 </div>
 
@@ -799,9 +793,7 @@ However, we also need to specify the name of the variable that contains the date
 
 <div class="highlight">
 
-<pre class='chroma'><code class='language-r' data-lang='r'><span><span class='nf'><a href='https://ready4-dev.github.io/ready4/reference/exhibitSlot-methods.html'>exhibitSlot</a></span><span class='o'>(</span><span class='nv'>X</span>,</span>
-<span>            <span class='s'>"b_SpecificParameters@candidate_mdls_lup"</span>,</span>
-<span>            scroll_box_args_ls <span class='o'>=</span> <span class='nf'><a href='https://rdrr.io/r/base/list.html'>list</a></span><span class='o'>(</span>width <span class='o'>=</span> <span class='s'>"100%"</span><span class='o'>)</span><span class='o'>)</span></span>
+<pre class='chroma'><code class='language-r' data-lang='r'><span><span class='nf'><a href='https://ready4-dev.github.io/ready4/reference/exhibitSlot-methods.html'>exhibitSlot</a></span><span class='o'>(</span><span class='nv'>X</span>, <span class='s'>"b_SpecificParameters@candidate_mdls_lup"</span>, scroll_box_args_ls <span class='o'>=</span> <span class='nf'><a href='https://rdrr.io/r/base/list.html'>list</a></span><span class='o'>(</span>width <span class='o'>=</span> <span class='s'>"100%"</span><span class='o'>)</span><span class='o'>)</span></span>
 </code></pre>
 
 <div style="border: 1px solid #ddd; padding: 5px; overflow-x: scroll; width:100%; ">
@@ -1200,9 +1192,7 @@ We can choose to select just a subset of these to explore using the `renewSlot` 
 
 <div class="highlight">
 
-<pre class='chroma'><code class='language-r' data-lang='r'><span><span class='nv'>X</span> <span class='o'>&lt;-</span> <span class='nf'><a href='https://ready4-dev.github.io/ready4/reference/renewSlot-methods.html'>renewSlot</a></span><span class='o'>(</span><span class='nv'>X</span>,</span>
-<span>               <span class='s'>"b_SpecificParameters@candidate_mdls_lup"</span>,</span>
-<span>               slice_indcs_int <span class='o'>=</span> <span class='nf'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='o'>(</span><span class='m'>1L</span>,<span class='m'>5L</span>,<span class='m'>7L</span>,<span class='m'>8L</span><span class='o'>)</span><span class='o'>)</span></span></code></pre>
+<pre class='chroma'><code class='language-r' data-lang='r'><span><span class='nv'>X</span> <span class='o'>&lt;-</span> <span class='nf'><a href='https://ready4-dev.github.io/ready4/reference/renewSlot-methods.html'>renewSlot</a></span><span class='o'>(</span><span class='nv'>X</span>, <span class='s'>"b_SpecificParameters@candidate_mdls_lup"</span>, slice_indcs_int <span class='o'>=</span> <span class='nf'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='o'>(</span><span class='m'>1L</span>,<span class='m'>5L</span>,<span class='m'>7L</span>,<span class='m'>8L</span><span class='o'>)</span><span class='o'>)</span></span></code></pre>
 
 </div>
 
@@ -1212,25 +1202,25 @@ Depending on the type of analysis we plan on undertaking, we can also specify pa
 
 <div class="highlight">
 
-<pre class='chroma'><code class='language-r' data-lang='r'><span><span class='nf'><a href='https://ready4-dev.github.io/ready4/reference/procureSlot-methods.html'>procureSlot</a></span><span class='o'>(</span><span class='nv'>X</span>,</span>
-<span>            <span class='s'>"b_SpecificParameters@folds_1L_int"</span><span class='o'>)</span></span>
-<span><span class='c'>#&gt; [1] 10</span></span></code></pre>
+<pre class='chroma'><code class='language-r' data-lang='r'><span><span class='nf'><a href='https://ready4-dev.github.io/ready4/reference/procureSlot-methods.html'>procureSlot</a></span><span class='o'>(</span><span class='nv'>X</span>, <span class='s'>"b_SpecificParameters@folds_1L_int"</span><span class='o'>)</span></span>
+<span><span class='c'>#&gt; [1] 10</span></span>
+<span></span></code></pre>
 
 </div>
 
 <div class="highlight">
 
-<pre class='chroma'><code class='language-r' data-lang='r'><span><span class='nf'><a href='https://ready4-dev.github.io/ready4/reference/procureSlot-methods.html'>procureSlot</a></span><span class='o'>(</span><span class='nv'>X</span>,</span>
-<span>            <span class='s'>"b_SpecificParameters@max_mdl_runs_1L_int"</span><span class='o'>)</span></span>
-<span><span class='c'>#&gt; [1] 300</span></span></code></pre>
+<pre class='chroma'><code class='language-r' data-lang='r'><span><span class='nf'><a href='https://ready4-dev.github.io/ready4/reference/procureSlot-methods.html'>procureSlot</a></span><span class='o'>(</span><span class='nv'>X</span>, <span class='s'>"b_SpecificParameters@max_mdl_runs_1L_int"</span><span class='o'>)</span></span>
+<span><span class='c'>#&gt; [1] 300</span></span>
+<span></span></code></pre>
 
 </div>
 
 <div class="highlight">
 
-<pre class='chroma'><code class='language-r' data-lang='r'><span><span class='nf'><a href='https://ready4-dev.github.io/ready4/reference/procureSlot-methods.html'>procureSlot</a></span><span class='o'>(</span><span class='nv'>X</span>,</span>
-<span>            <span class='s'>"b_SpecificParameters@seed_1L_int"</span><span class='o'>)</span></span>
-<span><span class='c'>#&gt; [1] 1234</span></span></code></pre>
+<pre class='chroma'><code class='language-r' data-lang='r'><span><span class='nf'><a href='https://ready4-dev.github.io/ready4/reference/procureSlot-methods.html'>procureSlot</a></span><span class='o'>(</span><span class='nv'>X</span>, <span class='s'>"b_SpecificParameters@seed_1L_int"</span><span class='o'>)</span></span>
+<span><span class='c'>#&gt; [1] 1234</span></span>
+<span></span></code></pre>
 
 </div>
 
@@ -1250,9 +1240,7 @@ We add details of the directory to which we will write all output. In this examp
 
 <div class="highlight">
 
-<pre class='chroma'><code class='language-r' data-lang='r'><span><span class='nv'>X</span> <span class='o'>&lt;-</span> <span class='nf'><a href='https://ready4-dev.github.io/ready4/reference/renewSlot-methods.html'>renewSlot</a></span><span class='o'>(</span><span class='nv'>X</span>,</span>
-<span>               <span class='s'>"paths_chr"</span>,</span>
-<span>               <span class='nf'><a href='https://rdrr.io/r/base/tempfile.html'>tempdir</a></span><span class='o'>(</span><span class='o'>)</span><span class='o'>)</span></span></code></pre>
+<pre class='chroma'><code class='language-r' data-lang='r'><span><span class='nv'>X</span> <span class='o'>&lt;-</span> <span class='nf'><a href='https://ready4-dev.github.io/ready4/reference/renewSlot-methods.html'>renewSlot</a></span><span class='o'>(</span><span class='nv'>X</span>, <span class='s'>"paths_chr"</span>, <span class='nf'><a href='https://rdrr.io/r/base/tempfile.html'>tempdir</a></span><span class='o'>(</span><span class='o'>)</span><span class='o'>)</span></span></code></pre>
 
 </div>
 
@@ -1260,9 +1248,7 @@ It can be useful to save fake data (useful for demonstrating the generalisabilit
 
 <div class="highlight">
 
-<pre class='chroma'><code class='language-r' data-lang='r'><span><span class='nv'>X</span> <span class='o'>&lt;-</span> <span class='nf'><a href='https://ready4-dev.github.io/ready4/reference/renewSlot-methods.html'>renewSlot</a></span><span class='o'>(</span><span class='nv'>X</span>,</span>
-<span>               <span class='s'>"b_SpecificParameters@fake_1L_lgl"</span>,</span>
-<span>               <span class='kc'>T</span><span class='o'>)</span></span></code></pre>
+<pre class='chroma'><code class='language-r' data-lang='r'><span><span class='nv'>X</span> <span class='o'>&lt;-</span> <span class='nf'><a href='https://ready4-dev.github.io/ready4/reference/renewSlot-methods.html'>renewSlot</a></span><span class='o'>(</span><span class='nv'>X</span>, <span class='s'>"b_SpecificParameters@fake_1L_lgl"</span>, <span class='kc'>T</span><span class='o'>)</span></span></code></pre>
 
 </div>
 
@@ -1270,8 +1256,15 @@ We can now write a number of sub-directories to our specified output directory.
 
 <div class="highlight">
 
-<pre class='chroma'><code class='language-r' data-lang='r'><span><span class='nv'>X</span> <span class='o'>&lt;-</span> <span class='nf'><a href='https://ready4-dev.github.io/ready4/reference/author-methods.html'>author</a></span><span class='o'>(</span><span class='nv'>X</span>,</span>
-<span>            what_1L_chr <span class='o'>=</span> <span class='s'>"workspace"</span><span class='o'>)</span></span></code></pre>
+<pre class='chroma'><code class='language-r' data-lang='r'><span><span class='nv'>X</span> <span class='o'>&lt;-</span> <span class='nf'><a href='https://ready4-dev.github.io/ready4/reference/author-methods.html'>author</a></span><span class='o'>(</span><span class='nv'>X</span>, what_1L_chr <span class='o'>=</span> <span class='s'>"workspace"</span>, consent_1L_chr <span class='o'>=</span> <span class='nv'>consent_1L_chr</span><span class='o'>)</span></span>
+<span><span class='c'>#&gt; New directories created:</span></span>
+<span><span class='c'>#&gt; C:\Users\mham0053\AppData\Local\Temp\Rtmpy8UT1f/Fake</span></span>
+<span><span class='c'>#&gt; C:\Users\mham0053\AppData\Local\Temp\Rtmpy8UT1f/Fake/Markdown</span></span>
+<span><span class='c'>#&gt; C:\Users\mham0053\AppData\Local\Temp\Rtmpy8UT1f/Fake/Output</span></span>
+<span><span class='c'>#&gt; C:\Users\mham0053\AppData\Local\Temp\Rtmpy8UT1f/Fake/Reports</span></span>
+<span><span class='c'>#&gt; C:\Users\mham0053\AppData\Local\Temp\Rtmpy8UT1f/Fake/Output/_Descriptives</span></span>
+<span><span class='c'>#&gt; C:\Users\mham0053\AppData\Local\Temp\Rtmpy8UT1f/Fake/Output/H_Dataverse</span></span>
+<span></span></code></pre>
 
 </div>
 
@@ -1281,9 +1274,7 @@ The first set of outputs we write to our output directories is a set of descript
 
 <div class="highlight">
 
-<pre class='chroma'><code class='language-r' data-lang='r'><span><span class='nv'>X</span> <span class='o'>&lt;-</span> <span class='nf'><a href='https://ready4-dev.github.io/ready4/reference/author-methods.html'>author</a></span><span class='o'>(</span><span class='nv'>X</span>,</span>
-<span>            what_1L_chr <span class='o'>=</span> <span class='s'>"descriptives"</span>,</span>
-<span>            digits_1L_int <span class='o'>=</span> <span class='m'>3L</span><span class='o'>)</span></span></code></pre>
+<pre class='chroma'><code class='language-r' data-lang='r'><span><span class='nv'>X</span> <span class='o'>&lt;-</span> <span class='nf'><a href='https://ready4-dev.github.io/ready4/reference/author-methods.html'>author</a></span><span class='o'>(</span><span class='nv'>X</span>, consent_1L_chr <span class='o'>=</span> <span class='nv'>consent_1L_chr</span>, digits_1L_int <span class='o'>=</span> <span class='m'>3L</span>,  what_1L_chr <span class='o'>=</span> <span class='s'>"descriptives"</span><span class='o'>)</span></span></code></pre>
 
 </div>
 
@@ -1293,9 +1284,7 @@ The `investigate` method can now be used to compare the candidate models we have
 
 <div class="highlight">
 
-<pre class='chroma'><code class='language-r' data-lang='r'><span><span class='nv'>X</span> <span class='o'>&lt;-</span> <span class='nf'><a href='https://ready4-dev.github.io/ready4/reference/investigate-methods.html'>investigate</a></span><span class='o'>(</span><span class='nv'>X</span>,</span>
-<span>                 depnt_var_max_val_1L_dbl <span class='o'>=</span> <span class='m'>0.99</span>,</span>
-<span>                 session_ls <span class='o'>=</span> <span class='nf'><a href='https://rdrr.io/r/utils/sessionInfo.html'>sessionInfo</a></span><span class='o'>(</span><span class='o'>)</span><span class='o'>)</span></span></code></pre>
+<pre class='chroma'><code class='language-r' data-lang='r'><span><span class='nv'>X</span> <span class='o'>&lt;-</span> <span class='nf'><a href='https://ready4-dev.github.io/ready4/reference/investigate-methods.html'>investigate</a></span><span class='o'>(</span><span class='nv'>X</span>, consent_1L_chr <span class='o'>=</span> <span class='nv'>consent_1L_chr</span>, depnt_var_max_val_1L_dbl <span class='o'>=</span> <span class='m'>0.99</span>, session_ls <span class='o'>=</span> <span class='nf'><a href='https://rdrr.io/r/utils/sessionInfo.html'>sessionInfo</a></span><span class='o'>(</span><span class='o'>)</span><span class='o'>)</span></span></code></pre>
 
 </div>
 
@@ -1304,7 +1293,8 @@ The `investigate` method can now be used to compare the candidate models we have
 <pre class='chroma'><code class='language-r' data-lang='r'><span><span class='nf'><a href='https://rdrr.io/r/base/class.html'>class</a></span><span class='o'>(</span><span class='nv'>X</span><span class='o'>)</span></span>
 <span><span class='c'>#&gt; [1] "SpecificPredictors"</span></span>
 <span><span class='c'>#&gt; attr(,"package")</span></span>
-<span><span class='c'>#&gt; [1] "specific"</span></span></code></pre>
+<span><span class='c'>#&gt; [1] "specific"</span></span>
+<span></span></code></pre>
 
 </div>
 
@@ -1322,10 +1312,7 @@ The `investigate` method also outputs a table summarising the performance of eac
 
 <div class="highlight">
 
-<pre class='chroma'><code class='language-r' data-lang='r'><span><span class='nf'><a href='https://ready4-dev.github.io/ready4/reference/exhibit-methods.html'>exhibit</a></span><span class='o'>(</span><span class='nv'>X</span>,</span>
-<span>        what_1L_chr <span class='o'>=</span> <span class='s'>"mdl_cmprsn"</span>,</span>
-<span>        type_1L_chr <span class='o'>=</span> <span class='s'>"results"</span></span>
-<span>        <span class='o'>)</span> </span>
+<pre class='chroma'><code class='language-r' data-lang='r'><span><span class='nf'><a href='https://ready4-dev.github.io/ready4/reference/exhibit-methods.html'>exhibit</a></span><span class='o'>(</span><span class='nv'>X</span>, what_1L_chr <span class='o'>=</span> <span class='s'>"mdl_cmprsn"</span>, type_1L_chr <span class='o'>=</span> <span class='s'>"results"</span><span class='o'>)</span> </span>
 </code></pre>
 <table class=" lightable-paper lightable-hover" style="font-family: &quot;Arial Narrow&quot;, arial, helvetica, sans-serif; width: auto !important; margin-left: auto; margin-right: auto;border-bottom: 0;">
 <caption>
@@ -1487,9 +1474,13 @@ We can now identify the highest performing model in each category of candidate m
 
 <div class="highlight">
 
-<pre class='chroma'><code class='language-r' data-lang='r'><span><span class='nf'><a href='https://ready4-dev.github.io/ready4/reference/procure-methods.html'>procure</a></span><span class='o'>(</span><span class='nv'>X</span>,</span>
-<span>        what_1L_chr <span class='o'>=</span> <span class='s'>"prefd_mdls"</span><span class='o'>)</span> <span class='c'># Fix for NA_ returns (one option within ctg)</span></span>
-<span><span class='c'>#&gt; [1] "BET_LGT" "OLS_NTF"</span></span></code></pre>
+</div>
+
+<div class="highlight">
+
+<pre class='chroma'><code class='language-r' data-lang='r'><span><span class='nf'><a href='https://ready4-dev.github.io/ready4/reference/procure-methods.html'>procure</a></span><span class='o'>(</span><span class='nv'>X</span>, what_1L_chr <span class='o'>=</span> <span class='s'>"prefd_mdls"</span><span class='o'>)</span> </span>
+<span><span class='c'>#&gt; [1] "BET_LGT" "OLS_NTF"</span></span>
+<span></span></code></pre>
 
 </div>
 
@@ -1497,10 +1488,7 @@ We can override these automated selections and instead incorporate other conside
 
 <div class="highlight">
 
-<pre class='chroma'><code class='language-r' data-lang='r'><span><span class='nv'>X</span> <span class='o'>&lt;-</span> <span class='nf'><a href='https://ready4-dev.github.io/ready4/reference/renew-methods.html'>renew</a></span><span class='o'>(</span><span class='nv'>X</span>,</span>
-<span>           new_val_xx <span class='o'>=</span> <span class='nf'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='o'>(</span><span class='s'>"BET_LGT"</span>, <span class='s'>"OLS_CLL"</span><span class='o'>)</span>,</span>
-<span>           type_1L_chr <span class='o'>=</span> <span class='s'>"results"</span>,</span>
-<span>           what_1L_chr <span class='o'>=</span> <span class='s'>"prefd_mdls"</span><span class='o'>)</span></span></code></pre>
+<pre class='chroma'><code class='language-r' data-lang='r'><span><span class='nv'>X</span> <span class='o'>&lt;-</span> <span class='nf'><a href='https://ready4-dev.github.io/ready4/reference/renew-methods.html'>renew</a></span><span class='o'>(</span><span class='nv'>X</span>, new_val_xx <span class='o'>=</span> <span class='nf'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='o'>(</span><span class='s'>"BET_LGT"</span>, <span class='s'>"OLS_CLL"</span><span class='o'>)</span>, type_1L_chr <span class='o'>=</span> <span class='s'>"results"</span>, what_1L_chr <span class='o'>=</span> <span class='s'>"prefd_mdls"</span><span class='o'>)</span></span></code></pre>
 
 </div>
 
@@ -1510,7 +1498,7 @@ We can now compare all of our candidate predictors (with and without candidate c
 
 <div class="highlight">
 
-<pre class='chroma'><code class='language-r' data-lang='r'><span><span class='nv'>X</span> <span class='o'>&lt;-</span> <span class='nf'><a href='https://ready4-dev.github.io/ready4/reference/investigate-methods.html'>investigate</a></span><span class='o'>(</span><span class='nv'>X</span><span class='o'>)</span></span></code></pre>
+<pre class='chroma'><code class='language-r' data-lang='r'><span><span class='nv'>X</span> <span class='o'>&lt;-</span> <span class='nf'><a href='https://ready4-dev.github.io/ready4/reference/investigate-methods.html'>investigate</a></span><span class='o'>(</span><span class='nv'>X</span>, consent_1L_chr <span class='o'>=</span> <span class='nv'>consent_1L_chr</span><span class='o'>)</span></span></code></pre>
 
 </div>
 
@@ -1519,7 +1507,8 @@ We can now compare all of our candidate predictors (with and without candidate c
 <pre class='chroma'><code class='language-r' data-lang='r'><span><span class='nf'><a href='https://rdrr.io/r/base/class.html'>class</a></span><span class='o'>(</span><span class='nv'>X</span><span class='o'>)</span></span>
 <span><span class='c'>#&gt; [1] "SpecificFixed"</span></span>
 <span><span class='c'>#&gt; attr(,"package")</span></span>
-<span><span class='c'>#&gt; [1] "specific"</span></span></code></pre>
+<span><span class='c'>#&gt; [1] "specific"</span></span>
+<span></span></code></pre>
 
 </div>
 
@@ -1527,10 +1516,7 @@ Now, we compare the performance of single predictor models of our preferred mode
 
 <div class="highlight">
 
-<pre class='chroma'><code class='language-r' data-lang='r'><span><span class='nf'><a href='https://ready4-dev.github.io/ready4/reference/exhibit-methods.html'>exhibit</a></span><span class='o'>(</span><span class='nv'>X</span>,</span>
-<span>        what_1L_chr <span class='o'>=</span> <span class='s'>"predr_cmprsn"</span>,</span>
-<span>        type_1L_chr <span class='o'>=</span> <span class='s'>"results"</span>,</span>
-<span>        scroll_box_args_ls <span class='o'>=</span> <span class='nf'><a href='https://rdrr.io/r/base/list.html'>list</a></span><span class='o'>(</span>width <span class='o'>=</span> <span class='s'>"100%"</span><span class='o'>)</span><span class='o'>)</span></span>
+<pre class='chroma'><code class='language-r' data-lang='r'><span><span class='nf'><a href='https://ready4-dev.github.io/ready4/reference/exhibit-methods.html'>exhibit</a></span><span class='o'>(</span><span class='nv'>X</span>, scroll_box_args_ls <span class='o'>=</span> <span class='nf'><a href='https://rdrr.io/r/base/list.html'>list</a></span><span class='o'>(</span>width <span class='o'>=</span> <span class='s'>"100%"</span><span class='o'>)</span>, type_1L_chr <span class='o'>=</span> <span class='s'>"results"</span>, what_1L_chr <span class='o'>=</span> <span class='s'>"predr_cmprsn"</span><span class='o'>)</span></span>
 </code></pre>
 
 <div style="border: 1px solid #ddd; padding: 5px; overflow-x: scroll; width:100%; ">
@@ -1593,9 +1579,7 @@ The most recent call to the `investigate` method also saved single predictor R m
 
 <div class="highlight">
 
-<pre class='chroma'><code class='language-r' data-lang='r'><span><span class='nf'><a href='https://ready4-dev.github.io/ready4/reference/exhibit-methods.html'>exhibit</a></span><span class='o'>(</span><span class='nv'>X</span>,</span>
-<span>        type_1L_chr <span class='o'>=</span> <span class='s'>"results"</span>,</span>
-<span>        what_1L_chr <span class='o'>=</span> <span class='s'>"fxd_sngl_cmprsn"</span><span class='o'>)</span></span>
+<pre class='chroma'><code class='language-r' data-lang='r'><span><span class='nf'><a href='https://ready4-dev.github.io/ready4/reference/exhibit-methods.html'>exhibit</a></span><span class='o'>(</span><span class='nv'>X</span>, type_1L_chr <span class='o'>=</span> <span class='s'>"results"</span>, what_1L_chr <span class='o'>=</span> <span class='s'>"fxd_sngl_cmprsn"</span><span class='o'>)</span></span>
 </code></pre>
 <table class=" lightable-paper lightable-hover" style="font-family: &quot;Arial Narrow&quot;, arial, helvetica, sans-serif; width: auto !important; margin-left: auto; margin-right: auto;border-bottom: 0;">
 <caption>
@@ -1711,10 +1695,7 @@ Updated versions of each of the models in the previous step (this time with cova
 
 <div class="highlight">
 
-<pre class='chroma'><code class='language-r' data-lang='r'><span><span class='nf'><a href='https://ready4-dev.github.io/ready4/reference/exhibit-methods.html'>exhibit</a></span><span class='o'>(</span><span class='nv'>X</span>,</span>
-<span>        type_1L_chr <span class='o'>=</span> <span class='s'>"results"</span>,</span>
-<span>        what_1L_chr <span class='o'>=</span> <span class='s'>"fxd_full_cmprsn"</span>,</span>
-<span>        scroll_box_args_ls <span class='o'>=</span> <span class='nf'><a href='https://rdrr.io/r/base/list.html'>list</a></span><span class='o'>(</span>width <span class='o'>=</span> <span class='s'>"100%"</span><span class='o'>)</span><span class='o'>)</span></span></code></pre>
+<pre class='chroma'><code class='language-r' data-lang='r'><span><span class='nf'><a href='https://ready4-dev.github.io/ready4/reference/exhibit-methods.html'>exhibit</a></span><span class='o'>(</span><span class='nv'>X</span>, scroll_box_args_ls <span class='o'>=</span> <span class='nf'><a href='https://rdrr.io/r/base/list.html'>list</a></span><span class='o'>(</span>width <span class='o'>=</span> <span class='s'>"100%"</span><span class='o'>)</span>, type_1L_chr <span class='o'>=</span> <span class='s'>"results"</span>, what_1L_chr <span class='o'>=</span> <span class='s'>"fxd_full_cmprsn"</span><span class='o'>)</span></span></code></pre>
 
 </div>
 
@@ -1722,10 +1703,9 @@ We can now identify which, if any, of the candidate covariates we previously spe
 
 <div class="highlight">
 
-<pre class='chroma'><code class='language-r' data-lang='r'><span><span class='nf'><a href='https://ready4-dev.github.io/ready4/reference/procure-methods.html'>procure</a></span><span class='o'>(</span><span class='nv'>X</span>,</span>
-<span>        type_1L_chr <span class='o'>=</span> <span class='s'>"results"</span>,</span>
-<span>        what_1L_chr <span class='o'>=</span> <span class='s'>"signt_covars"</span><span class='o'>)</span></span>
-<span><span class='c'>#&gt; [1] NA</span></span></code></pre>
+<pre class='chroma'><code class='language-r' data-lang='r'><span><span class='nf'><a href='https://ready4-dev.github.io/ready4/reference/procure-methods.html'>procure</a></span><span class='o'>(</span><span class='nv'>X</span>, type_1L_chr <span class='o'>=</span> <span class='s'>"results"</span>, what_1L_chr <span class='o'>=</span> <span class='s'>"signt_covars"</span><span class='o'>)</span></span>
+<span><span class='c'>#&gt; [1] NA</span></span>
+<span></span></code></pre>
 
 </div>
 
@@ -1733,10 +1713,7 @@ We can override the covariates to select, potentially because we want to select 
 
 <div class="highlight">
 
-<pre class='chroma'><code class='language-r' data-lang='r'><span><span class='c'># X &lt;- renew(X,</span></span>
-<span><span class='c'>#             new_val_xx = c("COVARIATE OF YOUR CHOICE", "ANOTHER COVARIATE"),</span></span>
-<span><span class='c'>#                                               type_1L_chr = "results",</span></span>
-<span><span class='c'>#                                   what_1L_chr = "prefd_covars")</span></span></code></pre>
+<pre class='chroma'><code class='language-r' data-lang='r'><span><span class='c'># X &lt;- renew(X, new_val_xx = c("COVARIATE OF YOUR CHOICE", "ANOTHER COVARIATE"), type_1L_chr = "results", what_1L_chr = "prefd_covars")</span></span></code></pre>
 
 </div>
 
@@ -1746,7 +1723,7 @@ We now conclude our model testing by rerunning the previous step, except confini
 
 <div class="highlight">
 
-<pre class='chroma'><code class='language-r' data-lang='r'><span><span class='nv'>X</span> <span class='o'>&lt;-</span> <span class='nf'><a href='https://ready4-dev.github.io/ready4/reference/investigate-methods.html'>investigate</a></span><span class='o'>(</span><span class='nv'>X</span><span class='o'>)</span></span></code></pre>
+<pre class='chroma'><code class='language-r' data-lang='r'><span><span class='nv'>X</span> <span class='o'>&lt;-</span> <span class='nf'><a href='https://ready4-dev.github.io/ready4/reference/investigate-methods.html'>investigate</a></span><span class='o'>(</span><span class='nv'>X</span>, consent_1L_chr <span class='o'>=</span> <span class='nv'>consent_1L_chr</span><span class='o'>)</span></span></code></pre>
 
 </div>
 
@@ -1755,11 +1732,12 @@ We now conclude our model testing by rerunning the previous step, except confini
 <pre class='chroma'><code class='language-r' data-lang='r'><span><span class='nf'><a href='https://rdrr.io/r/base/class.html'>class</a></span><span class='o'>(</span><span class='nv'>X</span><span class='o'>)</span></span>
 <span><span class='c'>#&gt; [1] "SpecificMixed"</span></span>
 <span><span class='c'>#&gt; attr(,"package")</span></span>
-<span><span class='c'>#&gt; [1] "specific"</span></span></code></pre>
+<span><span class='c'>#&gt; [1] "specific"</span></span>
+<span></span></code></pre>
 
 </div>
 
-The previous call to the `write_mdls_with_covars_cmprsn` function saves the tested models along with two plots for each model in the "E_Predrs_W\_Covars_Sngl_Mdl_Cmprsn" sub-directory of "Output".
+The previous call to the `write_mdls_with_covars_cmprsn` function saves the tested models along with two plots for each model in the "E_Predrs_W_Covars_Sngl_Mdl_Cmprsn" sub-directory of "Output".
 
 ## Apply preferred model types and predictors to longitudinal data
 
@@ -1771,9 +1749,9 @@ Prior to undertaking longitudinal mixed modelling, we need to check the appropri
 
 <div class="highlight">
 
-<pre class='chroma'><code class='language-r' data-lang='r'><span><span class='nf'><a href='https://ready4-dev.github.io/ready4/reference/procureSlot-methods.html'>procureSlot</a></span><span class='o'>(</span><span class='nv'>X</span>,</span>
-<span>            <span class='s'>"b_SpecificParameters@iters_1L_int"</span><span class='o'>)</span></span>
-<span><span class='c'>#&gt; [1] 4000</span></span></code></pre>
+<pre class='chroma'><code class='language-r' data-lang='r'><span><span class='nf'><a href='https://ready4-dev.github.io/ready4/reference/procureSlot-methods.html'>procureSlot</a></span><span class='o'>(</span><span class='nv'>X</span>, <span class='s'>"b_SpecificParameters@iters_1L_int"</span><span class='o'>)</span></span>
+<span><span class='c'>#&gt; [1] 4000</span></span>
+<span></span></code></pre>
 
 </div>
 
@@ -1781,19 +1759,19 @@ In many cases there will be no need to specify any custom control parameters or 
 
 <div class="highlight">
 
-<pre class='chroma'><code class='language-r' data-lang='r'><span><span class='nf'><a href='https://ready4-dev.github.io/ready4/reference/procureSlot-methods.html'>procureSlot</a></span><span class='o'>(</span><span class='nv'>X</span>,</span>
-<span>            <span class='s'>"b_SpecificParameters@control_ls"</span><span class='o'>)</span></span>
+<pre class='chroma'><code class='language-r' data-lang='r'><span><span class='nf'><a href='https://ready4-dev.github.io/ready4/reference/procureSlot-methods.html'>procureSlot</a></span><span class='o'>(</span><span class='nv'>X</span>, <span class='s'>"b_SpecificParameters@control_ls"</span><span class='o'>)</span></span>
 <span><span class='c'>#&gt; [[1]]</span></span>
-<span><span class='c'>#&gt; list()</span></span></code></pre>
+<span><span class='c'>#&gt; list()</span></span>
+<span></span></code></pre>
 
 </div>
 
 <div class="highlight">
 
-<pre class='chroma'><code class='language-r' data-lang='r'><span><span class='nf'><a href='https://ready4-dev.github.io/ready4/reference/procureSlot-methods.html'>procureSlot</a></span><span class='o'>(</span><span class='nv'>X</span>,</span>
-<span>            <span class='s'>"b_SpecificParameters@prior_ls"</span><span class='o'>)</span></span>
+<pre class='chroma'><code class='language-r' data-lang='r'><span><span class='nf'><a href='https://ready4-dev.github.io/ready4/reference/procureSlot-methods.html'>procureSlot</a></span><span class='o'>(</span><span class='nv'>X</span>,<span class='s'>"b_SpecificParameters@prior_ls"</span><span class='o'>)</span></span>
 <span><span class='c'>#&gt; [[1]]</span></span>
-<span><span class='c'>#&gt; list()</span></span></code></pre>
+<span><span class='c'>#&gt; list()</span></span>
+<span></span></code></pre>
 
 </div>
 
@@ -1801,15 +1779,13 @@ However, in this example using the default control parameters would result in wa
 
 <div class="highlight">
 
-<pre class='chroma'><code class='language-r' data-lang='r'><span><span class='nv'>X</span> <span class='o'>&lt;-</span> <span class='nf'><a href='https://ready4-dev.github.io/ready4/reference/renewSlot-methods.html'>renewSlot</a></span><span class='o'>(</span><span class='nv'>X</span>,</span>
-<span>             slot_nm_1L_chr <span class='o'>=</span> <span class='s'>"b_SpecificParameters@control_ls"</span>,</span>
-<span>             new_val_xx <span class='o'>=</span> <span class='nf'><a href='https://rdrr.io/r/base/list.html'>list</a></span><span class='o'>(</span>adapt_delta <span class='o'>=</span> <span class='m'>0.99</span><span class='o'>)</span><span class='o'>)</span></span></code></pre>
+<pre class='chroma'><code class='language-r' data-lang='r'><span><span class='nv'>X</span> <span class='o'>&lt;-</span> <span class='nf'><a href='https://ready4-dev.github.io/ready4/reference/renewSlot-methods.html'>renewSlot</a></span><span class='o'>(</span><span class='nv'>X</span>, <span class='s'>"b_SpecificParameters@control_ls"</span>, new_val_xx <span class='o'>=</span> <span class='nf'><a href='https://rdrr.io/r/base/list.html'>list</a></span><span class='o'>(</span>adapt_delta <span class='o'>=</span> <span class='m'>0.99</span><span class='o'>)</span><span class='o'>)</span></span></code></pre>
 
 </div>
 
 <div class="highlight">
 
-<pre class='chroma'><code class='language-r' data-lang='r'><span><span class='nv'>X</span> <span class='o'>&lt;-</span> <span class='nf'><a href='https://ready4-dev.github.io/ready4/reference/investigate-methods.html'>investigate</a></span><span class='o'>(</span><span class='nv'>X</span><span class='o'>)</span></span></code></pre>
+<pre class='chroma'><code class='language-r' data-lang='r'><span><span class='nv'>X</span> <span class='o'>&lt;-</span> <span class='nf'><a href='https://ready4-dev.github.io/ready4/reference/investigate-methods.html'>investigate</a></span><span class='o'>(</span><span class='nv'>X</span>, consent_1L_chr <span class='o'>=</span> <span class='nv'>consent_1L_chr</span><span class='o'>)</span></span></code></pre>
 
 </div>
 
@@ -1818,7 +1794,8 @@ However, in this example using the default control parameters would result in wa
 <pre class='chroma'><code class='language-r' data-lang='r'><span><span class='nf'><a href='https://rdrr.io/r/base/class.html'>class</a></span><span class='o'>(</span><span class='nv'>X</span><span class='o'>)</span></span>
 <span><span class='c'>#&gt; [1] "SpecificMixed"</span></span>
 <span><span class='c'>#&gt; attr(,"package")</span></span>
-<span><span class='c'>#&gt; [1] "specific"</span></span></code></pre>
+<span><span class='c'>#&gt; [1] "specific"</span></span>
+<span></span></code></pre>
 
 </div>
 
@@ -1830,7 +1807,7 @@ The model objects created by the preceding analysis are not suitable for sharing
 
 <div class="highlight">
 
-<pre class='chroma'><code class='language-r' data-lang='r'><span><span class='nv'>X</span> <span class='o'>&lt;-</span> <span class='nf'><a href='https://ready4-dev.github.io/ready4/reference/authorData-methods.html'>authorData</a></span><span class='o'>(</span><span class='nv'>X</span><span class='o'>)</span></span></code></pre>
+<pre class='chroma'><code class='language-r' data-lang='r'><span><span class='nv'>X</span> <span class='o'>&lt;-</span> <span class='nf'><a href='https://ready4-dev.github.io/ready4/reference/authorData-methods.html'>authorData</a></span><span class='o'>(</span><span class='nv'>X</span>, consent_1L_chr <span class='o'>=</span> <span class='nv'>consent_1L_chr</span><span class='o'>)</span></span></code></pre>
 
 </div>
 
@@ -1840,8 +1817,7 @@ For the purposes of efficient computation, multiple objects containing copies of
 
 <div class="highlight">
 
-<pre class='chroma'><code class='language-r' data-lang='r'><span><span class='nf'><a href='https://ready4-dev.github.io/ready4/reference/author-methods.html'>author</a></span><span class='o'>(</span><span class='nv'>X</span>,</span>
-<span>       type_1L_chr <span class='o'>=</span> <span class='s'>"purge_write"</span><span class='o'>)</span></span></code></pre>
+<pre class='chroma'><code class='language-r' data-lang='r'><span><span class='nv'>X</span> <span class='o'>&lt;-</span> <span class='nf'><a href='https://ready4-dev.github.io/ready4/reference/author-methods.html'>author</a></span><span class='o'>(</span><span class='nv'>X</span>, consent_1L_chr <span class='o'>=</span> <span class='nv'>consent_1L_chr</span>, type_1L_chr <span class='o'>=</span> <span class='s'>"purge_write"</span><span class='o'>)</span></span></code></pre>
 
 </div>
 

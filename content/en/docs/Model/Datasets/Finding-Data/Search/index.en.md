@@ -1,7 +1,7 @@
 ---
 title: "Search open access data collections"
 linkTitle: "Search"
-date: "2022-12-24"
+date: "2023-07-11"
 description: "Online open access data repositories are the preferred storage locations for ready4 model datasets."
 weight: 91
 categories: 
@@ -19,7 +19,7 @@ tags:
 - Status
 - Status - development
 output: hugodown::md_document
-rmd_hash: c81caa7208288050
+rmd_hash: a5380ade891933a0
 html_dependencies:
 - <script src="kePrint-0.0.1/kePrint.js"></script>
 - <link href="lightable-0.0.1/lightable.css" rel="stylesheet" />
@@ -74,6 +74,23 @@ Datasets
 <tbody>
 <tr>
 <td style="text-align:left;">
+<a href="https://dataverse.harvard.edu/dataverse/TTU"> TTU </a>
+</td>
+<td style="text-align:left;">
+Transfer to Utility
+</td>
+<td style="text-align:left;">
+A collection of transfer to utility datasets developed with the ready4 open science framework.
+</td>
+<td style="text-align:left;">
+Orygen
+</td>
+<td style="text-align:left;">
+<a href="https://doi.org/10.7910/DVN/DKDIB0" style="     ">1</a>, <a href="https://doi.org/10.7910/DVN/FDRUXH" style="     ">2</a>, <a href="https://doi.org/10.7910/DVN/N4NEHL" style="     ">3</a>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
 <a href="https://dataverse.harvard.edu/dataverse/fakes"> fakes </a>
 </td>
 <td style="text-align:left;">
@@ -86,7 +103,7 @@ Fake data used to illustrate toolkits developed with the ready4 open science fra
 Orygen
 </td>
 <td style="text-align:left;">
-<a href="https://doi.org/10.7910/DVN/D74QMP" style="     ">1</a>, <a href="https://doi.org/10.7910/DVN/612HDC" style="     ">2</a>, <a href="https://doi.org/10.7910/DVN/HJXYKQ" style="     ">3</a>, <a href="https://doi.org/10.7910/DVN/W95KED" style="     ">4</a>, <a href="https://doi.org/10.7910/DVN/GW7ZKC" style="     ">5</a>
+<a href="https://doi.org/10.7910/DVN/D74QMP" style="     ">4</a> , <a href="https://doi.org/10.7910/DVN/612HDC" style="     ">5</a> , <a href="https://doi.org/10.7910/DVN/HJXYKQ" style="     ">6</a> , <a href="https://doi.org/10.7910/DVN/W95KED" style="     ">7</a> , <a href="https://doi.org/10.7910/DVN/GW7ZKC" style="     ">8</a> , <a href="https://doi.org/10.7910/DVN/LYBMB0" style="     ">9</a> , <a href="https://doi.org/10.7910/DVN/3R5TS3" style="     ">10</a>
 </td>
 </tr>
 <tr>
@@ -119,7 +136,7 @@ A collection of datasets that support implementation of the ready4 framework for
 Orygen
 </td>
 <td style="text-align:left;">
-<a href="https://doi.org/10.7910/DVN/RIQTKK" style="     ">6</a>
+<a href="https://doi.org/10.7910/DVN/RIQTKK" style="     ">11</a>
 </td>
 </tr>
 <tr>
@@ -136,7 +153,7 @@ Data collections for the readyforwhatsnext mental health systems model.
 Orygen
 </td>
 <td style="text-align:left;">
-<a href="https://doi.org/10.7910/DVN/QBZFQV" style="     ">7</a>, <a href="https://doi.org/10.7910/DVN/JHSCDJ" style="     ">8</a>
+<a href="https://doi.org/10.7910/DVN/QBZFQV" style="     ">12</a>, <a href="https://doi.org/10.7910/DVN/JHSCDJ" style="     ">13</a>
 </td>
 </tr>
 <tr>
@@ -153,7 +170,7 @@ A ready4 framework model of places. Synthesises geometry (boundary, coordinate) 
 Orygen
 </td>
 <td style="text-align:left;">
-<a href="https://doi.org/10.7910/DVN/V3OKZV" style="     ">9</a>
+<a href="https://doi.org/10.7910/DVN/V3OKZV" style="     ">14</a>
 </td>
 </tr>
 <tr>
@@ -170,24 +187,7 @@ A ready4 framework model of people. Models the characteristics, behaviours, rela
 Orygen
 </td>
 <td style="text-align:left;">
-<a href="https://doi.org/10.7910/DVN/VGPIPS" style="     ">10</a>
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-<a href="https://dataverse.harvard.edu/dataverse/TTU"> TTU </a>
-</td>
-<td style="text-align:left;">
-Transfer to Utility
-</td>
-<td style="text-align:left;">
-A collection of transfer to utility datasets developed with the ready4 open science framework.
-</td>
-<td style="text-align:left;">
-Orygen
-</td>
-<td style="text-align:left;">
-<a href="https://doi.org/10.7910/DVN/DKDIB0" style="     ">11</a>
+<a href="https://doi.org/10.7910/DVN/VGPIPS" style="     ">15</a>
 </td>
 </tr>
 </tbody>
@@ -228,6 +228,48 @@ DOI
 </tr>
 </thead>
 <tbody>
+<tr>
+<td style="text-align:left;">
+Transfer to AQoL-6D Utility Mapping Algorithms
+</td>
+<td style="text-align:left;">
+Catalogues of models (and the programs that produced them) that can be used in conjunction with the youthu R package to predict AQoL-6D health utility (and thus, derive QALYs) from measures collected in youth mental health services.
+</td>
+<td style="text-align:left;">
+TTU
+</td>
+<td style="text-align:left;">
+<a href="https://doi.org/10.7910/DVN/DKDIB0">10.7910/DVN/DKDIB0</a>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Transfer to AQoL-6D From Measures Collected In Primary Youth Mental Health Services
+</td>
+<td style="text-align:left;">
+This is a work in progress dataset to support the implementation and reporting of a study to map measures collected in Australian primary youth mental health services to AQoL-6D health utility.
+</td>
+<td style="text-align:left;">
+TTU
+</td>
+<td style="text-align:left;">
+<a href="https://doi.org/10.7910/DVN/FDRUXH">10.7910/DVN/FDRUXH</a>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Transfer to CHU-9D From Measures Collected In Primary Youth Mental Health Services
+</td>
+<td style="text-align:left;">
+This is a work in progress dataset to support the implementation and reporting of a study to map measures collected in Australian primary youth mental health services to CHU-9D health utility
+</td>
+<td style="text-align:left;">
+TTU
+</td>
+<td style="text-align:left;">
+<a href="https://doi.org/10.7910/DVN/N4NEHL">10.7910/DVN/N4NEHL</a>
+</td>
+</tr>
 <tr>
 <td style="text-align:left;">
 ready4 Framework Abbreviations and Definitions
@@ -299,20 +341,6 @@ springtolife
 </td>
 <td style="text-align:left;">
 <a href="https://doi.org/10.7910/DVN/VGPIPS">10.7910/DVN/VGPIPS</a>
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-Transfer to AQoL-6D Utility Mapping Algorithms
-</td>
-<td style="text-align:left;">
-Catalogues of models (and the programs that produced them) that can be used in conjunction with the youthu R package to predict AQoL-6D health utility (and thus, derive QALYs) from measures collected in youth mental health services.
-</td>
-<td style="text-align:left;">
-TTU
-</td>
-<td style="text-align:left;">
-<a href="https://doi.org/10.7910/DVN/DKDIB0">10.7910/DVN/DKDIB0</a>
 </td>
 </tr>
 </tbody>
@@ -419,6 +447,34 @@ fakes
 </td>
 <td style="text-align:left;">
 <a href="https://doi.org/10.7910/DVN/GW7ZKC">10.7910/DVN/GW7ZKC</a>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Synthetic (fake) dataset for hypothetical replication of study mapping psychological distress and functioning measures to AQoL-6D health utility
+</td>
+<td style="text-align:left;">
+This dataset is comprised of fake data that has been created to illustrate the potential transfer of a study algorithm for creating utility mapping models to new data. Outputs in this dataset are for instructional purposes only and should not be used to inform decision making.
+</td>
+<td style="text-align:left;">
+fakes
+</td>
+<td style="text-align:left;">
+<a href="https://doi.org/10.7910/DVN/LYBMB0">10.7910/DVN/LYBMB0</a>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Synthetic (fake) dataset for hypothetical replication of study mapping psychological distress and functioning measures to CHU-9D health utility
+</td>
+<td style="text-align:left;">
+This dataset is comprised of fake data that has been created to illustrate the potential transfer of a study algorithm for creating CHU-9D utility mapping models to new data. Outputs in this dataset are for instructional purposes only and should not be used to inform decision making
+</td>
+<td style="text-align:left;">
+fakes
+</td>
+<td style="text-align:left;">
+<a href="https://doi.org/10.7910/DVN/3R5TS3">10.7910/DVN/3R5TS3</a>
 </td>
 </tr>
 </tbody>

@@ -1,7 +1,7 @@
 ---
 title: "Modularity"
 linkTitle: "Modularity"
-date: "2022-12-24"
+date: "2023-07-11"
 description: "ready4 supports a modular approach to computational model development."
 weight: 62
 categories: 
@@ -16,7 +16,7 @@ tags:
 - Status
 - Status - development
 output: hugodown::md_document
-rmd_hash: 9ce644e9b78dff37
+rmd_hash: 6e4877d09d026d7b
 
 ---
 
@@ -32,7 +32,7 @@ rmd_hash: 9ce644e9b78dff37
 
 <div class="highlight">
 
-<pre class='chroma'><code class='language-r' data-lang='r'><span><span class='kr'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='o'>(</span><span class='s'><a href='https://ready4-dev.github.io/ready4/'>"ready4"</a></span><span class='o'>)</span> </span></code></pre>
+<pre class='chroma'><code class='language-r' data-lang='r'><span><span class='kr'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='o'>(</span><span class='nv'><a href='https://ready4-dev.github.io/ready4/'>ready4</a></span><span class='o'>)</span> </span></code></pre>
 
 </div>
 
@@ -64,7 +64,8 @@ However, if we inspect `X` we can see it is of limited use as it contains no dat
 
 <pre class='chroma'><code class='language-r' data-lang='r'><span><span class='nf'><a href='https://rdrr.io/r/utils/str.html'>str</a></span><span class='o'>(</span><span class='nv'>X</span><span class='o'>)</span></span>
 <span><span class='c'>#&gt; Formal class 'Ready4Module' [package "ready4"] with 1 slot</span></span>
-<span><span class='c'>#&gt;   ..@ dissemination_1L_chr: chr NA</span></span></code></pre>
+<span><span class='c'>#&gt;   ..@ dissemination_1L_chr: chr NA</span></span>
+<span></span></code></pre>
 
 </div>
 
@@ -99,7 +100,8 @@ A formal (S4) `Ready4Module` child-class and its associated methods used to impl
 <pre class='chroma'><code class='language-r' data-lang='r'><span><span class='nv'>Y</span> <span class='o'>&lt;-</span> <span class='nf'><a href='https://ready4-dev.github.io/ready4/reference/Ready4Public-class.html'>Ready4Public</a></span><span class='o'>(</span><span class='o'>)</span></span>
 <span><span class='nf'><a href='https://rdrr.io/r/utils/str.html'>str</a></span><span class='o'>(</span><span class='nv'>Y</span><span class='o'>)</span></span>
 <span><span class='c'>#&gt; Formal class 'Ready4Public' [package "ready4"] with 1 slot</span></span>
-<span><span class='c'>#&gt;   ..@ dissemination_1L_chr: chr "Public"</span></span></code></pre>
+<span><span class='c'>#&gt;   ..@ dissemination_1L_chr: chr "Public"</span></span>
+<span></span></code></pre>
 
 </div>
 
@@ -108,7 +110,8 @@ A formal (S4) `Ready4Module` child-class and its associated methods used to impl
 <pre class='chroma'><code class='language-r' data-lang='r'><span><span class='nv'>Z</span> <span class='o'>&lt;-</span> <span class='nf'><a href='https://ready4-dev.github.io/ready4/reference/Ready4Private-class.html'>Ready4Private</a></span><span class='o'>(</span><span class='o'>)</span></span>
 <span><span class='nf'><a href='https://rdrr.io/r/utils/str.html'>str</a></span><span class='o'>(</span><span class='nv'>Z</span><span class='o'>)</span></span>
 <span><span class='c'>#&gt; Formal class 'Ready4Private' [package "ready4"] with 1 slot</span></span>
-<span><span class='c'>#&gt;   ..@ dissemination_1L_chr: chr "Private"</span></span></code></pre>
+<span><span class='c'>#&gt;   ..@ dissemination_1L_chr: chr "Private"</span></span>
+<span></span></code></pre>
 
 </div>
 
@@ -121,7 +124,8 @@ Like the `Ready4Module` class they inherit from, the purpose of `Ready4Public` a
 <span>               <span class='s'>"Staff and students of research institutes"</span><span class='o'>)</span></span>
 <span><span class='nf'><a href='https://ready4-dev.github.io/ready4/reference/procureSlot-methods.html'>procureSlot</a></span><span class='o'>(</span><span class='nv'>X</span>,</span>
 <span>            <span class='s'>"dissemination_1L_chr"</span><span class='o'>)</span></span>
-<span><span class='c'>#&gt; [1] "Staff and students of research institutes"</span></span></code></pre>
+<span><span class='c'>#&gt; [1] "Staff and students of research institutes"</span></span>
+<span></span></code></pre>
 
 </div>
 
@@ -158,11 +162,10 @@ All methods associated with ready4 modules and sub-modules adopt [a common synta
 <div class="highlight">
 
 <pre class='chroma'><code class='language-r' data-lang='r'><span><span class='nf'><a href='https://ready4-dev.github.io/ready4/reference/get_methods.html'>get_methods</a></span><span class='o'>(</span><span class='o'>)</span></span>
-<span><span class='c'>#&gt;  [1] "authorSlot"        "characterizeSlot"  "depictSlot"       </span></span>
-<span><span class='c'>#&gt;  [4] "enhanceSlot"       "exhibitSlot"       "ingestSlot"       </span></span>
-<span><span class='c'>#&gt;  [7] "investigateSlot"   "manufactureSlot"   "metamorphoseSlot" </span></span>
-<span><span class='c'>#&gt; [10] "procureSlot"       "prognosticateSlot" "ratifySlot"       </span></span>
-<span><span class='c'>#&gt; [13] "reckonSlot"        "renewSlot"         "shareSlot"</span></span></code></pre>
+<span><span class='c'>#&gt;  [1] "authorSlot"        "characterizeSlot"  "depictSlot"        "enhanceSlot"       "exhibitSlot"      </span></span>
+<span><span class='c'>#&gt;  [6] "ingestSlot"        "investigateSlot"   "manufactureSlot"   "metamorphoseSlot"  "procureSlot"      </span></span>
+<span><span class='c'>#&gt; [11] "prognosticateSlot" "ratifySlot"        "reckonSlot"        "renewSlot"         "shareSlot"</span></span>
+<span></span></code></pre>
 
 </div>
 

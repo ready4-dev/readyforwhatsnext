@@ -1,7 +1,7 @@
 ---
 title: "Implement a utility mapping study"
 linkTitle: "Map to utility"
-date: "2022-12-24"
+date: "2023-07-11"
 description: "Using modules from the TTU R package, it is possible to implement a fully reproducible utility mapping study. This tutorial illustrates the main steps using a hypothetical AQoL-6D utility mapping study."
 weight: 95
 categories: 
@@ -23,10 +23,7 @@ tags:
 - Use
 - Use - utility mapping
 output: hugodown::md_document
-rmd_hash: ab6ef0bce55c99d0
-html_dependencies:
-- <script src="kePrint-0.0.1/kePrint.js"></script>
-- <link href="lightable-0.0.1/lightable.css" rel="stylesheet" />
+rmd_hash: d0ac3034a8c1898a
 
 ---
 
@@ -120,10 +117,25 @@ We begin by loading our required packages.
 <div class="highlight">
 
 <pre class='chroma'><code class='language-r' data-lang='r'><span><span class='kr'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='o'>(</span><span class='nv'><a href='https://ready4-dev.github.io/ready4/'>ready4</a></span><span class='o'>)</span></span>
+<span><span class='kr'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='o'>(</span><span class='nv'><a href='https://ready4-dev.github.io/ready4show/'>ready4show</a></span><span class='o'>)</span></span>
 <span><span class='kr'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='o'>(</span><span class='nv'><a href='https://ready4-dev.github.io/ready4use/'>ready4use</a></span><span class='o'>)</span></span>
 <span><span class='kr'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='o'>(</span><span class='nv'><a href='https://ready4-dev.github.io/youthvars/'>youthvars</a></span><span class='o'>)</span></span>
 <span><span class='kr'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='o'>(</span><span class='nv'><a href='https://ready4-dev.github.io/scorz/'>scorz</a></span><span class='o'>)</span></span>
 <span><span class='kr'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='o'>(</span><span class='nv'><a href='https://ready4-dev.github.io/TTU/'>TTU</a></span><span class='o'>)</span></span></code></pre>
+
+</div>
+
+### Set consent policy
+
+By default, methods associated with TTU modules will request your consent before writing files to your machine. This is the safest option. However, as there are many files that need to be written locally for this program to execute, you can overwrite this default by supplying the value "Y" to methods with a `consent_1L_chr` argument.
+
+<div class="highlight">
+
+<pre class='chroma'><code class='language-r' data-lang='r'><span><span class='nv'>consent_1L_chr</span> <span class='o'>&lt;-</span> <span class='s'>""</span> <span class='c'># Default value - asks for consent prior to writing each file.</span></span></code></pre>
+
+</div>
+
+<div class="highlight">
 
 </div>
 
@@ -133,17 +145,10 @@ We use the Ready4useDyad and Ready4useRepos modules to [retrieve and ingest](htt
 
 <div class="highlight">
 
-<pre class='chroma'><code class='language-r' data-lang='r'><span><span class='nv'>A</span> <span class='o'>&lt;-</span> <span class='nf'><a href='https://ready4-dev.github.io/ready4use/reference/Ready4useDyad-class.html'>Ready4useDyad</a></span><span class='o'>(</span>ds_tb <span class='o'>=</span> <span class='nf'><a href='https://ready4-dev.github.io/ready4use/reference/Ready4useRepos-class.html'>Ready4useRepos</a></span><span class='o'>(</span>dv_nm_1L_chr <span class='o'>=</span> <span class='s'>"fakes"</span>,</span>
-<span>                                          dv_ds_nm_1L_chr <span class='o'>=</span> <span class='s'>"https://doi.org/10.7910/DVN/HJXYKQ"</span>,</span>
-<span>                                          dv_server_1L_chr <span class='o'>=</span> <span class='s'>"dataverse.harvard.edu"</span><span class='o'>)</span> <span class='o'><a href='https://magrittr.tidyverse.org/reference/pipe.html'>%&gt;%</a></span></span>
-<span>                     <span class='nf'><a href='https://ready4-dev.github.io/ready4/reference/ingest-methods.html'>ingest</a></span><span class='o'>(</span>fls_to_ingest_chr <span class='o'>=</span> <span class='nf'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='o'>(</span><span class='s'>"ymh_clinical_tb"</span><span class='o'>)</span>,</span>
-<span>                            metadata_1L_lgl <span class='o'>=</span> <span class='kc'>F</span><span class='o'>)</span> <span class='o'><a href='https://magrittr.tidyverse.org/reference/pipe.html'>%&gt;%</a></span></span>
-<span>                     <span class='nf'>youthvars</span><span class='nf'>::</span><span class='nf'><a href='https://ready4-dev.github.io/youthvars/reference/transform_raw_ds_for_analysis.html'>transform_raw_ds_for_analysis</a></span><span class='o'>(</span><span class='o'>)</span>,</span>
-<span>                   dictionary_r3 <span class='o'>=</span> <span class='nf'><a href='https://ready4-dev.github.io/ready4use/reference/Ready4useRepos-class.html'>Ready4useRepos</a></span><span class='o'>(</span>dv_nm_1L_chr <span class='o'>=</span> <span class='s'>"TTU"</span>, </span>
-<span>                                                  dv_ds_nm_1L_chr <span class='o'>=</span> <span class='s'>"https://doi.org/10.7910/DVN/DKDIB0"</span>, </span>
-<span>                                                  dv_server_1L_chr <span class='o'>=</span> <span class='s'>"dataverse.harvard.edu"</span><span class='o'>)</span> <span class='o'><a href='https://magrittr.tidyverse.org/reference/pipe.html'>%&gt;%</a></span></span>
-<span>                     <span class='nf'><a href='https://ready4-dev.github.io/ready4/reference/ingest-methods.html'>ingest</a></span><span class='o'>(</span>fls_to_ingest_chr <span class='o'>=</span> <span class='nf'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='o'>(</span><span class='s'>"dictionary_r3"</span><span class='o'>)</span>,</span>
-<span>                            metadata_1L_lgl <span class='o'>=</span> <span class='kc'>F</span><span class='o'>)</span><span class='o'>)</span> <span class='o'><a href='https://magrittr.tidyverse.org/reference/pipe.html'>%&gt;%</a></span></span>
+<pre class='chroma'><code class='language-r' data-lang='r'><span><span class='nv'>A</span> <span class='o'>&lt;-</span> <span class='nf'><a href='https://ready4-dev.github.io/ready4use/reference/Ready4useDyad-class.html'>Ready4useDyad</a></span><span class='o'>(</span>ds_tb <span class='o'>=</span> <span class='nf'><a href='https://ready4-dev.github.io/ready4use/reference/Ready4useRepos-class.html'>Ready4useRepos</a></span><span class='o'>(</span>dv_nm_1L_chr <span class='o'>=</span> <span class='s'>"fakes"</span>, dv_ds_nm_1L_chr <span class='o'>=</span> <span class='s'>"https://doi.org/10.7910/DVN/HJXYKQ"</span>, dv_server_1L_chr <span class='o'>=</span> <span class='s'>"dataverse.harvard.edu"</span><span class='o'>)</span> <span class='o'><a href='https://magrittr.tidyverse.org/reference/pipe.html'>%&gt;%</a></span></span>
+<span>                     <span class='nf'><a href='https://ready4-dev.github.io/ready4/reference/ingest-methods.html'>ingest</a></span><span class='o'>(</span>fls_to_ingest_chr <span class='o'>=</span> <span class='nf'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='o'>(</span><span class='s'>"ymh_clinical_tb"</span><span class='o'>)</span>, metadata_1L_lgl <span class='o'>=</span> <span class='kc'>F</span><span class='o'>)</span> <span class='o'><a href='https://magrittr.tidyverse.org/reference/pipe.html'>%&gt;%</a></span> <span class='nf'>youthvars</span><span class='nf'>::</span><span class='nf'><a href='https://ready4-dev.github.io/youthvars/reference/transform_raw_ds_for_analysis.html'>transform_raw_ds_for_analysis</a></span><span class='o'>(</span><span class='o'>)</span>,</span>
+<span>                   dictionary_r3 <span class='o'>=</span> <span class='nf'><a href='https://ready4-dev.github.io/ready4use/reference/Ready4useRepos-class.html'>Ready4useRepos</a></span><span class='o'>(</span>dv_nm_1L_chr <span class='o'>=</span> <span class='s'>"TTU"</span>, dv_ds_nm_1L_chr <span class='o'>=</span> <span class='s'>"https://doi.org/10.7910/DVN/DKDIB0"</span>, dv_server_1L_chr <span class='o'>=</span> <span class='s'>"dataverse.harvard.edu"</span><span class='o'>)</span> <span class='o'><a href='https://magrittr.tidyverse.org/reference/pipe.html'>%&gt;%</a></span></span>
+<span>                     <span class='nf'><a href='https://ready4-dev.github.io/ready4/reference/ingest-methods.html'>ingest</a></span><span class='o'>(</span>fls_to_ingest_chr <span class='o'>=</span> <span class='nf'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='o'>(</span><span class='s'>"dictionary_r3"</span><span class='o'>)</span>, metadata_1L_lgl <span class='o'>=</span> <span class='kc'>F</span><span class='o'>)</span><span class='o'>)</span> <span class='o'><a href='https://magrittr.tidyverse.org/reference/pipe.html'>%&gt;%</a></span></span>
 <span>  <span class='nf'><a href='https://ready4-dev.github.io/ready4/reference/renew-methods.html'>renew</a></span><span class='o'>(</span>type_1L_chr <span class='o'>=</span> <span class='s'>"label"</span><span class='o'>)</span></span></code></pre>
 
 </div>
@@ -152,11 +157,8 @@ We use the YouthvarsSeries module to [supply metadata about out a longitudinal d
 
 <div class="highlight">
 
-<pre class='chroma'><code class='language-r' data-lang='r'><span><span class='nv'>A</span> <span class='o'>&lt;-</span> <span class='nf'><a href='https://ready4-dev.github.io/youthvars/reference/YouthvarsSeries-class.html'>YouthvarsSeries</a></span><span class='o'>(</span>a_Ready4useDyad <span class='o'>=</span> <span class='nv'>A</span>,</span>
-<span>                     id_var_nm_1L_chr <span class='o'>=</span> <span class='s'>"fkClientID"</span>,</span>
-<span>                     timepoint_var_nm_1L_chr <span class='o'>=</span> <span class='s'>"round"</span>,</span>
-<span>                     timepoint_vals_chr <span class='o'>=</span> <span class='nf'><a href='https://rdrr.io/r/base/levels.html'>levels</a></span><span class='o'>(</span><span class='nf'><a href='https://ready4-dev.github.io/ready4/reference/procureSlot-methods.html'>procureSlot</a></span><span class='o'>(</span><span class='nv'>A</span>,</span>
-<span>                                                             <span class='s'>"ds_tb"</span><span class='o'>)</span><span class='o'>$</span><span class='nv'>round</span><span class='o'>)</span><span class='o'>)</span></span></code></pre>
+<pre class='chroma'><code class='language-r' data-lang='r'><span><span class='nv'>A</span> <span class='o'>&lt;-</span> <span class='nf'><a href='https://ready4-dev.github.io/youthvars/reference/YouthvarsSeries-class.html'>YouthvarsSeries</a></span><span class='o'>(</span>a_Ready4useDyad <span class='o'>=</span> <span class='nv'>A</span>, id_var_nm_1L_chr <span class='o'>=</span> <span class='s'>"fkClientID"</span>, timepoint_var_nm_1L_chr <span class='o'>=</span> <span class='s'>"round"</span>,</span>
+<span>                     timepoint_vals_chr <span class='o'>=</span> <span class='nf'><a href='https://rdrr.io/r/base/levels.html'>levels</a></span><span class='o'>(</span><span class='nf'><a href='https://ready4-dev.github.io/ready4/reference/procureSlot-methods.html'>procureSlot</a></span><span class='o'>(</span><span class='nv'>A</span>, <span class='s'>"ds_tb"</span><span class='o'>)</span><span class='o'>$</span><span class='nv'>round</span><span class='o'>)</span><span class='o'>)</span></span></code></pre>
 
 </div>
 
@@ -167,34 +169,34 @@ We next use the ScorzAqol6Adol module to [score adolescent AQoL-6D health utilit
 <div class="highlight">
 
 <pre class='chroma'><code class='language-r' data-lang='r'><span><span class='nv'>A</span> <span class='o'>&lt;-</span> <span class='nf'><a href='https://ready4-dev.github.io/TTU/reference/TTUProject-class.html'>TTUProject</a></span><span class='o'>(</span>a_ScorzProfile <span class='o'>=</span> <span class='nf'><a href='https://ready4-dev.github.io/scorz/reference/ScorzAqol6Adol-class.html'>ScorzAqol6Adol</a></span><span class='o'>(</span>a_YouthvarsProfile <span class='o'>=</span> <span class='nv'>A</span><span class='o'>)</span><span class='o'>)</span></span>
-<span><span class='nv'>A</span> <span class='o'>&lt;-</span> <span class='nf'><a href='https://ready4-dev.github.io/ready4/reference/renewSlot-methods.html'>renewSlot</a></span><span class='o'>(</span><span class='nv'>A</span>, <span class='s'>"a_ScorzProfile"</span><span class='o'>)</span></span>
-<span><span class='c'>#&gt; Joining, by = c("fkClientID", "match_var_chr")</span></span></code></pre>
+<span><span class='nv'>A</span> <span class='o'>&lt;-</span> <span class='nf'><a href='https://ready4-dev.github.io/ready4/reference/renew-methods.html'>renew</a></span><span class='o'>(</span><span class='nv'>A</span>, what_1L_chr <span class='o'>=</span> <span class='s'>"utility"</span><span class='o'>)</span> </span>
+<span><span class='c'>#&gt; Joining with `by = join_by(fkClientID, match_var_chr)`</span></span>
+<span></span></code></pre>
 
 </div>
 
 ### Evaluate candidate models
 
-Over the next few steps we will use modules from the specific package to to [specify and assess a number of candidate utility mapping models](https://ready4-dev.github.io/specific/articles/V_01.html).
+Over the next few steps we will use modules from the specific package to [specify and assess a number of candidate utility mapping models](https://ready4-dev.github.io/specific/articles/V_01.html).
+
+#### Specify modelling parameters
+
+We begin by specifying the parameters we will use in our modelling project. The initial step is to ensure the fields in `A` for storing parameter values are internally consistent with the data we have entered in the previous steps.
 
 <div class="highlight">
+
+<pre class='chroma'><code class='language-r' data-lang='r'><span><span class='nv'>A</span> <span class='o'>&lt;-</span> <span class='nf'><a href='https://ready4-dev.github.io/ready4/reference/renew-methods.html'>renew</a></span><span class='o'>(</span><span class='nv'>A</span>, what_1L_chr <span class='o'>=</span> <span class='s'>"parameters"</span><span class='o'>)</span></span></code></pre>
 
 </div>
 
-<div class="highlight">
-
-<pre class='chroma'><code class='language-r' data-lang='r'><span><span class='nv'>A</span> <span class='o'>&lt;-</span> <span class='nf'><a href='https://ready4-dev.github.io/ready4/reference/renewSlot-methods.html'>renewSlot</a></span><span class='o'>(</span><span class='nv'>A</span>, <span class='s'>"b_SpecificParameters"</span>, <span class='nf'><a href='https://ready4-dev.github.io/specific/reference/SpecificConverter-class.html'>SpecificConverter</a></span><span class='o'>(</span>a_ScorzProfile <span class='o'>=</span> <span class='nv'>A</span><span class='o'>@</span><span class='nv'>a_ScorzProfile</span><span class='o'>)</span> <span class='o'><a href='https://magrittr.tidyverse.org/reference/pipe.html'>%&gt;%</a></span></span>
-<span>                 <span class='nf'><a href='https://ready4-dev.github.io/ready4/reference/metamorphose-methods.html'>metamorphose</a></span><span class='o'>(</span><span class='o'>)</span> <span class='o'><a href='https://magrittr.tidyverse.org/reference/pipe.html'>%&gt;%</a></span></span>
-<span>                 <span class='nf'><a href='https://ready4-dev.github.io/ready4/reference/procureSlot-methods.html'>procureSlot</a></span><span class='o'>(</span><span class='s'>"b_SpecificParameters"</span><span class='o'>)</span><span class='o'>)</span></span></code></pre>
-
-</div>
+We next ingest a lookup table of metadata about the variables we plan to explore as candidate predictors. In this case, we are sourcing the lookup table from an online data repository.
 
 <div class="highlight">
 
-<pre class='chroma'><code class='language-r' data-lang='r'><span><span class='nv'>A</span> <span class='o'>&lt;-</span> <span class='nf'><a href='https://ready4-dev.github.io/ready4/reference/renewSlot-methods.html'>renewSlot</a></span><span class='o'>(</span><span class='nv'>A</span>, <span class='s'>"b_SpecificParameters@predictors_lup"</span>, <span class='nf'><a href='https://ready4-dev.github.io/ready4use/reference/Ready4useRepos-class.html'>Ready4useRepos</a></span><span class='o'>(</span>dv_nm_1L_chr <span class='o'>=</span> <span class='s'>"TTU"</span>, </span>
-<span>                                                                        dv_ds_nm_1L_chr <span class='o'>=</span> <span class='s'>"https://doi.org/10.7910/DVN/DKDIB0"</span>, </span>
-<span>                                                                        dv_server_1L_chr <span class='o'>=</span> <span class='s'>"dataverse.harvard.edu"</span><span class='o'>)</span> <span class='o'><a href='https://magrittr.tidyverse.org/reference/pipe.html'>%&gt;%</a></span></span>
-<span>                 <span class='nf'><a href='https://ready4-dev.github.io/ready4/reference/ingest-methods.html'>ingest</a></span><span class='o'>(</span>fls_to_ingest_chr <span class='o'>=</span> <span class='nf'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='o'>(</span><span class='s'>"predictors_r3"</span><span class='o'>)</span>,</span>
-<span>                        metadata_1L_lgl <span class='o'>=</span> <span class='kc'>F</span><span class='o'>)</span><span class='o'>)</span> </span></code></pre>
+<pre class='chroma'><code class='language-r' data-lang='r'><span><span class='nv'>A</span> <span class='o'>&lt;-</span> <span class='nf'><a href='https://ready4-dev.github.io/ready4/reference/renew-methods.html'>renew</a></span><span class='o'>(</span><span class='nv'>A</span>, <span class='s'>"use_renew_mthd"</span>, fl_nm_1L_chr <span class='o'>=</span> <span class='s'>"predictors_r3"</span>, type_1L_chr <span class='o'>=</span> <span class='s'>"predictors_lup"</span>, </span>
+<span>           y_Ready4useRepos <span class='o'>=</span> <span class='nf'><a href='https://ready4-dev.github.io/ready4use/reference/Ready4useRepos-class.html'>Ready4useRepos</a></span><span class='o'>(</span>dv_nm_1L_chr <span class='o'>=</span> <span class='s'>"TTU"</span>, dv_ds_nm_1L_chr <span class='o'>=</span> <span class='s'>"https://doi.org/10.7910/DVN/DKDIB0"</span>, </span>
+<span>                                             dv_server_1L_chr <span class='o'>=</span> <span class='s'>"dataverse.harvard.edu"</span><span class='o'>)</span>,</span>
+<span>           what_1L_chr <span class='o'>=</span> <span class='s'>"parameters"</span><span class='o'>)</span></span></code></pre>
 
 </div>
 
@@ -202,259 +204,7 @@ We can inspect the metadata on candidate predictors that we have just ingested.
 
 <div class="highlight">
 
-<pre class='chroma'><code class='language-r' data-lang='r'><span><span class='nf'><a href='https://ready4-dev.github.io/ready4/reference/exhibitSlot-methods.html'>exhibitSlot</a></span><span class='o'>(</span><span class='nv'>A</span>, <span class='s'>"b_SpecificParameters@predictors_lup"</span>,</span>
-<span>         scroll_box_args_ls <span class='o'>=</span> <span class='nf'><a href='https://rdrr.io/r/base/list.html'>list</a></span><span class='o'>(</span>width <span class='o'>=</span> <span class='s'>"100%"</span><span class='o'>)</span><span class='o'>)</span></span>
-</code></pre>
-
-<div style="border: 1px solid #ddd; padding: 5px; overflow-x: scroll; width:100%; ">
-
-<table class=" lightable-paper lightable-hover lightable-paper" style="font-family: &quot;Arial Narrow&quot;, arial, helvetica, sans-serif; width: auto !important; margin-left: auto; margin-right: auto;border-bottom: 0; font-family: &quot;Arial Narrow&quot;, arial, helvetica, sans-serif; margin-left: auto; margin-right: auto;">
-<thead>
-<tr>
-<th style="text-align:left;">
-Variable
-</th>
-<th style="text-align:right;">
-Description
-</th>
-<th style="text-align:right;">
-Minimum
-</th>
-<th style="text-align:right;">
-Maximum
-</th>
-<th style="text-align:right;">
-Class
-</th>
-<th style="text-align:right;">
-Increment
-</th>
-<th style="text-align:right;">
-Function
-</th>
-<th style="text-align:left;">
-Scaling
-</th>
-<th style="text-align:right;">
-Covariate
-</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left;">
-BADS
-</td>
-<td style="text-align:right;">
-BADS total score
-</td>
-<td style="text-align:right;">
-0
-</td>
-<td style="text-align:right;">
-150
-</td>
-<td style="text-align:right;">
-integer
-</td>
-<td style="text-align:right;">
-1
-</td>
-<td style="text-align:right;">
-youthvars::youthvars_bads
-</td>
-<td style="text-align:left;">
-0.01
-</td>
-<td style="text-align:right;">
-FALSE
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-GAD7
-</td>
-<td style="text-align:right;">
-GAD7 total score
-</td>
-<td style="text-align:right;">
-0
-</td>
-<td style="text-align:right;">
-21
-</td>
-<td style="text-align:right;">
-integer
-</td>
-<td style="text-align:right;">
-1
-</td>
-<td style="text-align:right;">
-youthvars::youthvars_gad7
-</td>
-<td style="text-align:left;">
-0.01
-</td>
-<td style="text-align:right;">
-FALSE
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-K6
-</td>
-<td style="text-align:right;">
-K6 total score
-</td>
-<td style="text-align:right;">
-0
-</td>
-<td style="text-align:right;">
-24
-</td>
-<td style="text-align:right;">
-integer
-</td>
-<td style="text-align:right;">
-1
-</td>
-<td style="text-align:right;">
-youthvars::youthvars_k6
-</td>
-<td style="text-align:left;">
-0.01
-</td>
-<td style="text-align:right;">
-FALSE
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-OASIS
-</td>
-<td style="text-align:right;">
-OASIS total score
-</td>
-<td style="text-align:right;">
-0
-</td>
-<td style="text-align:right;">
-20
-</td>
-<td style="text-align:right;">
-integer
-</td>
-<td style="text-align:right;">
-1
-</td>
-<td style="text-align:right;">
-youthvars::youthvars_oasis
-</td>
-<td style="text-align:left;">
-0.01
-</td>
-<td style="text-align:right;">
-FALSE
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-PHQ9
-</td>
-<td style="text-align:right;">
-PHQ9 total score
-</td>
-<td style="text-align:right;">
-0
-</td>
-<td style="text-align:right;">
-27
-</td>
-<td style="text-align:right;">
-integer
-</td>
-<td style="text-align:right;">
-1
-</td>
-<td style="text-align:right;">
-youthvars::youthvars_phq9
-</td>
-<td style="text-align:left;">
-0.01
-</td>
-<td style="text-align:right;">
-FALSE
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-SCARED
-</td>
-<td style="text-align:right;">
-SCARED total score
-</td>
-<td style="text-align:right;">
-0
-</td>
-<td style="text-align:right;">
-82
-</td>
-<td style="text-align:right;">
-integer
-</td>
-<td style="text-align:right;">
-1
-</td>
-<td style="text-align:right;">
-youthvars::youthvars_scared
-</td>
-<td style="text-align:left;">
-0.01
-</td>
-<td style="text-align:right;">
-FALSE
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-SOFAS
-</td>
-<td style="text-align:right;">
-SOFAS total score
-</td>
-<td style="text-align:right;">
-0
-</td>
-<td style="text-align:right;">
-100
-</td>
-<td style="text-align:right;">
-integer
-</td>
-<td style="text-align:right;">
-1
-</td>
-<td style="text-align:right;">
-youthvars::youthvars_sofas
-</td>
-<td style="text-align:left;">
-0.01
-</td>
-<td style="text-align:right;">
-TRUE
-</td>
-</tr>
-</tbody>
-<tfoot>
-<tr>
-<td style="padding: 0; " colspan="100%">
-<sup></sup>
-</td>
-</tr>
-</tfoot>
-</table>
-
-</div>
+<pre class='chroma'><code class='language-r' data-lang='r'><span><span class='nf'><a href='https://ready4-dev.github.io/ready4/reference/exhibit-methods.html'>exhibit</a></span><span class='o'>(</span><span class='nv'>A</span>, scroll_box_args_ls <span class='o'>=</span> <span class='nf'><a href='https://rdrr.io/r/base/list.html'>list</a></span><span class='o'>(</span>width <span class='o'>=</span> <span class='s'>"100%"</span><span class='o'>)</span><span class='o'>)</span></span></code></pre>
 
 </div>
 
@@ -462,118 +212,88 @@ We add additional metadata about variables in our dataset that will be used in e
 
 <div class="highlight">
 
-<pre class='chroma'><code class='language-r' data-lang='r'><span><span class='nv'>A</span> <span class='o'>&lt;-</span> <span class='nf'><a href='https://ready4-dev.github.io/ready4/reference/renewSlot-methods.html'>renewSlot</a></span><span class='o'>(</span><span class='nv'>A</span>, <span class='s'>"b_SpecificParameters@depnt_var_min_max_dbl"</span>, <span class='nf'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='o'>(</span><span class='m'>0.03</span>,<span class='m'>1</span><span class='o'>)</span><span class='o'>)</span> <span class='o'><a href='https://magrittr.tidyverse.org/reference/pipe.html'>%&gt;%</a></span> <span class='c'># Inherit From TTUAqolAdol</span></span>
-<span>  <span class='nf'><a href='https://ready4-dev.github.io/ready4/reference/renewSlot-methods.html'>renewSlot</a></span><span class='o'>(</span><span class='s'>"b_SpecificParameters@candidate_predrs_chr"</span>, <span class='nf'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='o'>(</span><span class='s'>"BADS"</span>,<span class='s'>"GAD7"</span>, <span class='s'>"K6"</span>, <span class='s'>"OASIS"</span>, <span class='s'>"PHQ9"</span>, <span class='s'>"SCARED"</span><span class='o'>)</span><span class='o'>)</span> <span class='o'><a href='https://magrittr.tidyverse.org/reference/pipe.html'>%&gt;%</a></span></span>
-<span>  <span class='nf'><a href='https://ready4-dev.github.io/ready4/reference/renewSlot-methods.html'>renewSlot</a></span><span class='o'>(</span><span class='s'>"b_SpecificParameters@candidate_covars_chr"</span>, <span class='nf'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='o'>(</span><span class='s'>"d_sex_birth_s"</span>, <span class='s'>"d_age"</span>,  <span class='s'>"d_sexual_ori_s"</span>, </span>
-<span>                                                           <span class='s'>"d_studying_working"</span>, <span class='s'>"c_p_diag_s"</span>, <span class='s'>"c_clinical_staging_s"</span>,</span>
-<span>                                                           <span class='s'>"SOFAS"</span><span class='o'>)</span><span class='o'>)</span> <span class='o'><a href='https://magrittr.tidyverse.org/reference/pipe.html'>%&gt;%</a></span></span>
-<span>  <span class='nf'><a href='https://ready4-dev.github.io/ready4/reference/renewSlot-methods.html'>renewSlot</a></span><span class='o'>(</span><span class='s'>"b_SpecificParameters@descv_var_nms_chr"</span>, <span class='nf'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='o'>(</span><span class='s'>"d_age"</span>,<span class='s'>"Gender"</span>,<span class='s'>"d_relation_s"</span>, <span class='s'>"d_sexual_ori_s"</span>, </span>
-<span>                                                        <span class='s'>"Region"</span>, <span class='s'>"d_studying_working"</span>, <span class='s'>"c_p_diag_s"</span>, </span>
-<span>                                                        <span class='s'>"c_clinical_staging_s"</span>,<span class='s'>"SOFAS"</span><span class='o'>)</span><span class='o'>)</span> <span class='o'><a href='https://magrittr.tidyverse.org/reference/pipe.html'>%&gt;%</a></span></span>
-<span>  <span class='nf'><a href='https://ready4-dev.github.io/ready4/reference/renewSlot-methods.html'>renewSlot</a></span><span class='o'>(</span><span class='s'>"b_SpecificParameters@msrmnt_date_var_nm_1L_chr"</span>, <span class='s'>"d_interview_date"</span><span class='o'>)</span> </span></code></pre>
+<pre class='chroma'><code class='language-r' data-lang='r'><span><span class='nv'>A</span> <span class='o'>&lt;-</span> <span class='nf'><a href='https://ready4-dev.github.io/ready4/reference/renew-methods.html'>renew</a></span><span class='o'>(</span><span class='nv'>A</span>, <span class='nf'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='o'>(</span><span class='m'>0.03</span>,<span class='m'>1</span><span class='o'>)</span>, type_1L_chr <span class='o'>=</span> <span class='s'>"range"</span>, what_1L_chr <span class='o'>=</span> <span class='s'>"parameters"</span><span class='o'>)</span> <span class='o'><a href='https://magrittr.tidyverse.org/reference/pipe.html'>%&gt;%</a></span></span>
+<span>  <span class='nf'><a href='https://ready4-dev.github.io/ready4/reference/renew-methods.html'>renew</a></span><span class='o'>(</span><span class='nf'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='o'>(</span><span class='s'>"BADS"</span>,<span class='s'>"GAD7"</span>, <span class='s'>"K6"</span>, <span class='s'>"OASIS"</span>, <span class='s'>"PHQ9"</span>, <span class='s'>"SCARED"</span><span class='o'>)</span>,</span>
+<span>        type_1L_chr <span class='o'>=</span> <span class='s'>"predictors_vars"</span>, what_1L_chr <span class='o'>=</span> <span class='s'>"parameters"</span><span class='o'>)</span> <span class='o'><a href='https://magrittr.tidyverse.org/reference/pipe.html'>%&gt;%</a></span></span>
+<span>  <span class='nf'><a href='https://ready4-dev.github.io/ready4/reference/renew-methods.html'>renew</a></span><span class='o'>(</span><span class='nf'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='o'>(</span><span class='s'>"d_sex_birth_s"</span>, <span class='s'>"d_age"</span>,  <span class='s'>"d_sexual_ori_s"</span>, <span class='s'>"d_studying_working"</span>, <span class='s'>"c_p_diag_s"</span>, <span class='s'>"c_clinical_staging_s"</span>, <span class='s'>"SOFAS"</span><span class='o'>)</span>,     </span>
+<span>        type_1L_chr <span class='o'>=</span> <span class='s'>"covariates"</span>, what_1L_chr <span class='o'>=</span> <span class='s'>"parameters"</span><span class='o'>)</span> <span class='o'><a href='https://magrittr.tidyverse.org/reference/pipe.html'>%&gt;%</a></span></span>
+<span>  <span class='nf'><a href='https://ready4-dev.github.io/ready4/reference/renew-methods.html'>renew</a></span><span class='o'>(</span><span class='nf'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='o'>(</span><span class='s'>"d_age"</span>,<span class='s'>"Gender"</span>,<span class='s'>"d_relation_s"</span>, <span class='s'>"d_sexual_ori_s"</span> ,<span class='s'>"Region"</span>, <span class='s'>"d_studying_working"</span>, <span class='s'>"c_p_diag_s"</span>, <span class='s'>"c_clinical_staging_s"</span>,<span class='s'>"SOFAS"</span><span class='o'>)</span>, </span>
+<span>        type_1L_chr <span class='o'>=</span> <span class='s'>"descriptives"</span>, what_1L_chr <span class='o'>=</span> <span class='s'>"parameters"</span><span class='o'>)</span> <span class='o'><a href='https://magrittr.tidyverse.org/reference/pipe.html'>%&gt;%</a></span></span>
+<span>  <span class='nf'><a href='https://ready4-dev.github.io/ready4/reference/renew-methods.html'>renew</a></span><span class='o'>(</span><span class='s'>"d_interview_date"</span>, type_1L_chr <span class='o'>=</span> <span class='s'>"temporal"</span>, what_1L_chr <span class='o'>=</span> <span class='s'>"parameters"</span><span class='o'>)</span></span></code></pre>
 
 </div>
 
+We record that the data we are working with is fake (this step can be skipped if working with real data).
+
 <div class="highlight">
 
-<pre class='chroma'><code class='language-r' data-lang='r'><span><span class='nv'>A</span> <span class='o'>&lt;-</span>  <span class='nf'><a href='https://ready4-dev.github.io/ready4/reference/renewSlot-methods.html'>renewSlot</a></span><span class='o'>(</span><span class='nv'>A</span>, <span class='s'>"b_SpecificParameters@fake_1L_lgl"</span>, <span class='kc'>T</span><span class='o'>)</span> </span></code></pre>
+<pre class='chroma'><code class='language-r' data-lang='r'><span><span class='nv'>A</span> <span class='o'>&lt;-</span> <span class='nf'><a href='https://ready4-dev.github.io/ready4/reference/renew-methods.html'>renew</a></span><span class='o'>(</span><span class='nv'>A</span>, <span class='kc'>T</span>, type_1L_chr <span class='o'>=</span> <span class='s'>"is_fake"</span>, what_1L_chr <span class='o'>=</span> <span class='s'>"parameters"</span><span class='o'>)</span></span></code></pre>
 
 </div>
 
+We update `A` for internal consistency with the values we have previously supplied and create a local workspace to which output files will be written.
+
 <div class="highlight">
 
-<pre class='chroma'><code class='language-r' data-lang='r'><span><span class='nv'>A</span> <span class='o'>&lt;-</span> <span class='nf'><a href='https://ready4-dev.github.io/ready4/reference/renewSlot-methods.html'>renewSlot</a></span><span class='o'>(</span><span class='nv'>A</span>, <span class='s'>"c_SpecificProject"</span>, <span class='nf'><a href='https://ready4-dev.github.io/specific/reference/SpecificModels-class.html'>SpecificModels</a></span><span class='o'>(</span>a_YouthvarsProfile <span class='o'>=</span> <span class='nv'>A</span><span class='o'>@</span><span class='nv'>a_ScorzProfile</span><span class='o'>@</span><span class='nv'>a_YouthvarsProfile</span>,</span>
-<span>                                                      b_SpecificParameters <span class='o'>=</span> <span class='nv'>A</span><span class='o'>@</span><span class='nv'>b_SpecificParameters</span>,</span>
-<span>                                                      paths_chr <span class='o'>=</span> <span class='nf'><a href='https://rdrr.io/r/base/tempfile.html'>tempdir</a></span><span class='o'>(</span><span class='o'>)</span><span class='o'>)</span><span class='o'>)</span> </span></code></pre>
+<pre class='chroma'><code class='language-r' data-lang='r'><span><span class='nv'>A</span> <span class='o'>&lt;-</span> <span class='nf'><a href='https://ready4-dev.github.io/ready4/reference/renew-methods.html'>renew</a></span><span class='o'>(</span><span class='nv'>A</span>, consent_1L_chr <span class='o'>=</span> <span class='nv'>consent_1L_chr</span>, paths_chr <span class='o'>=</span> <span class='nf'><a href='https://rdrr.io/r/base/tempfile.html'>tempdir</a></span><span class='o'>(</span><span class='o'>)</span>, what_1L_chr <span class='o'>=</span> <span class='s'>"project"</span><span class='o'>)</span></span></code></pre>
 
 </div>
 
-<div class="highlight">
-
-<pre class='chroma'><code class='language-r' data-lang='r'><span><span class='nv'>A</span> <span class='o'>&lt;-</span> <span class='nf'><a href='https://ready4-dev.github.io/ready4/reference/ratifySlot-methods.html'>ratifySlot</a></span><span class='o'>(</span><span class='nv'>A</span>, <span class='s'>"c_SpecificProject"</span><span class='o'>)</span></span></code></pre>
-
-</div>
+We now generate tables and charts that describe our dataset. These are saved in a sub-directory of our output data directory, and are [available for download](https://github.com/ready4-dev/TTU/releases/download/Documentation_0.0/_Descriptives.zip). One of the plots is also reproduced here.
 
 <div class="highlight">
 
-<pre class='chroma'><code class='language-r' data-lang='r'><span><span class='nv'>A</span> <span class='o'>&lt;-</span> <span class='nf'><a href='https://ready4-dev.github.io/ready4/reference/renewSlot-methods.html'>renewSlot</a></span><span class='o'>(</span><span class='nv'>A</span>, <span class='s'>"c_SpecificProject"</span>, </span>
-<span>               <span class='nf'><a href='https://ready4-dev.github.io/ready4/reference/authorSlot-methods.html'>authorSlot</a></span><span class='o'>(</span><span class='nv'>A</span>, <span class='s'>"c_SpecificProject"</span>, what_1L_chr <span class='o'>=</span> <span class='s'>"workspace"</span><span class='o'>)</span><span class='o'>)</span></span></code></pre>
-
-</div>
-
-We now generate tables and charts that describe our dataset. These are saved in a sub-directory of our output data directory, a copy of which is [available for download](https://github.com/ready4-dev/TTU/releases/download/Documentation_0.0/_Descriptives.zip). One of the plots is also reproduced here.
-
-<div class="highlight">
-
-<pre class='chroma'><code class='language-r' data-lang='r'><span><span class='nv'>A</span> <span class='o'>&lt;-</span> <span class='nf'><a href='https://ready4-dev.github.io/ready4/reference/renewSlot-methods.html'>renewSlot</a></span><span class='o'>(</span><span class='nv'>A</span>, <span class='s'>"c_SpecificProject"</span>,</span>
-<span>               <span class='nf'><a href='https://ready4-dev.github.io/ready4/reference/authorSlot-methods.html'>authorSlot</a></span><span class='o'>(</span><span class='nv'>A</span>, <span class='s'>"c_SpecificProject"</span>, what_1L_chr <span class='o'>=</span> <span class='s'>"descriptives"</span>,</span>
-<span>                          digits_1L_int <span class='o'>=</span> <span class='m'>3L</span><span class='o'>)</span><span class='o'>)</span></span>
+<pre class='chroma'><code class='language-r' data-lang='r'><span><span class='nv'>A</span> <span class='o'>&lt;-</span> <span class='nf'><a href='https://ready4-dev.github.io/ready4/reference/author-methods.html'>author</a></span><span class='o'>(</span><span class='nv'>A</span>, consent_1L_chr <span class='o'>=</span> <span class='nv'>consent_1L_chr</span>, digits_1L_int <span class='o'>=</span> <span class='m'>3L</span>, what_1L_chr <span class='o'>=</span> <span class='s'>"descriptives"</span><span class='o'>)</span></span>
 </code></pre>
-<img src="figs/unnamed-chunk-17-1.png" width="700px" style="display: block; margin: auto;" />
+<img src="figs/unnamed-chunk-16-1.png" width="700px" style="display: block; margin: auto;" />
 
 </div>
 
-We next compare the performance of different model types. This step saves model objects and plots to a sub-directory of our output directory, a copy of which is [available for download](https://github.com/ready4-dev/TTU/releases/download/Documentation_0.0/B_Candidate_Predrs_Cmprsn.zip).
+We next compare the performance of different model types. We perform this step using the `investigate` method. This is the first of several times that we use this method. Each time the method is called `A` is updated to that the next time the method is called, a different algorithm will be used. The sequence of calls to `investigate` is therefore important (it should be in the same order as outlined in this example and you should not attempt to repeat a call to `investigate` to redo a prior step).
 
 <div class="highlight">
 
-<pre class='chroma'><code class='language-r' data-lang='r'><span><span class='nv'>A</span> <span class='o'>&lt;-</span> <span class='nf'><a href='https://ready4-dev.github.io/ready4/reference/renewSlot-methods.html'>renewSlot</a></span><span class='o'>(</span><span class='nv'>A</span>, <span class='s'>"c_SpecificProject"</span>,</span>
-<span>               <span class='nf'><a href='https://ready4-dev.github.io/ready4/reference/investigateSlot-methods.html'>investigateSlot</a></span><span class='o'>(</span><span class='nv'>A</span>, <span class='s'>"c_SpecificProject"</span>,</span>
-<span>                               depnt_var_max_val_1L_dbl <span class='o'>=</span> <span class='m'>0.99</span>,</span>
-<span>                               session_ls <span class='o'>=</span> <span class='nf'><a href='https://rdrr.io/r/utils/sessionInfo.html'>sessionInfo</a></span><span class='o'>(</span><span class='o'>)</span><span class='o'>)</span><span class='o'>)</span></span></code></pre>
+<pre class='chroma'><code class='language-r' data-lang='r'><span><span class='nv'>A</span> <span class='o'>&lt;-</span> <span class='nf'><a href='https://ready4-dev.github.io/ready4/reference/investigate-methods.html'>investigate</a></span><span class='o'>(</span><span class='nv'>A</span>, consent_1L_chr <span class='o'>=</span> <span class='nv'>consent_1L_chr</span>, depnt_var_max_val_1L_dbl <span class='o'>=</span> <span class='m'>0.9999</span>, session_ls <span class='o'>=</span> <span class='nf'><a href='https://rdrr.io/r/utils/sessionInfo.html'>sessionInfo</a></span><span class='o'>(</span><span class='o'>)</span><span class='o'>)</span></span></code></pre>
 
 </div>
 
-After inspecting the output of the previous command, we can now specify the preferred model types to use from this point onwards.
+The outputs of the previous command are saved into a sub-directory of our output directory. An example of this output is [available for download](https://github.com/ready4-dev/TTU/releases/download/Documentation_0.0/A_Candidate_Mdls_Cmprsn.zip)). Once we inspect this output, we can then specify the preferred model types to use from this point onwards.
 
 <div class="highlight">
 
-<pre class='chroma'><code class='language-r' data-lang='r'><span><span class='nv'>A</span> <span class='o'>&lt;-</span> <span class='nf'><a href='https://ready4-dev.github.io/ready4/reference/renewSlot-methods.html'>renewSlot</a></span><span class='o'>(</span><span class='nv'>A</span>, <span class='s'>"c_SpecificProject"</span>,</span>
-<span>               <span class='nf'><a href='https://ready4-dev.github.io/ready4/reference/renew-methods.html'>renew</a></span><span class='o'>(</span><span class='nf'><a href='https://ready4-dev.github.io/ready4/reference/procureSlot-methods.html'>procureSlot</a></span><span class='o'>(</span><span class='nv'>A</span>, <span class='s'>"c_SpecificProject"</span><span class='o'>)</span>,</span>
-<span>                     new_val_xx <span class='o'>=</span> <span class='nf'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='o'>(</span><span class='s'>"GLM_GSN_LOG"</span>, <span class='s'>"OLS_CLL"</span><span class='o'>)</span>,</span>
-<span>                     type_1L_chr <span class='o'>=</span> <span class='s'>"results"</span>,</span>
-<span>                     what_1L_chr <span class='o'>=</span> <span class='s'>"prefd_mdls"</span><span class='o'>)</span><span class='o'>)</span></span></code></pre>
+<pre class='chroma'><code class='language-r' data-lang='r'><span><span class='nv'>A</span> <span class='o'>&lt;-</span> <span class='nf'><a href='https://ready4-dev.github.io/ready4/reference/renew-methods.html'>renew</a></span><span class='o'>(</span><span class='nv'>A</span>, <span class='nf'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='o'>(</span><span class='s'>"GLM_GSN_LOG"</span>, <span class='s'>"OLS_CLL"</span><span class='o'>)</span>, type_1L_chr <span class='o'>=</span> <span class='s'>"models"</span>, what_1L_chr <span class='o'>=</span> <span class='s'>"results"</span><span class='o'>)</span></span></code></pre>
 
 </div>
 
-Next we assess multiple versions of our preferred model type - one single predictor model for each of our candidate predictors and the same models with candidate covariates added. A number of model/plot objects saved to a sub-directory of our output directory, a copy of which is [available for download](https://github.com/ready4-dev/TTU/releases/download/Documentation_0.0/C_Predrs_Sngl_Mdl_Cmprsn.zip).
+Next we assess multiple versions of our preferred model type - one single predictor model for each of our candidate predictors and the same models with candidate covariates added.
 
 <div class="highlight">
 
-<pre class='chroma'><code class='language-r' data-lang='r'><span><span class='nv'>A</span> <span class='o'>&lt;-</span> <span class='nf'><a href='https://ready4-dev.github.io/ready4/reference/renewSlot-methods.html'>renewSlot</a></span><span class='o'>(</span><span class='nv'>A</span>, <span class='s'>"c_SpecificProject"</span>,</span>
-<span>               <span class='nf'><a href='https://ready4-dev.github.io/ready4/reference/investigateSlot-methods.html'>investigateSlot</a></span><span class='o'>(</span><span class='nv'>A</span>,<span class='s'>"c_SpecificProject"</span><span class='o'>)</span><span class='o'>)</span></span></code></pre>
+<pre class='chroma'><code class='language-r' data-lang='r'><span><span class='nv'>A</span> <span class='o'>&lt;-</span> <span class='nf'><a href='https://ready4-dev.github.io/ready4/reference/investigate-methods.html'>investigate</a></span><span class='o'>(</span><span class='nv'>A</span>, consent_1L_chr <span class='o'>=</span> <span class='nv'>consent_1L_chr</span><span class='o'>)</span></span></code></pre>
 
 </div>
 
-After reviewing the output of the previous step, we specify the covariates we wish to add to the models.
+The previous step saved output into a sub-directory of our output directory. Example output is available for download: ([single predictor comparisons](https://github.com/ready4-dev/TTU/releases/download/Documentation_0.0/B_Candidate_Predrs_Cmprsn.zip)) and [multivariate model comparisons](https://github.com/ready4-dev/TTU/releases/download/Documentation_0.0/C_Predrs_Sngl_Mdl_Cmprsn.zip). After reviewing this output, we can specify the covariates we wish to add to the models we will assess from this point forward.
 
 <div class="highlight">
 
-<pre class='chroma'><code class='language-r' data-lang='r'><span><span class='nv'>A</span> <span class='o'>&lt;-</span> <span class='nf'><a href='https://ready4-dev.github.io/ready4/reference/renewSlot-methods.html'>renewSlot</a></span><span class='o'>(</span><span class='nv'>A</span>, <span class='s'>"c_SpecificProject"</span>,</span>
-<span>               <span class='nf'><a href='https://ready4-dev.github.io/ready4/reference/renew-methods.html'>renew</a></span><span class='o'>(</span><span class='nf'><a href='https://ready4-dev.github.io/ready4/reference/procureSlot-methods.html'>procureSlot</a></span><span class='o'>(</span><span class='nv'>A</span>, <span class='s'>"c_SpecificProject"</span><span class='o'>)</span>,</span>
-<span>                     new_val_xx <span class='o'>=</span> <span class='s'>"SOFAS"</span>,</span>
-<span>                     type_1L_chr <span class='o'>=</span> <span class='s'>"results"</span>,</span>
-<span>                     what_1L_chr <span class='o'>=</span> <span class='s'>"prefd_covars"</span><span class='o'>)</span><span class='o'>)</span></span></code></pre>
+<pre class='chroma'><code class='language-r' data-lang='r'><span><span class='nv'>A</span> <span class='o'>&lt;-</span> <span class='nf'><a href='https://ready4-dev.github.io/ready4/reference/renew-methods.html'>renew</a></span><span class='o'>(</span><span class='nv'>A</span>, <span class='s'>"SOFAS"</span>, type_1L_chr <span class='o'>=</span> <span class='s'>"covariates"</span>, what_1L_chr <span class='o'>=</span> <span class='s'>"results"</span><span class='o'>)</span></span></code></pre>
 
 </div>
 
-We now assess the multivariate models. More model/plot objects are saved to a sub-directory of our output directory, a copy of which is [available for download](https://github.com/ready4-dev/TTU/releases/download/Documentation_0.0/E_Predrs_W_Covars_Sngl_Mdl_Cmprsn.zip).
+We can now assess the multivariate models.
 
 <div class="highlight">
 
-<pre class='chroma'><code class='language-r' data-lang='r'><span><span class='nv'>A</span> <span class='o'>&lt;-</span> <span class='nf'><a href='https://ready4-dev.github.io/ready4/reference/renewSlot-methods.html'>renewSlot</a></span><span class='o'>(</span><span class='nv'>A</span>, <span class='s'>"c_SpecificProject"</span>,</span>
-<span>               <span class='nf'><a href='https://ready4-dev.github.io/ready4/reference/investigateSlot-methods.html'>investigateSlot</a></span><span class='o'>(</span><span class='nv'>A</span>, <span class='s'>"c_SpecificProject"</span><span class='o'>)</span><span class='o'>)</span></span></code></pre>
+<pre class='chroma'><code class='language-r' data-lang='r'><span><span class='nv'>A</span> <span class='o'>&lt;-</span> <span class='nf'><a href='https://ready4-dev.github.io/ready4/reference/investigate-methods.html'>investigate</a></span><span class='o'>(</span><span class='nv'>A</span>, consent_1L_chr <span class='o'>=</span> <span class='nv'>consent_1L_chr</span><span class='o'>)</span></span></code></pre>
 
 </div>
 
-We next reformulate the models we finalised in the previous step so that they are suitable for modelling longitudinal change.
-
-For our primary analysis, we use the longitudinal formulation of the models we previously selected. A series of large model files are written to the local output data directory.
+As a result of the previous step, more model objects and plot files have been saved to a sub-directory of our output directory. Examples of this output are available for download [here](https://github.com/ready4-dev/TTU/releases/download/Documentation_0.0/D_Predr_Covars_Cmprsn.zip) and [here](https://github.com/ready4-dev/TTU/releases/download/Documentation_0.0/E_Predrs_W_Covars_Sngl_Mdl_Cmprsn.zip). Once we inspect this output we can reformulate the models we finalised in the previous step so that they are suitable for modelling longitudinal change. For our primary analysis, we use a mixed model formulation of the models that we previously selected. A series of large model files are written to the local output data directory.
 
 <div class="highlight">
 
-<pre class='chroma'><code class='language-r' data-lang='r'><span><span class='nv'>A</span> <span class='o'>&lt;-</span> <span class='nf'><a href='https://ready4-dev.github.io/ready4/reference/renewSlot-methods.html'>renewSlot</a></span><span class='o'>(</span><span class='nv'>A</span>, <span class='s'>"c_SpecificProject"</span>,</span>
-<span>               <span class='nf'><a href='https://ready4-dev.github.io/ready4/reference/investigateSlot-methods.html'>investigateSlot</a></span><span class='o'>(</span><span class='nv'>A</span>, <span class='s'>"c_SpecificProject"</span><span class='o'>)</span><span class='o'>)</span></span></code></pre>
+<pre class='chroma'><code class='language-r' data-lang='r'><span><span class='nv'>A</span> <span class='o'>&lt;-</span> <span class='nf'><a href='https://ready4-dev.github.io/ready4/reference/investigate-methods.html'>investigate</a></span><span class='o'>(</span><span class='nv'>A</span>, consent_1L_chr <span class='o'>=</span> <span class='nv'>consent_1L_chr</span><span class='o'>)</span></span></code></pre>
 
 </div>
 
@@ -581,25 +301,17 @@ For our secondary analyses, we specify alternative combinations of predictors an
 
 <div class="highlight">
 
-<pre class='chroma'><code class='language-r' data-lang='r'><span><span class='nv'>A</span> <span class='o'>&lt;-</span> <span class='nf'><a href='https://ready4-dev.github.io/ready4/reference/renewSlot-methods.html'>renewSlot</a></span><span class='o'>(</span><span class='nv'>A</span>, <span class='s'>"c_SpecificProject"</span>,</span>
-<span>               <span class='nf'><a href='https://ready4-dev.github.io/ready4/reference/investigateSlot-methods.html'>investigateSlot</a></span><span class='o'>(</span><span class='nv'>A</span>, <span class='s'>"c_SpecificProject"</span>,</span>
-<span>                               scndry_anlys_params_ls <span class='o'>=</span> <span class='nf'><a href='https://ready4-dev.github.io/specific/reference/make_scndry_anlys_params.html'>make_scndry_anlys_params</a></span><span class='o'>(</span>candidate_predrs_chr <span class='o'>=</span> <span class='nf'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='o'>(</span><span class='s'>"SOFAS"</span><span class='o'>)</span>,</span>
-<span>                                                                                 candidate_covar_nms_chr <span class='o'>=</span> <span class='nf'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='o'>(</span><span class='s'>"d_sex_birth_s"</span>, </span>
-<span>                                                                                                             <span class='s'>"d_age"</span>, </span>
-<span>                                                                                                             <span class='s'>"d_sexual_ori_s"</span>,</span>
-<span>                                                                                                             <span class='s'>"d_studying_working"</span><span class='o'>)</span>,</span>
-<span>                                                                                 prefd_covars_chr <span class='o'>=</span> <span class='kc'>NA_character_</span><span class='o'>)</span> <span class='o'><a href='https://magrittr.tidyverse.org/reference/pipe.html'>%&gt;%</a></span></span>
-<span>                                 <span class='nf'><a href='https://ready4-dev.github.io/specific/reference/make_scndry_anlys_params.html'>make_scndry_anlys_params</a></span><span class='o'>(</span>candidate_predrs_chr <span class='o'>=</span> <span class='nf'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='o'>(</span><span class='s'>"SCARED"</span>,<span class='s'>"OASIS"</span>,<span class='s'>"GAD7"</span><span class='o'>)</span>,</span>
-<span>                                                          candidate_covar_nms_chr <span class='o'>=</span> <span class='nf'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='o'>(</span><span class='s'>"PHQ9"</span>, <span class='s'>"SOFAS"</span>, </span>
-<span>                                                                                      <span class='s'>"d_sex_birth_s"</span>, </span>
-<span>                                                                                      <span class='s'>"d_age"</span>, </span>
-<span>                                                                                      <span class='s'>"d_sexual_ori_s"</span>,</span>
-<span>                                                                                      <span class='s'>"d_studying_working"</span><span class='o'>)</span>,</span>
-<span>                                                          prefd_covars_chr <span class='o'>=</span> <span class='s'>"PHQ9"</span><span class='o'>)</span><span class='o'>)</span><span class='o'>)</span></span></code></pre>
+<pre class='chroma'><code class='language-r' data-lang='r'><span><span class='nv'>A</span> <span class='o'>&lt;-</span> <span class='nf'><a href='https://ready4-dev.github.io/ready4/reference/investigate-methods.html'>investigate</a></span><span class='o'>(</span><span class='nv'>A</span>, consent_1L_chr <span class='o'>=</span> <span class='nv'>consent_1L_chr</span>,</span>
+<span>                 scndry_anlys_params_ls <span class='o'>=</span> <span class='nf'><a href='https://ready4-dev.github.io/specific/reference/make_scndry_anlys_params.html'>make_scndry_anlys_params</a></span><span class='o'>(</span>candidate_predrs_chr <span class='o'>=</span> <span class='nf'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='o'>(</span><span class='s'>"SOFAS"</span><span class='o'>)</span>,</span>
+<span>                                                                   candidate_covar_nms_chr <span class='o'>=</span> <span class='nf'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='o'>(</span><span class='s'>"d_sex_birth_s"</span>, <span class='s'>"d_age"</span>, <span class='s'>"d_sexual_ori_s"</span>, <span class='s'>"d_studying_working"</span><span class='o'>)</span>,</span>
+<span>                                                                   prefd_covars_chr <span class='o'>=</span> <span class='kc'>NA_character_</span><span class='o'>)</span> <span class='o'><a href='https://magrittr.tidyverse.org/reference/pipe.html'>%&gt;%</a></span></span>
+<span>                   <span class='nf'><a href='https://ready4-dev.github.io/specific/reference/make_scndry_anlys_params.html'>make_scndry_anlys_params</a></span><span class='o'>(</span>candidate_predrs_chr <span class='o'>=</span> <span class='nf'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='o'>(</span><span class='s'>"SCARED"</span>,<span class='s'>"OASIS"</span>,<span class='s'>"GAD7"</span><span class='o'>)</span>,</span>
+<span>                                            candidate_covar_nms_chr <span class='o'>=</span> <span class='nf'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='o'>(</span><span class='s'>"PHQ9"</span>, <span class='s'>"SOFAS"</span>, <span class='s'>"d_sex_birth_s"</span>, <span class='s'>"d_age"</span>, <span class='s'>"d_sexual_ori_s"</span>, <span class='s'>"d_studying_working"</span><span class='o'>)</span>,</span>
+<span>                                            prefd_covars_chr <span class='o'>=</span> <span class='s'>"PHQ9"</span><span class='o'>)</span><span class='o'>)</span></span></code></pre>
 
 </div>
 
-### Report and disseminate findings
+### Report findings
 
 #### Create shareable models
 
@@ -607,29 +319,17 @@ The model objects created and saved in our working directory by the preceding st
 
 <div class="highlight">
 
-<pre class='chroma'><code class='language-r' data-lang='r'><span><span class='nv'>A</span> <span class='o'>&lt;-</span> <span class='nf'><a href='https://ready4-dev.github.io/ready4/reference/renewSlot-methods.html'>renewSlot</a></span><span class='o'>(</span><span class='nv'>A</span>, <span class='s'>"c_SpecificProject"</span>,</span>
-<span>               <span class='nf'><a href='https://ready4-dev.github.io/ready4/reference/authorData-methods.html'>authorData</a></span><span class='o'>(</span><span class='nf'><a href='https://ready4-dev.github.io/ready4/reference/procureSlot-methods.html'>procureSlot</a></span><span class='o'>(</span><span class='nv'>A</span>, <span class='s'>"c_SpecificProject"</span><span class='o'>)</span><span class='o'>)</span><span class='o'>)</span></span></code></pre>
+<pre class='chroma'><code class='language-r' data-lang='r'><span><span class='nv'>A</span> <span class='o'>&lt;-</span> <span class='nf'><a href='https://ready4-dev.github.io/ready4/reference/author-methods.html'>author</a></span><span class='o'>(</span><span class='nv'>A</span>, consent_1L_chr <span class='o'>=</span> <span class='nv'>consent_1L_chr</span>, what_1L_chr <span class='o'>=</span> <span class='s'>"models"</span><span class='o'>)</span></span></code></pre>
 
 </div>
 
 #### Specify study reporting metadata
 
-We create a `TTUSynopsis` object that contains the fields necessary to render and share reports.
+We update `A` so that we can begin use it to render and share reports.
 
 <div class="highlight">
 
-<pre class='chroma'><code class='language-r' data-lang='r'><span><span class='nv'>A</span> <span class='o'>&lt;-</span> <span class='nf'><a href='https://ready4-dev.github.io/ready4/reference/renewSlot-methods.html'>renewSlot</a></span><span class='o'>(</span><span class='nv'>A</span>, <span class='s'>"d_TTUReports"</span>,</span>
-<span>               <span class='o'>&#123;</span></span>
-<span>                 <span class='nv'>Y</span> <span class='o'>&lt;-</span> <span class='nf'><a href='https://ready4-dev.github.io/ready4/reference/metamorphoseSlot-methods.html'>metamorphoseSlot</a></span><span class='o'>(</span><span class='nv'>A</span>, <span class='s'>"c_SpecificProject"</span><span class='o'>)</span></span>
-<span>                 <span class='nv'>Y</span> <span class='o'>&lt;-</span> <span class='nf'><a href='https://ready4-dev.github.io/TTU/reference/TTUSynopsis-class.html'>TTUSynopsis</a></span><span class='o'>(</span>a_Ready4showPaths <span class='o'>=</span> <span class='nv'>Y</span><span class='o'>@</span><span class='nv'>a_Ready4showPaths</span>,</span>
-<span>                                  b_SpecificResults <span class='o'>=</span> <span class='nv'>Y</span><span class='o'>@</span><span class='nv'>b_SpecificResults</span>,</span>
-<span>                                  c_SpecificParameters <span class='o'>=</span> <span class='nv'>Y</span><span class='o'>@</span><span class='nv'>c_SpecificParameters</span>,</span>
-<span>                                  d_YouthvarsProfile <span class='o'>=</span> <span class='nv'>Y</span><span class='o'>@</span><span class='nv'>d_YouthvarsProfile</span>,</span>
-<span>                                  rmd_fl_nms_ls <span class='o'>=</span> <span class='nv'>Y</span><span class='o'>@</span><span class='nv'>rmd_fl_nms_ls</span><span class='o'>)</span></span>
-<span>                 <span class='nv'>Y</span> <span class='o'>&lt;-</span> <span class='nf'><a href='https://ready4-dev.github.io/TTU/reference/TTUReports-class.html'>TTUReports</a></span><span class='o'>(</span>a_TTUSynopsis <span class='o'>=</span> <span class='nv'>Y</span><span class='o'>)</span></span>
-<span>                 <span class='nv'>Y</span></span>
-<span>                 <span class='o'>&#125;</span></span>
-<span>               <span class='o'>)</span></span></code></pre>
+<pre class='chroma'><code class='language-r' data-lang='r'><span><span class='nv'>A</span> <span class='o'>&lt;-</span> <span class='nf'><a href='https://ready4-dev.github.io/ready4/reference/renew-methods.html'>renew</a></span><span class='o'>(</span><span class='nv'>A</span>, what_1L_chr <span class='o'>=</span> <span class='s'>"reporting"</span><span class='o'>)</span></span></code></pre>
 
 </div>
 
@@ -637,22 +337,13 @@ We add metadata relevant to the reports that we will be generating to these fiel
 
 <div class="highlight">
 
-<pre class='chroma'><code class='language-r' data-lang='r'><span><span class='nv'>A</span> <span class='o'>&lt;-</span> <span class='nf'><a href='https://ready4-dev.github.io/ready4/reference/renewSlot-methods.html'>renewSlot</a></span><span class='o'>(</span><span class='nv'>A</span>, <span class='s'>"d_TTUReports@a_TTUSynopsis"</span>,</span>
-<span>               <span class='nf'><a href='https://ready4-dev.github.io/ready4/reference/procureSlot-methods.html'>procureSlot</a></span><span class='o'>(</span><span class='nv'>A</span>, <span class='s'>"d_TTUReports@a_TTUSynopsis"</span><span class='o'>)</span> <span class='o'><a href='https://magrittr.tidyverse.org/reference/pipe.html'>%&gt;%</a></span> </span>
-<span>                 <span class='nf'><a href='https://ready4-dev.github.io/ready4/reference/renewSlot-methods.html'>renewSlot</a></span><span class='o'>(</span><span class='s'>"authors_r3"</span>, <span class='nf'>ready4show</span><span class='nf'>::</span><span class='nv'><a href='https://ready4-dev.github.io/ready4show/reference/authors_tb.html'>authors_tb</a></span><span class='o'>)</span> <span class='o'><a href='https://magrittr.tidyverse.org/reference/pipe.html'>%&gt;%</a></span></span>
-<span>                 <span class='nf'><a href='https://ready4-dev.github.io/ready4/reference/renewSlot-methods.html'>renewSlot</a></span><span class='o'>(</span><span class='s'>"institutes_r3"</span>, <span class='nf'>ready4show</span><span class='nf'>::</span><span class='nv'><a href='https://ready4-dev.github.io/ready4show/reference/institutes_tb.html'>institutes_tb</a></span><span class='o'>)</span> <span class='o'><a href='https://magrittr.tidyverse.org/reference/pipe.html'>%&gt;%</a></span></span>
-<span>                 <span class='nf'><a href='https://ready4-dev.github.io/ready4/reference/renewSlot-methods.html'>renewSlot</a></span><span class='o'>(</span><span class='s'>"digits_int"</span>, <span class='nf'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='o'>(</span><span class='m'>3L</span>,<span class='m'>3L</span><span class='o'>)</span><span class='o'>)</span> <span class='o'><a href='https://magrittr.tidyverse.org/reference/pipe.html'>%&gt;%</a></span></span>
-<span>                 <span class='nf'><a href='https://ready4-dev.github.io/ready4/reference/renewSlot-methods.html'>renewSlot</a></span><span class='o'>(</span><span class='s'>"outp_formats_chr"</span>, <span class='nf'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='o'>(</span><span class='s'>"PDF"</span>,<span class='s'>"PDF"</span><span class='o'>)</span><span class='o'>)</span> <span class='o'><a href='https://magrittr.tidyverse.org/reference/pipe.html'>%&gt;%</a></span></span>
-<span>                 <span class='nf'><a href='https://ready4-dev.github.io/ready4/reference/renewSlot-methods.html'>renewSlot</a></span><span class='o'>(</span><span class='s'>"title_1L_chr"</span>, <span class='s'>"A hypothetical utility mapping study using fake data"</span><span class='o'>)</span> <span class='o'><a href='https://magrittr.tidyverse.org/reference/pipe.html'>%&gt;%</a></span></span>
-<span>                 <span class='nf'><a href='https://ready4-dev.github.io/ready4/reference/renewSlot-methods.html'>renewSlot</a></span><span class='o'>(</span><span class='s'>"correspondences_r3"</span>, old_nms_chr <span class='o'>=</span> <span class='nf'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='o'>(</span><span class='s'>"PHQ9"</span>, <span class='s'>"GAD7"</span><span class='o'>)</span>, new_nms_chr <span class='o'>=</span> <span class='nf'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='o'>(</span><span class='s'>"PHQ-9"</span>, <span class='s'>"GAD-7"</span><span class='o'>)</span><span class='o'>)</span> <span class='o'><a href='https://magrittr.tidyverse.org/reference/pipe.html'>%&gt;%</a></span></span>
-<span>                 <span class='nf'><a href='https://ready4-dev.github.io/ready4/reference/renewSlot-methods.html'>renewSlot</a></span><span class='o'>(</span><span class='s'>"e_Ready4useRepos"</span>, <span class='nf'><a href='https://ready4-dev.github.io/ready4use/reference/Ready4useRepos-class.html'>Ready4useRepos</a></span><span class='o'>(</span>dv_nm_1L_chr <span class='o'>=</span> <span class='s'>"fakes"</span>, </span>
-<span>                                                              dv_ds_nm_1L_chr <span class='o'>=</span> <span class='s'>"https://doi.org/10.7910/DVN/D74QMP"</span>, </span>
-<span>                                                              dv_server_1L_chr <span class='o'>=</span> <span class='s'>"dataverse.harvard.edu"</span><span class='o'>)</span><span class='o'>)</span><span class='o'>)</span> </span>
-<span></span></code></pre>
-
-</div>
-
-<div class="highlight">
+<pre class='chroma'><code class='language-r' data-lang='r'><span><span class='nv'>A</span> <span class='o'>&lt;-</span> <span class='nf'><a href='https://ready4-dev.github.io/ready4/reference/renew-methods.html'>renew</a></span><span class='o'>(</span><span class='nv'>A</span>, <span class='nf'>ready4show</span><span class='nf'>::</span><span class='nv'><a href='https://ready4-dev.github.io/ready4show/reference/authors_tb.html'>authors_tb</a></span>, type_1L_chr <span class='o'>=</span> <span class='s'>"authors"</span>, what_1L_chr <span class='o'>=</span> <span class='s'>"reporting"</span><span class='o'>)</span> <span class='o'><a href='https://magrittr.tidyverse.org/reference/pipe.html'>%&gt;%</a></span></span>
+<span>  <span class='nf'><a href='https://ready4-dev.github.io/ready4/reference/renew-methods.html'>renew</a></span><span class='o'>(</span><span class='nf'>ready4show</span><span class='nf'>::</span><span class='nv'><a href='https://ready4-dev.github.io/ready4show/reference/institutes_tb.html'>institutes_tb</a></span>, type_1L_chr <span class='o'>=</span> <span class='s'>"institutes"</span>, what_1L_chr <span class='o'>=</span> <span class='s'>"reporting"</span><span class='o'>)</span> <span class='o'><a href='https://magrittr.tidyverse.org/reference/pipe.html'>%&gt;%</a></span></span>
+<span>  <span class='nf'><a href='https://ready4-dev.github.io/ready4/reference/renew-methods.html'>renew</a></span><span class='o'>(</span><span class='nf'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='o'>(</span><span class='m'>3L</span>,<span class='m'>3L</span><span class='o'>)</span>, type_1L_chr <span class='o'>=</span> <span class='s'>"digits"</span>, what_1L_chr <span class='o'>=</span> <span class='s'>"reporting"</span><span class='o'>)</span> <span class='o'><a href='https://magrittr.tidyverse.org/reference/pipe.html'>%&gt;%</a></span></span>
+<span>  <span class='nf'><a href='https://ready4-dev.github.io/ready4/reference/renew-methods.html'>renew</a></span><span class='o'>(</span><span class='nf'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='o'>(</span><span class='s'>"PDF"</span>,<span class='s'>"PDF"</span><span class='o'>)</span>, type_1L_chr <span class='o'>=</span> <span class='s'>"formats"</span>, what_1L_chr <span class='o'>=</span> <span class='s'>"reporting"</span><span class='o'>)</span> <span class='o'><a href='https://magrittr.tidyverse.org/reference/pipe.html'>%&gt;%</a></span></span>
+<span>  <span class='nf'><a href='https://ready4-dev.github.io/ready4/reference/renew-methods.html'>renew</a></span><span class='o'>(</span><span class='s'>"A hypothetical utility mapping study using fake data"</span>, type_1L_chr <span class='o'>=</span> <span class='s'>"title"</span>, what_1L_chr <span class='o'>=</span> <span class='s'>"reporting"</span><span class='o'>)</span> <span class='o'><a href='https://magrittr.tidyverse.org/reference/pipe.html'>%&gt;%</a></span></span>
+<span>  <span class='nf'><a href='https://ready4-dev.github.io/ready4/reference/renew-methods.html'>renew</a></span><span class='o'>(</span><span class='nf'><a href='https://ready4-dev.github.io/ready4/reference/renew-methods.html'>renew</a></span><span class='o'>(</span><span class='nf'><a href='https://ready4-dev.github.io/ready4show/reference/ready4show_correspondences.html'>ready4show_correspondences</a></span><span class='o'>(</span><span class='o'>)</span>, old_nms_chr <span class='o'>=</span> <span class='nf'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='o'>(</span><span class='s'>"PHQ9"</span>, <span class='s'>"GAD7"</span><span class='o'>)</span>, new_nms_chr <span class='o'>=</span> <span class='nf'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='o'>(</span><span class='s'>"PHQ-9"</span>, <span class='s'>"GAD-7"</span><span class='o'>)</span><span class='o'>)</span>, type_1L_chr <span class='o'>=</span> <span class='s'>"changes"</span>, what_1L_chr <span class='o'>=</span> <span class='s'>"reporting"</span><span class='o'>)</span> <span class='o'><a href='https://magrittr.tidyverse.org/reference/pipe.html'>%&gt;%</a></span></span>
+<span>  <span class='nf'><a href='https://ready4-dev.github.io/ready4/reference/renew-methods.html'>renew</a></span><span class='o'>(</span><span class='nf'><a href='https://ready4-dev.github.io/ready4use/reference/Ready4useRepos-class.html'>Ready4useRepos</a></span><span class='o'>(</span>dv_nm_1L_chr <span class='o'>=</span> <span class='s'>"fakes"</span>, dv_ds_nm_1L_chr <span class='o'>=</span> <span class='s'>"https://doi.org/10.7910/DVN/D74QMP"</span>, dv_server_1L_chr <span class='o'>=</span> <span class='s'>"dataverse.harvard.edu"</span><span class='o'>)</span>, type_1L_chr <span class='o'>=</span> <span class='s'>"repos"</span>, what_1L_chr <span class='o'>=</span> <span class='s'>"reporting"</span><span class='o'>)</span> </span></code></pre>
 
 </div>
 
@@ -662,27 +353,7 @@ We download a program for generating a catalogue of models and use it to summari
 
 <div class="highlight">
 
-<pre class='chroma'><code class='language-r' data-lang='r'><span><span class='nf'><a href='https://ready4-dev.github.io/ready4/reference/authorSlot-methods.html'>authorSlot</a></span><span class='o'>(</span><span class='nv'>A</span>, <span class='s'>"d_TTUReports"</span>, what_1L_chr <span class='o'>=</span> <span class='s'>"Catalogue"</span>, download_tmpl_1L_lgl <span class='o'>=</span> <span class='kc'>T</span><span class='o'>)</span></span></code></pre>
-
-</div>
-
-#### Share model catalogue
-
-We share the catalogues that we created, uploading a copy to our study online repository. To run this step you will need write permissions to the online repository.
-
-<div class="highlight">
-
-<pre class='chroma'><code class='language-r' data-lang='r'><span><span class='nf'><a href='https://ready4-dev.github.io/ready4/reference/shareSlot-methods.html'>shareSlot</a></span><span class='o'>(</span><span class='nv'>A</span>, <span class='s'>"d_TTUReports@a_TTUSynopsis"</span>, type_1L_chr <span class='o'>=</span> <span class='s'>"Report"</span>, what_1L_chr <span class='o'>=</span> <span class='s'>"Catalogue"</span><span class='o'>)</span> </span></code></pre>
-
-</div>
-
-#### Share models
-
-We share tables of coefficients and other meta-data about the models we have created by posting them to the online repository. The object we create and share is designed to be used in conjunction with the `youthu` package to make it easier to make predictions with these models using new data. Again, you will need write permissions to the online repository.
-
-<div class="highlight">
-
-<pre class='chroma'><code class='language-r' data-lang='r'><span><span class='nf'><a href='https://ready4-dev.github.io/ready4/reference/shareSlot-methods.html'>shareSlot</a></span><span class='o'>(</span><span class='nv'>A</span>, <span class='s'>"d_TTUReports@a_TTUSynopsis"</span>, type_1L_chr <span class='o'>=</span> <span class='s'>"Models"</span>, what_1L_chr <span class='o'>=</span> <span class='s'>"ingredients"</span><span class='o'>)</span></span></code></pre>
+<pre class='chroma'><code class='language-r' data-lang='r'><span><span class='nv'>A</span> <span class='o'>&lt;-</span> <span class='nf'><a href='https://ready4-dev.github.io/ready4/reference/author-methods.html'>author</a></span><span class='o'>(</span><span class='nv'>A</span>, consent_1L_chr <span class='o'>=</span> <span class='nv'>consent_1L_chr</span>, download_tmpl_1L_lgl <span class='o'>=</span> <span class='kc'>T</span>, what_1L_chr <span class='o'>=</span> <span class='s'>"catalogue"</span><span class='o'>)</span></span></code></pre>
 
 </div>
 
@@ -692,33 +363,29 @@ We add some content about the manuscript we wish to author.
 
 <div class="highlight">
 
-<pre class='chroma'><code class='language-r' data-lang='r'><span><span class='nv'>A</span> <span class='o'>&lt;-</span> <span class='nf'><a href='https://ready4-dev.github.io/ready4/reference/renewSlot-methods.html'>renewSlot</a></span><span class='o'>(</span><span class='nv'>A</span>, <span class='s'>"d_TTUReports@a_TTUSynopsis"</span>,</span>
-<span>               <span class='nf'><a href='https://ready4-dev.github.io/ready4/reference/procureSlot-methods.html'>procureSlot</a></span><span class='o'>(</span><span class='nv'>A</span>, <span class='s'>"d_TTUReports@a_TTUSynopsis"</span><span class='o'>)</span> <span class='o'><a href='https://magrittr.tidyverse.org/reference/pipe.html'>%&gt;%</a></span> </span>
-<span>                 <span class='nf'><a href='https://ready4-dev.github.io/ready4/reference/renewSlot-methods.html'>renewSlot</a></span><span class='o'>(</span><span class='s'>"background_1L_chr"</span>, <span class='s'>"Quality Adjusted Life Years (QALYs) are often used in economic evaluations, yet utility weights for deriving them are rarely directly measured in mental health services."</span><span class='o'>)</span> <span class='o'><a href='https://magrittr.tidyverse.org/reference/pipe.html'>%&gt;%</a></span></span>
-<span>                 <span class='nf'><a href='https://ready4-dev.github.io/ready4/reference/renewSlot-methods.html'>renewSlot</a></span><span class='o'>(</span><span class='s'>"coi_1L_chr"</span>, <span class='s'>"None declared"</span><span class='o'>)</span> <span class='o'><a href='https://magrittr.tidyverse.org/reference/pipe.html'>%&gt;%</a></span></span>
-<span>                 <span class='nf'><a href='https://ready4-dev.github.io/ready4/reference/renewSlot-methods.html'>renewSlot</a></span><span class='o'>(</span><span class='s'>"conclusion_1L_chr"</span>,<span class='s'>"Nothing should be concluded from this study as it is purely hypothetical."</span><span class='o'>)</span> <span class='o'><a href='https://magrittr.tidyverse.org/reference/pipe.html'>%&gt;%</a></span></span>
-<span>                 <span class='nf'><a href='https://ready4-dev.github.io/ready4/reference/renewSlot-methods.html'>renewSlot</a></span><span class='o'>(</span><span class='s'>"ethics_1L_chr"</span>, <span class='s'>"The study was reviewed and granted approval by no-one."</span> <span class='o'>)</span> <span class='o'><a href='https://magrittr.tidyverse.org/reference/pipe.html'>%&gt;%</a></span></span>
-<span>                 <span class='nf'><a href='https://ready4-dev.github.io/ready4/reference/renewSlot-methods.html'>renewSlot</a></span><span class='o'>(</span><span class='s'>"funding_1L_chr"</span>, <span class='s'>"The study was funded by no-one."</span><span class='o'>)</span> <span class='o'><a href='https://magrittr.tidyverse.org/reference/pipe.html'>%&gt;%</a></span></span>
-<span>                 <span class='nf'><a href='https://ready4-dev.github.io/ready4/reference/renewSlot-methods.html'>renewSlot</a></span><span class='o'>(</span><span class='s'>"interval_chr"</span>, <span class='s'>"three months"</span><span class='o'>)</span> <span class='o'><a href='https://magrittr.tidyverse.org/reference/pipe.html'>%&gt;%</a></span></span>
-<span>                 <span class='nf'><a href='https://ready4-dev.github.io/ready4/reference/renewSlot-methods.html'>renewSlot</a></span><span class='o'>(</span><span class='s'>"keywords_chr"</span>, <span class='nf'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='o'>(</span><span class='s'>"anxiety"</span>, <span class='s'>"AQoL"</span>,<span class='s'>"depression"</span>, <span class='s'>"psychological distress"</span>, <span class='s'>"QALYs"</span>, <span class='s'>"utility mapping"</span><span class='o'>)</span><span class='o'>)</span> <span class='o'><a href='https://magrittr.tidyverse.org/reference/pipe.html'>%&gt;%</a></span></span>
-<span>                 <span class='nf'><a href='https://ready4-dev.github.io/ready4/reference/renewSlot-methods.html'>renewSlot</a></span><span class='o'>(</span><span class='s'>"sample_desc_1L_chr"</span>, <span class='s'>"The study sample is fake data."</span><span class='o'>)</span> <span class='o'>)</span></span></code></pre>
+<pre class='chroma'><code class='language-r' data-lang='r'><span><span class='nv'>A</span> <span class='o'>&lt;-</span> <span class='nf'><a href='https://ready4-dev.github.io/ready4/reference/renew-methods.html'>renew</a></span><span class='o'>(</span><span class='nv'>A</span>, <span class='s'>"Quality Adjusted Life Years (QALYs) are often used in economic evaluations, yet utility weights for deriving them are rarely directly measured in mental health services."</span>, </span>
+<span>           type_1L_chr <span class='o'>=</span> <span class='s'>"background"</span>, what_1L_chr <span class='o'>=</span> <span class='s'>"reporting"</span><span class='o'>)</span> <span class='o'><a href='https://magrittr.tidyverse.org/reference/pipe.html'>%&gt;%</a></span></span>
+<span>  <span class='nf'><a href='https://ready4-dev.github.io/ready4/reference/renew-methods.html'>renew</a></span><span class='o'>(</span><span class='s'>"None declared"</span>, type_1L_chr <span class='o'>=</span> <span class='s'>"conflicts"</span>, what_1L_chr <span class='o'>=</span> <span class='s'>"reporting"</span><span class='o'>)</span> <span class='o'><a href='https://magrittr.tidyverse.org/reference/pipe.html'>%&gt;%</a></span></span>
+<span>  <span class='nf'><a href='https://ready4-dev.github.io/ready4/reference/renew-methods.html'>renew</a></span><span class='o'>(</span><span class='s'>"Nothing should be concluded from this study as it is purely hypothetical."</span>, type_1L_chr <span class='o'>=</span> <span class='s'>"conclusion"</span>, what_1L_chr <span class='o'>=</span> <span class='s'>"reporting"</span><span class='o'>)</span> <span class='o'><a href='https://magrittr.tidyverse.org/reference/pipe.html'>%&gt;%</a></span></span>
+<span>  <span class='nf'><a href='https://ready4-dev.github.io/ready4/reference/renew-methods.html'>renew</a></span><span class='o'>(</span><span class='s'>"The study was reviewed and granted approval by no-one."</span> , type_1L_chr <span class='o'>=</span> <span class='s'>"ethics"</span>, what_1L_chr <span class='o'>=</span> <span class='s'>"reporting"</span><span class='o'>)</span> <span class='o'><a href='https://magrittr.tidyverse.org/reference/pipe.html'>%&gt;%</a></span></span>
+<span>  <span class='nf'><a href='https://ready4-dev.github.io/ready4/reference/renew-methods.html'>renew</a></span><span class='o'>(</span><span class='s'>"The study was funded by no-one."</span>, type_1L_chr <span class='o'>=</span> <span class='s'>"funding"</span>, what_1L_chr <span class='o'>=</span> <span class='s'>"reporting"</span><span class='o'>)</span> <span class='o'><a href='https://magrittr.tidyverse.org/reference/pipe.html'>%&gt;%</a></span></span>
+<span>  <span class='nf'><a href='https://ready4-dev.github.io/ready4/reference/renew-methods.html'>renew</a></span><span class='o'>(</span><span class='s'>"three months"</span>, type_1L_chr <span class='o'>=</span> <span class='s'>"interval"</span>, what_1L_chr <span class='o'>=</span> <span class='s'>"reporting"</span><span class='o'>)</span> <span class='o'><a href='https://magrittr.tidyverse.org/reference/pipe.html'>%&gt;%</a></span></span>
+<span>  <span class='nf'><a href='https://ready4-dev.github.io/ready4/reference/renew-methods.html'>renew</a></span><span class='o'>(</span><span class='nf'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='o'>(</span><span class='s'>"anxiety"</span>, <span class='s'>"AQoL"</span>,<span class='s'>"depression"</span>, <span class='s'>"psychological distress"</span>, <span class='s'>"QALYs"</span>, <span class='s'>"utility mapping"</span><span class='o'>)</span>, type_1L_chr <span class='o'>=</span> <span class='s'>"keywords"</span>, what_1L_chr <span class='o'>=</span> <span class='s'>"reporting"</span><span class='o'>)</span> <span class='o'><a href='https://magrittr.tidyverse.org/reference/pipe.html'>%&gt;%</a></span></span>
+<span>  <span class='nf'><a href='https://ready4-dev.github.io/ready4/reference/renew-methods.html'>renew</a></span><span class='o'>(</span><span class='s'>"The study sample is fake data."</span>, type_1L_chr <span class='o'>=</span> <span class='s'>"sample"</span>, what_1L_chr <span class='o'>=</span> <span class='s'>"reporting"</span><span class='o'>)</span> </span></code></pre>
 
 </div>
 
-We create a summary of results that can be interpreted by the program that authors the manuscript.
+We create a brief summary of results that can be interpreted by the program that authors the manuscript.
 
 <div class="highlight">
 
-<pre class='chroma'><code class='language-r' data-lang='r'><span><span class='nv'>A</span> <span class='o'>&lt;-</span> <span class='nf'><a href='https://ready4-dev.github.io/ready4/reference/renewSlot-methods.html'>renewSlot</a></span><span class='o'>(</span><span class='nv'>A</span>, <span class='s'>"d_TTUReports@a_TTUSynopsis@abstract_args_ls"</span>,</span>
-<span>               <span class='nf'><a href='https://ready4-dev.github.io/ready4/reference/manufactureSlot-methods.html'>manufactureSlot</a></span><span class='o'>(</span><span class='nv'>A</span>,<span class='s'>"d_TTUReports@a_TTUSynopsis"</span>, what_1L_chr <span class='o'>=</span> <span class='s'>"abstract_args_ls"</span>,</span>
-<span>                               depnt_var_nms_chr <span class='o'>=</span> <span class='nf'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='o'>(</span><span class='s'>"AQoL-6D"</span>, <span class='s'>"Adolescent AQoL Six Dimension"</span><span class='o'>)</span><span class='o'>)</span><span class='o'>)</span> </span></code></pre>
+<pre class='chroma'><code class='language-r' data-lang='r'><span><span class='nv'>A</span> <span class='o'>&lt;-</span> <span class='nf'><a href='https://ready4-dev.github.io/ready4/reference/renew-methods.html'>renew</a></span><span class='o'>(</span><span class='nv'>A</span>, <span class='nf'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='o'>(</span><span class='s'>"AQoL-6D"</span>, <span class='s'>"Adolescent AQoL Six Dimension"</span><span class='o'>)</span>, type_1L_chr <span class='o'>=</span> <span class='s'>"naming"</span>, what_1L_chr <span class='o'>=</span> <span class='s'>"reporting"</span><span class='o'>)</span></span></code></pre>
 
 </div>
 
 <div class="highlight">
 
-<pre class='chroma'><code class='language-r' data-lang='r'><span><span class='nv'>A</span> <span class='o'>&lt;-</span> <span class='nf'><a href='https://ready4-dev.github.io/ready4/reference/enhanceSlot-methods.html'>enhanceSlot</a></span><span class='o'>(</span><span class='nv'>A</span>, <span class='s'>"d_TTUReports@a_TTUSynopsis"</span>, with_1L_chr <span class='o'>=</span> <span class='s'>"results_ls"</span>,</span>
-<span>                 depnt_var_nms_chr <span class='o'>=</span> <span class='nf'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='o'>(</span><span class='s'>"AQoL-6D"</span>, <span class='s'>"Adolescent AQoL Six Dimension"</span><span class='o'>)</span><span class='o'>)</span> </span></code></pre>
+<pre class='chroma'><code class='language-r' data-lang='r'><span><span class='nv'>A</span> <span class='o'>&lt;-</span> <span class='nf'><a href='https://ready4-dev.github.io/ready4/reference/renew-methods.html'>renew</a></span><span class='o'>(</span><span class='nv'>A</span>, <span class='s'>"use_renew_mthd"</span>, type_1L_chr <span class='o'>=</span> <span class='s'>"abstract"</span>, what_1L_chr <span class='o'>=</span> <span class='s'>"reporting"</span><span class='o'>)</span></span></code></pre>
 
 </div>
 
@@ -726,8 +393,7 @@ We create and save the plots that will be used in the manuscript.
 
 <div class="highlight">
 
-<pre class='chroma'><code class='language-r' data-lang='r'><span><span class='nf'><a href='https://ready4-dev.github.io/ready4/reference/authorSlot-methods.html'>authorSlot</a></span><span class='o'>(</span><span class='nv'>A</span>, <span class='s'>"d_TTUReports"</span>, type_1L_chr <span class='o'>=</span> <span class='s'>"Plots"</span>,</span>
-<span>           depnt_var_desc_1L_chr <span class='o'>=</span> <span class='nv'>A</span><span class='o'>@</span><span class='nv'>d_TTUReports</span><span class='o'>@</span><span class='nv'>a_TTUSynopsis</span><span class='o'>@</span><span class='nv'>b_SpecificResults</span><span class='o'>@</span><span class='nv'>a_SpecificShareable</span><span class='o'>@</span><span class='nv'>shareable_outp_ls</span><span class='o'>$</span><span class='nv'>results_ls</span><span class='o'>$</span><span class='nv'>study_descs_ls</span><span class='o'>$</span><span class='nv'>health_utl_nm_1L_chr</span><span class='o'>)</span></span></code></pre>
+<pre class='chroma'><code class='language-r' data-lang='r'><span><span class='nv'>A</span> <span class='o'>&lt;-</span> <span class='nf'><a href='https://ready4-dev.github.io/ready4/reference/author-methods.html'>author</a></span><span class='o'>(</span><span class='nv'>A</span>, consent_1L_chr <span class='o'>=</span> <span class='nv'>consent_1L_chr</span>, what_1L_chr <span class='o'>=</span> <span class='s'>"plots"</span><span class='o'>)</span></span></code></pre>
 
 </div>
 
@@ -735,66 +401,78 @@ We download a program for generating a template manuscript and run it to author 
 
 <div class="highlight">
 
-<pre class='chroma'><code class='language-r' data-lang='r'><span><span class='nf'><a href='https://ready4-dev.github.io/ready4/reference/authorSlot-methods.html'>authorSlot</a></span><span class='o'>(</span><span class='nv'>A</span>, <span class='s'>"d_TTUReports"</span>, type_1L_chr <span class='o'>=</span> <span class='s'>"Report"</span>, what_1L_chr <span class='o'>=</span> <span class='s'>"Manuscript_Auto"</span>, download_tmpl_1L_lgl <span class='o'>=</span> <span class='kc'>T</span><span class='o'>)</span></span></code></pre>
+<pre class='chroma'><code class='language-r' data-lang='r'><span><span class='nv'>A</span> <span class='o'>&lt;-</span> <span class='nf'><a href='https://ready4-dev.github.io/ready4/reference/author-methods.html'>author</a></span><span class='o'>(</span><span class='nv'>A</span>, consent_1L_chr <span class='o'>=</span> <span class='nv'>consent_1L_chr</span>, download_tmpl_1L_lgl <span class='o'>=</span> <span class='kc'>T</span>, what_1L_chr <span class='o'>=</span> <span class='s'>"manuscript"</span><span class='o'>)</span></span></code></pre>
 
 </div>
 
-We can copy the RMarkdown files that created the template manuscript to a new director (which we call "Manuscript_Submission") so that we can then manually edit those files to produce a manuscript that we can submit for publication. Note that in this example we have not made any edits to the template manuscript.
+We can copy the RMarkdown files that created the template manuscript to a new directory (called "Manuscript_Submission") so that we can then manually edit those files to produce a manuscript that we can submit for publication.
 
 <div class="highlight">
 
-<pre class='chroma'><code class='language-r' data-lang='r'><span><span class='nf'>R.utils</span><span class='nf'>::</span><span class='nf'><a href='https://henrikbengtsson.github.io/R.utils/reference/copyDirectory.html'>copyDirectory</a></span><span class='o'>(</span><span class='nf'><a href='https://rdrr.io/r/base/paste.html'>paste0</a></span><span class='o'>(</span><span class='nv'>A</span><span class='o'>@</span><span class='nv'>d_TTUReports</span><span class='o'>@</span><span class='nv'>a_TTUSynopsis</span><span class='o'>@</span><span class='nv'>a_Ready4showPaths</span><span class='o'>@</span><span class='nv'>outp_data_dir_1L_chr</span>,</span>
-<span>                              <span class='s'>"/"</span>,</span>
-<span>                              <span class='nv'>A</span><span class='o'>@</span><span class='nv'>d_TTUReports</span><span class='o'>@</span><span class='nv'>a_TTUSynopsis</span><span class='o'>@</span><span class='nv'>a_Ready4showPaths</span><span class='o'>@</span><span class='nv'>mkdn_data_dir_1L_chr</span>,</span>
-<span>                              <span class='s'>"/Manuscript_Auto"</span><span class='o'>)</span>,</span>
-<span>                       <span class='nf'><a href='https://rdrr.io/r/base/paste.html'>paste0</a></span><span class='o'>(</span><span class='nv'>A</span><span class='o'>@</span><span class='nv'>d_TTUReports</span><span class='o'>@</span><span class='nv'>a_TTUSynopsis</span><span class='o'>@</span><span class='nv'>a_Ready4showPaths</span><span class='o'>@</span><span class='nv'>outp_data_dir_1L_chr</span>,</span>
-<span>                              <span class='s'>"/"</span>,</span>
-<span>                              <span class='nv'>A</span><span class='o'>@</span><span class='nv'>d_TTUReports</span><span class='o'>@</span><span class='nv'>a_TTUSynopsis</span><span class='o'>@</span><span class='nv'>a_Ready4showPaths</span><span class='o'>@</span><span class='nv'>mkdn_data_dir_1L_chr</span>,</span>
-<span>                              <span class='s'>"/Manuscript_Submission"</span><span class='o'>)</span><span class='o'>)</span></span></code></pre>
+<pre class='chroma'><code class='language-r' data-lang='r'><span><span class='nv'>A</span> <span class='o'>&lt;-</span> <span class='nf'><a href='https://ready4-dev.github.io/ready4/reference/author-methods.html'>author</a></span><span class='o'>(</span><span class='nv'>A</span>, consent_1L_chr <span class='o'>=</span> <span class='nv'>consent_1L_chr</span>, type_1L_chr <span class='o'>=</span> <span class='s'>"copy"</span>, what_1L_chr <span class='o'>=</span> <span class='s'>"manuscript"</span><span class='o'>)</span></span></code></pre>
 
 </div>
 
-<div class="highlight">
+At this point in the workflow, additional steps are required to adapt / author the manuscript that will be submitted for publication. However, in this example we are going to skip that step and keep working with the unedited template manuscript. If we had a finalised manuscript authoring program stored online, we could now specify the repository from which the program can be retrieved.
 
-</div>
-
-Once any edits to the RMarkdown files for creating the submission manuscript have been finalised, we can run the following command to author the manuscript. The below commands will generate a Microsoft Word format manuscript and a PDF technical appendix. Unlike the template manuscript, the figures and tables are positioned after (and not within) the main body of the manuscript. Note that the Word version of the manuscript generated by these commands will require some minor formatting edits (principally to the display of tables and numbering of sections).
-
-<div class="highlight">
-
-<pre class='chroma'><code class='language-r' data-lang='r'><span><span class='nv'>A</span> <span class='o'>&lt;-</span> <span class='nf'><a href='https://ready4-dev.github.io/ready4/reference/renewSlot-methods.html'>renewSlot</a></span><span class='o'>(</span><span class='nv'>A</span>, <span class='s'>"d_TTUReports"</span>,</span>
-<span>               <span class='nf'><a href='https://ready4-dev.github.io/ready4/reference/procureSlot-methods.html'>procureSlot</a></span><span class='o'>(</span><span class='nv'>A</span>, <span class='s'>"d_TTUReports"</span><span class='o'>)</span> <span class='o'><a href='https://magrittr.tidyverse.org/reference/pipe.html'>%&gt;%</a></span></span>
-<span>                 <span class='nf'><a href='https://ready4-dev.github.io/ready4/reference/renewSlot-methods.html'>renewSlot</a></span><span class='o'>(</span><span class='s'>"a_TTUSynopsis@tables_in_body_lgl"</span>,  <span class='kc'>F</span><span class='o'>)</span> <span class='o'><a href='https://magrittr.tidyverse.org/reference/pipe.html'>%&gt;%</a></span></span>
-<span>                 <span class='nf'><a href='https://ready4-dev.github.io/ready4/reference/renewSlot-methods.html'>renewSlot</a></span><span class='o'>(</span><span class='s'>"a_TTUSynopsis@figures_in_body_lgl"</span>, <span class='kc'>F</span><span class='o'>)</span> <span class='o'><a href='https://magrittr.tidyverse.org/reference/pipe.html'>%&gt;%</a></span></span>
-<span>                 <span class='nf'><a href='https://ready4-dev.github.io/ready4/reference/renewSlot-methods.html'>renewSlot</a></span><span class='o'>(</span><span class='s'>"a_TTUSynopsis@outp_formats_chr"</span>, <span class='nf'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='o'>(</span><span class='s'>"Word"</span>,<span class='s'>"PDF"</span><span class='o'>)</span><span class='o'>)</span><span class='o'>)</span></span>
-<span><span class='nf'><a href='https://ready4-dev.github.io/ready4/reference/authorSlot-methods.html'>authorSlot</a></span><span class='o'>(</span><span class='nv'>A</span>, <span class='s'>"d_TTUReports"</span>, what_1L_chr <span class='o'>=</span> <span class='s'>"Manuscript_Submission"</span>, download_tmpl_1L_lgl <span class='o'>=</span> <span class='kc'>F</span><span class='o'>)</span></span></code></pre>
-
-</div>
+```
+# Not run
+# A <- renew(A, c("URL of GitHub repository with", "Program version number"), type_1L_chr = "template-manuscript", what_1L_chr = "reporting")
+```
 
 <div class="highlight">
 
 </div>
 
+We can now configure the output to be generated by the manuscript authoring program. The below commands will specify a Microsoft Word format manuscript and a PDF technical appendix. Unlike the template manuscript, the figures and tables will be positioned after (and not within) the main body of the manuscript. Note that the Word version of the manuscript generated by these values will require some minor formatting edits (principally to the display of tables and numbering of sections).
+
 <div class="highlight">
+
+<pre class='chroma'><code class='language-r' data-lang='r'><span><span class='nv'>A</span> <span class='o'>&lt;-</span> <span class='nf'><a href='https://ready4-dev.github.io/ready4/reference/renew-methods.html'>renew</a></span><span class='o'>(</span><span class='nv'>A</span>, <span class='kc'>F</span>, type_1L_chr <span class='o'>=</span> <span class='s'>"figures-body"</span>, what_1L_chr <span class='o'>=</span> <span class='s'>"reporting"</span><span class='o'>)</span> <span class='o'><a href='https://magrittr.tidyverse.org/reference/pipe.html'>%&gt;%</a></span></span>
+<span>  <span class='nf'><a href='https://ready4-dev.github.io/ready4/reference/renew-methods.html'>renew</a></span><span class='o'>(</span><span class='kc'>F</span>, type_1L_chr <span class='o'>=</span> <span class='s'>"tables-body"</span>, what_1L_chr <span class='o'>=</span> <span class='s'>"reporting"</span><span class='o'>)</span> <span class='o'><a href='https://magrittr.tidyverse.org/reference/pipe.html'>%&gt;%</a></span></span>
+<span>  <span class='nf'><a href='https://ready4-dev.github.io/ready4/reference/renew-methods.html'>renew</a></span><span class='o'>(</span><span class='nf'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='o'>(</span><span class='s'>"Word"</span>,<span class='s'>"PDF"</span><span class='o'>)</span>, type_1L_chr <span class='o'>=</span> <span class='s'>"formats"</span>, what_1L_chr <span class='o'>=</span> <span class='s'>"reporting"</span><span class='o'>)</span></span></code></pre>
+
+</div>
+
+Once any edits to the RMarkdown files for creating the submission manuscript have been finalised, we can run the following command to author the manuscript. If we are using a custom manuscript authoring program downloaded from an online repository the `download_tmpl_1L_lgl` argument will need to be set to `T`.
+
+<div class="highlight">
+
+<pre class='chroma'><code class='language-r' data-lang='r'><span><span class='nv'>A</span> <span class='o'>&lt;-</span> <span class='nf'><a href='https://ready4-dev.github.io/ready4/reference/author-methods.html'>author</a></span><span class='o'>(</span><span class='nv'>A</span>, consent_1L_chr <span class='o'>=</span> <span class='nv'>consent_1L_chr</span>, download_tmpl_1L_lgl <span class='o'>=</span> <span class='kc'>F</span>, type_1L_chr<span class='o'>=</span><span class='s'>"submission"</span>, what_1L_chr <span class='o'>=</span> <span class='s'>"manuscript"</span><span class='o'>)</span></span></code></pre>
 
 </div>
 
 <div class="highlight">
 
 </div>
+
+We can now generate the Supplementary Information for the submission manuscript.
+
+<div class="highlight">
+
+<pre class='chroma'><code class='language-r' data-lang='r'><span><span class='nv'>A</span> <span class='o'>&lt;-</span> <span class='nf'><a href='https://ready4-dev.github.io/ready4/reference/author-methods.html'>author</a></span><span class='o'>(</span><span class='nv'>A</span>, consent_1L_chr <span class='o'>=</span> <span class='nv'>consent_1L_chr</span>, supplement_fl_nm_1L_chr <span class='o'>=</span> <span class='s'>"TA_PDF"</span>, type_1L_chr<span class='o'>=</span><span class='s'>"submission"</span>, what_1L_chr <span class='o'>=</span> <span class='s'>"supplement"</span><span class='o'>)</span></span></code></pre>
+
+</div>
+
+### Share outputs
+
+We can now share non-confidential elements (ie no copies of individual records) of the outputs that we have created via our study online repository. To run this step you will need write permissions to the online repository. In the below step we are sharing model catalogues, details of the utility instrument, the shareable mapping models (designed to be used in conjunction with the [youthu](https://ready4-dev.github.io/youthu/index.html) package), our manuscript files and our supplementary information. In most real world studies the manuscript would not be shared via an online repository - the `what_chr` argument would need to be ammended to reflect this.
+
+<div class="highlight">
+
+<pre class='chroma'><code class='language-r' data-lang='r'><span><span class='nv'>A</span> <span class='o'>&lt;-</span> <span class='nf'><a href='https://ready4-dev.github.io/ready4/reference/share-methods.html'>share</a></span><span class='o'>(</span><span class='nv'>A</span>, types_chr <span class='o'>=</span> <span class='nf'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='o'>(</span><span class='s'>"auto"</span>, <span class='s'>"submission"</span><span class='o'>)</span>, what_chr <span class='o'>=</span> <span class='nf'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='o'>(</span><span class='s'>"catalogue"</span>, <span class='s'>"instrument"</span> ,<span class='s'>"manuscript"</span>, <span class='s'>"models"</span>, <span class='s'>"supplement"</span><span class='o'>)</span><span class='o'>)</span></span></code></pre>
+
+</div>
+
+The dataset we created in the previous step is viewable here: <https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/D74QMP>
 
 ### Tidy workspace
 
-The preceding steps saved multiple objects (mostly R model objects) that have embedded within them copies of the source dataset. We can now purge all such copies from our output data directory.
+The preceding steps saved multiple objects (mostly R model objects) that have embedded within them copies of the source dataset. To protect the confidentiality of these records we can now purge all such copies from our output data directory.
 
 <div class="highlight">
 
-<pre class='chroma'><code class='language-r' data-lang='r'><span><span class='nf'><a href='https://ready4-dev.github.io/ready4/reference/author-methods.html'>author</a></span><span class='o'>(</span><span class='nf'><a href='https://ready4-dev.github.io/ready4/reference/procureSlot-methods.html'>procureSlot</a></span><span class='o'>(</span><span class='nv'>A</span>,<span class='s'>"c_SpecificProject"</span><span class='o'>)</span>,</span>
-<span>       type_1L_chr <span class='o'>=</span> <span class='s'>"purge_write"</span><span class='o'>)</span> </span></code></pre>
-
-</div>
-
-<div class="highlight">
+<pre class='chroma'><code class='language-r' data-lang='r'><span><span class='nv'>A</span> <span class='o'>&lt;-</span> <span class='nf'><a href='https://ready4-dev.github.io/ready4/reference/author-methods.html'>author</a></span><span class='o'>(</span><span class='nv'>A</span>, what_1L_chr <span class='o'>=</span> <span class='s'>"purge"</span><span class='o'>)</span></span></code></pre>
 
 </div>
 

@@ -1,7 +1,7 @@
 ---
 title: "Framework taxonomies dataset releases"
 linkTitle: "Framework data"
-date: "2023-03-06"
+date: "2023-07-18"
 description: "Releases of the dataset of taxonomies used to help standardise code authoring and documentation."
 weight: 2
 categories: 
@@ -13,7 +13,7 @@ tags:
 - Framework - conventions
 - Framework - conventions (taxonomies)
 output: hugodown::md_document
-rmd_hash: af781db2d85ff8c8
+rmd_hash: 65f96fb577437236
 
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: "Create a synthetic population of young people attending primary mental health services"
 linkTitle: "Clinical"
-date: "2023-01-09"
+date: "2023-07-18"
 description: "We created a basic synthetic dataset of to represent a clinical youth mental health sample."
 weight: 3
 categories: 
@@ -23,7 +23,7 @@ tags:
 - Use
 - Use - synthetic populations
 output: hugodown::md_document
-rmd_hash: 6da8ebef761cc8d6
+rmd_hash: 55667bda60411520
 
 ---
 
@@ -201,10 +201,11 @@ We now use the parameters we have just specified to create baseline and follow-u
 <span>                                                           <span class='s'>"fup_outcomes_tb"</span><span class='o'>)</span>,</span>
 <span>                                     synth_data_spine_ls <span class='o'>=</span> <span class='nv'>synth_data_spine_ls</span>,</span>
 <span>                                     temporal_cors_ls <span class='o'>=</span> <span class='nf'><a href='https://rdrr.io/r/base/list.html'>list</a></span><span class='o'>(</span>aqol6d_total_w <span class='o'>=</span> <span class='m'>0.85</span><span class='o'>)</span><span class='o'>)</span></span>
-<span><span class='c'>#&gt; Joining, by = c("id", "match_var_chr")</span></span>
-<span><span class='c'>#&gt; Joining, by = "id"</span></span>
-<span><span class='c'>#&gt; Joining, by = c("id", "match_var_chr")</span></span>
-<span><span class='c'>#&gt; Joining, by = "id"</span></span></code></pre>
+<span><span class='c'>#&gt; Joining with `by = join_by(id, match_var_chr)`</span></span>
+<span><span class='c'>#&gt; Joining with `by = join_by(id)`</span></span>
+<span><span class='c'>#&gt; Joining with `by = join_by(id, match_var_chr)`</span></span>
+<span><span class='c'>#&gt; Joining with `by = join_by(id)`</span></span>
+<span></span></code></pre>
 
 </div>
 
@@ -294,16 +295,7 @@ We now specify the names and statistical parameters of the variables we will be 
 <span>                                                 <span class='kc'>TRUE</span> <span class='o'>~</span> <span class='nf'><a href='https://rdrr.io/r/base/integer.html'>as.integer</a></span><span class='o'>(</span><span class='nv'>d_gender</span><span class='o'>)</span></span>
 <span>                                                 <span class='o'>)</span> <span class='o'><a href='https://magrittr.tidyverse.org/reference/pipe.html'>%&gt;%</a></span></span>
 <span>                  <span class='nf'><a href='https://rdrr.io/r/base/factor.html'>factor</a></span><span class='o'>(</span>labels <span class='o'>=</span> <span class='nf'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='o'>(</span><span class='s'>"Female"</span>,<span class='s'>"Male"</span><span class='o'>)</span><span class='o'>)</span><span class='o'>)</span></span>
-<span><span class='c'>#&gt; Registered S3 methods overwritten by 'ggalt':</span></span>
-<span><span class='c'>#&gt;   method                  from   </span></span>
-<span><span class='c'>#&gt;   grid.draw.absoluteGrob  ggplot2</span></span>
-<span><span class='c'>#&gt;   grobHeight.absoluteGrob ggplot2</span></span>
-<span><span class='c'>#&gt;   grobWidth.absoluteGrob  ggplot2</span></span>
-<span><span class='c'>#&gt;   grobX.absoluteGrob      ggplot2</span></span>
-<span><span class='c'>#&gt;   grobY.absoluteGrob      ggplot2</span></span><span><span class='c'>#&gt; Registered S3 methods overwritten by 'rmutil':</span></span>
-<span><span class='c'>#&gt;   method         from </span></span>
-<span><span class='c'>#&gt;   plot.residuals psych</span></span>
-<span><span class='c'>#&gt;   print.response httr</span></span><span><span class='nv'>descriptives_FUP_tb</span> <span class='o'>&lt;-</span> <span class='nv'>descriptives_BL_tb</span> <span class='o'><a href='https://magrittr.tidyverse.org/reference/pipe.html'>%&gt;%</a></span> </span>
+<span><span class='nv'>descriptives_FUP_tb</span> <span class='o'>&lt;-</span> <span class='nv'>descriptives_BL_tb</span> <span class='o'><a href='https://magrittr.tidyverse.org/reference/pipe.html'>%&gt;%</a></span> </span>
 <span>  <span class='nf'>dplyr</span><span class='nf'>::</span><span class='nf'><a href='https://dplyr.tidyverse.org/reference/filter.html'>filter</a></span><span class='o'>(</span><span class='nv'>fkClientID</span> <span class='o'><a href='https://rdrr.io/r/base/match.html'>%in%</a></span> </span>
 <span>                  <span class='nv'>aqol6d_adol_pop_tbs_ls</span><span class='o'>$</span><span class='nv'>fup_outcomes_tb</span><span class='o'>$</span><span class='nv'>fkClientID</span><span class='o'>)</span> <span class='o'><a href='https://magrittr.tidyverse.org/reference/pipe.html'>%&gt;%</a></span></span>
 <span>  <span class='nf'>dplyr</span><span class='nf'>::</span><span class='nf'><a href='https://dplyr.tidyverse.org/reference/mutate.html'>mutate</a></span><span class='o'>(</span>round <span class='o'>=</span> <span class='m'>2</span>,</span>
@@ -320,9 +312,11 @@ We now specify the names and statistical parameters of the variables we will be 
 <span>                         <span class='nf'>purrr</span><span class='nf'>::</span><span class='nf'><a href='https://purrr.tidyverse.org/reference/map.html'>map_dbl</a></span><span class='o'>(</span><span class='o'>~</span><span class='nf'><a href='https://rdrr.io/r/base/Extremes.html'>min</a></span><span class='o'>(</span><span class='nv'>.x</span>,<span class='m'>100</span><span class='o'>)</span> <span class='o'><a href='https://magrittr.tidyverse.org/reference/pipe.html'>%&gt;%</a></span> <span class='nf'><a href='https://rdrr.io/r/base/Extremes.html'>max</a></span><span class='o'>(</span><span class='m'>0</span><span class='o'>)</span><span class='o'>)</span><span class='o'>)</span></span>
 <span><span class='nv'>bl_tb</span> <span class='o'>&lt;-</span> <span class='nf'>dplyr</span><span class='nf'>::</span><span class='nf'><a href='https://dplyr.tidyverse.org/reference/mutate-joins.html'>inner_join</a></span><span class='o'>(</span><span class='nv'>descriptives_BL_tb</span>,</span>
 <span>                           <span class='nv'>aqol6d_adol_pop_tbs_ls</span><span class='o'>$</span><span class='nv'>bl_outcomes_tb</span><span class='o'>)</span> </span>
-<span><span class='c'>#&gt; Joining, by = "fkClientID"</span></span><span><span class='nv'>fup_tb</span> <span class='o'>&lt;-</span> <span class='nf'>dplyr</span><span class='nf'>::</span><span class='nf'><a href='https://dplyr.tidyverse.org/reference/mutate-joins.html'>inner_join</a></span><span class='o'>(</span><span class='nv'>descriptives_FUP_tb</span>,</span>
+<span><span class='c'>#&gt; Joining with `by = join_by(fkClientID)`</span></span>
+<span></span><span><span class='nv'>fup_tb</span> <span class='o'>&lt;-</span> <span class='nf'>dplyr</span><span class='nf'>::</span><span class='nf'><a href='https://dplyr.tidyverse.org/reference/mutate-joins.html'>inner_join</a></span><span class='o'>(</span><span class='nv'>descriptives_FUP_tb</span>,</span>
 <span>                            <span class='nv'>aqol6d_adol_pop_tbs_ls</span><span class='o'>$</span><span class='nv'>fup_outcomes_tb</span><span class='o'>)</span></span>
-<span><span class='c'>#&gt; Joining, by = "fkClientID"</span></span></code></pre>
+<span><span class='c'>#&gt; Joining with `by = join_by(fkClientID)`</span></span>
+<span></span></code></pre>
 
 </div>
 
@@ -355,7 +349,7 @@ We now add the fake outcome variables dataset to the fake descriptive variables 
 
 <div class="highlight">
 
-<pre class='chroma'><code class='language-r' data-lang='r'><span><span class='nv'>composite_tb</span> <span class='o'>&lt;-</span> <span class='nf'>dplyr</span><span class='nf'>::</span><span class='nf'><a href='https://dplyr.tidyverse.org/reference/bind.html'>bind_rows</a></span><span class='o'>(</span><span class='nv'>bl_tb</span>, <span class='nv'>fup_tb</span><span class='o'>)</span> <span class='o'><a href='https://magrittr.tidyverse.org/reference/pipe.html'>%&gt;%</a></span></span>
+<pre class='chroma'><code class='language-r' data-lang='r'><span><span class='nv'>composite_tb</span> <span class='o'>&lt;-</span> <span class='nf'>dplyr</span><span class='nf'>::</span><span class='nf'><a href='https://dplyr.tidyverse.org/reference/bind_rows.html'>bind_rows</a></span><span class='o'>(</span><span class='nv'>bl_tb</span>, <span class='nv'>fup_tb</span><span class='o'>)</span> <span class='o'><a href='https://magrittr.tidyverse.org/reference/pipe.html'>%&gt;%</a></span></span>
 <span>  <span class='nf'>dplyr</span><span class='nf'>::</span><span class='nf'><a href='https://dplyr.tidyverse.org/reference/mutate.html'>mutate</a></span><span class='o'>(</span>d_age <span class='o'>=</span> <span class='nf'><a href='https://rdrr.io/r/base/Round.html'>floor</a></span><span class='o'>(</span><span class='nv'>d_age</span><span class='o'>)</span><span class='o'>)</span> <span class='o'><a href='https://magrittr.tidyverse.org/reference/pipe.html'>%&gt;%</a></span></span>
 <span>  <span class='nf'>dplyr</span><span class='nf'>::</span><span class='nf'><a href='https://dplyr.tidyverse.org/reference/mutate.html'>mutate</a></span><span class='o'>(</span>d_gender <span class='o'>=</span> <span class='nv'>d_gender</span> <span class='o'><a href='https://magrittr.tidyverse.org/reference/pipe.html'>%&gt;%</a></span> <span class='nf'><a href='https://rdrr.io/r/base/character.html'>as.character</a></span><span class='o'>(</span><span class='o'>)</span> <span class='o'><a href='https://magrittr.tidyverse.org/reference/pipe.html'>%&gt;%</a></span></span>
 <span>                  <span class='nf'>purrr</span><span class='nf'>::</span><span class='nf'><a href='https://purrr.tidyverse.org/reference/map.html'>map_chr</a></span><span class='o'>(</span><span class='o'>~</span><span class='nf'><a href='https://rdrr.io/r/base/ifelse.html'>ifelse</a></span><span class='o'>(</span><span class='nv'>.x</span><span class='o'>==</span><span class='s'>"Other"</span>,</span>

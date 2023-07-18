@@ -1,7 +1,7 @@
 ---
 title: "Authoring model algorithms"
 linkTitle: "Algorithms"
-date: "2022-12-24"
+date: "2023-07-11"
 description: "The ready4fun R package supports standardised approaches to code authoring that facilitate partial automation of the documenting of model algorithms."
 weight: 64
 categories: 
@@ -17,7 +17,7 @@ tags:
 - Status
 - Status - development
 output: hugodown::md_document
-rmd_hash: 481afc8d670cccda
+rmd_hash: 93973e4e922efbd6
 html_dependencies:
 - <script src="kePrint-0.0.1/kePrint.js"></script>
 - <link href="lightable-0.0.1/lightable.css" rel="stylesheet" />

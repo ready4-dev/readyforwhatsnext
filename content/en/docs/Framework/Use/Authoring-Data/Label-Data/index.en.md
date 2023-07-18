@@ -1,7 +1,7 @@
 ---
 title: "Add a data dictionary to a dataset"
 linkTitle: "Label"
-date: "2022-12-24"
+date: "2023-07-11"
 description: "Pairing a dataset with its dictionary makes it easier to interpret. This tutorial describes how a module from the ready4use R package can help you to pair a dataset and its dictionary."
 weight: 92
 categories: 
@@ -19,7 +19,7 @@ tags:
 - Status
 - Status - development
 output: hugodown::md_document
-rmd_hash: 5cdadbe71ab9332f
+rmd_hash: d396d8591b9db32b
 html_dependencies:
 - <script src="kePrint-0.0.1/kePrint.js"></script>
 - <link href="lightable-0.0.1/lightable.css" rel="stylesheet" />
@@ -69,8 +69,8 @@ Importantly (and a requirement for subsequent steps), the data dictionary we ing
 <div class="highlight">
 
 <pre class='chroma'><code class='language-r' data-lang='r'><span><span class='nf'><a href='https://rdrr.io/r/base/class.html'>class</a></span><span class='o'>(</span><span class='nv'>objects_ls</span><span class='o'>$</span><span class='nv'>eq5d_ds_dict</span><span class='o'>)</span></span>
-<span><span class='c'>#&gt; [1] "ready4use_dictionary" "ready4_dictionary"    "tbl_df"              </span></span>
-<span><span class='c'>#&gt; [4] "tbl"                  "data.frame"</span></span></code></pre>
+<span><span class='c'>#&gt; [1] "ready4use_dictionary" "ready4_dictionary"    "tbl_df"               "tbl"                  "data.frame"</span></span>
+<span></span></code></pre>
 
 </div>
 

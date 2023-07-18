@@ -1,7 +1,7 @@
 ---
 title: "Authoring scientific manuscripts"
 linkTitle: "Reporting"
-date: "2023-01-09"
+date: "2023-07-11"
 description: "Tools from the ready4show R package support authoring of scientific summaries of analyses with ready4."
 weight: 92
 tags:
@@ -17,7 +17,7 @@ tags:
 categories:
 - Documentation
 output: hugodown::md_document
-rmd_hash: fca3abb8efc9e205
+rmd_hash: 51155ca705027b1e
 html_dependencies:
 - <script src="kePrint-0.0.1/kePrint.js"></script>
 - <link href="lightable-0.0.1/lightable.css" rel="stylesheet" />
@@ -38,6 +38,18 @@ html_dependencies:
 
 </div>
 
+## Motivation
+
+Open science workflows should ideally span an unbroken chain between data-ingest to production of a scientific summary such as a manuscript. Such extensive workflows provide an explicit means of linking all content in a scientific summary with the analysis that it reports.
+
+## Implementation
+
+`ready4show` includes a number of classes and methods that help integrate manuscript authoring into a reproducible workflow. These tools are principally intended for use with the [ready4 youth mental health system model](https://www.ready4-dev.com).
+
+### Load required libraries
+
+We first begin by loading the libraries we will require to implement this workflow.
+
 <div class="highlight">
 
 <pre class='chroma'><code class='language-r' data-lang='r'><span><span class='kr'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='o'>(</span><span class='nv'><a href='https://ready4-dev.github.io/ready4/'>ready4</a></span><span class='o'>)</span></span>
@@ -47,13 +59,19 @@ html_dependencies:
 
 </div>
 
-## Motivation
+### Set consent policy
 
-Open science workflows should ideally span an unbroken chain between data-ingest to production of a scientific summary such as a manuscript. Such extensive workflows provide an explicit means of linking all content in a scientific summary with the analysis that it reports.
+By default, methods in the `ready4show` package will request your consent before writing files to your machine. This is the safest option. However, as there are many files that need to be written locally for this program to execute, you can overwrite this default by supplying the value "Y" to methods with a `consent_1L_chr` argument.
 
-## Implementation
+<div class="highlight">
 
-`ready4show` includes a number of classes and methods that help integrate manuscript authoring into a reproducible workflow. These tools are principally intended for use with the [ready4 youth mental health system model](https://www.ready4-dev.com).
+<pre class='chroma'><code class='language-r' data-lang='r'><span><span class='nv'>consent_1L_chr</span> <span class='o'>&lt;-</span> <span class='s'>""</span> <span class='c'># Default value - asks for consent prior to writing each file.</span></span></code></pre>
+
+</div>
+
+<div class="highlight">
+
+</div>
 
 ### Create a synopsis of the manuscript to be authored
 
@@ -472,7 +490,7 @@ We create the dataset copy with the `authorData` method.
 
 <div class="highlight">
 
-<pre class='chroma'><code class='language-r' data-lang='r'><span><span class='nf'><a href='https://ready4-dev.github.io/ready4/reference/authorData-methods.html'>authorData</a></span><span class='o'>(</span><span class='nv'>X</span><span class='o'>)</span></span></code></pre>
+<pre class='chroma'><code class='language-r' data-lang='r'><span><span class='nf'><a href='https://ready4-dev.github.io/ready4/reference/authorData-methods.html'>authorData</a></span><span class='o'>(</span><span class='nv'>X</span>, consent_1L_chr <span class='o'>=</span> <span class='nv'>consent_1L_chr</span><span class='o'>)</span></span></code></pre>
 
 </div>
 
@@ -480,7 +498,7 @@ Having created a local copy of the template literate program files dataset, it i
 
 <div class="highlight">
 
-<pre class='chroma'><code class='language-r' data-lang='r'><span><span class='nf'><a href='https://ready4-dev.github.io/ready4/reference/authorReport-methods.html'>authorReport</a></span><span class='o'>(</span><span class='nv'>X</span><span class='o'>)</span></span></code></pre>
+<pre class='chroma'><code class='language-r' data-lang='r'><span><span class='nf'><a href='https://ready4-dev.github.io/ready4/reference/authorReport-methods.html'>authorReport</a></span><span class='o'>(</span><span class='nv'>X</span>, consent_1L_chr <span class='o'>=</span> <span class='nv'>consent_1L_chr</span><span class='o'>)</span></span></code></pre>
 
 </div>
 
@@ -491,7 +509,7 @@ If we wish, we can now ammend `X` and then rerun the `authorReport` method to ge
 <pre class='chroma'><code class='language-r' data-lang='r'><span><span class='nf'><a href='https://ready4-dev.github.io/ready4/reference/renewSlot-methods.html'>renewSlot</a></span><span class='o'>(</span><span class='nv'>X</span>,</span>
 <span>          <span class='s'>"outp_formats_chr"</span>,</span>
 <span>          new_val_xx <span class='o'>=</span> <span class='s'>"Word"</span><span class='o'>)</span> <span class='o'><a href='https://magrittr.tidyverse.org/reference/pipe.html'>%&gt;%</a></span></span>
-<span>  <span class='nf'><a href='https://ready4-dev.github.io/ready4/reference/authorReport-methods.html'>authorReport</a></span><span class='o'>(</span><span class='o'>)</span></span></code></pre>
+<span>  <span class='nf'><a href='https://ready4-dev.github.io/ready4/reference/authorReport-methods.html'>authorReport</a></span><span class='o'>(</span>consent_1L_chr <span class='o'>=</span> <span class='nv'>consent_1L_chr</span><span class='o'>)</span></span></code></pre>
 
 </div>
 
@@ -500,7 +518,7 @@ If we wish, we can now ammend `X` and then rerun the `authorReport` method to ge
 <pre class='chroma'><code class='language-r' data-lang='r'><span><span class='nf'><a href='https://ready4-dev.github.io/ready4/reference/renewSlot-methods.html'>renewSlot</a></span><span class='o'>(</span><span class='nv'>X</span>,</span>
 <span>          <span class='s'>"outp_formats_chr"</span>,</span>
 <span>          new_val_xx <span class='o'>=</span> <span class='s'>"HTML"</span><span class='o'>)</span> <span class='o'><a href='https://magrittr.tidyverse.org/reference/pipe.html'>%&gt;%</a></span></span>
-<span>  <span class='nf'><a href='https://ready4-dev.github.io/ready4/reference/authorReport-methods.html'>authorReport</a></span><span class='o'>(</span><span class='o'>)</span></span></code></pre>
+<span>  <span class='nf'><a href='https://ready4-dev.github.io/ready4/reference/authorReport-methods.html'>authorReport</a></span><span class='o'>(</span>consent_1L_chr <span class='o'>=</span> <span class='nv'>consent_1L_chr</span><span class='o'>)</span></span></code></pre>
 
 </div>
 

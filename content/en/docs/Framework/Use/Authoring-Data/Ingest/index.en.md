@@ -1,7 +1,7 @@
 ---
 title: "Ingest data from an open access repository"
 linkTitle: "Ingest"
-date: "2022-12-24"
+date: "2023-07-11"
 description: "A tutorial from the Acumen website about using ready4 to search and retrieve data from the Australian Mental Health Systems Models Dataverse."
 weight: 91
 categories: 
@@ -17,8 +17,10 @@ tags:
 - Software
 - Software - libraries
 - Software - libraries (ready4use)
+- Status
+- Status - development
 output: hugodown::md_document
-rmd_hash: 127821fa158f5037
+rmd_hash: efef178a685f6c3a
 
 ---
 
@@ -162,8 +164,8 @@ We can itemise the data objects we have ingested with the following command.
 
 <div class="highlight">
 
-<pre class='chroma'><code class='language-r' data-lang='r'><span><span class='c'>#&gt; [1] "eq5d_ds_dict"         "eq5d_ds_tb"           "ymh_clinical_dict_r3"</span></span>
-<span><span class='c'>#&gt; [4] "ymh_clinical_tb"</span></span></code></pre>
+<pre class='chroma'><code class='language-r' data-lang='r'><span><span class='c'>#&gt; [1] "eq5d_ds_dict"         "eq5d_ds_tb"           "ymh_clinical_dict_r3" "ymh_clinical_tb"</span></span>
+<span></span></code></pre>
 
 </div>
 
@@ -177,11 +179,10 @@ We can also see what metadata fields we have ingested.
 
 <div class="highlight">
 
-<pre class='chroma'><code class='language-r' data-lang='r'><span><span class='c'>#&gt;  [1] "id"                  "datasetId"           "datasetPersistentId"</span></span>
-<span><span class='c'>#&gt;  [4] "storageIdentifier"   "versionNumber"       "versionMinorNumber" </span></span>
-<span><span class='c'>#&gt;  [7] "versionState"        "lastUpdateTime"      "releaseTime"        </span></span>
-<span><span class='c'>#&gt; [10] "createTime"          "termsOfUse"          "fileAccessRequest"  </span></span>
-<span><span class='c'>#&gt; [13] "metadataBlocks"      "files"</span></span></code></pre>
+<pre class='chroma'><code class='language-r' data-lang='r'><span><span class='c'>#&gt;  [1] "id"                  "datasetId"           "datasetPersistentId" "storageIdentifier"   "versionNumber"       "versionMinorNumber" </span></span>
+<span><span class='c'>#&gt;  [7] "versionState"        "lastUpdateTime"      "releaseTime"         "createTime"          "termsOfUse"          "fileAccessRequest"  </span></span>
+<span><span class='c'>#&gt; [13] "metadataBlocks"      "files"</span></span>
+<span></span></code></pre>
 
 </div>
 
@@ -195,7 +196,8 @@ There can be a lot of useful information contained in this metadata list object.
 
 <div class="highlight">
 
-<pre class='chroma'><code class='language-r' data-lang='r'><span><span class='c'>#&gt; [1] "The datasets in this collection are entirely fake. They were developed principally to demonstrate the workings of a number of utility scoring and mapping algorithms. However, they may be of more general use to others. In some limited cases, some of the included files could be used in exploratory simulation based analyses. However, you should read the metadata descriptors for each file to inform yourself of the validity and limitations of each fake dataset. To open the RDS format files included in this dataset, the R package ready4use needs to be installed (see https://ready4-dev.github.io/ready4use/ ). It is also recommended that you install the youthvars package ( https://ready4-dev.github.io/youthvars/) as this provides useful tools for inspecting and validating each dataset."</span></span></code></pre>
+<pre class='chroma'><code class='language-r' data-lang='r'><span><span class='c'>#&gt; [1] "The datasets in this collection are entirely fake. They were developed principally to demonstrate the workings of a number of utility scoring and mapping algorithms. However, they may be of more general use to others. In some limited cases, some of the included files could be used in exploratory simulation based analyses. However, you should read the metadata descriptors for each file to inform yourself of the validity and limitations of each fake dataset. To open the RDS format files included in this dataset, the R package ready4use needs to be installed (see https://ready4-dev.github.io/ready4use/ ). It is also recommended that you install the youthvars package ( https://ready4-dev.github.io/youthvars/) as this provides useful tools for inspecting and validating each dataset."</span></span>
+<span></span></code></pre>
 
 </div>
 
@@ -209,7 +211,8 @@ The metadata also contains descriptive information on each file in the Dataverse
 
 <div class="highlight">
 
-<pre class='chroma'><code class='language-r' data-lang='r'><span><span class='c'>#&gt; [1] "A synthetic (fake) dataset representing clients in an Australian primary youth mental health service. This dataset was generated from parameter values derived from a sample of 1107 clients of headspace services using a script that is also included in this dataset. The purpose of this synthetic dataset was to allow the replication code for a utility mapping study (see: https://doi.org/10.1101/2021.07.07.21260129) to be run by those lacking access to the original dataset. The dataset may also have some limited value as an input dataset for purely exploratory studies in simulation studies of headspace clients, as its source dataset was reasonably representative of the headpace client population. However, it should be noted that the algorithm that generated this dataset only captures aspects of the joint distributions of the psychological and health utility measures. Other sample characteristic variables (age, gender, etc) are only representative of the source dataset when considered in isolation, rather than jointly."</span></span></code></pre>
+<pre class='chroma'><code class='language-r' data-lang='r'><span><span class='c'>#&gt; [1] "A synthetic (fake) dataset representing clients in an Australian primary youth mental health service. This dataset was generated from parameter values derived from a sample of 1107 clients of headspace services using a script that is also included in this dataset. The purpose of this synthetic dataset was to allow the replication code for a utility mapping study (see: https://doi.org/10.1101/2021.07.07.21260129) to be run by those lacking access to the original dataset. The dataset may also have some limited value as an input dataset for purely exploratory studies in simulation studies of headspace clients, as its source dataset was reasonably representative of the headpace client population. However, it should be noted that the algorithm that generated this dataset only captures aspects of the joint distributions of the psychological and health utility measures. Other sample characteristic variables (age, gender, etc) are only representative of the source dataset when considered in isolation, rather than jointly."</span></span>
+<span></span></code></pre>
 
 </div>
 
@@ -234,7 +237,8 @@ We can see that this ingest is identical to that made using the previous method.
 
 <div class="highlight">
 
-<pre class='chroma'><code class='language-r' data-lang='r'><span><span class='c'>#&gt; [1] TRUE</span></span></code></pre>
+<pre class='chroma'><code class='language-r' data-lang='r'><span><span class='c'>#&gt; [1] TRUE</span></span>
+<span></span></code></pre>
 
 </div>
 
@@ -262,21 +266,20 @@ The output from an object specific call to the `ingest` method is the requested 
 <div class="highlight">
 
 <pre class='chroma'><code class='language-r' data-lang='r'><span><span class='c'>#&gt; <span style='color: #555555;'># A tibble: 6 × 43</span></span></span>
-<span><span class='c'>#&gt;   fkClientID    round  d_interv…¹ d_age d_gen…² d_sex…³ d_sex…⁴ d_ATSI d_cou…⁵</span></span>
-<span><span class='c'>#&gt;   <span style='color: #555555; font-style: italic;'>&lt;chr&gt;</span>         <span style='color: #555555; font-style: italic;'>&lt;fct&gt;</span>  <span style='color: #555555; font-style: italic;'>&lt;date&gt;</span>     <span style='color: #555555; font-style: italic;'>&lt;int&gt;</span> <span style='color: #555555; font-style: italic;'>&lt;chr&gt;</span>   <span style='color: #555555; font-style: italic;'>&lt;chr&gt;</span>   <span style='color: #555555; font-style: italic;'>&lt;fct&gt;</span>   <span style='color: #555555; font-style: italic;'>&lt;chr&gt;</span>  <span style='color: #555555; font-style: italic;'>&lt;chr&gt;</span>  </span></span>
-<span><span class='c'>#&gt; <span style='color: #555555;'>1</span> Participant_1 Basel… 2020-03-22    14 Male    Male    Hetero… No     Austra…</span></span>
-<span><span class='c'>#&gt; <span style='color: #555555;'>2</span> Participant_2 Basel… 2020-06-15    19 Female  Female  Hetero… Yes    Other  </span></span>
-<span><span class='c'>#&gt; <span style='color: #555555;'>3</span> Participant_3 Basel… 2020-08-20    21 Female  Female  Other   <span style='color: #BB0000;'>NA</span>     <span style='color: #BB0000;'>NA</span>     </span></span>
-<span><span class='c'>#&gt; <span style='color: #555555;'>4</span> Participant_4 Basel… 2020-05-23    12 Female  Female  Hetero… Yes    Other  </span></span>
-<span><span class='c'>#&gt; <span style='color: #555555;'>5</span> Participant_5 Basel… 2020-04-05    19 Male    Male    Hetero… Yes    Other  </span></span>
-<span><span class='c'>#&gt; <span style='color: #555555;'>6</span> Participant_6 Basel… 2020-06-09    19 Male    Male    Hetero… Yes    Other  </span></span>
-<span><span class='c'>#&gt; <span style='color: #555555;'># … with 34 more variables: d_english_home &lt;chr&gt;, d_english_native &lt;chr&gt;,</span></span></span>
-<span><span class='c'>#&gt; <span style='color: #555555;'>#   d_studying_working &lt;chr&gt;, d_relation_s &lt;chr&gt;, s_centre &lt;chr&gt;,</span></span></span>
-<span><span class='c'>#&gt; <span style='color: #555555;'>#   c_p_diag_s &lt;chr&gt;, c_clinical_staging_s &lt;chr&gt;, k6_total &lt;int&gt;,</span></span></span>
-<span><span class='c'>#&gt; <span style='color: #555555;'>#   phq9_total &lt;int&gt;, bads_total &lt;int&gt;, gad7_total &lt;int&gt;, oasis_total &lt;int&gt;,</span></span></span>
-<span><span class='c'>#&gt; <span style='color: #555555;'>#   scared_total &lt;int&gt;, c_sofas &lt;int&gt;, aqol6d_q1 &lt;int&gt;, aqol6d_q2 &lt;int&gt;,</span></span></span>
-<span><span class='c'>#&gt; <span style='color: #555555;'>#   aqol6d_q3 &lt;int&gt;, aqol6d_q4 &lt;int&gt;, aqol6d_q5 &lt;int&gt;, aqol6d_q6 &lt;int&gt;,</span></span></span>
-<span><span class='c'>#&gt; <span style='color: #555555;'>#   aqol6d_q7 &lt;int&gt;, aqol6d_q8 &lt;int&gt;, aqol6d_q9 &lt;int&gt;, aqol6d_q10 &lt;int&gt;, …</span></span></span></code></pre>
+<span><span class='c'>#&gt;   fkClientID    round    d_interview_date d_age d_gender d_sex_birth_s d_sexual_ori_s d_ATSI d_country_bir_s d_english_home d_english_native</span></span>
+<span><span class='c'>#&gt;   <span style='color: #555555; font-style: italic;'>&lt;chr&gt;</span>         <span style='color: #555555; font-style: italic;'>&lt;fct&gt;</span>    <span style='color: #555555; font-style: italic;'>&lt;date&gt;</span>           <span style='color: #555555; font-style: italic;'>&lt;int&gt;</span> <span style='color: #555555; font-style: italic;'>&lt;chr&gt;</span>    <span style='color: #555555; font-style: italic;'>&lt;chr&gt;</span>         <span style='color: #555555; font-style: italic;'>&lt;fct&gt;</span>          <span style='color: #555555; font-style: italic;'>&lt;chr&gt;</span>  <span style='color: #555555; font-style: italic;'>&lt;chr&gt;</span>           <span style='color: #555555; font-style: italic;'>&lt;chr&gt;</span>          <span style='color: #555555; font-style: italic;'>&lt;chr&gt;</span>           </span></span>
+<span><span class='c'>#&gt; <span style='color: #555555;'>1</span> Participant_1 Baseline 2020-03-22          14 Male     Male          Heterosexual   No     Australia       Yes            Yes             </span></span>
+<span><span class='c'>#&gt; <span style='color: #555555;'>2</span> Participant_2 Baseline 2020-06-15          19 Female   Female        Heterosexual   Yes    Other           No             No              </span></span>
+<span><span class='c'>#&gt; <span style='color: #555555;'>3</span> Participant_3 Baseline 2020-08-20          21 Female   Female        Other          <span style='color: #BB0000;'>NA</span>     <span style='color: #BB0000;'>NA</span>              <span style='color: #BB0000;'>NA</span>             <span style='color: #BB0000;'>NA</span>              </span></span>
+<span><span class='c'>#&gt; <span style='color: #555555;'>4</span> Participant_4 Baseline 2020-05-23          12 Female   Female        Heterosexual   Yes    Other           No             No              </span></span>
+<span><span class='c'>#&gt; <span style='color: #555555;'>5</span> Participant_5 Baseline 2020-04-05          19 Male     Male          Heterosexual   Yes    Other           No             No              </span></span>
+<span><span class='c'>#&gt; <span style='color: #555555;'>6</span> Participant_6 Baseline 2020-06-09          19 Male     Male          Heterosexual   Yes    Other           No             No              </span></span>
+<span><span class='c'>#&gt; <span style='color: #555555;'># ℹ 32 more variables: d_studying_working &lt;chr&gt;, d_relation_s &lt;chr&gt;, s_centre &lt;chr&gt;, c_p_diag_s &lt;chr&gt;, c_clinical_staging_s &lt;chr&gt;,</span></span></span>
+<span><span class='c'>#&gt; <span style='color: #555555;'>#   k6_total &lt;int&gt;, phq9_total &lt;int&gt;, bads_total &lt;int&gt;, gad7_total &lt;int&gt;, oasis_total &lt;int&gt;, scared_total &lt;int&gt;, c_sofas &lt;int&gt;, aqol6d_q1 &lt;int&gt;,</span></span></span>
+<span><span class='c'>#&gt; <span style='color: #555555;'>#   aqol6d_q2 &lt;int&gt;, aqol6d_q3 &lt;int&gt;, aqol6d_q4 &lt;int&gt;, aqol6d_q5 &lt;int&gt;, aqol6d_q6 &lt;int&gt;, aqol6d_q7 &lt;int&gt;, aqol6d_q8 &lt;int&gt;, aqol6d_q9 &lt;int&gt;,</span></span></span>
+<span><span class='c'>#&gt; <span style='color: #555555;'>#   aqol6d_q10 &lt;int&gt;, aqol6d_q11 &lt;int&gt;, aqol6d_q12 &lt;int&gt;, aqol6d_q13 &lt;int&gt;, aqol6d_q14 &lt;int&gt;, aqol6d_q15 &lt;int&gt;, aqol6d_q16 &lt;int&gt;,</span></span></span>
+<span><span class='c'>#&gt; <span style='color: #555555;'>#   aqol6d_q17 &lt;int&gt;, aqol6d_q18 &lt;int&gt;, aqol6d_q19 &lt;int&gt;, aqol6d_q20 &lt;int&gt;</span></span></span>
+<span></span></code></pre>
 
 </div>
 
@@ -300,7 +303,8 @@ This last request produces a list of ingested objects.
 
 <div class="highlight">
 
-<pre class='chroma'><code class='language-r' data-lang='r'><span><span class='c'>#&gt; [1] "ymh_clinical_dict_r3" "ymh_clinical_tb"</span></span></code></pre>
+<pre class='chroma'><code class='language-r' data-lang='r'><span><span class='c'>#&gt; [1] "ymh_clinical_dict_r3" "ymh_clinical_tb"</span></span>
+<span></span></code></pre>
 
 </div>
 

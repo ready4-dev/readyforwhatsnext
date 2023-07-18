@@ -1,7 +1,7 @@
 ---
 title: "Develop choice models"
 linkTitle: "Predict choice"
-date: "2022-12-24"
+date: "2023-07-11"
 description: "Using tools (soon to be formalised into ready4 framework modules) from the mychoice R package, it is possible to develop choice models from responses to a discrete choice experiment survey."
 weight: 97
 categories: 
@@ -22,7 +22,7 @@ tags:
 - Use
 - Use - choice modelling
 output: hugodown::md_document
-rmd_hash: 23a1849f0442c087
+rmd_hash: a4c0911fb56cd680
 
 ---
 
@@ -38,7 +38,16 @@ rmd_hash: 23a1849f0442c087
 
 <div class="highlight">
 
-<pre class='chroma'><code class='language-r' data-lang='r'><span><span class='kr'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='o'>(</span><span class='nv'><a href='https://ready4-dev.github.io/mychoice/'>mychoice</a></span><span class='o'>)</span></span></code></pre>
+<pre class='chroma'><code class='language-r' data-lang='r'><span><span class='kr'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='o'>(</span><span class='nv'><a href='https://ready4-dev.github.io/mychoice/'>mychoice</a></span><span class='o'>)</span></span>
+<span><span class='c'>#&gt; The legacy packages maptools, rgdal, and rgeos, underpinning the sp package,</span></span>
+<span><span class='c'>#&gt; which was just loaded, will retire in October 2023.</span></span>
+<span><span class='c'>#&gt; Please refer to R-spatial evolution reports for details, especially</span></span>
+<span><span class='c'>#&gt; https://r-spatial.org/r/2023/05/15/evolution4.html.</span></span>
+<span><span class='c'>#&gt; It may be desirable to make the sf package available;</span></span>
+<span><span class='c'>#&gt; package maintainers should consider adding sf to Suggests:.</span></span>
+<span><span class='c'>#&gt; The sp package is now running under evolution status 2</span></span>
+<span><span class='c'>#&gt;      (status 2 uses the sf package in place of rgdal)</span></span>
+<span></span></code></pre>
 
 </div>
 

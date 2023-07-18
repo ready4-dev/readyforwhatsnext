@@ -1,7 +1,7 @@
 ---
 title: "Framework library releases"
 linkTitle: "Framework libraries"
-date: "2023-01-18"
+date: "2023-07-18"
 description: "Releases of foundation and authoring tools libraries to implement the ready4 framework."
 weight: 1
 categories: 
@@ -13,11 +13,11 @@ tags:
 - Software
 - Software - libraries
 output: hugodown::md_document
-rmd_hash: 7a8f0efb23baf01c
+rmd_hash: fb3125ee4f3218b5
 
 ---
 
-Currently available (as at 18-Jan-2023) releases of [framework libraries](/docs/software/libraries/types/framework/) are described below.
+Currently available (as at 18-Jul-2023) releases of [framework libraries](/docs/software/libraries/types/framework/) are described below.
 
 <html>
 
@@ -108,7 +108,7 @@ models.This release corrects package citation details.
 </html>
 </td>
 <td style="text-align:left;">
-<a href="https://github.com/ready4-dev/ready4show/releases/tag/v0.0.0.90985" style="     ">0.0.0.90981</a>
+<a href="https://github.com/ready4-dev/ready4show/releases/tag/v0.0.0.90535" style="     ">0.0.0.90981</a>
 </td>
 <td style="text-align:left;">
 ready4show provides tools for authoring technical documentation,
@@ -129,7 +129,7 @@ citation information.
 </html>
 </td>
 <td style="text-align:left;">
-<a href="https://github.com/ready4-dev/ready4use/releases/tag/v0.0.0.92225" style="     ">0.0.0.9222</a>
+<a href="https://github.com/ready4-dev/ready4use/releases/tag/v0.0.0.9222" style="     ">0.0.0.9222</a>
 </td>
 <td style="text-align:left;">
 ready4use provides a set of tools for authoring and working with
@@ -149,7 +149,7 @@ models.
 </html>
 </td>
 <td style="text-align:left;">
-<a href="https://github.com/ready4-dev/ready4show/releases/tag/v0.0.0.90985" style="     ">0.0.0.9098</a>
+<a href="https://github.com/ready4-dev/ready4show/releases/tag/v0.0.0.9098" style="     ">0.0.0.9098</a>
 </td>
 <td style="text-align:left;">
 ready4show provides tools for authoring technical documentation,
@@ -191,7 +191,7 @@ additional helper functions.
 </html>
 </td>
 <td style="text-align:left;">
-<a href="https://github.com/ready4-dev/ready4use/releases/tag/v0.0.0.92225" style="     ">0.0.0.92220</a>
+<a href="https://github.com/ready4-dev/ready4use/releases/tag/v0.0.0.92220" style="     ">0.0.0.92220</a>
 </td>
 <td style="text-align:left;">
 updated for fns_dmt_tb
@@ -209,7 +209,7 @@ updated for fns_dmt_tb
 </html>
 </td>
 <td style="text-align:left;">
-<a href="https://github.com/ready4-dev/ready4use/releases/tag/v0.0.0.92225" style="     ">0.0.0.9221</a>
+<a href="https://github.com/ready4-dev/ready4use/releases/tag/v0.0.0.9221" style="     ">0.0.0.9221</a>
 </td>
 <td style="text-align:left;">
 updated for fns_dmt_tb
@@ -227,7 +227,7 @@ updated for fns_dmt_tb
 </html>
 </td>
 <td style="text-align:left;">
-<a href="https://github.com/ready4-dev/ready4show/releases/tag/v0.0.0.90985" style="     ">0.0.0.90981</a>
+<a href="https://github.com/ready4-dev/ready4show/releases/tag/v0.0.0.90981" style="     ">0.0.0.90981</a>
 </td>
 <td style="text-align:left;">
 added fns_dmt_tb to release
@@ -245,7 +245,7 @@ added fns_dmt_tb to release
 </html>
 </td>
 <td style="text-align:left;">
-<a href="https://github.com/ready4-dev/ready4show/releases/tag/v0.0.0.90985" style="     ">0.0.0.90980</a>
+<a href="https://github.com/ready4-dev/ready4show/releases/tag/v0.0.0.90980" style="     ">0.0.0.90980</a>
 </td>
 <td style="text-align:left;">
 added fns_dmt_tb to release
@@ -263,7 +263,7 @@ added fns_dmt_tb to release
 </html>
 </td>
 <td style="text-align:left;">
-<a href="https://github.com/ready4-dev/ready4show/releases/tag/v0.0.0.90985" style="     ">0.0.0.9096</a>
+<a href="https://github.com/ready4-dev/ready4show/releases/tag/v0.0.0.9096" style="     ">0.0.0.9096</a>
 </td>
 <td style="text-align:left;">
 ready4show provides tools for authoring technical documentation,
@@ -284,7 +284,7 @@ updated R Markdown subroutine for generating scientific manuscripts.
 </html>
 </td>
 <td style="text-align:left;">
-<a href="https://github.com/ready4-dev/ready4use/releases/tag/v0.0.0.92225" style="     ">0.0.0.92201</a>
+<a href="https://github.com/ready4-dev/ready4use/releases/tag/v0.0.0.92201" style="     ">0.0.0.92201</a>
 </td>
 <td style="text-align:left;">
 ready4use provides a set of tools for authoring and working with
@@ -304,7 +304,7 @@ models.This release corrects an error with the citation file.
 </html>
 </td>
 <td style="text-align:left;">
-<a href="https://github.com/ready4-dev/ready4show/releases/tag/v0.0.0.90985" style="     ">0.0.0.90951</a>
+<a href="https://github.com/ready4-dev/ready4show/releases/tag/v0.0.0.90951" style="     ">0.0.0.90951</a>
 </td>
 <td style="text-align:left;">
 ready4show provides tools for authoring technical documentation,
@@ -325,7 +325,7 @@ error in the citation file.
 </html>
 </td>
 <td style="text-align:left;">
-<a href="https://github.com/ready4-dev/ready4/releases/tag/v0.0.0.9102" style="     ">0.0.0.90891</a>
+<a href="https://github.com/ready4-dev/ready4/releases/tag/v0.0.0.90891" style="     ">0.0.0.90891</a>
 </td>
 <td style="text-align:left;">
 ready4 provides bare bones foundational elements (classes, generics,
@@ -347,7 +347,7 @@ file.
 </html>
 </td>
 <td style="text-align:left;">
-<a href="https://github.com/ready4-dev/ready4use/releases/tag/v0.0.0.92225" style="     ">0.0.0.9220</a>
+<a href="https://github.com/ready4-dev/ready4use/releases/tag/v0.0.0.9220" style="     ">0.0.0.9220</a>
 </td>
 <td style="text-align:left;">
 ready4use provides a set of tools for authoring and working with
@@ -357,7 +357,7 @@ models.
 </tr>
 <tr>
 <td style="text-align:left;">
-15-Feb-2022
+14-Feb-2022
 </td>
 <td style="text-align:left;">
 <html>
@@ -367,7 +367,7 @@ models.
 </html>
 </td>
 <td style="text-align:left;">
-<a href="https://github.com/ready4-dev/ready4show/releases/tag/v0.0.0.90985" style="     ">0.0.0.9095</a>
+<a href="https://github.com/ready4-dev/ready4show/releases/tag/v0.0.0.9095" style="     ">0.0.0.9095</a>
 </td>
 <td style="text-align:left;">
 ready4show provides tools for authoring technical documentation,
@@ -378,7 +378,7 @@ updates including addition of a CITATION.cff file.
 </tr>
 <tr>
 <td style="text-align:left;">
-15-Feb-2022
+14-Feb-2022
 </td>
 <td style="text-align:left;">
 <html>
@@ -388,7 +388,7 @@ updates including addition of a CITATION.cff file.
 </html>
 </td>
 <td style="text-align:left;">
-<a href="https://github.com/ready4-dev/ready4/releases/tag/v0.0.0.9102" style="     ">0.0.0.9089</a>
+<a href="https://github.com/ready4-dev/ready4/releases/tag/v0.0.0.9089" style="     ">0.0.0.9089</a>
 </td>
 <td style="text-align:left;">
 ready4 provides bare bones foundational elements (classes, generics,
@@ -411,7 +411,7 @@ of recognised terms for the coding house-style.
 </html>
 </td>
 <td style="text-align:left;">
-<a href="https://github.com/ready4-dev/ready4/releases/tag/v0.0.0.9102" style="     ">0.0.0.9088</a>
+<a href="https://github.com/ready4-dev/ready4/releases/tag/v0.0.0.9088" style="     ">0.0.0.9088</a>
 </td>
 <td style="text-align:left;">
 Minor updates and fixes.
@@ -429,7 +429,7 @@ Minor updates and fixes.
 </html>
 </td>
 <td style="text-align:left;">
-<a href="https://github.com/ready4-dev/ready4/releases/tag/v0.0.0.9102" style="     ">0.0.0.9078</a>
+<a href="https://github.com/ready4-dev/ready4/releases/tag/v0.0.0.9078" style="     ">0.0.0.9078</a>
 </td>
 <td style="text-align:left;">
 Release with first version of Framework syntax and foundational
@@ -449,7 +449,7 @@ framework.
 </html>
 </td>
 <td style="text-align:left;">
-<a href="https://github.com/ready4-dev/ready4/releases/tag/v0.0.0.9102" style="     ">Documentation</a>
+<a href="https://github.com/ready4-dev/ready4/releases/tag/Documentation" style="     ">Documentation</a>
 </td>
 <td style="text-align:left;">
 fix of write to repo fn
@@ -485,7 +485,7 @@ First release indexed with a Zenodo DOI.
 </html>
 </td>
 <td style="text-align:left;">
-<a href="https://github.com/ready4-dev/ready4/releases/tag/v0.0.0.9102" style="     ">0.0.0.9022</a>
+<a href="https://github.com/ready4-dev/ready4/releases/tag/v0.0.0.9022" style="     ">0.0.0.9022</a>
 </td>
 <td style="text-align:left;">
 Initial release of ready4 R package
@@ -503,7 +503,7 @@ Initial release of ready4 R package
 </html>
 </td>
 <td style="text-align:left;">
-<a href="https://github.com/ready4-dev/ready4show/releases/tag/v0.0.0.90985" style="     ">0.0.0.9048</a>
+<a href="https://github.com/ready4-dev/ready4show/releases/tag/0.0.0.9048" style="     ">0.0.0.9048</a>
 </td>
 <td style="text-align:left;">
 Data release
@@ -521,7 +521,7 @@ Data release
 </html>
 </td>
 <td style="text-align:left;">
-<a href="https://github.com/ready4-dev/ready4fun/releases/tag/0.0.0.9461" style="     ">Doc_0.0</a>
+<a href="https://github.com/ready4-dev/ready4fun/releases/tag/Doc_0.0" style="     ">Doc_0.0</a>
 </td>
 <td style="text-align:left;">
 more s4 mthd dmtn fixes
@@ -539,7 +539,7 @@ more s4 mthd dmtn fixes
 </html>
 </td>
 <td style="text-align:left;">
-<a href="https://github.com/ready4-dev/ready4use/releases/tag/v0.0.0.92225" style="     ">0.0.0.9122</a>
+<a href="https://github.com/ready4-dev/ready4use/releases/tag/v0.0.0.9122" style="     ">0.0.0.9122</a>
 </td>
 <td style="text-align:left;">
 This release includes some changed argument names and updated
@@ -565,7 +565,7 @@ what’s under the hood.
 </html>
 </td>
 <td style="text-align:left;">
-<a href="https://github.com/ready4-dev/ready4use/releases/tag/v0.0.0.92225" style="     ">0.0.0.9120</a>
+<a href="https://github.com/ready4-dev/ready4use/releases/tag/v0.0.0.9120" style="     ">0.0.0.9120</a>
 </td>
 <td style="text-align:left;">
 This release addresses a build failure in the previous release due to a
@@ -591,7 +591,7 @@ for developers who want a quick guide to what’s under the hood.
 </html>
 </td>
 <td style="text-align:left;">
-<a href="https://github.com/ready4-dev/ready4use/releases/tag/v0.0.0.92225" style="     ">0.0.0.9119</a>
+<a href="https://github.com/ready4-dev/ready4use/releases/tag/v0.0.0.9119" style="     ">0.0.0.9119</a>
 </td>
 <td style="text-align:left;">
 This release addresses a build failure in the previous release due to a
@@ -617,7 +617,7 @@ for developers who want a quick guide to what’s under the hood.
 </html>
 </td>
 <td style="text-align:left;">
-<a href="https://github.com/ready4-dev/ready4class/releases/tag/Documentation_0.0" style="     ">0.0.0.9193</a>
+<a href="https://github.com/ready4-dev/ready4class/releases/tag/v0.0.0.9193" style="     ">0.0.0.9193</a>
 </td>
 <td style="text-align:left;">
 This release includes updated dependencies to address potential build
@@ -643,7 +643,7 @@ what’s under the hood.
 </html>
 </td>
 <td style="text-align:left;">
-<a href="https://github.com/ready4-dev/ready4fun/releases/tag/0.0.0.9461" style="     ">0.0.0.9289</a>
+<a href="https://github.com/ready4-dev/ready4fun/releases/tag/v0.0.0.9289" style="     ">0.0.0.9289</a>
 </td>
 <td style="text-align:left;">
 Updates from previous release include adding an internal helper function
@@ -670,7 +670,7 @@ for developers who want a quick guide to what’s under the hood.
 </html>
 </td>
 <td style="text-align:left;">
-<a href="https://github.com/ready4-dev/ready4class/releases/tag/Documentation_0.0" style="     ">0.0.0.9189
+<a href="https://github.com/ready4-dev/ready4class/releases/tag/v0.0.0.9189" style="     ">0.0.0.9189
 (Initial)</a>
 </td>
 <td style="text-align:left;">
@@ -697,7 +697,7 @@ what’s under the hood.
 </html>
 </td>
 <td style="text-align:left;">
-<a href="https://github.com/ready4-dev/ready4fun/releases/tag/0.0.0.9461" style="     ">0.0.0.9279</a>
+<a href="https://github.com/ready4-dev/ready4fun/releases/tag/v0.0.0.9279" style="     ">0.0.0.9279</a>
 </td>
 <td style="text-align:left;">
 Updates from previous release include (another) bug fix for the
@@ -723,7 +723,7 @@ for developers who want a quick guide to what’s under the hood
 </html>
 </td>
 <td style="text-align:left;">
-<a href="https://github.com/ready4-dev/ready4class/releases/tag/Documentation_0.0" style="     ">0.0.0.9187</a>
+<a href="https://github.com/ready4-dev/ready4class/releases/tag/v0.0.0.9187" style="     ">0.0.0.9187</a>
 </td>
 <td style="text-align:left;">
 updated v nbr
@@ -741,7 +741,7 @@ updated v nbr
 </html>
 </td>
 <td style="text-align:left;">
-<a href="https://github.com/ready4-dev/ready4class/releases/tag/Documentation_0.0" style="     ">0.0.0.9186</a>
+<a href="https://github.com/ready4-dev/ready4class/releases/tag/v0.0.0.9186" style="     ">0.0.0.9186</a>
 </td>
 <td style="text-align:left;">
 updates to authoring workflow
@@ -759,7 +759,7 @@ updates to authoring workflow
 </html>
 </td>
 <td style="text-align:left;">
-<a href="https://github.com/ready4-dev/ready4fun/releases/tag/0.0.0.9461" style="     ">0.0.0.9278</a>
+<a href="https://github.com/ready4-dev/ready4fun/releases/tag/v0.0.0.9278" style="     ">0.0.0.9278</a>
 </td>
 <td style="text-align:left;">
 Updates from previous release include bug fixes for the
@@ -785,7 +785,7 @@ for developers who want a quick guide to what’s under the hood.
 </html>
 </td>
 <td style="text-align:left;">
-<a href="https://github.com/ready4-dev/ready4fun/releases/tag/0.0.0.9461" style="     ">0.0.0.9276</a>
+<a href="https://github.com/ready4-dev/ready4fun/releases/tag/v0.0.0.9276" style="     ">0.0.0.9276</a>
 </td>
 <td style="text-align:left;">
 Updates from previous release includes some function and argument
@@ -814,7 +814,7 @@ for developers who want a quick guide to what’s under the hood.
 </html>
 </td>
 <td style="text-align:left;">
-<a href="https://github.com/ready4-dev/ready4fun/releases/tag/0.0.0.9461" style="     ">0.0.0.9270
+<a href="https://github.com/ready4-dev/ready4fun/releases/tag/v0.0.0.9270" style="     ">0.0.0.9270
 (Initial)</a>
 </td>
 <td style="text-align:left;">

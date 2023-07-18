@@ -1,7 +1,7 @@
 ---
 title: "People module library releases"
 linkTitle: "People"
-date: "2023-03-06"
+date: "2023-07-18"
 description: "Releases of module libraries for modelling people (collectively, the Spring To Life model)."
 weight: 3
 categories: 
@@ -12,11 +12,11 @@ tags:
 - Software
 - Software - libraries
 output: hugodown::md_document
-rmd_hash: cf8e13b0f3e9ce7c
+rmd_hash: cffc40b1135a1538
 
 ---
 
-Currently available (as at 06-Mar-2023) releases of [module libraries](/docs/software/libraries/types/module/) for [modelling people](/docs/model/modules/using-modules/people/) are reproduced below.
+Currently available (as at 18-Jul-2023) releases of [module libraries](/docs/software/libraries/types/module/) for [modelling people](/docs/model/modules/using-modules/people/) are reproduced below.
 
 <html>
 
@@ -84,7 +84,7 @@ migrated in fns from updated analysis program
 </html>
 </td>
 <td style="text-align:left;">
-<a href="https://github.com/ready4-dev/mychoice/releases/tag/v0.0.0.9015" style="     ">0.0.0.9014</a>
+<a href="https://github.com/ready4-dev/mychoice/releases/tag/v0.0.0.9014" style="     ">0.0.0.9014</a>
 </td>
 <td style="text-align:left;">
 Model youth choices using the ready4 framework.Tools for modelling the
@@ -220,7 +220,7 @@ information.
 </html>
 </td>
 <td style="text-align:left;">
-<a href="https://github.com/ready4-dev/youthu/releases/tag/v0.0.0.91125" style="     ">0.0.0.9112</a>
+<a href="https://github.com/ready4-dev/youthu/releases/tag/v0.0.0.9112" style="     ">0.0.0.9112</a>
 </td>
 <td style="text-align:left;">
 Tools for mapping measures routinely collected in youth mental health
@@ -242,7 +242,7 @@ process of testing and documenting the package.
 </html>
 </td>
 <td style="text-align:left;">
-<a href="https://github.com/ready4-dev/TTU/releases/tag/v0.0.0.93465" style="     ">0.0.0.9346</a>
+<a href="https://github.com/ready4-dev/TTU/releases/tag/v0.0.0.9346" style="     ">0.0.0.9346</a>
 </td>
 <td style="text-align:left;">
 Tools for developing, reporting and sharing Transfer To Utility (TTU)
@@ -263,7 +263,7 @@ available as part of the process of testing and documenting the package.
 </html>
 </td>
 <td style="text-align:left;">
-<a href="https://github.com/ready4-dev/specific/releases/tag/v0.0.0.90835" style="     ">0.0.0.9083</a>
+<a href="https://github.com/ready4-dev/specific/releases/tag/v0.0.0.9083" style="     ">0.0.0.9083</a>
 </td>
 <td style="text-align:left;">
 Tools to standardise the formalising and solving of inverse problems as
@@ -284,7 +284,7 @@ part of the process of testing and documenting the package.
 </html>
 </td>
 <td style="text-align:left;">
-<a href="https://github.com/ready4-dev/scorz/releases/tag/v0.0.0.90535" style="     ">0.0.0.9053</a>
+<a href="https://github.com/ready4-dev/scorz/releases/tag/v0.0.0.9053" style="     ">0.0.0.9053</a>
 </td>
 <td style="text-align:left;">
 Tools to summarise questionnaire responses from youth mental health
@@ -306,7 +306,7 @@ systems models.
 </html>
 </td>
 <td style="text-align:left;">
-<a href="https://github.com/ready4-dev/youthvars/releases/tag/v0.0.0.91085" style="     ">0.0.0.9108</a>
+<a href="https://github.com/ready4-dev/youthvars/releases/tag/v0.0.0.9108" style="     ">0.0.0.9108</a>
 </td>
 <td style="text-align:left;">
 Tools to describe and quality assure types of data commonly present in
@@ -328,7 +328,7 @@ descriptive statistics.
 </html>
 </td>
 <td style="text-align:left;">
-<a href="https://github.com/ready4-dev/specific/releases/tag/v0.0.0.90835" style="     ">0.0.0.90532</a>
+<a href="https://github.com/ready4-dev/specific/releases/tag/v0.0.0.90532" style="     ">0.0.0.90532</a>
 </td>
 <td style="text-align:left;">
 updated dpcys
@@ -346,7 +346,7 @@ updated dpcys
 </html>
 </td>
 <td style="text-align:left;">
-<a href="https://github.com/ready4-dev/scorz/releases/tag/v0.0.0.90535" style="     ">0.0.0.90531</a>
+<a href="https://github.com/ready4-dev/scorz/releases/tag/v0.0.0.90531" style="     ">0.0.0.90531</a>
 </td>
 <td style="text-align:left;">
 updated dpcys
@@ -364,7 +364,7 @@ updated dpcys
 </html>
 </td>
 <td style="text-align:left;">
-<a href="https://github.com/ready4-dev/youthvars/releases/tag/v0.0.0.91085" style="     ">0.0.0.91081</a>
+<a href="https://github.com/ready4-dev/youthvars/releases/tag/v0.0.0.91081" style="     ">0.0.0.91081</a>
 </td>
 <td style="text-align:left;">
 updated dpcys
@@ -382,7 +382,7 @@ updated dpcys
 </html>
 </td>
 <td style="text-align:left;">
-<a href="https://github.com/ready4-dev/TTU/releases/tag/v0.0.0.93465" style="     ">0.0.0.9338</a>
+<a href="https://github.com/ready4-dev/TTU/releases/tag/v0.0.0.9338" style="     ">0.0.0.9338</a>
 </td>
 <td style="text-align:left;">
 Tools for developing, reporting and sharing Transfer To Utility (TTU)
@@ -403,7 +403,7 @@ available as part of the process of testing and documenting the package.
 </html>
 </td>
 <td style="text-align:left;">
-<a href="https://github.com/ready4-dev/youthu/releases/tag/v0.0.0.91125" style="     ">0.0.0.9111</a>
+<a href="https://github.com/ready4-dev/youthu/releases/tag/v0.0.0.91110" style="     ">0.0.0.9111</a>
 </td>
 <td style="text-align:left;">
 Tools for mapping measures routinely collected in youth mental health
@@ -425,7 +425,7 @@ process of testing and documenting the package.
 </html>
 </td>
 <td style="text-align:left;">
-<a href="https://github.com/ready4-dev/youthu/releases/tag/v0.0.0.91125" style="     ">0.0.0.9111</a>
+<a href="https://github.com/ready4-dev/youthu/releases/tag/v0.0.0.9111" style="     ">0.0.0.9111</a>
 </td>
 <td style="text-align:left;">
 edits to work with new mdl_ingredients_ls
@@ -443,7 +443,7 @@ edits to work with new mdl_ingredients_ls
 </html>
 </td>
 <td style="text-align:left;">
-<a href="https://github.com/ready4-dev/TTU/releases/tag/v0.0.0.93465" style="     ">0.0.0.9337</a>
+<a href="https://github.com/ready4-dev/TTU/releases/tag/v0.0.0.9337" style="     ">0.0.0.9337</a>
 </td>
 <td style="text-align:left;">
 Tools for developing, reporting and sharing Transfer To Utility (TTU)
@@ -465,7 +465,7 @@ package.Updates in this release include new TTUSynopsis class.
 </html>
 </td>
 <td style="text-align:left;">
-<a href="https://github.com/ready4-dev/specific/releases/tag/v0.0.0.90835" style="     ">0.0.0.9079</a>
+<a href="https://github.com/ready4-dev/specific/releases/tag/v0.0.0.9079" style="     ">0.0.0.9079</a>
 </td>
 <td style="text-align:left;">
 Tools to standardise the formalising and solving of inverse problems as
@@ -486,7 +486,7 @@ part of the process of testing and documenting the package.
 </html>
 </td>
 <td style="text-align:left;">
-<a href="https://github.com/ready4-dev/TTU/releases/tag/v0.0.0.93465" style="     ">0.0.0.9335</a>
+<a href="https://github.com/ready4-dev/TTU/releases/tag/v0.0.0.9335" style="     ">0.0.0.9335</a>
 </td>
 <td style="text-align:left;">
 Tools for developing, reporting and sharing Transfer To Utility (TTU)
@@ -506,7 +506,7 @@ measures.
 </html>
 </td>
 <td style="text-align:left;">
-<a href="https://github.com/ready4-dev/TTU/releases/tag/v0.0.0.93465" style="     ">0.0.0.9334</a>
+<a href="https://github.com/ready4-dev/TTU/releases/tag/v0.0.0.9334" style="     ">0.0.0.9334</a>
 </td>
 <td style="text-align:left;">
 changed dpcy pkgs
@@ -524,7 +524,7 @@ changed dpcy pkgs
 </html>
 </td>
 <td style="text-align:left;">
-<a href="https://github.com/ready4-dev/TTU/releases/tag/v0.0.0.93465" style="     ">0.0.0.9333</a>
+<a href="https://github.com/ready4-dev/TTU/releases/tag/v0.0.0.9333" style="     ">0.0.0.9333</a>
 </td>
 <td style="text-align:left;">
 Increment version number to 0.0.0.9333
@@ -542,7 +542,7 @@ Increment version number to 0.0.0.9333
 </html>
 </td>
 <td style="text-align:left;">
-<a href="https://github.com/ready4-dev/TTU/releases/tag/v0.0.0.93465" style="     ">0.0.0.9332</a>
+<a href="https://github.com/ready4-dev/TTU/releases/tag/v0.0.0.9332" style="     ">0.0.0.9332</a>
 </td>
 <td style="text-align:left;">
 updated dpcys
@@ -560,7 +560,7 @@ updated dpcys
 </html>
 </td>
 <td style="text-align:left;">
-<a href="https://github.com/ready4-dev/specific/releases/tag/v0.0.0.90835" style="     ">0.0.0.90780</a>
+<a href="https://github.com/ready4-dev/specific/releases/tag/v0.0.0.90780" style="     ">0.0.0.90780</a>
 </td>
 <td style="text-align:left;">
 Tools to standardise the formalising and solving of inverse problems as
@@ -579,7 +579,7 @@ part of the development of open and modular mental health systems.
 </html>
 </td>
 <td style="text-align:left;">
-<a href="https://github.com/ready4-dev/specific/releases/tag/v0.0.0.90835" style="     ">0.0.0.9078</a>
+<a href="https://github.com/ready4-dev/specific/releases/tag/v0.0.0.9078" style="     ">0.0.0.9078</a>
 </td>
 <td style="text-align:left;">
 Tools to standardise the formalising and solving of inverse problems as
@@ -598,7 +598,7 @@ part of the development of open and modular mental health systems.
 </html>
 </td>
 <td style="text-align:left;">
-<a href="https://github.com/ready4-dev/specific/releases/tag/v0.0.0.90835" style="     ">0.0.0.9077</a>
+<a href="https://github.com/ready4-dev/specific/releases/tag/v0.0.0.9077" style="     ">0.0.0.9077</a>
 </td>
 <td style="text-align:left;">
 fix of transform fn
@@ -616,7 +616,7 @@ fix of transform fn
 </html>
 </td>
 <td style="text-align:left;">
-<a href="https://github.com/ready4-dev/TTU/releases/tag/v0.0.0.93465" style="     ">0.0.0.9331</a>
+<a href="https://github.com/ready4-dev/TTU/releases/tag/v0.0.0.9331" style="     ">0.0.0.9331</a>
 </td>
 <td style="text-align:left;">
 removed all migrated out fns
@@ -634,7 +634,7 @@ removed all migrated out fns
 </html>
 </td>
 <td style="text-align:left;">
-<a href="https://github.com/ready4-dev/specific/releases/tag/v0.0.0.90835" style="     ">0.0.0.9076</a>
+<a href="https://github.com/ready4-dev/specific/releases/tag/v0.0.0.9076" style="     ">0.0.0.9076</a>
 </td>
 <td style="text-align:left;">
 updated investigate methds
@@ -652,7 +652,7 @@ updated investigate methds
 </html>
 </td>
 <td style="text-align:left;">
-<a href="https://github.com/ready4-dev/TTU/releases/tag/v0.0.0.93465" style="     ">0.0.0.9330</a>
+<a href="https://github.com/ready4-dev/TTU/releases/tag/v0.0.0.9330" style="     ">0.0.0.9330</a>
 </td>
 <td style="text-align:left;">
 added TTUReports class and author method
@@ -670,7 +670,7 @@ added TTUReports class and author method
 </html>
 </td>
 <td style="text-align:left;">
-<a href="https://github.com/ready4-dev/specific/releases/tag/v0.0.0.90835" style="     ">0.0.0.9075</a>
+<a href="https://github.com/ready4-dev/specific/releases/tag/v0.0.0.9075" style="     ">0.0.0.9075</a>
 </td>
 <td style="text-align:left;">
 Tools to standardise the formalising and solving of inverse problems as
@@ -690,7 +690,7 @@ release includes updated author and share methods.
 </html>
 </td>
 <td style="text-align:left;">
-<a href="https://github.com/ready4-dev/specific/releases/tag/v0.0.0.90835" style="     ">0.0.0.9074</a>
+<a href="https://github.com/ready4-dev/specific/releases/tag/v0.0.0.9074" style="     ">0.0.0.9074</a>
 </td>
 <td style="text-align:left;">
 Tools to standardise the formalising and solving of inverse problems as
@@ -709,7 +709,7 @@ part of the development of open and modular mental health systems.
 </html>
 </td>
 <td style="text-align:left;">
-<a href="https://github.com/ready4-dev/scorz/releases/tag/v0.0.0.90535" style="     ">0.0.0.9048</a>
+<a href="https://github.com/ready4-dev/scorz/releases/tag/v0.0.0.9048" style="     ">0.0.0.9048</a>
 </td>
 <td style="text-align:left;">
 Tools to summarise questionnaire responses from youth mental health
@@ -731,7 +731,7 @@ systems models.
 </html>
 </td>
 <td style="text-align:left;">
-<a href="https://github.com/ready4-dev/youthvars/releases/tag/v0.0.0.91085" style="     ">0.0.0.9104</a>
+<a href="https://github.com/ready4-dev/youthvars/releases/tag/v0.0.0.9104" style="     ">0.0.0.9104</a>
 </td>
 <td style="text-align:left;">
 Tools to describe and quality assure types of data commonly present in
@@ -753,7 +753,7 @@ descriptive statistics.This release includes updates to plot functions.
 </html>
 </td>
 <td style="text-align:left;">
-<a href="https://github.com/ready4-dev/youthvars/releases/tag/v0.0.0.91085" style="     ">0.0.0.9072</a>
+<a href="https://github.com/ready4-dev/youthvars/releases/tag/v0.0.0.9072" style="     ">0.0.0.9072</a>
 </td>
 <td style="text-align:left;">
 Version implemented following significant redevelopment of package
@@ -772,7 +772,7 @@ dependencies.
 </html>
 </td>
 <td style="text-align:left;">
-<a href="https://github.com/ready4-dev/youthu/releases/tag/v0.0.0.91125" style="     ">0.9095</a>
+<a href="https://github.com/ready4-dev/youthu/releases/tag/v0.9095" style="     ">0.9095</a>
 </td>
 <td style="text-align:left;">
 Some minor updates to functions and vignettes.For most users the most
@@ -793,7 +793,7 @@ version:youthu_0.0.0.9095_developer.pdf
 </html>
 </td>
 <td style="text-align:left;">
-<a href="https://github.com/ready4-dev/youthvars/releases/tag/v0.0.0.91085" style="     ">0.9061</a>
+<a href="https://github.com/ready4-dev/youthvars/releases/tag/v0.9061" style="     ">0.9061</a>
 </td>
 <td style="text-align:left;">
 This release combines changes to the naming conventions of variables
@@ -808,7 +808,7 @@ development functions that are not intended for end-users.
 </tr>
 <tr>
 <td style="text-align:left;">
-12-May-2021
+11-May-2021
 </td>
 <td style="text-align:left;">
 <html>
@@ -818,7 +818,7 @@ development functions that are not intended for end-users.
 </html>
 </td>
 <td style="text-align:left;">
-<a href="https://github.com/ready4-dev/youthvars/releases/tag/v0.0.0.91085" style="     ">0.0.0.9044</a>
+<a href="https://github.com/ready4-dev/youthvars/releases/tag/v0.0.0.9044" style="     ">0.0.0.9044</a>
 </td>
 <td style="text-align:left;">
 This release includes a number of new functions, some of which have been
@@ -843,7 +843,7 @@ vignettes are also available
 </html>
 </td>
 <td style="text-align:left;">
-<a href="https://github.com/ready4-dev/youthu/releases/tag/v0.0.0.91125" style="     ">0.0.0.9065</a>
+<a href="https://github.com/ready4-dev/youthu/releases/tag/v0.0.0.9065" style="     ">0.0.0.9065</a>
 </td>
 <td style="text-align:left;">
 This is the initial release of the youthu (Youth OUtcomes To Health
@@ -871,7 +871,7 @@ not intended for end-users.
 </html>
 </td>
 <td style="text-align:left;">
-<a href="https://github.com/ready4-dev/youthvars/releases/tag/v0.0.0.91085" style="     ">0.0.0.9018</a>
+<a href="https://github.com/ready4-dev/youthvars/releases/tag/v0.0.0.9018" style="     ">0.0.0.9018</a>
 </td>
 <td style="text-align:left;">
 updated dpcy
@@ -889,7 +889,7 @@ updated dpcy
 </html>
 </td>
 <td style="text-align:left;">
-<a href="https://github.com/ready4-dev/youthvars/releases/tag/v0.0.0.91085" style="     ">0.0.0.9017</a>
+<a href="https://github.com/ready4-dev/youthvars/releases/tag/v0.0.0.9017" style="     ">0.0.0.9017</a>
 </td>
 <td style="text-align:left;">
 This release includes a number of naming convention changes and

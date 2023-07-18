@@ -11,6 +11,7 @@ library(ready4)
 ```{r echo=F, message=FALSE, warning=FALSE}
 make_code_releases_tbl("Program",
                        as_kbl_1L_lgl = T,
+                       exclude_chr = c("dce_sa_cards","aus_09_synth", "fakefolk","rebuild"),
                        bootstrap_options = c("hover",
                                              "condensed"))
 ```

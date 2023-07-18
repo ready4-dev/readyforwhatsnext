@@ -1,7 +1,7 @@
 ---
 title: "Share data via online repositories"
 linkTitle: "Share"
-date: "2022-12-24"
+date: "2023-07-11"
 description: "  The retrieval and dissemination of data from online data repositories is an essential enabler of open source modelling. This tutorial describes how a module from the ready4use R package can help you to manage this process."
 weight: 93
 categories: 
@@ -18,7 +18,7 @@ tags:
 - Status
 - Status - development
 output: hugodown::md_document
-rmd_hash: 46f9f142fe10e9b3
+rmd_hash: df5f9777adac8f33
 
 ---
 

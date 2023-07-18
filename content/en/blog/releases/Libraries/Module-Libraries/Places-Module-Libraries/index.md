@@ -1,7 +1,7 @@
 ---
 title: "Places module library releases"
-linkTitle: "People"
-date: "2023-03-06"
+linkTitle: "Places"
+date: "2023-07-18"
 description: "Releases of module libraries for modelling places (collectively, the Springtides model)."
 weight: 3
 categories: 
@@ -12,11 +12,11 @@ tags:
 - Software
 - Software - libraries
 output: hugodown::md_document
-rmd_hash: 5b65e06cbb759b91
+rmd_hash: 7d736ef8259a45fb
 
 ---
 
-Currently available (as at 06-Mar-2023) releases of [module libraries](/docs/software/libraries/types/module/) for [modelling places](/docs/model/modules/using-modules/places/) are reproduced below.
+Currently available (as at 18-Jul-2023) releases of [module libraries](/docs/software/libraries/types/module/) for [modelling places](/docs/model/modules/using-modules/places/) are reproduced below.
 
 <html>
 

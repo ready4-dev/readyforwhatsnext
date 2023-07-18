@@ -10,7 +10,8 @@ library(ready4)#source("../../../../../../../R/Functions.R", local = knitr::knit
 #zenodo_records_ls <- zen4R::ZenodoManager$new()
 make_programs_tbl(as_kbl_1L_lgl = T,
                   bootstrap_options = c("hover", 
-                                        "condensed"))
+                                        "condensed"),
+                  exclude_chr = c("dce_sa_cards","aus_09_synth", "fakefolk","rebuild"))
 ```
 
 

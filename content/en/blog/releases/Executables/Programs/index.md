@@ -1,7 +1,7 @@
 ---
 title: "Programs releases"
 linkTitle: "Programs"
-date: "2023-01-18"
+date: "2023-07-18"
 description: "Releases of programs for implementing modelling analyses."
 weight: 1
 categories: 
@@ -13,11 +13,11 @@ tags:
 - Software - executable 
 - Software - executable (programs)
 output: hugodown::md_document
-rmd_hash: 0fe54d20a81dd4f6
+rmd_hash: 757bacdff228c6c2
 
 ---
 
-Currently available (as at 18-Jan-2023) releases of [analysis programs](/docs/model/analyses/replication-code/) are described below.
+Currently available (as at 18-Jul-2023) releases of [analysis programs](/docs/model/analyses/replication-code/) are described below.
 
 <html>
 
@@ -57,7 +57,7 @@ Description
 <tbody>
 <tr>
 <td style="text-align:left;">
-28-Oct-2022
+27-Oct-2022
 </td>
 <td style="text-align:left;">
 dce_sa_analysis
@@ -79,7 +79,7 @@ of socially anxious young people.
 dce_sa_analysis
 </td>
 <td style="text-align:left;">
-<a href="https://github.com/ready4-dev/dce_sa_analysis/releases/tag/v0.1.1" style="     ">0.1</a>
+<a href="https://github.com/ready4-dev/dce_sa_analysis/releases/tag/v0.1" style="     ">0.1</a>
 </td>
 <td style="text-align:left;">
 version 0.1
@@ -110,7 +110,7 @@ package (<a href="https://github.com/ready4-dev/mychoice" class="uri">https://gi
 dce_sa_design
 </td>
 <td style="text-align:left;">
-<a href="https://github.com/ready4-dev/dce_sa_design/releases/tag/v0.0.9.3" style="     ">0.0.0.3</a>
+<a href="https://github.com/ready4-dev/dce_sa_design/releases/tag/v0.0.0.3" style="     ">0.0.0.3</a>
 </td>
 <td style="text-align:left;">
 version 0.0.9.3
@@ -124,7 +124,7 @@ version 0.0.9.3
 dce_sa_analysis
 </td>
 <td style="text-align:left;">
-<a href="https://github.com/ready4-dev/dce_sa_analysis/releases/tag/v0.1.1" style="     ">0.0.9.1</a>
+<a href="https://github.com/ready4-dev/dce_sa_analysis/releases/tag/v0.0.9.1" style="     ">0.0.9.1</a>
 </td>
 <td style="text-align:left;">
 An R Markdown program to analyse responses to a Discrete Choice
@@ -171,7 +171,7 @@ minor formatting change and an updated version number.
 ttu_lng_aqol6_csp
 </td>
 <td style="text-align:left;">
-<a href="https://github.com/ready4-dev/ttu_lng_aqol6_csp/releases/tag/v0.1" style="     ">0.0.9.4</a>
+<a href="https://github.com/ready4-dev/ttu_lng_aqol6_csp/releases/tag/v0.0.9.4" style="     ">0.0.9.4</a>
 </td>
 <td style="text-align:left;">
 new syntax
@@ -185,7 +185,7 @@ new syntax
 dce_sa_design
 </td>
 <td style="text-align:left;">
-<a href="https://github.com/ready4-dev/dce_sa_design/releases/tag/v0.0.9.3" style="     ">0.0.9.2</a>
+<a href="https://github.com/ready4-dev/dce_sa_design/releases/tag/v0.0.9.2" style="     ">0.0.9.2</a>
 </td>
 <td style="text-align:left;">
 An R Markdown program to create the experimental design for a Discrete
@@ -197,45 +197,13 @@ generating the final survey choice cards.
 </tr>
 <tr>
 <td style="text-align:left;">
-09-Jun-2022
-</td>
-<td style="text-align:left;">
-dce_sa_cards
-</td>
-<td style="text-align:left;">
-<a href="https://github.com/ready4-dev/dce_sa_cards/releases/tag/v0.0.9.2" style="     ">0.0.9.2</a>
-</td>
-<td style="text-align:left;">
-HTML choice cards for use in pilot and final Discrete Choice Experiment
-(DCE) surveys of socially anxious young peopleThis release includes
-updated citation details.
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-09-Jun-2022
-</td>
-<td style="text-align:left;">
-dce_sa_cards
-</td>
-<td style="text-align:left;">
-<a href="https://github.com/ready4-dev/dce_sa_cards/releases/tag/v0.0.9.2" style="     ">0.0.9.1</a>
-</td>
-<td style="text-align:left;">
-Initial release of HTML code to render choice cards used in the pilot
-and final surveys of socially anxious young people for a Discrete Choice
-Experiment (DCE).
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-09-Jun-2022
+08-Jun-2022
 </td>
 <td style="text-align:left;">
 dce_sa_design
 </td>
 <td style="text-align:left;">
-<a href="https://github.com/ready4-dev/dce_sa_design/releases/tag/v0.0.9.3" style="     ">0.0.9.1</a>
+<a href="https://github.com/ready4-dev/dce_sa_design/releases/tag/v0.0.9.1" style="     ">0.0.9.1</a>
 </td>
 <td style="text-align:left;">
 Initial pre-release
@@ -249,7 +217,7 @@ Initial pre-release
 aqol6dmap_use
 </td>
 <td style="text-align:left;">
-<a href="https://github.com/ready4-dev/aqol6dmap_use/releases/tag/v0.1" style="     ">0.0.9.1</a>
+<a href="https://github.com/ready4-dev/aqol6dmap_use/releases/tag/v0.0.9.1" style="     ">0.0.9.1</a>
 </td>
 <td style="text-align:left;">
 Apply AQoL-6D Utility Mapping Models To New DataThis release updates the
@@ -281,7 +249,7 @@ data we used for the utility mapping study described in the article <a href="htt
 aqol6dmap_use
 </td>
 <td style="text-align:left;">
-<a href="https://github.com/ready4-dev/aqol6dmap_use/releases/tag/v0.1" style="     ">0.0.9.0</a>
+<a href="https://github.com/ready4-dev/aqol6dmap_use/releases/tag/v0.0.9.0" style="     ">0.0.9.0</a>
 </td>
 <td style="text-align:left;">
 Apply AQoL-6D Utility Mapping Models To New DataInitial release.
@@ -295,7 +263,7 @@ Apply AQoL-6D Utility Mapping Models To New DataInitial release.
 ttu_lng_aqol6_csp
 </td>
 <td style="text-align:left;">
-<a href="https://github.com/ready4-dev/ttu_lng_aqol6_csp/releases/tag/v0.1" style="     ">0.0.9.3</a>
+<a href="https://github.com/ready4-dev/ttu_lng_aqol6_csp/releases/tag/v0.0.9.3" style="     ">0.0.9.3</a>
 </td>
 <td style="text-align:left;">
 Complete study program to reproduce all steps from data ingest through
@@ -311,7 +279,7 @@ AQoL-6D health utility.
 ttu_lng_aqol6_csp
 </td>
 <td style="text-align:left;">
-<a href="https://github.com/ready4-dev/ttu_lng_aqol6_csp/releases/tag/v0.1" style="     ">0.0.9.2</a>
+<a href="https://github.com/ready4-dev/ttu_lng_aqol6_csp/releases/tag/v0.0.9.2" style="     ">0.0.9.2</a>
 </td>
 <td style="text-align:left;">
 Complete study program to reproduce all steps from data ingest through
@@ -327,7 +295,7 @@ AQoL-6D health utility
 ttu_lng_aqol6_csp
 </td>
 <td style="text-align:left;">
-<a href="https://github.com/ready4-dev/ttu_lng_aqol6_csp/releases/tag/v0.1" style="     ">0.0.9.1</a>
+<a href="https://github.com/ready4-dev/ttu_lng_aqol6_csp/releases/tag/v0.0.9.1" style="     ">0.0.9.1</a>
 </td>
 <td style="text-align:left;">
 Complete study program to develop, share and report models that map
@@ -342,7 +310,7 @@ mental health outcome measures to AQoL-6D health utility.
 ttu_lng_aqol6_csp
 </td>
 <td style="text-align:left;">
-<a href="https://github.com/ready4-dev/ttu_lng_aqol6_csp/releases/tag/v0.1" style="     ">0.0.90</a>
+<a href="https://github.com/ready4-dev/ttu_lng_aqol6_csp/releases/tag/v0.0.90" style="     ">0.0.90</a>
 </td>
 <td style="text-align:left;">
 Complete study program to develop, share and report models that map
@@ -357,7 +325,7 @@ mental health outcome measures to AQoL-6D health utility.
 ttu_lng_aqol6_csp
 </td>
 <td style="text-align:left;">
-<a href="https://github.com/ready4-dev/ttu_lng_aqol6_csp/releases/tag/v0.1" style="     ">0.0.9</a>
+<a href="https://github.com/ready4-dev/ttu_lng_aqol6_csp/releases/tag/v0.0.9" style="     ">0.0.9</a>
 </td>
 <td style="text-align:left;">
 readme edit

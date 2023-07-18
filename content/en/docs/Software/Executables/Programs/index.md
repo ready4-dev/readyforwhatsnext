@@ -1,7 +1,7 @@
 ---
 title: "Programs"
 linkTitle: "Programs"
-date: "2022-12-24"
+date: "2023-07-18"
 description: "Programs are used to generate and report a model analysis."
 weight: 3
 categories: 
@@ -11,7 +11,7 @@ tags:
 - Software - executable
 - Software - executable (programs)
 output: hugodown::md_document
-rmd_hash: 320c76ce6fb4ee8b
+rmd_hash: 0a86ce1726185546
 
 ---
 
@@ -117,7 +117,7 @@ dce_sa_analysis
 0.1.1
 </td>
 <td style="text-align:left;">
-28-Oct-2022
+27-Oct-2022
 </td>
 <td style="text-align:left;">
 A self-documenting R Markdown program for analysing responses to a
