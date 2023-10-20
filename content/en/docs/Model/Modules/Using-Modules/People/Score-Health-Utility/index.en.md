@@ -1,7 +1,7 @@
 ---
 title: "Score health utility"
 linkTitle: "Score health utility"
-date: "2023-07-11"
+date: "2023-10-20"
 description: "Using modules from the scorz R package, individual responses to a multi-attribute utility instrument survey can be converted into health utility total scores. This tutorial describes how to do for adolescent AQoL-6D health utility."
 weight: 93
 categories: 
@@ -53,11 +53,11 @@ Note: **This vignette is illustrated with fake data**. The dataset explored in t
 
 To derive a health utility score from the raw responses to a multi-attribute utility instrument it is necessary to implement a scoring algorithm. Scoring algorithms for the Assessment of Quality of Life Six Dimension (AQoL-6D) are publicly available in SPSS format (<https://www.aqol.com.au/index.php/scoring-algorithms>).
 
-However, to include scoring algorithms in reproducible research workflows, it is desirable to have these algorithms available in open science languages such as R. We therefore developed an R implementation of the adult and adolescent versions of the AQoL-6D scoring algorithms and have made them available as part of the `scorz` package.
+However, to include scoring algorithms in reproducible research workflows, it is desirable to have these algorithms available in open science languages such as R. The `scorz` package includes [ready4 framework model modules](https://www.ready4-dev.com/docs/framework/implementation/modularity/#ready4-model-modules) of [the ready4 youth mental health economic model](https://www.ready4-dev.com/docs/model/) that provide R implementations of the adult and adolescent versions of the AQoL-6D scoring algorithms.
 
 ## Ingest data
 
-To begin, we ingest an unscored dataset as an instance of the `Ready4useDyad` class (from the [ready4use package](https://ready4-dev.github.io/ready4use/)). In this case we download our data from a remote repository.
+To begin, we ingest an unscored dataset as an instance of the `Ready4useDyad` from the [ready4use package](https://ready4-dev.github.io/ready4use/). In this case we download our data from a remote repository.
 
 <div class="highlight">
 
@@ -1027,7 +1027,7 @@ Anxiety
 
 </div>
 
-We now add meta-data that identifies our dataset as being longitudinal using the `YouthvarsSeries` class of the [youthvars package](https://ready4-dev.github.io/youthvars/).
+We now add meta-data that identifies our dataset as being longitudinal using the `YouthvarsSeries` module of the [youthvars package](https://ready4-dev.github.io/youthvars/).
 
 <div class="highlight">
 

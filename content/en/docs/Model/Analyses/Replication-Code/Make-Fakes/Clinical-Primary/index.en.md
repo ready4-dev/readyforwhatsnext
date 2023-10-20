@@ -1,7 +1,7 @@
 ---
 title: "Create a synthetic population of young people attending primary mental health services"
 linkTitle: "Clinical"
-date: "2023-07-18"
+date: "2023-10-20"
 description: "We created a basic synthetic dataset of to represent a clinical youth mental health sample."
 weight: 3
 categories: 

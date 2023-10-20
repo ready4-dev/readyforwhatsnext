@@ -1,7 +1,7 @@
 ---
 title: "Modularity"
 linkTitle: "Modularity"
-date: "2023-07-11"
+date: "2023-10-20"
 description: "ready4 supports a modular approach to computational model development."
 weight: 62
 categories: 
@@ -38,11 +38,11 @@ rmd_hash: 6e4877d09d026d7b
 
 ## Motivation
 
-A potentially attractive approach to modelling complex youth mental health systems is to begin with a relatively simple computational model and to progressively extend its scope and sophistication. Such an approach could be described as "modular" if it is possible to readily combine multiple discrete modelling projects (potentially developed by different modelling teams) that each independently describe distinct aspects of the system being modelled. This modular and collaborative approach is being used in the development of [ready4 - an open source health economic model of the systems shaping mental health and wellbeing in young people](https://www.ready4-dev.com). The `ready4` package provides the foundational tools to support the development and application of the ready4 modular model.
+A potentially attractive approach to modelling complex health systems is to begin with a relatively simple computational model and to progressively extend its scope and sophistication. Such an approach could be described as "modular" if it is possible to readily combine multiple discrete modelling projects (potentially developed by different modelling teams) that each independently describe distinct aspects of the system being modelled. The `ready4` package provides foundational elements of a software framework to support the development of modular and open-source computational health economic models using R. We are currently applying this framework [in youth mental health](https://www.ready4-dev.com/docs/model/).
 
 ## Implementation
 
-The ready4 model is being implemented in R and its modular nature is enabled by the [encapsulation and inheritance features of Object Oriented Programming (OOP)](https://ready4-dev.github.io/ready4/articles/V_03.html). Specifically, ready4 uses two of R's systems for implementing OOP - S3 and S4. An in-depth explanation of R's different class system is beyond the scope of this article, but is explored in [Hadley Wickham's Advanced R handbook](https://adv-r.hadley.nz/oo.html). However, it is useful to know some very high level information about S3 and S4 classes:
+Modular model development is enabled by the [encapsulation and inheritance features of Object Oriented Programming (OOP)](https://www.ready4-dev.com/docs/framework/implementation/paradigm/object-oriented/). Specifically, `ready4` uses two of R's systems for implementing OOP - S3 and S4. An in-depth explanation of R's different class system is beyond the scope of this article, but is explored in [Hadley Wickham's Advanced R handbook](https://adv-r.hadley.nz/oo.html). However, it is useful to know some very high level information about S3 and S4 classes:
 
 -   S4 classes are frequently said to be "formal", "strict" or "rigorous". The elements of an S4 class are called slots and the type of data that each slot is allowed to contain is specified in the class definition. An S4 class can be comprised of slots that contain different types of data (e.g. a slot that contains a character vector and another slot that contains tabular data).
 
@@ -50,11 +50,13 @@ The ready4 model is being implemented in R and its modular nature is enabled by 
 
 ### ready4 Model Modules
 
-A ready4 model module is a data-structure and associated algorithms that is used to model a discrete component of a system relevant to young people's mental health. Each ready4 model module is created using the `ready4` package's `Ready4Module` class. We can create an instance (`X`) of `Ready4Module` using the following command.
+As we use the term, a "model module" is comprised of both a data-structure (or "class") and algorithms (or "methods") that are associated with that data-structure. A model module can be used to model a discrete component of a system relevant to young people's mental health. Model modules can be created from a template - the `ready4` package's `Ready4Module` class.
+
+We can create an object (`X`) from the `Ready4Module` template using the following command.
 
 <div class="highlight">
 
-<pre class='chroma'><code class='language-r' data-lang='r'><span><span class='nv'>X</span> <span class='o'>&lt;-</span> <span class='nf'>ready4</span><span class='nf'>::</span><span class='nf'><a href='https://ready4-dev.github.io/ready4/reference/Ready4Module-class.html'>Ready4Module</a></span><span class='o'>(</span><span class='o'>)</span></span></code></pre>
+<pre class='chroma'><code class='language-r' data-lang='r'><span><span class='nv'>X</span> <span class='o'>&lt;-</span> <span class='nf'><a href='https://ready4-dev.github.io/ready4/reference/Ready4Module-class.html'>Ready4Module</a></span><span class='o'>(</span><span class='o'>)</span></span></code></pre>
 
 </div>
 
@@ -69,7 +71,7 @@ However, if we inspect `X` we can see it is of limited use as it contains no dat
 
 </div>
 
-The `Ready4Module` class is therefore not intended to be called directly. Instead, the purpose of `Ready4Module` is to be the parent-class of all ready4 model modules. `Ready4Module` and all of its child-classes (ie all ready4 model modules) are "S4" classes.
+The `Ready4Module` class is therefore not intended to be called directly. Instead, the purpose of `Ready4Module` is to be the parent class of other templates for creating model modules. `Ready4Module` and all of its child-classes (ie all model module templates) are "S4" classes.
 
 <div class="card border-primary mb-3" style="max-width: 20rem;">
 
@@ -87,13 +89,13 @@ The `Ready4Module` class is therefore not intended to be called directly. Instea
 
 </div>
 
-A formal (S4) `Ready4Module` child-class and its associated methods used to implement a discrete sub-component of the ready4 youth mental health model.
+An instance of `Ready4Module` (or classes that inherit from `Ready4Module`) and its associated methods.
 
 </div>
 
 </div>
 
-`ready4` includes two child classes of `Ready4Module`. These are `Ready4Public` and `Ready4Private` and both are almost as minimally informative as their parent (the only difference being that their instances have the values "Public" or "Private" assigned to the `dissemination_1L_chr` slot).
+`ready4` includes two module templates that inherit from `Ready4Module`. These are `Ready4Public` and `Ready4Private` and both are almost as minimally informative as their parent (the only difference being that their instances have the values "Public" or "Private" assigned to the `dissemination_1L_chr` slot).
 
 <div class="highlight">
 
@@ -115,7 +117,7 @@ A formal (S4) `Ready4Module` child-class and its associated methods used to impl
 
 </div>
 
-Like the `Ready4Module` class they inherit from, the purpose of `Ready4Public` and `Ready4Private` is to be used as parent classes. Using either of `Ready4Public` and `Ready4Private` can be a potentially efficient way of partially automating access policies for model data. If **all** the data contained in a module can **always** be shared publicly, it may be convenient to note this by using a module that has been created as a child-class of `Ready4Public`. Similarly, if at least some of the data contained in a module will always be unsuitable for public dissemination, it can be useful to use a module that is a child of `Ready4Private`. When the dissemination policy for data contained in a module will vary depending on user or context, it is more appropriate to use a module that inherits from `Ready4Module` without being a child of either `Ready4Public` and `Ready4Private`. In this latest case, users may choose to add descriptive information about the data access policy themselves using the `renewSlot` method. The dissemination policy can be inspected with the `procureSlot` method.
+Like the `Ready4Module` template they inherit from, the purpose of `Ready4Public` and `Ready4Private` is to be used as parent classes of other templates. Using either of `Ready4Public` and `Ready4Private` can be a potentially efficient way of partially automating access policies for model data. If **all** the data contained in a module can **always** be shared publicly, it may be convenient to note this by using a module that has been created from the `Ready4Public` template. Similarly, if at least some of the data contained in a module will always be unsuitable for public dissemination, it can be useful to use a module created from `Ready4Private`. When the dissemination policy for data contained in a module will vary depending on user or context, it is more appropriate to use a module template that inherits from `Ready4Module` but not from either of `Ready4Public` and `Ready4Private`. In this latest case, users may choose to add descriptive information about the data access policy themselves using the `renewSlot` method. The dissemination policy can be inspected with the `procureSlot` method.
 
 <div class="highlight">
 
@@ -149,7 +151,7 @@ In ready4, S3 classes are principally used to help define the structural propert
 
 </div>
 
-An informal (S3) class and its associated methods that describes, validates and applies algorithms to a slot of a ready4 module.
+An instance of an informal (S3) class and its associated methods that describes, validates and applies algorithms to a slot of a Module.
 
 </div>
 
@@ -157,15 +159,19 @@ An informal (S3) class and its associated methods that describes, validates and 
 
 ### Module and Sub-module Methods
 
-All methods associated with ready4 modules and sub-modules adopt [a common syntax](https://ready4-dev.github.io/ready4/articles/V_02.html). However, the algorithms implemented by each command in that syntax will vary depending on which module it is applied to. A limited number of methods are defined at the level of the `Ready4Module` parent class and are therefore inherited by all ready4 modules. Currently, the only methods defined for `Ready4Module` are [slot-methods](https://ready4-dev.github.io/ready4/articles/V_02.html#slot-generics-and-methods) and these can be itemised using the `get_methods` function.
+All methods associated with modules and sub-modules adopt [a common syntax](https://www.ready4-dev.com/docs/framework/implementation/syntax/). However, the algorithms implemented by each command in that syntax will vary depending on which module it is applied to. A limited number of methods are defined for the `Ready4Module` template which by default are inherited by all other module templates. Currently, the only methods defined for `Ready4Module` are [slot-methods](https://www.ready4-dev.com/docs/framework/implementation/syntax/#slot-generics-and-methods) and these can be itemised using the `get_methods` function.
 
 <div class="highlight">
 
 <pre class='chroma'><code class='language-r' data-lang='r'><span><span class='nf'><a href='https://ready4-dev.github.io/ready4/reference/get_methods.html'>get_methods</a></span><span class='o'>(</span><span class='o'>)</span></span>
-<span><span class='c'>#&gt;  [1] "authorSlot"        "characterizeSlot"  "depictSlot"        "enhanceSlot"       "exhibitSlot"      </span></span>
-<span><span class='c'>#&gt;  [6] "ingestSlot"        "investigateSlot"   "manufactureSlot"   "metamorphoseSlot"  "procureSlot"      </span></span>
-<span><span class='c'>#&gt; [11] "prognosticateSlot" "ratifySlot"        "reckonSlot"        "renewSlot"         "shareSlot"</span></span>
+<span><span class='c'>#&gt;  [1] "authorSlot"        "characterizeSlot"  "depictSlot"       </span></span>
+<span><span class='c'>#&gt;  [4] "enhanceSlot"       "exhibitSlot"       "ingestSlot"       </span></span>
+<span><span class='c'>#&gt;  [7] "investigateSlot"   "manufactureSlot"   "metamorphoseSlot" </span></span>
+<span><span class='c'>#&gt; [10] "procureSlot"       "prognosticateSlot" "ratifySlot"       </span></span>
+<span><span class='c'>#&gt; [13] "reckonSlot"        "renewSlot"         "shareSlot"</span></span>
 <span></span></code></pre>
 
 </div>
+
+Developers using the extended ready4 software framework can use our [module authoring tools](https://www.ready4-dev.com/docs/framework/use/authoring-modules/) to add new methods or overwrite inherited default methods.
 

@@ -1,7 +1,7 @@
 ---
 title: "Use utility mapping algorithms to help implement cost-utility analyses"
 linkTitle: "Assess cost-utility"
-date: "2022-12-24"
+date: "2023-10-20"
 description: "Using tools (soon to be formalised into ready4 framework modules) from the youthu R package, it is possible to use utility mapping algorithms to help implement cost-utility analyses. This tutorial illustrates the main steps for doing so using psychological and functional measures collected on clinical samples of young people."
 weight: 97
 categories: 
@@ -22,7 +22,7 @@ tags:
 - Use - cost-utility
 - Use - utility mapping
 output: hugodown::md_document
-rmd_hash: 7449b7285653484c
+rmd_hash: 2a06a88904fb0d04
 html_dependencies:
 - <script src="kePrint-0.0.1/kePrint.js"></script>
 - <link href="lightable-0.0.1/lightable.css" rel="stylesheet" />
@@ -59,7 +59,8 @@ First, we must first import our data. In this example we will use a fake dataset
 <div class="highlight">
 
 <pre class='chroma'><code class='language-r' data-lang='r'><span><span class='nv'>ds_tb</span> <span class='o'>&lt;-</span> <span class='nf'><a href='https://ready4-dev.github.io/youthu/reference/make_fake_ds_two.html'>make_fake_ds_two</a></span><span class='o'>(</span><span class='o'>)</span></span>
-<span><span class='c'>#&gt; Joining, by = c("fkClientID", "study_arm_chr")</span></span></code></pre>
+<span><span class='c'>#&gt; Joining with `by = join_by(fkClientID, study_arm_chr)`</span></span>
+<span></span></code></pre>
 
 </div>
 
@@ -113,7 +114,7 @@ Participant_20
 Baseline
 </td>
 <td style="text-align:right;">
-2022-05-19
+2023-03-15
 </td>
 <td style="text-align:right;">
 0S
@@ -142,7 +143,7 @@ Participant_593
 Baseline
 </td>
 <td style="text-align:right;">
-2022-03-26
+2023-01-20
 </td>
 <td style="text-align:right;">
 0S
@@ -171,7 +172,7 @@ Participant_593
 Follow-up
 </td>
 <td style="text-align:right;">
-2022-09-17
+2023-07-14
 </td>
 <td style="text-align:right;">
 175d 0H 0M 0S
@@ -200,7 +201,7 @@ Participant_20
 Follow-up
 </td>
 <td style="text-align:right;">
-2022-11-13
+2023-09-09
 </td>
 <td style="text-align:right;">
 178d 0H 0M 0S
@@ -229,7 +230,7 @@ Participant_259
 Baseline
 </td>
 <td style="text-align:right;">
-2022-07-14
+2023-05-10
 </td>
 <td style="text-align:right;">
 0S
@@ -258,7 +259,7 @@ Participant_962
 Baseline
 </td>
 <td style="text-align:right;">
-2022-08-26
+2023-06-22
 </td>
 <td style="text-align:right;">
 0S
@@ -312,7 +313,8 @@ These types of economic analyses can be relatively simple to interpret if either
 <span><span class='c'>#&gt;  Median :12.0   Median :66.00  </span></span>
 <span><span class='c'>#&gt;  Mean   :10.9   Mean   :66.13  </span></span>
 <span><span class='c'>#&gt;  3rd Qu.:15.0   3rd Qu.:72.00  </span></span>
-<span><span class='c'>#&gt;  Max.   :19.0   Max.   :89.00</span></span></code></pre>
+<span><span class='c'>#&gt;  Max.   :19.0   Max.   :89.00</span></span>
+<span></span></code></pre>
 
 </div>
 
@@ -325,7 +327,8 @@ These types of economic analyses can be relatively simple to interpret if either
 <span><span class='c'>#&gt;  Median : 8.000   Median :71.00   Median :1486.7  </span></span>
 <span><span class='c'>#&gt;  Mean   : 8.493   Mean   :70.65   Mean   :1489.0  </span></span>
 <span><span class='c'>#&gt;  3rd Qu.:13.000   3rd Qu.:77.00   3rd Qu.:1627.0  </span></span>
-<span><span class='c'>#&gt;  Max.   :27.000   Max.   :98.00   Max.   :2216.5</span></span></code></pre>
+<span><span class='c'>#&gt;  Max.   :27.000   Max.   :98.00   Max.   :2216.5</span></span>
+<span></span></code></pre>
 
 </div>
 
@@ -338,7 +341,8 @@ These types of economic analyses can be relatively simple to interpret if either
 <span><span class='c'>#&gt;  Median :11.00   Median :67.00  </span></span>
 <span><span class='c'>#&gt;  Mean   :10.81   Mean   :66.74  </span></span>
 <span><span class='c'>#&gt;  3rd Qu.:15.00   3rd Qu.:72.25  </span></span>
-<span><span class='c'>#&gt;  Max.   :19.00   Max.   :88.00</span></span></code></pre>
+<span><span class='c'>#&gt;  Max.   :19.00   Max.   :88.00</span></span>
+<span></span></code></pre>
 
 </div>
 
@@ -351,7 +355,8 @@ These types of economic analyses can be relatively simple to interpret if either
 <span><span class='c'>#&gt;  Median : 6.500   Median :68   Median :1777.3  </span></span>
 <span><span class='c'>#&gt;  Mean   : 6.851   Mean   :68   Mean   :1807.8  </span></span>
 <span><span class='c'>#&gt;  3rd Qu.:11.000   3rd Qu.:77   3rd Qu.:1996.0  </span></span>
-<span><span class='c'>#&gt;  Max.   :25.000   Max.   :93   Max.   :2872.7</span></span></code></pre>
+<span><span class='c'>#&gt;  Max.   :25.000   Max.   :93   Max.   :2872.7</span></span>
+<span></span></code></pre>
 
 </div>
 
@@ -402,7 +407,8 @@ We now use our preferred model to predict health utility from the measures in ou
 <pre class='chroma'><code class='language-r' data-lang='r'><span><span class='nv'>ds_tb</span> <span class='o'>&lt;-</span> <span class='nf'><a href='https://ready4-dev.github.io/youthu/reference/add_utl_predn.html'>add_utl_predn</a></span><span class='o'>(</span><span class='nv'>ds_tb</span>,</span>
 <span>                       predn_ds_ls <span class='o'>=</span> <span class='nv'>predn_ds_ls</span><span class='o'>)</span> <span class='o'><a href='https://magrittr.tidyverse.org/reference/pipe.html'>%&gt;%</a></span></span>
 <span>  <span class='nf'>dplyr</span><span class='nf'>::</span><span class='nf'><a href='https://dplyr.tidyverse.org/reference/select.html'>select</a></span><span class='o'>(</span><span class='nv'>fkClientID</span>, <span class='nv'>round</span>, <span class='nv'>study_arm_chr</span>, <span class='nv'>date_psx</span>, <span class='nv'>duration_prd</span>, <span class='nf'>dplyr</span><span class='nf'>::</span><span class='nf'><a href='https://tidyselect.r-lib.org/reference/everything.html'>everything</a></span><span class='o'>(</span><span class='o'>)</span><span class='o'>)</span></span>
-<span><span class='c'>#&gt; Joining, by = c("fkClientID", "round")</span></span></code></pre>
+<span><span class='c'>#&gt; Joining with `by = join_by(fkClientID, round)`</span></span>
+<span></span></code></pre>
 
 </div>
 
@@ -511,10 +517,10 @@ Control
 243
 </td>
 <td style="text-align:right;">
-2022-03-04
+2022-12-29
 </td>
 <td style="text-align:right;">
-2022-08-28
+2023-06-24
 </td>
 <td style="text-align:right;">
 0S
@@ -582,10 +588,10 @@ Control
 191
 </td>
 <td style="text-align:right;">
-2022-04-30
+2023-02-24
 </td>
 <td style="text-align:right;">
-2022-10-31
+2023-08-27
 </td>
 <td style="text-align:right;">
 0S
@@ -653,10 +659,10 @@ Intervention
 230
 </td>
 <td style="text-align:right;">
-2022-03-25
+2023-01-19
 </td>
 <td style="text-align:right;">
-2022-09-20
+2023-07-17
 </td>
 <td style="text-align:right;">
 0S
@@ -724,10 +730,10 @@ Intervention
 115
 </td>
 <td style="text-align:right;">
-2022-04-23
+2023-02-17
 </td>
 <td style="text-align:right;">
-2022-10-22
+2023-08-18
 </td>
 <td style="text-align:right;">
 0S
@@ -795,10 +801,10 @@ Intervention
 183
 </td>
 <td style="text-align:right;">
-2022-07-25
+2023-05-21
 </td>
 <td style="text-align:right;">
-2023-01-27
+2023-11-23
 </td>
 <td style="text-align:right;">
 0S
@@ -866,10 +872,10 @@ Intervention
 219
 </td>
 <td style="text-align:right;">
-2022-08-20
+2023-06-16
 </td>
 <td style="text-align:right;">
-2023-02-15
+2023-12-12
 </td>
 <td style="text-align:right;">
 0S
@@ -950,7 +956,13 @@ Note, for this illustrative example we only request 1000 bootstrap iterations - 
 
 <pre class='chroma'><code class='language-r' data-lang='r'><span><span class='nv'>he_smry_ls</span> <span class='o'>&lt;-</span> <span class='nv'>ds_tb</span> <span class='o'><a href='https://magrittr.tidyverse.org/reference/pipe.html'>%&gt;%</a></span> <span class='nf'><a href='https://ready4-dev.github.io/youthu/reference/make_hlth_ec_smry.html'>make_hlth_ec_smry</a></span><span class='o'>(</span>predn_ds_ls <span class='o'>=</span> <span class='nv'>predn_ds_ls</span>,</span>
 <span>                                                 wtp_dbl <span class='o'>=</span> <span class='m'>50000</span>,</span>
-<span>                                                 bootstrap_iters_1L_int <span class='o'>=</span> <span class='m'>1000L</span><span class='o'>)</span></span></code></pre>
+<span>                                                 bootstrap_iters_1L_int <span class='o'>=</span> <span class='m'>1000L</span><span class='o'>)</span></span>
+<span><span class='c'>#&gt; Warning: There was 1 warning in `dplyr::summarise()`.</span></span>
+<span><span class='c'>#&gt; <span style='color: #00BBBB;'>ℹ</span> In argument: `dplyr::across(.fns = mean)`.</span></span>
+<span><span class='c'>#&gt; Caused by warning:</span></span>
+<span><span class='c'>#&gt; <span style='color: #BBBB00;'>!</span> Using `across()` without supplying `.cols` was deprecated in dplyr 1.1.0.</span></span>
+<span><span class='c'>#&gt; <span style='color: #00BBBB;'>ℹ</span> Please supply `.cols` instead.</span></span>
+<span></span></code></pre>
 
 </div>
 
@@ -963,7 +975,8 @@ As part of the output of the `make_hlth_ec_smry` function is a BCEA object, we c
 <span>                   area_color <span class='o'>=</span> <span class='s'>"green"</span>,</span>
 <span>                    graph <span class='o'>=</span> <span class='s'>"ggplot2"</span>,</span>
 <span>          theme <span class='o'>=</span> <span class='nf'>ggplot2</span><span class='nf'>::</span><span class='nf'><a href='https://ggplot2.tidyverse.org/reference/ggtheme.html'>theme_light</a></span><span class='o'>(</span><span class='o'>)</span><span class='o'>)</span></span>
-<span><span class='c'>#&gt; Warning: Duplicated aesthetics after name standardisation: <span style='color: #00BB00;'>colour</span></span></span></code></pre>
+<span><span class='c'>#&gt; Warning: Duplicated aesthetics after name standardisation: <span style='color: #00BB00;'>colour</span></span></span>
+<span></span></code></pre>
 <img src="figs/unnamed-chunk-14-1.png" width="700px" style="display: block; margin: auto;" />
 
 </div>

@@ -20,7 +20,7 @@ The primary role of coders in ready4 [modelling projects](/docs/getting-started/
 The ready4 tools of most use to coders are the [software framework libraries](/docs/software/libraries/types/framework/) for [authoring modules](/docs/framework/use/authoring-modules/). 
 
 ## Benefits
-ready4 provides an opportunity to write software that matters! Our aim is to help improve the lives of young people through [empowering decision makers with better models](/docs/getting-started/motivation/). If you already write code for youth mental health modelling projects, the ready4 software framework may help you enhance your impact (facilitating code re-use) and work-efficiency (through partial automation of code development and quality-assurance workflows). 
+ready4 provides an opportunity to write software that matters! Our aim is to help improve population health through [empowering decision makers with better models](/docs/getting-started/motivation/). If you already write code for health-economic modelling projects, the ready4 software framework may help you enhance your impact (facilitating code re-use) and work-efficiency (through partial automation of code development and quality-assurance workflows). 
 
 ## Contributing to ready4
 The types of [contribution](/docs/contribution-guidelines/) you can make to ready4 include:

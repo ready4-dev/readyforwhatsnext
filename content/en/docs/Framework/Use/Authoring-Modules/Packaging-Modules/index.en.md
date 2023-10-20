@@ -1,7 +1,7 @@
 ---
 title: "Dissemating citable, documented and quality assured model module libraries"
 linkTitle: "Libraries"
-date: "2023-07-11"
+date: "2023-10-20"
 description: "ready4 supports tools to streamline the testing, description and distribution of computational model modules."
 weight: 66
 categories: 
@@ -35,11 +35,14 @@ rmd_hash: d4d1ba2ef1820f52
 
 <div class="highlight">
 
-<pre class='chroma'><code class='language-r' data-lang='r'><span><span class='kr'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='o'>(</span><span class='nv'><a href='https://ready4-dev.github.io/ready4pack/'>ready4pack</a></span><span class='o'>)</span></span></code></pre>
+<pre class='chroma'><code class='language-r' data-lang='r'><span><span class='kr'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='o'>(</span><span class='nv'><a href='https://ready4-dev.github.io/ready4/'>ready4</a></span><span class='o'>)</span></span>
+<span><span class='kr'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='o'>(</span><span class='nv'><a href='https://ready4-dev.github.io/ready4fun/'>ready4fun</a></span><span class='o'>)</span></span>
+<span><span class='kr'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='o'>(</span><span class='nv'><a href='https://ready4-dev.github.io/ready4class/'>ready4class</a></span><span class='o'>)</span></span>
+<span><span class='kr'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='o'>(</span><span class='nv'><a href='https://ready4-dev.github.io/ready4pack/'>ready4pack</a></span><span class='o'>)</span></span></code></pre>
 
 </div>
 
-`ready4pack` is a toolkit for authoring collections of modules for the [ready4 youth mental health systems model](https://www.ready4-dev.com/) and disseminating them as R packages that are:
+`ready4pack` is a toolkit for bundling collections of modules for computational health economic models authored with the [ready4 framework](https://www.ready4-dev.com/) as R packages that are:
 
 -   *Citable* (with a Zenodo generated DOI and an algorithm generated CITATION file);
 -   *Community-minded* (applying deprecation conventions supported by `lifecycle`);
@@ -49,7 +52,7 @@ rmd_hash: d4d1ba2ef1820f52
 -   *Quality assured* (using continuous integration via GitHub actions and R-CMD-Check); and
 -   *Versioned* (applying `usethis` version increments).
 
-`ready4pack` builds on both third party development workflow tools (such as `devtools`) and ready4 tools for authoring functions ([ready4fun](https://ready4-dev.github.io/ready4fun/articles/V_01.html)) and classes ([ready4class](https://ready4-dev.github.io/ready4class/articles/V_01.html)). `ready4pack` integrates these tools in a common workflow, while adding tools for authoring and documenting R package datasets.
+`ready4pack` extends ready4 framework tools for authoring module algorithms ([ready4fun](https://ready4-dev.github.io/ready4fun/articles/V_01.html)) and data structures ([ready4class](https://ready4-dev.github.io/ready4class/articles/V_01.html)) and wraps functions from a number of third party R development workflow tools (such as `devtools`). `ready4pack` integrates these tools in a common workflow, while adding tools for authoring and documenting datasets to be shipped with model module R packages.
 
 A combination of the `ready4_pack_manifest` class and `author` method are used to implement this workflow. This workflow has been used to author all public versions of the ready4 R packages available in the [ready4 github repository](https://github.com/ready4-dev).
 

@@ -8,7 +8,7 @@ tags:
 - Project
 - Project - stakeholders
 description: >
-  ready4 provides funders with opportunities to improve the quality, breadth and accountability of supports provided to youth mental health [policymakers and system planners](/docs/getting-started/users/planner/).
+  ready4 provides funders with opportunities to improve the quality, breadth and accountability of supports provided to health [policymakers and system planners](/docs/getting-started/users/planner/).
 ---
 
 There are six main types of funder that can [provide cash and/or in kind support](/docs/contribution-guidelines/contribution-types/funding/) to ready4:
@@ -23,4 +23,3 @@ There are six main types of funder that can [provide cash and/or in kind support
 
 5. Corporate sponsors can provide cash, [expertise](/docs/contribution-guidelines/contribution-types/advisory/) and free product licenses to support both our core open-source infrastructure and individual modelling projects.
 
-6. Individual givers can provide support by [donating to Orygen](https://www.orygen.org.au/Support-Us/Contact-us) (please remember to specify www.ready4-dev.com as the reference for the project you would like to support!).

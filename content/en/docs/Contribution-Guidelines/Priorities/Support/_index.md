@@ -35,4 +35,4 @@ The process of developing the ready4 community involves the following tasks:
 6. Continually expanding, diversifying and updating the authorship and [maintenance](/docs/contribution-guidelines/priorities/curate/) responsibilities of all ready4 software.
 
 ## When?
-We plan to begin seeking input into nascent advisory structures during 2023. The speed at which we undertake other activities to grow the ready4 community depends on our success at securing funding to provide required support infrastructure.
+The speed at which we undertake activities to grow the ready4 community depends on our success at securing funding to provide required support infrastructure.

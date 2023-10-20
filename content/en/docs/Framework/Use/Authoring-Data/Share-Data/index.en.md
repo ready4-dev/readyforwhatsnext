@@ -1,7 +1,7 @@
 ---
 title: "Share data via online repositories"
 linkTitle: "Share"
-date: "2023-07-11"
+date: "2023-10-20"
 description: "  The retrieval and dissemination of data from online data repositories is an essential enabler of open source modelling. This tutorial describes how a module from the ready4use R package can help you to manage this process."
 weight: 93
 categories: 
@@ -45,7 +45,7 @@ Note: **This vignette is illustrated with fake data**. The dataset explored in t
 
 </div>
 
-ready4use includes a number of tools for sharing data used in conjunction with the [ready4 open source model of youth mental health systems](https://www.ready4-dev.com).
+ready4use includes a number of tools for sharing health economic model data that forms part of the [ready4 framework](https://www.ready4-dev.com).
 
 ## Identify data to be shared
 

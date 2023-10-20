@@ -11,7 +11,7 @@ description: >
   Researchers can use ready4 to enhance the [reproducibility, replicability](/docs/getting-started/concepts/reproducible-replicable-generalisable/) and [transferability](/docs/getting-started/concepts/transferable/) of their work.
 ---
 
-Researchers in multiple discipline enhance prior, current or planned future projects related to how economic, environmental, service, social and technical systems shape young people's mental health by using ready4 to:
+Researchers in multiple discipline enhance prior, current or planned future projects related to how environmental, social and technical systems shape health-economic outcomes by using ready4 to:
 
 - [label and share](/docs/framework/use/authoring-data/) non-confidential data (e.g. tables of summary statistics / parameter values) from prior and current work to extend access and impact;
 - working with [modellers](/docs/getting-started/users/modeller/) to [undertake modelling analyses](/docs/contribution-guidelines/priorities/apply/); 

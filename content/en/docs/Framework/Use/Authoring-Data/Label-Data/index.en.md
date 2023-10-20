@@ -1,7 +1,7 @@
 ---
 title: "Add a data dictionary to a dataset"
 linkTitle: "Label"
-date: "2023-07-11"
+date: "2023-10-20"
 description: "Pairing a dataset with its dictionary makes it easier to interpret. This tutorial describes how a module from the ready4use R package can help you to pair a dataset and its dictionary."
 weight: 92
 categories: 
@@ -49,11 +49,11 @@ Note: **This vignette is illustrated with fake data**. The dataset explored in t
 
 </div>
 
-ready4use includes a number of tools for labeling data used in conjunction with the [ready4 open source model of youth mental health systems](https://www.ready4-dev.com).
+ready4use includes a number of tools for labeling health economic model data and forms part of the [ready4 framework](https://www.ready4-dev.com).
 
 ## Create a dataset-dictionary pair
 
-A data dictionary containts useful metadata about a dataset. We can ingest examples of a fake dataset and its data-dictionary [using the method explained in another vignette](V_01.html).
+A data dictionary contains useful metadata about a dataset. To illustrate this point, we can [ingest](https://ready4-dev.github.io/ready4use/V_03.html) examples of a toy (fake) dataset and its data-dictionary.
 
 <div class="highlight">
 
@@ -69,7 +69,8 @@ Importantly (and a requirement for subsequent steps), the data dictionary we ing
 <div class="highlight">
 
 <pre class='chroma'><code class='language-r' data-lang='r'><span><span class='nf'><a href='https://rdrr.io/r/base/class.html'>class</a></span><span class='o'>(</span><span class='nv'>objects_ls</span><span class='o'>$</span><span class='nv'>eq5d_ds_dict</span><span class='o'>)</span></span>
-<span><span class='c'>#&gt; [1] "ready4use_dictionary" "ready4_dictionary"    "tbl_df"               "tbl"                  "data.frame"</span></span>
+<span><span class='c'>#&gt; [1] "ready4use_dictionary" "ready4_dictionary"    "tbl_df"               "tbl"                 </span></span>
+<span><span class='c'>#&gt; [5] "data.frame"</span></span>
 <span></span></code></pre>
 
 </div>

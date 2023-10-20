@@ -65,4 +65,4 @@ The planned sequence for bringing unreleased code first to development releases 
 
 3. The three module libraries from the [modelling platforms pipeline](/docs/model/modules/pipeline/pipeline-platforms/) (the primary mental health service discrete event simulation, followed by the early psychosis cohort model, followed by the service system eligibility and referral policy optimisation model).
 
-How quickly we can launch production releases of all our code depends on how much and [what type of help](/docs/contribution-guidelines/contribution-types/) we get. Working within our current resources we expect the first of the 23 libraries listed to be released the first half of 2023 and the last during late 2025. With your help this release schedule can be sped up.
+How quickly we can launch production releases of all our code depends on how much and [what type of help](/docs/contribution-guidelines/contribution-types/) we get. Working within our current resources we expect the first of the 23 libraries listed to be released the first half of 2024 and the last during late 2026. With your help this release schedule can be sped up.

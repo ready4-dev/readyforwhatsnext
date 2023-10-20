@@ -11,7 +11,7 @@ description: >
   Planners can use ready4 [decision aids](/docs/model/analyses/decision-aids/) to generate useful insights.
 ---
 
-If you are an planner, you contribute to policy development or service planning to help immprove the mental health of young people. You probably value the role of modelling to inform your work, but are likely to rely on others to provide much of the technical expertise to implement [computational models](/docs/getting-started/concepts/model/). 
+If you are an planner, you contribute to policy development or service planning that aims to improve population health. You probably value the role of modelling to inform your work, but are likely to rely on others to provide much of the technical expertise to implement [computational models](/docs/getting-started/concepts/model/). 
 
 ## Role
 The primary role of planners in ready4 [modelling projects](/docs/getting-started/concepts/project/) is co-design and use of models to support decision making.

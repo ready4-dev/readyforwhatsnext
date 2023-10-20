@@ -1,7 +1,7 @@
 ---
 title: "Find and deploy utility mapping models"
 linkTitle: "Predict utility"
-date: "2022-12-24"
+date: "2023-10-20"
 description: "Using tools (soon to be formalised into ready4 modules) from the youthu R package, it is possible to find and deploy relevant utility mapping algorithms. This tutorial illustrates the main steps for predicting AQoL-6D utility from psychological and functional measures collected on clinical samples of young people."
 weight: 96
 categories: 
@@ -17,7 +17,6 @@ tags:
 - Software - executable (programs)
 - Software - libraries
 - Software - libraries (youthu)
-- Software - libraries (scorz)
 - Software - libraries (specific)
 - Status
 - Status - development
@@ -26,7 +25,7 @@ tags:
 params:
   output_type_1L_chr: HTML
 output: hugodown::md_document
-rmd_hash: 7b7f3015f7da654c
+rmd_hash: ebc4d6004fb1e260
 html_dependencies:
 - <script src="kePrint-0.0.1/kePrint.js"></script>
 - <link href="lightable-0.0.1/lightable.css" rel="stylesheet" />
@@ -159,7 +158,7 @@ Analysis
 <tbody>
 <tr>
 <td style="text-align:left;">
-PHQ9_1\_GLM_GSN_LOG
+PHQ9_1_GLM_GSN_LOG
 </td>
 <td style="text-align:right;">
 PHQ9
@@ -170,7 +169,7 @@ Primary Analysis
 </tr>
 <tr>
 <td style="text-align:left;">
-PHQ9_1\_OLS_CLL
+PHQ9_1_OLS_CLL
 </td>
 <td style="text-align:right;">
 PHQ9
@@ -181,7 +180,7 @@ Primary Analysis
 </tr>
 <tr>
 <td style="text-align:left;">
-PHQ9_SOFAS_1\_GLM_GSN_LOG
+PHQ9_SOFAS_1_GLM_GSN_LOG
 </td>
 <td style="text-align:right;">
 PHQ9 , SOFAS
@@ -192,7 +191,7 @@ Primary Analysis
 </tr>
 <tr>
 <td style="text-align:left;">
-PHQ9_SOFAS_1\_OLS_CLL
+PHQ9_SOFAS_1_OLS_CLL
 </td>
 <td style="text-align:right;">
 PHQ9 , SOFAS
@@ -203,7 +202,7 @@ Primary Analysis
 </tr>
 <tr>
 <td style="text-align:left;">
-OASIS_SOFAS_1\_GLM_GSN_LOG
+OASIS_SOFAS_1_GLM_GSN_LOG
 </td>
 <td style="text-align:right;">
 OASIS, SOFAS
@@ -214,7 +213,7 @@ Primary Analysis
 </tr>
 <tr>
 <td style="text-align:left;">
-OASIS_SOFAS_1\_OLS_CLL
+OASIS_SOFAS_1_OLS_CLL
 </td>
 <td style="text-align:right;">
 OASIS, SOFAS
@@ -225,7 +224,7 @@ Primary Analysis
 </tr>
 <tr>
 <td style="text-align:left;">
-BADS_SOFAS_1\_GLM_GSN_LOG
+BADS_SOFAS_1_GLM_GSN_LOG
 </td>
 <td style="text-align:right;">
 BADS , SOFAS
@@ -236,7 +235,7 @@ Primary Analysis
 </tr>
 <tr>
 <td style="text-align:left;">
-BADS_SOFAS_1\_OLS_CLL
+BADS_SOFAS_1_OLS_CLL
 </td>
 <td style="text-align:right;">
 BADS , SOFAS
@@ -247,7 +246,7 @@ Primary Analysis
 </tr>
 <tr>
 <td style="text-align:left;">
-K6_SOFAS_1\_GLM_GSN_LOG
+K6_SOFAS_1_GLM_GSN_LOG
 </td>
 <td style="text-align:right;">
 K6 , SOFAS
@@ -258,7 +257,7 @@ Primary Analysis
 </tr>
 <tr>
 <td style="text-align:left;">
-K6_SOFAS_1\_OLS_CLL
+K6_SOFAS_1_OLS_CLL
 </td>
 <td style="text-align:right;">
 K6 , SOFAS
@@ -269,7 +268,7 @@ Primary Analysis
 </tr>
 <tr>
 <td style="text-align:left;">
-SCARED_SOFAS_1\_GLM_GSN_LOG
+SCARED_SOFAS_1_GLM_GSN_LOG
 </td>
 <td style="text-align:right;">
 SCARED, SOFAS
@@ -280,7 +279,7 @@ Primary Analysis
 </tr>
 <tr>
 <td style="text-align:left;">
-SCARED_SOFAS_1\_OLS_CLL
+SCARED_SOFAS_1_OLS_CLL
 </td>
 <td style="text-align:right;">
 SCARED, SOFAS
@@ -291,7 +290,7 @@ Primary Analysis
 </tr>
 <tr>
 <td style="text-align:left;">
-GAD7_SOFAS_1\_GLM_GSN_LOG
+GAD7_SOFAS_1_GLM_GSN_LOG
 </td>
 <td style="text-align:right;">
 GAD7 , SOFAS
@@ -302,7 +301,7 @@ Primary Analysis
 </tr>
 <tr>
 <td style="text-align:left;">
-GAD7_SOFAS_1\_OLS_CLL
+GAD7_SOFAS_1_OLS_CLL
 </td>
 <td style="text-align:right;">
 GAD7 , SOFAS
@@ -313,7 +312,7 @@ Primary Analysis
 </tr>
 <tr>
 <td style="text-align:left;">
-SOFAS_1\_GLM_GSN_LOG
+SOFAS_1_GLM_GSN_LOG
 </td>
 <td style="text-align:right;">
 SOFAS
@@ -324,7 +323,7 @@ Secondary Analysis A
 </tr>
 <tr>
 <td style="text-align:left;">
-SOFAS_1\_OLS_CLL
+SOFAS_1_OLS_CLL
 </td>
 <td style="text-align:right;">
 SOFAS
@@ -335,7 +334,7 @@ Secondary Analysis A
 </tr>
 <tr>
 <td style="text-align:left;">
-OASIS_PHQ9_1\_GLM_GSN_LOG
+OASIS_PHQ9_1_GLM_GSN_LOG
 </td>
 <td style="text-align:right;">
 OASIS, PHQ9
@@ -346,7 +345,7 @@ Secondary Analysis B
 </tr>
 <tr>
 <td style="text-align:left;">
-OASIS_PHQ9_1\_OLS_CLL
+OASIS_PHQ9_1_OLS_CLL
 </td>
 <td style="text-align:right;">
 OASIS, PHQ9
@@ -357,7 +356,7 @@ Secondary Analysis B
 </tr>
 <tr>
 <td style="text-align:left;">
-GAD7_PHQ9_1\_GLM_GSN_LOG
+GAD7_PHQ9_1_GLM_GSN_LOG
 </td>
 <td style="text-align:right;">
 GAD7, PHQ9
@@ -368,7 +367,7 @@ Secondary Analysis B
 </tr>
 <tr>
 <td style="text-align:left;">
-GAD7_PHQ9_1\_OLS_CLL
+GAD7_PHQ9_1_OLS_CLL
 </td>
 <td style="text-align:right;">
 GAD7, PHQ9
@@ -379,7 +378,7 @@ Secondary Analysis B
 </tr>
 <tr>
 <td style="text-align:left;">
-SCARED_PHQ9_1\_GLM_GSN_LOG
+SCARED_PHQ9_1_GLM_GSN_LOG
 </td>
 <td style="text-align:right;">
 SCARED, PHQ9
@@ -390,7 +389,7 @@ Secondary Analysis B
 </tr>
 <tr>
 <td style="text-align:left;">
-SCARED_PHQ9_1\_OLS_CLL
+SCARED_PHQ9_1_OLS_CLL
 </td>
 <td style="text-align:right;">
 SCARED, PHQ9
@@ -429,7 +428,8 @@ To review the summary information about the predictive performance of a specific
 <span><span class='c'>#&gt; 6   SOFAS change    1.146 0.235   0.674 , 1.607</span></span>
 <span><span class='c'>#&gt; 7             R2    0.767 0.012   0.743 , 0.788</span></span>
 <span><span class='c'>#&gt; 8           RMSE    0.925 0.004   0.922 , 0.928</span></span>
-<span><span class='c'>#&gt; 9          Sigma    0.406 0.012   0.384 , 0.429</span></span></code></pre>
+<span><span class='c'>#&gt; 9          Sigma    0.406 0.012   0.384 , 0.429</span></span>
+<span></span></code></pre>
 
 </div>
 
@@ -493,7 +493,7 @@ Participant_1
 Baseline
 </td>
 <td style="text-align:right;">
-2021-09-20
+2022-05-22
 </td>
 <td style="text-align:right;">
 7
@@ -510,7 +510,7 @@ Participant_10
 Baseline
 </td>
 <td style="text-align:right;">
-2021-08-18
+2022-04-07
 </td>
 <td style="text-align:right;">
 17
@@ -527,7 +527,7 @@ Participant_10
 Follow-up
 </td>
 <td style="text-align:right;">
-2021-11-02
+2022-06-22
 </td>
 <td style="text-align:right;">
 17
@@ -544,7 +544,7 @@ Participant_100
 Baseline
 </td>
 <td style="text-align:right;">
-2021-05-09
+2022-07-29
 </td>
 <td style="text-align:right;">
 0
@@ -561,7 +561,7 @@ Participant_1000
 Baseline
 </td>
 <td style="text-align:right;">
-2021-07-18
+2022-02-10
 </td>
 <td style="text-align:right;">
 0
@@ -578,7 +578,7 @@ Participant_1000
 Follow-up
 </td>
 <td style="text-align:right;">
-2021-10-13
+2022-05-05
 </td>
 <td style="text-align:right;">
 0
@@ -750,7 +750,8 @@ To generate utility predictions we use the `add_utl_predn` function. The functio
 
 <pre class='chroma'><code class='language-r' data-lang='r'><span><span class='nv'>data_tb</span> <span class='o'>&lt;-</span> <span class='nf'><a href='https://ready4-dev.github.io/youthu/reference/add_utl_predn.html'>add_utl_predn</a></span><span class='o'>(</span><span class='nv'>data_tb</span>,</span>
 <span>                         predn_ds_ls <span class='o'>=</span> <span class='nv'>predn_ds_ls</span><span class='o'>)</span></span>
-<span><span class='c'>#&gt; Joining, by = c("UID", "Timepoint")</span></span></code></pre>
+<span><span class='c'>#&gt; Joining with `by = join_by(UID, Timepoint)`</span></span>
+<span></span></code></pre>
 
 </div>
 
@@ -795,7 +796,7 @@ Participant_1
 Baseline
 </td>
 <td style="text-align:right;">
-2021-09-20
+2022-05-22
 </td>
 <td style="text-align:right;">
 7
@@ -815,7 +816,7 @@ Participant_10
 Baseline
 </td>
 <td style="text-align:right;">
-2021-08-18
+2022-04-07
 </td>
 <td style="text-align:right;">
 17
@@ -835,7 +836,7 @@ Participant_10
 Follow-up
 </td>
 <td style="text-align:right;">
-2021-11-02
+2022-06-22
 </td>
 <td style="text-align:right;">
 17
@@ -855,7 +856,7 @@ Participant_100
 Baseline
 </td>
 <td style="text-align:right;">
-2021-05-09
+2022-07-29
 </td>
 <td style="text-align:right;">
 0
@@ -875,7 +876,7 @@ Participant_1000
 Baseline
 </td>
 <td style="text-align:right;">
-2021-07-18
+2022-02-10
 </td>
 <td style="text-align:right;">
 0
@@ -895,7 +896,7 @@ Participant_1000
 Follow-up
 </td>
 <td style="text-align:right;">
-2021-10-13
+2022-05-05
 </td>
 <td style="text-align:right;">
 0
@@ -926,10 +927,9 @@ Our health utility predictions are now available for use and are summarised belo
 <div class="highlight">
 
 <pre class='chroma'><code class='language-r' data-lang='r'><span><span class='nf'><a href='https://rdrr.io/r/base/summary.html'>summary</a></span><span class='o'>(</span><span class='nv'>data_tb</span><span class='o'>$</span><span class='nv'>AQoL6D_HU</span><span class='o'>)</span></span>
-<span><span class='c'>#&gt;    Min. 1st Qu.  Median    Mean 3rd Qu. </span></span>
-<span><span class='c'>#&gt; 0.06646 0.42781 0.63403 0.62335 0.83351 </span></span>
-<span><span class='c'>#&gt;    Max. </span></span>
-<span><span class='c'>#&gt; 1.00000</span></span></code></pre>
+<span><span class='c'>#&gt;    Min. 1st Qu.  Median    Mean 3rd Qu.    Max. </span></span>
+<span><span class='c'>#&gt; 0.06646 0.42781 0.63403 0.62335 0.83351 1.00000</span></span>
+<span></span></code></pre>
 
 </div>
 
@@ -993,7 +993,7 @@ Participant_1
 Baseline
 </td>
 <td style="text-align:right;">
-2021-09-20
+2022-05-22
 </td>
 <td style="text-align:right;">
 7
@@ -1022,7 +1022,7 @@ Participant_10
 Baseline
 </td>
 <td style="text-align:right;">
-2021-08-18
+2022-04-07
 </td>
 <td style="text-align:right;">
 17
@@ -1051,7 +1051,7 @@ Participant_10
 Follow-up
 </td>
 <td style="text-align:right;">
-2021-11-02
+2022-06-22
 </td>
 <td style="text-align:right;">
 17
@@ -1080,7 +1080,7 @@ Participant_100
 Baseline
 </td>
 <td style="text-align:right;">
-2021-05-09
+2022-07-29
 </td>
 <td style="text-align:right;">
 0
@@ -1109,7 +1109,7 @@ Participant_1000
 Baseline
 </td>
 <td style="text-align:right;">
-2021-07-18
+2022-02-10
 </td>
 <td style="text-align:right;">
 0
@@ -1138,7 +1138,7 @@ Participant_1000
 Follow-up
 </td>
 <td style="text-align:right;">
-2021-10-13
+2022-05-05
 </td>
 <td style="text-align:right;">
 0
@@ -1153,10 +1153,10 @@ Follow-up
 -0.0275845
 </td>
 <td style="text-align:right;">
-87d 0H 0M 0S
+84d 0H 0M 0S
 </td>
 <td style="text-align:right;">
-0.2319990
+0.2239991
 </td>
 </tr>
 </tbody>

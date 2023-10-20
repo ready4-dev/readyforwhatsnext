@@ -64,7 +64,7 @@ anchor = "center"
 [languages]
 [languages.en]
 title = "ready4"
-description = "A modular, open source computational model of youth mental health"
+description = "A prototype software framework for computational health economic models."
 languageName ="English"
 # Weight used for sorting.
 weight = 1

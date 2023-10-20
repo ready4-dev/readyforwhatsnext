@@ -34,12 +34,12 @@ c("Authoring-Algorithms","Authoring-Classes", "Packaging-Modules") %>%
                        consent_1L_chr = "Y",
                        is_rmd_1L_lgl = F)
 c("Add-Metadata",
-  #"Assess-Cost-Utility", # Add scroll box args
+  "Assess-Cost-Utility", ## Add scroll box args
   "Explore-Models", 
-  "Map-To-Utility",
-  "Predict-Choice",
- # "Predict-Utility",
-  "Score-Health-Utility", # Add scroll box args
+  "Map-To-Utility", 
+  #"Predict-Choice", ## Remove }}
+  "Predict-Utility",
+  "Score-Health-Utility", ## Add scroll box args
   "Validate-Variables"
   ) %>%
   write_to_render_post(path_to_main_dir_1L_chr = paste0(project_dir_1L_chr,"/content/en/docs/model/modules/using-modules/People"),

@@ -1,7 +1,7 @@
 ---
 title: "Add metadata to datasets of individual human records"
 linkTitle: "Describe data"
-date: "2023-07-11"
+date: "2023-10-20"
 description: "Appending appropriate metadata to datasets of individual unit records can facilitate partial automation of some modelling tasks. This tutorial describes how a module from the youthvars R package can help you to add metadata to a youth mental health dataset so that it can be more readily used by other ready4 modules."
 weight: 92
 categories: 
@@ -45,7 +45,7 @@ Note: **This vignette is illustrated with fake data**. The dataset explored in t
 
 </div>
 
-Youthvars provides a two classes - `YouthvarsProfile` and `YouthvarsSeries` that are useful for describing features of datasets. The tools in `youthvars` build on the metadata included in a [Ready4useDyad](https://ready4-dev.github.io/ready4use/articles/V_02.html).
+Youthvars provides two [ready4 framework modules](https://www.ready4-dev.com/docs/framework/implementation/modularity/#ready4-model-modules) - `YouthvarsProfile` and `YouthvarsSeries` that form part of the [ready4 economic model of youth mental health](https://www.ready4-dev.com/docs/model/). The ready4 modules in `youthvars` extend the [Ready4useDyad module](https://www.ready4-dev.com/docs/framework/use/authoring-data/label-data/) and can be used to help describe key structural properties of youth mental health datasets.
 
 ## Ingest data
 

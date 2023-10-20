@@ -1,7 +1,7 @@
 ---
 title: "Authoring model algorithms"
 linkTitle: "Algorithms"
-date: "2023-07-11"
+date: "2023-10-20"
 description: "The ready4fun R package supports standardised approaches to code authoring that facilitate partial automation of the documenting of model algorithms."
 weight: 64
 categories: 
@@ -40,7 +40,8 @@ html_dependencies:
 
 <div class="highlight">
 
-<pre class='chroma'><code class='language-r' data-lang='r'><span><span class='kr'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='o'>(</span><span class='nv'><a href='https://ready4-dev.github.io/ready4fun/'>ready4fun</a></span><span class='o'>)</span></span>
+<pre class='chroma'><code class='language-r' data-lang='r'><span><span class='kr'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='o'>(</span><span class='nv'><a href='https://ready4-dev.github.io/ready4/'>ready4</a></span><span class='o'>)</span></span>
+<span><span class='kr'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='o'>(</span><span class='nv'><a href='https://ready4-dev.github.io/ready4fun/'>ready4fun</a></span><span class='o'>)</span></span>
 <span><span class='kr'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='o'>(</span><span class='nv'><a href='https://ready4-dev.github.io/ready4use/'>ready4use</a></span><span class='o'>)</span></span>
 <span><span class='kr'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='o'>(</span><span class='nv'><a href='https://ready4-dev.github.io/ready4show/'>ready4show</a></span><span class='o'>)</span></span></code></pre>
 
@@ -48,15 +49,15 @@ html_dependencies:
 
 ## Motivation
 
-The [ready4 youth mental health systems model](https://www.ready4-dev.com/) is [implemented using an object-oriented programming (OOP) approach](https://ready4-dev.github.io/ready4class/articles/V_01.html). One motivation for using OOP is the concept of "abstraction" - making things as simple as possible for end-users of `ready4` modules by exposing the minimal amount of code required to implement each method.
+The [ready4 framework](https://www.ready4-dev.com/) uses [an object-oriented programming (OOP) approach](https://ready4-dev.github.io/ready4class/articles/V_01.html) to implement computational health economic models. One motivation for using OOP is the concept of "abstraction" - making things as simple as possible for end-users of `ready4` modules by exposing the minimal amount of code required to implement each method.
 
 However, some users of the `ready4` modules will want to "look under the hood" and examine the code that implements module algorithms in much more detail. Reasons to do so include to:
 
 -   gain detailed insight into how methods are implemented;
--   test individual sub-components ("functions") of methods as part of code verification and model validation checks;
--   re-use functions when authoring new methods.
+-   test individual sub-components of methods as part of code verification and model validation checks;
+-   re-use sub-components of existing methods when authoring new methods.
 
-Therefore when authoring `ready4` code libraries, it is important to ensure that "under the hood" code can be readily understood. Two ways for achieving this goal is to ensure that all functions (even those not intended for use by modeller end-users) are adequately documented and adopt a consistent house style (e.g. naming conventions). ready4fun provides workflow tools (classes, methods, functions and datasets) to achieve these goals.
+To help facilitate achieving these objectives, methods associated with ready4 modules can be de-composed into functions that can be used independent of ready4 modules. However, these functions need to be documented and will be easier to comprehend if they adopt a consistent house style (e.g. naming conventions). ready4fun provides workflow tools (classes, methods, functions and datasets) to achieve these goals.
 
 ## ready4fun function authoring taxonomies, abbreviations and workflow
 
@@ -64,8 +65,10 @@ The `ready4fun` package uses a dataset of taxonomies and abbreviations to ensure
 
 <div class="highlight">
 
-<pre class='chroma'><code class='language-r' data-lang='r'><span><span class='nv'>dataset_ls</span> <span class='o'>&lt;-</span> <span class='nf'>ready4use</span><span class='nf'>::</span><span class='nf'><a href='https://ready4-dev.github.io/ready4use/reference/Ready4useRepos-class.html'>Ready4useRepos</a></span><span class='o'>(</span>gh_repo_1L_chr <span class='o'>=</span> <span class='s'>"ready4-dev/ready4"</span>,</span>
-<span>                               gh_tag_1L_chr <span class='o'>=</span> <span class='s'>"Documentation_0.0"</span><span class='o'>)</span> <span class='o'><a href='https://magrittr.tidyverse.org/reference/pipe.html'>%&gt;%</a></span></span>
+<pre class='chroma'><code class='language-r' data-lang='r'><span><span class='nv'>dataset_ls</span> <span class='o'>&lt;-</span> <span class='nf'>ready4use</span><span class='nf'>::</span><span class='nf'><a href='https://ready4-dev.github.io/ready4use/reference/Ready4useRepos-class.html'>Ready4useRepos</a></span><span class='o'>(</span></span>
+<span>  gh_repo_1L_chr <span class='o'>=</span> <span class='s'>"ready4-dev/ready4"</span>,</span>
+<span>  gh_tag_1L_chr <span class='o'>=</span> <span class='s'>"Documentation_0.0"</span></span>
+<span><span class='o'>)</span> <span class='o'><a href='https://magrittr.tidyverse.org/reference/pipe.html'>%&gt;%</a></span></span>
 <span>  <span class='nf'><a href='https://ready4-dev.github.io/ready4/reference/ingest-methods.html'>ingest</a></span><span class='o'>(</span>metadata_1L_lgl <span class='o'>=</span> <span class='kc'>F</span><span class='o'>)</span></span></code></pre>
 
 </div>
@@ -76,11 +79,13 @@ Consistent with a naming convention popular in the R development community, all 
 
 <div class="highlight">
 
-<pre class='chroma'><code class='language-r' data-lang='r'><span><span class='nv'>dataset_ls</span><span class='o'>$</span><span class='nv'>fn_types_lup</span> <span class='o'><a href='https://magrittr.tidyverse.org/reference/pipe.html'>%&gt;%</a></span> </span>
+<pre class='chroma'><code class='language-r' data-lang='r'><span><span class='nv'>dataset_ls</span><span class='o'>$</span><span class='nv'>fn_types_lup</span> <span class='o'><a href='https://magrittr.tidyverse.org/reference/pipe.html'>%&gt;%</a></span></span>
 <span>  <span class='nf'><a href='https://ready4-dev.github.io/ready4fun/reference/ready4fun_functions.html'>ready4fun_functions</a></span><span class='o'>(</span><span class='o'>)</span> <span class='o'><a href='https://magrittr.tidyverse.org/reference/pipe.html'>%&gt;%</a></span></span>
 <span>  <span class='nf'><a href='https://ready4-dev.github.io/ready4/reference/renew-methods.html'>renew</a></span><span class='o'>(</span>filter_cdn_1L_chr <span class='o'>=</span> <span class='s'>"!is_generic_lgl &amp; !stringr::str_detect(fn_type_nm_chr, pattern = ' ')"</span><span class='o'>)</span> <span class='o'><a href='https://magrittr.tidyverse.org/reference/pipe.html'>%&gt;%</a></span></span>
-<span>  <span class='nf'><a href='https://ready4-dev.github.io/ready4/reference/exhibit-methods.html'>exhibit</a></span><span class='o'>(</span>select_int <span class='o'>=</span> <span class='m'>1</span><span class='o'>:</span><span class='m'>2</span>,</span>
-<span>          scroll_box_args_ls <span class='o'>=</span> <span class='nf'><a href='https://rdrr.io/r/base/list.html'>list</a></span><span class='o'>(</span>width <span class='o'>=</span> <span class='s'>"100%"</span><span class='o'>)</span><span class='o'>)</span></span>
+<span>  <span class='nf'><a href='https://ready4-dev.github.io/ready4/reference/exhibit-methods.html'>exhibit</a></span><span class='o'>(</span></span>
+<span>    select_int <span class='o'>=</span> <span class='m'>1</span><span class='o'>:</span><span class='m'>2</span>,</span>
+<span>    scroll_box_args_ls <span class='o'>=</span> <span class='nf'><a href='https://rdrr.io/r/base/list.html'>list</a></span><span class='o'>(</span>width <span class='o'>=</span> <span class='s'>"100%"</span><span class='o'>)</span></span>
+<span>  <span class='o'>)</span></span>
 </code></pre>
 
 <div style="border: 1px solid #ddd; padding: 5px; overflow-x: scroll; width:100%; ">
@@ -376,10 +381,12 @@ The type of input (arguments) required and output (return) produced by a functio
 
 <div class="highlight">
 
-<pre class='chroma'><code class='language-r' data-lang='r'><span><span class='nv'>dataset_ls</span><span class='o'>$</span><span class='nv'>seed_obj_type_lup</span> <span class='o'><a href='https://magrittr.tidyverse.org/reference/pipe.html'>%&gt;%</a></span> </span>
+<pre class='chroma'><code class='language-r' data-lang='r'><span><span class='nv'>dataset_ls</span><span class='o'>$</span><span class='nv'>seed_obj_type_lup</span> <span class='o'><a href='https://magrittr.tidyverse.org/reference/pipe.html'>%&gt;%</a></span></span>
 <span>  <span class='nf'><a href='https://ready4-dev.github.io/ready4fun/reference/ready4fun_objects.html'>ready4fun_objects</a></span><span class='o'>(</span><span class='o'>)</span> <span class='o'><a href='https://magrittr.tidyverse.org/reference/pipe.html'>%&gt;%</a></span></span>
-<span>  <span class='nf'><a href='https://ready4-dev.github.io/ready4/reference/exhibit-methods.html'>exhibit</a></span><span class='o'>(</span>select_int <span class='o'>=</span> <span class='m'>1</span><span class='o'>:</span><span class='m'>2</span>,</span>
-<span>          scroll_box_args_ls <span class='o'>=</span> <span class='nf'><a href='https://rdrr.io/r/base/list.html'>list</a></span><span class='o'>(</span>width <span class='o'>=</span> <span class='s'>"100%"</span><span class='o'>)</span><span class='o'>)</span></span>
+<span>  <span class='nf'><a href='https://ready4-dev.github.io/ready4/reference/exhibit-methods.html'>exhibit</a></span><span class='o'>(</span></span>
+<span>    select_int <span class='o'>=</span> <span class='m'>1</span><span class='o'>:</span><span class='m'>2</span>,</span>
+<span>    scroll_box_args_ls <span class='o'>=</span> <span class='nf'><a href='https://rdrr.io/r/base/list.html'>list</a></span><span class='o'>(</span>width <span class='o'>=</span> <span class='s'>"100%"</span><span class='o'>)</span></span>
+<span>  <span class='o'>)</span></span>
 </code></pre>
 
 <div style="border: 1px solid #ddd; padding: 5px; overflow-x: scroll; width:100%; ">
@@ -603,10 +610,12 @@ Further information about the purpose of a function and the nature of its inputs
 
 <div class="highlight">
 
-<pre class='chroma'><code class='language-r' data-lang='r'><span><span class='nv'>dataset_ls</span><span class='o'>$</span><span class='nv'>abbreviations_lup</span> <span class='o'><a href='https://magrittr.tidyverse.org/reference/pipe.html'>%&gt;%</a></span> </span>
+<pre class='chroma'><code class='language-r' data-lang='r'><span><span class='nv'>dataset_ls</span><span class='o'>$</span><span class='nv'>abbreviations_lup</span> <span class='o'><a href='https://magrittr.tidyverse.org/reference/pipe.html'>%&gt;%</a></span></span>
 <span>  <span class='nf'><a href='https://rdrr.io/r/utils/head.html'>head</a></span><span class='o'>(</span><span class='o'>)</span> <span class='o'><a href='https://magrittr.tidyverse.org/reference/pipe.html'>%&gt;%</a></span></span>
-<span>  <span class='nf'><a href='https://ready4-dev.github.io/ready4/reference/exhibit-methods.html'>exhibit</a></span><span class='o'>(</span>select_int <span class='o'>=</span> <span class='m'>1</span><span class='o'>:</span><span class='m'>2</span>,</span>
-<span>          scroll_box_args_ls <span class='o'>=</span> <span class='nf'><a href='https://rdrr.io/r/base/list.html'>list</a></span><span class='o'>(</span>width <span class='o'>=</span> <span class='s'>"100%"</span><span class='o'>)</span><span class='o'>)</span></span>
+<span>  <span class='nf'><a href='https://ready4-dev.github.io/ready4/reference/exhibit-methods.html'>exhibit</a></span><span class='o'>(</span></span>
+<span>    select_int <span class='o'>=</span> <span class='m'>1</span><span class='o'>:</span><span class='m'>2</span>,</span>
+<span>    scroll_box_args_ls <span class='o'>=</span> <span class='nf'><a href='https://rdrr.io/r/base/list.html'>list</a></span><span class='o'>(</span>width <span class='o'>=</span> <span class='s'>"100%"</span><span class='o'>)</span></span>
+<span>  <span class='o'>)</span></span>
 </code></pre>
 
 <div style="border: 1px solid #ddd; padding: 5px; overflow-x: scroll; width:100%; ">
@@ -707,21 +716,30 @@ A `ready4fun_manifest` object is most efficiently created with the aid of the `m
 <div class="highlight">
 
 <pre class='chroma'><code class='language-r' data-lang='r'><span><span class='c'>## Not run</span></span>
-<span><span class='nv'>x</span> <span class='o'>&lt;-</span> <span class='nf'>ready4fun</span><span class='nf'>::</span><span class='nf'><a href='https://ready4-dev.github.io/ready4fun/reference/make_pkg_desc_ls.html'>make_pkg_desc_ls</a></span><span class='o'>(</span>pkg_title_1L_chr <span class='o'>=</span> <span class='s'>"Your Package Title"</span>,</span>
-<span>                                 pkg_desc_1L_chr <span class='o'>=</span> <span class='s'>"Your Package Description."</span>,</span>
-<span>                                 authors_prsn <span class='o'>=</span> <span class='nf'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='o'>(</span><span class='nf'>utils</span><span class='nf'>::</span><span class='nf'><a href='https://rdrr.io/r/utils/person.html'>person</a></span><span class='o'>(</span><span class='s'>"Author 1 Name"</span>,</span>
-<span>                                                                role <span class='o'>=</span> <span class='nf'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='o'>(</span><span class='s'>"aut"</span>, <span class='s'>"cre"</span><span class='o'>)</span><span class='o'>)</span>,</span>
-<span>                                                  <span class='nf'>utils</span><span class='nf'>::</span><span class='nf'><a href='https://rdrr.io/r/utils/person.html'>person</a></span><span class='o'>(</span><span class='s'>"Author 2 Name"</span>, role <span class='o'>=</span> <span class='nf'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='o'>(</span><span class='s'>"cph"</span><span class='o'>)</span><span class='o'>)</span><span class='o'>)</span>,</span>
-<span>                                 urls_chr <span class='o'>=</span> <span class='nf'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='o'>(</span><span class='s'>"Package website url"</span>,</span>
-<span>                                              <span class='s'>"Package source code url"</span>,</span>
-<span>                                              <span class='s'>"Project website"</span><span class='o'>)</span><span class='o'>)</span> <span class='o'><a href='https://magrittr.tidyverse.org/reference/pipe.html'>%&gt;%</a></span></span>
-<span>  <span class='nf'>ready4fun</span><span class='nf'>::</span><span class='nf'><a href='https://ready4-dev.github.io/ready4fun/reference/make_manifest.html'>make_manifest</a></span><span class='o'>(</span>copyright_holders_chr <span class='o'>=</span> <span class='s'>"Organisation name"</span>,</span>
-<span>                           custom_dmt_ls <span class='o'>=</span> <span class='nf'>ready4fun</span><span class='nf'>::</span><span class='nf'><a href='https://ready4-dev.github.io/ready4fun/reference/make_custom_dmt_ls.html'>make_custom_dmt_ls</a></span><span class='o'>(</span>user_manual_fns_chr <span class='o'>=</span> <span class='nf'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='o'>(</span><span class='s'>"Functions to be included in main user manual are itemised here"</span><span class='o'>)</span><span class='o'>)</span>,</span>
-<span>                           dev_pkgs_chr <span class='o'>=</span> <span class='nf'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='o'>(</span><span class='s'>"Any development package dependencies go here"</span><span class='o'>)</span>,</span>
-<span>                           path_to_pkg_logo_1L_chr <span class='o'>=</span> <span class='s'>"Local path to package logo goes here"</span>,</span>
-<span>                           piggyback_to_1L_chr <span class='o'>=</span> <span class='s'>"GitHub Release Repository to which supporting files will be uploaded"</span>,</span>
-<span>                           ready4_type_1L_chr <span class='o'>=</span> <span class='s'>"authoring"</span>,</span>
-<span>                           zenodo_badge_1L_chr <span class='o'>=</span> <span class='s'>"DOI badge details go here"</span><span class='o'>)</span></span></code></pre>
+<span><span class='nv'>x</span> <span class='o'>&lt;-</span> <span class='nf'>ready4fun</span><span class='nf'>::</span><span class='nf'><a href='https://ready4-dev.github.io/ready4fun/reference/make_pkg_desc_ls.html'>make_pkg_desc_ls</a></span><span class='o'>(</span></span>
+<span>  pkg_title_1L_chr <span class='o'>=</span> <span class='s'>"Your Package Title"</span>,</span>
+<span>  pkg_desc_1L_chr <span class='o'>=</span> <span class='s'>"Your Package Description."</span>,</span>
+<span>  authors_prsn <span class='o'>=</span> <span class='nf'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='o'>(</span></span>
+<span>    <span class='nf'>utils</span><span class='nf'>::</span><span class='nf'><a href='https://rdrr.io/r/utils/person.html'>person</a></span><span class='o'>(</span><span class='s'>"Author 1 Name"</span>,</span>
+<span>      role <span class='o'>=</span> <span class='nf'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='o'>(</span><span class='s'>"aut"</span>, <span class='s'>"cre"</span><span class='o'>)</span></span>
+<span>    <span class='o'>)</span>,</span>
+<span>    <span class='nf'>utils</span><span class='nf'>::</span><span class='nf'><a href='https://rdrr.io/r/utils/person.html'>person</a></span><span class='o'>(</span><span class='s'>"Author 2 Name"</span>, role <span class='o'>=</span> <span class='nf'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='o'>(</span><span class='s'>"cph"</span><span class='o'>)</span><span class='o'>)</span></span>
+<span>  <span class='o'>)</span>,</span>
+<span>  urls_chr <span class='o'>=</span> <span class='nf'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='o'>(</span></span>
+<span>    <span class='s'>"Package website url"</span>,</span>
+<span>    <span class='s'>"Package source code url"</span>,</span>
+<span>    <span class='s'>"Project website"</span></span>
+<span>  <span class='o'>)</span></span>
+<span><span class='o'>)</span> <span class='o'><a href='https://magrittr.tidyverse.org/reference/pipe.html'>%&gt;%</a></span></span>
+<span>  <span class='nf'>ready4fun</span><span class='nf'>::</span><span class='nf'><a href='https://ready4-dev.github.io/ready4fun/reference/make_manifest.html'>make_manifest</a></span><span class='o'>(</span></span>
+<span>    copyright_holders_chr <span class='o'>=</span> <span class='s'>"Organisation name"</span>,</span>
+<span>    custom_dmt_ls <span class='o'>=</span> <span class='nf'>ready4fun</span><span class='nf'>::</span><span class='nf'><a href='https://ready4-dev.github.io/ready4fun/reference/make_custom_dmt_ls.html'>make_custom_dmt_ls</a></span><span class='o'>(</span>user_manual_fns_chr <span class='o'>=</span> <span class='nf'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='o'>(</span><span class='s'>"Functions to be included in main user manual are itemised here"</span><span class='o'>)</span><span class='o'>)</span>,</span>
+<span>    dev_pkgs_chr <span class='o'>=</span> <span class='nf'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='o'>(</span><span class='s'>"Any development package dependencies go here"</span><span class='o'>)</span>,</span>
+<span>    path_to_pkg_logo_1L_chr <span class='o'>=</span> <span class='s'>"Local path to package logo goes here"</span>,</span>
+<span>    piggyback_to_1L_chr <span class='o'>=</span> <span class='s'>"GitHub Release Repository to which supporting files will be uploaded"</span>,</span>
+<span>    ready4_type_1L_chr <span class='o'>=</span> <span class='s'>"authoring"</span>,</span>
+<span>    zenodo_badge_1L_chr <span class='o'>=</span> <span class='s'>"DOI badge details go here"</span></span>
+<span>  <span class='o'>)</span></span></code></pre>
 
 </div>
 

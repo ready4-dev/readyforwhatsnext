@@ -1,7 +1,7 @@
 ---
 title: "Validate variable total scores"
 linkTitle: "Validate data"
-date: "2023-07-11"
+date: "2023-10-20"
 description: "Vector based classes can be used to help validate variable values. This tutorial describes how to do that with sub-module classes exported as part of the youthvars R package."
 weight: 92
 categories: 
@@ -45,14 +45,14 @@ rmd_hash: 7782e5d9072d27ff
 
 ## Variable classes and data integrity
 
-The `youthvars` package defines a number of vector based classes that can be used to quality assure the data recorded for individual variables. `youthvars` variable classes are potentially useful for:
+The `youthvars` package includes a number of [ready4 framework sub-module classes](https://www.ready4-dev.com/docs/framework/implementation/modularity/#ready4-model-sub-modules) that form part of the [ready4 economic model of youth mental health](https://www.ready4-dev.com/docs/model/). The primary use of `youthvars` sub-modules is to quality assure the variables used in model input and output datasets by:
 
 1.  facilitating automated data integrity checks that verify no impermissible values (e.g. utility scores greater than one) are present in source data, transformed data or results; and
-2.  automating the selection of the appropriate method to apply to each data type.
+2.  implementing rules-based automated selection and application of appropriate methods for each dataset variable.
 
-## Included classes
+## Included sub-module classes
 
-The initial set of classes included in the `youthvars` package are one class for Assessment of Quality of Life (Adolescent) health utility and one for each of the predictors used in the utility prediction algorithms included in the related [youthu](https://ready4-dev.github.io/youthu/) package.
+The initial set of sub-module classes included in the `youthvars` package are one class for Assessment of Quality of Life (Adolescent) health utility and one for each of the predictors used in the utility prediction algorithms included in the related [youthu](https://ready4-dev.github.io/youthu/) package.
 
 ### Assessment of Quality of Life Six Dimension (Adolescent) Health Utility
 

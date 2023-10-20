@@ -1,7 +1,7 @@
 ---
 title: "Authoring scientific manuscripts"
 linkTitle: "Reporting"
-date: "2023-07-11"
+date: "2023-10-20"
 description: "Tools from the ready4show R package support authoring of scientific summaries of analyses with ready4."
 weight: 92
 tags:
@@ -44,7 +44,7 @@ Open science workflows should ideally span an unbroken chain between data-ingest
 
 ## Implementation
 
-`ready4show` includes a number of classes and methods that help integrate manuscript authoring into a reproducible workflow. These tools are principally intended for use with the [ready4 youth mental health system model](https://www.ready4-dev.com).
+`ready4show` includes a number of classes and methods that help integrate manuscript authoring into a reproducible workflow. These tools are part of the [ready4 framework for transparent, reusable and updatable health economic models](https://www.ready4-dev.com).
 
 ### Load required libraries
 

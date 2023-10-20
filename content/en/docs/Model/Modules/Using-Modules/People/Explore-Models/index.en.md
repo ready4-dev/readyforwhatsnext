@@ -1,7 +1,7 @@
 ---
 title: "Explore candidate utility mapping models"
 linkTitle: "Assess models"
-date: "2023-07-11"
+date: "2023-10-20"
 description: "Using modules from the specific R package, it is possible to undertake an exploratory utility mapping analysis. This tutorial illustrates a hypotehtical example of exploring how to map to EQ-5D health utility."
 weight: 95
 categories: 
@@ -39,13 +39,12 @@ html_dependencies:
 
 </div>
 
-Note: **This vignette uses fake data** - it is for illustrative purposes only and should not be used to inform decision making. Furthermore, as this packake is optimised only for certain types of utility mapping studies, it is recommended to use the [TTU package](https://ready4-dev.github.io/TTU/index.html) (which depends upon `specific`) instead of using specific modules directly as workflow syntax will be simpler and functionality more complete.
-
-The steps in this exploratory analysis workflow may need to be performed iteratively, both in order to identify the optimal model types, predictors and covariates to use and modify default values to ensure model convergence.
+Note: **This vignette uses fake data** - it is for illustrative purposes only and should not be used to inform decision making. The `specific` package includes [ready4 framework model modules](https://www.ready4-dev.com/docs/framework/implementation/modularity/#ready4-model-modules) that form part of [the ready4 youth mental health economic model](https://www.ready4-dev.com/docs/model/). Currently, these modules are not optimised to be used directly, but are instead intended for use in other model modules. For example, the [TTU package](https://ready4-dev.github.io/TTU/index.html) includes modules that extend `specific` modules to help implement [utility mapping studies](https://www.ready4-dev.com/docs/model/modules/using-modules/people/map-to-utility/). However, to illustrate the main features of `specific` modules this vignette demonstrates how `specific` modules could be used independently. In practice, workflow illustrated in this article would probably need to be performed iteratively in order to identify the optimal model types, predictors and covariates and to update default values to ensure model convergence.
 
 <div class="highlight">
 
 <pre class='chroma'><code class='language-r' data-lang='r'><span><span class='kr'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='o'>(</span><span class='nv'><a href='https://ready4-dev.github.io/ready4/'>ready4</a></span><span class='o'>)</span></span>
+<span><span class='kr'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='o'>(</span><span class='nv'><a href='https://ready4-dev.github.io/scorz/'>scorz</a></span><span class='o'>)</span></span>
 <span><span class='kr'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='o'>(</span><span class='nv'><a href='https://ready4-dev.github.io/specific/'>specific</a></span><span class='o'>)</span></span></code></pre>
 
 </div>
@@ -56,7 +55,7 @@ The steps in this exploratory analysis workflow may need to be performed iterati
 
 ## Set consent policy
 
-By default, methods in the `specific` package will request your consent before writing files to your machine. This is the safest option. However, as there are many files that need to be written locally for this program to execute, you can overwrite this default by supplying the value "Y" to methods with a `consent_1L_chr` argument.
+By default, modules in the `specific` package will request your consent before writing files to your machine. This is the safest option. However, as there are many files that need to be written locally for this program to execute, you can overwrite this default by supplying the value "Y" to methods with a `consent_1L_chr` argument.
 
 <div class="highlight">
 
@@ -1258,12 +1257,12 @@ We can now write a number of sub-directories to our specified output directory.
 
 <pre class='chroma'><code class='language-r' data-lang='r'><span><span class='nv'>X</span> <span class='o'>&lt;-</span> <span class='nf'><a href='https://ready4-dev.github.io/ready4/reference/author-methods.html'>author</a></span><span class='o'>(</span><span class='nv'>X</span>, what_1L_chr <span class='o'>=</span> <span class='s'>"workspace"</span>, consent_1L_chr <span class='o'>=</span> <span class='nv'>consent_1L_chr</span><span class='o'>)</span></span>
 <span><span class='c'>#&gt; New directories created:</span></span>
-<span><span class='c'>#&gt; C:\Users\mham0053\AppData\Local\Temp\Rtmpy8UT1f/Fake</span></span>
-<span><span class='c'>#&gt; C:\Users\mham0053\AppData\Local\Temp\Rtmpy8UT1f/Fake/Markdown</span></span>
-<span><span class='c'>#&gt; C:\Users\mham0053\AppData\Local\Temp\Rtmpy8UT1f/Fake/Output</span></span>
-<span><span class='c'>#&gt; C:\Users\mham0053\AppData\Local\Temp\Rtmpy8UT1f/Fake/Reports</span></span>
-<span><span class='c'>#&gt; C:\Users\mham0053\AppData\Local\Temp\Rtmpy8UT1f/Fake/Output/_Descriptives</span></span>
-<span><span class='c'>#&gt; C:\Users\mham0053\AppData\Local\Temp\Rtmpy8UT1f/Fake/Output/H_Dataverse</span></span>
+<span><span class='c'>#&gt; C:\Users\mham0053\AppData\Local\Temp\RtmpQBtivk/Fake</span></span>
+<span><span class='c'>#&gt; C:\Users\mham0053\AppData\Local\Temp\RtmpQBtivk/Fake/Markdown</span></span>
+<span><span class='c'>#&gt; C:\Users\mham0053\AppData\Local\Temp\RtmpQBtivk/Fake/Output</span></span>
+<span><span class='c'>#&gt; C:\Users\mham0053\AppData\Local\Temp\RtmpQBtivk/Fake/Reports</span></span>
+<span><span class='c'>#&gt; C:\Users\mham0053\AppData\Local\Temp\RtmpQBtivk/Fake/Output/_Descriptives</span></span>
+<span><span class='c'>#&gt; C:\Users\mham0053\AppData\Local\Temp\RtmpQBtivk/Fake/Output/H_Dataverse</span></span>
 <span></span></code></pre>
 
 </div>
