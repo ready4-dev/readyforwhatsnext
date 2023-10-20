@@ -67,7 +67,8 @@ c("Scientific-Summaries") %>% # Do not evaluate write fns, add scroll text and t
                        is_rmd_1L_lgl = F)
 # Render program and sub-routine summaries
 c("Programs", # Check exclusions in RMD - may need to be updated.
-  "Subroutines") %>%
+  "Subroutines"
+  ) %>%
   write_to_render_post(paste0(project_dir_1L_chr,"/content/en/docs/software/Executables"),
                        consent_1L_chr = "Y")
 c("Clinical-Primary") %>% # Do not evaluate write fns, add scroll text and then restore link to online RMD

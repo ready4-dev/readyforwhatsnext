@@ -1,7 +1,7 @@
 ---
 title: "Posters dataset releases"
 linkTitle: "Posters dataset"
-date: "2023-07-18"
+date: "2023-10-20"
 description: "Releases of dataset of academic posters about ready4."
 weight: 800
 categories: 

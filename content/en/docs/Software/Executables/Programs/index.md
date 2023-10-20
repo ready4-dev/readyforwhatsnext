@@ -1,7 +1,7 @@
 ---
 title: "Programs"
 linkTitle: "Programs"
-date: "2023-07-18"
+date: "2023-10-20"
 description: "Programs are used to generate and report a model analysis."
 weight: 3
 categories: 
@@ -87,7 +87,7 @@ data we used for the utility mapping study described in the article <a href="htt
 </td>
 <td style="text-align:left;">
 <a href="https://github.com/ready4-dev/aqol6dmap_fakes" style="     ">Dev</a>,
-<a href="https://doi.org/10.5281/zenodo.6321820" style="     ">Archive</a>
+<a href="https://doi.org/10.5281/zenodo.6321821" style="     ">Archive</a>
 </td>
 </tr>
 <tr>
@@ -106,7 +106,7 @@ minor formatting change and an updated version number.
 </td>
 <td style="text-align:left;">
 <a href="https://github.com/ready4-dev/aqol6dmap_use" style="     ">Dev</a>,
-<a href="https://doi.org/10.5281/zenodo.6317179" style="     ">Archive</a>
+<a href="https://doi.org/10.5281/zenodo.7073433" style="     ">Archive</a>
 </td>
 </tr>
 <tr>
@@ -126,7 +126,27 @@ of socially anxious young people.
 </td>
 <td style="text-align:left;">
 <a href="https://github.com/ready4-dev/dce_sa_analysis" style="     ">Dev</a>,
-<a href="https://doi.org/10.5281/zenodo.7223286" style="     ">Archive</a>
+<a href="https://doi.org/10.5281/zenodo.7259735" style="     ">Archive</a>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+dce_sa_cards
+</td>
+<td style="text-align:left;">
+0.0.9.2
+</td>
+<td style="text-align:left;">
+09-Jun-2022
+</td>
+<td style="text-align:left;">
+HTML choice cards for use in pilot and final Discrete Choice Experiment
+(DCE) surveys of socially anxious young peopleThis release includes
+updated citation details.
+</td>
+<td style="text-align:left;">
+<a href="https://github.com/ready4-dev/dce_sa_cards" style="     ">Dev</a>,
+<a href="https://doi.org/10.5281/zenodo.6626332" style="     ">Archive</a>
 </td>
 </tr>
 <tr>
@@ -147,7 +167,7 @@ package (<a href="https://github.com/ready4-dev/mychoice" class="uri">https://gi
 </td>
 <td style="text-align:left;">
 <a href="https://github.com/ready4-dev/dce_sa_design" style="     ">Dev</a>,
-<a href="https://doi.org/10.5281/zenodo.6626256" style="     ">Archive</a>
+<a href="https://doi.org/10.5281/zenodo.7252203" style="     ">Archive</a>
 </td>
 </tr>
 <tr>
@@ -167,7 +187,7 @@ AQoL-6D health utility.
 </td>
 <td style="text-align:left;">
 <a href="https://github.com/ready4-dev/ttu_lng_aqol6_csp" style="     ">Dev</a>,
-<a href="https://doi.org/10.5281/zenodo.6116077" style="     ">Archive</a>
+<a href="https://doi.org/10.5281/zenodo.7073428" style="     ">Archive</a>
 </td>
 </tr>
 </tbody>

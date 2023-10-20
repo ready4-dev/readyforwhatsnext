@@ -1,7 +1,7 @@
 ---
 title: "Subroutines"
 linkTitle: "Subroutines"
-date: "2023-07-18"
+date: "2023-10-20"
 description: "Subroutines perform part of an analysis and reporting algorithm."
 weight: 4
 categories: 
@@ -88,7 +88,7 @@ an incorrectly specified version number.
 </td>
 <td style="text-align:left;">
 <a href="https://github.com/ready4-dev/ms_tmpl" style="     ">Dev</a> ,
-<a href="https://doi.org/10.5281/zenodo.5866880" style="     ">Archive</a>
+<a href="https://doi.org/10.5281/zenodo.6469343" style="     ">Archive</a>
 </td>
 </tr>
 <tr>
@@ -107,7 +107,7 @@ mychoice R package.
 </td>
 <td style="text-align:left;">
 <a href="https://github.com/ready4-dev/mychoice_results" style="     ">Dev</a>,
-<a href="https://doi.org/10.5281/zenodo.7297904" style="     ">Archive</a>
+<a href="https://doi.org/10.5281/zenodo.7297905" style="     ">Archive</a>
 </td>
 </tr>
 <tr>
@@ -139,7 +139,7 @@ from rendering.
 <td style="text-align:left;">
 <a href="https://github.com/ready4-dev/ttu_lng_ss" style="     ">Dev</a>
 ,
-<a href="https://doi.org/10.5281/zenodo.5976987" style="     ">Archive</a>
+<a href="https://doi.org/10.5281/zenodo.8073451" style="     ">Archive</a>
 </td>
 </tr>
 <tr>
@@ -159,7 +159,7 @@ release includes minor bug fixes.
 </td>
 <td style="text-align:left;">
 <a href="https://github.com/ready4-dev/ttu_mdl_ctlg" style="     ">Dev</a>,
-<a href="https://doi.org/10.5281/zenodo.5936870" style="     ">Archive</a>
+<a href="https://doi.org/10.5281/zenodo.8157669" style="     ">Archive</a>
 </td>
 </tr>
 </tbody>

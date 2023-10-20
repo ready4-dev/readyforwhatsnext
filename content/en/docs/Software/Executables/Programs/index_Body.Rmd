@@ -3,7 +3,8 @@ output: html_document
 ---
 
 ```{r, include=FALSE}
-library(ready4)#source("../../../../../../../R/Functions.R", local = knitr::knit_global())
+#library(ready4)#
+source("../../../../../../R/Functions.R", local = knitr::knit_global())
 ```
 
 ```{r echo=F, message=FALSE, warning=FALSE}
@@ -11,7 +12,7 @@ library(ready4)#source("../../../../../../../R/Functions.R", local = knitr::knit
 make_programs_tbl(as_kbl_1L_lgl = T,
                   bootstrap_options = c("hover", 
                                         "condensed"),
-                  exclude_chr = c("dce_sa_cards","aus_09_synth", "fakefolk","rebuild"))
+                  exclude_chr = c("fakefolk","aus_09_synth",get_excluded_repos()))#c("dce_sa_cards","aus_09_synth", "fakefolk","rebuild")
 ```
 
 

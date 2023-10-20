@@ -3,7 +3,8 @@ output: html_document
 ---
 
 ```{r, include=FALSE}
-library(ready4)#source("../../../../../../../R/Functions.R", local = knitr::knit_global())
+#library(ready4)#
+source("../../../../../../R/Functions.R", local = knitr::knit_global())
 ```
 
 ```{r echo=F, message=FALSE, warning=FALSE}
