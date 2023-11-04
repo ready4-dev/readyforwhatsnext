@@ -20,7 +20,9 @@ description: >
   See how ready4 has been applied to [ model](/docs/model/) real world decision problems in youth mental health.
 ---
 
-Some examples of practical applications of ready4 include:
+An scientific summary of the ready4 prototype software framework and how we are applying it to youth mental health is [available as a pre-print manuscript](https://arxiv.org/abs/2310.14138).
+
+Examples of how we are applying ready4 in youth mental health include:
 
 - Mapping psychological and functional measures to health utility for young people using primary mental health services (a [pre-print manuscript](https://doi.org/10.1101/2021.07.07.21260129), a [replication and results dataset](https://doi.org/10.7910/DVN/DKDIB0), [replication code](/docs/model/analyses/replication-code/map-utility/) and R packages for [developing](https://ready4-dev.github.io/TTU/) and [applying](https://ready4-dev.github.io/youthu/) mapping models);
 - Assessing the heterogeneity of quality of life in a clinical sample of young people (a [peer-reviewed manuscript](https://doi.org/10.1017/s2045796022000427) and [R package](https://ready4-dev.github.io/heterodox/) for exploring and characteristing heterogeneity in quality of life data); 

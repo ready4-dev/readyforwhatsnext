@@ -10,7 +10,7 @@ tags:
 - Model - modules
 - Model - modules (programs)
 description: >
-  Modules for modelling the efficacy, cost-effectiveness and budget impact of youth mental health programs (e.g. interventions for prevention, treatment and wellbeing) are collectively referred to as the "On Target" model.  No programs modules are yet available - see details on [preliminary work in progress](/docs/model/modules/pipeline/pipeline-programs/).
+  Modules for modelling the efficacy, cost-effectiveness and budget impact of youth mental health programs (e.g. interventions for prevention, treatment and wellbeing) are collectively referred to as the "On Target" model.  Some initial modules from the [costly](https://ready4-dev.github.io/costly/) library are available. There is also even more preliminary [work in progress](/docs/model/modules/pipeline/pipeline-programs/).
 ---
 
 

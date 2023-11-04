@@ -87,8 +87,8 @@ weight = 1
 section = ["HTML", "print", "RSS"]
 
 [params]
-copyright = "Orygen"
-privacy_policy = "https://www.orygen.org.au/privacy-policy" # Change this
+copyright = "Matthew Hamilton"
+#privacy_policy = "https://www.orygen.org.au/privacy-policy" # Change this
 
 # First one is picked as the Twitter card image if not set on page.
 # images = ["images/project-illustration.png"]

@@ -45,6 +45,11 @@ c("Add-Metadata",
   write_to_render_post(path_to_main_dir_1L_chr = paste0(project_dir_1L_chr,"/content/en/docs/model/modules/using-modules/People"),
                        consent_1L_chr = "Y",
                        is_rmd_1L_lgl = F)
+c("Standard-Cost-Data-Codes",
+  "Standard-Cost-Data-Fuzzy") %>%
+  write_to_render_post(path_to_main_dir_1L_chr = paste0(project_dir_1L_chr,"/content/en/docs/model/modules/using-modules/Programs"),
+                       consent_1L_chr = "Y",
+                       is_rmd_1L_lgl = F)
 write_to_render_post("Finding-Modules",
                      path_to_main_dir_1L_chr = paste0(project_dir_1L_chr,"/content/en/docs/Model/Modules"),
                      consent_1L_chr = "Y",

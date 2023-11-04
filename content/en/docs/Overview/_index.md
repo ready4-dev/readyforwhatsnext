@@ -44,6 +44,6 @@ ready4 is a collaborative project and we'd love your help in progressing our [pr
 ready4 is short-hand for "readyforwhatsnext", the title of [the research project that catalysed this model](/about/) and a reference to how computational models can improve the preparedness of decision makers and system planners.
 
 ## Where should I go next?
-We'd recommend reading the documentation in the order in which sections appear in the table of contents (so go next to [Examples](/docs/examples/), then to [Getting started](/docs/getting-started/) and so on). 
+We'd recommend reading the documentation in the order in which sections appear in the table of contents (so go next to [Examples](/docs/examples/), then to [Getting started](/docs/getting-started/) and so on). A [scientific manuscript](https://arxiv.org/pdf/2310.14138.pdf) is also available.
 
 

@@ -1,0 +1,39 @@
+---
+title: "Standardise Variable Values With Fuzzy Logic And Correspondence Tables"
+linkTitle: "Standardise cost data (1)"
+date: "`r Sys.Date()`"
+description: "Costing health economic datasets is an activity that can involve repeated use of lookup tables. This tutorial describes how a module from the costly R package can help you to use a combination of fuzzy logic and correspondence tables to standardise variable values and thus facilitate partial automation of costing algorithms."
+weight: 91
+categories: 
+- Documentation
+tags: 
+- Data - management
+- Data - metadata
+- Model
+- Model - modules
+- Model - modules (platforms)
+- Software
+- Software - libraries
+- Software - libraries (costly)
+- Status
+- Status - development
+output: hugodown::md_document
+---
+
+{{% pageinfo %}}
+This below section renders a vignette article from the costly library. You can use the following links to:
+
+* [view the vignette on the library website (adds useful hyperlinks to code blocks)](https://ready4-dev.github.io/costly/articles/V_01.html)
+* [view the source file](https://github.com/ready4-dev/costly/blob/main/vignettes/V_01.Rmd) from that article, and;
+* [edit its contents](https://github.com/ready4-dev/costly/edit/main/vignettes/V_01.Rmd) (requires a GitHub account).
+{{% /pageinfo %}}
+
+```{r echo=FALSE, results='hide'}
+# x <- "UntitledRMD.Rmd"
+x <- tempfile(fileext = "Rmd")
+on.exit(unlink(x))
+download.file("https://raw.githubusercontent.com/ready4-dev/costly/main/vignettes/V_01.Rmd", x)
+```
+
+```{r test-main, child=x}
+```

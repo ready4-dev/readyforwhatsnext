@@ -31,6 +31,6 @@ description: >
 - *Growing stale*: health economic models are rarely updated, meaning they can lose validity with time (e.g. input data becomes less relevant, new better performing algorithms are not incorporated, sudden major changes in environment / epidemiology / policy / service system are not accounted for).
 
 ## Reponse
-To help address these issues, the ready4 [software framework](/docs/framework/) aims to support [transparent, reusable and updatable](/docs/framework/standards/) model implementations using R.
+To help address these issues, the ready4 [software framework](/docs/framework/) aims to support [transparent, reusable and updatable](/docs/framework/standards/) model implementations using R. 
 
 

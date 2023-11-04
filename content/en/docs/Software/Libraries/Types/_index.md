@@ -1,6 +1,6 @@
 ---
-title: "Current libraries"
-linkTitle: "Current"
+title: "Available releases"
+linkTitle: "Releases"
 weight: 264
 categories: 
 - Documentation
