@@ -1,7 +1,7 @@
 ---
 title: "Programs"
 linkTitle: "Programs"
-date: "2023-10-20"
+date: "2023-11-15"
 description: "Programs are used to generate and report a model analysis."
 weight: 3
 categories: 
@@ -127,26 +127,6 @@ of socially anxious young people.
 <td style="text-align:left;">
 <a href="https://github.com/ready4-dev/dce_sa_analysis" style="     ">Dev</a>,
 <a href="https://doi.org/10.5281/zenodo.7259735" style="     ">Archive</a>
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-dce_sa_cards
-</td>
-<td style="text-align:left;">
-0.0.9.2
-</td>
-<td style="text-align:left;">
-09-Jun-2022
-</td>
-<td style="text-align:left;">
-HTML choice cards for use in pilot and final Discrete Choice Experiment
-(DCE) surveys of socially anxious young peopleThis release includes
-updated citation details.
-</td>
-<td style="text-align:left;">
-<a href="https://github.com/ready4-dev/dce_sa_cards" style="     ">Dev</a>,
-<a href="https://doi.org/10.5281/zenodo.6626332" style="     ">Archive</a>
 </td>
 </tr>
 <tr>

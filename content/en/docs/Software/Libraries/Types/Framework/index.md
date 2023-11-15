@@ -1,7 +1,7 @@
 ---
 title: "Framework libraries"
 linkTitle: "Framework"
-date: "2023-11-04"
+date: "2023-11-15"
 description: "There are two types of framework libraries - a foundational library and libraries of authoring tools."
 weight: 2662
 categories: 
