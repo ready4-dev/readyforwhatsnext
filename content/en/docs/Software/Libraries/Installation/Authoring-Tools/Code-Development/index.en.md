@@ -2,7 +2,7 @@
 title: Installing tools for authoring computational models
 linkTitle: "Models"
 author: Matthew Hamilton
-date: "2023-10-20"
+date: "2023-11-15"
 description: Instructions for installing the ready4class, ready4fun and ready4pack libraries.
 weight: 1
 categories: 

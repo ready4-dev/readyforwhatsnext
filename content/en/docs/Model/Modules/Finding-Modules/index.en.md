@@ -1,7 +1,7 @@
 ---
 title: "Finding modules and sub-modules"
 linkTitle: "Finding modules"
-date: "2023-10-20"
+date: "2023-11-15"
 description: "How to find individual ready4 modules and sub-modules."
 weight: 2
 categories: 
@@ -71,6 +71,131 @@ Examples
 </tr>
 </thead>
 <tbody>
+<tr>
+<td style="text-align:left;">
+<a href="https://ready4-dev.github.io/aus/reference/AusACT-class.html" style="     ">AusACT</a>
+</td>
+<td style="text-align:left;">
+Meta data for processing ACT population projections
+</td>
+<td style="text-align:left;">
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<a href="https://ready4-dev.github.io/aus/reference/AusHeadspace-class.html" style="     ">AusHeadspace</a>
+</td>
+<td style="text-align:left;">
+Meta data for constructing Headspace Centre geometries
+</td>
+<td style="text-align:left;">
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<a href="https://ready4-dev.github.io/aus/reference/AusLookup-class.html" style="     ">AusLookup</a>
+</td>
+<td style="text-align:left;">
+Lookup tables for Australian geometry and spatial attribute data
+</td>
+<td style="text-align:left;">
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<a href="https://ready4-dev.github.io/aus/reference/AusOrygen-class.html" style="     ">AusOrygen</a>
+</td>
+<td style="text-align:left;">
+Meta data for constructing OYH Specialist Mental Health Catchment geometries
+</td>
+<td style="text-align:left;">
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<a href="https://ready4-dev.github.io/aus/reference/AusProjections-class.html" style="     ">AusProjections</a>
+</td>
+<td style="text-align:left;">
+Meta data for constructing custom Australian population projections boundary
+</td>
+<td style="text-align:left;">
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<a href="https://ready4-dev.github.io/aus/reference/AusTasmania-class.html" style="     ">AusTasmania</a>
+</td>
+<td style="text-align:left;">
+Meta data for processing Tasmanian population projections
+</td>
+<td style="text-align:left;">
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<a href="https://ready4-dev.github.io/costly/reference/CostlyCorrespondences-class.html" style="     ">CostlyCorrespondences</a>
+</td>
+<td style="text-align:left;">
+Collection of input, standards definition and results datasets for projects to generate standardised costing datasets
+</td>
+<td style="text-align:left;">
+<a href="https://ready4-dev.github.io/costly/articles/V_01.html" style="     "></a>, <a href="https://ready4-dev.github.io/costly/articles/V_02.html" style="     "></a>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<a href="https://ready4-dev.github.io/costly/reference/CostlyCountries-class.html" style="     ">CostlyCountries</a>
+</td>
+<td style="text-align:left;">
+Collection of input, standards definition and results datasets for projects to generate standardised country data for use in costing datasets
+</td>
+<td style="text-align:left;">
+<a href="https://ready4-dev.github.io/costly/articles/V_01.html" style="     "></a>, <a href="https://ready4-dev.github.io/costly/articles/V_02.html" style="     "></a>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<a href="https://ready4-dev.github.io/costly/reference/CostlyCurrencies-class.html" style="     ">CostlyCurrencies</a>
+</td>
+<td style="text-align:left;">
+Collection of input, standards definition and results datasets for projects to generate standardised currency data for use in costing datasets
+</td>
+<td style="text-align:left;">
+<a href="https://ready4-dev.github.io/costly/articles/V_02.html" style="     "></a>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<a href="https://ready4-dev.github.io/costly/reference/CostlySeed-class.html" style="     ">CostlySeed</a>
+</td>
+<td style="text-align:left;">
+Original (non-standardised) dataset (and metadata)
+</td>
+<td style="text-align:left;">
+<a href="https://ready4-dev.github.io/costly/articles/V_01.html" style="     "></a>, <a href="https://ready4-dev.github.io/costly/articles/V_02.html" style="     "></a>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<a href="https://ready4-dev.github.io/costly/reference/CostlySource-class.html" style="     ">CostlySource</a>
+</td>
+<td style="text-align:left;">
+Input dataset (and metadata) for generating standardised costing datasets
+</td>
+<td style="text-align:left;">
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<a href="https://ready4-dev.github.io/costly/reference/CostlyStandards-class.html" style="     ">CostlyStandards</a>
+</td>
+<td style="text-align:left;">
+Dataset (and metadata) defining the allowable values of specified variables
+</td>
+<td style="text-align:left;">
+<a href="https://ready4-dev.github.io/costly/articles/V_01.html" style="     "></a>, <a href="https://ready4-dev.github.io/costly/articles/V_02.html" style="     "></a>
+</td>
+</tr>
 <tr>
 <td style="text-align:left;">
 <a href="https://ready4-dev.github.io/scorz/reference/ScorzAqol6-class.html" style="     ">ScorzAqol6</a>
@@ -277,6 +402,116 @@ Input, Output and Authorship Data For Generating Utility Mapping Study Reports
 </tr>
 <tr>
 <td style="text-align:left;">
+<a href="https://ready4-dev.github.io/vicinity/reference/VicinityArguments-class.html" style="     ">VicinityArguments</a>
+</td>
+<td style="text-align:left;">
+Function arguments for constructing a spatial object
+</td>
+<td style="text-align:left;">
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<a href="https://ready4-dev.github.io/vicinity/reference/VicinityLocal-class.html" style="     ">VicinityLocal</a>
+</td>
+<td style="text-align:left;">
+Object defining data to be saved in local directory
+</td>
+<td style="text-align:left;">
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<a href="https://ready4-dev.github.io/vicinity/reference/VicinityLocalProcessed-class.html" style="     ">VicinityLocalProcessed</a>
+</td>
+<td style="text-align:left;">
+Object defining data to be saved in local directory in a processed (R) format
+</td>
+<td style="text-align:left;">
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<a href="https://ready4-dev.github.io/vicinity/reference/VicinityLocalRaw-class.html" style="     ">VicinityLocalRaw</a>
+</td>
+<td style="text-align:left;">
+Object defining data to be saved in local directory in a raw (unprocessed) format
+</td>
+<td style="text-align:left;">
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<a href="https://ready4-dev.github.io/vicinity/reference/VicinityLookup-class.html" style="     ">VicinityLookup</a>
+</td>
+<td style="text-align:left;">
+Look up tables for spatiotemporal data
+</td>
+<td style="text-align:left;">
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<a href="https://ready4-dev.github.io/vicinity/reference/VicinityMacro-class.html" style="     ">VicinityMacro</a>
+</td>
+<td style="text-align:left;">
+Macro level context
+</td>
+<td style="text-align:left;">
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<a href="https://ready4-dev.github.io/vicinity/reference/VicinityMesoArea-class.html" style="     ">VicinityMesoArea</a>
+</td>
+<td style="text-align:left;">
+Meso level context - area
+</td>
+<td style="text-align:left;">
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<a href="https://ready4-dev.github.io/vicinity/reference/VicinityMesoRegion-class.html" style="     ">VicinityMesoRegion</a>
+</td>
+<td style="text-align:left;">
+Meso level context - region
+</td>
+<td style="text-align:left;">
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<a href="https://ready4-dev.github.io/vicinity/reference/VicinityMicro-class.html" style="     ">VicinityMicro</a>
+</td>
+<td style="text-align:left;">
+Micro level context
+</td>
+<td style="text-align:left;">
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<a href="https://ready4-dev.github.io/vicinity/reference/VicinityProfile-class.html" style="     ">VicinityProfile</a>
+</td>
+<td style="text-align:left;">
+Information to create a profiled area object
+</td>
+<td style="text-align:left;">
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<a href="https://ready4-dev.github.io/vicinity/reference/VicinitySpaceTime-class.html" style="     ">VicinitySpaceTime</a>
+</td>
+<td style="text-align:left;">
+Spatiotemporal environment
+</td>
+<td style="text-align:left;">
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
 <a href="https://ready4-dev.github.io/youthvars/reference/YouthvarsDescriptives-class.html" style="     ">YouthvarsDescriptives</a>
 </td>
 <td style="text-align:left;">
@@ -360,6 +595,106 @@ Candidate predictors lookup table
 </tr>
 <tr>
 <td style="text-align:left;">
+<a href="https://ready4-dev.github.io/vicinity/reference/vicinity_abbreviations.html" style="     ">vicinity_abbreviations</a>
+</td>
+<td style="text-align:left;">
+ready4 S3 class for tibble object lookup table for spatial data abbreviations
+</td>
+<td style="text-align:left;">
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<a href="https://ready4-dev.github.io/vicinity/reference/vicinity_identifiers.html" style="     ">vicinity_identifiers</a>
+</td>
+<td style="text-align:left;">
+ready4 S3 class for tibble object lookup table of unique feature identifiers used for different spatial objects
+</td>
+<td style="text-align:left;">
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<a href="https://ready4-dev.github.io/vicinity/reference/vicinity_mapes.html" style="     ">vicinity_mapes</a>
+</td>
+<td style="text-align:left;">
+ready4 S3 class for tibble object that stores spatial simulation parameters relating to Mean Absolute Prediction Errors
+</td>
+<td style="text-align:left;">
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<a href="https://ready4-dev.github.io/vicinity/reference/vicinity_parameters.html" style="     ">vicinity_parameters</a>
+</td>
+<td style="text-align:left;">
+ready4 S3 class for tibble object that stores simulation structural parameters relating to the spatial environment
+</td>
+<td style="text-align:left;">
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<a href="https://ready4-dev.github.io/vicinity/reference/vicinity_points.html" style="     ">vicinity_points</a>
+</td>
+<td style="text-align:left;">
+ready4 S3 class for tibble object lookup table of the longitude and latitude cordinates of sites of services / homes
+</td>
+<td style="text-align:left;">
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<a href="https://ready4-dev.github.io/vicinity/reference/vicinity_processed.html" style="     ">vicinity_processed</a>
+</td>
+<td style="text-align:left;">
+ready4 S3 class for tibble object lookup table of meta-data for spatial data packs (imported and pre-processed data)
+</td>
+<td style="text-align:left;">
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<a href="https://ready4-dev.github.io/vicinity/reference/vicinity_raw.html" style="     ">vicinity_raw</a>
+</td>
+<td style="text-align:left;">
+ready4 S3 class for tibble object lookup table of metadata about raw (un-processed) spatial data to import
+</td>
+<td style="text-align:left;">
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<a href="https://ready4-dev.github.io/vicinity/reference/vicinity_resolutions.html" style="     ">vicinity_resolutions</a>
+</td>
+<td style="text-align:left;">
+ready4 S3 class for tibble object lookup table of the relative resolutions of different spatial objects
+</td>
+<td style="text-align:left;">
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<a href="https://ready4-dev.github.io/vicinity/reference/vicinity_templates.html" style="     ">vicinity_templates</a>
+</td>
+<td style="text-align:left;">
+ready4 S3 class for tibble object lookup table for base file used in creation of certain spatial objects
+</td>
+<td style="text-align:left;">
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<a href="https://ready4-dev.github.io/vicinity/reference/vicinity_values.html" style="     ">vicinity_values</a>
+</td>
+<td style="text-align:left;">
+ready4 S3 class for tibble object that stores simulation parameter values for each iteration
+</td>
+<td style="text-align:left;">
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
 <a href="https://ready4-dev.github.io/youthvars/reference/youthvars_aqol6d_adol.html" style="     ">youthvars_aqol6d_adol</a>
 </td>
 <td style="text-align:left;">
@@ -382,6 +717,17 @@ youthvars ready4 sub-module (S3 class) for Behavioural Activation for Depression
 </tr>
 <tr>
 <td style="text-align:left;">
+<a href="https://ready4-dev.github.io/youthvars/reference/youthvars_chu9d_adolaus.html" style="     ">youthvars_chu9d_adolaus</a>
+</td>
+<td style="text-align:left;">
+youthvars ready4 sub-module (S3 class) for Child Health Utility Nine Dimension Health Utility - Australian Adolescent Scoring (CHU-9D Australian Adolescent)
+</td>
+<td style="text-align:left;">
+<a href="https://ready4-dev.github.io/youthvars/articles/V_01.html" style="     "></a>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
 <a href="https://ready4-dev.github.io/youthvars/reference/youthvars_gad7.html" style="     ">youthvars_gad7</a>
 </td>
 <td style="text-align:left;">
@@ -393,10 +739,43 @@ youthvars ready4 sub-module (S3 class) for Generalised Anxiety Disorder Scale (G
 </tr>
 <tr>
 <td style="text-align:left;">
+<a href="https://ready4-dev.github.io/youthvars/reference/youthvars_k10.html" style="     ">youthvars_k10</a>
+</td>
+<td style="text-align:left;">
+youthvars ready4 sub-module (S3 class) for Kessler Psychological Distress Scale (K10) - US Scoring System scores
+</td>
+<td style="text-align:left;">
+<a href="https://ready4-dev.github.io/youthvars/articles/V_01.html" style="     "></a>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<a href="https://ready4-dev.github.io/youthvars/reference/youthvars_k10_aus.html" style="     ">youthvars_k10_aus</a>
+</td>
+<td style="text-align:left;">
+youthvars ready4 sub-module (S3 class) for Kessler Psychological Distress Scale (K10) - Australian Scoring System scores
+</td>
+<td style="text-align:left;">
+<a href="https://ready4-dev.github.io/youthvars/articles/V_01.html" style="     "></a>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
 <a href="https://ready4-dev.github.io/youthvars/reference/youthvars_k6.html" style="     ">youthvars_k6</a>
 </td>
 <td style="text-align:left;">
 youthvars ready4 sub-module (S3 class) for Kessler Psychological Distress Scale (K6) - US Scoring System scores
+</td>
+<td style="text-align:left;">
+<a href="https://ready4-dev.github.io/youthvars/articles/V_01.html" style="     "></a>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<a href="https://ready4-dev.github.io/youthvars/reference/youthvars_k6_aus.html" style="     ">youthvars_k6_aus</a>
+</td>
+<td style="text-align:left;">
+youthvars ready4 sub-module (S3 class)for Kessler Psychological Distress Scale (K6) - Australian Scoring System scores
 </td>
 <td style="text-align:left;">
 <a href="https://ready4-dev.github.io/youthvars/articles/V_01.html" style="     "></a>

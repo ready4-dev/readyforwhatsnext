@@ -1,7 +1,7 @@
 ---
 title: "Syntax"
 linkTitle: "Syntax"
-date: "2023-10-20"
+date: "2023-11-15"
 description: "ready4 modules use a simple and consistent syntax."
 weight: 63
 categories: 
@@ -96,10 +96,10 @@ Examples
 <a href="https://ready4-dev.github.io/ready4/reference/author-methods.html"> author </a>
 </td>
 <td style="text-align:left;">
-author
+Author and save files
 </td>
 <td style="text-align:left;">
-<a href="https://ready4-dev.github.io/ready4class/articles/V_01.html" style="     ">5</a>, <a href="https://ready4-dev.github.io/ready4fun/articles/V_01.html" style="     ">6</a> , <a href="https://ready4-dev.github.io/ready4pack/articles/V_01.html" style="     ">7</a>
+<a href="https://ready4-dev.github.io/ready4fun/articles/V_01.html" style="     ">5</a> , <a href="https://ready4-dev.github.io/ready4class/articles/V_01.html" style="     ">6</a>, <a href="https://ready4-dev.github.io/ready4pack/articles/V_01.html" style="     ">7</a> , <a href="https://ready4-dev.github.io/TTU/articles/V_01.html" style="     ">16</a> , <a href="https://ready4-dev.github.io/specific/articles/V_01.html" style="     ">17</a>
 </td>
 </tr>
 <tr>
@@ -107,7 +107,7 @@ author
 <a href="https://ready4-dev.github.io/ready4/reference/characterize-methods.html"> characterize </a>
 </td>
 <td style="text-align:left;">
-characterize
+Characterize data by generating (tabular) descriptive statistics
 </td>
 <td style="text-align:left;">
 </td>
@@ -117,9 +117,10 @@ characterize
 <a href="https://ready4-dev.github.io/ready4/reference/depict-methods.html"> depict </a>
 </td>
 <td style="text-align:left;">
-depict
+Depict (plot) features of a dataset
 </td>
 <td style="text-align:left;">
+<a href="https://ready4-dev.github.io/youthvars/articles/V_02.html" style="     ">13</a>, <a href="https://ready4-dev.github.io/scorz/articles/V_01.html" style="     ">14</a> , <a href="https://ready4-dev.github.io/scorz/articles/V_02.html" style="     ">15</a>
 </td>
 </tr>
 <tr>
@@ -127,7 +128,7 @@ depict
 <a href="https://ready4-dev.github.io/ready4/reference/enhance-methods.html"> enhance </a>
 </td>
 <td style="text-align:left;">
-enhance
+Enhance a dataset by adding new elements
 </td>
 <td style="text-align:left;">
 </td>
@@ -137,10 +138,10 @@ enhance
 <a href="https://ready4-dev.github.io/ready4/reference/exhibit-methods.html"> exhibit </a>
 </td>
 <td style="text-align:left;">
-exhibit
+Exhibit features of a dataset by printing them to the R console
 </td>
 <td style="text-align:left;">
-<a href="https://ready4-dev.github.io/ready4use/articles/V_02.html" style="     ">3</a> , <a href="https://ready4-dev.github.io/ready4class/articles/V_01.html" style="     ">5</a>, <a href="https://ready4-dev.github.io/ready4fun/articles/V_01.html" style="     ">6</a>
+<a href="https://ready4-dev.github.io/ready4use/articles/V_02.html" style="     ">2</a> , <a href="https://ready4-dev.github.io/ready4fun/articles/V_01.html" style="     ">5</a> , <a href="https://ready4-dev.github.io/ready4class/articles/V_01.html" style="     ">6</a>, <a href="https://ready4-dev.github.io/youthvars/articles/V_02.html" style="     ">13</a> , <a href="https://ready4-dev.github.io/scorz/articles/V_01.html" style="     ">14</a> , <a href="https://ready4-dev.github.io/scorz/articles/V_02.html" style="     ">15</a> , <a href="https://ready4-dev.github.io/TTU/articles/V_01.html" style="     ">16</a> , <a href="https://ready4-dev.github.io/specific/articles/V_01.html" style="     ">17</a> , <a href="https://ready4-dev.github.io/costly/articles/V_01.html" style="     ">19</a> , <a href="https://ready4-dev.github.io/costly/articles/V_02.html" style="     ">20</a>
 </td>
 </tr>
 <tr>
@@ -148,10 +149,10 @@ exhibit
 <a href="https://ready4-dev.github.io/ready4/reference/ingest-methods.html"> ingest </a>
 </td>
 <td style="text-align:left;">
-ingest
+Ingest data
 </td>
 <td style="text-align:left;">
-<a href="https://ready4-dev.github.io/ready4use/articles/V_01.html" style="     ">2</a> , <a href="https://ready4-dev.github.io/ready4use/articles/V_02.html" style="     ">3</a> , <a href="https://ready4-dev.github.io/ready4use/articles/V_03.html" style="     ">4</a> , <a href="https://ready4-dev.github.io/ready4class/articles/V_01.html" style="     ">5</a>, <a href="https://ready4-dev.github.io/ready4fun/articles/V_01.html" style="     ">6</a>
+<a href="https://ready4-dev.github.io/ready4use/articles/V_01.html" style="     ">1</a> , <a href="https://ready4-dev.github.io/ready4use/articles/V_02.html" style="     ">2</a> , <a href="https://ready4-dev.github.io/ready4use/articles/V_03.html" style="     ">3</a> , <a href="https://ready4-dev.github.io/ready4fun/articles/V_01.html" style="     ">5</a> , <a href="https://ready4-dev.github.io/ready4class/articles/V_01.html" style="     ">6</a>, <a href="https://ready4-dev.github.io/youthvars/articles/V_02.html" style="     ">13</a> , <a href="https://ready4-dev.github.io/scorz/articles/V_01.html" style="     ">14</a> , <a href="https://ready4-dev.github.io/scorz/articles/V_02.html" style="     ">15</a> , <a href="https://ready4-dev.github.io/TTU/articles/V_01.html" style="     ">16</a> , <a href="https://ready4-dev.github.io/specific/articles/V_01.html" style="     ">17</a>
 </td>
 </tr>
 <tr>
@@ -159,9 +160,10 @@ ingest
 <a href="https://ready4-dev.github.io/ready4/reference/investigate-methods.html"> investigate </a>
 </td>
 <td style="text-align:left;">
-investigate
+Investigate solutions to an inverse problem
 </td>
 <td style="text-align:left;">
+<a href="https://ready4-dev.github.io/TTU/articles/V_01.html" style="     ">16</a> , <a href="https://ready4-dev.github.io/specific/articles/V_01.html" style="     ">17</a>
 </td>
 </tr>
 <tr>
@@ -169,7 +171,7 @@ investigate
 <a href="https://ready4-dev.github.io/ready4/reference/manufacture-methods.html"> manufacture </a>
 </td>
 <td style="text-align:left;">
-manufacture
+Manufacture a new object
 </td>
 <td style="text-align:left;">
 </td>
@@ -179,9 +181,10 @@ manufacture
 <a href="https://ready4-dev.github.io/ready4/reference/metamorphose-methods.html"> metamorphose </a>
 </td>
 <td style="text-align:left;">
-metamorphose
+Metamorphose data from one model module (or sub-module) instance to an instance of a different model module or sub-module
 </td>
 <td style="text-align:left;">
+<a href="https://ready4-dev.github.io/specific/articles/V_01.html" style="     ">17</a>
 </td>
 </tr>
 <tr>
@@ -189,9 +192,10 @@ metamorphose
 <a href="https://ready4-dev.github.io/ready4/reference/procure-methods.html"> procure </a>
 </td>
 <td style="text-align:left;">
-procure
+Procure items from a dataset
 </td>
 <td style="text-align:left;">
+<a href="https://ready4-dev.github.io/specific/articles/V_01.html" style="     ">17</a>
 </td>
 </tr>
 <tr>
@@ -199,7 +203,7 @@ procure
 <a href="https://ready4-dev.github.io/ready4/reference/prognosticate-methods.html"> prognosticate </a>
 </td>
 <td style="text-align:left;">
-prognosticate
+Prognosticate (make predictions) by solving a forward problem
 </td>
 <td style="text-align:left;">
 </td>
@@ -209,9 +213,10 @@ prognosticate
 <a href="https://ready4-dev.github.io/ready4/reference/ratify-methods.html"> ratify </a>
 </td>
 <td style="text-align:left;">
-ratify
+Ratify that a dataset meets validity criteria
 </td>
 <td style="text-align:left;">
+<a href="https://ready4-dev.github.io/youthvars/articles/V_02.html" style="     ">13</a>, <a href="https://ready4-dev.github.io/specific/articles/V_01.html" style="     ">17</a> , <a href="https://ready4-dev.github.io/costly/articles/V_01.html" style="     ">19</a> , <a href="https://ready4-dev.github.io/costly/articles/V_02.html" style="     ">20</a>
 </td>
 </tr>
 <tr>
@@ -219,7 +224,7 @@ ratify
 <a href="https://ready4-dev.github.io/ready4/reference/reckon-methods.html"> reckon </a>
 </td>
 <td style="text-align:left;">
-reckon
+Reckon (calculate) a value
 </td>
 <td style="text-align:left;">
 </td>
@@ -229,10 +234,10 @@ reckon
 <a href="https://ready4-dev.github.io/ready4/reference/renew-methods.html"> renew </a>
 </td>
 <td style="text-align:left;">
-renew
+Renew values in a dataset
 </td>
 <td style="text-align:left;">
-<a href="https://ready4-dev.github.io/ready4use/articles/V_01.html" style="     ">2</a>, <a href="https://ready4-dev.github.io/ready4use/articles/V_02.html" style="     ">3</a>, <a href="https://ready4-dev.github.io/ready4fun/articles/V_01.html" style="     ">6</a>
+<a href="https://ready4-dev.github.io/ready4use/articles/V_01.html" style="     ">1</a> , <a href="https://ready4-dev.github.io/ready4use/articles/V_02.html" style="     ">2</a> , <a href="https://ready4-dev.github.io/ready4fun/articles/V_01.html" style="     ">5</a> , <a href="https://ready4-dev.github.io/youthvars/articles/V_02.html" style="     ">13</a>, <a href="https://ready4-dev.github.io/scorz/articles/V_01.html" style="     ">14</a> , <a href="https://ready4-dev.github.io/scorz/articles/V_02.html" style="     ">15</a> , <a href="https://ready4-dev.github.io/TTU/articles/V_01.html" style="     ">16</a> , <a href="https://ready4-dev.github.io/specific/articles/V_01.html" style="     ">17</a> , <a href="https://ready4-dev.github.io/costly/articles/V_01.html" style="     ">19</a> , <a href="https://ready4-dev.github.io/costly/articles/V_02.html" style="     ">20</a>
 </td>
 </tr>
 <tr>
@@ -240,10 +245,10 @@ renew
 <a href="https://ready4-dev.github.io/ready4/reference/share-methods.html"> share </a>
 </td>
 <td style="text-align:left;">
-share
+Share data via an online repository
 </td>
 <td style="text-align:left;">
-<a href="https://ready4-dev.github.io/ready4use/articles/V_01.html" style="     ">2</a>
+<a href="https://ready4-dev.github.io/ready4use/articles/V_01.html" style="     ">1</a> , <a href="https://ready4-dev.github.io/youthvars/articles/V_02.html" style="     ">13</a>, <a href="https://ready4-dev.github.io/scorz/articles/V_01.html" style="     ">14</a> , <a href="https://ready4-dev.github.io/scorz/articles/V_02.html" style="     ">15</a> , <a href="https://ready4-dev.github.io/TTU/articles/V_01.html" style="     ">16</a>
 </td>
 </tr>
 </tbody>
@@ -292,7 +297,7 @@ Examples
 <a href="https://ready4-dev.github.io/ready4/reference/authorSlot-methods.html"> authorSlot </a>
 </td>
 <td style="text-align:left;">
-authorSlot
+Apply the author method to a model module slot
 </td>
 <td style="text-align:left;">
 </td>
@@ -302,7 +307,7 @@ authorSlot
 <a href="https://ready4-dev.github.io/ready4/reference/characterizeSlot-methods.html"> characterizeSlot </a>
 </td>
 <td style="text-align:left;">
-characterizeSlot
+Apply the characterize method to a model module slot
 </td>
 <td style="text-align:left;">
 </td>
@@ -312,7 +317,7 @@ characterizeSlot
 <a href="https://ready4-dev.github.io/ready4/reference/depictSlot-methods.html"> depictSlot </a>
 </td>
 <td style="text-align:left;">
-depictSlot
+Apply the depict method to a model module slot
 </td>
 <td style="text-align:left;">
 </td>
@@ -322,7 +327,7 @@ depictSlot
 <a href="https://ready4-dev.github.io/ready4/reference/enhanceSlot-methods.html"> enhanceSlot </a>
 </td>
 <td style="text-align:left;">
-enhanceSlot
+Apply the enhance method to a model module slot
 </td>
 <td style="text-align:left;">
 </td>
@@ -332,10 +337,10 @@ enhanceSlot
 <a href="https://ready4-dev.github.io/ready4/reference/exhibitSlot-methods.html"> exhibitSlot </a>
 </td>
 <td style="text-align:left;">
-exhibitSlot
+Apply the exhibit method to a model module slot
 </td>
 <td style="text-align:left;">
-<a href="https://ready4-dev.github.io/ready4show/articles/V_01.html" style="     ">1</a>
+<a href="https://ready4-dev.github.io/ready4show/articles/V_01.html" style="     ">4</a>, <a href="https://ready4-dev.github.io/specific/articles/V_01.html" style="     ">17</a> , <a href="https://ready4-dev.github.io/costly/articles/V_01.html" style="     ">19</a> , <a href="https://ready4-dev.github.io/costly/articles/V_02.html" style="     ">20</a>
 </td>
 </tr>
 <tr>
@@ -343,7 +348,7 @@ exhibitSlot
 <a href="https://ready4-dev.github.io/ready4/reference/ingestSlot-methods.html"> ingestSlot </a>
 </td>
 <td style="text-align:left;">
-ingestSlot
+Apply the ingest method to a model module slot
 </td>
 <td style="text-align:left;">
 </td>
@@ -353,7 +358,7 @@ ingestSlot
 <a href="https://ready4-dev.github.io/ready4/reference/investigateSlot-methods.html"> investigateSlot </a>
 </td>
 <td style="text-align:left;">
-investigateSlot
+Apply the investigate method to a model module slot
 </td>
 <td style="text-align:left;">
 </td>
@@ -363,7 +368,7 @@ investigateSlot
 <a href="https://ready4-dev.github.io/ready4/reference/manufactureSlot-methods.html"> manufactureSlot </a>
 </td>
 <td style="text-align:left;">
-manufactureSlot
+Apply the manufacture method to a model module slot
 </td>
 <td style="text-align:left;">
 </td>
@@ -373,7 +378,7 @@ manufactureSlot
 <a href="https://ready4-dev.github.io/ready4/reference/metamorphoseSlot-methods.html"> metamorphoseSlot </a>
 </td>
 <td style="text-align:left;">
-metamorphoseSlot
+Apply the metamorphose method to a model module slot
 </td>
 <td style="text-align:left;">
 </td>
@@ -383,10 +388,10 @@ metamorphoseSlot
 <a href="https://ready4-dev.github.io/ready4/reference/procureSlot-methods.html"> procureSlot </a>
 </td>
 <td style="text-align:left;">
-procureSlot
+Procure (get) data from a slot
 </td>
 <td style="text-align:left;">
-<a href="https://ready4-dev.github.io/ready4show/articles/V_01.html" style="     ">1</a>, <a href="https://ready4-dev.github.io/ready4/articles/V_01.html" style="     ">8</a>
+<a href="https://ready4-dev.github.io/ready4show/articles/V_01.html" style="     ">4</a>, <a href="https://ready4-dev.github.io/ready4/articles/V_01.html" style="     ">8</a> , <a href="https://ready4-dev.github.io/scorz/articles/V_01.html" style="     ">14</a> , <a href="https://ready4-dev.github.io/TTU/articles/V_01.html" style="     ">16</a> , <a href="https://ready4-dev.github.io/specific/articles/V_01.html" style="     ">17</a>
 </td>
 </tr>
 <tr>
@@ -394,7 +399,7 @@ procureSlot
 <a href="https://ready4-dev.github.io/ready4/reference/prognosticateSlot-methods.html"> prognosticateSlot </a>
 </td>
 <td style="text-align:left;">
-prognosticateSlot
+Apply the prognosticate method to a model module slot
 </td>
 <td style="text-align:left;">
 </td>
@@ -404,7 +409,7 @@ prognosticateSlot
 <a href="https://ready4-dev.github.io/ready4/reference/ratifySlot-methods.html"> ratifySlot </a>
 </td>
 <td style="text-align:left;">
-ratifySlot
+Apply the ratify method to a model module slot
 </td>
 <td style="text-align:left;">
 </td>
@@ -414,7 +419,7 @@ ratifySlot
 <a href="https://ready4-dev.github.io/ready4/reference/reckonSlot-methods.html"> reckonSlot </a>
 </td>
 <td style="text-align:left;">
-reckonSlot
+Apply the reckon method to a model module slot
 </td>
 <td style="text-align:left;">
 </td>
@@ -424,10 +429,10 @@ reckonSlot
 <a href="https://ready4-dev.github.io/ready4/reference/renewSlot-methods.html"> renewSlot </a>
 </td>
 <td style="text-align:left;">
-renewSlot
+Apply the renew method to a model module slot
 </td>
 <td style="text-align:left;">
-<a href="https://ready4-dev.github.io/ready4show/articles/V_01.html" style="     ">1</a>, <a href="https://ready4-dev.github.io/ready4/articles/V_01.html" style="     ">8</a>
+<a href="https://ready4-dev.github.io/ready4show/articles/V_01.html" style="     ">4</a>, <a href="https://ready4-dev.github.io/ready4/articles/V_01.html" style="     ">8</a> , <a href="https://ready4-dev.github.io/scorz/articles/V_01.html" style="     ">14</a> , <a href="https://ready4-dev.github.io/specific/articles/V_01.html" style="     ">17</a> , <a href="https://ready4-dev.github.io/costly/articles/V_01.html" style="     ">19</a> , <a href="https://ready4-dev.github.io/costly/articles/V_02.html" style="     ">20</a>
 </td>
 </tr>
 <tr>
@@ -435,7 +440,7 @@ renewSlot
 <a href="https://ready4-dev.github.io/ready4/reference/shareSlot-methods.html"> shareSlot </a>
 </td>
 <td style="text-align:left;">
-shareSlot
+Apply the share method to a model module slot
 </td>
 <td style="text-align:left;">
 </td>
@@ -481,7 +486,7 @@ Examples
 <a href="https://ready4-dev.github.io/ready4/reference/authorClasses-methods.html"> authorClasses </a>
 </td>
 <td style="text-align:left;">
-authorClasses
+Author and document classes
 </td>
 <td style="text-align:left;">
 </td>
@@ -491,10 +496,10 @@ authorClasses
 <a href="https://ready4-dev.github.io/ready4/reference/authorData-methods.html"> authorData </a>
 </td>
 <td style="text-align:left;">
-authorData
+Author and document datasets
 </td>
 <td style="text-align:left;">
-<a href="https://ready4-dev.github.io/ready4show/articles/V_01.html" style="     ">1</a>
+<a href="https://ready4-dev.github.io/ready4show/articles/V_01.html" style="     ">4</a>, <a href="https://ready4-dev.github.io/specific/articles/V_01.html" style="     ">17</a>
 </td>
 </tr>
 <tr>
@@ -502,7 +507,7 @@ authorData
 <a href="https://ready4-dev.github.io/ready4/reference/authorFunctions-methods.html"> authorFunctions </a>
 </td>
 <td style="text-align:left;">
-authorFunctions
+Author and document functions
 </td>
 <td style="text-align:left;">
 </td>
@@ -512,10 +517,10 @@ authorFunctions
 <a href="https://ready4-dev.github.io/ready4/reference/authorReport-methods.html"> authorReport </a>
 </td>
 <td style="text-align:left;">
-authorReport
+Author and save a report
 </td>
 <td style="text-align:left;">
-<a href="https://ready4-dev.github.io/ready4show/articles/V_01.html" style="     ">1</a>
+<a href="https://ready4-dev.github.io/ready4show/articles/V_01.html" style="     ">4</a>
 </td>
 </tr>
 </tbody>

@@ -1,7 +1,7 @@
 ---
 title: "Modularity"
 linkTitle: "Modularity"
-date: "2023-10-20"
+date: "2023-11-15"
 description: "ready4 supports a modular approach to computational model development."
 weight: 62
 categories: 
@@ -164,11 +164,9 @@ All methods associated with modules and sub-modules adopt [a common syntax](http
 <div class="highlight">
 
 <pre class='chroma'><code class='language-r' data-lang='r'><span><span class='nf'><a href='https://ready4-dev.github.io/ready4/reference/get_methods.html'>get_methods</a></span><span class='o'>(</span><span class='o'>)</span></span>
-<span><span class='c'>#&gt;  [1] "authorSlot"        "characterizeSlot"  "depictSlot"       </span></span>
-<span><span class='c'>#&gt;  [4] "enhanceSlot"       "exhibitSlot"       "ingestSlot"       </span></span>
-<span><span class='c'>#&gt;  [7] "investigateSlot"   "manufactureSlot"   "metamorphoseSlot" </span></span>
-<span><span class='c'>#&gt; [10] "procureSlot"       "prognosticateSlot" "ratifySlot"       </span></span>
-<span><span class='c'>#&gt; [13] "reckonSlot"        "renewSlot"         "shareSlot"</span></span>
+<span><span class='c'>#&gt;  [1] "authorSlot"        "characterizeSlot"  "depictSlot"        "enhanceSlot"       "exhibitSlot"      </span></span>
+<span><span class='c'>#&gt;  [6] "ingestSlot"        "investigateSlot"   "manufactureSlot"   "metamorphoseSlot"  "procureSlot"      </span></span>
+<span><span class='c'>#&gt; [11] "prognosticateSlot" "ratifySlot"        "reckonSlot"        "renewSlot"         "shareSlot"</span></span>
 <span></span></code></pre>
 
 </div>

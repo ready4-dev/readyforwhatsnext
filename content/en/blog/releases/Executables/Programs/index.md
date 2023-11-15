@@ -1,7 +1,7 @@
 ---
 title: "Programs releases"
 linkTitle: "Programs"
-date: "2023-10-20"
+date: "2023-11-15"
 description: "Releases of programs for implementing modelling analyses."
 weight: 1
 categories: 
@@ -17,7 +17,7 @@ rmd_hash: 757bacdff228c6c2
 
 ---
 
-Currently available (as at 20-Oct-2023) releases of [analysis programs](/docs/model/analyses/replication-code/) are described below.
+Currently available (as at 15-Nov-2023) releases of [analysis programs](/docs/model/analyses/replication-code/) are described below.
 
 <html>
 
