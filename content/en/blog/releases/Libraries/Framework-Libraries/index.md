@@ -1,7 +1,7 @@
 ---
 title: "Framework library releases"
 linkTitle: "Framework libraries"
-date: "2023-11-15"
+date: "2023-11-30"
 description: "Releases of foundation and authoring tools libraries to implement the ready4 framework."
 weight: 1
 categories: 
@@ -17,7 +17,7 @@ rmd_hash: fb3125ee4f3218b5
 
 ---
 
-Currently available (as at 15-Nov-2023) releases of [framework libraries](/docs/software/libraries/types/framework/) are described below.
+Currently available (as at 30-Nov-2023) releases of [framework libraries](/docs/software/libraries/types/framework/) are described below.
 
 <html>
 

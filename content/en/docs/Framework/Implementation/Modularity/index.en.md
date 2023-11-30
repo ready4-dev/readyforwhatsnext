@@ -1,7 +1,7 @@
 ---
 title: "Modularity"
 linkTitle: "Modularity"
-date: "2023-11-15"
+date: "2023-11-30"
 description: "ready4 supports a modular approach to computational model development."
 weight: 62
 categories: 
@@ -38,7 +38,7 @@ rmd_hash: 6e4877d09d026d7b
 
 ## Motivation
 
-A potentially attractive approach to modelling complex health systems is to begin with a relatively simple computational model and to progressively extend its scope and sophistication. Such an approach could be described as "modular" if it is possible to readily combine multiple discrete modelling projects (potentially developed by different modelling teams) that each independently describe distinct aspects of the system being modelled. The `ready4` package provides foundational elements of a software framework to support the development of modular and open-source computational health economic models using R. We are currently applying this framework [in youth mental health](https://www.ready4-dev.com/docs/model/).
+A potentially attractive approach to modelling complex health systems is to begin with a relatively simple computational model and to progressively extend its scope and sophistication. Such an approach could be described as "modular" if it is possible to readily combine multiple discrete modelling projects (potentially developed by different modelling teams) that each independently describe distinct aspects of the system being modelled. The `ready4` package provides foundational elements of a software framework to support the development of modular and open-source computational health economic models using R.
 
 ## Implementation
 
@@ -50,7 +50,7 @@ Modular model development is enabled by the [encapsulation and inheritance featu
 
 ### ready4 Model Modules
 
-As we use the term, a "model module" is comprised of both a data-structure (or "class") and algorithms (or "methods") that are associated with that data-structure. A model module can be used to model a discrete component of a system relevant to young people's mental health. Model modules can be created from a template - the `ready4` package's `Ready4Module` class.
+As we use the term, a "model module" is comprised of both a data-structure (or "class") and algorithms (or "methods") that are associated with that data-structure. A model module can be used to model a discrete component of a health economic system. Model modules can be created from a template - the `ready4` package's `Ready4Module` class.
 
 We can create an object (`X`) from the `Ready4Module` template using the following command.
 
@@ -95,42 +95,6 @@ An instance of `Ready4Module` (or classes that inherit from `Ready4Module`) and 
 
 </div>
 
-`ready4` includes two module templates that inherit from `Ready4Module`. These are `Ready4Public` and `Ready4Private` and both are almost as minimally informative as their parent (the only difference being that their instances have the values "Public" or "Private" assigned to the `dissemination_1L_chr` slot).
-
-<div class="highlight">
-
-<pre class='chroma'><code class='language-r' data-lang='r'><span><span class='nv'>Y</span> <span class='o'>&lt;-</span> <span class='nf'><a href='https://ready4-dev.github.io/ready4/reference/Ready4Public-class.html'>Ready4Public</a></span><span class='o'>(</span><span class='o'>)</span></span>
-<span><span class='nf'><a href='https://rdrr.io/r/utils/str.html'>str</a></span><span class='o'>(</span><span class='nv'>Y</span><span class='o'>)</span></span>
-<span><span class='c'>#&gt; Formal class 'Ready4Public' [package "ready4"] with 1 slot</span></span>
-<span><span class='c'>#&gt;   ..@ dissemination_1L_chr: chr "Public"</span></span>
-<span></span></code></pre>
-
-</div>
-
-<div class="highlight">
-
-<pre class='chroma'><code class='language-r' data-lang='r'><span><span class='nv'>Z</span> <span class='o'>&lt;-</span> <span class='nf'><a href='https://ready4-dev.github.io/ready4/reference/Ready4Private-class.html'>Ready4Private</a></span><span class='o'>(</span><span class='o'>)</span></span>
-<span><span class='nf'><a href='https://rdrr.io/r/utils/str.html'>str</a></span><span class='o'>(</span><span class='nv'>Z</span><span class='o'>)</span></span>
-<span><span class='c'>#&gt; Formal class 'Ready4Private' [package "ready4"] with 1 slot</span></span>
-<span><span class='c'>#&gt;   ..@ dissemination_1L_chr: chr "Private"</span></span>
-<span></span></code></pre>
-
-</div>
-
-Like the `Ready4Module` template they inherit from, the purpose of `Ready4Public` and `Ready4Private` is to be used as parent classes of other templates. Using either of `Ready4Public` and `Ready4Private` can be a potentially efficient way of partially automating access policies for model data. If **all** the data contained in a module can **always** be shared publicly, it may be convenient to note this by using a module that has been created from the `Ready4Public` template. Similarly, if at least some of the data contained in a module will always be unsuitable for public dissemination, it can be useful to use a module created from `Ready4Private`. When the dissemination policy for data contained in a module will vary depending on user or context, it is more appropriate to use a module template that inherits from `Ready4Module` but not from either of `Ready4Public` and `Ready4Private`. In this latest case, users may choose to add descriptive information about the data access policy themselves using the `renewSlot` method. The dissemination policy can be inspected with the `procureSlot` method.
-
-<div class="highlight">
-
-<pre class='chroma'><code class='language-r' data-lang='r'><span><span class='nv'>X</span> <span class='o'>&lt;-</span> <span class='nf'><a href='https://ready4-dev.github.io/ready4/reference/renewSlot-methods.html'>renewSlot</a></span><span class='o'>(</span><span class='nv'>X</span>,</span>
-<span>               <span class='s'>"dissemination_1L_chr"</span>,</span>
-<span>               <span class='s'>"Staff and students of research institutes"</span><span class='o'>)</span></span>
-<span><span class='nf'><a href='https://ready4-dev.github.io/ready4/reference/procureSlot-methods.html'>procureSlot</a></span><span class='o'>(</span><span class='nv'>X</span>,</span>
-<span>            <span class='s'>"dissemination_1L_chr"</span><span class='o'>)</span></span>
-<span><span class='c'>#&gt; [1] "Staff and students of research institutes"</span></span>
-<span></span></code></pre>
-
-</div>
-
 ### ready4 Model Sub-modules
 
 In ready4, S3 classes are principally used to help define the structural properties of slots (array elements) of model modules and the methods that can be applied to these slots. S3 classes created for these purposes are called **sub-modules**.
@@ -164,9 +128,9 @@ All methods associated with modules and sub-modules adopt [a common syntax](http
 <div class="highlight">
 
 <pre class='chroma'><code class='language-r' data-lang='r'><span><span class='nf'><a href='https://ready4-dev.github.io/ready4/reference/get_methods.html'>get_methods</a></span><span class='o'>(</span><span class='o'>)</span></span>
-<span><span class='c'>#&gt;  [1] "authorSlot"        "characterizeSlot"  "depictSlot"        "enhanceSlot"       "exhibitSlot"      </span></span>
-<span><span class='c'>#&gt;  [6] "ingestSlot"        "investigateSlot"   "manufactureSlot"   "metamorphoseSlot"  "procureSlot"      </span></span>
-<span><span class='c'>#&gt; [11] "prognosticateSlot" "ratifySlot"        "reckonSlot"        "renewSlot"         "shareSlot"</span></span>
+<span><span class='c'>#&gt;  [1] "authorSlot"        "characterizeSlot"  "depictSlot"        "enhanceSlot"       "exhibitSlot"       "ingestSlot"       </span></span>
+<span><span class='c'>#&gt;  [7] "investigateSlot"   "manufactureSlot"   "metamorphoseSlot"  "procureSlot"       "prognosticateSlot" "ratifySlot"       </span></span>
+<span><span class='c'>#&gt; [13] "reckonSlot"        "renewSlot"         "shareSlot"</span></span>
 <span></span></code></pre>
 
 </div>

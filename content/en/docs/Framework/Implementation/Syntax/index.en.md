@@ -1,7 +1,7 @@
 ---
 title: "Syntax"
 linkTitle: "Syntax"
-date: "2023-11-15"
+date: "2023-11-30"
 description: "ready4 modules use a simple and consistent syntax."
 weight: 63
 categories: 
