@@ -1,7 +1,7 @@
 ---
 title: "Authoring model data structures"
 linkTitle: "Data structures"
-date: "2023-10-20"
+date: "2023-11-30"
 description: "The ready4class R package supports partially automated and standardised workflows for defining the data structures to be used in computational models."
 weight: 62
 categories: 
@@ -95,6 +95,177 @@ Is Old Class
 </tr>
 </thead>
 <tbody>
+<tr>
+<td style="text-align:left;">
+TTUSynopsis
+</td>
+<td style="text-align:right;">
+TTU::TTUSynopsis()
+</td>
+<td style="text-align:right;">
+TTU
+</td>
+<td style="text-align:right;">
+TTUSynopsis
+</td>
+<td style="text-align:right;">
+</td>
+<td style="text-align:right;">
+FALSE
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+TTUReports
+</td>
+<td style="text-align:right;">
+TTU::TTUReports()
+</td>
+<td style="text-align:right;">
+TTU
+</td>
+<td style="text-align:right;">
+TTUReports
+</td>
+<td style="text-align:right;">
+</td>
+<td style="text-align:right;">
+FALSE
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+TTUProject
+</td>
+<td style="text-align:right;">
+TTU::TTUProject()
+</td>
+<td style="text-align:right;">
+TTU
+</td>
+<td style="text-align:right;">
+TTUProject
+</td>
+<td style="text-align:right;">
+</td>
+<td style="text-align:right;">
+FALSE
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+AusLookup
+</td>
+<td style="text-align:right;">
+aus::AusLookup()
+</td>
+<td style="text-align:right;">
+aus
+</td>
+<td style="text-align:right;">
+AusLookup
+</td>
+<td style="text-align:right;">
+</td>
+<td style="text-align:right;">
+FALSE
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+AusOrygen
+</td>
+<td style="text-align:right;">
+aus::AusOrygen()
+</td>
+<td style="text-align:right;">
+aus
+</td>
+<td style="text-align:right;">
+AusOrygen
+</td>
+<td style="text-align:right;">
+</td>
+<td style="text-align:right;">
+FALSE
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+AusHeadspace
+</td>
+<td style="text-align:right;">
+aus::AusHeadspace()
+</td>
+<td style="text-align:right;">
+aus
+</td>
+<td style="text-align:right;">
+AusHeadspace
+</td>
+<td style="text-align:right;">
+</td>
+<td style="text-align:right;">
+FALSE
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+AusProjections
+</td>
+<td style="text-align:right;">
+aus::AusProjections()
+</td>
+<td style="text-align:right;">
+aus
+</td>
+<td style="text-align:right;">
+AusProjections
+</td>
+<td style="text-align:right;">
+</td>
+<td style="text-align:right;">
+FALSE
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+AusTasmania
+</td>
+<td style="text-align:right;">
+aus::AusTasmania()
+</td>
+<td style="text-align:right;">
+aus
+</td>
+<td style="text-align:right;">
+AusTasmania
+</td>
+<td style="text-align:right;">
+</td>
+<td style="text-align:right;">
+FALSE
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+AusACT
+</td>
+<td style="text-align:right;">
+aus::AusACT()
+</td>
+<td style="text-align:right;">
+aus
+</td>
+<td style="text-align:right;">
+AusACT
+</td>
+<td style="text-align:right;">
+</td>
+<td style="text-align:right;">
+FALSE
+</td>
+</tr>
 <tr>
 <td style="text-align:left;">
 character
@@ -232,6 +403,120 @@ FALSE
 </tr>
 <tr>
 <td style="text-align:left;">
+CostlySource
+</td>
+<td style="text-align:right;">
+costly::CostlySource()
+</td>
+<td style="text-align:right;">
+costly
+</td>
+<td style="text-align:right;">
+CostlySource
+</td>
+<td style="text-align:right;">
+</td>
+<td style="text-align:right;">
+FALSE
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+CostlySeed
+</td>
+<td style="text-align:right;">
+costly::CostlySeed()
+</td>
+<td style="text-align:right;">
+costly
+</td>
+<td style="text-align:right;">
+CostlySeed
+</td>
+<td style="text-align:right;">
+</td>
+<td style="text-align:right;">
+FALSE
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+CostlyStandards
+</td>
+<td style="text-align:right;">
+costly::CostlyStandards()
+</td>
+<td style="text-align:right;">
+costly
+</td>
+<td style="text-align:right;">
+CostlyStandards
+</td>
+<td style="text-align:right;">
+</td>
+<td style="text-align:right;">
+FALSE
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+CostlyCorrespondences
+</td>
+<td style="text-align:right;">
+costly::CostlyCorrespondences()
+</td>
+<td style="text-align:right;">
+costly
+</td>
+<td style="text-align:right;">
+CostlyCorrespondences
+</td>
+<td style="text-align:right;">
+</td>
+<td style="text-align:right;">
+FALSE
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+CostlyCountries
+</td>
+<td style="text-align:right;">
+costly::CostlyCountries()
+</td>
+<td style="text-align:right;">
+costly
+</td>
+<td style="text-align:right;">
+CostlyCountries
+</td>
+<td style="text-align:right;">
+</td>
+<td style="text-align:right;">
+FALSE
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+CostlyCurrencies
+</td>
+<td style="text-align:right;">
+costly::CostlyCurrencies()
+</td>
+<td style="text-align:right;">
+costly
+</td>
+<td style="text-align:right;">
+CostlyCurrencies
+</td>
+<td style="text-align:right;">
+</td>
+<td style="text-align:right;">
+FALSE
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
 dfidx
 </td>
 <td style="text-align:right;">
@@ -255,7 +540,7 @@ FALSE
 Ready4Module
 </td>
 <td style="text-align:right;">
-ready4::Ready4Module()
+Ready4Module()
 </td>
 <td style="text-align:right;">
 ready4
@@ -274,7 +559,7 @@ FALSE
 Ready4Private
 </td>
 <td style="text-align:right;">
-ready4::Ready4Private()
+Ready4Private()
 </td>
 <td style="text-align:right;">
 ready4
@@ -293,7 +578,7 @@ FALSE
 Ready4Public
 </td>
 <td style="text-align:right;">
-ready4::Ready4Public()
+Ready4Public()
 </td>
 <td style="text-align:right;">
 ready4
@@ -309,41 +594,268 @@ FALSE
 </tr>
 <tr>
 <td style="text-align:left;">
-sf
+ready4class_constructor
 </td>
 <td style="text-align:right;">
-sf::st_sf(sf::st_sfc())
+ready4class::ready4class_constructor()
 </td>
 <td style="text-align:right;">
-sf
+ready4class
 </td>
 <td style="text-align:right;">
-st_sf
+ready4class_constructor
 </td>
 <td style="text-align:right;">
-sf::st_sfc()
 </td>
 <td style="text-align:right;">
-FALSE
+TRUE
 </td>
 </tr>
 <tr>
 <td style="text-align:left;">
-tbl_df
+ready4class_pt_lup
 </td>
 <td style="text-align:right;">
-tibble::tibble()
+ready4class::ready4class_pt_lup()
 </td>
 <td style="text-align:right;">
-tibble
+ready4class
 </td>
 <td style="text-align:right;">
-tibble
+ready4class_pt_lup
 </td>
 <td style="text-align:right;">
 </td>
 <td style="text-align:right;">
-FALSE
+TRUE
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+ready4class_manifest
+</td>
+<td style="text-align:right;">
+ready4class::ready4class_manifest()
+</td>
+<td style="text-align:right;">
+ready4class
+</td>
+<td style="text-align:right;">
+ready4class_manifest
+</td>
+<td style="text-align:right;">
+</td>
+<td style="text-align:right;">
+TRUE
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+ready4fun_badges
+</td>
+<td style="text-align:right;">
+ready4fun_badges()
+</td>
+<td style="text-align:right;">
+ready4fun
+</td>
+<td style="text-align:right;">
+ready4fun_badges
+</td>
+<td style="text-align:right;">
+</td>
+<td style="text-align:right;">
+TRUE
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+ready4fun_abbreviations
+</td>
+<td style="text-align:right;">
+ready4fun_abbreviations()
+</td>
+<td style="text-align:right;">
+ready4fun
+</td>
+<td style="text-align:right;">
+ready4fun_abbreviations
+</td>
+<td style="text-align:right;">
+</td>
+<td style="text-align:right;">
+TRUE
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+ready4fun_objects
+</td>
+<td style="text-align:right;">
+ready4fun_objects()
+</td>
+<td style="text-align:right;">
+ready4fun
+</td>
+<td style="text-align:right;">
+ready4fun_objects
+</td>
+<td style="text-align:right;">
+</td>
+<td style="text-align:right;">
+TRUE
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+ready4fun_functions
+</td>
+<td style="text-align:right;">
+ready4fun_functions()
+</td>
+<td style="text-align:right;">
+ready4fun
+</td>
+<td style="text-align:right;">
+ready4fun_functions
+</td>
+<td style="text-align:right;">
+</td>
+<td style="text-align:right;">
+TRUE
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+ready4fun_executor
+</td>
+<td style="text-align:right;">
+ready4fun_executor()
+</td>
+<td style="text-align:right;">
+ready4fun
+</td>
+<td style="text-align:right;">
+ready4fun_executor
+</td>
+<td style="text-align:right;">
+</td>
+<td style="text-align:right;">
+TRUE
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+ready4fun_description
+</td>
+<td style="text-align:right;">
+ready4fun_description()
+</td>
+<td style="text-align:right;">
+ready4fun
+</td>
+<td style="text-align:right;">
+ready4fun_description
+</td>
+<td style="text-align:right;">
+</td>
+<td style="text-align:right;">
+TRUE
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+ready4fun_metadata_a
+</td>
+<td style="text-align:right;">
+ready4fun_metadata_a()
+</td>
+<td style="text-align:right;">
+ready4fun
+</td>
+<td style="text-align:right;">
+ready4fun_metadata_a
+</td>
+<td style="text-align:right;">
+</td>
+<td style="text-align:right;">
+TRUE
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+ready4fun_metadata_b
+</td>
+<td style="text-align:right;">
+ready4fun_metadata_b()
+</td>
+<td style="text-align:right;">
+ready4fun
+</td>
+<td style="text-align:right;">
+ready4fun_metadata_b
+</td>
+<td style="text-align:right;">
+</td>
+<td style="text-align:right;">
+TRUE
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+ready4fun_manifest
+</td>
+<td style="text-align:right;">
+ready4fun_manifest()
+</td>
+<td style="text-align:right;">
+ready4fun
+</td>
+<td style="text-align:right;">
+ready4fun_manifest
+</td>
+<td style="text-align:right;">
+</td>
+<td style="text-align:right;">
+TRUE
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+ready4fun_dataset
+</td>
+<td style="text-align:right;">
+ready4fun_dataset()
+</td>
+<td style="text-align:right;">
+ready4fun
+</td>
+<td style="text-align:right;">
+ready4fun_dataset
+</td>
+<td style="text-align:right;">
+</td>
+<td style="text-align:right;">
+TRUE
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+ready4pack_manifest
+</td>
+<td style="text-align:right;">
+ready4pack::ready4pack_manifest()
+</td>
+<td style="text-align:right;">
+ready4pack
+</td>
+<td style="text-align:right;">
+ready4pack_manifest
+</td>
+<td style="text-align:right;">
+</td>
+<td style="text-align:right;">
+TRUE
 </td>
 </tr>
 <tr>
@@ -709,557 +1221,6 @@ FALSE
 </tr>
 <tr>
 <td style="text-align:left;">
-ready4fun_badges
-</td>
-<td style="text-align:right;">
-ready4fun::ready4fun_badges()
-</td>
-<td style="text-align:right;">
-ready4fun
-</td>
-<td style="text-align:right;">
-ready4fun_badges
-</td>
-<td style="text-align:right;">
-</td>
-<td style="text-align:right;">
-TRUE
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-ready4fun_abbreviations
-</td>
-<td style="text-align:right;">
-ready4fun::ready4fun_abbreviations()
-</td>
-<td style="text-align:right;">
-ready4fun
-</td>
-<td style="text-align:right;">
-ready4fun_abbreviations
-</td>
-<td style="text-align:right;">
-</td>
-<td style="text-align:right;">
-TRUE
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-ready4fun_objects
-</td>
-<td style="text-align:right;">
-ready4fun::ready4fun_objects()
-</td>
-<td style="text-align:right;">
-ready4fun
-</td>
-<td style="text-align:right;">
-ready4fun_objects
-</td>
-<td style="text-align:right;">
-</td>
-<td style="text-align:right;">
-TRUE
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-ready4fun_functions
-</td>
-<td style="text-align:right;">
-ready4fun::ready4fun_functions()
-</td>
-<td style="text-align:right;">
-ready4fun
-</td>
-<td style="text-align:right;">
-ready4fun_functions
-</td>
-<td style="text-align:right;">
-</td>
-<td style="text-align:right;">
-TRUE
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-ready4fun_executor
-</td>
-<td style="text-align:right;">
-ready4fun::ready4fun_executor()
-</td>
-<td style="text-align:right;">
-ready4fun
-</td>
-<td style="text-align:right;">
-ready4fun_executor
-</td>
-<td style="text-align:right;">
-</td>
-<td style="text-align:right;">
-TRUE
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-ready4fun_description
-</td>
-<td style="text-align:right;">
-ready4fun::ready4fun_description()
-</td>
-<td style="text-align:right;">
-ready4fun
-</td>
-<td style="text-align:right;">
-ready4fun_description
-</td>
-<td style="text-align:right;">
-</td>
-<td style="text-align:right;">
-TRUE
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-ready4fun_metadata_a
-</td>
-<td style="text-align:right;">
-ready4fun::ready4fun_metadata_a()
-</td>
-<td style="text-align:right;">
-ready4fun
-</td>
-<td style="text-align:right;">
-ready4fun_metadata_a
-</td>
-<td style="text-align:right;">
-</td>
-<td style="text-align:right;">
-TRUE
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-ready4fun_metadata_b
-</td>
-<td style="text-align:right;">
-ready4fun::ready4fun_metadata_b()
-</td>
-<td style="text-align:right;">
-ready4fun
-</td>
-<td style="text-align:right;">
-ready4fun_metadata_b
-</td>
-<td style="text-align:right;">
-</td>
-<td style="text-align:right;">
-TRUE
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-ready4fun_manifest
-</td>
-<td style="text-align:right;">
-ready4fun::ready4fun_manifest()
-</td>
-<td style="text-align:right;">
-ready4fun
-</td>
-<td style="text-align:right;">
-ready4fun_manifest
-</td>
-<td style="text-align:right;">
-</td>
-<td style="text-align:right;">
-TRUE
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-ready4fun_dataset
-</td>
-<td style="text-align:right;">
-ready4fun::ready4fun_dataset()
-</td>
-<td style="text-align:right;">
-ready4fun
-</td>
-<td style="text-align:right;">
-ready4fun_dataset
-</td>
-<td style="text-align:right;">
-</td>
-<td style="text-align:right;">
-TRUE
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-ready4class_constructor
-</td>
-<td style="text-align:right;">
-ready4class::ready4class_constructor()
-</td>
-<td style="text-align:right;">
-ready4class
-</td>
-<td style="text-align:right;">
-ready4class_constructor
-</td>
-<td style="text-align:right;">
-</td>
-<td style="text-align:right;">
-TRUE
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-ready4class_pt_lup
-</td>
-<td style="text-align:right;">
-ready4class::ready4class_pt_lup()
-</td>
-<td style="text-align:right;">
-ready4class
-</td>
-<td style="text-align:right;">
-ready4class_pt_lup
-</td>
-<td style="text-align:right;">
-</td>
-<td style="text-align:right;">
-TRUE
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-ready4class_manifest
-</td>
-<td style="text-align:right;">
-ready4class::ready4class_manifest()
-</td>
-<td style="text-align:right;">
-ready4class
-</td>
-<td style="text-align:right;">
-ready4class_manifest
-</td>
-<td style="text-align:right;">
-</td>
-<td style="text-align:right;">
-TRUE
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-ready4pack_manifest
-</td>
-<td style="text-align:right;">
-ready4pack::ready4pack_manifest()
-</td>
-<td style="text-align:right;">
-ready4pack
-</td>
-<td style="text-align:right;">
-ready4pack_manifest
-</td>
-<td style="text-align:right;">
-</td>
-<td style="text-align:right;">
-TRUE
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-youthvars_aqol6d_adol
-</td>
-<td style="text-align:right;">
-youthvars::youthvars_aqol6d_adol()
-</td>
-<td style="text-align:right;">
-youthvars
-</td>
-<td style="text-align:right;">
-youthvars_aqol6d_adol
-</td>
-<td style="text-align:right;">
-</td>
-<td style="text-align:right;">
-TRUE
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-youthvars_chu9d_adolaus
-</td>
-<td style="text-align:right;">
-youthvars::youthvars_chu9d_adolaus()
-</td>
-<td style="text-align:right;">
-youthvars
-</td>
-<td style="text-align:right;">
-youthvars_chu9d_adolaus
-</td>
-<td style="text-align:right;">
-</td>
-<td style="text-align:right;">
-TRUE
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-youthvars_phq9
-</td>
-<td style="text-align:right;">
-youthvars::youthvars_phq9()
-</td>
-<td style="text-align:right;">
-youthvars
-</td>
-<td style="text-align:right;">
-youthvars_phq9
-</td>
-<td style="text-align:right;">
-</td>
-<td style="text-align:right;">
-TRUE
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-youthvars_bads
-</td>
-<td style="text-align:right;">
-youthvars::youthvars_bads()
-</td>
-<td style="text-align:right;">
-youthvars
-</td>
-<td style="text-align:right;">
-youthvars_bads
-</td>
-<td style="text-align:right;">
-</td>
-<td style="text-align:right;">
-TRUE
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-youthvars_gad7
-</td>
-<td style="text-align:right;">
-youthvars::youthvars_gad7()
-</td>
-<td style="text-align:right;">
-youthvars
-</td>
-<td style="text-align:right;">
-youthvars_gad7
-</td>
-<td style="text-align:right;">
-</td>
-<td style="text-align:right;">
-TRUE
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-youthvars_oasis
-</td>
-<td style="text-align:right;">
-youthvars::youthvars_oasis()
-</td>
-<td style="text-align:right;">
-youthvars
-</td>
-<td style="text-align:right;">
-youthvars_oasis
-</td>
-<td style="text-align:right;">
-</td>
-<td style="text-align:right;">
-TRUE
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-youthvars_scared
-</td>
-<td style="text-align:right;">
-youthvars::youthvars_scared()
-</td>
-<td style="text-align:right;">
-youthvars
-</td>
-<td style="text-align:right;">
-youthvars_scared
-</td>
-<td style="text-align:right;">
-</td>
-<td style="text-align:right;">
-TRUE
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-youthvars_k6
-</td>
-<td style="text-align:right;">
-youthvars::youthvars_k6()
-</td>
-<td style="text-align:right;">
-youthvars
-</td>
-<td style="text-align:right;">
-youthvars_k6
-</td>
-<td style="text-align:right;">
-</td>
-<td style="text-align:right;">
-TRUE
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-youthvars_k6_aus
-</td>
-<td style="text-align:right;">
-youthvars::youthvars_k6_aus()
-</td>
-<td style="text-align:right;">
-youthvars
-</td>
-<td style="text-align:right;">
-youthvars_k6_aus
-</td>
-<td style="text-align:right;">
-</td>
-<td style="text-align:right;">
-TRUE
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-youthvars_k10
-</td>
-<td style="text-align:right;">
-youthvars::youthvars_k10()
-</td>
-<td style="text-align:right;">
-youthvars
-</td>
-<td style="text-align:right;">
-youthvars_k10
-</td>
-<td style="text-align:right;">
-</td>
-<td style="text-align:right;">
-TRUE
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-youthvars_k10_aus
-</td>
-<td style="text-align:right;">
-youthvars::youthvars_k10_aus()
-</td>
-<td style="text-align:right;">
-youthvars
-</td>
-<td style="text-align:right;">
-youthvars_k10_aus
-</td>
-<td style="text-align:right;">
-</td>
-<td style="text-align:right;">
-TRUE
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-youthvars_sofas
-</td>
-<td style="text-align:right;">
-youthvars::youthvars_sofas()
-</td>
-<td style="text-align:right;">
-youthvars
-</td>
-<td style="text-align:right;">
-youthvars_sofas
-</td>
-<td style="text-align:right;">
-</td>
-<td style="text-align:right;">
-TRUE
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-YouthvarsDescriptives
-</td>
-<td style="text-align:right;">
-youthvars::YouthvarsDescriptives()
-</td>
-<td style="text-align:right;">
-youthvars
-</td>
-<td style="text-align:right;">
-YouthvarsDescriptives
-</td>
-<td style="text-align:right;">
-</td>
-<td style="text-align:right;">
-FALSE
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-YouthvarsProfile
-</td>
-<td style="text-align:right;">
-youthvars::YouthvarsProfile()
-</td>
-<td style="text-align:right;">
-youthvars
-</td>
-<td style="text-align:right;">
-YouthvarsProfile
-</td>
-<td style="text-align:right;">
-</td>
-<td style="text-align:right;">
-FALSE
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-YouthvarsSeries
-</td>
-<td style="text-align:right;">
-youthvars::YouthvarsSeries()
-</td>
-<td style="text-align:right;">
-youthvars
-</td>
-<td style="text-align:right;">
-YouthvarsSeries
-</td>
-<td style="text-align:right;">
-</td>
-<td style="text-align:right;">
-FALSE
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
 ScorzProfile
 </td>
 <td style="text-align:right;">
@@ -1348,6 +1309,26 @@ scorz
 ScorzEuroQol5
 </td>
 <td style="text-align:right;">
+</td>
+<td style="text-align:right;">
+FALSE
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+sf
+</td>
+<td style="text-align:right;">
+sf::st_sf(sf::st_sfc())
+</td>
+<td style="text-align:right;">
+sf
+</td>
+<td style="text-align:right;">
+st_sf
+</td>
+<td style="text-align:right;">
+sf::st_sfc()
 </td>
 <td style="text-align:right;">
 FALSE
@@ -1621,54 +1602,16 @@ FALSE
 </tr>
 <tr>
 <td style="text-align:left;">
-TTUSynopsis
+tbl_df
 </td>
 <td style="text-align:right;">
-TTU::TTUSynopsis()
+tibble::tibble()
 </td>
 <td style="text-align:right;">
-TTU
+tibble
 </td>
 <td style="text-align:right;">
-TTUSynopsis
-</td>
-<td style="text-align:right;">
-</td>
-<td style="text-align:right;">
-FALSE
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-TTUReports
-</td>
-<td style="text-align:right;">
-TTU::TTUReports()
-</td>
-<td style="text-align:right;">
-TTU
-</td>
-<td style="text-align:right;">
-TTUReports
-</td>
-<td style="text-align:right;">
-</td>
-<td style="text-align:right;">
-FALSE
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-TTUProject
-</td>
-<td style="text-align:right;">
-TTU::TTUProject()
-</td>
-<td style="text-align:right;">
-TTU
-</td>
-<td style="text-align:right;">
-TTUProject
+tibble
 </td>
 <td style="text-align:right;">
 </td>
@@ -2077,16 +2020,244 @@ FALSE
 </tr>
 <tr>
 <td style="text-align:left;">
-AusLookup
+youthvars_aqol6d_adol
 </td>
 <td style="text-align:right;">
-AusLookup()
+youthvars::youthvars_aqol6d_adol()
 </td>
 <td style="text-align:right;">
-aus
+youthvars
 </td>
 <td style="text-align:right;">
-AusLookup
+youthvars_aqol6d_adol
+</td>
+<td style="text-align:right;">
+</td>
+<td style="text-align:right;">
+TRUE
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+youthvars_chu9d_adolaus
+</td>
+<td style="text-align:right;">
+youthvars::youthvars_chu9d_adolaus()
+</td>
+<td style="text-align:right;">
+youthvars
+</td>
+<td style="text-align:right;">
+youthvars_chu9d_adolaus
+</td>
+<td style="text-align:right;">
+</td>
+<td style="text-align:right;">
+TRUE
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+youthvars_phq9
+</td>
+<td style="text-align:right;">
+youthvars::youthvars_phq9()
+</td>
+<td style="text-align:right;">
+youthvars
+</td>
+<td style="text-align:right;">
+youthvars_phq9
+</td>
+<td style="text-align:right;">
+</td>
+<td style="text-align:right;">
+TRUE
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+youthvars_bads
+</td>
+<td style="text-align:right;">
+youthvars::youthvars_bads()
+</td>
+<td style="text-align:right;">
+youthvars
+</td>
+<td style="text-align:right;">
+youthvars_bads
+</td>
+<td style="text-align:right;">
+</td>
+<td style="text-align:right;">
+TRUE
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+youthvars_gad7
+</td>
+<td style="text-align:right;">
+youthvars::youthvars_gad7()
+</td>
+<td style="text-align:right;">
+youthvars
+</td>
+<td style="text-align:right;">
+youthvars_gad7
+</td>
+<td style="text-align:right;">
+</td>
+<td style="text-align:right;">
+TRUE
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+youthvars_oasis
+</td>
+<td style="text-align:right;">
+youthvars::youthvars_oasis()
+</td>
+<td style="text-align:right;">
+youthvars
+</td>
+<td style="text-align:right;">
+youthvars_oasis
+</td>
+<td style="text-align:right;">
+</td>
+<td style="text-align:right;">
+TRUE
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+youthvars_scared
+</td>
+<td style="text-align:right;">
+youthvars::youthvars_scared()
+</td>
+<td style="text-align:right;">
+youthvars
+</td>
+<td style="text-align:right;">
+youthvars_scared
+</td>
+<td style="text-align:right;">
+</td>
+<td style="text-align:right;">
+TRUE
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+youthvars_k6
+</td>
+<td style="text-align:right;">
+youthvars::youthvars_k6()
+</td>
+<td style="text-align:right;">
+youthvars
+</td>
+<td style="text-align:right;">
+youthvars_k6
+</td>
+<td style="text-align:right;">
+</td>
+<td style="text-align:right;">
+TRUE
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+youthvars_k6_aus
+</td>
+<td style="text-align:right;">
+youthvars::youthvars_k6_aus()
+</td>
+<td style="text-align:right;">
+youthvars
+</td>
+<td style="text-align:right;">
+youthvars_k6_aus
+</td>
+<td style="text-align:right;">
+</td>
+<td style="text-align:right;">
+TRUE
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+youthvars_k10
+</td>
+<td style="text-align:right;">
+youthvars::youthvars_k10()
+</td>
+<td style="text-align:right;">
+youthvars
+</td>
+<td style="text-align:right;">
+youthvars_k10
+</td>
+<td style="text-align:right;">
+</td>
+<td style="text-align:right;">
+TRUE
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+youthvars_k10_aus
+</td>
+<td style="text-align:right;">
+youthvars::youthvars_k10_aus()
+</td>
+<td style="text-align:right;">
+youthvars
+</td>
+<td style="text-align:right;">
+youthvars_k10_aus
+</td>
+<td style="text-align:right;">
+</td>
+<td style="text-align:right;">
+TRUE
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+youthvars_sofas
+</td>
+<td style="text-align:right;">
+youthvars::youthvars_sofas()
+</td>
+<td style="text-align:right;">
+youthvars
+</td>
+<td style="text-align:right;">
+youthvars_sofas
+</td>
+<td style="text-align:right;">
+</td>
+<td style="text-align:right;">
+TRUE
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+YouthvarsDescriptives
+</td>
+<td style="text-align:right;">
+youthvars::YouthvarsDescriptives()
+</td>
+<td style="text-align:right;">
+youthvars
+</td>
+<td style="text-align:right;">
+YouthvarsDescriptives
 </td>
 <td style="text-align:right;">
 </td>
@@ -2096,35 +2267,16 @@ FALSE
 </tr>
 <tr>
 <td style="text-align:left;">
-AusOrygen
+YouthvarsProfile
 </td>
 <td style="text-align:right;">
-AusOrygen()
+youthvars::YouthvarsProfile()
 </td>
 <td style="text-align:right;">
-aus
+youthvars
 </td>
 <td style="text-align:right;">
-AusOrygen
-</td>
-<td style="text-align:right;">
-</td>
-<td style="text-align:right;">
-FALSE
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-AusHeadspace
-</td>
-<td style="text-align:right;">
-AusHeadspace()
-</td>
-<td style="text-align:right;">
-aus
-</td>
-<td style="text-align:right;">
-AusHeadspace
+YouthvarsProfile
 </td>
 <td style="text-align:right;">
 </td>
@@ -2134,54 +2286,16 @@ FALSE
 </tr>
 <tr>
 <td style="text-align:left;">
-AusProjections
+YouthvarsSeries
 </td>
 <td style="text-align:right;">
-AusProjections()
+youthvars::YouthvarsSeries()
 </td>
 <td style="text-align:right;">
-aus
+youthvars
 </td>
 <td style="text-align:right;">
-AusProjections
-</td>
-<td style="text-align:right;">
-</td>
-<td style="text-align:right;">
-FALSE
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-AusTasmania
-</td>
-<td style="text-align:right;">
-AusTasmania()
-</td>
-<td style="text-align:right;">
-aus
-</td>
-<td style="text-align:right;">
-AusTasmania
-</td>
-<td style="text-align:right;">
-</td>
-<td style="text-align:right;">
-FALSE
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-AusACT
-</td>
-<td style="text-align:right;">
-AusACT()
-</td>
-<td style="text-align:right;">
-aus
-</td>
-<td style="text-align:right;">
-AusACT
+YouthvarsSeries
 </td>
 <td style="text-align:right;">
 </td>

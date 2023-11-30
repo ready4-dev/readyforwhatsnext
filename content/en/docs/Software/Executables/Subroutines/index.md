@@ -1,7 +1,7 @@
 ---
 title: "Subroutines"
 linkTitle: "Subroutines"
-date: "2023-11-15"
+date: "2023-11-30"
 description: "Subroutines perform part of an analysis and reporting algorithm."
 weight: 4
 categories: 

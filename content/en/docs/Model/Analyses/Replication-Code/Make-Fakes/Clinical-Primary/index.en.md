@@ -1,7 +1,7 @@
 ---
 title: "Create a synthetic population of young people attending primary mental health services"
 linkTitle: "Clinical"
-date: "2023-10-20"
+date: "2023-11-30"
 description: "We created a basic synthetic dataset of to represent a clinical youth mental health sample."
 weight: 3
 categories: 
@@ -295,7 +295,18 @@ We now specify the names and statistical parameters of the variables we will be 
 <span>                                                 <span class='kc'>TRUE</span> <span class='o'>~</span> <span class='nf'><a href='https://rdrr.io/r/base/integer.html'>as.integer</a></span><span class='o'>(</span><span class='nv'>d_gender</span><span class='o'>)</span></span>
 <span>                                                 <span class='o'>)</span> <span class='o'><a href='https://magrittr.tidyverse.org/reference/pipe.html'>%&gt;%</a></span></span>
 <span>                  <span class='nf'><a href='https://rdrr.io/r/base/factor.html'>factor</a></span><span class='o'>(</span>labels <span class='o'>=</span> <span class='nf'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='o'>(</span><span class='s'>"Female"</span>,<span class='s'>"Male"</span><span class='o'>)</span><span class='o'>)</span><span class='o'>)</span></span>
-<span><span class='nv'>descriptives_FUP_tb</span> <span class='o'>&lt;-</span> <span class='nv'>descriptives_BL_tb</span> <span class='o'><a href='https://magrittr.tidyverse.org/reference/pipe.html'>%&gt;%</a></span> </span>
+<span><span class='c'>#&gt; Registered S3 methods overwritten by 'ggalt':</span></span>
+<span><span class='c'>#&gt;   method                  from   </span></span>
+<span><span class='c'>#&gt;   grid.draw.absoluteGrob  ggplot2</span></span>
+<span><span class='c'>#&gt;   grobHeight.absoluteGrob ggplot2</span></span>
+<span><span class='c'>#&gt;   grobWidth.absoluteGrob  ggplot2</span></span>
+<span><span class='c'>#&gt;   grobX.absoluteGrob      ggplot2</span></span>
+<span><span class='c'>#&gt;   grobY.absoluteGrob      ggplot2</span></span>
+<span></span><span><span class='c'>#&gt; Registered S3 methods overwritten by 'rmutil':</span></span>
+<span><span class='c'>#&gt;   method         from </span></span>
+<span><span class='c'>#&gt;   plot.residuals psych</span></span>
+<span><span class='c'>#&gt;   print.response httr</span></span>
+<span></span><span><span class='nv'>descriptives_FUP_tb</span> <span class='o'>&lt;-</span> <span class='nv'>descriptives_BL_tb</span> <span class='o'><a href='https://magrittr.tidyverse.org/reference/pipe.html'>%&gt;%</a></span> </span>
 <span>  <span class='nf'>dplyr</span><span class='nf'>::</span><span class='nf'><a href='https://dplyr.tidyverse.org/reference/filter.html'>filter</a></span><span class='o'>(</span><span class='nv'>fkClientID</span> <span class='o'><a href='https://rdrr.io/r/base/match.html'>%in%</a></span> </span>
 <span>                  <span class='nv'>aqol6d_adol_pop_tbs_ls</span><span class='o'>$</span><span class='nv'>fup_outcomes_tb</span><span class='o'>$</span><span class='nv'>fkClientID</span><span class='o'>)</span> <span class='o'><a href='https://magrittr.tidyverse.org/reference/pipe.html'>%&gt;%</a></span></span>
 <span>  <span class='nf'>dplyr</span><span class='nf'>::</span><span class='nf'><a href='https://dplyr.tidyverse.org/reference/mutate.html'>mutate</a></span><span class='o'>(</span>round <span class='o'>=</span> <span class='m'>2</span>,</span>

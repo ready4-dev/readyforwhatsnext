@@ -1,7 +1,7 @@
 ---
 title: "Ingest data from an open access repository"
 linkTitle: "Ingest"
-date: "2023-10-20"
+date: "2023-11-30"
 description: "A tutorial from the Acumen website about using ready4 to search and retrieve data from the Australian Mental Health Systems Models Dataverse."
 weight: 91
 categories: 
@@ -179,10 +179,9 @@ We can also see what metadata fields we have ingested.
 
 <div class="highlight">
 
-<pre class='chroma'><code class='language-r' data-lang='r'><span><span class='c'>#&gt;  [1] "id"                  "datasetId"           "datasetPersistentId" "storageIdentifier"  </span></span>
-<span><span class='c'>#&gt;  [5] "versionNumber"       "versionMinorNumber"  "versionState"        "lastUpdateTime"     </span></span>
-<span><span class='c'>#&gt;  [9] "releaseTime"         "createTime"          "publicationDate"     "citationDate"       </span></span>
-<span><span class='c'>#&gt; [13] "termsOfUse"          "fileAccessRequest"   "metadataBlocks"      "files"</span></span>
+<pre class='chroma'><code class='language-r' data-lang='r'><span><span class='c'>#&gt;  [1] "id"                  "datasetId"           "datasetPersistentId" "storageIdentifier"   "versionNumber"       "versionMinorNumber"  "versionState"       </span></span>
+<span><span class='c'>#&gt;  [8] "lastUpdateTime"      "releaseTime"         "createTime"          "publicationDate"     "citationDate"        "termsOfUse"          "fileAccessRequest"  </span></span>
+<span><span class='c'>#&gt; [15] "metadataBlocks"      "files"</span></span>
 <span></span></code></pre>
 
 </div>
@@ -267,21 +266,18 @@ The output from an object specific call to the `ingest` method is the requested 
 <div class="highlight">
 
 <pre class='chroma'><code class='language-r' data-lang='r'><span><span class='c'>#&gt; <span style='color: #555555;'># A tibble: 6 × 43</span></span></span>
-<span><span class='c'>#&gt;   fkClientID    round    d_interview_date d_age d_gender d_sex_birth_s d_sexual_ori_s d_ATSI</span></span>
-<span><span class='c'>#&gt;   <span style='color: #555555; font-style: italic;'>&lt;chr&gt;</span>         <span style='color: #555555; font-style: italic;'>&lt;fct&gt;</span>    <span style='color: #555555; font-style: italic;'>&lt;date&gt;</span>           <span style='color: #555555; font-style: italic;'>&lt;int&gt;</span> <span style='color: #555555; font-style: italic;'>&lt;chr&gt;</span>    <span style='color: #555555; font-style: italic;'>&lt;chr&gt;</span>         <span style='color: #555555; font-style: italic;'>&lt;fct&gt;</span>          <span style='color: #555555; font-style: italic;'>&lt;chr&gt;</span> </span></span>
-<span><span class='c'>#&gt; <span style='color: #555555;'>1</span> Participant_1 Baseline 2020-03-22          14 Male     Male          Heterosexual   No    </span></span>
-<span><span class='c'>#&gt; <span style='color: #555555;'>2</span> Participant_2 Baseline 2020-06-15          19 Female   Female        Heterosexual   Yes   </span></span>
-<span><span class='c'>#&gt; <span style='color: #555555;'>3</span> Participant_3 Baseline 2020-08-20          21 Female   Female        Other          <span style='color: #BB0000;'>NA</span>    </span></span>
-<span><span class='c'>#&gt; <span style='color: #555555;'>4</span> Participant_4 Baseline 2020-05-23          12 Female   Female        Heterosexual   Yes   </span></span>
-<span><span class='c'>#&gt; <span style='color: #555555;'>5</span> Participant_5 Baseline 2020-04-05          19 Male     Male          Heterosexual   Yes   </span></span>
-<span><span class='c'>#&gt; <span style='color: #555555;'>6</span> Participant_6 Baseline 2020-06-09          19 Male     Male          Heterosexual   Yes   </span></span>
-<span><span class='c'>#&gt; <span style='color: #555555;'># ℹ 35 more variables: d_country_bir_s &lt;chr&gt;, d_english_home &lt;chr&gt;, d_english_native &lt;chr&gt;,</span></span></span>
-<span><span class='c'>#&gt; <span style='color: #555555;'>#   d_studying_working &lt;chr&gt;, d_relation_s &lt;chr&gt;, s_centre &lt;chr&gt;, c_p_diag_s &lt;chr&gt;,</span></span></span>
-<span><span class='c'>#&gt; <span style='color: #555555;'>#   c_clinical_staging_s &lt;chr&gt;, k6_total &lt;int&gt;, phq9_total &lt;int&gt;, bads_total &lt;int&gt;,</span></span></span>
-<span><span class='c'>#&gt; <span style='color: #555555;'>#   gad7_total &lt;int&gt;, oasis_total &lt;int&gt;, scared_total &lt;int&gt;, c_sofas &lt;int&gt;, aqol6d_q1 &lt;int&gt;,</span></span></span>
-<span><span class='c'>#&gt; <span style='color: #555555;'>#   aqol6d_q2 &lt;int&gt;, aqol6d_q3 &lt;int&gt;, aqol6d_q4 &lt;int&gt;, aqol6d_q5 &lt;int&gt;, aqol6d_q6 &lt;int&gt;,</span></span></span>
-<span><span class='c'>#&gt; <span style='color: #555555;'>#   aqol6d_q7 &lt;int&gt;, aqol6d_q8 &lt;int&gt;, aqol6d_q9 &lt;int&gt;, aqol6d_q10 &lt;int&gt;, aqol6d_q11 &lt;int&gt;,</span></span></span>
-<span><span class='c'>#&gt; <span style='color: #555555;'>#   aqol6d_q12 &lt;int&gt;, aqol6d_q13 &lt;int&gt;, aqol6d_q14 &lt;int&gt;, aqol6d_q15 &lt;int&gt;, aqol6d_q16 &lt;int&gt;, …</span></span></span>
+<span><span class='c'>#&gt;   fkClientID    round d_interview_date d_age d_gender d_sex_birth_s d_sexual_ori_s d_ATSI d_country_bir_s d_english_home d_english_native d_studying_working d_relation_s</span></span>
+<span><span class='c'>#&gt;   <span style='color: #555555; font-style: italic;'>&lt;chr&gt;</span>         <span style='color: #555555; font-style: italic;'>&lt;fct&gt;</span> <span style='color: #555555; font-style: italic;'>&lt;date&gt;</span>           <span style='color: #555555; font-style: italic;'>&lt;int&gt;</span> <span style='color: #555555; font-style: italic;'>&lt;chr&gt;</span>    <span style='color: #555555; font-style: italic;'>&lt;chr&gt;</span>         <span style='color: #555555; font-style: italic;'>&lt;fct&gt;</span>          <span style='color: #555555; font-style: italic;'>&lt;chr&gt;</span>  <span style='color: #555555; font-style: italic;'>&lt;chr&gt;</span>           <span style='color: #555555; font-style: italic;'>&lt;chr&gt;</span>          <span style='color: #555555; font-style: italic;'>&lt;chr&gt;</span>            <span style='color: #555555; font-style: italic;'>&lt;chr&gt;</span>              <span style='color: #555555; font-style: italic;'>&lt;chr&gt;</span>       </span></span>
+<span><span class='c'>#&gt; <span style='color: #555555;'>1</span> Participant_1 Base… 2020-03-22          14 Male     Male          Heterosexual   No     Australia       Yes            Yes              Not studying or w… In a relati…</span></span>
+<span><span class='c'>#&gt; <span style='color: #555555;'>2</span> Participant_2 Base… 2020-06-15          19 Female   Female        Heterosexual   Yes    Other           No             No               Studying only      In a relati…</span></span>
+<span><span class='c'>#&gt; <span style='color: #555555;'>3</span> Participant_3 Base… 2020-08-20          21 Female   Female        Other          <span style='color: #BB0000;'>NA</span>     <span style='color: #BB0000;'>NA</span>              <span style='color: #BB0000;'>NA</span>             <span style='color: #BB0000;'>NA</span>               Studying only      Not in a re…</span></span>
+<span><span class='c'>#&gt; <span style='color: #555555;'>4</span> Participant_4 Base… 2020-05-23          12 Female   Female        Heterosexual   Yes    Other           No             No               Not studying or w… In a relati…</span></span>
+<span><span class='c'>#&gt; <span style='color: #555555;'>5</span> Participant_5 Base… 2020-04-05          19 Male     Male          Heterosexual   Yes    Other           No             No               Not studying or w… Not in a re…</span></span>
+<span><span class='c'>#&gt; <span style='color: #555555;'>6</span> Participant_6 Base… 2020-06-09          19 Male     Male          Heterosexual   Yes    Other           No             No               Studying only      In a relati…</span></span>
+<span><span class='c'>#&gt; <span style='color: #555555;'># ℹ 30 more variables: s_centre &lt;chr&gt;, c_p_diag_s &lt;chr&gt;, c_clinical_staging_s &lt;chr&gt;, k6_total &lt;int&gt;, phq9_total &lt;int&gt;, bads_total &lt;int&gt;, gad7_total &lt;int&gt;,</span></span></span>
+<span><span class='c'>#&gt; <span style='color: #555555;'>#   oasis_total &lt;int&gt;, scared_total &lt;int&gt;, c_sofas &lt;int&gt;, aqol6d_q1 &lt;int&gt;, aqol6d_q2 &lt;int&gt;, aqol6d_q3 &lt;int&gt;, aqol6d_q4 &lt;int&gt;, aqol6d_q5 &lt;int&gt;, aqol6d_q6 &lt;int&gt;,</span></span></span>
+<span><span class='c'>#&gt; <span style='color: #555555;'>#   aqol6d_q7 &lt;int&gt;, aqol6d_q8 &lt;int&gt;, aqol6d_q9 &lt;int&gt;, aqol6d_q10 &lt;int&gt;, aqol6d_q11 &lt;int&gt;, aqol6d_q12 &lt;int&gt;, aqol6d_q13 &lt;int&gt;, aqol6d_q14 &lt;int&gt;, aqol6d_q15 &lt;int&gt;,</span></span></span>
+<span><span class='c'>#&gt; <span style='color: #555555;'>#   aqol6d_q16 &lt;int&gt;, aqol6d_q17 &lt;int&gt;, aqol6d_q18 &lt;int&gt;, aqol6d_q19 &lt;int&gt;, aqol6d_q20 &lt;int&gt;</span></span></span>
 <span></span></code></pre>
 
 </div>

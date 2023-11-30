@@ -1,7 +1,7 @@
 ---
 title: "People module library releases"
 linkTitle: "People"
-date: "2023-11-15"
+date: "2023-11-30"
 description: "Releases of module libraries for modelling people (collectively, the Spring To Life model)."
 weight: 3
 categories: 
@@ -16,7 +16,7 @@ rmd_hash: cffc40b1135a1538
 
 ---
 
-Currently available (as at 15-Nov-2023) releases of [module libraries](/docs/software/libraries/types/module/) for [modelling people](/docs/model/modules/using-modules/people/) are reproduced below.
+Currently available (as at 30-Nov-2023) releases of [module libraries](/docs/software/libraries/types/module/) for [modelling people](/docs/model/modules/using-modules/people/) are reproduced below.
 
 <html>
 

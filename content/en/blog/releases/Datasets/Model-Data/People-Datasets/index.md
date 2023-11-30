@@ -1,7 +1,7 @@
 ---
 title: "Datasets for modelling people releases"
 linkTitle: "People datasets"
-date: "2023-11-15"
+date: "2023-11-30"
 description: "Releases of datasets used in conjunction with modules from the Spring To Life model of people."
 weight: 21
 categories: 

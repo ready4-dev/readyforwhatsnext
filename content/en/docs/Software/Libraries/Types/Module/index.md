@@ -1,7 +1,7 @@
 ---
 title: "Model module libraries"
 linkTitle: "Module"
-date: "2023-11-15"
+date: "2023-11-30"
 description: "There are three types of model module libraries - those for describing input data, developing models and making predictions."
 weight: 2662
 categories: 

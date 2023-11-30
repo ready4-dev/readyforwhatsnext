@@ -1,7 +1,7 @@
 ---
 title: "Authoring model algorithms"
 linkTitle: "Algorithms"
-date: "2023-10-20"
+date: "2023-11-30"
 description: "The ready4fun R package supports standardised approaches to code authoring that facilitate partial automation of the documenting of model algorithms."
 weight: 64
 categories: 
@@ -41,11 +41,12 @@ html_dependencies:
 <div class="highlight">
 
 <pre class='chroma'><code class='language-r' data-lang='r'><span><span class='kr'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='o'>(</span><span class='nv'><a href='https://ready4-dev.github.io/ready4/'>ready4</a></span><span class='o'>)</span></span>
-<span><span class='kr'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='o'>(</span><span class='nv'><a href='https://ready4-dev.github.io/ready4fun/'>ready4fun</a></span><span class='o'>)</span></span>
-<span><span class='kr'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='o'>(</span><span class='nv'><a href='https://ready4-dev.github.io/ready4use/'>ready4use</a></span><span class='o'>)</span></span>
-<span><span class='kr'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='o'>(</span><span class='nv'><a href='https://ready4-dev.github.io/ready4show/'>ready4show</a></span><span class='o'>)</span></span></code></pre>
+<span><span class='kr'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='o'>(</span><span class='nv'><a href='https://ready4-dev.github.io/ready4fun/'>ready4fun</a></span><span class='o'>)</span></span></code></pre>
 
 </div>
+
+<!-- library(ready4show) -->
+<!-- library(ready4use) -->
 
 ## Motivation
 
@@ -61,31 +62,30 @@ To help facilitate achieving these objectives, methods associated with ready4 mo
 
 ## ready4fun function authoring taxonomies, abbreviations and workflow
 
-The `ready4fun` package uses a dataset of taxonomies and abbreviations to ensure standardised function code style and documentation. A copy of this dataset (`dataset_ls`) can be downloaded from a repository associated with the [ready4 package](https://ready4-dev.github.io/ready4/) using tools from the [ready4use package](https://ready4-dev.github.io/ready4use/) package.
+The `ready4fun` package uses taxonomy and abbreviation datasets to ensure standardised function code style and documentation. <!-- A copy of this dataset (`dataset_ls`) can be downloaded from a repository associated with the [ready4 package](https://ready4-dev.github.io/ready4/) using tools from the [ready4use package](https://ready4-dev.github.io/ready4use/) package. -->
 
 <div class="highlight">
-
-<pre class='chroma'><code class='language-r' data-lang='r'><span><span class='nv'>dataset_ls</span> <span class='o'>&lt;-</span> <span class='nf'>ready4use</span><span class='nf'>::</span><span class='nf'><a href='https://ready4-dev.github.io/ready4use/reference/Ready4useRepos-class.html'>Ready4useRepos</a></span><span class='o'>(</span></span>
-<span>  gh_repo_1L_chr <span class='o'>=</span> <span class='s'>"ready4-dev/ready4"</span>,</span>
-<span>  gh_tag_1L_chr <span class='o'>=</span> <span class='s'>"Documentation_0.0"</span></span>
-<span><span class='o'>)</span> <span class='o'><a href='https://magrittr.tidyverse.org/reference/pipe.html'>%&gt;%</a></span></span>
-<span>  <span class='nf'><a href='https://ready4-dev.github.io/ready4/reference/ingest-methods.html'>ingest</a></span><span class='o'>(</span>metadata_1L_lgl <span class='o'>=</span> <span class='kc'>F</span><span class='o'>)</span></span></code></pre>
 
 </div>
 
 ### Function names begin with a meaningful verb
 
-Consistent with a naming convention popular in the R development community, all `ready4` framework functions begin with a verb. Furthermore, the choice of verb is meaningful - it communicates something about the type of task a function implements. For example, all functions beginning with the word "fit" will fit a model of a specified type to a dataset. The definitions of all meaningful verbs currently used by ready4 functions (excluding methods) are stored in element `fn_types_lup` of `dataset_ls`, the key features of which are reproduced below.
+Consistent with a naming convention popular in the R development community, all functions authored with the `ready4` framework need to begin with a verb. Furthermore, the choice of verb is meaningful - it communicates something about the type of task a function implements. For example, all functions beginning with the word "fit" will fit a model of a specified type to a dataset. The definitions of all meaningful verbs used in functions authored for a ready4 framework model implementation can be retrieved using [`get_fn_types()`](https://ready4-dev.github.io/ready4fun/reference/get_fn_types.html), which by default returns a dataset instance of the `ready4fun_functions` submodule.
+
+<!-- element `fn_types_lup` of `dataset_ls`, the key features of which are reproduced below. -->
 
 <div class="highlight">
 
-<pre class='chroma'><code class='language-r' data-lang='r'><span><span class='nv'>dataset_ls</span><span class='o'>$</span><span class='nv'>fn_types_lup</span> <span class='o'><a href='https://magrittr.tidyverse.org/reference/pipe.html'>%&gt;%</a></span></span>
-<span>  <span class='nf'><a href='https://ready4-dev.github.io/ready4fun/reference/ready4fun_functions.html'>ready4fun_functions</a></span><span class='o'>(</span><span class='o'>)</span> <span class='o'><a href='https://magrittr.tidyverse.org/reference/pipe.html'>%&gt;%</a></span></span>
-<span>  <span class='nf'><a href='https://ready4-dev.github.io/ready4/reference/renew-methods.html'>renew</a></span><span class='o'>(</span>filter_cdn_1L_chr <span class='o'>=</span> <span class='s'>"!is_generic_lgl &amp; !stringr::str_detect(fn_type_nm_chr, pattern = ' ')"</span><span class='o'>)</span> <span class='o'><a href='https://magrittr.tidyverse.org/reference/pipe.html'>%&gt;%</a></span></span>
-<span>  <span class='nf'><a href='https://ready4-dev.github.io/ready4/reference/exhibit-methods.html'>exhibit</a></span><span class='o'>(</span></span>
-<span>    select_int <span class='o'>=</span> <span class='m'>1</span><span class='o'>:</span><span class='m'>2</span>,</span>
-<span>    scroll_box_args_ls <span class='o'>=</span> <span class='nf'><a href='https://rdrr.io/r/base/list.html'>list</a></span><span class='o'>(</span>width <span class='o'>=</span> <span class='s'>"100%"</span><span class='o'>)</span></span>
-<span>  <span class='o'>)</span></span>
+<pre class='chroma'><code class='language-r' data-lang='r'><span><span class='nv'>x</span> <span class='o'>&lt;-</span> <span class='nf'><a href='https://ready4-dev.github.io/ready4fun/reference/get_fn_types.html'>get_fn_types</a></span><span class='o'>(</span>gh_repo_1L_chr <span class='o'>=</span> <span class='s'>"ready4-dev/ready4"</span><span class='o'>)</span></span>
+<span><span class='nf'><a href='https://rdrr.io/r/base/class.html'>class</a></span><span class='o'>(</span><span class='nv'>x</span><span class='o'>)</span></span>
+<span><span class='c'>#&gt; [1] "ready4fun_functions" "tbl_df"              "tbl"                 "data.frame"</span></span>
+<span></span></code></pre>
+
+</div>
+
+<div class="highlight">
+
+<pre class='chroma'><code class='language-r' data-lang='r'><span><span class='nf'><a href='https://ready4-dev.github.io/ready4/reference/exhibit-methods.html'>exhibit</a></span><span class='o'>(</span><span class='nv'>x</span>,select_int <span class='o'>=</span> <span class='m'>1</span><span class='o'>:</span><span class='m'>2</span>, scroll_box_args_ls <span class='o'>=</span> <span class='nf'><a href='https://rdrr.io/r/base/list.html'>list</a></span><span class='o'>(</span>width <span class='o'>=</span> <span class='s'>"100%"</span><span class='o'>)</span><span class='o'>)</span></span>
 </code></pre>
 
 <div style="border: 1px solid #ddd; padding: 5px; overflow-x: scroll; width:100%; ">
@@ -110,7 +110,7 @@ Description
 Add
 </td>
 <td style="text-align:right;">
-Updates an object by adding data to that object.
+Updates an object by adding new values to new or empty fields.
 </td>
 </tr>
 <tr>
@@ -147,18 +147,10 @@ Closes specified connections.
 </tr>
 <tr>
 <td style="text-align:left;">
-Extract
-</td>
-<td style="text-align:right;">
-Extracts data from an object.
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
 Fit
 </td>
 <td style="text-align:right;">
-Fits a model of a specified type to a dataset
+Fits a model of a specified type to a dataset.
 </td>
 </tr>
 <tr>
@@ -174,7 +166,7 @@ Checks if a specified local or global environmental condition is met and if not,
 Format
 </td>
 <td style="text-align:right;">
-Modifies the format of an output.
+Modifies the format of an object.
 </td>
 </tr>
 <tr>
@@ -182,7 +174,7 @@ Modifies the format of an output.
 Get
 </td>
 <td style="text-align:right;">
-Retrieves a pre-existing data object from memory, local file system or online repository.
+Extracts data from an object.
 </td>
 </tr>
 <tr>
@@ -206,7 +198,7 @@ Imputes data.
 Knit
 </td>
 <td style="text-align:right;">
-Knits a rmarkdown file
+Knits an RMD or Rmarkdown file.
 </td>
 </tr>
 <tr>
@@ -214,7 +206,7 @@ Knits a rmarkdown file
 Launch
 </td>
 <td style="text-align:right;">
-Launches an application
+Launches an R Shiny app.
 </td>
 </tr>
 <tr>
@@ -230,7 +222,7 @@ Creates a new R object.
 Plot
 </td>
 <td style="text-align:right;">
-Plots data
+Plots data.
 </td>
 </tr>
 <tr>
@@ -238,7 +230,7 @@ Plots data
 Predict
 </td>
 <td style="text-align:right;">
-Makes predictions from data using a specified statistical model.
+Applies a model to make predictions.
 </td>
 </tr>
 <tr>
@@ -246,7 +238,7 @@ Makes predictions from data using a specified statistical model.
 Print
 </td>
 <td style="text-align:right;">
-Prints output to console
+Prints output to console.
 </td>
 </tr>
 <tr>
@@ -278,7 +270,7 @@ Edits an object, removing a specified element or elements.
 Rename
 </td>
 <td style="text-align:right;">
-Renames elements of an object based on a pre-speccified schema.
+Renames elements of an object based on a pre-specified schema.
 </td>
 </tr>
 <tr>
@@ -377,16 +369,20 @@ Writes a file to a specified local directory.
 
 ### Function inputs and outputs have meaningful suffices
 
-The type of input (arguments) required and output (return) produced by a function can be efficiently communicated by using meaningful suffices. For example all objects ending in "\_chr" are character vectors and all objects ending in "\_int" are integer vectors. The meaningful suffices currently used by to describe objects in the ready4 framework are stored in element `seed_obj_type_lup` of `dataset_ls`, the key features of which are reproduced below.
+The type of input (arguments) required and output (return) produced by a function can be efficiently communicated by using meaningful suffices. For example all objects ending in "\_chr" are character vectors and all objects ending in "\_int" are integer vectors. Definitions of all meaningful suffices used in functions authored for a ready4 framework model implementation can be retrieved using [`get_obj_types()`](https://ready4-dev.github.io/ready4fun/reference/get_obj_types.html), which by default returns a dataset instance of the `ready4fun_objects` submodule.
 
 <div class="highlight">
 
-<pre class='chroma'><code class='language-r' data-lang='r'><span><span class='nv'>dataset_ls</span><span class='o'>$</span><span class='nv'>seed_obj_type_lup</span> <span class='o'><a href='https://magrittr.tidyverse.org/reference/pipe.html'>%&gt;%</a></span></span>
-<span>  <span class='nf'><a href='https://ready4-dev.github.io/ready4fun/reference/ready4fun_objects.html'>ready4fun_objects</a></span><span class='o'>(</span><span class='o'>)</span> <span class='o'><a href='https://magrittr.tidyverse.org/reference/pipe.html'>%&gt;%</a></span></span>
-<span>  <span class='nf'><a href='https://ready4-dev.github.io/ready4/reference/exhibit-methods.html'>exhibit</a></span><span class='o'>(</span></span>
-<span>    select_int <span class='o'>=</span> <span class='m'>1</span><span class='o'>:</span><span class='m'>2</span>,</span>
-<span>    scroll_box_args_ls <span class='o'>=</span> <span class='nf'><a href='https://rdrr.io/r/base/list.html'>list</a></span><span class='o'>(</span>width <span class='o'>=</span> <span class='s'>"100%"</span><span class='o'>)</span></span>
-<span>  <span class='o'>)</span></span>
+<pre class='chroma'><code class='language-r' data-lang='r'><span><span class='nv'>y</span> <span class='o'>&lt;-</span> <span class='nf'><a href='https://ready4-dev.github.io/ready4fun/reference/get_obj_types.html'>get_obj_types</a></span><span class='o'>(</span>gh_repo_1L_chr <span class='o'>=</span> <span class='s'>"ready4-dev/ready4"</span><span class='o'>)</span></span>
+<span><span class='nf'><a href='https://rdrr.io/r/base/class.html'>class</a></span><span class='o'>(</span><span class='nv'>y</span><span class='o'>)</span></span>
+<span><span class='c'>#&gt; [1] "ready4fun_objects" "tbl_df"            "tbl"               "data.frame"</span></span>
+<span></span></code></pre>
+
+</div>
+
+<div class="highlight">
+
+<pre class='chroma'><code class='language-r' data-lang='r'><span><span class='nf'><a href='https://ready4-dev.github.io/ready4/reference/exhibit-methods.html'>exhibit</a></span><span class='o'>(</span><span class='nv'>y</span>, select_int <span class='o'>=</span> <span class='m'>1</span><span class='o'>:</span><span class='m'>2</span>, scroll_box_args_ls <span class='o'>=</span> <span class='nf'><a href='https://rdrr.io/r/base/list.html'>list</a></span><span class='o'>(</span>width <span class='o'>=</span> <span class='s'>"100%"</span><span class='o'>)</span><span class='o'>)</span></span>
 </code></pre>
 
 <div style="border: 1px solid #ddd; padding: 5px; overflow-x: scroll; width:100%; ">
@@ -539,7 +535,7 @@ person
 r3
 </td>
 <td style="text-align:right;">
-ready4 S3
+ready4 submodule
 </td>
 </tr>
 <tr>
@@ -547,7 +543,7 @@ ready4 S3
 r4
 </td>
 <td style="text-align:right;">
-ready4 S4
+ready4 module
 </td>
 </tr>
 <tr>
@@ -606,16 +602,20 @@ tibble
 
 ### Consistent use of abbreviations
 
-Further information about the purpose of a function and the nature of its inputs and outputs can be encoded by using naming conventions that make consistent use of abbreviations. A master table of the abbreviations used throughout the `ready4` framework is maintained in the `abbreviations_lup` element of `dataset_ls`. The list of abbreviations is now quite extensive and continues to grow as the `ready4` suite of software expands. The initial few entries of `abbreviations_lup` are reproduced below.
+Further information about the purpose of a function and the nature of its inputs and outputs can be encoded by using naming conventions that make consistent use of abbreviations. A master table of the abbreviations used in a ready4 framework model implementation can be retrieved using [`get_abbrs()`](https://ready4-dev.github.io/ready4fun/reference/get_abbrs.html), which by default returns a dataset instance of the `ready4fun_abbreviations` submodule.
 
 <div class="highlight">
 
-<pre class='chroma'><code class='language-r' data-lang='r'><span><span class='nv'>dataset_ls</span><span class='o'>$</span><span class='nv'>abbreviations_lup</span> <span class='o'><a href='https://magrittr.tidyverse.org/reference/pipe.html'>%&gt;%</a></span></span>
-<span>  <span class='nf'><a href='https://rdrr.io/r/utils/head.html'>head</a></span><span class='o'>(</span><span class='o'>)</span> <span class='o'><a href='https://magrittr.tidyverse.org/reference/pipe.html'>%&gt;%</a></span></span>
-<span>  <span class='nf'><a href='https://ready4-dev.github.io/ready4/reference/exhibit-methods.html'>exhibit</a></span><span class='o'>(</span></span>
-<span>    select_int <span class='o'>=</span> <span class='m'>1</span><span class='o'>:</span><span class='m'>2</span>,</span>
-<span>    scroll_box_args_ls <span class='o'>=</span> <span class='nf'><a href='https://rdrr.io/r/base/list.html'>list</a></span><span class='o'>(</span>width <span class='o'>=</span> <span class='s'>"100%"</span><span class='o'>)</span></span>
-<span>  <span class='o'>)</span></span>
+<pre class='chroma'><code class='language-r' data-lang='r'><span><span class='nv'>z</span> <span class='o'>&lt;-</span> <span class='nf'><a href='https://ready4-dev.github.io/ready4fun/reference/get_abbrs.html'>get_abbrs</a></span><span class='o'>(</span>gh_repo_1L_chr <span class='o'>=</span> <span class='s'>"ready4-dev/ready4"</span><span class='o'>)</span></span>
+<span><span class='nf'><a href='https://rdrr.io/r/base/class.html'>class</a></span><span class='o'>(</span><span class='nv'>z</span><span class='o'>)</span></span>
+<span><span class='c'>#&gt; [1] "ready4fun_abbreviations" "tbl_df"                  "tbl"                     "data.frame"</span></span>
+<span></span></code></pre>
+
+</div>
+
+<div class="highlight">
+
+<pre class='chroma'><code class='language-r' data-lang='r'><span><span class='nf'><a href='https://ready4-dev.github.io/ready4/reference/exhibit-methods.html'>exhibit</a></span><span class='o'>(</span><span class='nv'>z</span> <span class='o'><a href='https://magrittr.tidyverse.org/reference/pipe.html'>%&gt;%</a></span> <span class='nf'><a href='https://rdrr.io/r/utils/head.html'>head</a></span><span class='o'>(</span><span class='m'>50</span><span class='o'>)</span>, select_int <span class='o'>=</span> <span class='m'>1</span><span class='o'>:</span><span class='m'>2</span>, scroll_box_args_ls <span class='o'>=</span> <span class='nf'><a href='https://rdrr.io/r/base/list.html'>list</a></span><span class='o'>(</span>width <span class='o'>=</span> <span class='s'>"100%"</span><span class='o'>)</span><span class='o'>)</span></span>
 </code></pre>
 
 <div style="border: 1px solid #ddd; padding: 5px; overflow-x: scroll; width:100%; ">
@@ -669,18 +669,370 @@ list of character vectors of length one
 </tr>
 <tr>
 <td style="text-align:left;">
-1L_chr_r4
-</td>
-<td style="text-align:right;">
-ready4 S4 collection of character vectors of length one
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
 1L_dbl
 </td>
 <td style="text-align:right;">
 double vector of length one
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+1L_dbl_ls
+</td>
+<td style="text-align:right;">
+list of double vectors of length one
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+1L_dtm
+</td>
+<td style="text-align:right;">
+date vector of length one
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+1L_dtm_ls
+</td>
+<td style="text-align:right;">
+list of date vectors of length one
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+1L_fct
+</td>
+<td style="text-align:right;">
+factor vector of length one
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+1L_fct_ls
+</td>
+<td style="text-align:right;">
+list of factor vectors of length one
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+1L_int
+</td>
+<td style="text-align:right;">
+integer vector of length one
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+1L_int_ls
+</td>
+<td style="text-align:right;">
+list of integer vectors of length one
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+1L_lgl
+</td>
+<td style="text-align:right;">
+logical vector of length one
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+1L_lgl_ls
+</td>
+<td style="text-align:right;">
+list of logical vectors of length one
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+1L_rgx
+</td>
+<td style="text-align:right;">
+regular expression vector of length one
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+1L_rgx_ls
+</td>
+<td style="text-align:right;">
+list of regular expression vectors of length one
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+1Ls
+</td>
+<td style="text-align:right;">
+length ones
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+8d
+</td>
+<td style="text-align:right;">
+8 Dimension
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+8ds
+</td>
+<td style="text-align:right;">
+8 Dimensions
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+abbr
+</td>
+<td style="text-align:right;">
+abbreviation
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+abbrs
+</td>
+<td style="text-align:right;">
+abbreviations
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+abs
+</td>
+<td style="text-align:right;">
+absolute
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+abss
+</td>
+<td style="text-align:right;">
+absolutes
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+addl
+</td>
+<td style="text-align:right;">
+additional
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+addls
+</td>
+<td style="text-align:right;">
+additionals
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+adol
+</td>
+<td style="text-align:right;">
+adolescent
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+adol6d
+</td>
+<td style="text-align:right;">
+Assessment of Quality of Life Six Dimension (Adolescent version)
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+adols
+</td>
+<td style="text-align:right;">
+adolescents
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+alg
+</td>
+<td style="text-align:right;">
+algorithm
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+algs
+</td>
+<td style="text-align:right;">
+algorithms
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+altv
+</td>
+<td style="text-align:right;">
+alternative
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+anlys
+</td>
+<td style="text-align:right;">
+analysis
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+anlyss
+</td>
+<td style="text-align:right;">
+analyses
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+aqol
+</td>
+<td style="text-align:right;">
+Assessment of Quality of Life
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+aqol6d
+</td>
+<td style="text-align:right;">
+Assessment of Quality of Life Six Dimension
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+aqol6dU
+</td>
+<td style="text-align:right;">
+Assessment of Quality of Life Six Dimension Health Utility
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+arg
+</td>
+<td style="text-align:right;">
+argument
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+args
+</td>
+<td style="text-align:right;">
+arguments
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+arr
+</td>
+<td style="text-align:right;">
+array
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+arr_ls
+</td>
+<td style="text-align:right;">
+list of arrays
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+arr_r3
+</td>
+<td style="text-align:right;">
+ready4 submodule extension of array
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+arr_r3_ls
+</td>
+<td style="text-align:right;">
+list of ready4 submodule extension of arrays
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+artl
+</td>
+<td style="text-align:right;">
+article
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+artls
+</td>
+<td style="text-align:right;">
+articles
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+att
+</td>
+<td style="text-align:right;">
+attribute
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+atts
+</td>
+<td style="text-align:right;">
+attributes
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+aus
+</td>
+<td style="text-align:right;">
+Australia
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+AusACT
+</td>
+<td style="text-align:right;">
+Meta data for processing ACT population projections.
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+AusHeadspace
+</td>
+<td style="text-align:right;">
+Meta data for constructing Headspace Centre geometries.
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+AusLookup
+</td>
+<td style="text-align:right;">
+Lookup tables for Australian geometry and spatial attribute data.
 </td>
 </tr>
 </tbody>
@@ -694,6 +1046,44 @@ double vector of length one
 </table>
 
 </div>
+
+</div>
+
+The `ready4fun_abbreviations` submodule is searchable. It is therefore possible to see if an abbreviation has been defined for an existing word or phrase...
+
+<div class="highlight">
+
+<pre class='chroma'><code class='language-r' data-lang='r'><span><span class='nf'><a href='https://ready4-dev.github.io/ready4/reference/procure-methods.html'>procure</a></span><span class='o'>(</span><span class='nv'>z</span>,<span class='s'>"template"</span><span class='o'>)</span></span>
+<span><span class='c'>#&gt; <span style='color: #555555;'># A tibble: 2 × 3</span></span></span>
+<span><span class='c'>#&gt;   short_name_chr long_name_chr plural_lgl</span></span>
+<span><span class='c'>#&gt;   <span style='color: #555555; font-style: italic;'>&lt;chr&gt;</span>          <span style='color: #555555; font-style: italic;'>&lt;chr&gt;</span>         <span style='color: #555555; font-style: italic;'>&lt;lgl&gt;</span>     </span></span>
+<span><span class='c'>#&gt; <span style='color: #555555;'>1</span> tmpl           template      FALSE     </span></span>
+<span><span class='c'>#&gt; <span style='color: #555555;'>2</span> tmpls          templates     TRUE</span></span>
+<span></span></code></pre>
+
+</div>
+
+...and to look-up the meaning of an abbreviation...
+
+<div class="highlight">
+
+<pre class='chroma'><code class='language-r' data-lang='r'><span><span class='nf'><a href='https://ready4-dev.github.io/ready4/reference/procure-methods.html'>procure</a></span><span class='o'>(</span><span class='nv'>z</span>,<span class='s'>"org"</span>,type_1L_chr <span class='o'>=</span> <span class='s'>"extension"</span><span class='o'>)</span></span>
+<span><span class='c'>#&gt; <span style='color: #555555;'># A tibble: 2 × 3</span></span></span>
+<span><span class='c'>#&gt;   short_name_chr long_name_chr plural_lgl</span></span>
+<span><span class='c'>#&gt;   <span style='color: #555555; font-style: italic;'>&lt;chr&gt;</span>          <span style='color: #555555; font-style: italic;'>&lt;chr&gt;</span>         <span style='color: #555555; font-style: italic;'>&lt;lgl&gt;</span>     </span></span>
+<span><span class='c'>#&gt; <span style='color: #555555;'>1</span> org            organisation  FALSE     </span></span>
+<span><span class='c'>#&gt; <span style='color: #555555;'>2</span> orgs           organisations TRUE</span></span>
+<span></span></code></pre>
+
+</div>
+
+...or whether a potential abbreviation has already been defined.
+
+<div class="highlight">
+
+<pre class='chroma'><code class='language-r' data-lang='r'><span><span class='nf'><a href='https://ready4-dev.github.io/ready4/reference/procure-methods.html'>procure</a></span><span class='o'>(</span><span class='nv'>z</span>,<span class='s'>"org"</span>, type_1L_chr <span class='o'>=</span> <span class='s'>"extension"</span>, what_1L_chr <span class='o'>=</span> <span class='s'>"string"</span><span class='o'>)</span></span>
+<span><span class='c'>#&gt; [1] "org"  "orgs"</span></span>
+<span></span></code></pre>
 
 </div>
 
@@ -762,5 +1152,5 @@ For example, one of the functions to be documented is the [knit_from_tmpl](https
 
 ## Future documentation
 
-Detailed guidance for how to apply `ready4fun` workflow tools has yet to be prepared but will be released in 2022.
+Detailed guidance for how to apply `ready4fun` workflow tools has yet to be prepared but is planned for 2024.
 
