@@ -5,34 +5,15 @@ library(ready4)
 project_dir_1L_chr <- getwd()
 ### DOCUMENTATION SECTION
 ## Render itemisation of currently available ready4 libraries
-c("Framework",
-  "Module") %>%
-  write_to_render_post(path_to_main_dir_1L_chr = paste0(project_dir_1L_chr,"/content/en/docs/software/Libraries/Types"),
+c(#"Framework",
+  "Libraries") %>%
+  write_to_render_post(path_to_main_dir_1L_chr = paste0(project_dir_1L_chr,"/content/en/docs/Model/Modules/Finding"),
                        consent_1L_chr = "Y")  
 # Render ready4 library installation instructions
-c("Foundation",
-  "Authoring-Tools/Reporting",
-  "Authoring-Tools/Datasets",
-  "Authoring-Tools/Code-Development",
-  "Modules") %>%
-write_to_render_post(path_to_main_dir_1L_chr = paste0(project_dir_1L_chr,"/content/en/docs/software/Libraries/Installation"),
+c("Installation") %>%
+write_to_render_post(path_to_main_dir_1L_chr = paste0(project_dir_1L_chr,"/content/en/docs/Getting-started"),
                      consent_1L_chr = "Y",
                      is_rmd_1L_lgl = F)
-# Render framework articles
-c("Modularity",#"Paradigm", 
-  "Syntax") %>%
-  write_to_render_post(path_to_main_dir_1L_chr = paste0(project_dir_1L_chr,"/content/en/docs/Framework/Implementation"),
-                       consent_1L_chr = "Y",
-                       is_rmd_1L_lgl = F)
-c("Object-Oriented") %>%
-  write_to_render_post(path_to_main_dir_1L_chr = paste0(project_dir_1L_chr,"/content/en/docs/Framework/Implementation/Paradigm"),
-                       consent_1L_chr = "Y",
-                       is_rmd_1L_lgl = F)
-# Render Module articles
-c("Authoring-Algorithms","Authoring-Classes", "Packaging-Modules") %>%
-  write_to_render_post(path_to_main_dir_1L_chr = paste0(project_dir_1L_chr,"/content/en/docs/framework/use/authoring-modules"),
-                       consent_1L_chr = "Y",
-                       is_rmd_1L_lgl = F)
 c("Add-Metadata",
   "Assess-Cost-Utility", ## Add scroll box args
   "Explore-Models", 
@@ -50,31 +31,31 @@ c("Standard-Cost-Data-Codes",
   write_to_render_post(path_to_main_dir_1L_chr = paste0(project_dir_1L_chr,"/content/en/docs/model/modules/using-modules/Programs"),
                        consent_1L_chr = "Y",
                        is_rmd_1L_lgl = F)
-write_to_render_post("Finding-Modules",
-                     path_to_main_dir_1L_chr = paste0(project_dir_1L_chr,"/content/en/docs/Model/Modules"),
+write_to_render_post("Individual",
+                     path_to_main_dir_1L_chr = paste0(project_dir_1L_chr,"/content/en/docs/Model/Modules/Finding"),
                      consent_1L_chr = "Y",
                      is_rmd_1L_lgl = F)
 # Render Dataset articles
-c("Ingest","Label-Data","Share-Data") %>%
-write_to_render_post(path_to_main_dir_1L_chr = paste0(project_dir_1L_chr,"/content/en/docs/framework/use/authoring-data"),
-                     consent_1L_chr = "Y",
-                     is_rmd_1L_lgl = F)
+# c("Ingest","Label-Data","Share-Data") %>%
+# write_to_render_post(path_to_main_dir_1L_chr = paste0(project_dir_1L_chr,"/content/en/docs/framework/use/authoring-data"),
+#                      consent_1L_chr = "Y",
+#                      is_rmd_1L_lgl = F)
 c("Search") %>%
   write_to_render_post(path_to_main_dir_1L_chr = paste0(project_dir_1L_chr,"/content/en/docs/model/datasets/Finding-Data"),
                        consent_1L_chr = "Y",
                        is_rmd_1L_lgl = F)
 # write_to_force_links_in(paste0(project_dir_1L_chr,"/content/en/docs/model/datasets/Finding-Data/Search/index.en.md"),
 #                         consent_1L_chr = "Y")
-# Render Analyses articles
-c("Scientific-Summaries") %>% # Do not evaluate write fns, add scroll text and then restore link to online RMD
-  write_to_render_post(path_to_main_dir_1L_chr = paste0(project_dir_1L_chr,"/content/en/docs/framework/use/authoring-analyses"),
-                       consent_1L_chr = "Y",
-                       is_rmd_1L_lgl = F)
 # Render program and sub-routine summaries
-c("Programs", # Check exclusions in RMD - may need to be updated.
-  "Subroutines"
+c("Find"#, # Check exclusions in RMD - may need to be updated.
+  #"Subroutines"
   ) %>%
-  write_to_render_post(paste0(project_dir_1L_chr,"/content/en/docs/software/Executables"),
+  write_to_render_post(paste0(project_dir_1L_chr,"/content/en/docs/Model/Analyses"),
+                       consent_1L_chr = "Y")
+c(#"Find"#, # Check exclusions in RMD - may need to be updated.
+  "Reporting"
+) %>%
+  write_to_render_post(paste0(project_dir_1L_chr,"/content/en/docs/Model"),
                        consent_1L_chr = "Y")
 c("Clinical-Primary") %>% # Do not evaluate write fns, add scroll text and then restore link to online RMD
   write_to_render_post(path_to_main_dir_1L_chr = paste0(project_dir_1L_chr,"/content/en/docs/model/analyses/Replication-Code/Make-Fakes"),
@@ -87,7 +68,7 @@ c("Clinical-Primary") %>% # Do not evaluate write fns, add scroll text and then 
 # Render release summaries
 c("Posters-Datasets",
   "Instructional-Datasets",
-  "Framework-Taxonomies"
+  #"Framework-Taxonomies"
   ) %>%
   write_to_render_post(paste0(project_dir_1L_chr,"/content/en/blog/releases/datasets"),
                        consent_1L_chr = "Y")
@@ -96,11 +77,11 @@ c("People-Datasets",
   ) %>%
   write_to_render_post(paste0(project_dir_1L_chr,"/content/en/blog/releases/datasets/model-data"),
                        consent_1L_chr = "Y")
-c("Framework-Libraries") %>%
-  write_to_render_post(paste0(project_dir_1L_chr,"/content/en/blog/releases/libraries"),
-                       consent_1L_chr = "Y")
+# c("Framework-Libraries") %>%
+#   write_to_render_post(paste0(project_dir_1L_chr,"/content/en/blog/releases/libraries"),
+#                        consent_1L_chr = "Y")
 c("People-Module-Libraries","Places-Module-Libraries") %>%
-  write_to_render_post(paste0(project_dir_1L_chr,"/content/en/blog/releases/libraries/module-libraries"),
+  write_to_render_post(paste0(project_dir_1L_chr,"/content/en/blog/releases/libraries"),
                        consent_1L_chr = "Y")
 c("Programs", # Check exclusions in RMD - may need to be updated.
   "Subroutines"

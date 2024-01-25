@@ -1,15 +1,15 @@
 
 ---
-title: "Model modules"
+title: "Modules"
 linkTitle: "Modules"
 date: 2017-01-05
-weight: 66
+weight: 1
 categories: 
 - Documentation
 tags: 
 - Model
 description: >
-  A ready4 [computational model](/docs/getting-started/concepts/model/) is implemented as a set of [modules](/docs/getting-started/concepts/module/), all of which are authored with the ready4 [software framework](/docs/framework/). These modules can be re-used and combined to create other computational models. 
+    readyforwhatsnext is comprised of four sub-models - one each for modelling the people, places, platforms and programs relevant to the mental health of young people. Each sub-model is comprised of model modules. These model modules can be re-used and combined to undertake multiple types of health economic analysis. 
 ---
 
 

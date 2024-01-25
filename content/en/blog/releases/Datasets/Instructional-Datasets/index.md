@@ -1,7 +1,7 @@
 ---
-title: "Synthetic (fake) datasets releases"
-linkTitle: "Fake datasets"
-date: "2023-11-30"
+title: "Toy (synthetic) datasets releases"
+linkTitle: "Toy datasets"
+date: "2024-01-25"
 description: "Releases of synthetic (fake) datasets used for teaching and demonstration."
 weight: 700
 categories: 
@@ -9,13 +9,13 @@ categories:
 tags: 
 - Data
 - Data - datasets
-- Data - datasets (fake)
+- Data - datasets (toy)
 output: hugodown::md_document
-rmd_hash: e6c79b7e83eeffac
+rmd_hash: 7d335be10eae739e
 
 ---
 
-Releases of the [datasets](/docs/model/datasets/) that are intended inputs or outputs of hypothetical applications of [modules](/docs/getting-started/concepts/module/) are reproduced below.
+Releases of the [datasets](/docs/model/datasets/) that are intended inputs or outputs of hypothetical applications of modules are reproduced below. Note these datasets are toy / fake / synthetic data and are for instructional uses only - they are not for use in models to inform decision making.
 
 <html>
 

@@ -10,7 +10,7 @@ tags:
 categories:
 - Documentation
 description: >
-  Our current list of priorities for the development of ready4 shape when and how we need your help.
+  Our current list of priorities for the development of readyforwhatsnext shape when and how we need your help.
 ---
 
 

@@ -1,7 +1,7 @@
 
 ---
-title: "Code to reproduce and/or replicate scientific studies"
-linkTitle: "Replication code"
+title: "Using readyforwhatsnext programs"
+linkTitle: "Use"
 date: 2017-01-05
 weight: 68
 tags:
@@ -13,6 +13,6 @@ tags:
 categories:
 - Documentation
 description: >
-  The code used when applying ready4 to a number of real world youth mental health policy and research projects is publicly available.
+  The code used when applying readyforwhatsnext modules to a number of real world youth mental health policy and research projects is publicly available for review and reuse.
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: "Datasets for modelling places releases"
 linkTitle: "Places datasets"
-date: "2023-11-30"
+date: "2024-01-25"
 description: "Releases of datasets used in conjunction with modules from the Springtides model of places."
 weight: 22
 categories: 
@@ -11,11 +11,11 @@ tags:
 - Data - datasets
 - Data - datasets (places)
 output: hugodown::md_document
-rmd_hash: eb1fe9bca0920736
+rmd_hash: cb537963def47414
 
 ---
 
-Releases of the [datasets](/docs/model/datasets/) that can be used with [modules](/docs/getting-started/concepts/module/) for [modelling places](/docs/model/modules/using-modules/places/) are reproduced below.
+Releases of the [datasets](/docs/model/datasets/) that can be used with modules for [modelling places](/docs/model/modules/using-modules/places/) are reproduced below.
 
 <html>
 

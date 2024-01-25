@@ -1,8 +1,8 @@
 ---
 title: "Add metadata to datasets of individual human records"
 linkTitle: "Describe data"
-date: "2023-10-20"
-description: "Appending appropriate metadata to datasets of individual unit records can facilitate partial automation of some modelling tasks. This tutorial describes how a module from the youthvars R package can help you to add metadata to a youth mental health dataset so that it can be more readily used by other ready4 modules."
+date: "2024-01-25"
+description: "Appending appropriate metadata to datasets of individual unit records can facilitate partial automation of some modelling tasks. This tutorial describes how a module from the youthvars R package can help you to add metadata to a youth mental health dataset so that it can be more readily used by other readyforwhatsnext modules."
 weight: 92
 categories: 
 - Documentation
@@ -18,7 +18,7 @@ tags:
 - Status
 - Status - development
 output: hugodown::md_document
-rmd_hash: 07c52043a5442975
+rmd_hash: d5f7a039386a70da
 
 ---
 

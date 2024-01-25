@@ -1,7 +1,7 @@
 ---
 title: "Posters dataset releases"
 linkTitle: "Posters dataset"
-date: "2023-11-30"
+date: "2024-01-25"
 description: "Releases of dataset of academic posters about ready4."
 weight: 800
 categories: 
@@ -11,7 +11,7 @@ tags:
 - Data - datasets
 - Data - datasets (posters)
 output: hugodown::md_document
-rmd_hash: 4c99e953c5fc7daf
+rmd_hash: 0daa8ef8ca4ae8b0
 
 ---
 

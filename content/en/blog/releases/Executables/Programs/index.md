@@ -1,7 +1,7 @@
 ---
 title: "Programs releases"
 linkTitle: "Programs"
-date: "2023-11-30"
+date: "2024-01-25"
 description: "Releases of programs for implementing modelling analyses."
 weight: 1
 categories: 
@@ -13,11 +13,11 @@ tags:
 - Software - executable 
 - Software - executable (programs)
 output: hugodown::md_document
-rmd_hash: 757bacdff228c6c2
+rmd_hash: d8b7d1c237af0b7f
 
 ---
 
-Currently available (as at 30-Nov-2023) releases of [analysis programs](/docs/model/analyses/replication-code/) are described below.
+Currently available (as at 25-Jan-2024) releases of [analysis programs](/docs/model/analyses/replication-code/) are described below.
 
 <html>
 

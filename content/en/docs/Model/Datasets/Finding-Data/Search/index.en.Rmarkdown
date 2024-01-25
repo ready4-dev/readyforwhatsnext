@@ -1,8 +1,8 @@
 ---
 title: "Search open access data collections"
-linkTitle: "Search"
+linkTitle: "Collections"
 date: "`r Sys.Date()`"
-description: "Online open access data repositories are the preferred storage locations for ready4 model datasets."
+description: "Online open access data repositories are the preferred storage locations for readyforwhatsnext model datasets."
 weight: 91
 categories: 
 - Documentation

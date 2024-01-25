@@ -1,5 +1,5 @@
 ---
-title: "ready4 Framework Blog"
+title: "readyforwhatsnext Blog"
 linkTitle: "Blog"
 menu:
   main:

@@ -1,0 +1,39 @@
+---
+output: html_document
+---
+
+```{r, include=FALSE}
+#source("../../../../../../../../R/Functions.R", local = knitr::knit_global())
+```
+
+A table summarising currently available readyforwhatsnext module libraries can be retrieved from an online repository by using the `get_libraries_tb` function from the [ready4 framework library](https://ready4-dev.github.io/ready4/).
+
+```{r include=T}
+library(ready4)
+```
+
+```{r include=T}
+libraries_tb <- get_libraries_tb() %>% update_libraries_tb(include_1L_chr = "modules")#make_libraries_tb("modules")
+```
+
+Module libraries are thematically grouped under one of four "sub-models" of readyforwhatsnext, one each for modelling [People](/docs/model/modules/using-modules/people/) (collectively, the "Spring To Life" sub-model), [Places](/docs/model/modules/using-modules/places/) (the "Springtides" sub-model), [Platforms](/docs/model/modules/using-modules/platforms/) (collectively, the "First Bounce" sub-model) and [Programs](/docs/model/modules/using-modules/programs/) (the "On Target" sub-model). We can use the `print_packages` function to display the module libraries currently available for each section (currently, there are no publicly available libraries of readyforwhatsnext modules for modelling platforms).
+
+### Module libraries for modelling people
+
+```{r echo=T}
+print_packages(libraries_tb %>% dplyr::filter(Section == "People"))
+```
+
+### Module libraries for modelling places
+
+```{r echo=T}
+print_packages(libraries_tb %>% dplyr::filter(Section == "Places"))
+```
+
+### Module libraries for modelling programs
+```{r, include=FALSE}
+source("../../../../../../../R/Functions.R", local = knitr::knit_global())
+```
+```{r echo=T}
+print_packages(libraries_tb %>% dplyr::filter(Section == "Programs"))
+```

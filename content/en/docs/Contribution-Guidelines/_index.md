@@ -8,5 +8,5 @@ tags:
 categories:
 - Documentation
 description: >
-  How to contribute to ready4's development.
+  How to contribute to readyforwhatsnext.
 ---

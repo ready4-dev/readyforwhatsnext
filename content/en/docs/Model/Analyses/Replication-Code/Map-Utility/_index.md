@@ -1,7 +1,7 @@
 
 ---
 title: "Model health utility"
-linkTitle: "Utility mapping"
+linkTitle: "Map utility"
 date: 2017-01-05
 weight: 67
 tags:

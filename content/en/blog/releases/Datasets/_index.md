@@ -11,4 +11,4 @@ tags:
 - Data - datasets
 ---
 
-All current and previous releases of framework, model, instructional and poster datasets.
+Current and previous releases of model, instructional and poster datasets.

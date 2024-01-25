@@ -9,7 +9,7 @@ tags:
 categories:
 - Documentation
 description: >
-  To foster an inclusive and respectful community, all contributors to ready4 are expected to adhere to the Contributor Covenant.
+  To foster an inclusive and respectful community, all contributors to readyforwhatsnext are expected to adhere to the Contributor Covenant.
 ---
 
 ## Our pledge

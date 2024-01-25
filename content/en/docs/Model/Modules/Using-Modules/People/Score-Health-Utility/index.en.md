@@ -1,7 +1,7 @@
 ---
 title: "Score health utility"
 linkTitle: "Score health utility"
-date: "2023-10-20"
+date: "2024-01-25"
 description: "Using modules from the scorz R package, individual responses to a multi-attribute utility instrument survey can be converted into health utility total scores. This tutorial describes how to do for adolescent AQoL-6D health utility."
 weight: 93
 categories: 
@@ -23,7 +23,7 @@ tags:
 - Use
 - Use - utility scoring
 output: hugodown::md_document
-rmd_hash: 823082e3b4859abf
+rmd_hash: 256adf337e32f529
 html_dependencies:
 - <script src="kePrint-0.0.1/kePrint.js"></script>
 - <link href="lightable-0.0.1/lightable.css" rel="stylesheet" />

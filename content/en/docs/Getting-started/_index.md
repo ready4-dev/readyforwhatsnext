@@ -7,6 +7,6 @@ categories:
 tags:
 - Project
 description: >
-  What you need to know to start using ready4.
+  What you need to know to start using readyforwhatsnext.
 ---
 

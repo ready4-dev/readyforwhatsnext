@@ -1,7 +1,7 @@
 ---
 title: "Subroutine releases"
 linkTitle: "Subroutines"
-date: "2023-11-30"
+date: "2024-01-25"
 description: "Releases of subroutines used in modelling analyses."
 weight: 1
 categories: 
@@ -13,11 +13,11 @@ tags:
 - Software - executable 
 - Software - executable (subroutines)
 output: hugodown::md_document
-rmd_hash: b488e7cf976372f9
+rmd_hash: cffb66d920e42ac4
 
 ---
 
-Currently available (as at 30-Nov-2023) releases of [subroutines](/docs/model/analyses/reporting-templates/) are described below.
+Currently available (as at 25-Jan-2024) releases of [subroutines](/docs/model/analyses/reporting-templates/) are described below.
 
 <html>
 

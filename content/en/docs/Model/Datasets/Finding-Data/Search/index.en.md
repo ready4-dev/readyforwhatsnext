@@ -1,8 +1,8 @@
 ---
 title: "Search open access data collections"
-linkTitle: "Search"
-date: "2023-11-30"
-description: "Online open access data repositories are the preferred storage locations for ready4 model datasets."
+linkTitle: "Collections"
+date: "2024-01-25"
+description: "Online open access data repositories are the preferred storage locations for readyforwhatsnext model datasets."
 weight: 91
 categories: 
 - Documentation
@@ -19,7 +19,7 @@ tags:
 - Status
 - Status - development
 output: hugodown::md_document
-rmd_hash: a5380ade891933a0
+rmd_hash: 8533ed3f07909fc2
 html_dependencies:
 - <script src="kePrint-0.0.1/kePrint.js"></script>
 - <link href="lightable-0.0.1/lightable.css" rel="stylesheet" />

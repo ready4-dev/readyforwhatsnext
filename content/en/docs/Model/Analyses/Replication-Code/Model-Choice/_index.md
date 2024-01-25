@@ -1,7 +1,7 @@
 
 ---
 title: "Model youth choices"
-linkTitle: "Choice Modelling"
+linkTitle: "Model choices"
 date: 2017-01-05
 weight: 67
 tags:

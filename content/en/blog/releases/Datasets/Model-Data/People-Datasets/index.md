@@ -1,7 +1,7 @@
 ---
 title: "Datasets for modelling people releases"
 linkTitle: "People datasets"
-date: "2023-11-30"
+date: "2024-01-25"
 description: "Releases of datasets used in conjunction with modules from the Spring To Life model of people."
 weight: 21
 categories: 
@@ -11,11 +11,11 @@ tags:
 - Data - datasets
 - Data - datasets (people)
 output: hugodown::md_document
-rmd_hash: 3a387e2818939869
+rmd_hash: 4edb98a2ff901526
 
 ---
 
-Releases of the [datasets](/docs/model/datasets/) that can be used with [modules](/docs/getting-started/concepts/module/) for [modelling people](/docs/model/modules/using-modules/people/) are reproduced below.
+Releases of the [datasets](/docs/model/datasets/) that can be used with modules for [modelling people](/docs/model/modules/using-modules/people/) are reproduced below.
 
 <html>
 

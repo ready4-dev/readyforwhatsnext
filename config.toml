@@ -177,17 +177,17 @@ enable = false
   name = "ready4 GitHub organisation"
   url = "https://github.com/ready4-dev"
   icon = "fab fa-github"
-  desc = "Contribute to the core ready4 codebase."
+  desc = "Contribute code to extend and improve readyforwhatsnext."
 [[params.links.developer]]
   name ="ready4 Zenodo community"
   url = "https://zenodo.org/communities/ready4/"
   icon = "fa fa-archive"
-  desc = "Share code from modelling projects that you implement with ready4."
+  desc = "Archive readyforwhatsnext code releases."
 [[params.links.developer]]
   name = "ready4 Dataverse"
   url = "https://dataverse.harvard.edu/dataverse/ready4"
   icon = "fa fa-database"
-  desc = "Access and share ready4 model datasets."
+  desc = "Access and share readyforwhatsnext model datasets."
 #[[params.links.developer]]
 #  name = "Developer mailing list"
 #  url = "https://example.org/mail"

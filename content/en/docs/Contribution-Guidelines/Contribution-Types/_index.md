@@ -10,6 +10,6 @@ tags:
 categories:
 - Documentation
 description: >
-  There are a number of ways you can contribute to ready4.
+  There are a number of ways you can contribute to readyforwhatsnext.
 ---
 

@@ -1,6 +1,6 @@
 
 ---
-title: "News About ready4"
+title: "News About readyforwhatsnext"
 linkTitle: "News"
 categories:
 - News

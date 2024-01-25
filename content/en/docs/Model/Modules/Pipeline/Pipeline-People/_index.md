@@ -4,7 +4,7 @@ linkTitle: "People"
 date: 2017-01-05
 weight: 999
 description: >
-  Current [unreleased](/docs/software/status/unreleased/) work to develop [modules](/docs/getting-started/concepts/module/) for modelling the characteristics, relationships, behaviours, risk factors and outcomes of young people and those important to them.
+  Current unreleased work to develop modules for modelling the characteristics, relationships, behaviours, risk factors and outcomes of young people and those important to them.
 categories: 
 - Documentation
 tags: 
@@ -22,4 +22,4 @@ Our current pipeline of modules for modelling people is principally focused on d
 
 - implementing agent based model simulations.
 
-A significant amount of work has already been completed on both projects and initial [development releases](/docs/software/status/development-releases/) of each, along with one scientific manuscript, are anticipated in late 2023 / early 2024.
+A significant amount of work has already been completed on both projects and initial development releases of each, along with one scientific manuscript, are anticipated in late 2023 / early 2024.

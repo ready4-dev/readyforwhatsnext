@@ -13,21 +13,21 @@ description: >
 ---
 
 ## What? 
-Test, improve or extend [our software](/docs/software/). This is essential to us achieving our following priority goals:
+Test, improve or extend our software. This is essential to us achieving our following priority goals:
 
-- Priority 1. [Launching the ready4 MVP systems model](/docs/contribution-guidelines/priorities/launch/).
+- Priority 1. [Launching the readyforwhatsnext MVP systems model](/docs/contribution-guidelines/priorities/launch/).
 
-- Priority 2. [Maintaining ready4](/docs/contribution-guidelines/priorities/curate/).
+- Priority 2. [Maintaining readyforwhatsnext](/docs/contribution-guidelines/priorities/curate/).
 
-- Priority 3. [Applying ready4](/docs/contribution-guidelines/priorities/apply/).
+- Priority 3. [Applying readyforwhatsnext](/docs/contribution-guidelines/priorities/apply/).
 
-- Priority 4. [Growing a ready4 community](/docs/contribution-guidelines/priorities/support/).
+- Priority 4. [Growing a readyforwhatsnext community](/docs/contribution-guidelines/priorities/support/).
 
 
 ## Who?
-To make a code contribution, you need to be a [coder](/docs/getting-started/users/coder/) familiar with R, R Markdown and git. You will also need a GitHub account. For many types of contribution, you will also need to use our [framework](/docs/framework/)'s module [authoring tools](/docs/framework/use/authoring-modules/). We have yet to adequately document and refine these tools to make them easier for third parties to use ([we plan to do this](/docs/contribution-guidelines/priorities/support/)), so if you are interested in making anything other than a relatively minor code edit, we recommend that you first [contact our project lead](https://mph-economist.netlify.app/#contact) to discuss your idea. 
+To make a code contribution, you need to be a coder familiar with R, R Markdown and git. You will also need a GitHub account. For many types of contribution, you will also need to use our [software framework](https://www.ready4-dev.com/). We have yet to adequately document and refine these tools to make them easier for third parties to use ([we plan to do this](/docs/contribution-guidelines/priorities/support/)), so if you are interested in making anything other than a relatively minor code edit, we recommend that you first [contact our project lead](https://mph-economist.netlify.app/#contact) to discuss your idea. 
 
-As a contributor to ready4, you will also be expected to adhere to the [![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-2.1-4baaaa.svg)](../../code-of-conduct/)
+As a contributor to readyforwhatsnext, you will also be expected to adhere to the [![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-2.1-4baaaa.svg)](../../code-of-conduct/)
 
 ## How ?
 The process for making a code contribution, broadly conforms to the steps we itemise below, that we have minimally adapted from [this template](https://opensource.com/life/16/3/contributor-guidelines-template-and-tips). If you need further help to make a contribution, you can contact the ready4 project lead directly.

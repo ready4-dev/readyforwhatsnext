@@ -1,7 +1,7 @@
 ---
 title: "Explore candidate utility mapping models"
 linkTitle: "Assess models"
-date: "2023-10-20"
+date: "2024-01-25"
 description: "Using modules from the specific R package, it is possible to undertake an exploratory utility mapping analysis. This tutorial illustrates a hypotehtical example of exploring how to map to EQ-5D health utility."
 weight: 95
 categories: 
@@ -22,7 +22,7 @@ tags:
 - Use
 - Use - utility mapping
 output: hugodown::md_document
-rmd_hash: 8aac675ba7a37211
+rmd_hash: 946cbe29ec4d0f7c
 html_dependencies:
 - <script src="kePrint-0.0.1/kePrint.js"></script>
 - <link href="lightable-0.0.1/lightable.css" rel="stylesheet" />
@@ -1257,12 +1257,12 @@ We can now write a number of sub-directories to our specified output directory.
 
 <pre class='chroma'><code class='language-r' data-lang='r'><span><span class='nv'>X</span> <span class='o'>&lt;-</span> <span class='nf'><a href='https://ready4-dev.github.io/ready4/reference/author-methods.html'>author</a></span><span class='o'>(</span><span class='nv'>X</span>, what_1L_chr <span class='o'>=</span> <span class='s'>"workspace"</span>, consent_1L_chr <span class='o'>=</span> <span class='nv'>consent_1L_chr</span><span class='o'>)</span></span>
 <span><span class='c'>#&gt; New directories created:</span></span>
-<span><span class='c'>#&gt; C:\Users\mham0053\AppData\Local\Temp\RtmpQBtivk/Fake</span></span>
-<span><span class='c'>#&gt; C:\Users\mham0053\AppData\Local\Temp\RtmpQBtivk/Fake/Markdown</span></span>
-<span><span class='c'>#&gt; C:\Users\mham0053\AppData\Local\Temp\RtmpQBtivk/Fake/Output</span></span>
-<span><span class='c'>#&gt; C:\Users\mham0053\AppData\Local\Temp\RtmpQBtivk/Fake/Reports</span></span>
-<span><span class='c'>#&gt; C:\Users\mham0053\AppData\Local\Temp\RtmpQBtivk/Fake/Output/_Descriptives</span></span>
-<span><span class='c'>#&gt; C:\Users\mham0053\AppData\Local\Temp\RtmpQBtivk/Fake/Output/H_Dataverse</span></span>
+<span><span class='c'>#&gt; C:\Users\mham0053\AppData\Local\Temp\Rtmpwd7Csj/Fake</span></span>
+<span><span class='c'>#&gt; C:\Users\mham0053\AppData\Local\Temp\Rtmpwd7Csj/Fake/Markdown</span></span>
+<span><span class='c'>#&gt; C:\Users\mham0053\AppData\Local\Temp\Rtmpwd7Csj/Fake/Output</span></span>
+<span><span class='c'>#&gt; C:\Users\mham0053\AppData\Local\Temp\Rtmpwd7Csj/Fake/Reports</span></span>
+<span><span class='c'>#&gt; C:\Users\mham0053\AppData\Local\Temp\Rtmpwd7Csj/Fake/Output/_Descriptives</span></span>
+<span><span class='c'>#&gt; C:\Users\mham0053\AppData\Local\Temp\Rtmpwd7Csj/Fake/Output/H_Dataverse</span></span>
 <span></span></code></pre>
 
 </div>

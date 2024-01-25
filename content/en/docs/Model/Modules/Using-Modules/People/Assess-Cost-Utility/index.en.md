@@ -1,7 +1,7 @@
 ---
 title: "Use utility mapping algorithms to help implement cost-utility analyses"
 linkTitle: "Assess cost-utility"
-date: "2023-10-20"
+date: "2024-01-25"
 description: "Using tools (soon to be formalised into ready4 framework modules) from the youthu R package, it is possible to use utility mapping algorithms to help implement cost-utility analyses. This tutorial illustrates the main steps for doing so using psychological and functional measures collected on clinical samples of young people."
 weight: 97
 categories: 
@@ -22,7 +22,7 @@ tags:
 - Use - cost-utility
 - Use - utility mapping
 output: hugodown::md_document
-rmd_hash: 2a06a88904fb0d04
+rmd_hash: fc3938ff63ba2a6c
 html_dependencies:
 - <script src="kePrint-0.0.1/kePrint.js"></script>
 - <link href="lightable-0.0.1/lightable.css" rel="stylesheet" />
@@ -114,7 +114,7 @@ Participant_20
 Baseline
 </td>
 <td style="text-align:right;">
-2023-03-15
+2023-06-20
 </td>
 <td style="text-align:right;">
 0S
@@ -143,7 +143,7 @@ Participant_593
 Baseline
 </td>
 <td style="text-align:right;">
-2023-01-20
+2023-04-27
 </td>
 <td style="text-align:right;">
 0S
@@ -172,7 +172,7 @@ Participant_593
 Follow-up
 </td>
 <td style="text-align:right;">
-2023-07-14
+2023-10-19
 </td>
 <td style="text-align:right;">
 175d 0H 0M 0S
@@ -201,7 +201,7 @@ Participant_20
 Follow-up
 </td>
 <td style="text-align:right;">
-2023-09-09
+2023-12-15
 </td>
 <td style="text-align:right;">
 178d 0H 0M 0S
@@ -230,7 +230,7 @@ Participant_259
 Baseline
 </td>
 <td style="text-align:right;">
-2023-05-10
+2023-08-15
 </td>
 <td style="text-align:right;">
 0S
@@ -259,7 +259,7 @@ Participant_962
 Baseline
 </td>
 <td style="text-align:right;">
-2023-06-22
+2023-09-27
 </td>
 <td style="text-align:right;">
 0S
@@ -517,10 +517,10 @@ Control
 243
 </td>
 <td style="text-align:right;">
-2022-12-29
+2023-04-05
 </td>
 <td style="text-align:right;">
-2023-06-24
+2023-09-29
 </td>
 <td style="text-align:right;">
 0S
@@ -588,10 +588,10 @@ Control
 191
 </td>
 <td style="text-align:right;">
-2023-02-24
+2023-06-01
 </td>
 <td style="text-align:right;">
-2023-08-27
+2023-12-02
 </td>
 <td style="text-align:right;">
 0S
@@ -659,10 +659,10 @@ Intervention
 230
 </td>
 <td style="text-align:right;">
-2023-01-19
+2023-04-26
 </td>
 <td style="text-align:right;">
-2023-07-17
+2023-10-22
 </td>
 <td style="text-align:right;">
 0S
@@ -730,10 +730,10 @@ Intervention
 115
 </td>
 <td style="text-align:right;">
-2023-02-17
+2023-05-25
 </td>
 <td style="text-align:right;">
-2023-08-18
+2023-11-23
 </td>
 <td style="text-align:right;">
 0S
@@ -801,10 +801,10 @@ Intervention
 183
 </td>
 <td style="text-align:right;">
-2023-05-21
+2023-08-26
 </td>
 <td style="text-align:right;">
-2023-11-23
+2024-02-28
 </td>
 <td style="text-align:right;">
 0S
@@ -872,10 +872,10 @@ Intervention
 219
 </td>
 <td style="text-align:right;">
-2023-06-16
+2023-09-21
 </td>
 <td style="text-align:right;">
-2023-12-12
+2024-03-18
 </td>
 <td style="text-align:right;">
 0S
@@ -977,7 +977,7 @@ As part of the output of the `make_hlth_ec_smry` function is a BCEA object, we c
 <span>          theme <span class='o'>=</span> <span class='nf'>ggplot2</span><span class='nf'>::</span><span class='nf'><a href='https://ggplot2.tidyverse.org/reference/ggtheme.html'>theme_light</a></span><span class='o'>(</span><span class='o'>)</span><span class='o'>)</span></span>
 <span><span class='c'>#&gt; Warning: Duplicated aesthetics after name standardisation: <span style='color: #00BB00;'>colour</span></span></span>
 <span></span></code></pre>
-<img src="figs/unnamed-chunk-14-1.png" width="700px" style="display: block; margin: auto;" />
+<img src="figs/unnamed-chunk-16-1.png" width="700px" style="display: block; margin: auto;" />
 
 </div>
 
