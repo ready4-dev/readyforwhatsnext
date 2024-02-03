@@ -21,9 +21,9 @@ rmd_hash: 0c831052bae85774
 
 ## Before you install
 
-If you plan on using existing readyforwhatsnext modules for a modelling project, you can review [currently available module libraries](/docs/model/modules/finding/libraries/), to identify which libraries are relevant to your project.
+If you plan on using existing readyforwhatsnext modules for a modelling project, you can review [currently available module libraries](/docs/tutorials/finding/libraries/), to identify which libraries are relevant to your project.
 
-**However, please note that no readyforwhatsnext module library is yet available as a \[production release\](<https://www.ready4-dev.com/docs/software/status/production-releases/>. You should therefore understand the limitations of using readyforwhatsnext model software [development releases](https://www.ready4-dev.com/docs/software/status/development-releases/) before you make the decision to install this software.**
+**However, please note that no readyforwhatsnext module library is yet available as a [production release](https://www.ready4-dev.com/docs/software/status/production-releases/). You should therefore understand the limitations of using readyforwhatsnext model software [development releases](https://www.ready4-dev.com/docs/software/status/development-releases/) before you make the decision to install this software.**
 
 ## Installation
 

@@ -1,5 +1,5 @@
 ---
-title: "Contribution types"
+title: "How to help"
 linkTitle: "Types"
 date: 2017-01-05
 weight: 3

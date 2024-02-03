@@ -1,0 +1,39 @@
+---
+title: "Validate variable total scores"
+linkTitle: "Validate data"
+date: "`r Sys.Date()`"
+description: "Vector based classes can be used to help validate variable values. This tutorial describes how to do that with sub-module classes exported as part of the youthvars R package."
+weight: 90
+categories: 
+- Documentation
+tags:
+- Data - management
+- Data - metadata
+- Model
+- Model - modules
+- Model - modules (people)
+- Software
+- Software - libraries
+- Software - libraries (youthvars)
+- Status
+- Status - development
+output: hugodown::md_document
+---
+
+
+{{% pageinfo %}}
+This below section renders a vignette article from the youthvars library. You can use the following links to:
+
+* [view the vignette on the library website (adds useful hyperlinks to code blocks)](https://ready4-dev.github.io/youthvars/articles/V_01.html)
+* [view the source file](https://github.com/ready4-dev/youthvars/blob/main/vignettes/V_01.Rmd) from that article, and;
+* [edit its contents](https://github.com/ready4-dev/youthvars/edit/main/vignettes/V_01.Rmd) (requires a GitHub account).
+{{% /pageinfo %}}
+
+```{r echo=FALSE, results='hide'}
+x <- tempfile(fileext = "Rmd")
+on.exit(unlink(x))
+download.file("https://raw.githubusercontent.com/ready4-dev/youthvars/master/vignettes/V_01.Rmd", x)
+```
+
+```{r test-main, child=x}
+```

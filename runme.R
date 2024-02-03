@@ -67,7 +67,7 @@ c("Clinical-Primary") %>% # Do not evaluate write fns, add scroll text and then 
 ### BLOG SECTION
 # Render release summaries
 c("Posters-Datasets",
-  "Instructional-Datasets",
+  "Instructional-Datasets"#,
   #"Framework-Taxonomies"
   ) %>%
   write_to_render_post(paste0(project_dir_1L_chr,"/content/en/blog/releases/datasets"),
