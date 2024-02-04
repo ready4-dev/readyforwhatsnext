@@ -14,7 +14,7 @@ description: >
 readyforwhatsnext is a prototype modular and open source economic model of youth mental health that is being implemented in R. The project is led by [researchers at Monash University](/about/). 
 
 ## What makes readyforwhatsnext model modular?
-readyforwhatsnext is developed with the [ready4](https://www.ready4-dev.com/) - a software framework for transparent, reusable and updatable health economic models. The model is comprised of four [sub-models](/docs/getting-started/model/). Each sub-model is comprised of model [modules](/docs/tutorials/finding/libraries/) that can be independently reused (e.g., in other models) and safely and flexibly combined (e.g., to model more extensive systems).
+readyforwhatsnext is developed with [ready4](https://www.ready4-dev.com/) - a software framework for transparent, reusable and updatable health economic models. The model is comprised of four [sub-models](/docs/getting-started/model/). Each sub-model is comprised of model [modules](/docs/tutorials/finding/libraries/) that can be independently reused (e.g., in other models) and safely and flexibly combined (e.g., to model more extensive systems).
 
 ## What is it being used for?
 Currently, readyforwhatsnext is being applied to explore [multiple economic topics in youth mental health](/docs/examples/).

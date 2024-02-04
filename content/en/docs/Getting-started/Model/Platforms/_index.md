@@ -3,6 +3,8 @@ title: "Modules for modelling platforms"
 linkTitle: "Platforms"
 date: 2017-01-05
 weight: 93
+aliases:
+- /docs/model/modules/using-modules/platforms/
 categories: 
 - Documentation
 tags: 

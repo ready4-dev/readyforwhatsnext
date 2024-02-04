@@ -3,6 +3,8 @@ title: "Modules for modelling programs"
 linkTitle: "Programs"
 date: 2017-01-05
 weight: 94
+aliases:
+- /docs/model/modules/using-modules/programs/
 categories: 
 - Documentation
 tags: 

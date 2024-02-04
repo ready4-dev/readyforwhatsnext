@@ -3,6 +3,8 @@ title: "Modules for modelling places"
 linkTitle: "Places"
 date: 2017-01-05
 weight: 92
+aliases:
+- /docs/model/modules/using-modules/places/
 categories: 
 - Documentation
 tags: 

@@ -3,6 +3,8 @@ title: "Modules for modelling people"
 linkTitle: "People"
 date: 2017-01-05
 weight: 91
+aliases:
+- /docs/model/modules/using-modules/people/
 categories: 
 - Documentation
 tags: 

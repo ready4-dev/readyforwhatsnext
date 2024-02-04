@@ -4,6 +4,8 @@ linkTitle: "Libraries"
 date: "`r Sys.Date()`"
 description: "Bundles of readyforwhatsnext modules are distributed as R libraries."
 weight: 4
+aliases:
+- /docs/model/modules/
 categories: 
 - Documentation
 tags: 

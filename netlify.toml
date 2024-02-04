@@ -9,3 +9,32 @@
 [context.deploy-preview.environment]
   command = "hugo --baseURL $DEPLOY_PRIME_URL"
 
+[[redirects]]
+from = "/docs/model/modules/using-modules/people/*" 
+to = "/docs/tutorials/using-modules/:splat"
+status = 301
+
+[[redirects]]
+from = "/docs/model/modules/using-modules/programs/*" 
+to = "/docs/tutorials/using-modules/:splat"
+status = 301
+
+[[redirects]]
+from = "/docs/model/modules/pipeline/*" 
+to = "/docs/getting-started/pipeline/:splat"
+status = 301
+
+[[redirects]]
+from = "/docs/model/decision-aids/*" 
+to = "/docs/decision-aids/:splat"
+status = 301
+
+[[redirects]]
+from = "/docs/model/analyses/*" 
+to = "/docs/analyses/:splat"
+status = 301
+
+[[redirects]]
+from = "/docs/model/reporting/*" 
+to = "/docs/reporting/:splat"
+status = 301
