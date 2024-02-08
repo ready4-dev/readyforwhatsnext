@@ -4,6 +4,8 @@ linkTitle: "Predict choice"
 date: "`r Sys.Date()`"
 description: "Using tools (soon to be formalised into ready4 framework modules) from the mychoice R package, it is possible to develop choice models from responses to a discrete choice experiment survey."
 weight: 97
+toc_hide: true
+hide_summary: true
 categories: 
 - Documentation
 tags: 

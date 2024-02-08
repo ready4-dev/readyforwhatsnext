@@ -1,6 +1,6 @@
 ---
-title: "Subroutines (reporting templates)"
-linkTitle: "Subroutines"
+title: "Subroutines to generate reports from a template"
+linkTitle: "Reporting templates"
 date: "2024-01-25"
 description: "Subroutines perform part of an analysis and reporting algorithm."
 weight: 102

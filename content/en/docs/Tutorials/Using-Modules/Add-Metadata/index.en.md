@@ -1,6 +1,6 @@
 ---
 title: "Add metadata to datasets of individual human records"
-linkTitle: "Describe data"
+linkTitle: "Describe datasets"
 date: "2024-01-25"
 description: "Appending appropriate metadata to datasets of individual unit records can facilitate partial automation of some modelling tasks. This tutorial describes how a module from the youthvars R package can help you to add metadata to a youth mental health dataset so that it can be more readily used by other readyforwhatsnext modules."
 weight: 10

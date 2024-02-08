@@ -1,7 +1,7 @@
 
 ---
 title: "Use readyforwhastsnext model modules"
-linkTitle: "Use"
+linkTitle: "Use modules"
 date: 2017-01-05
 weight: 2
 aliases: 

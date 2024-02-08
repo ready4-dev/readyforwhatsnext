@@ -1,6 +1,6 @@
 ---
 title: "Validate variable total scores"
-linkTitle: "Validate data"
+linkTitle: "Validate variables"
 date: "2024-01-25"
 description: "Vector based classes can be used to help validate variable values. This tutorial describes how to do that with sub-module classes exported as part of the youthvars R package."
 weight: 90

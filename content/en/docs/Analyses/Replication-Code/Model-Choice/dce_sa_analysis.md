@@ -38,7 +38,7 @@ This below section embeds a PDF version of an R Markdown program. The following 
 <script src="https://documentservices.adobe.com/view-sdk/viewer.js"></script>
 <script type="text/javascript">
 	document.addEventListener("adobe_dc_view_sdk.ready", function(){ 
-		var adobeDCView = new AdobeDC.View({clientId: "d7d86c443e2b45c1b43c7db36ad50bf3", divId: "adobe-dc-view"});
+		var adobeDCView = new AdobeDC.View({clientId: "87012e61f32a48448278e5456b4bb51b", divId: "adobe-dc-view"});
 		adobeDCView.previewFile({
 			content:{location: {url: "https://raw.githubusercontent.com/ready4-dev/dce_sa_design/main/PDFs/CSDP.pdf"}},
 			metaData:{fileName: "Bodea Brochure.pdf"}
