@@ -1,7 +1,7 @@
 ---
 title: "Explore candidate utility mapping models"
 linkTitle: "Assess models"
-date: "2024-01-25"
+date: "2024-02-08"
 description: "Using modules from the specific R package, it is possible to undertake an exploratory utility mapping analysis. This tutorial illustrates a hypotehtical example of exploring how to map to EQ-5D health utility."
 weight: 95
 categories: 
@@ -102,7 +102,7 @@ The dataset we are using has a total of 1786 records at two timepoints on 1068 s
 
 <div style="border: 1px solid #ddd; padding: 5px; overflow-x: scroll; width:100%; ">
 
-<table class=" lightable-paper lightable-hover lightable-paper" style="font-family: &quot;Arial Narrow&quot;, arial, helvetica, sans-serif; width: auto !important; margin-left: auto; margin-right: auto;border-bottom: 0; font-family: &quot;Arial Narrow&quot;, arial, helvetica, sans-serif; margin-left: auto; margin-right: auto;">
+<table class=" lightable-paper lightable-hover lightable-paper" style="color: black; font-family: &quot;Arial Narrow&quot;, arial, helvetica, sans-serif; width: auto !important; margin-left: auto; margin-right: auto;border-bottom: 0; color: black; font-family: &quot;Arial Narrow&quot;, arial, helvetica, sans-serif; margin-left: auto; margin-right: auto;">
 <caption>
 Dataset
 </caption>
@@ -633,7 +633,7 @@ The `specific_predictors` object that we have added to `X` can be inspected usin
 
 <div style="border: 1px solid #ddd; padding: 5px; overflow-x: scroll; width:100%; ">
 
-<table class=" lightable-paper lightable-hover lightable-paper" style="font-family: &quot;Arial Narrow&quot;, arial, helvetica, sans-serif; width: auto !important; margin-left: auto; margin-right: auto;border-bottom: 0; font-family: &quot;Arial Narrow&quot;, arial, helvetica, sans-serif; margin-left: auto; margin-right: auto;">
+<table class=" lightable-paper lightable-hover lightable-paper" style="color: black; font-family: &quot;Arial Narrow&quot;, arial, helvetica, sans-serif; width: auto !important; margin-left: auto; margin-right: auto;border-bottom: 0; color: black; font-family: &quot;Arial Narrow&quot;, arial, helvetica, sans-serif; margin-left: auto; margin-right: auto;">
 <thead>
 <tr>
 <th style="text-align:left;">
@@ -797,7 +797,7 @@ However, we also need to specify the name of the variable that contains the date
 
 <div style="border: 1px solid #ddd; padding: 5px; overflow-x: scroll; width:100%; ">
 
-<table class=" lightable-paper lightable-hover lightable-paper" style="font-family: &quot;Arial Narrow&quot;, arial, helvetica, sans-serif; width: auto !important; margin-left: auto; margin-right: auto;border-bottom: 0; font-family: &quot;Arial Narrow&quot;, arial, helvetica, sans-serif; margin-left: auto; margin-right: auto;">
+<table class=" lightable-paper lightable-hover lightable-paper" style="color: black; font-family: &quot;Arial Narrow&quot;, arial, helvetica, sans-serif; width: auto !important; margin-left: auto; margin-right: auto;border-bottom: 0; color: black; font-family: &quot;Arial Narrow&quot;, arial, helvetica, sans-serif; margin-left: auto; margin-right: auto;">
 <caption>
 Model types lookup table
 </caption>
@@ -1257,12 +1257,12 @@ We can now write a number of sub-directories to our specified output directory.
 
 <pre class='chroma'><code class='language-r' data-lang='r'><span><span class='nv'>X</span> <span class='o'>&lt;-</span> <span class='nf'><a href='https://ready4-dev.github.io/ready4/reference/author-methods.html'>author</a></span><span class='o'>(</span><span class='nv'>X</span>, what_1L_chr <span class='o'>=</span> <span class='s'>"workspace"</span>, consent_1L_chr <span class='o'>=</span> <span class='nv'>consent_1L_chr</span><span class='o'>)</span></span>
 <span><span class='c'>#&gt; New directories created:</span></span>
-<span><span class='c'>#&gt; C:\Users\mham0053\AppData\Local\Temp\Rtmpwd7Csj/Fake</span></span>
-<span><span class='c'>#&gt; C:\Users\mham0053\AppData\Local\Temp\Rtmpwd7Csj/Fake/Markdown</span></span>
-<span><span class='c'>#&gt; C:\Users\mham0053\AppData\Local\Temp\Rtmpwd7Csj/Fake/Output</span></span>
-<span><span class='c'>#&gt; C:\Users\mham0053\AppData\Local\Temp\Rtmpwd7Csj/Fake/Reports</span></span>
-<span><span class='c'>#&gt; C:\Users\mham0053\AppData\Local\Temp\Rtmpwd7Csj/Fake/Output/_Descriptives</span></span>
-<span><span class='c'>#&gt; C:\Users\mham0053\AppData\Local\Temp\Rtmpwd7Csj/Fake/Output/H_Dataverse</span></span>
+<span><span class='c'>#&gt; C:\Users\mham0053\AppData\Local\Temp\RtmpWkpbqI/Fake</span></span>
+<span><span class='c'>#&gt; C:\Users\mham0053\AppData\Local\Temp\RtmpWkpbqI/Fake/Markdown</span></span>
+<span><span class='c'>#&gt; C:\Users\mham0053\AppData\Local\Temp\RtmpWkpbqI/Fake/Output</span></span>
+<span><span class='c'>#&gt; C:\Users\mham0053\AppData\Local\Temp\RtmpWkpbqI/Fake/Reports</span></span>
+<span><span class='c'>#&gt; C:\Users\mham0053\AppData\Local\Temp\RtmpWkpbqI/Fake/Output/_Descriptives</span></span>
+<span><span class='c'>#&gt; C:\Users\mham0053\AppData\Local\Temp\RtmpWkpbqI/Fake/Output/H_Dataverse</span></span>
 <span></span></code></pre>
 
 </div>
@@ -1313,7 +1313,7 @@ The `investigate` method also outputs a table summarising the performance of eac
 
 <pre class='chroma'><code class='language-r' data-lang='r'><span><span class='nf'><a href='https://ready4-dev.github.io/ready4/reference/exhibit-methods.html'>exhibit</a></span><span class='o'>(</span><span class='nv'>X</span>, what_1L_chr <span class='o'>=</span> <span class='s'>"mdl_cmprsn"</span>, type_1L_chr <span class='o'>=</span> <span class='s'>"results"</span><span class='o'>)</span> </span>
 </code></pre>
-<table class=" lightable-paper lightable-hover" style="font-family: &quot;Arial Narrow&quot;, arial, helvetica, sans-serif; width: auto !important; margin-left: auto; margin-right: auto;border-bottom: 0;">
+<table class=" lightable-paper lightable-hover" style="color: black; font-family: &quot;Arial Narrow&quot;, arial, helvetica, sans-serif; width: auto !important; margin-left: auto; margin-right: auto;border-bottom: 0;">
 <caption>
 Comparison of candidate models using highest correlated predictor
 </caption>
@@ -1520,7 +1520,7 @@ Now, we compare the performance of single predictor models of our preferred mode
 
 <div style="border: 1px solid #ddd; padding: 5px; overflow-x: scroll; width:100%; ">
 
-<table class=" lightable-paper lightable-hover lightable-paper" style="font-family: &quot;Arial Narrow&quot;, arial, helvetica, sans-serif; width: auto !important; margin-left: auto; margin-right: auto;border-bottom: 0; font-family: &quot;Arial Narrow&quot;, arial, helvetica, sans-serif; margin-left: auto; margin-right: auto;">
+<table class=" lightable-paper lightable-hover lightable-paper" style="color: black; font-family: &quot;Arial Narrow&quot;, arial, helvetica, sans-serif; width: auto !important; margin-left: auto; margin-right: auto;border-bottom: 0; color: black; font-family: &quot;Arial Narrow&quot;, arial, helvetica, sans-serif; margin-left: auto; margin-right: auto;">
 <caption>
 Comparison of all candidate predictors using preferred model
 </caption>
@@ -1580,7 +1580,7 @@ The most recent call to the `investigate` method also saved single predictor R m
 
 <pre class='chroma'><code class='language-r' data-lang='r'><span><span class='nf'><a href='https://ready4-dev.github.io/ready4/reference/exhibit-methods.html'>exhibit</a></span><span class='o'>(</span><span class='nv'>X</span>, type_1L_chr <span class='o'>=</span> <span class='s'>"results"</span>, what_1L_chr <span class='o'>=</span> <span class='s'>"fxd_sngl_cmprsn"</span><span class='o'>)</span></span>
 </code></pre>
-<table class=" lightable-paper lightable-hover" style="font-family: &quot;Arial Narrow&quot;, arial, helvetica, sans-serif; width: auto !important; margin-left: auto; margin-right: auto;border-bottom: 0;">
+<table class=" lightable-paper lightable-hover" style="color: black; font-family: &quot;Arial Narrow&quot;, arial, helvetica, sans-serif; width: auto !important; margin-left: auto; margin-right: auto;border-bottom: 0;">
 <caption>
 Preferred single predictor model performance by candidate predictor
 </caption>

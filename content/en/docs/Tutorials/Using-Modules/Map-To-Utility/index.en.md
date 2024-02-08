@@ -1,7 +1,7 @@
 ---
 title: "Implement a utility mapping study"
 linkTitle: "Map to utility"
-date: "2024-01-25"
+date: "2024-02-08"
 description: "Using modules from the TTU R package, it is possible to implement a fully reproducible utility mapping study. This tutorial illustrates the main steps using a hypothetical AQoL-6D utility mapping study."
 weight: 95
 categories: 

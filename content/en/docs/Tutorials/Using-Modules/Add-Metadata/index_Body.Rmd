@@ -1,0 +1,13 @@
+---
+output: html_document
+---
+
+```{r echo=FALSE, results='hide'}
+# x <- "UntitledRMD.Rmd"
+x <- tempfile(fileext = "Rmd")
+on.exit(unlink(x))
+download.file("https://raw.githubusercontent.com/ready4-dev/youthvars/master/vignettes/V_02.Rmd", x)
+```
+
+```{r test-main, child=x}
+```

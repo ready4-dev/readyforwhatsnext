@@ -1,0 +1,1803 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="utf-8" />
+<meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+
+
+<title>Describe And Disseminate Youth Mental Health Datasets</title>
+
+<script>// Pandoc 2.9 adds attributes on both header and div. We remove the former (to
+// be compatible with the behavior of Pandoc < 2.8).
+document.addEventListener('DOMContentLoaded', function(e) {
+  var hs = document.querySelectorAll("div.section[class*='level'] > :first-child");
+  var i, h, a;
+  for (i = 0; i < hs.length; i++) {
+    h = hs[i];
+    if (!/^h[1-6]$/i.test(h.tagName)) continue;  // it should be a header h1-h6
+    a = h.attributes;
+    while (a.length > 0) h.removeAttribute(a[0].name);
+  }
+});
+</script>
+<script>$(document).ready(function(){
+    if (typeof $('[data-toggle="tooltip"]').tooltip === 'function') {
+        $('[data-toggle="tooltip"]').tooltip();
+    }
+    if ($('[data-toggle="popover"]').popover === 'function') {
+        $('[data-toggle="popover"]').popover();
+    }
+});
+</script>
+<style type="text/css">
+.lightable-minimal {
+border-collapse: separate;
+border-spacing: 16px 1px;
+width: 100%;
+margin-bottom: 10px;
+}
+.lightable-minimal td {
+margin-left: 5px;
+margin-right: 5px;
+}
+.lightable-minimal th {
+margin-left: 5px;
+margin-right: 5px;
+}
+.lightable-minimal thead tr:last-child th {
+border-bottom: 2px solid #00000050;
+empty-cells: hide;
+}
+.lightable-minimal tbody tr:first-child td {
+padding-top: 0.5em;
+}
+.lightable-minimal.lightable-hover tbody tr:hover {
+background-color: #f5f5f5;
+}
+.lightable-minimal.lightable-striped tbody tr:nth-child(even) {
+background-color: #f5f5f5;
+}
+.lightable-classic {
+border-top: 0.16em solid #111111;
+border-bottom: 0.16em solid #111111;
+width: 100%;
+margin-bottom: 10px;
+margin: 10px 5px;
+}
+.lightable-classic tfoot tr td {
+border: 0;
+}
+.lightable-classic tfoot tr:first-child td {
+border-top: 0.14em solid #111111;
+}
+.lightable-classic caption {
+color: #222222;
+}
+.lightable-classic td {
+padding-left: 5px;
+padding-right: 5px;
+color: #222222;
+}
+.lightable-classic th {
+padding-left: 5px;
+padding-right: 5px;
+font-weight: normal;
+color: #222222;
+}
+.lightable-classic thead tr:last-child th {
+border-bottom: 0.10em solid #111111;
+}
+.lightable-classic.lightable-hover tbody tr:hover {
+background-color: #F9EEC1;
+}
+.lightable-classic.lightable-striped tbody tr:nth-child(even) {
+background-color: #f5f5f5;
+}
+.lightable-classic-2 {
+border-top: 3px double #111111;
+border-bottom: 3px double #111111;
+width: 100%;
+margin-bottom: 10px;
+}
+.lightable-classic-2 tfoot tr td {
+border: 0;
+}
+.lightable-classic-2 tfoot tr:first-child td {
+border-top: 3px double #111111;
+}
+.lightable-classic-2 caption {
+color: #222222;
+}
+.lightable-classic-2 td {
+padding-left: 5px;
+padding-right: 5px;
+color: #222222;
+}
+.lightable-classic-2 th {
+padding-left: 5px;
+padding-right: 5px;
+font-weight: normal;
+color: #222222;
+}
+.lightable-classic-2 tbody tr:last-child td {
+border-bottom: 3px double #111111;
+}
+.lightable-classic-2 thead tr:last-child th {
+border-bottom: 1px solid #111111;
+}
+.lightable-classic-2.lightable-hover tbody tr:hover {
+background-color: #F9EEC1;
+}
+.lightable-classic-2.lightable-striped tbody tr:nth-child(even) {
+background-color: #f5f5f5;
+}
+.lightable-material {
+min-width: 100%;
+white-space: nowrap;
+table-layout: fixed;
+font-family: Roboto, sans-serif;
+border: 1px solid #EEE;
+border-collapse: collapse;
+margin-bottom: 10px;
+}
+.lightable-material tfoot tr td {
+border: 0;
+}
+.lightable-material tfoot tr:first-child td {
+border-top: 1px solid #EEE;
+}
+.lightable-material th {
+height: 56px;
+padding-left: 16px;
+padding-right: 16px;
+}
+.lightable-material td {
+height: 52px;
+padding-left: 16px;
+padding-right: 16px;
+border-top: 1px solid #eeeeee;
+}
+.lightable-material.lightable-hover tbody tr:hover {
+background-color: #f5f5f5;
+}
+.lightable-material.lightable-striped tbody tr:nth-child(even) {
+background-color: #f5f5f5;
+}
+.lightable-material.lightable-striped tbody td {
+border: 0;
+}
+.lightable-material.lightable-striped thead tr:last-child th {
+border-bottom: 1px solid #ddd;
+}
+.lightable-material-dark {
+min-width: 100%;
+white-space: nowrap;
+table-layout: fixed;
+font-family: Roboto, sans-serif;
+border: 1px solid #FFFFFF12;
+border-collapse: collapse;
+margin-bottom: 10px;
+background-color: #363640;
+}
+.lightable-material-dark tfoot tr td {
+border: 0;
+}
+.lightable-material-dark tfoot tr:first-child td {
+border-top: 1px solid #FFFFFF12;
+}
+.lightable-material-dark th {
+height: 56px;
+padding-left: 16px;
+padding-right: 16px;
+color: #FFFFFF60;
+}
+.lightable-material-dark td {
+height: 52px;
+padding-left: 16px;
+padding-right: 16px;
+color: #FFFFFF;
+border-top: 1px solid #FFFFFF12;
+}
+.lightable-material-dark.lightable-hover tbody tr:hover {
+background-color: #FFFFFF12;
+}
+.lightable-material-dark.lightable-striped tbody tr:nth-child(even) {
+background-color: #FFFFFF12;
+}
+.lightable-material-dark.lightable-striped tbody td {
+border: 0;
+}
+.lightable-material-dark.lightable-striped thead tr:last-child th {
+border-bottom: 1px solid #FFFFFF12;
+}
+.lightable-paper {
+width: 100%;
+margin-bottom: 10px;
+color: #444;
+}
+.lightable-paper tfoot tr td {
+border: 0;
+}
+.lightable-paper tfoot tr:first-child td {
+border-top: 1px solid #00000020;
+}
+.lightable-paper thead tr:last-child th {
+color: #666;
+vertical-align: bottom;
+border-bottom: 1px solid #00000020;
+line-height: 1.15em;
+padding: 10px 5px;
+}
+.lightable-paper td {
+vertical-align: middle;
+border-bottom: 1px solid #00000010;
+line-height: 1.15em;
+padding: 7px 5px;
+}
+.lightable-paper.lightable-hover tbody tr:hover {
+background-color: #F9EEC1;
+}
+.lightable-paper.lightable-striped tbody tr:nth-child(even) {
+background-color: #00000008;
+}
+.lightable-paper.lightable-striped tbody td {
+border: 0;
+}
+</style>
+
+<style type="text/css">
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+span.underline{text-decoration: underline;}
+div.column{display: inline-block; vertical-align: top; width: 50%;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+</style>
+
+
+
+<style type="text/css">
+code {
+white-space: pre;
+}
+.sourceCode {
+overflow: visible;
+}
+</style>
+<style type="text/css" data-origin="pandoc">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+{ counter-reset: source-line 0; }
+pre.numberSource code > span
+{ position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+{ content: counter(source-line);
+position: relative; left: -1em; text-align: right; vertical-align: baseline;
+border: none; display: inline-block;
+-webkit-touch-callout: none; -webkit-user-select: none;
+-khtml-user-select: none; -moz-user-select: none;
+-ms-user-select: none; user-select: none;
+padding: 0 4px; width: 4em;
+color: #aaaaaa;
+}
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa; padding-left: 4px; }
+div.sourceCode
+{ }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } 
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } 
+code span.at { color: #7d9029; } 
+code span.bn { color: #40a070; } 
+code span.bu { color: #008000; } 
+code span.cf { color: #007020; font-weight: bold; } 
+code span.ch { color: #4070a0; } 
+code span.cn { color: #880000; } 
+code span.co { color: #60a0b0; font-style: italic; } 
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } 
+code span.do { color: #ba2121; font-style: italic; } 
+code span.dt { color: #902000; } 
+code span.dv { color: #40a070; } 
+code span.er { color: #ff0000; font-weight: bold; } 
+code span.ex { } 
+code span.fl { color: #40a070; } 
+code span.fu { color: #06287e; } 
+code span.im { color: #008000; font-weight: bold; } 
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } 
+code span.kw { color: #007020; font-weight: bold; } 
+code span.op { color: #666666; } 
+code span.ot { color: #007020; } 
+code span.pp { color: #bc7a00; } 
+code span.sc { color: #4070a0; } 
+code span.ss { color: #bb6688; } 
+code span.st { color: #4070a0; } 
+code span.va { color: #19177c; } 
+code span.vs { color: #4070a0; } 
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } 
+</style>
+<script>
+// apply pandoc div.sourceCode style to pre.sourceCode instead
+(function() {
+  var sheets = document.styleSheets;
+  for (var i = 0; i < sheets.length; i++) {
+    if (sheets[i].ownerNode.dataset["origin"] !== "pandoc") continue;
+    try { var rules = sheets[i].cssRules; } catch (e) { continue; }
+    var j = 0;
+    while (j < rules.length) {
+      var rule = rules[j];
+      // check if there is a div.sourceCode rule
+      if (rule.type !== rule.STYLE_RULE || rule.selectorText !== "div.sourceCode") {
+        j++;
+        continue;
+      }
+      var style = rule.style.cssText;
+      // check if color or background-color is set
+      if (rule.style.color === '' && rule.style.backgroundColor === '') {
+        j++;
+        continue;
+      }
+      // replace div.sourceCode by a pre.sourceCode rule
+      sheets[i].deleteRule(j);
+      sheets[i].insertRule('pre.sourceCode{' + style + '}', j);
+    }
+  }
+})();
+</script>
+
+
+
+
+<style type="text/css">body {
+background-color: #fff;
+margin: 1em auto;
+max-width: 700px;
+overflow: visible;
+padding-left: 2em;
+padding-right: 2em;
+font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+font-size: 14px;
+line-height: 1.35;
+}
+#TOC {
+clear: both;
+margin: 0 0 10px 10px;
+padding: 4px;
+width: 400px;
+border: 1px solid #CCCCCC;
+border-radius: 5px;
+background-color: #f6f6f6;
+font-size: 13px;
+line-height: 1.3;
+}
+#TOC .toctitle {
+font-weight: bold;
+font-size: 15px;
+margin-left: 5px;
+}
+#TOC ul {
+padding-left: 40px;
+margin-left: -1.5em;
+margin-top: 5px;
+margin-bottom: 5px;
+}
+#TOC ul ul {
+margin-left: -2em;
+}
+#TOC li {
+line-height: 16px;
+}
+table {
+margin: 1em auto;
+border-width: 1px;
+border-color: #DDDDDD;
+border-style: outset;
+border-collapse: collapse;
+}
+table th {
+border-width: 2px;
+padding: 5px;
+border-style: inset;
+}
+table td {
+border-width: 1px;
+border-style: inset;
+line-height: 18px;
+padding: 5px 5px;
+}
+table, table th, table td {
+border-left-style: none;
+border-right-style: none;
+}
+table thead, table tr.even {
+background-color: #f7f7f7;
+}
+p {
+margin: 0.5em 0;
+}
+blockquote {
+background-color: #f6f6f6;
+padding: 0.25em 0.75em;
+}
+hr {
+border-style: solid;
+border: none;
+border-top: 1px solid #777;
+margin: 28px 0;
+}
+dl {
+margin-left: 0;
+}
+dl dd {
+margin-bottom: 13px;
+margin-left: 13px;
+}
+dl dt {
+font-weight: bold;
+}
+ul {
+margin-top: 0;
+}
+ul li {
+list-style: circle outside;
+}
+ul ul {
+margin-bottom: 0;
+}
+pre, code {
+background-color: #f7f7f7;
+border-radius: 3px;
+color: #333;
+white-space: pre-wrap; 
+}
+pre {
+border-radius: 3px;
+margin: 5px 0px 10px 0px;
+padding: 10px;
+}
+pre:not([class]) {
+background-color: #f7f7f7;
+}
+code {
+font-family: Consolas, Monaco, 'Courier New', monospace;
+font-size: 85%;
+}
+p > code, li > code {
+padding: 2px 0px;
+}
+div.figure {
+text-align: center;
+}
+img {
+background-color: #FFFFFF;
+padding: 2px;
+border: 1px solid #DDDDDD;
+border-radius: 3px;
+border: 1px solid #CCCCCC;
+margin: 0 5px;
+}
+h1 {
+margin-top: 0;
+font-size: 35px;
+line-height: 40px;
+}
+h2 {
+border-bottom: 4px solid #f7f7f7;
+padding-top: 10px;
+padding-bottom: 2px;
+font-size: 145%;
+}
+h3 {
+border-bottom: 2px solid #f7f7f7;
+padding-top: 10px;
+font-size: 120%;
+}
+h4 {
+border-bottom: 1px solid #f7f7f7;
+margin-left: 8px;
+font-size: 105%;
+}
+h5, h6 {
+border-bottom: 1px solid #ccc;
+font-size: 105%;
+}
+a {
+color: #0033dd;
+text-decoration: none;
+}
+a:hover {
+color: #6666ff; }
+a:visited {
+color: #800080; }
+a:visited:hover {
+color: #BB00BB; }
+a[href^="http:"] {
+text-decoration: underline; }
+a[href^="https:"] {
+text-decoration: underline; }
+
+code > span.kw { color: #555; font-weight: bold; } 
+code > span.dt { color: #902000; } 
+code > span.dv { color: #40a070; } 
+code > span.bn { color: #d14; } 
+code > span.fl { color: #d14; } 
+code > span.ch { color: #d14; } 
+code > span.st { color: #d14; } 
+code > span.co { color: #888888; font-style: italic; } 
+code > span.ot { color: #007020; } 
+code > span.al { color: #ff0000; font-weight: bold; } 
+code > span.fu { color: #900; font-weight: bold; } 
+code > span.er { color: #a61717; background-color: #e3d2d2; } 
+</style>
+
+
+
+
+</head>
+
+<body>
+
+
+
+
+<h1 class="title toc-ignore">Describe And Disseminate Youth Mental
+Health Datasets</h1>
+
+
+
+<p>Note: <strong>This vignette is illustrated with fake data</strong>.
+The dataset explored in this example should not be used to inform
+decision-making.</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" tabindex="-1"></a><span class="fu">library</span>(ready4)</span>
+<span id="cb1-2"><a href="#cb1-2" tabindex="-1"></a><span class="fu">library</span>(youthvars)</span></code></pre></div>
+<p>Youthvars provides two <a href="https://www.ready4-dev.com/docs/framework/implementation/modularity/#ready4-model-modules">ready4
+framework modules</a> - <code>YouthvarsProfile</code> and
+<code>YouthvarsSeries</code> that form part of the <a href="https://www.ready4-dev.com/docs/model/">ready4 economic model of
+youth mental health</a>. The ready4 modules in <code>youthvars</code>
+extend the <a href="https://www.ready4-dev.com/docs/framework/use/authoring-data/label-data/">Ready4useDyad
+module</a> and can be used to help describe key structural properties of
+youth mental health datasets.</p>
+<div id="ingest-data" class="section level2">
+<h2>Ingest data</h2>
+<p>To start we ingest <code>X</code>, a <code>Ready4useDyad</code>
+(dataset and data dictionary pair) that we can download from a remote
+repository.</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" tabindex="-1"></a>X <span class="ot">&lt;-</span> ready4use<span class="sc">::</span><span class="fu">Ready4useRepos</span>(<span class="at">dv_nm_1L_chr =</span> <span class="st">&quot;fakes&quot;</span>,</span>
+<span id="cb2-2"><a href="#cb2-2" tabindex="-1"></a>                               <span class="at">dv_ds_nm_1L_chr =</span> <span class="st">&quot;https://doi.org/10.7910/DVN/W95KED&quot;</span>,</span>
+<span id="cb2-3"><a href="#cb2-3" tabindex="-1"></a>                               <span class="at">dv_server_1L_chr =</span> <span class="st">&quot;dataverse.harvard.edu&quot;</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb2-4"><a href="#cb2-4" tabindex="-1"></a>  <span class="fu">ingest</span>(<span class="at">fls_to_ingest_chr =</span> <span class="st">&quot;ymh_clinical_dyad_r4&quot;</span>,</span>
+<span id="cb2-5"><a href="#cb2-5" tabindex="-1"></a>         <span class="at">metadata_1L_lgl =</span> F)</span></code></pre></div>
+</div>
+<div id="add-metadata" class="section level2">
+<h2>Add metadata</h2>
+<p>If a dataset is cross-sectional or we wish to treat it as if it were
+(i.e., where data collection rounds are ignored) we can create
+<code>Y</code>, an instance of the <code>YouthvarsProfile</code> module,
+to add minimal metadata (the name of the unique identifier
+variable).</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" tabindex="-1"></a>Y <span class="ot">&lt;-</span> <span class="fu">YouthvarsProfile</span>(<span class="at">a_Ready4useDyad =</span> X, <span class="at">id_var_nm_1L_chr =</span> <span class="st">&quot;fkClientID&quot;</span>)</span></code></pre></div>
+<p>If the temporal dimension of the dataset is important, it may be
+therefore preferable to instead transform <code>X</code> into a
+<code>YouthvarsSeries</code> module instance.
+<code>YouthvarsSeries</code> objects contain all of the fields of
+<code>YouthvarsProfile</code> objects, but also include additional
+fields that are specific for longitudinal datasets
+(e.g. <code>timepoint_var_nm_1L_chr</code> and
+<code>timepoint_vals_chr</code> that respectively specify the
+data-collection timepoint variable name and values and
+<code>participation_var_1L_chr</code> that specifies the desired name of
+a yet to be created variable that will summarise the data-collection
+timepoints for which each unit record supplied data).</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" tabindex="-1"></a>Z <span class="ot">&lt;-</span> <span class="fu">YouthvarsSeries</span>(<span class="at">a_Ready4useDyad =</span> X,</span>
+<span id="cb4-2"><a href="#cb4-2" tabindex="-1"></a>                     <span class="at">id_var_nm_1L_chr =</span> <span class="st">&quot;fkClientID&quot;</span>,</span>
+<span id="cb4-3"><a href="#cb4-3" tabindex="-1"></a>                     <span class="at">participation_var_1L_chr =</span> <span class="st">&quot;participation&quot;</span>,</span>
+<span id="cb4-4"><a href="#cb4-4" tabindex="-1"></a>                     <span class="at">timepoint_vals_chr =</span> <span class="fu">c</span>(<span class="st">&quot;Baseline&quot;</span>,<span class="st">&quot;Follow-up&quot;</span>),</span>
+<span id="cb4-5"><a href="#cb4-5" tabindex="-1"></a>                     <span class="at">timepoint_var_nm_1L_chr =</span> <span class="st">&quot;round&quot;</span>)</span></code></pre></div>
+</div>
+<div id="youthvarsprofile-methods" class="section level2">
+<h2>YouthvarsProfile methods</h2>
+<div id="inspect-data" class="section level3">
+<h3>Inspect data</h3>
+<p>We can now specify the variables that we would like to prepare
+descriptive statistics for by using the <code>renew</code> method. The
+variables to be profiled are specified in the <code>profile_chr</code>
+argument, the number of decimal digits (default = 3) of numeric values
+in the summary tables to be generated can be specified with
+<code>nbr_of_digits_1L_int</code>.</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" tabindex="-1"></a>Y <span class="ot">&lt;-</span> <span class="fu">renew</span>(Y, <span class="at">nbr_of_digits_1L_int =</span> 2L, <span class="at">profile_chr =</span> <span class="fu">c</span>(<span class="st">&quot;d_age&quot;</span>,<span class="st">&quot;d_sexual_ori_s&quot;</span>,<span class="st">&quot;d_studying_working&quot;</span>))</span></code></pre></div>
+<p>We can now view the descriptive statistics we created in the previous
+step.</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" tabindex="-1"></a>Y <span class="sc">%&gt;%</span></span>
+<span id="cb6-2"><a href="#cb6-2" tabindex="-1"></a>  <span class="fu">exhibit</span>(<span class="at">profile_idx_int =</span> 1L, <span class="at">scroll_box_args_ls =</span> <span class="fu">list</span>(<span class="at">width =</span> <span class="st">&quot;100%&quot;</span>))</span></code></pre></div>
+<table class="table" style="color: black; margin-left: auto; margin-right: auto;">
+<caption>
+Descriptive summary
+</caption>
+<thead>
+<tr>
+<th style="empty-cells: hide;border-bottom:hidden;" colspan="1">
+</th>
+<th style="empty-cells: hide;border-bottom:hidden;" colspan="1">
+</th>
+<th style="empty-cells: hide;border-bottom:hidden;" colspan="2">
+</th>
+</tr>
+<tr>
+<th style="text-align:left;">
+</th>
+<th style="text-align:left;">
+</th>
+<th style="text-align:left;">
+(N =
+</th>
+<th style="text-align:left;">
+1711)
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;width: 14em; font-weight: bold;">
+Age
+</td>
+<td style="text-align:left;">
+Mean (SD)
+</td>
+<td style="text-align:left;width: 3em; ">
+17.64
+</td>
+<td style="text-align:left;width: 3em; ">
+(3.09)
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 14em; font-weight: bold;">
+</td>
+<td style="text-align:left;">
+Median (Q1, Q3)
+</td>
+<td style="text-align:left;width: 3em; ">
+18.00
+</td>
+<td style="text-align:left;width: 3em; ">
+(15.00, 20.00)
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 14em; font-weight: bold;">
+</td>
+<td style="text-align:left;">
+Min - Max
+</td>
+<td style="text-align:left;width: 3em; ">
+12.00
+</td>
+<td style="text-align:left;width: 3em; ">
+25.00
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 14em; font-weight: bold;">
+</td>
+<td style="text-align:left;">
+Missing
+</td>
+<td style="text-align:left;width: 3em; ">
+0.00
+</td>
+<td style="text-align:left;width: 3em; ">
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 14em; font-weight: bold;">
+Sexual orientation
+</td>
+<td style="text-align:left;">
+Heterosexual
+</td>
+<td style="text-align:left;width: 3em; ">
+1178.00
+</td>
+<td style="text-align:left;width: 3em; ">
+(71.74%)
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 14em; font-weight: bold;">
+</td>
+<td style="text-align:left;">
+Other
+</td>
+<td style="text-align:left;width: 3em; ">
+464.00
+</td>
+<td style="text-align:left;width: 3em; ">
+(28.26%)
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 14em; font-weight: bold;">
+</td>
+<td style="text-align:left;">
+Missing
+</td>
+<td style="text-align:left;width: 3em; ">
+69.00
+</td>
+<td style="text-align:left;width: 3em; ">
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 14em; font-weight: bold;">
+Education and employment status
+</td>
+<td style="text-align:left;">
+Not studying or working
+</td>
+<td style="text-align:left;width: 3em; ">
+311.00
+</td>
+<td style="text-align:left;width: 3em; ">
+(18.75%)
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 14em; font-weight: bold;">
+</td>
+<td style="text-align:left;">
+Studying and working
+</td>
+<td style="text-align:left;width: 3em; ">
+451.00
+</td>
+<td style="text-align:left;width: 3em; ">
+(27.19%)
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 14em; font-weight: bold;">
+</td>
+<td style="text-align:left;">
+Studying only
+</td>
+<td style="text-align:left;width: 3em; ">
+572.00
+</td>
+<td style="text-align:left;width: 3em; ">
+(34.48%)
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 14em; font-weight: bold;">
+</td>
+<td style="text-align:left;">
+Working only
+</td>
+<td style="text-align:left;width: 3em; ">
+325.00
+</td>
+<td style="text-align:left;width: 3em; ">
+(19.59%)
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 14em; font-weight: bold;">
+</td>
+<td style="text-align:left;">
+Missing
+</td>
+<td style="text-align:left;width: 3em; ">
+52.00
+</td>
+<td style="text-align:left;width: 3em; ">
+</td>
+</tr>
+</tbody>
+</table>
+<p>We can also plot the distributions of selected variables in our
+dataset.</p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" tabindex="-1"></a><span class="fu">depict</span>(Y, <span class="at">var_nms_chr =</span> <span class="fu">c</span>(<span class="st">&quot;c_sofas&quot;</span>), <span class="at">labels_chr =</span> <span class="fu">c</span>(<span class="st">&quot;SOFAS&quot;</span>))</span></code></pre></div>
+<div class="figure">
+<img src="data:image/png;base64,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" alt="SOFAS total scores" width="600px" />
+<p class="caption">
+SOFAS total scores
+</p>
+</div>
+</div>
+</div>
+<div id="youthvarsseries-methods" class="section level2">
+<h2>YouthvarsSeries methods</h2>
+<div id="validate-data" class="section level3">
+<h3>Validate data</h3>
+<p>To explore longitudinal data we need to first use the
+<code>ratify</code> method to ensure that <code>Z</code> has been
+appropriately configured for methods examining datasets reporting
+measures at two timepoints.</p>
+<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" tabindex="-1"></a>Z <span class="ot">&lt;-</span> <span class="fu">ratify</span>(Z,</span>
+<span id="cb8-2"><a href="#cb8-2" tabindex="-1"></a>            <span class="at">type_1L_chr =</span> <span class="st">&quot;two_timepoints&quot;</span>)</span></code></pre></div>
+</div>
+<div id="inspect-data-1" class="section level3">
+<h3>Inspect data</h3>
+<p>We can now specify the variables that we would like to prepare
+descriptive statistics for using the <code>renew</code> method. The
+variables to be profiled are specified in arguments beginning with
+“compare_”. Use <code>compare_ptcpn_chr</code> to compare variables
+based on whether cases reported data at one or both timepoints and
+<code>compare_by_time_chr</code> to compare the summary statistics of
+variables by timepoints, e.g at baseline and follow-up. If you wish
+these comparisons to report p values, then use the
+<code>compare_ptcpn_with_test_chr</code> and
+<code>compare_by_time_with_test_chr</code> arguments.</p>
+<div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" tabindex="-1"></a>Z <span class="ot">&lt;-</span> <span class="fu">renew</span>(Z,</span>
+<span id="cb9-2"><a href="#cb9-2" tabindex="-1"></a>           <span class="at">compare_by_time_chr =</span> <span class="fu">c</span>(<span class="st">&quot;d_age&quot;</span>,<span class="st">&quot;d_sexual_ori_s&quot;</span>,<span class="st">&quot;d_studying_working&quot;</span>),</span>
+<span id="cb9-3"><a href="#cb9-3" tabindex="-1"></a>           <span class="at">compare_by_time_with_test_chr =</span> <span class="fu">c</span>(<span class="st">&quot;k6_total&quot;</span>, <span class="st">&quot;phq9_total&quot;</span>, <span class="st">&quot;bads_total&quot;</span>),</span>
+<span id="cb9-4"><a href="#cb9-4" tabindex="-1"></a>           <span class="at">compare_ptcpn_with_test_chr =</span> <span class="fu">c</span>(<span class="st">&quot;k6_total&quot;</span>, <span class="st">&quot;phq9_total&quot;</span>, <span class="st">&quot;bads_total&quot;</span>)) </span></code></pre></div>
+<p>The tables generated in the preceding step can be inspected using the
+<code>exhibit</code> method.</p>
+<div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" tabindex="-1"></a>Z <span class="sc">%&gt;%</span></span>
+<span id="cb10-2"><a href="#cb10-2" tabindex="-1"></a>  <span class="fu">exhibit</span>(<span class="at">profile_idx_int =</span> 1L,</span>
+<span id="cb10-3"><a href="#cb10-3" tabindex="-1"></a>          <span class="at">scroll_box_args_ls =</span> <span class="fu">list</span>(<span class="at">width =</span> <span class="st">&quot;100%&quot;</span>))</span></code></pre></div>
+<table class="table" style="color: black; margin-left: auto; margin-right: auto;">
+<caption>
+Outcomes by data completeness
+</caption>
+<thead>
+<tr>
+<th style="empty-cells: hide;border-bottom:hidden;" colspan="1">
+</th>
+<th style="empty-cells: hide;border-bottom:hidden;" colspan="1">
+</th>
+<th style="border-bottom:hidden;padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; " colspan="2">
+<div style="border-bottom: 1px solid #ddd; padding-bottom: 5px; ">
+Baseline only
+</div>
+</th>
+<th style="border-bottom:hidden;padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; " colspan="2">
+<div style="border-bottom: 1px solid #ddd; padding-bottom: 5px; ">
+Baseline and follow-up
+</div>
+</th>
+<th style="empty-cells: hide;border-bottom:hidden;" colspan="1">
+</th>
+</tr>
+<tr>
+<th style="text-align:left;">
+</th>
+<th style="text-align:left;">
+</th>
+<th style="text-align:left;">
+(N =
+</th>
+<th style="text-align:left;">
+1068)
+</th>
+<th style="text-align:left;">
+(N =
+</th>
+<th style="text-align:left;">
+643)
+</th>
+<th style="text-align:left;">
+<em>p</em>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;width: 14em; font-weight: bold;">
+Kessler Psychological Distress Scale (6 Dimension)
+</td>
+<td style="text-align:left;">
+Mean (SD)
+</td>
+<td style="text-align:left;width: 3em; ">
+12.153
+</td>
+<td style="text-align:left;width: 3em; ">
+(5.409)
+</td>
+<td style="text-align:left;width: 3em; ">
+11.069
+</td>
+<td style="text-align:left;width: 3em; ">
+(5.778)
+</td>
+<td style="text-align:left;">
+0.001
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 14em; font-weight: bold;">
+</td>
+<td style="text-align:left;">
+Median (Q1, Q3)
+</td>
+<td style="text-align:left;width: 3em; ">
+12.000
+</td>
+<td style="text-align:left;width: 3em; ">
+(8.000, 16.000)
+</td>
+<td style="text-align:left;width: 3em; ">
+11.000
+</td>
+<td style="text-align:left;width: 3em; ">
+(7.000, 15.000)
+</td>
+<td style="text-align:left;">
+0.001
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 14em; font-weight: bold;">
+</td>
+<td style="text-align:left;">
+Min - Max
+</td>
+<td style="text-align:left;width: 3em; ">
+0.000
+</td>
+<td style="text-align:left;width: 3em; ">
+24.000
+</td>
+<td style="text-align:left;width: 3em; ">
+0.000
+</td>
+<td style="text-align:left;width: 3em; ">
+24.000
+</td>
+<td style="text-align:left;">
+0.001
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 14em; font-weight: bold;">
+</td>
+<td style="text-align:left;">
+Missing
+</td>
+<td style="text-align:left;width: 3em; ">
+0.000
+</td>
+<td style="text-align:left;width: 3em; ">
+</td>
+<td style="text-align:left;width: 3em; ">
+3.000
+</td>
+<td style="text-align:left;width: 3em; ">
+</td>
+<td style="text-align:left;">
+0.001
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 14em; font-weight: bold;">
+Patient Health Questionnaire
+</td>
+<td style="text-align:left;">
+Mean (SD)
+</td>
+<td style="text-align:left;width: 3em; ">
+12.632
+</td>
+<td style="text-align:left;width: 3em; ">
+(6.086)
+</td>
+<td style="text-align:left;width: 3em; ">
+11.194
+</td>
+<td style="text-align:left;width: 3em; ">
+(6.434)
+</td>
+<td style="text-align:left;">
+0.000
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 14em; font-weight: bold;">
+</td>
+<td style="text-align:left;">
+Median (Q1, Q3)
+</td>
+<td style="text-align:left;width: 3em; ">
+13.000
+</td>
+<td style="text-align:left;width: 3em; ">
+(8.000, 17.000)
+</td>
+<td style="text-align:left;width: 3em; ">
+11.000
+</td>
+<td style="text-align:left;width: 3em; ">
+(6.000, 16.000)
+</td>
+<td style="text-align:left;">
+0.000
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 14em; font-weight: bold;">
+</td>
+<td style="text-align:left;">
+Min - Max
+</td>
+<td style="text-align:left;width: 3em; ">
+0.000
+</td>
+<td style="text-align:left;width: 3em; ">
+27.000
+</td>
+<td style="text-align:left;width: 3em; ">
+0.000
+</td>
+<td style="text-align:left;width: 3em; ">
+27.000
+</td>
+<td style="text-align:left;">
+0.000
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 14em; font-weight: bold;">
+</td>
+<td style="text-align:left;">
+Missing
+</td>
+<td style="text-align:left;width: 3em; ">
+1.000
+</td>
+<td style="text-align:left;width: 3em; ">
+</td>
+<td style="text-align:left;width: 3em; ">
+5.000
+</td>
+<td style="text-align:left;width: 3em; ">
+</td>
+<td style="text-align:left;">
+0.000
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 14em; font-weight: bold;">
+Behavioural Activation for Depression Scale
+</td>
+<td style="text-align:left;">
+Mean (SD)
+</td>
+<td style="text-align:left;width: 3em; ">
+79.814
+</td>
+<td style="text-align:left;width: 3em; ">
+(26.478)
+</td>
+<td style="text-align:left;width: 3em; ">
+83.571
+</td>
+<td style="text-align:left;width: 3em; ">
+(25.809)
+</td>
+<td style="text-align:left;">
+0.010
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 14em; font-weight: bold;">
+</td>
+<td style="text-align:left;">
+Median (Q1, Q3)
+</td>
+<td style="text-align:left;width: 3em; ">
+79.000
+</td>
+<td style="text-align:left;width: 3em; ">
+(62.000, 95.250)
+</td>
+<td style="text-align:left;width: 3em; ">
+84.000
+</td>
+<td style="text-align:left;width: 3em; ">
+(66.000, 101.000)
+</td>
+<td style="text-align:left;">
+0.010
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 14em; font-weight: bold;">
+</td>
+<td style="text-align:left;">
+Min - Max
+</td>
+<td style="text-align:left;width: 3em; ">
+0.000
+</td>
+<td style="text-align:left;width: 3em; ">
+150.000
+</td>
+<td style="text-align:left;width: 3em; ">
+0.000
+</td>
+<td style="text-align:left;width: 3em; ">
+150.000
+</td>
+<td style="text-align:left;">
+0.010
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 14em; font-weight: bold;">
+</td>
+<td style="text-align:left;">
+Missing
+</td>
+<td style="text-align:left;width: 3em; ">
+1.000
+</td>
+<td style="text-align:left;width: 3em; ">
+</td>
+<td style="text-align:left;width: 3em; ">
+10.000
+</td>
+<td style="text-align:left;width: 3em; ">
+</td>
+<td style="text-align:left;">
+0.010
+</td>
+</tr>
+</tbody>
+</table>
+<div class="sourceCode" id="cb11"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" tabindex="-1"></a>Z <span class="sc">%&gt;%</span></span>
+<span id="cb11-2"><a href="#cb11-2" tabindex="-1"></a>  <span class="fu">exhibit</span>(<span class="at">profile_idx_int =</span> 2L,</span>
+<span id="cb11-3"><a href="#cb11-3" tabindex="-1"></a>          <span class="at">scroll_box_args_ls =</span> <span class="fu">list</span>(<span class="at">width =</span> <span class="st">&quot;100%&quot;</span>))</span></code></pre></div>
+<table class="table" style="color: black; margin-left: auto; margin-right: auto;">
+<caption>
+Outcomes by data collection round
+</caption>
+<thead>
+<tr>
+<th style="empty-cells: hide;border-bottom:hidden;" colspan="1">
+</th>
+<th style="empty-cells: hide;border-bottom:hidden;" colspan="1">
+</th>
+<th style="border-bottom:hidden;padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; " colspan="2">
+<div style="border-bottom: 1px solid #ddd; padding-bottom: 5px; ">
+Baseline
+</div>
+</th>
+<th style="border-bottom:hidden;padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; " colspan="2">
+<div style="border-bottom: 1px solid #ddd; padding-bottom: 5px; ">
+Follow-up
+</div>
+</th>
+</tr>
+<tr>
+<th style="text-align:left;">
+</th>
+<th style="text-align:left;">
+</th>
+<th style="text-align:left;">
+(N =
+</th>
+<th style="text-align:left;">
+1068)
+</th>
+<th style="text-align:left;">
+(N =
+</th>
+<th style="text-align:left;">
+643)
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;width: 14em; font-weight: bold;">
+Age
+</td>
+<td style="text-align:left;">
+Mean (SD)
+</td>
+<td style="text-align:left;width: 3em; ">
+17.555
+</td>
+<td style="text-align:left;width: 3em; ">
+(3.090)
+</td>
+<td style="text-align:left;width: 3em; ">
+17.770
+</td>
+<td style="text-align:left;width: 3em; ">
+(3.091)
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 14em; font-weight: bold;">
+</td>
+<td style="text-align:left;">
+Median (Q1, Q3)
+</td>
+<td style="text-align:left;width: 3em; ">
+17.000
+</td>
+<td style="text-align:left;width: 3em; ">
+(15.000, 20.000)
+</td>
+<td style="text-align:left;width: 3em; ">
+18.000
+</td>
+<td style="text-align:left;width: 3em; ">
+(16.000, 20.000)
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 14em; font-weight: bold;">
+</td>
+<td style="text-align:left;">
+Min - Max
+</td>
+<td style="text-align:left;width: 3em; ">
+12.000
+</td>
+<td style="text-align:left;width: 3em; ">
+25.000
+</td>
+<td style="text-align:left;width: 3em; ">
+12.000
+</td>
+<td style="text-align:left;width: 3em; ">
+25.000
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 14em; font-weight: bold;">
+</td>
+<td style="text-align:left;">
+Missing
+</td>
+<td style="text-align:left;width: 3em; ">
+0.000
+</td>
+<td style="text-align:left;width: 3em; ">
+</td>
+<td style="text-align:left;width: 3em; ">
+0.000
+</td>
+<td style="text-align:left;width: 3em; ">
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 14em; font-weight: bold;">
+Sexual orientation
+</td>
+<td style="text-align:left;">
+Heterosexual
+</td>
+<td style="text-align:left;width: 3em; ">
+738.000
+</td>
+<td style="text-align:left;width: 3em; ">
+(71.860%)
+</td>
+<td style="text-align:left;width: 3em; ">
+440.000
+</td>
+<td style="text-align:left;width: 3em; ">
+(71.545%)
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 14em; font-weight: bold;">
+</td>
+<td style="text-align:left;">
+Other
+</td>
+<td style="text-align:left;width: 3em; ">
+289.000
+</td>
+<td style="text-align:left;width: 3em; ">
+(28.140%)
+</td>
+<td style="text-align:left;width: 3em; ">
+175.000
+</td>
+<td style="text-align:left;width: 3em; ">
+(28.455%)
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 14em; font-weight: bold;">
+</td>
+<td style="text-align:left;">
+Missing
+</td>
+<td style="text-align:left;width: 3em; ">
+41.000
+</td>
+<td style="text-align:left;width: 3em; ">
+</td>
+<td style="text-align:left;width: 3em; ">
+28.000
+</td>
+<td style="text-align:left;width: 3em; ">
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 14em; font-weight: bold;">
+Education and employment status
+</td>
+<td style="text-align:left;">
+Not studying or working
+</td>
+<td style="text-align:left;width: 3em; ">
+159.000
+</td>
+<td style="text-align:left;width: 3em; ">
+(15.347%)
+</td>
+<td style="text-align:left;width: 3em; ">
+152.000
+</td>
+<td style="text-align:left;width: 3em; ">
+(24.398%)
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 14em; font-weight: bold;">
+</td>
+<td style="text-align:left;">
+Studying and working
+</td>
+<td style="text-align:left;width: 3em; ">
+305.000
+</td>
+<td style="text-align:left;width: 3em; ">
+(29.440%)
+</td>
+<td style="text-align:left;width: 3em; ">
+146.000
+</td>
+<td style="text-align:left;width: 3em; ">
+(23.435%)
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 14em; font-weight: bold;">
+</td>
+<td style="text-align:left;">
+Studying only
+</td>
+<td style="text-align:left;width: 3em; ">
+405.000
+</td>
+<td style="text-align:left;width: 3em; ">
+(39.093%)
+</td>
+<td style="text-align:left;width: 3em; ">
+167.000
+</td>
+<td style="text-align:left;width: 3em; ">
+(26.806%)
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 14em; font-weight: bold;">
+</td>
+<td style="text-align:left;">
+Working only
+</td>
+<td style="text-align:left;width: 3em; ">
+167.000
+</td>
+<td style="text-align:left;width: 3em; ">
+(16.120%)
+</td>
+<td style="text-align:left;width: 3em; ">
+158.000
+</td>
+<td style="text-align:left;width: 3em; ">
+(25.361%)
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 14em; font-weight: bold;">
+</td>
+<td style="text-align:left;">
+Missing
+</td>
+<td style="text-align:left;width: 3em; ">
+32.000
+</td>
+<td style="text-align:left;width: 3em; ">
+</td>
+<td style="text-align:left;width: 3em; ">
+20.000
+</td>
+<td style="text-align:left;width: 3em; ">
+</td>
+</tr>
+</tbody>
+</table>
+<div class="sourceCode" id="cb12"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" tabindex="-1"></a>Z <span class="sc">%&gt;%</span></span>
+<span id="cb12-2"><a href="#cb12-2" tabindex="-1"></a>  <span class="fu">exhibit</span>(<span class="at">profile_idx_int =</span> 3L,</span>
+<span id="cb12-3"><a href="#cb12-3" tabindex="-1"></a>          <span class="at">scroll_box_args_ls =</span> <span class="fu">list</span>(<span class="at">width =</span> <span class="st">&quot;100%&quot;</span>))</span></code></pre></div>
+<table class="table" style="color: black; margin-left: auto; margin-right: auto;">
+<caption>
+Outcomes by data collection round (with p values)
+</caption>
+<thead>
+<tr>
+<th style="empty-cells: hide;border-bottom:hidden;" colspan="1">
+</th>
+<th style="empty-cells: hide;border-bottom:hidden;" colspan="1">
+</th>
+<th style="border-bottom:hidden;padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; " colspan="2">
+<div style="border-bottom: 1px solid #ddd; padding-bottom: 5px; ">
+Baseline
+</div>
+</th>
+<th style="border-bottom:hidden;padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; " colspan="2">
+<div style="border-bottom: 1px solid #ddd; padding-bottom: 5px; ">
+Follow-up
+</div>
+</th>
+<th style="empty-cells: hide;border-bottom:hidden;" colspan="1">
+</th>
+</tr>
+<tr>
+<th style="text-align:left;">
+</th>
+<th style="text-align:left;">
+</th>
+<th style="text-align:left;">
+(N =
+</th>
+<th style="text-align:left;">
+1068)
+</th>
+<th style="text-align:left;">
+(N =
+</th>
+<th style="text-align:left;">
+643)
+</th>
+<th style="text-align:left;">
+<em>p</em>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;width: 14em; font-weight: bold;">
+Kessler Psychological Distress Scale (6 Dimension)
+</td>
+<td style="text-align:left;">
+Mean (SD)
+</td>
+<td style="text-align:left;width: 3em; ">
+12.082
+</td>
+<td style="text-align:left;width: 3em; ">
+(5.603)
+</td>
+<td style="text-align:left;width: 3em; ">
+10.100
+</td>
+<td style="text-align:left;width: 3em; ">
+(5.665)
+</td>
+<td style="text-align:left;">
+0.000
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 14em; font-weight: bold;">
+</td>
+<td style="text-align:left;">
+Median (Q1, Q3)
+</td>
+<td style="text-align:left;width: 3em; ">
+12.000
+</td>
+<td style="text-align:left;width: 3em; ">
+(8.000, 16.000)
+</td>
+<td style="text-align:left;width: 3em; ">
+10.000
+</td>
+<td style="text-align:left;width: 3em; ">
+(6.000, 14.000)
+</td>
+<td style="text-align:left;">
+0.000
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 14em; font-weight: bold;">
+</td>
+<td style="text-align:left;">
+Min - Max
+</td>
+<td style="text-align:left;width: 3em; ">
+0.000
+</td>
+<td style="text-align:left;width: 3em; ">
+24.000
+</td>
+<td style="text-align:left;width: 3em; ">
+0.000
+</td>
+<td style="text-align:left;width: 3em; ">
+24.000
+</td>
+<td style="text-align:left;">
+0.000
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 14em; font-weight: bold;">
+</td>
+<td style="text-align:left;">
+Missing
+</td>
+<td style="text-align:left;width: 3em; ">
+1.000
+</td>
+<td style="text-align:left;width: 3em; ">
+</td>
+<td style="text-align:left;width: 3em; ">
+2.000
+</td>
+<td style="text-align:left;width: 3em; ">
+</td>
+<td style="text-align:left;">
+0.000
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 14em; font-weight: bold;">
+Patient Health Questionnaire
+</td>
+<td style="text-align:left;">
+Mean (SD)
+</td>
+<td style="text-align:left;width: 3em; ">
+12.646
+</td>
+<td style="text-align:left;width: 3em; ">
+(6.230)
+</td>
+<td style="text-align:left;width: 3em; ">
+9.736
+</td>
+<td style="text-align:left;width: 3em; ">
+(6.210)
+</td>
+<td style="text-align:left;">
+0.000
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 14em; font-weight: bold;">
+</td>
+<td style="text-align:left;">
+Median (Q1, Q3)
+</td>
+<td style="text-align:left;width: 3em; ">
+13.000
+</td>
+<td style="text-align:left;width: 3em; ">
+(8.000, 17.000)
+</td>
+<td style="text-align:left;width: 3em; ">
+10.000
+</td>
+<td style="text-align:left;width: 3em; ">
+(5.000, 14.000)
+</td>
+<td style="text-align:left;">
+0.000
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 14em; font-weight: bold;">
+</td>
+<td style="text-align:left;">
+Min - Max
+</td>
+<td style="text-align:left;width: 3em; ">
+0.000
+</td>
+<td style="text-align:left;width: 3em; ">
+27.000
+</td>
+<td style="text-align:left;width: 3em; ">
+0.000
+</td>
+<td style="text-align:left;width: 3em; ">
+27.000
+</td>
+<td style="text-align:left;">
+0.000
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 14em; font-weight: bold;">
+</td>
+<td style="text-align:left;">
+Missing
+</td>
+<td style="text-align:left;width: 3em; ">
+4.000
+</td>
+<td style="text-align:left;width: 3em; ">
+</td>
+<td style="text-align:left;width: 3em; ">
+2.000
+</td>
+<td style="text-align:left;width: 3em; ">
+</td>
+<td style="text-align:left;">
+0.000
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 14em; font-weight: bold;">
+Behavioural Activation for Depression Scale
+</td>
+<td style="text-align:left;">
+Mean (SD)
+</td>
+<td style="text-align:left;width: 3em; ">
+78.429
+</td>
+<td style="text-align:left;width: 3em; ">
+(25.608)
+</td>
+<td style="text-align:left;width: 3em; ">
+89.615
+</td>
+<td style="text-align:left;width: 3em; ">
+(25.205)
+</td>
+<td style="text-align:left;">
+0.000
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 14em; font-weight: bold;">
+</td>
+<td style="text-align:left;">
+Median (Q1, Q3)
+</td>
+<td style="text-align:left;width: 3em; ">
+78.000
+</td>
+<td style="text-align:left;width: 3em; ">
+(61.000, 95.000)
+</td>
+<td style="text-align:left;width: 3em; ">
+88.000
+</td>
+<td style="text-align:left;width: 3em; ">
+(73.000, 106.000)
+</td>
+<td style="text-align:left;">
+0.000
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 14em; font-weight: bold;">
+</td>
+<td style="text-align:left;">
+Min - Max
+</td>
+<td style="text-align:left;width: 3em; ">
+0.000
+</td>
+<td style="text-align:left;width: 3em; ">
+150.000
+</td>
+<td style="text-align:left;width: 3em; ">
+0.000
+</td>
+<td style="text-align:left;width: 3em; ">
+150.000
+</td>
+<td style="text-align:left;">
+0.000
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 14em; font-weight: bold;">
+</td>
+<td style="text-align:left;">
+Missing
+</td>
+<td style="text-align:left;width: 3em; ">
+7.000
+</td>
+<td style="text-align:left;width: 3em; ">
+</td>
+<td style="text-align:left;width: 3em; ">
+4.000
+</td>
+<td style="text-align:left;width: 3em; ">
+</td>
+<td style="text-align:left;">
+0.000
+</td>
+</tr>
+</tbody>
+</table>
+<p>The <code>depict</code> method can create plots, comparing numeric
+variables by timepoint.</p>
+<div class="sourceCode" id="cb13"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" tabindex="-1"></a><span class="fu">depict</span>(Z,</span>
+<span id="cb13-2"><a href="#cb13-2" tabindex="-1"></a>       <span class="at">type_1L_chr =</span> <span class="st">&quot;by_time&quot;</span>,</span>
+<span id="cb13-3"><a href="#cb13-3" tabindex="-1"></a>       <span class="at">var_nms_chr =</span> <span class="fu">c</span>(<span class="st">&quot;c_sofas&quot;</span>),</span>
+<span id="cb13-4"><a href="#cb13-4" tabindex="-1"></a>       <span class="at">label_fill_1L_chr =</span> <span class="st">&quot;Time&quot;</span>,<span class="co">#</span></span>
+<span id="cb13-5"><a href="#cb13-5" tabindex="-1"></a>       <span class="at">labels_chr =</span> <span class="fu">c</span>(<span class="st">&quot;SOFAS&quot;</span>),<span class="co">#</span></span>
+<span id="cb13-6"><a href="#cb13-6" tabindex="-1"></a>       <span class="at">y_label_1L_chr =</span> <span class="st">&quot;&quot;</span>)</span></code></pre></div>
+<div class="figure">
+<img src="data:image/png;base64,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" alt="SOFAS total scores by data collection round" width="600px" />
+<p class="caption">
+SOFAS total scores by data collection round
+</p>
+</div>
+</div>
+</div>
+<div id="share-data" class="section level2">
+<h2>Share data</h2>
+<p><strong>If and only if the dataset you are working with is
+appropriate for public dissemination (e.g. is synthetic data), you can
+use the following workflow for sharing it.</strong> We can share the
+dataset we created for this example using the <code>share</code> method,
+specifying the repository to which we wish to publish the dataset (and
+for which we have write permissions) in a (<a href="https://ready4-dev.github.io/ready4use/articles/V_01.html">Ready4useRepos
+object</a>).</p>
+<div class="sourceCode" id="cb14"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" tabindex="-1"></a>A <span class="ot">&lt;-</span> <span class="fu">Ready4useRepos</span>(<span class="at">gh_repo_1L_chr =</span> <span class="st">&quot;ready4-dev/youthvars&quot;</span>, <span class="co"># Replace with your repository </span></span>
+<span id="cb14-2"><a href="#cb14-2" tabindex="-1"></a>                          <span class="at">gh_tag_1L_chr =</span> <span class="st">&quot;Documentation_0.0&quot;</span>), <span class="co"># (need write permissions).</span></span>
+<span id="cb14-3"><a href="#cb14-3" tabindex="-1"></a>A <span class="ot">&lt;-</span> <span class="fu">share</span>(A,</span>
+<span id="cb14-4"><a href="#cb14-4" tabindex="-1"></a>           <span class="at">obj_to_share_xx =</span> Z,</span>
+<span id="cb14-5"><a href="#cb14-5" tabindex="-1"></a>           <span class="at">fl_nm_1L_chr =</span> <span class="st">&quot;ymh_YouthvarsSeries&quot;</span>)</span></code></pre></div>
+<p><code>Z</code> is now available for download as the file
+<code>ymh_YouthvarsSeries.RDS</code> from the <a href="https://github.com/ready4-dev/youthvars/releases/tag/Documentation_0.0">“Documentation_0.0”
+release of the youthvars package</a>.</p>
+</div>
+
+
+
+<!-- code folding -->
+
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>

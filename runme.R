@@ -14,25 +14,29 @@ c("Installation") %>%
 write_to_render_post(path_to_main_dir_1L_chr = paste0(project_dir_1L_chr,"/content/en/docs/Getting-started"),
                      consent_1L_chr = "Y",
                      is_rmd_1L_lgl = F)
-c("Add-Metadata",
+c("Add-Metadata") %>%
+  write_to_render_post(path_to_main_dir_1L_chr = paste0(project_dir_1L_chr,"/content/en/docs/tutorials/using-modules"),
+                       consent_1L_chr = "Y")
+
+c(#"Add-Metadata"#,
   "Assess-Cost-Utility", ## Add scroll box args
-  "Explore-Models", 
-  "Map-To-Utility", 
-  #"Predict-Choice", ## Remove }}
+  "Explore-Models",
+  "Map-To-Utility",
+  "Predict-Choice", ## Remove }}
   "Predict-Utility",
   "Score-Health-Utility", ## Add scroll box args
   "Validate-Variables"
   ) %>%
-  write_to_render_post(path_to_main_dir_1L_chr = paste0(project_dir_1L_chr,"/content/en/docs/model/modules/using-modules/People"),
+  write_to_render_post(path_to_main_dir_1L_chr = paste0(project_dir_1L_chr,"/content/en/docs/tutorials/using-modules"),
                        consent_1L_chr = "Y",
                        is_rmd_1L_lgl = F)
 c("Standard-Cost-Data-Codes",
   "Standard-Cost-Data-Fuzzy") %>%
-  write_to_render_post(path_to_main_dir_1L_chr = paste0(project_dir_1L_chr,"/content/en/docs/model/modules/using-modules/Programs"),
+  write_to_render_post(path_to_main_dir_1L_chr = paste0(project_dir_1L_chr,"/content/en/docs/tutorials/using-modules"),
                        consent_1L_chr = "Y",
                        is_rmd_1L_lgl = F)
 write_to_render_post("Individual",
-                     path_to_main_dir_1L_chr = paste0(project_dir_1L_chr,"/content/en/docs/Model/Modules/Finding"),
+                     path_to_main_dir_1L_chr = paste0(project_dir_1L_chr,"/content/en/docs/tutorials/finding"),
                      consent_1L_chr = "Y",
                      is_rmd_1L_lgl = F)
 # Render Dataset articles

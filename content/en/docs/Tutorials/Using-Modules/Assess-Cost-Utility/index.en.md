@@ -1,7 +1,7 @@
 ---
 title: "Use utility mapping algorithms to help implement cost-utility analyses"
 linkTitle: "Assess cost-utility"
-date: "2024-01-25"
+date: "2024-02-08"
 description: "Using tools (soon to be formalised into ready4 framework modules) from the youthu R package, it is possible to use utility mapping algorithms to help implement cost-utility analyses. This tutorial illustrates the main steps for doing so using psychological and functional measures collected on clinical samples of young people."
 weight: 97
 categories: 
@@ -42,6 +42,8 @@ html_dependencies:
 <div class="highlight">
 
 <pre class='chroma'><code class='language-r' data-lang='r'><span><span class='kr'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='o'>(</span><span class='nv'><a href='https://ready4-dev.github.io/youthu/'>youthu</a></span><span class='o'>)</span></span>
+<span><span class='kr'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='o'>(</span><span class='nv'><a href='https://ggplot2.tidyverse.org'>ggplot2</a></span><span class='o'>)</span></span>
+<span><span class='kr'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='o'>(</span><span class='nv'><a href='https://ready4-dev.github.io/ready4use/'>ready4use</a></span><span class='o'>)</span></span>
 <span><span class='nf'><a href='https://rdrr.io/r/base/Random.html'>set.seed</a></span><span class='o'>(</span><span class='m'>1234</span><span class='o'>)</span></span></code></pre>
 
 </div>
@@ -70,7 +72,7 @@ Our dataset includes 268 matched comparisons, with each comparison containing ba
 
 <div style="border: 1px solid #ddd; padding: 5px; overflow-x: scroll; width:100%; ">
 
-<table class=" lightable-paper lightable-hover lightable-paper" style="font-family: &quot;Arial Narrow&quot;, arial, helvetica, sans-serif; width: auto !important; margin-left: auto; margin-right: auto;border-bottom: 0; font-family: &quot;Arial Narrow&quot;, arial, helvetica, sans-serif; margin-left: auto; margin-right: auto;">
+<table class=" lightable-paper lightable-hover lightable-paper" style="color: black; font-family: &quot;Arial Narrow&quot;, arial, helvetica, sans-serif; width: auto !important; margin-left: auto; margin-right: auto;border-bottom: 0; color: black; font-family: &quot;Arial Narrow&quot;, arial, helvetica, sans-serif; margin-left: auto; margin-right: auto;">
 <caption>
 First few records from input dataset
 </caption>
@@ -114,7 +116,7 @@ Participant_20
 Baseline
 </td>
 <td style="text-align:right;">
-2023-06-20
+2023-07-04
 </td>
 <td style="text-align:right;">
 0S
@@ -143,7 +145,7 @@ Participant_593
 Baseline
 </td>
 <td style="text-align:right;">
-2023-04-27
+2023-05-11
 </td>
 <td style="text-align:right;">
 0S
@@ -172,7 +174,7 @@ Participant_593
 Follow-up
 </td>
 <td style="text-align:right;">
-2023-10-19
+2023-11-02
 </td>
 <td style="text-align:right;">
 175d 0H 0M 0S
@@ -201,7 +203,7 @@ Participant_20
 Follow-up
 </td>
 <td style="text-align:right;">
-2023-12-15
+2023-12-29
 </td>
 <td style="text-align:right;">
 178d 0H 0M 0S
@@ -230,7 +232,7 @@ Participant_259
 Baseline
 </td>
 <td style="text-align:right;">
-2023-08-15
+2023-08-29
 </td>
 <td style="text-align:right;">
 0S
@@ -259,7 +261,7 @@ Participant_962
 Baseline
 </td>
 <td style="text-align:right;">
-2023-09-27
+2023-10-11
 </td>
 <td style="text-align:right;">
 0S
@@ -379,7 +381,15 @@ The rest of this article demonstrates how youthu functions can be used to undert
 
 Our first step is to identify which youthu models we will use to predict adolescent AQoL-6D and apply these models to our data. This step was explained in more detail in [another vignette article about finding and using transfer to utility models](https://ready4-dev.github.io/youthu/articles/Prediction_With_Mdls.html), so will be dealt with briefly here.
 
-First we make sure that our dataset can be used as a prediction dataset in conjunction with the model we intend using.
+We ingest metadata about the mapping models we plan to use. **NOTE: This is a temporary step that is required due to the metadata file not being in the study online repository. This code will cease to work once the metadata file has been moved from its temporary location to the study dataset. We will perform this task when an associated manuscript exits its current review process.**
+
+<div class="highlight">
+
+<pre class='chroma'><code class='language-r' data-lang='r'><span><span class='nv'>mdl_meta_data_ls</span> <span class='o'>&lt;-</span> <span class='nf'><a href='https://ready4-dev.github.io/ready4/reference/ingest-methods.html'>ingest</a></span><span class='o'>(</span><span class='nf'><a href='https://ready4-dev.github.io/ready4use/reference/Ready4useRepos-class.html'>Ready4useRepos</a></span><span class='o'>(</span>gh_repo_1L_chr <span class='o'>=</span> <span class='s'>"ready4-dev/youthu"</span>, gh_tag_1L_chr <span class='o'>=</span> <span class='s'>"v0.0.0.91125"</span><span class='o'>)</span>, fls_to_ingest_chr <span class='o'>=</span> <span class='nf'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='o'>(</span><span class='s'>"mdl_meta_data_ls"</span><span class='o'>)</span>, metadata_1L_lgl <span class='o'>=</span> <span class='kc'>F</span><span class='o'>)</span></span></code></pre>
+
+</div>
+
+We now make sure that our dataset can be used as a prediction dataset in conjunction with the model we intend using.
 
 <div class="highlight">
 
@@ -388,6 +398,7 @@ First we make sure that our dataset can be used as a prediction dataset in conju
 <span>                                      cmprsn_var_nm_1L_chr <span class='o'>=</span> <span class='s'>"study_arm_chr"</span>,</span>
 <span>                                      costs_var_nm_1L_chr <span class='o'>=</span> <span class='s'>"costs_dbl"</span>,</span>
 <span>                                      id_var_nm_1L_chr <span class='o'>=</span> <span class='s'>"fkClientID"</span>,</span>
+<span>                                      mdl_meta_data_ls <span class='o'>=</span> <span class='nv'>mdl_meta_data_ls</span>,</span>
 <span>                                      msrmnt_date_var_nm_1L_chr <span class='o'>=</span> <span class='s'>"date_psx"</span>,</span>
 <span>                                      round_var_nm_1L_chr <span class='o'>=</span> <span class='s'>"round"</span>,</span>
 <span>                                      round_bl_val_1L_chr <span class='o'>=</span> <span class='s'>"Baseline"</span>,</span>
@@ -428,7 +439,7 @@ Next we combine the health utility data with the interval between measurement da
 
 <div style="border: 1px solid #ddd; padding: 5px; overflow-x: scroll; width:100%; ">
 
-<table class=" lightable-paper lightable-hover lightable-paper" style="font-family: &quot;Arial Narrow&quot;, arial, helvetica, sans-serif; width: auto !important; margin-left: auto; margin-right: auto;border-bottom: 0; font-family: &quot;Arial Narrow&quot;, arial, helvetica, sans-serif; margin-left: auto; margin-right: auto;">
+<table class=" lightable-paper lightable-hover lightable-paper" style="color: black; font-family: &quot;Arial Narrow&quot;, arial, helvetica, sans-serif; width: auto !important; margin-left: auto; margin-right: auto;border-bottom: 0; color: black; font-family: &quot;Arial Narrow&quot;, arial, helvetica, sans-serif; margin-left: auto; margin-right: auto;">
 <caption>
 First few records from updated dataset with QALYs
 </caption>
@@ -517,10 +528,10 @@ Control
 243
 </td>
 <td style="text-align:right;">
-2023-04-05
+2023-04-19
 </td>
 <td style="text-align:right;">
-2023-09-29
+2023-10-13
 </td>
 <td style="text-align:right;">
 0S
@@ -588,10 +599,10 @@ Control
 191
 </td>
 <td style="text-align:right;">
-2023-06-01
+2023-06-15
 </td>
 <td style="text-align:right;">
-2023-12-02
+2023-12-16
 </td>
 <td style="text-align:right;">
 0S
@@ -659,10 +670,10 @@ Intervention
 230
 </td>
 <td style="text-align:right;">
-2023-04-26
+2023-05-10
 </td>
 <td style="text-align:right;">
-2023-10-22
+2023-11-05
 </td>
 <td style="text-align:right;">
 0S
@@ -730,10 +741,10 @@ Intervention
 115
 </td>
 <td style="text-align:right;">
-2023-05-25
+2023-06-08
 </td>
 <td style="text-align:right;">
-2023-11-23
+2023-12-07
 </td>
 <td style="text-align:right;">
 0S
@@ -801,10 +812,10 @@ Intervention
 183
 </td>
 <td style="text-align:right;">
-2023-08-26
+2023-09-09
 </td>
 <td style="text-align:right;">
-2024-02-28
+2024-03-13
 </td>
 <td style="text-align:right;">
 0S
@@ -872,10 +883,10 @@ Intervention
 219
 </td>
 <td style="text-align:right;">
-2023-09-21
+2023-10-05
 </td>
 <td style="text-align:right;">
-2024-03-18
+2024-04-01
 </td>
 <td style="text-align:right;">
 0S
@@ -970,14 +981,9 @@ As part of the output of the `make_hlth_ec_smry` function is a BCEA object, we c
 
 <div class="highlight">
 
-<pre class='chroma'><code class='language-r' data-lang='r'><span><span class='kr'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='o'>(</span><span class='nv'><a href='https://ggplot2.tidyverse.org'>ggplot2</a></span><span class='o'>)</span></span>
-<span><span class='nf'>BCEA</span><span class='nf'>::</span><span class='nf'><a href='https://rdrr.io/pkg/BCEA/man/ceplane.plot.html'>ceplane.plot</a></span><span class='o'>(</span><span class='nv'>he_smry_ls</span><span class='o'>$</span><span class='nv'>ce_res_ls</span>, wtp <span class='o'>=</span><span class='m'>50000</span>,    </span>
-<span>                   area_color <span class='o'>=</span> <span class='s'>"green"</span>,</span>
-<span>                    graph <span class='o'>=</span> <span class='s'>"ggplot2"</span>,</span>
-<span>          theme <span class='o'>=</span> <span class='nf'>ggplot2</span><span class='nf'>::</span><span class='nf'><a href='https://ggplot2.tidyverse.org/reference/ggtheme.html'>theme_light</a></span><span class='o'>(</span><span class='o'>)</span><span class='o'>)</span></span>
-<span><span class='c'>#&gt; Warning: Duplicated aesthetics after name standardisation: <span style='color: #00BB00;'>colour</span></span></span>
-<span></span></code></pre>
-<img src="figs/unnamed-chunk-16-1.png" width="700px" style="display: block; margin: auto;" />
+<pre class='chroma'><code class='language-r' data-lang='r'><span><span class='nf'>BCEA</span><span class='nf'>::</span><span class='nf'><a href='https://rdrr.io/pkg/BCEA/man/ceplane.plot.html'>ceplane.plot</a></span><span class='o'>(</span><span class='nv'>he_smry_ls</span><span class='o'>$</span><span class='nv'>ce_res_ls</span>, wtp <span class='o'>=</span><span class='m'>50000</span>,  graph <span class='o'>=</span> <span class='s'>"ggplot2"</span>, theme <span class='o'>=</span> <span class='nf'>ggplot2</span><span class='nf'>::</span><span class='nf'><a href='https://ggplot2.tidyverse.org/reference/ggtheme.html'>theme_light</a></span><span class='o'>(</span><span class='o'>)</span><span class='o'>)</span></span>
+</code></pre>
+<img src="figs/unnamed-chunk-17-1.png" width="700px" style="display: block; margin: auto;" />
 
 </div>
 
