@@ -97,12 +97,12 @@ c("Programs", # Check exclusions in RMD - may need to be updated.
 #   "Model-Choice/dce_sa_analysis.md",
 #   "Model-Choice/dce_sa_design.md") %>%
 #   purrr::walk(~write_new_credentials(paste0(paste0(project_dir_1L_chr,"/content/en/docs/model/analyses/Replication-Code/",.x),
-#                                      new_credentials_1L_chr = "87012e61f32a48448278e5456b4bb51b",
+#                                      new_credentials_1L_chr = "2623be4aa6784e3fabca41e54a08160b",
 #                                      old_credentials_1L_chr = "93f800c0e2594268b9482bea99e2e434", 
 #                                      consent_1L_chr = "Y"))
 # Prior to deployment
 # write_new_credentials("./content/en/docs/Readyforwhatsnext/Spring To Life/Modules/Predict choice.md",
-#                       old_credentials_1L_chr = "87012e61f32a48448278e5456b4bb51b",
+#                       old_credentials_1L_chr = "2623be4aa6784e3fabca41e54a08160b",
 #                       new_credentials_1L_chr = "93f800c0e2594268b9482bea99e2e434") # For local preview
 ## Deploy dependencies app
 # library(rsconnect)
