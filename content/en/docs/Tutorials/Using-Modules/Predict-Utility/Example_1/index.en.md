@@ -1,8 +1,8 @@
 ---
-title: "Find and deploy utility mapping models"
-linkTitle: "Predict utility"
-date: "2024-02-08"
-description: "Using tools (soon to be formalised into ready4 modules) from the youthu R package, it is possible to find and deploy relevant utility mapping algorithms. This tutorial illustrates the main steps for predicting AQoL-6D utility from psychological and functional measures collected on clinical samples of young people."
+title: "Example 1: Predict health utility from psychological and functional measures (PHQ-9 and SOFAS)"
+linkTitle: "Example 1"
+date: "2024-02-13"
+description: "This tutorial illustrates the main steps for predicting AQoL-6D utility from psychological and functional measures using a longitudinal dataset in long format."
 weight: 96
 categories: 
 - Documentation
@@ -25,7 +25,7 @@ tags:
 params:
   output_type_1L_chr: HTML
 output: hugodown::md_document
-rmd_hash: 577ef9efbe859a65
+rmd_hash: d013b953ee7ce8ac
 html_dependencies:
 - <script src="kePrint-0.0.1/kePrint.js"></script>
 - <link href="lightable-0.0.1/lightable.css" rel="stylesheet" />
@@ -726,14 +726,6 @@ TRUE
 
 </div>
 
-We now ingest metadata about the mapping models we plan to use. **NOTE: This is a temporary step that is required due to the metadata file not being in its study online repository. This code will cease to work once the metadata file has been moved from its temporary location to the study dataset. We will perform this task when an associated manuscript exits its current review process.**
-
-<div class="highlight">
-
-<pre class='chroma'><code class='language-r' data-lang='r'><span><span class='nv'>mdl_meta_data_ls</span> <span class='o'>&lt;-</span> <span class='nf'><a href='https://ready4-dev.github.io/ready4/reference/ingest-methods.html'>ingest</a></span><span class='o'>(</span><span class='nf'><a href='https://ready4-dev.github.io/ready4use/reference/Ready4useRepos-class.html'>Ready4useRepos</a></span><span class='o'>(</span>gh_repo_1L_chr <span class='o'>=</span> <span class='s'>"ready4-dev/youthu"</span>, gh_tag_1L_chr <span class='o'>=</span> <span class='s'>"v0.0.0.91125"</span><span class='o'>)</span>, fls_to_ingest_chr <span class='o'>=</span> <span class='nf'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='o'>(</span><span class='s'>"mdl_meta_data_ls"</span><span class='o'>)</span>, metadata_1L_lgl <span class='o'>=</span> <span class='kc'>F</span><span class='o'>)</span></span></code></pre>
-
-</div>
-
 The prediction dataset must also include both a unique client identifier variable and a measurement time-point identifier variable (which must be a `factor` with two levels). The dataset also needs to be in long format (ie where measures at different time-points for the same individual are stacked on top of each other in separate rows). We can confirm these conditions hold by creating a dataset metadata object using the `make_predn_metadata_ls` function. In creating the metadata object, the function checks that the dataset can be used in conjunction with the model specified at the `mdl_nm_1L_chr` argument. If the prediction dataset uses different variable names for the predictors to those specified in the `predictors_lup` lookup table, a named vector detailing the correspondence between the two sets of variable names needs to be passed to the `predr_vars_nms_chr` argument. Finally, if you wish to specify a preferred variable name to use for the predicted utility values when applying the model, you can do this by passing this name to the `utl_var_nm_1L_chr` argument.
 
 <div class="highlight">
@@ -815,7 +807,7 @@ Baseline
 69
 </td>
 <td style="text-align:right;">
-0.9080468
+0.7588738
 </td>
 </tr>
 <tr>
@@ -835,7 +827,7 @@ Baseline
 60
 </td>
 <td style="text-align:right;">
-0.5533808
+0.7074180
 </td>
 </tr>
 <tr>
@@ -855,7 +847,7 @@ Follow-up
 64
 </td>
 <td style="text-align:right;">
-0.4006010
+0.3757341
 </td>
 </tr>
 <tr>
@@ -875,7 +867,7 @@ Baseline
 76
 </td>
 <td style="text-align:right;">
-0.6809903
+0.6393778
 </td>
 </tr>
 <tr>
@@ -895,7 +887,7 @@ Baseline
 71
 </td>
 <td style="text-align:right;">
-0.9877882
+0.9297959
 </td>
 </tr>
 <tr>
@@ -915,7 +907,7 @@ Follow-up
 71
 </td>
 <td style="text-align:right;">
-0.9602037
+0.7712380
 </td>
 </tr>
 </tbody>
@@ -938,7 +930,7 @@ Our health utility predictions are now available for use and are summarised belo
 
 <pre class='chroma'><code class='language-r' data-lang='r'><span><span class='nf'><a href='https://rdrr.io/r/base/summary.html'>summary</a></span><span class='o'>(</span><span class='nv'>data_tb</span><span class='o'>$</span><span class='nv'>AQoL6D_HU</span><span class='o'>)</span></span>
 <span><span class='c'>#&gt;    Min. 1st Qu.  Median    Mean 3rd Qu.    Max. </span></span>
-<span><span class='c'>#&gt; 0.06646 0.42781 0.63403 0.62335 0.83351 1.00000</span></span>
+<span><span class='c'>#&gt; 0.05329 0.43310 0.63513 0.62558 0.83475 1.00000</span></span>
 <span></span></code></pre>
 
 </div>
@@ -1012,7 +1004,7 @@ Baseline
 69
 </td>
 <td style="text-align:right;">
-0.9080468
+0.7588738
 </td>
 <td style="text-align:left;">
 0.0000000
@@ -1041,7 +1033,7 @@ Baseline
 60
 </td>
 <td style="text-align:right;">
-0.5533808
+0.7074180
 </td>
 <td style="text-align:left;">
 0.0000000
@@ -1070,16 +1062,16 @@ Follow-up
 64
 </td>
 <td style="text-align:right;">
-0.4006010
+0.3757341
 </td>
 <td style="text-align:left;">
--0.1527798
+-0.3316839
 </td>
 <td style="text-align:right;">
 76d 0H 0M 0S
 </td>
 <td style="text-align:right;">
-0.0992507
+0.1126893
 </td>
 </tr>
 <tr>
@@ -1099,7 +1091,7 @@ Baseline
 76
 </td>
 <td style="text-align:right;">
-0.6809903
+0.6393778
 </td>
 <td style="text-align:left;">
 0.0000000
@@ -1128,7 +1120,7 @@ Baseline
 71
 </td>
 <td style="text-align:right;">
-0.9877882
+0.9297959
 </td>
 <td style="text-align:left;">
 0.0000000
@@ -1157,16 +1149,16 @@ Follow-up
 71
 </td>
 <td style="text-align:right;">
-0.9602037
+0.7712380
 </td>
 <td style="text-align:left;">
--0.0275845
+-0.1585579
 </td>
 <td style="text-align:right;">
 84d 0H 0M 0S
 </td>
 <td style="text-align:right;">
-0.2239991
+0.1956014
 </td>
 </tr>
 </tbody>

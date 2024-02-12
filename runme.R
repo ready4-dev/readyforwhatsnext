@@ -18,18 +18,20 @@ c("Add-Metadata") %>%
   write_to_render_post(path_to_main_dir_1L_chr = paste0(project_dir_1L_chr,"/content/en/docs/tutorials/using-modules"),
                        consent_1L_chr = "Y")
 
-c(#"Add-Metadata"#,
-  "Assess-Cost-Utility", ## Add scroll box args
+c("Assess-Cost-Utility", ## Add scroll box args
   "Explore-Models",
   "Map-To-Utility",
   "Predict-Choice", ## Remove }}
-  "Predict-Utility",
+  #"Predict-Utility",
   "Score-Health-Utility", ## Add scroll box args
   "Validate-Variables"
   ) %>%
   write_to_render_post(path_to_main_dir_1L_chr = paste0(project_dir_1L_chr,"/content/en/docs/tutorials/using-modules"),
                        consent_1L_chr = "Y",
                        is_rmd_1L_lgl = F)
+c("Example_1", "Example_2") %>%
+  write_to_render_post(path_to_main_dir_1L_chr = paste0(project_dir_1L_chr,"/content/en/docs/tutorials/using-modules/predict-utility"),
+                       consent_1L_chr = "Y", is_rmd_1L_lgl = F)
 c("Standard-Cost-Data-Codes",
   "Standard-Cost-Data-Fuzzy") %>%
   write_to_render_post(path_to_main_dir_1L_chr = paste0(project_dir_1L_chr,"/content/en/docs/tutorials/using-modules"),

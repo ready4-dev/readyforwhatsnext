@@ -1,8 +1,8 @@
 ---
-title: "Find and deploy utility mapping models"
-linkTitle: "Predict utility"
+title: "Example 1: Predict health utility from psychological and functional measures (PHQ-9 and SOFAS)"
+linkTitle: "Example 1"
 date: "`r Sys.Date()`"
-description: "Using tools (soon to be formalised into ready4 modules) from the youthu R package, it is possible to find and deploy relevant utility mapping algorithms. This tutorial illustrates the main steps for predicting AQoL-6D utility from psychological and functional measures collected on clinical samples of young people."
+description: "This tutorial illustrates the main steps for predicting AQoL-6D utility from psychological and functional measures using a longitudinal dataset in long format."
 weight: 96
 categories: 
 - Documentation
