@@ -2,12 +2,13 @@
 # blogdown::build_site(run_hugo = F, build_rmd =T)
 #source("R/Functions.R")
 library(ready4)
+library(hugodown)
 project_dir_1L_chr <- getwd()
 ### DOCUMENTATION SECTION
 ## Render itemisation of currently available ready4 libraries
 c(#"Framework",
   "Libraries") %>%
-  write_to_render_post(path_to_main_dir_1L_chr = paste0(project_dir_1L_chr,"/content/en/docs/Model/Modules/Finding"),
+  write_to_render_post(path_to_main_dir_1L_chr = paste0(project_dir_1L_chr,"/content/en/docs/Tutorials/Finding"),
                        consent_1L_chr = "Y")  
 # Render ready4 library installation instructions
 c("Installation") %>%
@@ -46,8 +47,8 @@ write_to_render_post("Individual",
 # write_to_render_post(path_to_main_dir_1L_chr = paste0(project_dir_1L_chr,"/content/en/docs/framework/use/authoring-data"),
 #                      consent_1L_chr = "Y",
 #                      is_rmd_1L_lgl = F)
-c("Search") %>%
-  write_to_render_post(path_to_main_dir_1L_chr = paste0(project_dir_1L_chr,"/content/en/docs/model/datasets/Finding-Data"),
+c("Finding-Data") %>%
+  write_to_render_post(path_to_main_dir_1L_chr = paste0(project_dir_1L_chr,"/content/en/docs/tutorials/finding"),
                        consent_1L_chr = "Y",
                        is_rmd_1L_lgl = F)
 # write_to_force_links_in(paste0(project_dir_1L_chr,"/content/en/docs/model/datasets/Finding-Data/Search/index.en.md"),
@@ -56,15 +57,15 @@ c("Search") %>%
 c("Find"#, # Check exclusions in RMD - may need to be updated.
   #"Subroutines"
   ) %>%
-  write_to_render_post(paste0(project_dir_1L_chr,"/content/en/docs/Model/Analyses"),
+  write_to_render_post(paste0(project_dir_1L_chr,"/content/en/docs/Analyses"),
                        consent_1L_chr = "Y")
 c(#"Find"#, # Check exclusions in RMD - may need to be updated.
   "Reporting"
 ) %>%
-  write_to_render_post(paste0(project_dir_1L_chr,"/content/en/docs/Model"),
+  write_to_render_post(paste0(project_dir_1L_chr,"/content/en/docs"),
                        consent_1L_chr = "Y")
 c("Clinical-Primary") %>% # Do not evaluate write fns, add scroll text and then restore link to online RMD
-  write_to_render_post(path_to_main_dir_1L_chr = paste0(project_dir_1L_chr,"/content/en/docs/model/analyses/Replication-Code/Make-Fakes"),
+  write_to_render_post(path_to_main_dir_1L_chr = paste0(project_dir_1L_chr,"/content/en/docs/analyses/Replication-Code/Make-Fakes"),
                        consent_1L_chr = "Y",
                        is_rmd_1L_lgl = F)
 #write_to_trim_html(paste0(project_dir_1L_chr,"/content/en/docs/model/analyses/Replication-Code/Make-Fakes/Clincal_Primary.md"))

@@ -1,7 +1,7 @@
 ---
 title: "Example 1: Predict health utility from psychological and functional measures (PHQ-9 and SOFAS)"
 linkTitle: "Example 1"
-date: "2024-02-13"
+date: "2024-06-08"
 description: "This tutorial illustrates the main steps for predicting AQoL-6D utility from psychological and functional measures using a longitudinal dataset in long format."
 weight: 96
 categories: 
@@ -56,7 +56,7 @@ This vignette outlines a workflow for:
 -   Preparing a prediction dataset for use with a selected transfer to utility model; and
 -   Applying the selected transfer to utility model to a prediction dataset to predict Quality Adjusted Life Years (QALYs).
 
-The practical value of implementing such a workflow is discussed in the [economic analysis vignette](https://ready4-dev.github.io/youthu/articles/Economic_Analysis.html) and [a scientific manuscript](https://www.medrxiv.org/content/10.1101/2021.07.07.21260129v2.full). Note, this example uses fake data - it should should not be used to inform decision making.
+The practical value of implementing such a workflow is discussed in the [economic analysis vignette](https://ready4-dev.github.io/youthu/articles/Economic_Analysis.html) and [a scientific manuscript](https://www.medrxiv.org/content/10.1101/2021.07.07.21260129v4). Note, this example uses fake data - it should should not be used to inform decision making.
 
 ## Search, select and retrieve transfer to utility models
 
@@ -495,7 +495,7 @@ Participant_1
 Baseline
 </td>
 <td style="text-align:right;">
-2022-05-22
+2022-12-20
 </td>
 <td style="text-align:right;">
 7
@@ -512,7 +512,7 @@ Participant_10
 Baseline
 </td>
 <td style="text-align:right;">
-2022-04-07
+2022-11-16
 </td>
 <td style="text-align:right;">
 17
@@ -529,7 +529,7 @@ Participant_10
 Follow-up
 </td>
 <td style="text-align:right;">
-2022-06-22
+2023-02-21
 </td>
 <td style="text-align:right;">
 17
@@ -546,7 +546,7 @@ Participant_100
 Baseline
 </td>
 <td style="text-align:right;">
-2022-07-29
+2023-01-31
 </td>
 <td style="text-align:right;">
 0
@@ -563,7 +563,7 @@ Participant_1000
 Baseline
 </td>
 <td style="text-align:right;">
-2022-02-10
+2023-02-05
 </td>
 <td style="text-align:right;">
 0
@@ -580,7 +580,7 @@ Participant_1000
 Follow-up
 </td>
 <td style="text-align:right;">
-2022-05-05
+2023-04-10
 </td>
 <td style="text-align:right;">
 0
@@ -798,7 +798,7 @@ Participant_1
 Baseline
 </td>
 <td style="text-align:right;">
-2022-05-22
+2022-12-20
 </td>
 <td style="text-align:right;">
 7
@@ -807,7 +807,7 @@ Baseline
 69
 </td>
 <td style="text-align:right;">
-0.7588738
+0.9193293
 </td>
 </tr>
 <tr>
@@ -818,7 +818,7 @@ Participant_10
 Baseline
 </td>
 <td style="text-align:right;">
-2022-04-07
+2022-11-16
 </td>
 <td style="text-align:right;">
 17
@@ -827,7 +827,7 @@ Baseline
 60
 </td>
 <td style="text-align:right;">
-0.7074180
+0.6721956
 </td>
 </tr>
 <tr>
@@ -838,7 +838,7 @@ Participant_10
 Follow-up
 </td>
 <td style="text-align:right;">
-2022-06-22
+2023-02-21
 </td>
 <td style="text-align:right;">
 17
@@ -847,7 +847,7 @@ Follow-up
 64
 </td>
 <td style="text-align:right;">
-0.3757341
+0.4242752
 </td>
 </tr>
 <tr>
@@ -858,7 +858,7 @@ Participant_100
 Baseline
 </td>
 <td style="text-align:right;">
-2022-07-29
+2023-01-31
 </td>
 <td style="text-align:right;">
 0
@@ -867,7 +867,7 @@ Baseline
 76
 </td>
 <td style="text-align:right;">
-0.6393778
+0.7530591
 </td>
 </tr>
 <tr>
@@ -878,7 +878,7 @@ Participant_1000
 Baseline
 </td>
 <td style="text-align:right;">
-2022-02-10
+2023-02-05
 </td>
 <td style="text-align:right;">
 0
@@ -887,7 +887,7 @@ Baseline
 71
 </td>
 <td style="text-align:right;">
-0.9297959
+0.7613385
 </td>
 </tr>
 <tr>
@@ -898,7 +898,7 @@ Participant_1000
 Follow-up
 </td>
 <td style="text-align:right;">
-2022-05-05
+2023-04-10
 </td>
 <td style="text-align:right;">
 0
@@ -907,7 +907,7 @@ Follow-up
 71
 </td>
 <td style="text-align:right;">
-0.7712380
+0.9930864
 </td>
 </tr>
 </tbody>
@@ -930,7 +930,7 @@ Our health utility predictions are now available for use and are summarised belo
 
 <pre class='chroma'><code class='language-r' data-lang='r'><span><span class='nf'><a href='https://rdrr.io/r/base/summary.html'>summary</a></span><span class='o'>(</span><span class='nv'>data_tb</span><span class='o'>$</span><span class='nv'>AQoL6D_HU</span><span class='o'>)</span></span>
 <span><span class='c'>#&gt;    Min. 1st Qu.  Median    Mean 3rd Qu.    Max. </span></span>
-<span><span class='c'>#&gt; 0.05329 0.43310 0.63513 0.62558 0.83475 1.00000</span></span>
+<span><span class='c'>#&gt; 0.06525 0.42832 0.62654 0.62142 0.83585 0.99999</span></span>
 <span></span></code></pre>
 
 </div>
@@ -995,7 +995,7 @@ Participant_1
 Baseline
 </td>
 <td style="text-align:right;">
-2022-05-22
+2022-12-20
 </td>
 <td style="text-align:right;">
 7
@@ -1004,7 +1004,7 @@ Baseline
 69
 </td>
 <td style="text-align:right;">
-0.7588738
+0.9193293
 </td>
 <td style="text-align:left;">
 0.0000000
@@ -1024,7 +1024,7 @@ Participant_10
 Baseline
 </td>
 <td style="text-align:right;">
-2022-04-07
+2022-11-16
 </td>
 <td style="text-align:right;">
 17
@@ -1033,7 +1033,7 @@ Baseline
 60
 </td>
 <td style="text-align:right;">
-0.7074180
+0.6721956
 </td>
 <td style="text-align:left;">
 0.0000000
@@ -1053,7 +1053,7 @@ Participant_10
 Follow-up
 </td>
 <td style="text-align:right;">
-2022-06-22
+2023-02-21
 </td>
 <td style="text-align:right;">
 17
@@ -1062,16 +1062,16 @@ Follow-up
 64
 </td>
 <td style="text-align:right;">
-0.3757341
+0.4242752
 </td>
 <td style="text-align:left;">
--0.3316839
+-0.2479204
 </td>
 <td style="text-align:right;">
-76d 0H 0M 0S
+97d 0H 0M 0S
 </td>
 <td style="text-align:right;">
-0.1126893
+0.1455957
 </td>
 </tr>
 <tr>
@@ -1082,7 +1082,7 @@ Participant_100
 Baseline
 </td>
 <td style="text-align:right;">
-2022-07-29
+2023-01-31
 </td>
 <td style="text-align:right;">
 0
@@ -1091,7 +1091,7 @@ Baseline
 76
 </td>
 <td style="text-align:right;">
-0.6393778
+0.7530591
 </td>
 <td style="text-align:left;">
 0.0000000
@@ -1111,7 +1111,7 @@ Participant_1000
 Baseline
 </td>
 <td style="text-align:right;">
-2022-02-10
+2023-02-05
 </td>
 <td style="text-align:right;">
 0
@@ -1120,7 +1120,7 @@ Baseline
 71
 </td>
 <td style="text-align:right;">
-0.9297959
+0.7613385
 </td>
 <td style="text-align:left;">
 0.0000000
@@ -1140,7 +1140,7 @@ Participant_1000
 Follow-up
 </td>
 <td style="text-align:right;">
-2022-05-05
+2023-04-10
 </td>
 <td style="text-align:right;">
 0
@@ -1149,16 +1149,16 @@ Follow-up
 71
 </td>
 <td style="text-align:right;">
-0.7712380
+0.9930864
 </td>
 <td style="text-align:left;">
--0.1585579
+0.2317479
 </td>
 <td style="text-align:right;">
-84d 0H 0M 0S
+64d 0H 0M 0S
 </td>
 <td style="text-align:right;">
-0.1956014
+0.1537073
 </td>
 </tr>
 </tbody>

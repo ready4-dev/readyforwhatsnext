@@ -1,7 +1,7 @@
 ---
 title: "Standardise Variable Values With Lookup Codes"
 linkTitle: "Standardise values (2)"
-date: "2024-01-25"
+date: "2024-06-08"
 description: "This tutorial describes how a module from the costly R package can help you to use lookup codes to standardise variable values and thus facilitate partial automation of costing algorithms."
 weight: 92
 categories: 
@@ -18,7 +18,7 @@ tags:
 - Status
 - Status - development
 output: hugodown::md_document
-rmd_hash: 91ce9160694a3af2
+rmd_hash: 37a2a59aff99d9c2
 html_dependencies:
 - <script src="kePrint-0.0.1/kePrint.js"></script>
 - <link href="lightable-0.0.1/lightable.css" rel="stylesheet" />
@@ -133,7 +133,7 @@ We can now inspect the first few records from our labelled seed dataset.
 
 <div style="border: 1px solid #ddd; padding: 5px; overflow-x: scroll; width:100%; ">
 
-<table class=" lightable-paper lightable-hover lightable-paper" style="font-family: &quot;Arial Narrow&quot;, arial, helvetica, sans-serif; width: auto !important; margin-left: auto; margin-right: auto;border-bottom: 0; font-family: &quot;Arial Narrow&quot;, arial, helvetica, sans-serif; margin-left: auto; margin-right: auto;">
+<table class=" lightable-paper lightable-hover lightable-paper" style="color: black; font-family: &quot;Arial Narrow&quot;, arial, helvetica, sans-serif; width: auto !important; margin-left: auto; margin-right: auto;border-bottom: 0; color: black; font-family: &quot;Arial Narrow&quot;, arial, helvetica, sans-serif; margin-left: auto; margin-right: auto;">
 <caption>
 Dataset
 </caption>
@@ -303,7 +303,7 @@ We can also inspect the seed dataset's dictionary.
 
 <div style="border: 1px solid #ddd; padding: 5px; overflow-x: scroll; width:100%; ">
 
-<table class=" lightable-paper lightable-hover lightable-paper" style="font-family: &quot;Arial Narrow&quot;, arial, helvetica, sans-serif; width: auto !important; margin-left: auto; margin-right: auto;border-bottom: 0; font-family: &quot;Arial Narrow&quot;, arial, helvetica, sans-serif; margin-left: auto; margin-right: auto;">
+<table class=" lightable-paper lightable-hover lightable-paper" style="color: black; font-family: &quot;Arial Narrow&quot;, arial, helvetica, sans-serif; width: auto !important; margin-left: auto; margin-right: auto;border-bottom: 0; color: black; font-family: &quot;Arial Narrow&quot;, arial, helvetica, sans-serif; margin-left: auto; margin-right: auto;">
 <caption>
 Data Dictionary
 </caption>
@@ -451,7 +451,7 @@ We can inspect the first few cases of the labelled version of the standards data
 
 <div style="border: 1px solid #ddd; padding: 5px; overflow-x: scroll; width:100%; ">
 
-<table class=" lightable-paper lightable-hover lightable-paper" style="font-family: &quot;Arial Narrow&quot;, arial, helvetica, sans-serif; width: auto !important; margin-left: auto; margin-right: auto;border-bottom: 0; font-family: &quot;Arial Narrow&quot;, arial, helvetica, sans-serif; margin-left: auto; margin-right: auto;">
+<table class=" lightable-paper lightable-hover lightable-paper" style="color: black; font-family: &quot;Arial Narrow&quot;, arial, helvetica, sans-serif; width: auto !important; margin-left: auto; margin-right: auto;border-bottom: 0; color: black; font-family: &quot;Arial Narrow&quot;, arial, helvetica, sans-serif; margin-left: auto; margin-right: auto;">
 <caption>
 Dataset
 </caption>
@@ -558,7 +558,7 @@ We can also inspect the data dictionary contained in `B`.
 
 <div style="border: 1px solid #ddd; padding: 5px; overflow-x: scroll; width:100%; ">
 
-<table class=" lightable-paper lightable-hover lightable-paper" style="font-family: &quot;Arial Narrow&quot;, arial, helvetica, sans-serif; width: auto !important; margin-left: auto; margin-right: auto;border-bottom: 0; font-family: &quot;Arial Narrow&quot;, arial, helvetica, sans-serif; margin-left: auto; margin-right: auto;">
+<table class=" lightable-paper lightable-hover lightable-paper" style="color: black; font-family: &quot;Arial Narrow&quot;, arial, helvetica, sans-serif; width: auto !important; margin-left: auto; margin-right: auto;border-bottom: 0; color: black; font-family: &quot;Arial Narrow&quot;, arial, helvetica, sans-serif; margin-left: auto; margin-right: auto;">
 <caption>
 Data Dictionary
 </caption>
@@ -661,48 +661,40 @@ Currently, the majority of our currency names need to be standardised. In many c
 
 <pre class='chroma'><code class='language-r' data-lang='r'><span><span class='nv'>X</span> <span class='o'>&lt;-</span> <span class='nf'><a href='https://ready4-dev.github.io/ready4/reference/ratify-methods.html'>ratify</a></span><span class='o'>(</span><span class='nv'>X</span>, new_val_xx <span class='o'>=</span> <span class='s'>"identity"</span><span class='o'>)</span></span>
 <span><span class='nv'>X</span><span class='o'>@</span><span class='nv'>results_ls</span><span class='o'>$</span><span class='nv'>Currency_Output_Validation</span><span class='o'>$</span><span class='nv'>Invalid_Values</span></span>
-<span><span class='c'>#&gt;   [1] "Afghan afghani"                          "Albanian lek"                            "Algerian dinar"                          "Angolan kwanza"                         </span></span>
-<span><span class='c'>#&gt;   [5] "Argentine peso"                          "Armenian dram"                           "Aruban florin"                           "Australian dollar"                      </span></span>
-<span><span class='c'>#&gt;   [9] "Azerbaijani manat"                       "Bahamian dollar"                         "Bahraini dinar"                          "Bangladeshi taka"                       </span></span>
-<span><span class='c'>#&gt;  [13] "Barbadian dollar"                        "Belarusian ruble"                        "Belize dollar"                           "Bermudian dollar"                       </span></span>
-<span><span class='c'>#&gt;  [17] "Bhutanese ngultrum"                      "Bitcoin[4] (as legal tender)"            "Bolivian boliviano"                      "Bosnia and Herzegovina convertible mark"</span></span>
-<span><span class='c'>#&gt;  [21] "Botswana pula"                           "Brazilian real"                          "Brunei dollar"                           "Bulgarian lev"                          </span></span>
-<span><span class='c'>#&gt;  [25] "Burmese kyat"                            "Burundian franc"                         "Cambodian riel"                          "Canadian dollar"                        </span></span>
-<span><span class='c'>#&gt;  [29] "Cape Verdean escudo"                     "Cayman Islands dollar"                   "Central African CFA franc"               "CFP franc"                              </span></span>
-<span><span class='c'>#&gt;  [33] "Chilean peso"                            "Colombian peso"                          "Comorian franc"                          "Congolese franc"                        </span></span>
-<span><span class='c'>#&gt;  [37] "Cook Islands dollar"                     "Costa Rican colón"                       "Cuban peso"                              "Czech koruna"                           </span></span>
-<span><span class='c'>#&gt;  [41] "Danish krone"                            "Djiboutian franc"                        "Dominican peso"                          "Eastern Caribbean dollar"               </span></span>
-<span><span class='c'>#&gt;  [45] "Egyptian pound"                          "Eritrean nakfa"                          "Ethiopian birr"                          "Falkland Islands pound"                 </span></span>
-<span><span class='c'>#&gt;  [49] "Faroese króna"                           "Fijian dollar"                           "Gambian dalasi"                          "Georgian lari"                          </span></span>
-<span><span class='c'>#&gt;  [53] "Ghanaian cedi"                           "Gibraltar pound"                         "Guatemalan quetzal"                      "Guernsey pound"                         </span></span>
-<span><span class='c'>#&gt;  [57] "Guinean franc"                           "Guyanese dollar"                         "Haitian gourde"                          "Honduran lempira"                       </span></span>
-<span><span class='c'>#&gt;  [61] "Hong Kong dollar"                        "Hungarian forint"                        "Icelandic króna"                         "Indian rupee"                           </span></span>
-<span><span class='c'>#&gt;  [65] "Indonesian rupiah"                       "Iranian rial"                            "Iraqi dinar"                             "Israeli new shekel"                     </span></span>
-<span><span class='c'>#&gt;  [69] "Jamaican dollar"                         "Japanese yen"                            "Jersey pound"                            "Jordanian dinar"                        </span></span>
-<span><span class='c'>#&gt;  [73] "Kazakhstani tenge"                       "Kenyan shilling"                         "Kiribati dollar[E]"                      "Kuwaiti dinar"                          </span></span>
-<span><span class='c'>#&gt;  [77] "Kyrgyz som"                              "Lao kip"                                 "Lebanese pound"                          "Lesotho loti"                           </span></span>
-<span><span class='c'>#&gt;  [81] "Liberian dollar"                         "Libyan dinar"                            "Macanese pataca"                         "Macedonian denar"                       </span></span>
-<span><span class='c'>#&gt;  [85] "Malagasy ariary"                         "Malawian kwacha"                         "Malaysian ringgit"                       "Maldivian rufiyaa"                      </span></span>
-<span><span class='c'>#&gt;  [89] "Manx pound"                              "Mauritanian ouguiya"                     "Mauritian rupee"                         "Mexican peso"                           </span></span>
-<span><span class='c'>#&gt;  [93] "Moldovan leu"                            "Mongolian tögrög"                        "Moroccan dirham"                         "Mozambican metical"                     </span></span>
-<span><span class='c'>#&gt;  [97] "Namibian dollar"                         "Nepalese rupee"                          "Netherlands Antillean guilder"           "New Taiwan dollar"                      </span></span>
-<span><span class='c'>#&gt; [101] "New Zealand dollar"                      "Nicaraguan córdoba"                      "Nigerian naira"                          "Niue dollar[E]"                         </span></span>
-<span><span class='c'>#&gt; [105] "North Korean won"                        "Norwegian krone"                         "Omani rial"                              "Pakistani rupee"                        </span></span>
-<span><span class='c'>#&gt; [109] "Panamanian balboa"                       "Papua New Guinean kina"                  "Paraguayan guaraní"                      "Peruvian sol"                           </span></span>
-<span><span class='c'>#&gt; [113] "Philippine peso"                         "Pitcairn Islands dollar[E]"              "Polish złoty"                            "Qatari riyal"                           </span></span>
-<span><span class='c'>#&gt; [117] "Renminbi"                                "Romanian leu"                            "Russian ruble"                           "Rwandan franc"                          </span></span>
-<span><span class='c'>#&gt; [121] "Sahrawi peseta"                          "Saint Helena pound"                      "Samoan tālā"                             "São Tomé and Príncipe dobra"            </span></span>
-<span><span class='c'>#&gt; [125] "Saudi riyal"                             "Serbian dinar"                           "Seychellois rupee"                       "Sierra Leonean leone"                   </span></span>
-<span><span class='c'>#&gt; [129] "Singapore dollar"                        "Solomon Islands dollar"                  "Somali shilling"                         "South African rand"                     </span></span>
-<span><span class='c'>#&gt; [133] "South Korean won"                        "South Sudanese pound"                    "Sri Lankan rupee"                        "Sterling"                               </span></span>
-<span><span class='c'>#&gt; [137] "Sudanese pound"                          "Surinamese dollar"                       "Swazi lilangeni"                         "Swedish krona"                          </span></span>
-<span><span class='c'>#&gt; [141] "Swiss franc"                             "Syrian pound"                            "Tajikistani somoni"                      "Tanzanian shilling"                     </span></span>
-<span><span class='c'>#&gt; [145] "Thai baht"                               "Tongan paʻanga[K]"                       "Trinidad and Tobago dollar"              "Tunisian dinar"                         </span></span>
-<span><span class='c'>#&gt; [149] "Turkish lira"                            "Turkmenistani manat"                     "Tuvaluan dollar"                         "Ugandan shilling"                       </span></span>
-<span><span class='c'>#&gt; [153] "Ukrainian hryvnia"                       "United Arab Emirates dirham"             "United States dollar"                    "United States dollar[F]"                </span></span>
-<span><span class='c'>#&gt; [157] "Uruguayan peso"                          "Uzbekistani sum"                         "Vanuatu vatu"                            "Venezuelan digital bolívar"             </span></span>
-<span><span class='c'>#&gt; [161] "Venezuelan sovereign bolívar"            "Vietnamese đồng"                         "West African CFA franc"                  "Yemeni rial"                            </span></span>
-<span><span class='c'>#&gt; [165] "Zambian kwacha"                          "Zimbabwean dollar"</span></span>
+<span><span class='c'>#&gt;   [1] "Afghan afghani"                          "Albanian lek"                            "Algerian dinar"                          "Angolan kwanza"                          "Argentine peso"                         </span></span>
+<span><span class='c'>#&gt;   [6] "Armenian dram"                           "Aruban florin"                           "Australian dollar"                       "Azerbaijani manat"                       "Bahamian dollar"                        </span></span>
+<span><span class='c'>#&gt;  [11] "Bahraini dinar"                          "Bangladeshi taka"                        "Barbadian dollar"                        "Belarusian ruble"                        "Belize dollar"                          </span></span>
+<span><span class='c'>#&gt;  [16] "Bermudian dollar"                        "Bhutanese ngultrum"                      "Bitcoin[4]"                              "Bolivian boliviano"                      "Bosnia and Herzegovina convertible mark"</span></span>
+<span><span class='c'>#&gt;  [21] "Botswana pula"                           "Brazilian real"                          "Brunei dollar"                           "Bulgarian lev"                           "Burmese kyat"                           </span></span>
+<span><span class='c'>#&gt;  [26] "Burundian franc"                         "Cambodian riel"                          "Canadian dollar"                         "Cape Verdean escudo"                     "Cayman Islands dollar"                  </span></span>
+<span><span class='c'>#&gt;  [31] "Central African CFA franc"               "CFP franc"                               "Chilean peso"                            "Colombian peso"                          "Comorian franc"                         </span></span>
+<span><span class='c'>#&gt;  [36] "Congolese franc"                         "Cook Islands dollar"                     "Costa Rican colón"                       "Cuban peso"                              "Czech koruna"                           </span></span>
+<span><span class='c'>#&gt;  [41] "Danish krone"                            "Djiboutian franc"                        "Dominican peso"                          "Eastern Caribbean dollar"                "Egyptian pound"                         </span></span>
+<span><span class='c'>#&gt;  [46] "Eritrean nakfa"                          "Ethiopian birr"                          "Falkland Islands pound"                  "Faroese króna"                           "Fijian dollar"                          </span></span>
+<span><span class='c'>#&gt;  [51] "Gambian dalasi"                          "Georgian lari"                           "Ghanaian cedi"                           "Gibraltar pound"                         "Guatemalan quetzal"                     </span></span>
+<span><span class='c'>#&gt;  [56] "Guernsey pound"                          "Guinean franc"                           "Guyanese dollar"                         "Haitian gourde"                          "Honduran lempira"                       </span></span>
+<span><span class='c'>#&gt;  [61] "Hong Kong dollar"                        "Hungarian forint"                        "Icelandic króna"                         "Indian rupee"                            "Indonesian rupiah"                      </span></span>
+<span><span class='c'>#&gt;  [66] "Iranian rial"                            "Iraqi dinar"                             "Israeli new shekel"                      "Jamaican dollar"                         "Japanese yen"                           </span></span>
+<span><span class='c'>#&gt;  [71] "Jersey pound"                            "Jordanian dinar"                         "Kazakhstani tenge"                       "Kenyan shilling"                         "Kiribati dollar[E]"                     </span></span>
+<span><span class='c'>#&gt;  [76] "Kuwaiti dinar"                           "Kyrgyz som"                              "Lao kip"                                 "Lebanese pound"                          "Lesotho loti"                           </span></span>
+<span><span class='c'>#&gt;  [81] "Liberian dollar"                         "Libyan dinar"                            "Macanese pataca"                         "Macedonian denar"                        "Malagasy ariary"                        </span></span>
+<span><span class='c'>#&gt;  [86] "Malawian kwacha"                         "Malaysian ringgit"                       "Maldivian rufiyaa"                       "Manx pound"                              "Mauritanian ouguiya"                    </span></span>
+<span><span class='c'>#&gt;  [91] "Mauritian rupee"                         "Mexican peso"                            "Moldovan leu"                            "Mongolian tögrög"                        "Moroccan dirham"                        </span></span>
+<span><span class='c'>#&gt;  [96] "Mozambican metical"                      "Namibian dollar"                         "Nepalese rupee"                          "Netherlands Antillean guilder"           "New Taiwan dollar"                      </span></span>
+<span><span class='c'>#&gt; [101] "New Zealand dollar"                      "Nicaraguan córdoba"                      "Nigerian naira"                          "Niue dollar[E]"                          "North Korean won"                       </span></span>
+<span><span class='c'>#&gt; [106] "Norwegian krone"                         "Omani rial"                              "Pakistani rupee"                         "Panamanian balboa"                       "Papua New Guinean kina"                 </span></span>
+<span><span class='c'>#&gt; [111] "Paraguayan guaraní"                      "Peruvian sol"                            "Philippine peso"                         "Pitcairn Islands dollar[E]"              "Polish złoty"                           </span></span>
+<span><span class='c'>#&gt; [116] "Qatari riyal"                            "Renminbi"                                "Romanian leu"                            "Russian ruble"                           "Rwandan franc"                          </span></span>
+<span><span class='c'>#&gt; [121] "Sahrawi peseta"                          "Saint Helena pound"                      "Samoan tālā"                             "São Tomé and Príncipe dobra"             "Saudi riyal"                            </span></span>
+<span><span class='c'>#&gt; [126] "Serbian dinar"                           "Seychellois rupee"                       "Sierra Leonean leone"                    "Singapore dollar"                        "Solomon Islands dollar"                 </span></span>
+<span><span class='c'>#&gt; [131] "Somali shilling"                         "South African rand"                      "South Korean won"                        "South Sudanese pound"                    "Sri Lankan rupee"                       </span></span>
+<span><span class='c'>#&gt; [136] "Sterling"                                "Sudanese pound"                          "Surinamese dollar"                       "Swazi lilangeni"                         "Swedish krona"                          </span></span>
+<span><span class='c'>#&gt; [141] "Swiss franc"                             "Syrian pound"                            "Tajikistani somoni"                      "Tanzanian shilling"                      "Thai baht"                              </span></span>
+<span><span class='c'>#&gt; [146] "Tongan paʻanga[K]"                       "Trinidad and Tobago dollar"              "Tunisian dinar"                          "Turkish lira"                            "Turkmenistani manat"                    </span></span>
+<span><span class='c'>#&gt; [151] "Tuvaluan dollar"                         "Ugandan shilling"                        "Ukrainian hryvnia"                       "United Arab Emirates dirham"             "United States dollar"                   </span></span>
+<span><span class='c'>#&gt; [156] "United States dollar[F]"                 "Uruguayan peso"                          "Uzbekistani sum"                         "Vanuatu vatu"                            "Venezuelan digital bolívar"             </span></span>
+<span><span class='c'>#&gt; [161] "Venezuelan sovereign bolívar"            "Vietnamese đồng"                         "West African CFA franc"                  "Yemeni rial"                             "Zambian kwacha"                         </span></span>
+<span><span class='c'>#&gt; [166] "Zimbabwe gold"                           "Zimbabwean dollar"</span></span>
 <span></span></code></pre>
 
 </div>
@@ -712,95 +704,66 @@ Standardised currency names not currently present in our seed dataset are as fol
 <div class="highlight">
 
 <pre class='chroma'><code class='language-r' data-lang='r'><span><span class='nv'>X</span><span class='o'>@</span><span class='nv'>results_ls</span><span class='o'>$</span><span class='nv'>Currency_Output_Validation</span><span class='o'>$</span><span class='nv'>Absent_Values</span></span>
-<span><span class='c'>#&gt;   [1] "ADB Unit of Account"                                               "Afghani"                                                          </span></span>
-<span><span class='c'>#&gt;   [3] "Algerian Dinar"                                                    "Argentine Peso"                                                   </span></span>
-<span><span class='c'>#&gt;   [5] "Armenian Dram"                                                     "Aruban Florin"                                                    </span></span>
-<span><span class='c'>#&gt;   [7] "Australian Dollar"                                                 "Azerbaijan Manat"                                                 </span></span>
-<span><span class='c'>#&gt;   [9] "Bahamian Dollar"                                                   "Bahraini Dinar"                                                   </span></span>
-<span><span class='c'>#&gt;  [11] "Baht"                                                              "Balboa"                                                           </span></span>
-<span><span class='c'>#&gt;  [13] "Barbados Dollar"                                                   "Belarusian Ruble"                                                 </span></span>
-<span><span class='c'>#&gt;  [15] "Belize Dollar"                                                     "Bermudian Dollar"                                                 </span></span>
-<span><span class='c'>#&gt;  [17] "Bolívar Soberano"                                                  "Boliviano"                                                        </span></span>
-<span><span class='c'>#&gt;  [19] "Bond Markets Unit European Composite Unit (EURCO)"                 "Bond Markets Unit European Monetary Unit (E.M.U.-6)"              </span></span>
-<span><span class='c'>#&gt;  [21] "Bond Markets Unit European Unit of Account 17 (E.U.A.-17)"         "Bond Markets Unit European Unit of Account 9 (E.U.A.-9)"          </span></span>
-<span><span class='c'>#&gt;  [23] "Brazilian Real"                                                    "Brunei Dollar"                                                    </span></span>
-<span><span class='c'>#&gt;  [25] "Bulgarian Lev"                                                     "Burundi Franc"                                                    </span></span>
-<span><span class='c'>#&gt;  [27] "Cabo Verde Escudo"                                                 "Cayman Islands Dollar"                                            </span></span>
-<span><span class='c'>#&gt;  [29] "CFA Franc BCEAO"                                                   "CFA Franc BEAC"                                                   </span></span>
-<span><span class='c'>#&gt;  [31] "CFP Franc"                                                         "Chilean Peso"                                                     </span></span>
-<span><span class='c'>#&gt;  [33] "Codes specifically reserved for testing purposes"                  "Colombian Peso"                                                   </span></span>
-<span><span class='c'>#&gt;  [35] "Comorian Franc"                                                    "Congolese Franc"                                                  </span></span>
-<span><span class='c'>#&gt;  [37] "Convertible Mark"                                                  "Cordoba Oro"                                                      </span></span>
-<span><span class='c'>#&gt;  [39] "Costa Rican Colon"                                                 "Cuban Peso"                                                       </span></span>
-<span><span class='c'>#&gt;  [41] "Czech Koruna"                                                      "Dalasi"                                                           </span></span>
-<span><span class='c'>#&gt;  [43] "Danish Krone"                                                      "Denar"                                                            </span></span>
-<span><span class='c'>#&gt;  [45] "Djibouti Franc"                                                    "Dobra"                                                            </span></span>
-<span><span class='c'>#&gt;  [47] "Dominican Peso"                                                    "Dong"                                                             </span></span>
-<span><span class='c'>#&gt;  [49] "East Caribbean Dollar"                                             "Egyptian Pound"                                                   </span></span>
-<span><span class='c'>#&gt;  [51] "El Salvador Colon"                                                 "Ethiopian Birr"                                                   </span></span>
-<span><span class='c'>#&gt;  [53] "Falkland Islands Pound"                                            "Fiji Dollar"                                                      </span></span>
-<span><span class='c'>#&gt;  [55] "Forint"                                                            "Ghana Cedi"                                                       </span></span>
-<span><span class='c'>#&gt;  [57] "Gibraltar Pound"                                                   "Gold"                                                             </span></span>
-<span><span class='c'>#&gt;  [59] "Gourde"                                                            "Guarani"                                                          </span></span>
-<span><span class='c'>#&gt;  [61] "Guinean Franc"                                                     "Guyana Dollar"                                                    </span></span>
-<span><span class='c'>#&gt;  [63] "Hong Kong Dollar"                                                  "Hryvnia"                                                          </span></span>
-<span><span class='c'>#&gt;  [65] "Iceland Krona"                                                     "Indian Rupee"                                                     </span></span>
-<span><span class='c'>#&gt;  [67] "Iranian Rial"                                                      "Iraqi Dinar"                                                      </span></span>
-<span><span class='c'>#&gt;  [69] "Jamaican Dollar"                                                   "Jordanian Dinar"                                                  </span></span>
-<span><span class='c'>#&gt;  [71] "Kenyan Shilling"                                                   "Kina"                                                             </span></span>
-<span><span class='c'>#&gt;  [73] "Kuna"                                                              "Kuwaiti Dinar"                                                    </span></span>
-<span><span class='c'>#&gt;  [75] "Kwanza"                                                            "Kyat"                                                             </span></span>
-<span><span class='c'>#&gt;  [77] "Lao Kip"                                                           "Lari"                                                             </span></span>
-<span><span class='c'>#&gt;  [79] "Lebanese Pound"                                                    "Lek"                                                              </span></span>
-<span><span class='c'>#&gt;  [81] "Lempira"                                                           "Leone"                                                            </span></span>
-<span><span class='c'>#&gt;  [83] "Liberian Dollar"                                                   "Libyan Dinar"                                                     </span></span>
-<span><span class='c'>#&gt;  [85] "Lilangeni"                                                         "Loti"                                                             </span></span>
-<span><span class='c'>#&gt;  [87] "Malagasy Ariary"                                                   "Malawi Kwacha"                                                    </span></span>
-<span><span class='c'>#&gt;  [89] "Malaysian Ringgit"                                                 "Mauritius Rupee"                                                  </span></span>
-<span><span class='c'>#&gt;  [91] "Mexican Peso"                                                      "Mexican Unidad de Inversion (UDI)"                                </span></span>
-<span><span class='c'>#&gt;  [93] "Moldovan Leu"                                                      "Moroccan Dirham"                                                  </span></span>
-<span><span class='c'>#&gt;  [95] "Mozambique Metical"                                                "Mvdol"                                                            </span></span>
-<span><span class='c'>#&gt;  [97] "Naira"                                                             "Nakfa"                                                            </span></span>
-<span><span class='c'>#&gt;  [99] "Namibia Dollar"                                                    "Nepalese Rupee"                                                   </span></span>
-<span><span class='c'>#&gt; [101] "Netherlands Antillean Guilder"                                     "New Israeli Sheqel"                                               </span></span>
-<span><span class='c'>#&gt; [103] "New Taiwan Dollar"                                                 "New Zealand Dollar"                                               </span></span>
-<span><span class='c'>#&gt; [105] "Ngultrum"                                                          "North Korean Won"                                                 </span></span>
-<span><span class='c'>#&gt; [107] "Norwegian Krone"                                                   "Ouguiya"                                                          </span></span>
-<span><span class='c'>#&gt; [109] "Pa’anga"                                                           "Pakistan Rupee"                                                   </span></span>
-<span><span class='c'>#&gt; [111] "Palladium"                                                         "Pataca"                                                           </span></span>
-<span><span class='c'>#&gt; [113] "Peso Convertible"                                                  "Peso Uruguayo"                                                    </span></span>
-<span><span class='c'>#&gt; [115] "Philippine Peso"                                                   "Platinum"                                                         </span></span>
-<span><span class='c'>#&gt; [117] "Pound Sterling"                                                    "Pula"                                                             </span></span>
-<span><span class='c'>#&gt; [119] "Qatari Rial"                                                       "Quetzal"                                                          </span></span>
-<span><span class='c'>#&gt; [121] "Rand"                                                              "Rial Omani"                                                       </span></span>
-<span><span class='c'>#&gt; [123] "Riel"                                                              "Romanian Leu"                                                     </span></span>
-<span><span class='c'>#&gt; [125] "Rufiyaa"                                                           "Rupiah"                                                           </span></span>
-<span><span class='c'>#&gt; [127] "Russian Ruble"                                                     "Rwanda Franc"                                                     </span></span>
-<span><span class='c'>#&gt; [129] "Saint Helena Pound"                                                "Saudi Riyal"                                                      </span></span>
-<span><span class='c'>#&gt; [131] "SDR (Special Drawing Right)"                                       "Serbian Dinar"                                                    </span></span>
-<span><span class='c'>#&gt; [133] "Seychelles Rupee"                                                  "Silver"                                                           </span></span>
-<span><span class='c'>#&gt; [135] "Singapore Dollar"                                                  "Sol"                                                              </span></span>
-<span><span class='c'>#&gt; [137] "Solomon Islands Dollar"                                            "Som"                                                              </span></span>
-<span><span class='c'>#&gt; [139] "Somali Shilling"                                                   "Somoni"                                                           </span></span>
-<span><span class='c'>#&gt; [141] "South Sudanese Pound"                                              "Sri Lanka Rupee"                                                  </span></span>
-<span><span class='c'>#&gt; [143] "Sucre"                                                             "Sudanese Pound"                                                   </span></span>
-<span><span class='c'>#&gt; [145] "Surinam Dollar"                                                    "Swedish Krona"                                                    </span></span>
-<span><span class='c'>#&gt; [147] "Swiss Franc"                                                       "Syrian Pound"                                                     </span></span>
-<span><span class='c'>#&gt; [149] "Taka"                                                              "Tala"                                                             </span></span>
-<span><span class='c'>#&gt; [151] "Tanzanian Shilling"                                                "Tenge"                                                            </span></span>
-<span><span class='c'>#&gt; [153] "The codes assigned for transactions where no currency is involved" "Trinidad and Tobago Dollar"                                       </span></span>
-<span><span class='c'>#&gt; [155] "Tugrik"                                                            "Tunisian Dinar"                                                   </span></span>
-<span><span class='c'>#&gt; [157] "Turkish Lira"                                                      "Turkmenistan New Manat"                                           </span></span>
-<span><span class='c'>#&gt; [159] "UAE Dirham"                                                        "Uganda Shilling"                                                  </span></span>
-<span><span class='c'>#&gt; [161] "Unidad de Fomento"                                                 "Unidad de Valor Real"                                             </span></span>
-<span><span class='c'>#&gt; [163] "Unidad Previsional"                                                "Uruguay Peso en Unidades Indexadas (UI)"                          </span></span>
-<span><span class='c'>#&gt; [165] "US Dollar"                                                         "US Dollar (Next day)"                                             </span></span>
-<span><span class='c'>#&gt; [167] "Uzbekistan Sum"                                                    "Vatu"                                                             </span></span>
-<span><span class='c'>#&gt; [169] "WIR Euro"                                                          "WIR Franc"                                                        </span></span>
-<span><span class='c'>#&gt; [171] "Won"                                                               "Yemeni Rial"                                                      </span></span>
-<span><span class='c'>#&gt; [173] "Yen"                                                               "Yuan Renminbi"                                                    </span></span>
-<span><span class='c'>#&gt; [175] "Zambian Kwacha"                                                    "Zimbabwe Dollar"                                                  </span></span>
-<span><span class='c'>#&gt; [177] "Zloty"</span></span>
+<span><span class='c'>#&gt;   [1] "ADB Unit of Account"                                               "Afghani"                                                           "Algerian Dinar"                                                   </span></span>
+<span><span class='c'>#&gt;   [4] "Argentine Peso"                                                    "Armenian Dram"                                                     "Aruban Florin"                                                    </span></span>
+<span><span class='c'>#&gt;   [7] "Australian Dollar"                                                 "Azerbaijan Manat"                                                  "Bahamian Dollar"                                                  </span></span>
+<span><span class='c'>#&gt;  [10] "Bahraini Dinar"                                                    "Baht"                                                              "Balboa"                                                           </span></span>
+<span><span class='c'>#&gt;  [13] "Barbados Dollar"                                                   "Belarusian Ruble"                                                  "Belize Dollar"                                                    </span></span>
+<span><span class='c'>#&gt;  [16] "Bermudian Dollar"                                                  "Bolívar Soberano"                                                  "Boliviano"                                                        </span></span>
+<span><span class='c'>#&gt;  [19] "Bond Markets Unit European Composite Unit (EURCO)"                 "Bond Markets Unit European Monetary Unit (E.M.U.-6)"               "Bond Markets Unit European Unit of Account 17 (E.U.A.-17)"        </span></span>
+<span><span class='c'>#&gt;  [22] "Bond Markets Unit European Unit of Account 9 (E.U.A.-9)"           "Brazilian Real"                                                    "Brunei Dollar"                                                    </span></span>
+<span><span class='c'>#&gt;  [25] "Bulgarian Lev"                                                     "Burundi Franc"                                                     "Cabo Verde Escudo"                                                </span></span>
+<span><span class='c'>#&gt;  [28] "Canadian Dollar"                                                   "Cayman Islands Dollar"                                             "CFA Franc BCEAO"                                                  </span></span>
+<span><span class='c'>#&gt;  [31] "CFA Franc BEAC"                                                    "CFP Franc"                                                         "Chilean Peso"                                                     </span></span>
+<span><span class='c'>#&gt;  [34] "Codes specifically reserved for testing purposes"                  "Colombian Peso"                                                    "Comorian Franc"                                                   </span></span>
+<span><span class='c'>#&gt;  [37] "Congolese Franc"                                                   "Convertible Mark"                                                  "Cordoba Oro"                                                      </span></span>
+<span><span class='c'>#&gt;  [40] "Costa Rican Colon"                                                 "Cuban Peso"                                                        "Czech Koruna"                                                     </span></span>
+<span><span class='c'>#&gt;  [43] "Dalasi"                                                            "Danish Krone"                                                      "Denar"                                                            </span></span>
+<span><span class='c'>#&gt;  [46] "Djibouti Franc"                                                    "Dobra"                                                             "Dominican Peso"                                                   </span></span>
+<span><span class='c'>#&gt;  [49] "Dong"                                                              "East Caribbean Dollar"                                             "Egyptian Pound"                                                   </span></span>
+<span><span class='c'>#&gt;  [52] "El Salvador Colon"                                                 "Ethiopian Birr"                                                    "Falkland Islands Pound"                                           </span></span>
+<span><span class='c'>#&gt;  [55] "Fiji Dollar"                                                       "Forint"                                                            "Ghana Cedi"                                                       </span></span>
+<span><span class='c'>#&gt;  [58] "Gibraltar Pound"                                                   "Gold"                                                              "Gourde"                                                           </span></span>
+<span><span class='c'>#&gt;  [61] "Guarani"                                                           "Guinean Franc"                                                     "Guyana Dollar"                                                    </span></span>
+<span><span class='c'>#&gt;  [64] "Hong Kong Dollar"                                                  "Hryvnia"                                                           "Iceland Krona"                                                    </span></span>
+<span><span class='c'>#&gt;  [67] "Indian Rupee"                                                      "Iranian Rial"                                                      "Iraqi Dinar"                                                      </span></span>
+<span><span class='c'>#&gt;  [70] "Jamaican Dollar"                                                   "Jordanian Dinar"                                                   "Kenyan Shilling"                                                  </span></span>
+<span><span class='c'>#&gt;  [73] "Kina"                                                              "Kuna"                                                              "Kuwaiti Dinar"                                                    </span></span>
+<span><span class='c'>#&gt;  [76] "Kwanza"                                                            "Kyat"                                                              "Lao Kip"                                                          </span></span>
+<span><span class='c'>#&gt;  [79] "Lari"                                                              "Lebanese Pound"                                                    "Lek"                                                              </span></span>
+<span><span class='c'>#&gt;  [82] "Lempira"                                                           "Leone"                                                             "Liberian Dollar"                                                  </span></span>
+<span><span class='c'>#&gt;  [85] "Libyan Dinar"                                                      "Lilangeni"                                                         "Loti"                                                             </span></span>
+<span><span class='c'>#&gt;  [88] "Malagasy Ariary"                                                   "Malawi Kwacha"                                                     "Malaysian Ringgit"                                                </span></span>
+<span><span class='c'>#&gt;  [91] "Mauritius Rupee"                                                   "Mexican Peso"                                                      "Mexican Unidad de Inversion (UDI)"                                </span></span>
+<span><span class='c'>#&gt;  [94] "Moldovan Leu"                                                      "Moroccan Dirham"                                                   "Mozambique Metical"                                               </span></span>
+<span><span class='c'>#&gt;  [97] "Mvdol"                                                             "Naira"                                                             "Nakfa"                                                            </span></span>
+<span><span class='c'>#&gt; [100] "Namibia Dollar"                                                    "Nepalese Rupee"                                                    "Netherlands Antillean Guilder"                                    </span></span>
+<span><span class='c'>#&gt; [103] "New Israeli Sheqel"                                                "New Taiwan Dollar"                                                 "New Zealand Dollar"                                               </span></span>
+<span><span class='c'>#&gt; [106] "Ngultrum"                                                          "North Korean Won"                                                  "Norwegian Krone"                                                  </span></span>
+<span><span class='c'>#&gt; [109] "Ouguiya"                                                           "Pa’anga"                                                           "Pakistan Rupee"                                                   </span></span>
+<span><span class='c'>#&gt; [112] "Palladium"                                                         "Pataca"                                                            "Peso Convertible"                                                 </span></span>
+<span><span class='c'>#&gt; [115] "Peso Uruguayo"                                                     "Philippine Peso"                                                   "Platinum"                                                         </span></span>
+<span><span class='c'>#&gt; [118] "Pound Sterling"                                                    "Pula"                                                              "Qatari Rial"                                                      </span></span>
+<span><span class='c'>#&gt; [121] "Quetzal"                                                           "Rand"                                                              "Rial Omani"                                                       </span></span>
+<span><span class='c'>#&gt; [124] "Riel"                                                              "Romanian Leu"                                                      "Rufiyaa"                                                          </span></span>
+<span><span class='c'>#&gt; [127] "Rupiah"                                                            "Russian Ruble"                                                     "Rwanda Franc"                                                     </span></span>
+<span><span class='c'>#&gt; [130] "Saint Helena Pound"                                                "Saudi Riyal"                                                       "SDR (Special Drawing Right)"                                      </span></span>
+<span><span class='c'>#&gt; [133] "Serbian Dinar"                                                     "Seychelles Rupee"                                                  "Silver"                                                           </span></span>
+<span><span class='c'>#&gt; [136] "Singapore Dollar"                                                  "Sol"                                                               "Solomon Islands Dollar"                                           </span></span>
+<span><span class='c'>#&gt; [139] "Som"                                                               "Somali Shilling"                                                   "Somoni"                                                           </span></span>
+<span><span class='c'>#&gt; [142] "South Sudanese Pound"                                              "Sri Lanka Rupee"                                                   "Sucre"                                                            </span></span>
+<span><span class='c'>#&gt; [145] "Sudanese Pound"                                                    "Surinam Dollar"                                                    "Swedish Krona"                                                    </span></span>
+<span><span class='c'>#&gt; [148] "Swiss Franc"                                                       "Syrian Pound"                                                      "Taka"                                                             </span></span>
+<span><span class='c'>#&gt; [151] "Tala"                                                              "Tanzanian Shilling"                                                "Tenge"                                                            </span></span>
+<span><span class='c'>#&gt; [154] "The codes assigned for transactions where no currency is involved" "Trinidad and Tobago Dollar"                                        "Tugrik"                                                           </span></span>
+<span><span class='c'>#&gt; [157] "Tunisian Dinar"                                                    "Turkish Lira"                                                      "Turkmenistan New Manat"                                           </span></span>
+<span><span class='c'>#&gt; [160] "UAE Dirham"                                                        "Uganda Shilling"                                                   "Unidad de Fomento"                                                </span></span>
+<span><span class='c'>#&gt; [163] "Unidad de Valor Real"                                              "Unidad Previsional"                                                "Uruguay Peso en Unidades Indexadas (UI)"                          </span></span>
+<span><span class='c'>#&gt; [166] "US Dollar"                                                         "US Dollar (Next day)"                                              "Uzbekistan Sum"                                                   </span></span>
+<span><span class='c'>#&gt; [169] "Vatu"                                                              "WIR Euro"                                                          "WIR Franc"                                                        </span></span>
+<span><span class='c'>#&gt; [172] "Won"                                                               "Yemeni Rial"                                                       "Yen"                                                              </span></span>
+<span><span class='c'>#&gt; [175] "Yuan Renminbi"                                                     "Zambian Kwacha"                                                    "Zimbabwe Dollar"                                                  </span></span>
+<span><span class='c'>#&gt; [178] "Zloty"</span></span>
 <span></span></code></pre>
 
 </div>
@@ -820,8 +783,8 @@ This significantly reduces the umber of non-standard values for our target varia
 <div class="highlight">
 
 <pre class='chroma'><code class='language-r' data-lang='r'><span><span class='nv'>X</span><span class='o'>@</span><span class='nv'>results_ls</span><span class='o'>$</span><span class='nv'>Currency_Output_Validation</span><span class='o'>$</span><span class='nv'>Invalid_Values</span></span>
-<span><span class='c'>#&gt;  [1] "Bitcoin[4] (as legal tender)" "Cook Islands dollar"          "Faroese króna"                "Guernsey pound"               "Jersey pound"                 "Kiribati dollar[E]"          </span></span>
-<span><span class='c'>#&gt;  [7] "Manx pound"                   "Niue dollar[E]"               "Pitcairn Islands dollar[E]"   "Sahrawi peseta"               "Tuvaluan dollar"              "Zimbabwean dollar"</span></span>
+<span><span class='c'>#&gt;  [1] "Bitcoin[4]"                 "Cook Islands dollar"        "Faroese króna"              "Guernsey pound"             "Jersey pound"               "Kiribati dollar[E]"         "Manx pound"                 "Niue dollar[E]"            </span></span>
+<span><span class='c'>#&gt;  [9] "Pitcairn Islands dollar[E]" "Sahrawi peseta"             "Tuvaluan dollar"            "Zimbabwe gold"              "Zimbabwean dollar"</span></span>
 <span></span></code></pre>
 
 </div>
@@ -850,7 +813,7 @@ We can no inspect our results a dataset for which the country names and currency
 
 <div style="border: 1px solid #ddd; padding: 5px; overflow-x: scroll; width:100%; ">
 
-<table class=" lightable-paper lightable-hover lightable-paper" style="font-family: &quot;Arial Narrow&quot;, arial, helvetica, sans-serif; width: auto !important; margin-left: auto; margin-right: auto;border-bottom: 0; font-family: &quot;Arial Narrow&quot;, arial, helvetica, sans-serif; margin-left: auto; margin-right: auto;">
+<table class=" lightable-paper lightable-hover lightable-paper" style="color: black; font-family: &quot;Arial Narrow&quot;, arial, helvetica, sans-serif; width: auto !important; margin-left: auto; margin-right: auto;border-bottom: 0; color: black; font-family: &quot;Arial Narrow&quot;, arial, helvetica, sans-serif; margin-left: auto; margin-right: auto;">
 <caption>
 Dataset
 </caption>
@@ -1251,7 +1214,7 @@ Br
 BYN
 </td>
 <td style="text-align:right;">
-Copeck
+Kopeck
 </td>
 <td style="text-align:right;">
 100
@@ -2465,7 +2428,7 @@ French Polynesia
 CFP Franc
 </td>
 <td style="text-align:right;">
-Fr
+₣
 </td>
 <td style="text-align:right;">
 XPF
@@ -4085,7 +4048,7 @@ New Caledonia
 CFP Franc
 </td>
 <td style="text-align:right;">
-Fr
+₣
 </td>
 <td style="text-align:right;">
 XPF
@@ -5145,7 +5108,7 @@ South Sudan
 South Sudanese Pound
 </td>
 <td style="text-align:right;">
-(none)
+LS
 </td>
 <td style="text-align:right;">
 SSP
@@ -5459,7 +5422,7 @@ Millime
 </tr>
 <tr>
 <td style="text-align:left;">
-Turkey
+Türkiye
 </td>
 <td style="text-align:right;">
 Turkish Lira
@@ -5805,7 +5768,7 @@ Wallis and Futuna
 CFP Franc
 </td>
 <td style="text-align:right;">
-Fr
+₣
 </td>
 <td style="text-align:right;">
 XPF

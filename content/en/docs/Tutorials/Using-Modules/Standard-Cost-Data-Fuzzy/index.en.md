@@ -1,7 +1,7 @@
 ---
 title: "Standardise Variable Values With Fuzzy Logic And Correspondence Tables"
 linkTitle: "Standardise values (1)"
-date: "2024-01-25"
+date: "2024-06-08"
 description: "Costing health economic datasets is an activity that can involve repeated use of lookup tables. This tutorial describes how a module from the costly R package can help you to use a combination of fuzzy logic and correspondence tables to standardise variable values and thus facilitate partial automation of costing algorithms."
 weight: 91
 categories: 
@@ -18,7 +18,7 @@ tags:
 - Status
 - Status - development
 output: hugodown::md_document
-rmd_hash: 09d3ac4d2c23332d
+rmd_hash: 49639df51e73182d
 html_dependencies:
 - <script src="kePrint-0.0.1/kePrint.js"></script>
 - <link href="lightable-0.0.1/lightable.css" rel="stylesheet" />
@@ -100,7 +100,7 @@ We can now inspect the first few records from our labelled seed dataset.
 
 <div style="border: 1px solid #ddd; padding: 5px; overflow-x: scroll; width:100%; ">
 
-<table class=" lightable-paper lightable-hover lightable-paper" style="font-family: &quot;Arial Narrow&quot;, arial, helvetica, sans-serif; width: auto !important; margin-left: auto; margin-right: auto;border-bottom: 0; font-family: &quot;Arial Narrow&quot;, arial, helvetica, sans-serif; margin-left: auto; margin-right: auto;">
+<table class=" lightable-paper lightable-hover lightable-paper" style="color: black; font-family: &quot;Arial Narrow&quot;, arial, helvetica, sans-serif; width: auto !important; margin-left: auto; margin-right: auto;border-bottom: 0; color: black; font-family: &quot;Arial Narrow&quot;, arial, helvetica, sans-serif; margin-left: auto; margin-right: auto;">
 <caption>
 Dataset
 </caption>
@@ -270,7 +270,7 @@ We can also inspect the data dictionary contained in `A`.
 
 <div style="border: 1px solid #ddd; padding: 5px; overflow-x: scroll; width:100%; ">
 
-<table class=" lightable-paper lightable-hover lightable-paper" style="font-family: &quot;Arial Narrow&quot;, arial, helvetica, sans-serif; width: auto !important; margin-left: auto; margin-right: auto;border-bottom: 0; font-family: &quot;Arial Narrow&quot;, arial, helvetica, sans-serif; margin-left: auto; margin-right: auto;">
+<table class=" lightable-paper lightable-hover lightable-paper" style="color: black; font-family: &quot;Arial Narrow&quot;, arial, helvetica, sans-serif; width: auto !important; margin-left: auto; margin-right: auto;border-bottom: 0; color: black; font-family: &quot;Arial Narrow&quot;, arial, helvetica, sans-serif; margin-left: auto; margin-right: auto;">
 <caption>
 Data Dictionary
 </caption>
@@ -436,7 +436,7 @@ We can inspect the first few cases of the labelled version of the dataset in `B`
 
 <div style="border: 1px solid #ddd; padding: 5px; overflow-x: scroll; width:100%; ">
 
-<table class=" lightable-paper lightable-hover lightable-paper" style="font-family: &quot;Arial Narrow&quot;, arial, helvetica, sans-serif; width: auto !important; margin-left: auto; margin-right: auto;border-bottom: 0; font-family: &quot;Arial Narrow&quot;, arial, helvetica, sans-serif; margin-left: auto; margin-right: auto;">
+<table class=" lightable-paper lightable-hover lightable-paper" style="color: black; font-family: &quot;Arial Narrow&quot;, arial, helvetica, sans-serif; width: auto !important; margin-left: auto; margin-right: auto;border-bottom: 0; color: black; font-family: &quot;Arial Narrow&quot;, arial, helvetica, sans-serif; margin-left: auto; margin-right: auto;">
 <caption>
 Dataset
 </caption>
@@ -606,7 +606,7 @@ We can also inspect the data dictionary contained in `B`.
 
 <div style="border: 1px solid #ddd; padding: 5px; overflow-x: scroll; width:100%; ">
 
-<table class=" lightable-paper lightable-hover lightable-paper" style="font-family: &quot;Arial Narrow&quot;, arial, helvetica, sans-serif; width: auto !important; margin-left: auto; margin-right: auto;border-bottom: 0; font-family: &quot;Arial Narrow&quot;, arial, helvetica, sans-serif; margin-left: auto; margin-right: auto;">
+<table class=" lightable-paper lightable-hover lightable-paper" style="color: black; font-family: &quot;Arial Narrow&quot;, arial, helvetica, sans-serif; width: auto !important; margin-left: auto; margin-right: auto;border-bottom: 0; color: black; font-family: &quot;Arial Narrow&quot;, arial, helvetica, sans-serif; margin-left: auto; margin-right: auto;">
 <caption>
 Data Dictionary
 </caption>
@@ -765,19 +765,16 @@ We can also identify standard values that were not present in the seed dataset v
 <div class="highlight">
 
 <pre class='chroma'><code class='language-r' data-lang='r'><span><span class='nv'>X</span><span class='o'>@</span><span class='nv'>results_ls</span><span class='o'>$</span><span class='nv'>Country_Output_Validation</span><span class='o'>$</span><span class='nv'>Absent_Values</span></span>
-<span><span class='c'>#&gt;  [1] "Åland Islands"                                "Antarctica"                                   "Bolivia, Plurinational State of"              "Bonaire, Sint Eustatius and Saba"            </span></span>
-<span><span class='c'>#&gt;  [5] "Bouvet Island"                                "British Indian Ocean Territory"               "Brunei Darussalam"                            "Cabo Verde"                                  </span></span>
-<span><span class='c'>#&gt;  [9] "Christmas Island"                             "Cocos (Keeling) Islands"                      "Congo, The Democratic Republic of the"        "Côte d'Ivoire"                               </span></span>
-<span><span class='c'>#&gt; [13] "Curaçao"                                      "Czechia"                                      "Eswatini"                                     "Falkland Islands (Malvinas)"                 </span></span>
-<span><span class='c'>#&gt; [17] "French Southern Territories"                  "Guernsey"                                     "Heard Island and McDonald Islands"            "Holy See (Vatican City State)"               </span></span>
-<span><span class='c'>#&gt; [21] "Hong Kong"                                    "Iran, Islamic Republic of"                    "Korea, Democratic People's Republic of"       "Korea, Republic of"                          </span></span>
-<span><span class='c'>#&gt; [25] "Lao People's Democratic Republic"             "Macao"                                        "Micronesia, Federated States of"              "Moldova, Republic of"                        </span></span>
-<span><span class='c'>#&gt; [29] "Palestine, State of"                          "Réunion"                                      "Russian Federation"                           "Saint Barthélemy"                            </span></span>
-<span><span class='c'>#&gt; [33] "Saint Helena, Ascension and Tristan da Cunha" "Saint Martin (French part)"                   "Saint Vincent and the Grenadines"             "Sint Maarten (Dutch part)"                   </span></span>
-<span><span class='c'>#&gt; [37] "South Georgia and the South Sandwich Islands" "Syrian Arab Republic"                         "Taiwan, Province of China"                    "Tanzania, United Republic of"                </span></span>
-<span><span class='c'>#&gt; [41] "Timor-Leste"                                  "Turks and Caicos Islands"                     "United Kingdom"                               "United States"                               </span></span>
-<span><span class='c'>#&gt; [45] "United States Minor Outlying Islands"         "Venezuela, Bolivarian Republic of"            "Viet Nam"                                     "Virgin Islands, British"                     </span></span>
-<span><span class='c'>#&gt; [49] "Virgin Islands, U.S."</span></span>
+<span><span class='c'>#&gt;  [1] "Åland Islands"                                "Antarctica"                                   "Bolivia, Plurinational State of"              "Bonaire, Sint Eustatius and Saba"             "Bouvet Island"                               </span></span>
+<span><span class='c'>#&gt;  [6] "British Indian Ocean Territory"               "Brunei Darussalam"                            "Cabo Verde"                                   "Christmas Island"                             "Cocos (Keeling) Islands"                     </span></span>
+<span><span class='c'>#&gt; [11] "Congo, The Democratic Republic of the"        "Côte d'Ivoire"                                "Curaçao"                                      "Czechia"                                      "Eswatini"                                    </span></span>
+<span><span class='c'>#&gt; [16] "Falkland Islands (Malvinas)"                  "French Southern Territories"                  "Guernsey"                                     "Heard Island and McDonald Islands"            "Holy See (Vatican City State)"               </span></span>
+<span><span class='c'>#&gt; [21] "Hong Kong"                                    "Iran, Islamic Republic of"                    "Korea, Democratic People's Republic of"       "Korea, Republic of"                           "Lao People's Democratic Republic"            </span></span>
+<span><span class='c'>#&gt; [26] "Macao"                                        "Micronesia, Federated States of"              "Moldova, Republic of"                         "Palestine, State of"                          "Réunion"                                     </span></span>
+<span><span class='c'>#&gt; [31] "Russian Federation"                           "Saint Barthélemy"                             "Saint Helena, Ascension and Tristan da Cunha" "Saint Martin (French part)"                   "Saint Vincent and the Grenadines"            </span></span>
+<span><span class='c'>#&gt; [36] "Sint Maarten (Dutch part)"                    "South Georgia and the South Sandwich Islands" "Syrian Arab Republic"                         "Taiwan, Province of China"                    "Tanzania, United Republic of"                </span></span>
+<span><span class='c'>#&gt; [41] "Timor-Leste"                                  "Türkiye"                                      "Turks and Caicos Islands"                     "United Kingdom"                               "United States"                               </span></span>
+<span><span class='c'>#&gt; [46] "United States Minor Outlying Islands"         "Venezuela, Bolivarian Republic of"            "Viet Nam"                                     "Virgin Islands, British"                      "Virgin Islands, U.S."</span></span>
 <span></span></code></pre>
 
 </div>
@@ -817,7 +814,7 @@ However, some of the replacements will be spurious as can be seen by inspecting 
 <div class="highlight">
 
 <pre class='chroma'><code class='language-r' data-lang='r'><span><span class='nv'>X</span><span class='o'>@</span><span class='nv'>results_ls</span><span class='o'>$</span><span class='nv'>Country_Output_Correspondences</span></span>
-<span><span class='c'>#&gt; <span style='color: #555555;'># A tibble: 41 × 2</span></span></span>
+<span><span class='c'>#&gt; <span style='color: #555555;'># A tibble: 42 × 2</span></span></span>
 <span><span class='c'>#&gt;    old_nms_chr               new_nms_chr                          </span></span>
 <span><span class='c'>#&gt;    <span style='color: #555555; font-style: italic;'>&lt;chr&gt;</span>                     <span style='color: #555555; font-style: italic;'>&lt;chr&gt;</span>                                </span></span>
 <span><span class='c'>#&gt; <span style='color: #555555;'> 1</span> Azores                    Timor-Leste                          </span></span>
@@ -830,7 +827,7 @@ However, some of the replacements will be spurious as can be seen by inspecting 
 <span><span class='c'>#&gt; <span style='color: #555555;'> 8</span> Czech Republic            Czechia                              </span></span>
 <span><span class='c'>#&gt; <span style='color: #555555;'> 9</span> East Timor                Eswatini                             </span></span>
 <span><span class='c'>#&gt; <span style='color: #555555;'>10</span> Easter Island             Christmas Island                     </span></span>
-<span><span class='c'>#&gt; <span style='color: #555555;'># ℹ 31 more rows</span></span></span>
+<span><span class='c'>#&gt; <span style='color: #555555;'># ℹ 32 more rows</span></span></span>
 <span></span></code></pre>
 
 </div>
@@ -862,7 +859,7 @@ We can inspect the values of this correspondence table.
 
 <div style="border: 1px solid #ddd; padding: 5px; overflow-x: scroll; width:100%; ">
 
-<table class=" lightable-paper lightable-hover lightable-paper" style="font-family: &quot;Arial Narrow&quot;, arial, helvetica, sans-serif; width: auto !important; margin-left: auto; margin-right: auto;border-bottom: 0; font-family: &quot;Arial Narrow&quot;, arial, helvetica, sans-serif; margin-left: auto; margin-right: auto;">
+<table class=" lightable-paper lightable-hover lightable-paper" style="color: black; font-family: &quot;Arial Narrow&quot;, arial, helvetica, sans-serif; width: auto !important; margin-left: auto; margin-right: auto;border-bottom: 0; color: black; font-family: &quot;Arial Narrow&quot;, arial, helvetica, sans-serif; margin-left: auto; margin-right: auto;">
 <thead>
 <tr>
 <th style="text-align:left;">
@@ -991,7 +988,7 @@ Our correspondences table looks better.
 <div class="highlight">
 
 <pre class='chroma'><code class='language-r' data-lang='r'><span><span class='nv'>X</span><span class='o'>@</span><span class='nv'>results_ls</span><span class='o'>$</span><span class='nv'>Country_Output_Correspondences</span></span>
-<span><span class='c'>#&gt; <span style='color: #555555;'># A tibble: 41 × 2</span></span></span>
+<span><span class='c'>#&gt; <span style='color: #555555;'># A tibble: 42 × 2</span></span></span>
 <span><span class='c'>#&gt;    old_nms_chr               new_nms_chr                          </span></span>
 <span><span class='c'>#&gt;    <span style='color: #555555; font-style: italic;'>&lt;chr&gt;</span>                     <span style='color: #555555; font-style: italic;'>&lt;chr&gt;</span>                                </span></span>
 <span><span class='c'>#&gt; <span style='color: #555555;'> 1</span> Azores                    Portugal                             </span></span>
@@ -1004,7 +1001,7 @@ Our correspondences table looks better.
 <span><span class='c'>#&gt; <span style='color: #555555;'> 8</span> Czech Republic            Czechia                              </span></span>
 <span><span class='c'>#&gt; <span style='color: #555555;'> 9</span> East Timor                Timor-Leste                          </span></span>
 <span><span class='c'>#&gt; <span style='color: #555555;'>10</span> Easter Island             Chile                                </span></span>
-<span><span class='c'>#&gt; <span style='color: #555555;'># ℹ 31 more rows</span></span></span>
+<span><span class='c'>#&gt; <span style='color: #555555;'># ℹ 32 more rows</span></span></span>
 <span></span></code></pre>
 
 </div>
@@ -1043,10 +1040,9 @@ However, there are also a some values from our standards dataset that are not re
 <div class="highlight">
 
 <pre class='chroma'><code class='language-r' data-lang='r'><span><span class='nv'>X</span><span class='o'>@</span><span class='nv'>results_ls</span><span class='o'>$</span><span class='nv'>Country_Output_Validation</span><span class='o'>$</span><span class='nv'>Absent_Values</span></span>
-<span><span class='c'>#&gt;  [1] "Åland Islands"                                "Antarctica"                                   "Bouvet Island"                                "British Indian Ocean Territory"              </span></span>
-<span><span class='c'>#&gt;  [5] "Christmas Island"                             "Cocos (Keeling) Islands"                      "Curaçao"                                      "French Southern Territories"                 </span></span>
-<span><span class='c'>#&gt;  [9] "Heard Island and McDonald Islands"            "Hong Kong"                                    "Macao"                                        "Sint Maarten (Dutch part)"                   </span></span>
-<span><span class='c'>#&gt; [13] "South Georgia and the South Sandwich Islands" "United States Minor Outlying Islands"</span></span>
+<span><span class='c'>#&gt;  [1] "Åland Islands"                                "Antarctica"                                   "Bouvet Island"                                "British Indian Ocean Territory"               "Christmas Island"                            </span></span>
+<span><span class='c'>#&gt;  [6] "Cocos (Keeling) Islands"                      "Curaçao"                                      "French Southern Territories"                  "Heard Island and McDonald Islands"            "Hong Kong"                                   </span></span>
+<span><span class='c'>#&gt; [11] "Macao"                                        "Sint Maarten (Dutch part)"                    "South Georgia and the South Sandwich Islands" "United States Minor Outlying Islands"</span></span>
 <span></span></code></pre>
 
 </div>
@@ -1070,7 +1066,7 @@ We can inspect the records for cases corresponding to capital cities from our ne
 
 <div style="border: 1px solid #ddd; padding: 5px; overflow-x: scroll; width:100%; ">
 
-<table class=" lightable-paper lightable-hover lightable-paper" style="font-family: &quot;Arial Narrow&quot;, arial, helvetica, sans-serif; width: auto !important; margin-left: auto; margin-right: auto;border-bottom: 0; font-family: &quot;Arial Narrow&quot;, arial, helvetica, sans-serif; margin-left: auto; margin-right: auto;">
+<table class=" lightable-paper lightable-hover lightable-paper" style="color: black; font-family: &quot;Arial Narrow&quot;, arial, helvetica, sans-serif; width: auto !important; margin-left: auto; margin-right: auto;border-bottom: 0; color: black; font-family: &quot;Arial Narrow&quot;, arial, helvetica, sans-serif; margin-left: auto; margin-right: auto;">
 <caption>
 Dataset
 </caption>
@@ -1322,7 +1318,7 @@ Andorra
 Ankara
 </td>
 <td style="text-align:right;">
-Turkey
+Türkiye
 </td>
 <td style="text-align:right;">
 3579706

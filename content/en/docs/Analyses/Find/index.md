@@ -1,7 +1,7 @@
 ---
 title: "Finding programs"
 linkTitle: "Find"
-date: "2024-01-25"
+date: "2024-06-08"
 description: "Programs are used to generate and report a model analysis."
 weight: 3
 categories: 
@@ -49,7 +49,7 @@ Currently available readyforwhatsnext programs are summarised in the below table
 </div>
 
 
-<table class="table table-hover table-condensed" style="margin-left: auto; margin-right: auto;">
+<table class="table table-hover table-condensed" style="color: black; margin-left: auto; margin-right: auto;">
 <thead>
 <tr>
 <th style="text-align:left;">

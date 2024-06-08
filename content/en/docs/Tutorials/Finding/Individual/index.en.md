@@ -1,7 +1,7 @@
 ---
 title: "Finding specific modules and sub-modules"
 linkTitle: "Modules"
-date: "2024-01-25"
+date: "2024-06-08"
 description: "How to find individual readyforwhatsnext modules and sub-modules."
 weight: 2
 categories: 
@@ -11,7 +11,7 @@ tags:
 - Model - modules
 - Model - sub-modules
 output: hugodown::md_document
-rmd_hash: 03a7b3817548f57d
+rmd_hash: 6555ce162d2cb02f
 html_dependencies:
 - <script src="kePrint-0.0.1/kePrint.js"></script>
 - <link href="lightable-0.0.1/lightable.css" rel="stylesheet" />
@@ -36,11 +36,15 @@ html_dependencies:
 
 ## Motivation
 
-When considering whether to use model modules, model developers and users will often want to see examples of each module's application The `ready4` package includes tools to allow a modelling project's maintainers to perform automated searches for vignette examples of model modules and to output tabular summaries of these modules that are suitable for inclusion on documentation website pages.
+When considering whether to use a model module, it is useful to first see tutorials about appropriate use of that module.
 
 ## Implementation
 
-Details of how to search for themed collections of modules is described in [another article](https://www.ready4-dev.com/docs/software/libraries/types/module/). A table itemising individual model modules and sub-modules authored with `ready4` can be generated using `make_modules_tb`. This function scrapes relevant data from the websites of module libraries that have been developed within a specified project's GitHub organisation and may take a couple of minutes to execute. In this example, we are going to examine modules from a [youth mental health model](https://www.ready4-dev.com/docs/model/).
+A table itemising individual model modules and sub-modules authored with `ready4` can be generated using `make_modules_tb`. This function scrapes relevant data from the websites of module libraries that have been developed within a specified project's GitHub organisation.
+
+## Use
+
+In this example, we are going to examine modules from the [readyforwhatsnext model](https://readyforwhatsnext.org/). The value supplied to the `gh_repo_1L_chr` argument specifies the repository in which a dataset of readyforwhatsnext module libraries is stored. Note, the following command may take a couple of minutes to execute.
 
 <div class="highlight">
 
@@ -57,7 +61,9 @@ A slightly quicker method to achieve a similar result is to use the `get_modules
 
 </div>
 
-The `modules_tb` object itemises both ready4 modules (which always use R's "S4" class type) and sub-modules ("S3" class type). To display a HTML summary of just ready4 modules, you can use the `print_modules` function.
+The `modules_tb` object itemises both model [modules (which always use R's "S4" class type) and sub-modules ("S3" class type)](https://www.ready4-dev.com/docs/getting-started/implementation/modularity/).
+
+To display a HTML summary of just model modules, you can use the `print_modules` function.
 
 <div class="highlight">
 
@@ -67,7 +73,7 @@ The `modules_tb` object itemises both ready4 modules (which always use R's "S4" 
 
 <div class="highlight">
 
-<table class="table table-hover table-condensed" style="margin-left: auto; margin-right: auto;">
+<table class="table table-hover table-condensed" style="color: black; margin-left: auto; margin-right: auto;">
 <thead>
 <tr>
 <th style="text-align:left;">
@@ -558,7 +564,7 @@ A longitudinal dataset and its associated dictionary, descriptive statistics and
 
 </div>
 
-You can use the same function to display only ready4 sub-modules.
+You can use the same function to display only model sub-modules.
 
 <div class="highlight">
 
@@ -568,7 +574,7 @@ You can use the same function to display only ready4 sub-modules.
 
 <div class="highlight">
 
-<table class="table table-hover table-condensed" style="margin-left: auto; margin-right: auto;">
+<table class="table table-hover table-condensed" style="color: black; margin-left: auto; margin-right: auto;">
 <thead>
 <tr>
 <th style="text-align:left;">
@@ -608,7 +614,7 @@ Candidate predictors lookup table
 <a href="https://ready4-dev.github.io/vicinity/reference/vicinity_abbreviations.html" style="     ">vicinity_abbreviations</a>
 </td>
 <td style="text-align:left;">
-ready4 S3 class for tibble object lookup table for spatial data abbreviations
+ready4 submodule class for tibble object lookup table for spatial data abbreviations
 </td>
 <td style="text-align:left;">
 </td>
@@ -618,7 +624,7 @@ ready4 S3 class for tibble object lookup table for spatial data abbreviations
 <a href="https://ready4-dev.github.io/vicinity/reference/vicinity_identifiers.html" style="     ">vicinity_identifiers</a>
 </td>
 <td style="text-align:left;">
-ready4 S3 class for tibble object lookup table of unique feature identifiers used for different spatial objects
+ready4 submodule class for tibble object lookup table of unique feature identifiers used for different spatial objects
 </td>
 <td style="text-align:left;">
 </td>
@@ -628,7 +634,7 @@ ready4 S3 class for tibble object lookup table of unique feature identifiers use
 <a href="https://ready4-dev.github.io/vicinity/reference/vicinity_mapes.html" style="     ">vicinity_mapes</a>
 </td>
 <td style="text-align:left;">
-ready4 S3 class for tibble object that stores spatial simulation parameters relating to Mean Absolute Prediction Errors
+ready4 submodule class for tibble object that stores spatial simulation parameters relating to Mean Absolute Prediction Errors
 </td>
 <td style="text-align:left;">
 </td>
@@ -638,7 +644,7 @@ ready4 S3 class for tibble object that stores spatial simulation parameters rela
 <a href="https://ready4-dev.github.io/vicinity/reference/vicinity_parameters.html" style="     ">vicinity_parameters</a>
 </td>
 <td style="text-align:left;">
-ready4 S3 class for tibble object that stores simulation structural parameters relating to the spatial environment
+ready4 submodule class for tibble object that stores simulation structural parameters relating to the spatial environment
 </td>
 <td style="text-align:left;">
 </td>
@@ -648,7 +654,7 @@ ready4 S3 class for tibble object that stores simulation structural parameters r
 <a href="https://ready4-dev.github.io/vicinity/reference/vicinity_points.html" style="     ">vicinity_points</a>
 </td>
 <td style="text-align:left;">
-ready4 S3 class for tibble object lookup table of the longitude and latitude cordinates of sites of services / homes
+ready4 submodule class for tibble object lookup table of the longitude and latitude cordinates of sites of services / homes
 </td>
 <td style="text-align:left;">
 </td>
@@ -658,7 +664,7 @@ ready4 S3 class for tibble object lookup table of the longitude and latitude cor
 <a href="https://ready4-dev.github.io/vicinity/reference/vicinity_processed.html" style="     ">vicinity_processed</a>
 </td>
 <td style="text-align:left;">
-ready4 S3 class for tibble object lookup table of meta-data for spatial data packs (imported and pre-processed data)
+ready4 submodule class for tibble object lookup table of meta-data for spatial data packs (imported and pre-processed data)
 </td>
 <td style="text-align:left;">
 </td>
@@ -668,7 +674,7 @@ ready4 S3 class for tibble object lookup table of meta-data for spatial data pac
 <a href="https://ready4-dev.github.io/vicinity/reference/vicinity_raw.html" style="     ">vicinity_raw</a>
 </td>
 <td style="text-align:left;">
-ready4 S3 class for tibble object lookup table of metadata about raw (un-processed) spatial data to import
+ready4 submodule class for tibble object lookup table of metadata about raw (un-processed) spatial data to import
 </td>
 <td style="text-align:left;">
 </td>
@@ -678,7 +684,7 @@ ready4 S3 class for tibble object lookup table of metadata about raw (un-process
 <a href="https://ready4-dev.github.io/vicinity/reference/vicinity_resolutions.html" style="     ">vicinity_resolutions</a>
 </td>
 <td style="text-align:left;">
-ready4 S3 class for tibble object lookup table of the relative resolutions of different spatial objects
+ready4 submodule class for tibble object lookup table of the relative resolutions of different spatial objects
 </td>
 <td style="text-align:left;">
 </td>
@@ -688,7 +694,7 @@ ready4 S3 class for tibble object lookup table of the relative resolutions of di
 <a href="https://ready4-dev.github.io/vicinity/reference/vicinity_templates.html" style="     ">vicinity_templates</a>
 </td>
 <td style="text-align:left;">
-ready4 S3 class for tibble object lookup table for base file used in creation of certain spatial objects
+ready4 submodule class for tibble object lookup table for base file used in creation of certain spatial objects
 </td>
 <td style="text-align:left;">
 </td>
@@ -698,7 +704,7 @@ ready4 S3 class for tibble object lookup table for base file used in creation of
 <a href="https://ready4-dev.github.io/vicinity/reference/vicinity_values.html" style="     ">vicinity_values</a>
 </td>
 <td style="text-align:left;">
-ready4 S3 class for tibble object that stores simulation parameter values for each iteration
+ready4 submodule class for tibble object that stores simulation parameter values for each iteration
 </td>
 <td style="text-align:left;">
 </td>
@@ -839,4 +845,8 @@ youthvars ready4 sub-module (S3 class) for Social and Occupational Functioning A
 </table>
 
 </div>
+
+## Related content
+
+Details of how to search for themed collections of modules is described in [another article](https://readyforwhatsnext.org/docs/tutorials/finding/libraries/).
 

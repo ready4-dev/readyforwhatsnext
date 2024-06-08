@@ -1,7 +1,7 @@
 ---
 title: "Toy (synthetic) datasets releases"
 linkTitle: "Toy datasets"
-date: "2024-01-25"
+date: "2024-06-08"
 description: "Releases of synthetic (fake) datasets used for teaching and demonstration."
 weight: 700
 categories: 
@@ -35,7 +35,7 @@ Releases of the [datasets](/docs/model/datasets/) that are intended inputs or ou
 </div>
 
 
-<table class="table table-striped" style="margin-left: auto; margin-right: auto;">
+<table class="table table-striped" style="color: black; margin-left: auto; margin-right: auto;">
 <thead>
 <tr>
 <th style="text-align:left;">
@@ -53,6 +53,21 @@ Number of files
 </tr>
 </thead>
 <tbody>
+<tr>
+<td style="text-align:left;">
+08-Feb-2024
+</td>
+<td style="text-align:left;">
+<a href="https://doi.org/https://doi.org/10.7910/DVN/HJXYKQ" style="     ">Synthetic
+(fake) youth mental health datasets and data dictionaries</a>
+</td>
+<td style="text-align:left;">
+5.0
+</td>
+<td style="text-align:right;">
+6
+</td>
+</tr>
 <tr>
 <td style="text-align:left;">
 24-Jun-2023
@@ -215,7 +230,7 @@ R Package - AQoL-6D Vignette Output</a>
 4.2
 </td>
 <td style="text-align:right;">
-5
+6
 </td>
 </tr>
 <tr>
@@ -230,7 +245,7 @@ R Package - AQoL-6D Vignette Output</a>
 4.1
 </td>
 <td style="text-align:right;">
-5
+6
 </td>
 </tr>
 <tr>
@@ -275,7 +290,7 @@ R Package - AQoL-6D Vignette Output</a>
 4.0
 </td>
 <td style="text-align:right;">
-5
+6
 </td>
 </tr>
 <tr>
@@ -350,7 +365,7 @@ R package vignette output</a>
 3.0
 </td>
 <td style="text-align:right;">
-5
+6
 </td>
 </tr>
 <tr>
@@ -410,7 +425,7 @@ R package vignette output</a>
 2.0
 </td>
 <td style="text-align:right;">
-5
+6
 </td>
 </tr>
 <tr>
@@ -425,7 +440,7 @@ R package vignette output</a>
 1.0
 </td>
 <td style="text-align:right;">
-5
+6
 </td>
 </tr>
 <tr>

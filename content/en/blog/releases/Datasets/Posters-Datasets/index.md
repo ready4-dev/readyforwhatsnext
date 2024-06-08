@@ -1,7 +1,7 @@
 ---
 title: "Posters dataset releases"
 linkTitle: "Posters dataset"
-date: "2024-01-25"
+date: "2024-06-08"
 description: "Releases of dataset of academic posters about ready4."
 weight: 800
 categories: 
@@ -35,7 +35,7 @@ Releases of the [dataset](/docs/model/datasets/) of posters from academic confer
 </div>
 
 
-<table class="table table-striped" style="margin-left: auto; margin-right: auto;">
+<table class="table table-striped" style="color: black; margin-left: auto; margin-right: auto;">
 <thead>
 <tr>
 <th style="text-align:left;">

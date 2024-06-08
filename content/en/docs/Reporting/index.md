@@ -1,7 +1,7 @@
 ---
-title: "Subroutines to generate reports from a template"
-linkTitle: "Reporting templates"
-date: "2024-01-25"
+title: "Subroutines (reporting templates)"
+linkTitle: "Subroutines"
+date: "2024-06-08"
 description: "Subroutines perform part of an analysis and reporting algorithm."
 weight: 102
 categories: 
@@ -11,7 +11,7 @@ tags:
 - Software - executable
 - Software - executable (subroutines)
 output: hugodown::md_document
-rmd_hash: d7bf259ef405e175
+rmd_hash: 10f5e30871c83440
 
 ---
 
@@ -49,7 +49,7 @@ Currently available readyforwhatsnext subroutines are summarised in the below ta
 </div>
 
 
-<table class="table table-hover table-condensed" style="margin-left: auto; margin-right: auto;">
+<table class="table table-hover table-condensed" style="color: black; margin-left: auto; margin-right: auto;">
 <thead>
 <tr>
 <th style="text-align:left;">

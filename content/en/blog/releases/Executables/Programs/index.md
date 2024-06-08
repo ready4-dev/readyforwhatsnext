@@ -1,7 +1,7 @@
 ---
 title: "Programs releases"
 linkTitle: "Programs"
-date: "2024-01-25"
+date: "2024-06-08"
 description: "Releases of programs for implementing modelling analyses."
 weight: 1
 categories: 
@@ -17,7 +17,7 @@ rmd_hash: d8b7d1c237af0b7f
 
 ---
 
-Currently available (as at 25-Jan-2024) releases of [analysis programs](/docs/model/analyses/replication-code/) are described below.
+Currently available (as at 08-Jun-2024) releases of [analysis programs](/docs/model/analyses/replication-code/) are described below.
 
 <html>
 
@@ -37,7 +37,7 @@ Currently available (as at 25-Jan-2024) releases of [analysis programs](/docs/mo
 </div>
 
 
-<table class="table table-hover table-condensed" style="margin-left: auto; margin-right: auto;">
+<table class="table table-hover table-condensed" style="color: black; margin-left: auto; margin-right: auto;">
 <thead>
 <tr>
 <th style="text-align:left;">

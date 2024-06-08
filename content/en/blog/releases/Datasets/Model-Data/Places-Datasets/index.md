@@ -1,7 +1,7 @@
 ---
 title: "Datasets for modelling places releases"
 linkTitle: "Places datasets"
-date: "2024-01-25"
+date: "2024-06-08"
 description: "Releases of datasets used in conjunction with modules from the Springtides model of places."
 weight: 22
 categories: 
@@ -35,7 +35,7 @@ Releases of the [datasets](/docs/model/datasets/) that can be used with modules 
 </div>
 
 
-<table class="table table-striped" style="margin-left: auto; margin-right: auto;">
+<table class="table table-striped" style="color: black; margin-left: auto; margin-right: auto;">
 <thead>
 <tr>
 <th style="text-align:left;">

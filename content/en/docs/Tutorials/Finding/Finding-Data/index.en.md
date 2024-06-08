@@ -1,7 +1,7 @@
 ---
 title: "Find open access model data"
 linkTitle: "Datasets"
-date: "2024-01-25"
+date: "2024-06-08"
 description: "Tools from the [ready4](https://ready4-dev.github.io/ready4/) framework library can be used to search for relevant open access readyforwhatsnext model data collections and datasets."
 weight: 91
 categories: 
@@ -19,7 +19,7 @@ tags:
 - Status
 - Status - development
 output: hugodown::md_document
-rmd_hash: 8533ed3f07909fc2
+rmd_hash: 57277bdb56228c12
 html_dependencies:
 - <script src="kePrint-0.0.1/kePrint.js"></script>
 - <link href="lightable-0.0.1/lightable.css" rel="stylesheet" />
@@ -51,7 +51,7 @@ One way to inspect this information is to group contents by Dataverse Collection
 
 <div style="border: 1px solid #ddd; padding: 5px; overflow-x: scroll; width:100%; ">
 
-<table class="table table-hover table-condensed" style="margin-left: auto; margin-right: auto;">
+<table class="table table-hover table-condensed" style="color: black; margin-left: auto; margin-right: auto;">
 <thead>
 <tr>
 <th style="text-align:left;">
@@ -103,7 +103,7 @@ Fake data used to illustrate toolkits developed with the ready4 open science fra
 Orygen
 </td>
 <td style="text-align:left;">
-<a href="https://doi.org/10.7910/DVN/D74QMP" style="     ">4</a> , <a href="https://doi.org/10.7910/DVN/612HDC" style="     ">5</a> , <a href="https://doi.org/10.7910/DVN/HJXYKQ" style="     ">6</a> , <a href="https://doi.org/10.7910/DVN/W95KED" style="     ">7</a> , <a href="https://doi.org/10.7910/DVN/GW7ZKC" style="     ">8</a> , <a href="https://doi.org/10.7910/DVN/LYBMB0" style="     ">9</a> , <a href="https://doi.org/10.7910/DVN/3R5TS3" style="     ">10</a>
+<a href="https://doi.org/10.7910/DVN/D74QMP" style="     ">4</a> , <a href="https://doi.org/10.7910/DVN/612HDC" style="     ">5</a> , <a href="https://doi.org/10.7910/DVN/HJXYKQ" style="     ">6</a> , <a href="https://doi.org/10.7910/DVN/W95KED" style="     ">7</a> , <a href="https://doi.org/10.7910/DVN/RDG51Y" style="     ">8</a> , <a href="https://doi.org/10.7910/DVN/GW7ZKC" style="     ">9</a> , <a href="https://doi.org/10.7910/DVN/LYBMB0" style="     ">10</a>, <a href="https://doi.org/10.7910/DVN/3R5TS3" style="     ">11</a>
 </td>
 </tr>
 <tr>
@@ -136,7 +136,7 @@ A collection of datasets that support implementation of the ready4 framework for
 Orygen
 </td>
 <td style="text-align:left;">
-<a href="https://doi.org/10.7910/DVN/RIQTKK" style="     ">11</a>
+<a href="https://doi.org/10.7910/DVN/RIQTKK" style="     ">12</a>
 </td>
 </tr>
 <tr>
@@ -153,7 +153,7 @@ Data collections for the readyforwhatsnext mental health systems model.
 Orygen
 </td>
 <td style="text-align:left;">
-<a href="https://doi.org/10.7910/DVN/QBZFQV" style="     ">12</a>, <a href="https://doi.org/10.7910/DVN/JHSCDJ" style="     ">13</a>
+<a href="https://doi.org/10.7910/DVN/QBZFQV" style="     ">13</a>, <a href="https://doi.org/10.7910/DVN/JHSCDJ" style="     ">14</a>
 </td>
 </tr>
 <tr>
@@ -170,7 +170,7 @@ A ready4 framework model of places. Synthesises geometry (boundary, coordinate) 
 Orygen
 </td>
 <td style="text-align:left;">
-<a href="https://doi.org/10.7910/DVN/V3OKZV" style="     ">14</a>
+<a href="https://doi.org/10.7910/DVN/V3OKZV" style="     ">15</a>
 </td>
 </tr>
 <tr>
@@ -187,7 +187,7 @@ A ready4 framework model of people. Models the characteristics, behaviours, rela
 Orygen
 </td>
 <td style="text-align:left;">
-<a href="https://doi.org/10.7910/DVN/VGPIPS" style="     ">15</a>
+<a href="https://doi.org/10.7910/DVN/VGPIPS" style="     ">16</a>
 </td>
 </tr>
 </tbody>
@@ -210,7 +210,7 @@ Datasets appropriate for use in modelling projects can be returned by supplying 
 
 <div style="border: 1px solid #ddd; padding: 5px; overflow-x: scroll; width:100%; ">
 
-<table class="table table-hover table-condensed" style="margin-left: auto; margin-right: auto;">
+<table class="table table-hover table-condensed" style="color: black; margin-left: auto; margin-right: auto;">
 <thead>
 <tr>
 <th style="text-align:left;">
@@ -361,7 +361,7 @@ To view toy datasets, instead supply the value "fakes".
 
 <div style="border: 1px solid #ddd; padding: 5px; overflow-x: scroll; width:100%; ">
 
-<table class="table table-hover table-condensed" style="margin-left: auto; margin-right: auto;">
+<table class="table table-hover table-condensed" style="color: black; margin-left: auto; margin-right: auto;">
 <thead>
 <tr>
 <th style="text-align:left;">
@@ -433,6 +433,20 @@ fakes
 </td>
 <td style="text-align:left;">
 <https://doi.org/10.7910/DVN/W95KED>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Replication Data For Quality of Life Heterogeneity Analysis In A Clinical Youth Mental Health Sample
+</td>
+<td style="text-align:left;">
+This dataset is provided so that others can apply and test the analysis algorithms we have developed. It includes synthetic (fake) data that was generated for the sole purpose of enabling users to rerun our analysis algorithm.
+</td>
+<td style="text-align:left;">
+fakes
+</td>
+<td style="text-align:left;">
+<https://doi.org/10.7910/DVN/RDG51Y>
 </td>
 </tr>
 <tr>

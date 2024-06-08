@@ -1,7 +1,7 @@
 ---
 title: "Model module libraries"
 linkTitle: "Libraries"
-date: "2024-01-25"
+date: "2024-06-08"
 description: "Bundles of readyforwhatsnext modules are distributed as R libraries."
 weight: 4
 aliases:
@@ -16,7 +16,7 @@ tags:
 - Status
 - Status - development
 output: hugodown::md_document
-rmd_hash: 4388efeb2985300f
+rmd_hash: 316da9a26773434e
 
 ---
 
@@ -66,7 +66,7 @@ readyforwhatsnext modules for modelling platforms).</p>
 <div id="module-libraries-for-modelling-people" class="section level3">
 <h3>Module libraries for modelling people</h3>
 <pre class="r"><code>print_packages(libraries_tb %&gt;% dplyr::filter(Section == &quot;People&quot;))</code></pre>
-<table class="table table-hover table-condensed" style="margin-left: auto; margin-right: auto;">
+<table class="table table-hover table-condensed" style="color: black; margin-left: auto; margin-right: auto;">
 <thead>
 <tr>
 <th style="text-align:left;">
@@ -293,7 +293,7 @@ Transform Youth Outcomes to Health Utility Predictions
 <div id="module-libraries-for-modelling-places" class="section level3">
 <h3>Module libraries for modelling places</h3>
 <pre class="r"><code>print_packages(libraries_tb %&gt;% dplyr::filter(Section == &quot;Places&quot;))</code></pre>
-<table class="table table-hover table-condensed" style="margin-left: auto; margin-right: auto;">
+<table class="table table-hover table-condensed" style="color: black; margin-left: auto; margin-right: auto;">
 <thead>
 <tr>
 <th style="text-align:left;">
@@ -378,7 +378,7 @@ Model Spatial Features of Health Systems
 <div id="module-libraries-for-modelling-programs" class="section level3">
 <h3>Module libraries for modelling programs</h3>
 <pre class="r"><code>print_packages(libraries_tb %&gt;% dplyr::filter(Section == &quot;Programs&quot;))</code></pre>
-<table class="table table-hover table-condensed" style="margin-left: auto; margin-right: auto;">
+<table class="table table-hover table-condensed" style="color: black; margin-left: auto; margin-right: auto;">
 <thead>
 <tr>
 <th style="text-align:left;">
