@@ -30,6 +30,12 @@ print_packages(libraries_tb %>% dplyr::filter(Section == "People"))
 print_packages(libraries_tb %>% dplyr::filter(Section == "Places"))
 ```
 
+### Module libraries for modelling platforms
+
+```{r echo=T}
+print_packages(libraries_tb %>% dplyr::filter(Section == "Platforms"))
+```
+
 ### Module libraries for modelling programs
 ```{r, include=FALSE}
 #source("../../../../../../R/Functions.R", local = knitr::knit_global())

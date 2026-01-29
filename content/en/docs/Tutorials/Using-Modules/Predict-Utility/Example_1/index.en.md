@@ -1,7 +1,7 @@
 ---
 title: "Example 1: Predict health utility from psychological and functional measures (PHQ-9 and SOFAS)"
 linkTitle: "Example 1"
-date: "2024-06-08"
+date: "2026-01-29"
 description: "This tutorial illustrates the main steps for predicting AQoL-6D utility from psychological and functional measures using a longitudinal dataset in long format."
 weight: 96
 categories: 
@@ -495,7 +495,7 @@ Participant_1
 Baseline
 </td>
 <td style="text-align:right;">
-2022-12-20
+2023-07-19
 </td>
 <td style="text-align:right;">
 7
@@ -512,7 +512,7 @@ Participant_10
 Baseline
 </td>
 <td style="text-align:right;">
-2022-11-16
+2023-05-04
 </td>
 <td style="text-align:right;">
 17
@@ -529,7 +529,7 @@ Participant_10
 Follow-up
 </td>
 <td style="text-align:right;">
-2023-02-21
+2023-08-07
 </td>
 <td style="text-align:right;">
 17
@@ -546,7 +546,7 @@ Participant_100
 Baseline
 </td>
 <td style="text-align:right;">
-2023-01-31
+2023-07-29
 </td>
 <td style="text-align:right;">
 0
@@ -563,7 +563,7 @@ Participant_1000
 Baseline
 </td>
 <td style="text-align:right;">
-2023-02-05
+2023-06-16
 </td>
 <td style="text-align:right;">
 0
@@ -580,7 +580,7 @@ Participant_1000
 Follow-up
 </td>
 <td style="text-align:right;">
-2023-04-10
+2023-09-14
 </td>
 <td style="text-align:right;">
 0
@@ -798,7 +798,7 @@ Participant_1
 Baseline
 </td>
 <td style="text-align:right;">
-2022-12-20
+2023-07-19
 </td>
 <td style="text-align:right;">
 7
@@ -807,7 +807,7 @@ Baseline
 69
 </td>
 <td style="text-align:right;">
-0.9193293
+0.6848161
 </td>
 </tr>
 <tr>
@@ -818,7 +818,7 @@ Participant_10
 Baseline
 </td>
 <td style="text-align:right;">
-2022-11-16
+2023-05-04
 </td>
 <td style="text-align:right;">
 17
@@ -827,7 +827,7 @@ Baseline
 60
 </td>
 <td style="text-align:right;">
-0.6721956
+0.5602025
 </td>
 </tr>
 <tr>
@@ -838,7 +838,7 @@ Participant_10
 Follow-up
 </td>
 <td style="text-align:right;">
-2023-02-21
+2023-08-07
 </td>
 <td style="text-align:right;">
 17
@@ -847,7 +847,7 @@ Follow-up
 64
 </td>
 <td style="text-align:right;">
-0.4242752
+0.7361199
 </td>
 </tr>
 <tr>
@@ -858,7 +858,7 @@ Participant_100
 Baseline
 </td>
 <td style="text-align:right;">
-2023-01-31
+2023-07-29
 </td>
 <td style="text-align:right;">
 0
@@ -867,7 +867,7 @@ Baseline
 76
 </td>
 <td style="text-align:right;">
-0.7530591
+0.9403411
 </td>
 </tr>
 <tr>
@@ -878,7 +878,7 @@ Participant_1000
 Baseline
 </td>
 <td style="text-align:right;">
-2023-02-05
+2023-06-16
 </td>
 <td style="text-align:right;">
 0
@@ -887,7 +887,7 @@ Baseline
 71
 </td>
 <td style="text-align:right;">
-0.7613385
+0.9987350
 </td>
 </tr>
 <tr>
@@ -898,7 +898,7 @@ Participant_1000
 Follow-up
 </td>
 <td style="text-align:right;">
-2023-04-10
+2023-09-14
 </td>
 <td style="text-align:right;">
 0
@@ -907,7 +907,7 @@ Follow-up
 71
 </td>
 <td style="text-align:right;">
-0.9930864
+0.8781429
 </td>
 </tr>
 </tbody>
@@ -930,7 +930,7 @@ Our health utility predictions are now available for use and are summarised belo
 
 <pre class='chroma'><code class='language-r' data-lang='r'><span><span class='nf'><a href='https://rdrr.io/r/base/summary.html'>summary</a></span><span class='o'>(</span><span class='nv'>data_tb</span><span class='o'>$</span><span class='nv'>AQoL6D_HU</span><span class='o'>)</span></span>
 <span><span class='c'>#&gt;    Min. 1st Qu.  Median    Mean 3rd Qu.    Max. </span></span>
-<span><span class='c'>#&gt; 0.06525 0.42832 0.62654 0.62142 0.83585 0.99999</span></span>
+<span><span class='c'>#&gt; 0.07928 0.43330 0.63925 0.62954 0.83987 1.00000</span></span>
 <span></span></code></pre>
 
 </div>
@@ -995,7 +995,7 @@ Participant_1
 Baseline
 </td>
 <td style="text-align:right;">
-2022-12-20
+2023-07-19
 </td>
 <td style="text-align:right;">
 7
@@ -1004,7 +1004,7 @@ Baseline
 69
 </td>
 <td style="text-align:right;">
-0.9193293
+0.6848161
 </td>
 <td style="text-align:left;">
 0.0000000
@@ -1024,7 +1024,7 @@ Participant_10
 Baseline
 </td>
 <td style="text-align:right;">
-2022-11-16
+2023-05-04
 </td>
 <td style="text-align:right;">
 17
@@ -1033,7 +1033,7 @@ Baseline
 60
 </td>
 <td style="text-align:right;">
-0.6721956
+0.5602025
 </td>
 <td style="text-align:left;">
 0.0000000
@@ -1053,7 +1053,7 @@ Participant_10
 Follow-up
 </td>
 <td style="text-align:right;">
-2023-02-21
+2023-08-07
 </td>
 <td style="text-align:right;">
 17
@@ -1062,16 +1062,16 @@ Follow-up
 64
 </td>
 <td style="text-align:right;">
-0.4242752
+0.7361199
 </td>
 <td style="text-align:left;">
--0.2479204
+0.1759174
 </td>
 <td style="text-align:right;">
-97d 0H 0M 0S
+95d 0H 0M 0S
 </td>
 <td style="text-align:right;">
-0.1455957
+0.1685840
 </td>
 </tr>
 <tr>
@@ -1082,7 +1082,7 @@ Participant_100
 Baseline
 </td>
 <td style="text-align:right;">
-2023-01-31
+2023-07-29
 </td>
 <td style="text-align:right;">
 0
@@ -1091,7 +1091,7 @@ Baseline
 76
 </td>
 <td style="text-align:right;">
-0.7530591
+0.9403411
 </td>
 <td style="text-align:left;">
 0.0000000
@@ -1111,7 +1111,7 @@ Participant_1000
 Baseline
 </td>
 <td style="text-align:right;">
-2023-02-05
+2023-06-16
 </td>
 <td style="text-align:right;">
 0
@@ -1120,7 +1120,7 @@ Baseline
 71
 </td>
 <td style="text-align:right;">
-0.7613385
+0.9987350
 </td>
 <td style="text-align:left;">
 0.0000000
@@ -1140,7 +1140,7 @@ Participant_1000
 Follow-up
 </td>
 <td style="text-align:right;">
-2023-04-10
+2023-09-14
 </td>
 <td style="text-align:right;">
 0
@@ -1149,16 +1149,16 @@ Follow-up
 71
 </td>
 <td style="text-align:right;">
-0.9930864
+0.8781429
 </td>
 <td style="text-align:left;">
-0.2317479
+-0.1205921
 </td>
 <td style="text-align:right;">
-64d 0H 0M 0S
+90d 0H 0M 0S
 </td>
 <td style="text-align:right;">
-0.1537073
+0.2312375
 </td>
 </tr>
 </tbody>

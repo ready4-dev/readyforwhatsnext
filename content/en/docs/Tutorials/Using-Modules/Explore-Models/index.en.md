@@ -1,7 +1,7 @@
 ---
 title: "Explore candidate utility mapping models"
 linkTitle: "Assess models"
-date: "2024-02-08"
+date: "2026-01-29"
 description: "Using modules from the specific R package, it is possible to undertake an exploratory utility mapping analysis. This tutorial illustrates a hypotehtical example of exploring how to map to EQ-5D health utility."
 weight: 95
 categories: 
@@ -1257,12 +1257,12 @@ We can now write a number of sub-directories to our specified output directory.
 
 <pre class='chroma'><code class='language-r' data-lang='r'><span><span class='nv'>X</span> <span class='o'>&lt;-</span> <span class='nf'><a href='https://ready4-dev.github.io/ready4/reference/author-methods.html'>author</a></span><span class='o'>(</span><span class='nv'>X</span>, what_1L_chr <span class='o'>=</span> <span class='s'>"workspace"</span>, consent_1L_chr <span class='o'>=</span> <span class='nv'>consent_1L_chr</span><span class='o'>)</span></span>
 <span><span class='c'>#&gt; New directories created:</span></span>
-<span><span class='c'>#&gt; C:\Users\mham0053\AppData\Local\Temp\RtmpWkpbqI/Fake</span></span>
-<span><span class='c'>#&gt; C:\Users\mham0053\AppData\Local\Temp\RtmpWkpbqI/Fake/Markdown</span></span>
-<span><span class='c'>#&gt; C:\Users\mham0053\AppData\Local\Temp\RtmpWkpbqI/Fake/Output</span></span>
-<span><span class='c'>#&gt; C:\Users\mham0053\AppData\Local\Temp\RtmpWkpbqI/Fake/Reports</span></span>
-<span><span class='c'>#&gt; C:\Users\mham0053\AppData\Local\Temp\RtmpWkpbqI/Fake/Output/_Descriptives</span></span>
-<span><span class='c'>#&gt; C:\Users\mham0053\AppData\Local\Temp\RtmpWkpbqI/Fake/Output/H_Dataverse</span></span>
+<span><span class='c'>#&gt; C:\Users\mham0053\AppData\Local\Temp\RtmpK6UgTj/Fake</span></span>
+<span><span class='c'>#&gt; C:\Users\mham0053\AppData\Local\Temp\RtmpK6UgTj/Fake/Markdown</span></span>
+<span><span class='c'>#&gt; C:\Users\mham0053\AppData\Local\Temp\RtmpK6UgTj/Fake/Output</span></span>
+<span><span class='c'>#&gt; C:\Users\mham0053\AppData\Local\Temp\RtmpK6UgTj/Fake/Reports</span></span>
+<span><span class='c'>#&gt; C:\Users\mham0053\AppData\Local\Temp\RtmpK6UgTj/Fake/Output/_Descriptives</span></span>
+<span><span class='c'>#&gt; C:\Users\mham0053\AppData\Local\Temp\RtmpK6UgTj/Fake/Output/H_Dataverse</span></span>
 <span></span></code></pre>
 
 </div>

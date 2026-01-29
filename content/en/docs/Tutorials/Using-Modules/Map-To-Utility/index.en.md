@@ -1,7 +1,7 @@
 ---
 title: "Implement a utility mapping study"
 linkTitle: "Map to utility"
-date: "2024-02-08"
+date: "2026-01-29"
 description: "Using modules from the TTU R package, it is possible to implement a fully reproducible utility mapping study. This tutorial illustrates the main steps using a hypothetical AQoL-6D utility mapping study."
 weight: 95
 categories: 
@@ -247,7 +247,7 @@ We now generate tables and charts that describe our dataset. These are saved in 
 
 <pre class='chroma'><code class='language-r' data-lang='r'><span><span class='nv'>A</span> <span class='o'>&lt;-</span> <span class='nf'><a href='https://ready4-dev.github.io/ready4/reference/author-methods.html'>author</a></span><span class='o'>(</span><span class='nv'>A</span>, consent_1L_chr <span class='o'>=</span> <span class='nv'>consent_1L_chr</span>, digits_1L_int <span class='o'>=</span> <span class='m'>3L</span>, what_1L_chr <span class='o'>=</span> <span class='s'>"descriptives"</span><span class='o'>)</span></span>
 </code></pre>
-<img src="figs/unnamed-chunk-18-1.png" width="700px" style="display: block; margin: auto;" />
+<img src="figs/unnamed-chunk-18-1.png" alt="" width="700px" style="display: block; margin: auto;" />
 
 </div>
 

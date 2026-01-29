@@ -2,7 +2,7 @@
 title: Installing readyforwhatsnext model modules
 linkTitle: "Installation"
 author: Matthew Hamilton
-date: "2024-06-08"
+date: "2026-01-29"
 description: To implement a modelling analysis with readyforwhatsnext you need to install model module R libraries.
 slug: Modules
 weight: 3

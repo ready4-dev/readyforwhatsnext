@@ -1,7 +1,7 @@
 ---
 title: "Create a synthetic population of young people attending primary mental health services"
 linkTitle: "Clinical"
-date: "2024-01-25"
+date: "2026-01-29"
 description: "We created a basic synthetic dataset of to represent a clinical youth mental health sample."
 weight: 3
 categories: 
@@ -325,7 +325,7 @@ We make some adjustments to ensure that the `c_sofas` variable is correlated wit
 <div class="highlight">
 
 <pre class='chroma'><code class='language-r' data-lang='r'><span><span class='nv'>bl_tb</span> <span class='o'>&lt;-</span> <span class='nv'>bl_tb</span> <span class='o'><a href='https://magrittr.tidyverse.org/reference/pipe.html'>%&gt;%</a></span></span>
-<span>  <span class='nf'>dplyr</span><span class='nf'>::</span><span class='nf'><a href='https://dplyr.tidyverse.org/reference/mutate.html'>mutate</a></span><span class='o'>(</span>c_sofas <span class='o'>=</span> <span class='nf'>faux</span><span class='nf'>::</span><span class='nf'><a href='https://rdrr.io/pkg/faux/man/rnorm_pre.html'>rnorm_pre</a></span><span class='o'>(</span><span class='nv'>bl_tb</span><span class='o'>$</span><span class='nv'>aqol6d_total_w</span> <span class='o'><a href='https://magrittr.tidyverse.org/reference/pipe.html'>%&gt;%</a></span> </span>
+<span>  <span class='nf'>dplyr</span><span class='nf'>::</span><span class='nf'><a href='https://dplyr.tidyverse.org/reference/mutate.html'>mutate</a></span><span class='o'>(</span>c_sofas <span class='o'>=</span> <span class='nf'>faux</span><span class='nf'>::</span><span class='nf'><a href='https://scienceverse.github.io/faux/reference/rnorm_pre.html'>rnorm_pre</a></span><span class='o'>(</span><span class='nv'>bl_tb</span><span class='o'>$</span><span class='nv'>aqol6d_total_w</span> <span class='o'><a href='https://magrittr.tidyverse.org/reference/pipe.html'>%&gt;%</a></span> </span>
 <span>                                            <span class='nf'><a href='https://rdrr.io/r/base/vector.html'>as.vector</a></span><span class='o'>(</span><span class='o'>)</span>, </span>
 <span>                                          mu <span class='o'>=</span> <span class='m'>65.2</span>, </span>
 <span>                                          sd <span class='o'>=</span> <span class='m'>9.5</span>, </span>
@@ -333,7 +333,7 @@ We make some adjustments to ensure that the `c_sofas` variable is correlated wit
 <span>                                          empirical <span class='o'>=</span> <span class='kc'>T</span><span class='o'>)</span> <span class='o'><a href='https://magrittr.tidyverse.org/reference/pipe.html'>%&gt;%</a></span> </span>
 <span>                  <span class='nf'>purrr</span><span class='nf'>::</span><span class='nf'><a href='https://purrr.tidyverse.org/reference/map.html'>map_dbl</a></span><span class='o'>(</span><span class='o'>~</span><span class='nf'><a href='https://rdrr.io/r/base/Extremes.html'>min</a></span><span class='o'>(</span><span class='nv'>.x</span>,<span class='m'>100</span><span class='o'>)</span> <span class='o'><a href='https://magrittr.tidyverse.org/reference/pipe.html'>%&gt;%</a></span> <span class='nf'><a href='https://rdrr.io/r/base/Extremes.html'>max</a></span><span class='o'>(</span><span class='m'>0</span><span class='o'>)</span><span class='o'>)</span><span class='o'>)</span></span>
 <span><span class='nv'>fup_tb</span> <span class='o'>&lt;-</span> <span class='nv'>fup_tb</span> <span class='o'><a href='https://magrittr.tidyverse.org/reference/pipe.html'>%&gt;%</a></span></span>
-<span>  <span class='nf'>dplyr</span><span class='nf'>::</span><span class='nf'><a href='https://dplyr.tidyverse.org/reference/mutate.html'>mutate</a></span><span class='o'>(</span>c_sofas <span class='o'>=</span> <span class='nf'>faux</span><span class='nf'>::</span><span class='nf'><a href='https://rdrr.io/pkg/faux/man/rnorm_pre.html'>rnorm_pre</a></span><span class='o'>(</span><span class='nv'>fup_tb</span><span class='o'>$</span><span class='nv'>aqol6d_total_w</span> <span class='o'><a href='https://magrittr.tidyverse.org/reference/pipe.html'>%&gt;%</a></span> </span>
+<span>  <span class='nf'>dplyr</span><span class='nf'>::</span><span class='nf'><a href='https://dplyr.tidyverse.org/reference/mutate.html'>mutate</a></span><span class='o'>(</span>c_sofas <span class='o'>=</span> <span class='nf'>faux</span><span class='nf'>::</span><span class='nf'><a href='https://scienceverse.github.io/faux/reference/rnorm_pre.html'>rnorm_pre</a></span><span class='o'>(</span><span class='nv'>fup_tb</span><span class='o'>$</span><span class='nv'>aqol6d_total_w</span> <span class='o'><a href='https://magrittr.tidyverse.org/reference/pipe.html'>%&gt;%</a></span> </span>
 <span>                                            <span class='nf'><a href='https://rdrr.io/r/base/vector.html'>as.vector</a></span><span class='o'>(</span><span class='o'>)</span>, </span>
 <span>                                          mu <span class='o'>=</span> <span class='m'>69.9</span>, </span>
 <span>                                          sd <span class='o'>=</span> <span class='m'>10</span>, </span>

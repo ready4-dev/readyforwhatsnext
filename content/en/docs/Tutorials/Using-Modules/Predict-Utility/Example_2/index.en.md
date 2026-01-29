@@ -1,7 +1,7 @@
 ---
 title: "Example 2: Predict health utility from psychological measures (PHQ-9 and GAD-7)"
 linkTitle: "Example 2"
-date: "2024-06-08"
+date: "2026-01-29"
 description: "This tutorial illustrates the main steps for predicting AQoL-6D utility from two psychological measures using a longitudinal dataset in wide format."
 weight: 96
 categories: 
@@ -738,16 +738,16 @@ Participant_10
 18
 </td>
 <td style="text-align:right;">
-0.3891806
+0.3053391
 </td>
 <td style="text-align:right;">
-0.6342526
+0.3603763
 </td>
 <td style="text-align:right;">
 0
 </td>
 <td style="text-align:right;">
-0.2450720
+0.0550372
 </td>
 <td style="text-align:right;">
 0S
@@ -759,7 +759,7 @@ Participant_10
 0
 </td>
 <td style="text-align:right;">
-0.1316943
+0.0856636
 </td>
 </tr>
 <tr>
@@ -785,16 +785,16 @@ Participant_1000
 10
 </td>
 <td style="text-align:right;">
-0.6609298
+0.3875342
 </td>
 <td style="text-align:right;">
-0.2963083
+0.5917542
 </td>
 <td style="text-align:right;">
 0
 </td>
 <td style="text-align:right;">
--0.3646215
+0.2042200
 </td>
 <td style="text-align:right;">
 0S
@@ -806,7 +806,7 @@ Participant_1000
 0
 </td>
 <td style="text-align:right;">
-0.1375907
+0.1407601
 </td>
 </tr>
 <tr>
@@ -832,16 +832,16 @@ Participant_1001
 16
 </td>
 <td style="text-align:right;">
-0.5324127
+0.6994263
 </td>
 <td style="text-align:right;">
-0.6192971
+0.3947774
 </td>
 <td style="text-align:right;">
 0
 </td>
 <td style="text-align:right;">
-0.0868844
+-0.3046489
 </td>
 <td style="text-align:right;">
 0S
@@ -853,7 +853,7 @@ Participant_1001
 0
 </td>
 <td style="text-align:right;">
-0.1608137
+0.1527841
 </td>
 </tr>
 <tr>
@@ -879,16 +879,16 @@ Participant_1003
 7
 </td>
 <td style="text-align:right;">
-0.5630164
+0.6417422
 </td>
 <td style="text-align:right;">
-0.8584193
+0.6140576
 </td>
 <td style="text-align:right;">
 0
 </td>
 <td style="text-align:right;">
-0.2954030
+-0.0276845
 </td>
 <td style="text-align:right;">
 0S
@@ -900,7 +900,7 @@ Participant_1003
 0
 </td>
 <td style="text-align:right;">
-0.1673422
+0.1478423
 </td>
 </tr>
 <tr>
@@ -926,16 +926,16 @@ Participant_1005
 9
 </td>
 <td style="text-align:right;">
-0.5090272
+0.4131247
 </td>
 <td style="text-align:right;">
-0.7799675
+0.6504084
 </td>
 <td style="text-align:right;">
 0
 </td>
 <td style="text-align:right;">
-0.2709403
+0.2372837
 </td>
 <td style="text-align:right;">
 0S
@@ -947,7 +947,7 @@ Participant_1005
 0
 </td>
 <td style="text-align:right;">
-0.1905701
+0.1572369
 </td>
 </tr>
 <tr>
@@ -973,16 +973,16 @@ Participant_1006
 17
 </td>
 <td style="text-align:right;">
-0.2969778
+0.4829144
 </td>
 <td style="text-align:right;">
-0.2734973
+0.3718108
 </td>
 <td style="text-align:right;">
 0
 </td>
 <td style="text-align:right;">
--0.0234805
+-0.1111036
 </td>
 <td style="text-align:right;">
 0S
@@ -994,7 +994,7 @@ Participant_1006
 0
 </td>
 <td style="text-align:right;">
-0.0687225
+0.1029648
 </td>
 </tr>
 </tbody>

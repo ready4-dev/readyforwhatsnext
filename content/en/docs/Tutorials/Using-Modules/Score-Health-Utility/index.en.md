@@ -1,7 +1,7 @@
 ---
 title: "Score health utility"
 linkTitle: "Score health utility"
-date: "2024-01-25"
+date: "2026-01-29"
 description: "Using modules from the scorz R package, individual responses to a multi-attribute utility instrument survey can be converted into health utility total scores. This tutorial describes how to do for adolescent AQoL-6D health utility."
 weight: 93
 categories: 
@@ -53,7 +53,7 @@ Note: **This vignette is illustrated with fake data**. The dataset explored in t
 
 To derive a health utility score from the raw responses to a multi-attribute utility instrument it is necessary to implement a scoring algorithm. Scoring algorithms for the Assessment of Quality of Life Six Dimension (AQoL-6D) are publicly available in SPSS format (<https://www.aqol.com.au/index.php/scoring-algorithms>).
 
-However, to include scoring algorithms in reproducible research workflows, it is desirable to have these algorithms available in open science languages such as R. The `scorz` package includes [ready4 framework model modules](https://www.ready4-dev.com/docs/framework/implementation/modularity/#ready4-model-modules) of [the ready4 youth mental health economic model](https://www.ready4-dev.com/docs/model/) that provide R implementations of the adult and adolescent versions of the AQoL-6D scoring algorithms.
+However, to include scoring algorithms in reproducible research workflows, it is desirable to have these algorithms available in open science languages such as R. The `scorz` package includes [ready4 framework modules](https://www.ready4-dev.com/docs/framework/implementation/modularity/#ready4-model-modules) of [the readyforwhatsnext youth mental health economic model](https://readyforwhatsnext.com/) that provide R implementations of the adult and adolescent versions of the AQoL-6D scoring algorithms.
 
 ## Ingest data
 
@@ -89,7 +89,7 @@ We can now inspect our ingested dataset using the `exhibit` method.
 
 <div style="border: 1px solid #ddd; padding: 5px; overflow-x: scroll; width:100%; ">
 
-<table class=" lightable-paper lightable-hover lightable-paper" style="font-family: &quot;Arial Narrow&quot;, arial, helvetica, sans-serif; width: auto !important; margin-left: auto; margin-right: auto;border-bottom: 0; font-family: &quot;Arial Narrow&quot;, arial, helvetica, sans-serif; margin-left: auto; margin-right: auto;">
+<table class=" lightable-paper lightable-hover lightable-paper" style="color: black; font-family: &quot;Arial Narrow&quot;, arial, helvetica, sans-serif; width: auto !important; margin-left: auto; margin-right: auto;border-bottom: 0; color: black; font-family: &quot;Arial Narrow&quot;, arial, helvetica, sans-serif; margin-left: auto; margin-right: auto;">
 <caption>
 Dataset
 </caption>
@@ -1089,7 +1089,7 @@ We can inspect our updated dataset using the `exhibit` method. We can see that t
 
 <div style="border: 1px solid #ddd; padding: 5px; overflow-x: scroll; width:100%; ">
 
-<table class=" lightable-paper lightable-hover lightable-paper" style="font-family: &quot;Arial Narrow&quot;, arial, helvetica, sans-serif; width: auto !important; margin-left: auto; margin-right: auto;border-bottom: 0; font-family: &quot;Arial Narrow&quot;, arial, helvetica, sans-serif; margin-left: auto; margin-right: auto;">
+<table class=" lightable-paper lightable-hover lightable-paper" style="color: black; font-family: &quot;Arial Narrow&quot;, arial, helvetica, sans-serif; width: auto !important; margin-left: auto; margin-right: auto;border-bottom: 0; color: black; font-family: &quot;Arial Narrow&quot;, arial, helvetica, sans-serif; margin-left: auto; margin-right: auto;">
 <caption>
 Dataset
 </caption>
@@ -1225,64 +1225,64 @@ Assessment of Quality of Life (6 Dimension) question 19
 Assessment of Quality of Life (6 Dimension) question 20
 </th>
 <th style="text-align:right;">
-Assessment of Quality of Life (6 Dimension) item disvalue1
+Assessment of Quality of Life (6 Dimension) item disvalue 1
 </th>
 <th style="text-align:right;">
-Assessment of Quality of Life (6 Dimension) item disvalue2
+Assessment of Quality of Life (6 Dimension) item disvalue 2
 </th>
 <th style="text-align:right;">
-Assessment of Quality of Life (6 Dimension) item disvalue3
+Assessment of Quality of Life (6 Dimension) item disvalue 3
 </th>
 <th style="text-align:right;">
-Assessment of Quality of Life (6 Dimension) item disvalue4
+Assessment of Quality of Life (6 Dimension) item disvalue 4
 </th>
 <th style="text-align:right;">
-Assessment of Quality of Life (6 Dimension) item disvalue5
+Assessment of Quality of Life (6 Dimension) item disvalue 5
 </th>
 <th style="text-align:left;">
-Assessment of Quality of Life (6 Dimension) item disvalue6
+Assessment of Quality of Life (6 Dimension) item disvalue 6
 </th>
 <th style="text-align:right;">
-Assessment of Quality of Life (6 Dimension) item disvalue7
+Assessment of Quality of Life (6 Dimension) item disvalue 7
 </th>
 <th style="text-align:right;">
-Assessment of Quality of Life (6 Dimension) item disvalue8
+Assessment of Quality of Life (6 Dimension) item disvalue 8
 </th>
 <th style="text-align:right;">
-Assessment of Quality of Life (6 Dimension) item disvalue9
+Assessment of Quality of Life (6 Dimension) item disvalue 9
 </th>
 <th style="text-align:right;">
-Assessment of Quality of Life (6 Dimension) item disvalue10
+Assessment of Quality of Life (6 Dimension) item disvalue 10
 </th>
 <th style="text-align:right;">
-Assessment of Quality of Life (6 Dimension) item disvalue11
+Assessment of Quality of Life (6 Dimension) item disvalue 11
 </th>
 <th style="text-align:left;">
-Assessment of Quality of Life (6 Dimension) item disvalue12
+Assessment of Quality of Life (6 Dimension) item disvalue 12
 </th>
 <th style="text-align:right;">
-Assessment of Quality of Life (6 Dimension) item disvalue13
+Assessment of Quality of Life (6 Dimension) item disvalue 13
 </th>
 <th style="text-align:right;">
-Assessment of Quality of Life (6 Dimension) item disvalue14
+Assessment of Quality of Life (6 Dimension) item disvalue 14
 </th>
 <th style="text-align:right;">
-Assessment of Quality of Life (6 Dimension) item disvalue15
+Assessment of Quality of Life (6 Dimension) item disvalue 15
 </th>
 <th style="text-align:right;">
-Assessment of Quality of Life (6 Dimension) item disvalue16
+Assessment of Quality of Life (6 Dimension) item disvalue 16
 </th>
 <th style="text-align:right;">
-Assessment of Quality of Life (6 Dimension) item disvalue17
+Assessment of Quality of Life (6 Dimension) item disvalue 17
 </th>
 <th style="text-align:left;">
-Assessment of Quality of Life (6 Dimension) item disvalue18
+Assessment of Quality of Life (6 Dimension) item disvalue 18
 </th>
 <th style="text-align:right;">
-Assessment of Quality of Life (6 Dimension) item disvalue19
+Assessment of Quality of Life (6 Dimension) item disvalue 19
 </th>
 <th style="text-align:right;">
-Assessment of Quality of Life (6 Dimension) item disvalue20
+Assessment of Quality of Life (6 Dimension) item disvalue 20
 </th>
 <th style="text-align:right;">
 Disvalue Score for Dimension 1 - Independent Living
@@ -1339,10 +1339,10 @@ Instrument utility score
 Instrument utility score rotated
 </th>
 <th style="text-align:right;">
-AQOL-6D (weighted total)
+AQol-6D utility
 </th>
 <th style="text-align:right;">
-AQOL-6D (unweighted total)
+Unweighted AQoL-4D total
 </th>
 </tr>
 </thead>
@@ -2875,7 +2875,14 @@ We can create a list of summary plots by timepoint for all individual items.
 
 <div class="highlight">
 
-<pre class='chroma'><code class='language-r' data-lang='r'><span><span class='nv'>plot_ls</span> <span class='o'>&lt;-</span> <span class='nf'><a href='https://ready4-dev.github.io/ready4/reference/depict-methods.html'>depict</a></span><span class='o'>(</span><span class='nv'>Y</span>, type_1L_chr <span class='o'>=</span> <span class='s'>"item_by_time"</span><span class='o'>)</span></span></code></pre>
+<pre class='chroma'><code class='language-r' data-lang='r'><span><span class='nv'>plot_ls</span> <span class='o'>&lt;-</span> <span class='nf'><a href='https://ready4-dev.github.io/ready4/reference/depict-methods.html'>depict</a></span><span class='o'>(</span><span class='nv'>Y</span>, type_1L_chr <span class='o'>=</span> <span class='s'>"item_by_time"</span><span class='o'>)</span></span>
+<span><span class='c'>#&gt; Warning: The `var_nms_chr` argument of `depict()` is deprecated as of youthvars 0.0.0.9127.</span></span>
+<span><span class='c'>#&gt; <span style='color: #00BBBB;'>ℹ</span> Please use `youthvars::depict(x_vars_chr)` instead.</span></span>
+<span><span class='c'>#&gt; <span style='color: #00BBBB;'>ℹ</span> The deprecated feature was likely used in the <span style='color: #0000BB;'>youthvars</span> package.</span></span>
+<span><span class='c'>#&gt;   Please report the issue to the authors.</span></span>
+<span><span class='c'>#&gt; <span style='color: #555555;'>This warning is displayed once per session.</span></span></span>
+<span><span class='c'>#&gt; <span style='color: #555555;'>Call `lifecycle::last_lifecycle_warnings()` to see where this warning was generated.</span></span></span>
+<span></span></code></pre>
 
 </div>
 
@@ -2884,7 +2891,10 @@ We can then select a desired item's summary plot by using its index number.
 <div class="highlight">
 
 <pre class='chroma'><code class='language-r' data-lang='r'><span><span class='nv'>plot_ls</span><span class='o'>[[</span><span class='m'>1</span><span class='o'>]</span><span class='o'>]</span></span>
-</code></pre>
+<span><span class='c'>#&gt; Ignoring unknown labels:</span></span>
+<span><span class='c'>#&gt; <span style='color: #00BBBB;'>•</span> <span style='color: #00BB00;'>shape</span> : <span style='color: #0000BB;'>"round"</span></span></span>
+<span><span class='c'>#&gt; <span style='color: #00BBBB;'>•</span> <span style='color: #00BB00;'>linetype</span> : <span style='color: #0000BB;'>"round"</span></span></span>
+<span></span></code></pre>
 
 <div class="figure" style="text-align: center">
 
@@ -2902,7 +2912,10 @@ Alternatively, we can generate individual plots by passing the item index number
 <div class="highlight">
 
 <pre class='chroma'><code class='language-r' data-lang='r'><span><span class='nf'><a href='https://ready4-dev.github.io/ready4/reference/depict-methods.html'>depict</a></span><span class='o'>(</span><span class='nv'>Y</span>, type_1L_chr <span class='o'>=</span> <span class='s'>"item_by_time"</span>, var_idcs_int <span class='o'>=</span> <span class='m'>2L</span><span class='o'>)</span></span>
-</code></pre>
+<span><span class='c'>#&gt; Ignoring unknown labels:</span></span>
+<span><span class='c'>#&gt; <span style='color: #00BBBB;'>•</span> <span style='color: #00BB00;'>shape</span> : <span style='color: #0000BB;'>"round"</span></span></span>
+<span><span class='c'>#&gt; <span style='color: #00BBBB;'>•</span> <span style='color: #00BB00;'>linetype</span> : <span style='color: #0000BB;'>"round"</span></span></span>
+<span></span></code></pre>
 
 <div class="figure" style="text-align: center">
 
@@ -2920,7 +2933,10 @@ We can also plot domain scores by time.
 <div class="highlight">
 
 <pre class='chroma'><code class='language-r' data-lang='r'><span><span class='nf'><a href='https://ready4-dev.github.io/ready4/reference/depict-methods.html'>depict</a></span><span class='o'>(</span><span class='nv'>Y</span>, type_1L_chr <span class='o'>=</span> <span class='s'>"domain_by_time"</span>, var_idcs_int <span class='o'>=</span> <span class='m'>1L</span><span class='o'>)</span></span>
-</code></pre>
+<span><span class='c'>#&gt; Ignoring unknown labels:</span></span>
+<span><span class='c'>#&gt; <span style='color: #00BBBB;'>•</span> <span style='color: #00BB00;'>shape</span> : <span style='color: #0000BB;'>"round"</span></span></span>
+<span><span class='c'>#&gt; <span style='color: #00BBBB;'>•</span> <span style='color: #00BB00;'>linetype</span> : <span style='color: #0000BB;'>"round"</span></span></span>
+<span></span></code></pre>
 
 <div class="figure" style="text-align: center">
 
@@ -2938,7 +2954,10 @@ Total AQoL-6D scores can also be plotted using the same approach, where `var_idc
 <div class="highlight">
 
 <pre class='chroma'><code class='language-r' data-lang='r'><span><span class='nf'><a href='https://ready4-dev.github.io/ready4/reference/depict-methods.html'>depict</a></span><span class='o'>(</span><span class='nv'>Y</span>, type_1L_chr <span class='o'>=</span> <span class='s'>"total_by_time"</span>, var_idcs_int <span class='o'>=</span> <span class='m'>1L</span><span class='o'>)</span></span>
-</code></pre>
+<span><span class='c'>#&gt; Ignoring unknown labels:</span></span>
+<span><span class='c'>#&gt; <span style='color: #00BBBB;'>•</span> <span style='color: #00BB00;'>shape</span> : <span style='color: #0000BB;'>"round"</span></span></span>
+<span><span class='c'>#&gt; <span style='color: #00BBBB;'>•</span> <span style='color: #00BB00;'>linetype</span> : <span style='color: #0000BB;'>"round"</span></span></span>
+<span></span></code></pre>
 
 <div class="figure" style="text-align: center">
 

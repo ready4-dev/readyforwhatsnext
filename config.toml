@@ -109,7 +109,7 @@ version = "Latest"
 
 # A link to latest version of the docs. Used in the "version-banner" partial to
 # point people to the main doc site.
-url_latest_version = "https://readyforwhatsnext.org"
+url_latest_version = "https://readyforwhatsnext.com"
 
 # Repository configuration (URLs for in-page links to opening issues and suggesting changes)
 github_repo = "https://github.com/ready4-dev/readyforwhatsnext"
@@ -238,7 +238,7 @@ weight = 14
 [[params.versions]]
    version = "Latest"
    githubbranch = "main"
-   url = "https://readyforwhatsnext.org"
+   url = "https://readyforwhatsnext.com"
    
 #[[params.versions]]
 #  version = "v0.1"

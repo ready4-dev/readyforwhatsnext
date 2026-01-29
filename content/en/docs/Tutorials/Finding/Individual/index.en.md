@@ -1,7 +1,7 @@
 ---
 title: "Finding specific modules and sub-modules"
 linkTitle: "Modules"
-date: "2024-06-08"
+date: "2026-01-29"
 description: "How to find individual readyforwhatsnext modules and sub-modules."
 weight: 2
 categories: 
@@ -44,11 +44,11 @@ A table itemising individual model modules and sub-modules authored with `ready4
 
 ## Use
 
-In this example, we are going to examine modules from the [readyforwhatsnext model](https://readyforwhatsnext.org/). The value supplied to the `gh_repo_1L_chr` argument specifies the repository in which a dataset of readyforwhatsnext module libraries is stored. Note, the following command may take a couple of minutes to execute.
+In this example, we are going to examine modules from the [readyforwhatsnext model](https://readyforwhatsnext.com/). The value supplied to the `gh_repo_1L_chr` argument specifies the repository in which a dataset of readyforwhatsnext module libraries is stored. Note, the following command may take a couple of minutes to execute.
 
 <div class="highlight">
 
-<pre class='chroma'><code class='language-r' data-lang='r'><span><span class='nv'>modules_tb</span> <span class='o'>&lt;-</span>  <span class='nf'><a href='https://ready4-dev.github.io/ready4/reference/make_modules_tb.html'>make_modules_tb</a></span><span class='o'>(</span>gh_repo_1L_chr <span class='o'>=</span> <span class='s'>"ready4-dev/ready4"</span><span class='o'>)</span></span></code></pre>
+<pre class='chroma'><code class='language-r' data-lang='r'><span><span class='nv'>modules_tb</span> <span class='o'>&lt;-</span> <span class='nf'><a href='https://ready4-dev.github.io/ready4/reference/make_modules_tb.html'>make_modules_tb</a></span><span class='o'>(</span>gh_repo_1L_chr <span class='o'>=</span> <span class='s'>"ready4-dev/ready4"</span><span class='o'>)</span></span></code></pre>
 
 </div>
 
@@ -61,7 +61,7 @@ A slightly quicker method to achieve a similar result is to use the `get_modules
 
 </div>
 
-The `modules_tb` object itemises both model [modules (which always use R's "S4" class type) and sub-modules ("S3" class type)](https://www.ready4-dev.com/docs/getting-started/implementation/modularity/).
+The `modules_tb` object itemises both model [modules (which always use R's "S4" class type) and sub-modules ("S3" class type)](https://www.ready4-dev.com/docs/tutorials/develop-models/modularity/).
 
 To display a HTML summary of just model modules, you can use the `print_modules` function.
 
@@ -848,5 +848,5 @@ youthvars ready4 sub-module (S3 class) for Social and Occupational Functioning A
 
 ## Related content
 
-Details of how to search for themed collections of modules is described in [another article](https://readyforwhatsnext.org/docs/tutorials/finding/libraries/).
+Details of how to search for themed collections of modules is described in [another article](https://www.ready4-dev.com/docs/tutorials/use-models/finding-modules/collections/).
 

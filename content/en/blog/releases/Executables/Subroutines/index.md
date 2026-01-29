@@ -1,7 +1,7 @@
 ---
 title: "Subroutine releases"
 linkTitle: "Subroutines"
-date: "2024-06-08"
+date: "2026-01-29"
 description: "Releases of subroutines used in modelling analyses."
 weight: 1
 categories: 
@@ -17,7 +17,7 @@ rmd_hash: cffb66d920e42ac4
 
 ---
 
-Currently available (as at 08-Jun-2024) releases of [subroutines](/docs/model/analyses/reporting-templates/) are described below.
+Currently available (as at 29-Jan-2026) releases of [subroutines](/docs/model/analyses/reporting-templates/) are described below.
 
 <html>
 

@@ -1,7 +1,7 @@
 ---
 title: "Validate variable total scores"
 linkTitle: "Validate variables"
-date: "2024-01-25"
+date: "2026-01-29"
 description: "Vector based classes can be used to help validate variable values. This tutorial describes how to do that with sub-module classes exported as part of the youthvars R package."
 weight: 90
 categories: 
@@ -18,7 +18,7 @@ tags:
 - Status
 - Status - development
 output: hugodown::md_document
-rmd_hash: 326debdf92064869
+rmd_hash: 67a03cb3a3763111
 
 ---
 
@@ -45,7 +45,7 @@ rmd_hash: 326debdf92064869
 
 ## Variable classes and data integrity
 
-The `youthvars` package includes a number of [ready4 framework sub-module classes](https://www.ready4-dev.com/docs/framework/implementation/modularity/#ready4-model-sub-modules) that form part of the [ready4 economic model of youth mental health](https://www.ready4-dev.com/docs/model/). The primary use of `youthvars` sub-modules is to quality assure the variables used in model input and output datasets by:
+The `youthvars` package includes a number of [ready4 framework sub-module classes](https://www.ready4-dev.com/docs/framework/implementation/modularity/#ready4-model-sub-modules) that form part of the [readyforwhatsnext economic model of youth mental health](https://readyforwhatsnext.com/). The primary use of `youthvars` sub-modules is to quality assure the variables used in model input and output datasets by:
 
 1.  facilitating automated data integrity checks that verify no impermissible values (e.g. utility scores greater than one) are present in source data, transformed data or results; and
 2.  implementing rules-based automated selection and application of appropriate methods for each dataset variable.
@@ -83,7 +83,8 @@ Non numeric objects and values outside these ranges will produce errors.
 <div class="highlight">
 
 <pre class='chroma'><code class='language-r' data-lang='r'><span><span class='nf'><a href='https://ready4-dev.github.io/youthvars/reference/youthvars_aqol6d_adol.html'>youthvars_aqol6d_adol</a></span><span class='o'>(</span><span class='s'>"0.5"</span><span class='o'>)</span></span>
-<span><span class='c'>#&gt; Error in make_new_youthvars_aqol6d_adol(x): is.numeric(x) is not TRUE</span></span>
+<span><span class='c'>#&gt; <span style='color: #BBBB00; font-weight: bold;'>Error</span><span style='font-weight: bold;'> in `make_new_youthvars_aqol6d_adol()`:</span></span></span>
+<span><span class='c'>#&gt; <span style='color: #BBBB00;'>!</span> is.numeric(x) is not TRUE</span></span>
 <span></span></code></pre>
 
 </div>
@@ -91,7 +92,8 @@ Non numeric objects and values outside these ranges will produce errors.
 <div class="highlight">
 
 <pre class='chroma'><code class='language-r' data-lang='r'><span><span class='nf'><a href='https://ready4-dev.github.io/youthvars/reference/youthvars_aqol6d_adol.html'>youthvars_aqol6d_adol</a></span><span class='o'>(</span><span class='o'>-</span><span class='m'>0.1</span><span class='o'>)</span></span>
-<span><span class='c'>#&gt; Error: All non-missing values in valid youthvars_aqol6d_adol object must be greater than or equal to 0.03.</span></span>
+<span><span class='c'>#&gt; <span style='color: #BBBB00; font-weight: bold;'>Error</span><span style='font-weight: bold;'>:</span></span></span>
+<span><span class='c'>#&gt; <span style='color: #BBBB00;'>!</span> All non-missing values in valid youthvars_aqol6d_adol object must be greater than or equal to 0.03.</span></span>
 <span></span></code></pre>
 
 </div>
@@ -99,7 +101,8 @@ Non numeric objects and values outside these ranges will produce errors.
 <div class="highlight">
 
 <pre class='chroma'><code class='language-r' data-lang='r'><span><span class='nf'><a href='https://ready4-dev.github.io/youthvars/reference/youthvars_aqol6d_adol.html'>youthvars_aqol6d_adol</a></span><span class='o'>(</span><span class='m'>1.2</span><span class='o'>)</span></span>
-<span><span class='c'>#&gt; Error: All non-missing values in valid youthvars_aqol6d_adol object must be less than or equal to 1.</span></span>
+<span><span class='c'>#&gt; <span style='color: #BBBB00; font-weight: bold;'>Error</span><span style='font-weight: bold;'>:</span></span></span>
+<span><span class='c'>#&gt; <span style='color: #BBBB00;'>!</span> All non-missing values in valid youthvars_aqol6d_adol object must be less than or equal to 1.</span></span>
 <span></span></code></pre>
 
 </div>
@@ -133,7 +136,8 @@ Non numeric objects and values outside these ranges will produce errors.
 <div class="highlight">
 
 <pre class='chroma'><code class='language-r' data-lang='r'><span><span class='nf'><a href='https://ready4-dev.github.io/youthvars/reference/youthvars_chu9d_adolaus.html'>youthvars_chu9d_adolaus</a></span><span class='o'>(</span><span class='s'>"0.5"</span><span class='o'>)</span></span>
-<span><span class='c'>#&gt; Error in make_new_youthvars_chu9d_adolaus(x): is.numeric(x) is not TRUE</span></span>
+<span><span class='c'>#&gt; <span style='color: #BBBB00; font-weight: bold;'>Error</span><span style='font-weight: bold;'> in `make_new_youthvars_chu9d_adolaus()`:</span></span></span>
+<span><span class='c'>#&gt; <span style='color: #BBBB00;'>!</span> is.numeric(x) is not TRUE</span></span>
 <span></span></code></pre>
 
 </div>
@@ -141,7 +145,8 @@ Non numeric objects and values outside these ranges will produce errors.
 <div class="highlight">
 
 <pre class='chroma'><code class='language-r' data-lang='r'><span><span class='nf'><a href='https://ready4-dev.github.io/youthvars/reference/youthvars_chu9d_adolaus.html'>youthvars_chu9d_adolaus</a></span><span class='o'>(</span><span class='o'>-</span><span class='m'>0.3</span><span class='o'>)</span></span>
-<span><span class='c'>#&gt; Error: All non-missing values in valid youthvars_chu9d_adolaus object must be greater than or equal to -0.2118.</span></span>
+<span><span class='c'>#&gt; <span style='color: #BBBB00; font-weight: bold;'>Error</span><span style='font-weight: bold;'>:</span></span></span>
+<span><span class='c'>#&gt; <span style='color: #BBBB00;'>!</span> All non-missing values in valid youthvars_chu9d_adolaus object must be greater than or equal to -0.2118.</span></span>
 <span></span></code></pre>
 
 </div>
@@ -149,7 +154,8 @@ Non numeric objects and values outside these ranges will produce errors.
 <div class="highlight">
 
 <pre class='chroma'><code class='language-r' data-lang='r'><span><span class='nf'><a href='https://ready4-dev.github.io/youthvars/reference/youthvars_chu9d_adolaus.html'>youthvars_chu9d_adolaus</a></span><span class='o'>(</span><span class='m'>1.2</span><span class='o'>)</span></span>
-<span><span class='c'>#&gt; Error: All non-missing values in valid youthvars_chu9d_adolaus object must be less than or equal to 1.</span></span>
+<span><span class='c'>#&gt; <span style='color: #BBBB00; font-weight: bold;'>Error</span><span style='font-weight: bold;'>:</span></span></span>
+<span><span class='c'>#&gt; <span style='color: #BBBB00;'>!</span> All non-missing values in valid youthvars_chu9d_adolaus object must be less than or equal to 1.</span></span>
 <span></span></code></pre>
 
 </div>
@@ -183,7 +189,8 @@ Non-integers and values outside these ranges will produce errors.
 <div class="highlight">
 
 <pre class='chroma'><code class='language-r' data-lang='r'><span><span class='nf'><a href='https://ready4-dev.github.io/youthvars/reference/youthvars_bads.html'>youthvars_bads</a></span><span class='o'>(</span><span class='m'>22.5</span><span class='o'>)</span></span>
-<span><span class='c'>#&gt; Error in make_new_youthvars_bads(x): is.integer(x) is not TRUE</span></span>
+<span><span class='c'>#&gt; <span style='color: #BBBB00; font-weight: bold;'>Error</span><span style='font-weight: bold;'> in `make_new_youthvars_bads()`:</span></span></span>
+<span><span class='c'>#&gt; <span style='color: #BBBB00;'>!</span> is.integer(x) is not TRUE</span></span>
 <span></span></code></pre>
 
 </div>
@@ -191,7 +198,8 @@ Non-integers and values outside these ranges will produce errors.
 <div class="highlight">
 
 <pre class='chroma'><code class='language-r' data-lang='r'><span><span class='nf'><a href='https://ready4-dev.github.io/youthvars/reference/youthvars_bads.html'>youthvars_bads</a></span><span class='o'>(</span><span class='o'>-</span><span class='m'>1L</span><span class='o'>)</span></span>
-<span><span class='c'>#&gt; Error: All non-missing values in valid youthvars_bads object must be greater than or equal to 0.</span></span>
+<span><span class='c'>#&gt; <span style='color: #BBBB00; font-weight: bold;'>Error</span><span style='font-weight: bold;'>:</span></span></span>
+<span><span class='c'>#&gt; <span style='color: #BBBB00;'>!</span> All non-missing values in valid youthvars_bads object must be greater than or equal to 0.</span></span>
 <span></span></code></pre>
 
 </div>
@@ -199,7 +207,8 @@ Non-integers and values outside these ranges will produce errors.
 <div class="highlight">
 
 <pre class='chroma'><code class='language-r' data-lang='r'><span><span class='nf'><a href='https://ready4-dev.github.io/youthvars/reference/youthvars_bads.html'>youthvars_bads</a></span><span class='o'>(</span><span class='m'>160L</span><span class='o'>)</span></span>
-<span><span class='c'>#&gt; Error: All non-missing values in valid youthvars_bads object must be less than or equal to 150.</span></span>
+<span><span class='c'>#&gt; <span style='color: #BBBB00; font-weight: bold;'>Error</span><span style='font-weight: bold;'>:</span></span></span>
+<span><span class='c'>#&gt; <span style='color: #BBBB00;'>!</span> All non-missing values in valid youthvars_bads object must be less than or equal to 150.</span></span>
 <span></span></code></pre>
 
 </div>
@@ -233,7 +242,8 @@ Non-integers and values outside these ranges will produce errors.
 <div class="highlight">
 
 <pre class='chroma'><code class='language-r' data-lang='r'><span><span class='nf'><a href='https://ready4-dev.github.io/youthvars/reference/youthvars_gad7.html'>youthvars_gad7</a></span><span class='o'>(</span><span class='m'>14.6</span><span class='o'>)</span></span>
-<span><span class='c'>#&gt; Error in make_new_youthvars_gad7(x): is.integer(x) is not TRUE</span></span>
+<span><span class='c'>#&gt; <span style='color: #BBBB00; font-weight: bold;'>Error</span><span style='font-weight: bold;'> in `make_new_youthvars_gad7()`:</span></span></span>
+<span><span class='c'>#&gt; <span style='color: #BBBB00;'>!</span> is.integer(x) is not TRUE</span></span>
 <span></span></code></pre>
 
 </div>
@@ -241,7 +251,8 @@ Non-integers and values outside these ranges will produce errors.
 <div class="highlight">
 
 <pre class='chroma'><code class='language-r' data-lang='r'><span><span class='nf'><a href='https://ready4-dev.github.io/youthvars/reference/youthvars_gad7.html'>youthvars_gad7</a></span><span class='o'>(</span><span class='o'>-</span><span class='m'>1L</span><span class='o'>)</span></span>
-<span><span class='c'>#&gt; Error: All non-missing values in valid youthvars_gad7 object must be greater than or equal to 0.</span></span>
+<span><span class='c'>#&gt; <span style='color: #BBBB00; font-weight: bold;'>Error</span><span style='font-weight: bold;'>:</span></span></span>
+<span><span class='c'>#&gt; <span style='color: #BBBB00;'>!</span> All non-missing values in valid youthvars_gad7 object must be greater than or equal to 0.</span></span>
 <span></span></code></pre>
 
 </div>
@@ -249,7 +260,8 @@ Non-integers and values outside these ranges will produce errors.
 <div class="highlight">
 
 <pre class='chroma'><code class='language-r' data-lang='r'><span><span class='nf'><a href='https://ready4-dev.github.io/youthvars/reference/youthvars_gad7.html'>youthvars_gad7</a></span><span class='o'>(</span><span class='m'>22L</span><span class='o'>)</span></span>
-<span><span class='c'>#&gt; Error: All non-missing values in valid youthvars_gad7 object must be less than or equal to 21.</span></span>
+<span><span class='c'>#&gt; <span style='color: #BBBB00; font-weight: bold;'>Error</span><span style='font-weight: bold;'>:</span></span></span>
+<span><span class='c'>#&gt; <span style='color: #BBBB00;'>!</span> All non-missing values in valid youthvars_gad7 object must be less than or equal to 21.</span></span>
 <span></span></code></pre>
 
 </div>
@@ -283,7 +295,8 @@ Non-integers and values outside these ranges will produce errors.
 <div class="highlight">
 
 <pre class='chroma'><code class='language-r' data-lang='r'><span><span class='nf'><a href='https://ready4-dev.github.io/youthvars/reference/youthvars_k6_aus.html'>youthvars_k6_aus</a></span><span class='o'>(</span><span class='m'>11.2</span><span class='o'>)</span></span>
-<span><span class='c'>#&gt; Error in make_new_youthvars_k6_aus(x): is.integer(x) is not TRUE</span></span>
+<span><span class='c'>#&gt; <span style='color: #BBBB00; font-weight: bold;'>Error</span><span style='font-weight: bold;'> in `make_new_youthvars_k6_aus()`:</span></span></span>
+<span><span class='c'>#&gt; <span style='color: #BBBB00;'>!</span> is.integer(x) is not TRUE</span></span>
 <span></span></code></pre>
 
 </div>
@@ -291,7 +304,8 @@ Non-integers and values outside these ranges will produce errors.
 <div class="highlight">
 
 <pre class='chroma'><code class='language-r' data-lang='r'><span><span class='nf'><a href='https://ready4-dev.github.io/youthvars/reference/youthvars_k6_aus.html'>youthvars_k6_aus</a></span><span class='o'>(</span><span class='m'>1L</span><span class='o'>)</span></span>
-<span><span class='c'>#&gt; Error: All non-missing values in valid youthvars_k6_aus object must be greater than or equal to 6.</span></span>
+<span><span class='c'>#&gt; <span style='color: #BBBB00; font-weight: bold;'>Error</span><span style='font-weight: bold;'>:</span></span></span>
+<span><span class='c'>#&gt; <span style='color: #BBBB00;'>!</span> All non-missing values in valid youthvars_k6_aus object must be greater than or equal to 6.</span></span>
 <span></span></code></pre>
 
 </div>
@@ -299,7 +313,8 @@ Non-integers and values outside these ranges will produce errors.
 <div class="highlight">
 
 <pre class='chroma'><code class='language-r' data-lang='r'><span><span class='nf'><a href='https://ready4-dev.github.io/youthvars/reference/youthvars_k6_aus.html'>youthvars_k6_aus</a></span><span class='o'>(</span><span class='m'>31L</span><span class='o'>)</span></span>
-<span><span class='c'>#&gt; Error: All non-missing values in valid youthvars_k6_aus object must be less than or equal to 30.</span></span>
+<span><span class='c'>#&gt; <span style='color: #BBBB00; font-weight: bold;'>Error</span><span style='font-weight: bold;'>:</span></span></span>
+<span><span class='c'>#&gt; <span style='color: #BBBB00;'>!</span> All non-missing values in valid youthvars_k6_aus object must be less than or equal to 30.</span></span>
 <span></span></code></pre>
 
 </div>
@@ -333,7 +348,8 @@ Non-integers and values outside these ranges will produce errors.
 <div class="highlight">
 
 <pre class='chroma'><code class='language-r' data-lang='r'><span><span class='nf'><a href='https://ready4-dev.github.io/youthvars/reference/youthvars_k6.html'>youthvars_k6</a></span><span class='o'>(</span><span class='m'>11.2</span><span class='o'>)</span></span>
-<span><span class='c'>#&gt; Error in make_new_youthvars_k6(x): is.integer(x) is not TRUE</span></span>
+<span><span class='c'>#&gt; <span style='color: #BBBB00; font-weight: bold;'>Error</span><span style='font-weight: bold;'> in `make_new_youthvars_k6()`:</span></span></span>
+<span><span class='c'>#&gt; <span style='color: #BBBB00;'>!</span> is.integer(x) is not TRUE</span></span>
 <span></span></code></pre>
 
 </div>
@@ -341,7 +357,8 @@ Non-integers and values outside these ranges will produce errors.
 <div class="highlight">
 
 <pre class='chroma'><code class='language-r' data-lang='r'><span><span class='nf'><a href='https://ready4-dev.github.io/youthvars/reference/youthvars_k6.html'>youthvars_k6</a></span><span class='o'>(</span><span class='o'>-</span><span class='m'>1L</span><span class='o'>)</span></span>
-<span><span class='c'>#&gt; Error: All non-missing values in valid youthvars_k6 object must be greater than or equal to 0.</span></span>
+<span><span class='c'>#&gt; <span style='color: #BBBB00; font-weight: bold;'>Error</span><span style='font-weight: bold;'>:</span></span></span>
+<span><span class='c'>#&gt; <span style='color: #BBBB00;'>!</span> All non-missing values in valid youthvars_k6 object must be greater than or equal to 0.</span></span>
 <span></span></code></pre>
 
 </div>
@@ -349,7 +366,8 @@ Non-integers and values outside these ranges will produce errors.
 <div class="highlight">
 
 <pre class='chroma'><code class='language-r' data-lang='r'><span><span class='nf'><a href='https://ready4-dev.github.io/youthvars/reference/youthvars_k6.html'>youthvars_k6</a></span><span class='o'>(</span><span class='m'>25L</span><span class='o'>)</span></span>
-<span><span class='c'>#&gt; Error: All non-missing values in valid youthvars_k6 object must be less than or equal to 24.</span></span>
+<span><span class='c'>#&gt; <span style='color: #BBBB00; font-weight: bold;'>Error</span><span style='font-weight: bold;'>:</span></span></span>
+<span><span class='c'>#&gt; <span style='color: #BBBB00;'>!</span> All non-missing values in valid youthvars_k6 object must be less than or equal to 24.</span></span>
 <span></span></code></pre>
 
 </div>
@@ -383,7 +401,8 @@ Non-integers and values outside these ranges will produce errors.
 <div class="highlight">
 
 <pre class='chroma'><code class='language-r' data-lang='r'><span><span class='nf'><a href='https://ready4-dev.github.io/youthvars/reference/youthvars_k10_aus.html'>youthvars_k10_aus</a></span><span class='o'>(</span><span class='m'>11.2</span><span class='o'>)</span></span>
-<span><span class='c'>#&gt; Error in make_new_youthvars_k10_aus(x): is.integer(x) is not TRUE</span></span>
+<span><span class='c'>#&gt; <span style='color: #BBBB00; font-weight: bold;'>Error</span><span style='font-weight: bold;'> in `make_new_youthvars_k10_aus()`:</span></span></span>
+<span><span class='c'>#&gt; <span style='color: #BBBB00;'>!</span> is.integer(x) is not TRUE</span></span>
 <span></span></code></pre>
 
 </div>
@@ -391,7 +410,8 @@ Non-integers and values outside these ranges will produce errors.
 <div class="highlight">
 
 <pre class='chroma'><code class='language-r' data-lang='r'><span><span class='nf'><a href='https://ready4-dev.github.io/youthvars/reference/youthvars_k10_aus.html'>youthvars_k10_aus</a></span><span class='o'>(</span><span class='m'>9L</span><span class='o'>)</span></span>
-<span><span class='c'>#&gt; Error: All non-missing values in valid youthvars_k10_aus object must be greater than or equal to 10.</span></span>
+<span><span class='c'>#&gt; <span style='color: #BBBB00; font-weight: bold;'>Error</span><span style='font-weight: bold;'>:</span></span></span>
+<span><span class='c'>#&gt; <span style='color: #BBBB00;'>!</span> All non-missing values in valid youthvars_k10_aus object must be greater than or equal to 10.</span></span>
 <span></span></code></pre>
 
 </div>
@@ -399,7 +419,8 @@ Non-integers and values outside these ranges will produce errors.
 <div class="highlight">
 
 <pre class='chroma'><code class='language-r' data-lang='r'><span><span class='nf'><a href='https://ready4-dev.github.io/youthvars/reference/youthvars_k10_aus.html'>youthvars_k10_aus</a></span><span class='o'>(</span><span class='m'>51L</span><span class='o'>)</span></span>
-<span><span class='c'>#&gt; Error: All non-missing values in valid youthvars_k10_aus object must be less than or equal to 50.</span></span>
+<span><span class='c'>#&gt; <span style='color: #BBBB00; font-weight: bold;'>Error</span><span style='font-weight: bold;'>:</span></span></span>
+<span><span class='c'>#&gt; <span style='color: #BBBB00;'>!</span> All non-missing values in valid youthvars_k10_aus object must be less than or equal to 50.</span></span>
 <span></span></code></pre>
 
 </div>
@@ -433,7 +454,8 @@ Non-integers and values outside these ranges will produce errors.
 <div class="highlight">
 
 <pre class='chroma'><code class='language-r' data-lang='r'><span><span class='nf'><a href='https://ready4-dev.github.io/youthvars/reference/youthvars_k10.html'>youthvars_k10</a></span><span class='o'>(</span><span class='m'>11.2</span><span class='o'>)</span></span>
-<span><span class='c'>#&gt; Error in make_new_youthvars_k10(x): is.integer(x) is not TRUE</span></span>
+<span><span class='c'>#&gt; <span style='color: #BBBB00; font-weight: bold;'>Error</span><span style='font-weight: bold;'> in `make_new_youthvars_k10()`:</span></span></span>
+<span><span class='c'>#&gt; <span style='color: #BBBB00;'>!</span> is.integer(x) is not TRUE</span></span>
 <span></span></code></pre>
 
 </div>
@@ -441,7 +463,8 @@ Non-integers and values outside these ranges will produce errors.
 <div class="highlight">
 
 <pre class='chroma'><code class='language-r' data-lang='r'><span><span class='nf'><a href='https://ready4-dev.github.io/youthvars/reference/youthvars_k10.html'>youthvars_k10</a></span><span class='o'>(</span><span class='o'>-</span><span class='m'>1L</span><span class='o'>)</span></span>
-<span><span class='c'>#&gt; Error: All non-missing values in valid youthvars_k10 object must be greater than or equal to 0.</span></span>
+<span><span class='c'>#&gt; <span style='color: #BBBB00; font-weight: bold;'>Error</span><span style='font-weight: bold;'>:</span></span></span>
+<span><span class='c'>#&gt; <span style='color: #BBBB00;'>!</span> All non-missing values in valid youthvars_k10 object must be greater than or equal to 0.</span></span>
 <span></span></code></pre>
 
 </div>
@@ -449,7 +472,8 @@ Non-integers and values outside these ranges will produce errors.
 <div class="highlight">
 
 <pre class='chroma'><code class='language-r' data-lang='r'><span><span class='nf'><a href='https://ready4-dev.github.io/youthvars/reference/youthvars_k10.html'>youthvars_k10</a></span><span class='o'>(</span><span class='m'>41L</span><span class='o'>)</span></span>
-<span><span class='c'>#&gt; Error: All non-missing values in valid youthvars_k10 object must be less than or equal to 40.</span></span>
+<span><span class='c'>#&gt; <span style='color: #BBBB00; font-weight: bold;'>Error</span><span style='font-weight: bold;'>:</span></span></span>
+<span><span class='c'>#&gt; <span style='color: #BBBB00;'>!</span> All non-missing values in valid youthvars_k10 object must be less than or equal to 40.</span></span>
 <span></span></code></pre>
 
 </div>
@@ -483,7 +507,8 @@ Non-integers and values outside these ranges will produce errors.
 <div class="highlight">
 
 <pre class='chroma'><code class='language-r' data-lang='r'><span><span class='nf'><a href='https://ready4-dev.github.io/youthvars/reference/youthvars_oasis.html'>youthvars_oasis</a></span><span class='o'>(</span><span class='m'>14.2</span><span class='o'>)</span></span>
-<span><span class='c'>#&gt; Error in make_new_youthvars_oasis(x): is.integer(x) is not TRUE</span></span>
+<span><span class='c'>#&gt; <span style='color: #BBBB00; font-weight: bold;'>Error</span><span style='font-weight: bold;'> in `make_new_youthvars_oasis()`:</span></span></span>
+<span><span class='c'>#&gt; <span style='color: #BBBB00;'>!</span> is.integer(x) is not TRUE</span></span>
 <span></span></code></pre>
 
 </div>
@@ -491,7 +516,8 @@ Non-integers and values outside these ranges will produce errors.
 <div class="highlight">
 
 <pre class='chroma'><code class='language-r' data-lang='r'><span><span class='nf'><a href='https://ready4-dev.github.io/youthvars/reference/youthvars_oasis.html'>youthvars_oasis</a></span><span class='o'>(</span><span class='o'>-</span><span class='m'>1L</span><span class='o'>)</span></span>
-<span><span class='c'>#&gt; Error: All non-missing values in valid youthvars_oasis object must be greater than or equal to 0.</span></span>
+<span><span class='c'>#&gt; <span style='color: #BBBB00; font-weight: bold;'>Error</span><span style='font-weight: bold;'>:</span></span></span>
+<span><span class='c'>#&gt; <span style='color: #BBBB00;'>!</span> All non-missing values in valid youthvars_oasis object must be greater than or equal to 0.</span></span>
 <span></span></code></pre>
 
 </div>
@@ -499,7 +525,8 @@ Non-integers and values outside these ranges will produce errors.
 <div class="highlight">
 
 <pre class='chroma'><code class='language-r' data-lang='r'><span><span class='nf'><a href='https://ready4-dev.github.io/youthvars/reference/youthvars_oasis.html'>youthvars_oasis</a></span><span class='o'>(</span><span class='m'>21L</span><span class='o'>)</span></span>
-<span><span class='c'>#&gt; Error: All non-missing values in valid youthvars_oasis object must be less than or equal to 20.</span></span>
+<span><span class='c'>#&gt; <span style='color: #BBBB00; font-weight: bold;'>Error</span><span style='font-weight: bold;'>:</span></span></span>
+<span><span class='c'>#&gt; <span style='color: #BBBB00;'>!</span> All non-missing values in valid youthvars_oasis object must be less than or equal to 20.</span></span>
 <span></span></code></pre>
 
 </div>
@@ -533,7 +560,8 @@ Non-integers and values outside these ranges will produce errors.
 <div class="highlight">
 
 <pre class='chroma'><code class='language-r' data-lang='r'><span><span class='nf'><a href='https://ready4-dev.github.io/youthvars/reference/youthvars_phq9.html'>youthvars_phq9</a></span><span class='o'>(</span><span class='m'>15.2</span><span class='o'>)</span></span>
-<span><span class='c'>#&gt; Error in make_new_youthvars_phq9(x): is.integer(x) is not TRUE</span></span>
+<span><span class='c'>#&gt; <span style='color: #BBBB00; font-weight: bold;'>Error</span><span style='font-weight: bold;'> in `make_new_youthvars_phq9()`:</span></span></span>
+<span><span class='c'>#&gt; <span style='color: #BBBB00;'>!</span> is.integer(x) is not TRUE</span></span>
 <span></span></code></pre>
 
 </div>
@@ -541,7 +569,8 @@ Non-integers and values outside these ranges will produce errors.
 <div class="highlight">
 
 <pre class='chroma'><code class='language-r' data-lang='r'><span><span class='nf'><a href='https://ready4-dev.github.io/youthvars/reference/youthvars_phq9.html'>youthvars_phq9</a></span><span class='o'>(</span><span class='o'>-</span><span class='m'>1L</span><span class='o'>)</span></span>
-<span><span class='c'>#&gt; Error: All non-missing values in valid youthvars_phq9 object must be greater than or equal to 0.</span></span>
+<span><span class='c'>#&gt; <span style='color: #BBBB00; font-weight: bold;'>Error</span><span style='font-weight: bold;'>:</span></span></span>
+<span><span class='c'>#&gt; <span style='color: #BBBB00;'>!</span> All non-missing values in valid youthvars_phq9 object must be greater than or equal to 0.</span></span>
 <span></span></code></pre>
 
 </div>
@@ -549,7 +578,8 @@ Non-integers and values outside these ranges will produce errors.
 <div class="highlight">
 
 <pre class='chroma'><code class='language-r' data-lang='r'><span><span class='nf'><a href='https://ready4-dev.github.io/youthvars/reference/youthvars_phq9.html'>youthvars_phq9</a></span><span class='o'>(</span><span class='m'>28L</span><span class='o'>)</span></span>
-<span><span class='c'>#&gt; Error: All non-missing values in valid youthvars_phq9 object must be less than or equal to 27.</span></span>
+<span><span class='c'>#&gt; <span style='color: #BBBB00; font-weight: bold;'>Error</span><span style='font-weight: bold;'>:</span></span></span>
+<span><span class='c'>#&gt; <span style='color: #BBBB00;'>!</span> All non-missing values in valid youthvars_phq9 object must be less than or equal to 27.</span></span>
 <span></span></code></pre>
 
 </div>
@@ -583,7 +613,8 @@ Non-integers and values outside these ranges will produce errors.
 <div class="highlight">
 
 <pre class='chroma'><code class='language-r' data-lang='r'><span><span class='nf'><a href='https://ready4-dev.github.io/youthvars/reference/youthvars_scared.html'>youthvars_scared</a></span><span class='o'>(</span><span class='m'>33.2</span><span class='o'>)</span></span>
-<span><span class='c'>#&gt; Error in make_new_youthvars_scared(x): is.integer(x) is not TRUE</span></span>
+<span><span class='c'>#&gt; <span style='color: #BBBB00; font-weight: bold;'>Error</span><span style='font-weight: bold;'> in `make_new_youthvars_scared()`:</span></span></span>
+<span><span class='c'>#&gt; <span style='color: #BBBB00;'>!</span> is.integer(x) is not TRUE</span></span>
 <span></span></code></pre>
 
 </div>
@@ -591,7 +622,8 @@ Non-integers and values outside these ranges will produce errors.
 <div class="highlight">
 
 <pre class='chroma'><code class='language-r' data-lang='r'><span><span class='nf'><a href='https://ready4-dev.github.io/youthvars/reference/youthvars_scared.html'>youthvars_scared</a></span><span class='o'>(</span><span class='o'>-</span><span class='m'>1L</span><span class='o'>)</span></span>
-<span><span class='c'>#&gt; Error: All non-missing values in valid youthvars_scared object must be greater than or equal to 0.</span></span>
+<span><span class='c'>#&gt; <span style='color: #BBBB00; font-weight: bold;'>Error</span><span style='font-weight: bold;'>:</span></span></span>
+<span><span class='c'>#&gt; <span style='color: #BBBB00;'>!</span> All non-missing values in valid youthvars_scared object must be greater than or equal to 0.</span></span>
 <span></span></code></pre>
 
 </div>
@@ -599,7 +631,8 @@ Non-integers and values outside these ranges will produce errors.
 <div class="highlight">
 
 <pre class='chroma'><code class='language-r' data-lang='r'><span><span class='nf'><a href='https://ready4-dev.github.io/youthvars/reference/youthvars_scared.html'>youthvars_scared</a></span><span class='o'>(</span><span class='m'>83</span><span class='o'>)</span></span>
-<span><span class='c'>#&gt; Error in make_new_youthvars_scared(x): is.integer(x) is not TRUE</span></span>
+<span><span class='c'>#&gt; <span style='color: #BBBB00; font-weight: bold;'>Error</span><span style='font-weight: bold;'> in `make_new_youthvars_scared()`:</span></span></span>
+<span><span class='c'>#&gt; <span style='color: #BBBB00;'>!</span> is.integer(x) is not TRUE</span></span>
 <span></span></code></pre>
 
 </div>
@@ -633,7 +666,8 @@ Non-integers and values outside these ranges will produce errors.
 <div class="highlight">
 
 <pre class='chroma'><code class='language-r' data-lang='r'><span><span class='nf'><a href='https://ready4-dev.github.io/youthvars/reference/youthvars_sofas.html'>youthvars_sofas</a></span><span class='o'>(</span><span class='m'>73.2</span><span class='o'>)</span></span>
-<span><span class='c'>#&gt; Error in make_new_youthvars_sofas(x): is.integer(x) is not TRUE</span></span>
+<span><span class='c'>#&gt; <span style='color: #BBBB00; font-weight: bold;'>Error</span><span style='font-weight: bold;'> in `make_new_youthvars_sofas()`:</span></span></span>
+<span><span class='c'>#&gt; <span style='color: #BBBB00;'>!</span> is.integer(x) is not TRUE</span></span>
 <span></span></code></pre>
 
 </div>
@@ -641,7 +675,8 @@ Non-integers and values outside these ranges will produce errors.
 <div class="highlight">
 
 <pre class='chroma'><code class='language-r' data-lang='r'><span><span class='nf'><a href='https://ready4-dev.github.io/youthvars/reference/youthvars_sofas.html'>youthvars_sofas</a></span><span class='o'>(</span><span class='o'>-</span><span class='m'>1L</span><span class='o'>)</span></span>
-<span><span class='c'>#&gt; Error: All non-missing values in valid youthvars_sofas object must be greater than or equal to 0.</span></span>
+<span><span class='c'>#&gt; <span style='color: #BBBB00; font-weight: bold;'>Error</span><span style='font-weight: bold;'>:</span></span></span>
+<span><span class='c'>#&gt; <span style='color: #BBBB00;'>!</span> All non-missing values in valid youthvars_sofas object must be greater than or equal to 0.</span></span>
 <span></span></code></pre>
 
 </div>
@@ -649,7 +684,8 @@ Non-integers and values outside these ranges will produce errors.
 <div class="highlight">
 
 <pre class='chroma'><code class='language-r' data-lang='r'><span><span class='nf'><a href='https://ready4-dev.github.io/youthvars/reference/youthvars_sofas.html'>youthvars_sofas</a></span><span class='o'>(</span><span class='m'>103L</span><span class='o'>)</span></span>
-<span><span class='c'>#&gt; Error: All non-missing values in valid youthvars_sofas object must be less than or equal to 100.</span></span>
+<span><span class='c'>#&gt; <span style='color: #BBBB00; font-weight: bold;'>Error</span><span style='font-weight: bold;'>:</span></span></span>
+<span><span class='c'>#&gt; <span style='color: #BBBB00;'>!</span> All non-missing values in valid youthvars_sofas object must be less than or equal to 100.</span></span>
 <span></span></code></pre>
 
 </div>

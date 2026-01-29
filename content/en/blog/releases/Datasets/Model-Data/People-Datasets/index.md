@@ -1,7 +1,7 @@
 ---
 title: "Datasets for modelling people releases"
 linkTitle: "People datasets"
-date: "2024-06-08"
+date: "2026-01-29"
 description: "Releases of datasets used in conjunction with modules from the Spring To Life model of people."
 weight: 21
 categories: 
@@ -235,21 +235,6 @@ the online helpseeking choice of socially anxious young people</a>
 </tr>
 <tr>
 <td style="text-align:left;">
-08-Jun-2022
-</td>
-<td style="text-align:left;">
-<a href="https://doi.org/https://doi.org/10.7910/DVN/VGPIPS" style="     ">Modelling
-the online helpseeking choice of socially anxious young people</a>
-</td>
-<td style="text-align:left;">
-1.0
-</td>
-<td style="text-align:right;">
-13
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
 22-Feb-2022
 </td>
 <td style="text-align:left;">
@@ -363,21 +348,6 @@ to AQoL-6D Utility Mapping Algorithms</a>
 </td>
 <td style="text-align:left;">
 2.0
-</td>
-<td style="text-align:right;">
-8
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-07-Jul-2021
-</td>
-<td style="text-align:left;">
-<a href="https://doi.org/https://doi.org/10.7910/DVN/DKDIB0" style="     ">Transfer
-to AQoL-6D Utility Mapping Algorithms</a>
-</td>
-<td style="text-align:left;">
-1.0
 </td>
 <td style="text-align:right;">
 8

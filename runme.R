@@ -1,5 +1,5 @@
-# Run each time an RMD is changed prior to commit. [IGNORE THIS]
-# blogdown::build_site(run_hugo = F, build_rmd =T)
+# Run each time an RMD is changed prior to commit. 
+# blogdown::build_site(run_hugo = F, build_rmd =T) [IGNORE THIS]
 #source("R/Functions.R")
 library(ready4)
 library(hugodown)
@@ -19,7 +19,8 @@ c("Add-Metadata") %>%
   write_to_render_post(path_to_main_dir_1L_chr = paste0(project_dir_1L_chr,"/content/en/docs/tutorials/using-modules"),
                        consent_1L_chr = "Y")
 
-c("Assess-Cost-Utility", ## Add scroll box args
+c(
+  "Assess-Cost-Utility", ## Add scroll box args
   "Explore-Models",
   "Map-To-Utility",
   "Predict-Choice", ## Remove }}
@@ -65,7 +66,7 @@ c(#"Find"#, # Check exclusions in RMD - may need to be updated.
   write_to_render_post(paste0(project_dir_1L_chr,"/content/en/docs"),
                        consent_1L_chr = "Y")
 c("Clinical-Primary") %>% # Do not evaluate write fns, add scroll text and then restore link to online RMD
-  write_to_render_post(path_to_main_dir_1L_chr = paste0(project_dir_1L_chr,"/content/en/docs/analyses/Replication-Code/Make-Fakes"),
+  write_to_render_post(path_to_main_dir_1L_chr = paste0(project_dir_1L_chr,"/content/en/docs/Analyses/Replication-Code/Make-Fakes"),
                        consent_1L_chr = "Y",
                        is_rmd_1L_lgl = F)
 #write_to_trim_html(paste0(project_dir_1L_chr,"/content/en/docs/model/analyses/Replication-Code/Make-Fakes/Clincal_Primary.md"))
@@ -104,12 +105,12 @@ c("Programs", # Check exclusions in RMD - may need to be updated.
 #   "Model-Choice/dce_sa_analysis.md",
 #   "Model-Choice/dce_sa_design.md") %>%
 #   purrr::walk(~write_new_credentials(paste0(paste0(project_dir_1L_chr,"/content/en/docs/model/analyses/Replication-Code/",.x),
-#                                      new_credentials_1L_chr = "2623be4aa6784e3fabca41e54a08160b",
+#                                      new_credentials_1L_chr = "2623be4aa6784e3fabca41e54a08160b", # "5eddc94037b84c5f9bcc71233e86864d"
 #                                      old_credentials_1L_chr = "93f800c0e2594268b9482bea99e2e434", 
 #                                      consent_1L_chr = "Y"))
 # Prior to deployment
 # write_new_credentials("./content/en/docs/Readyforwhatsnext/Spring To Life/Modules/Predict choice.md",
-#                       old_credentials_1L_chr = "2623be4aa6784e3fabca41e54a08160b",
+#                       old_credentials_1L_chr = "2623be4aa6784e3fabca41e54a08160b", # "5eddc94037b84c5f9bcc71233e86864d"
 #                       new_credentials_1L_chr = "93f800c0e2594268b9482bea99e2e434") # For local preview
 ## Deploy dependencies app
 # library(rsconnect)

@@ -1,7 +1,7 @@
 ---
 title: "Use utility mapping algorithms to help implement cost-utility analyses"
 linkTitle: "Assess cost-utility"
-date: "2024-02-08"
+date: "2026-01-29"
 description: "Using tools (soon to be formalised into ready4 framework modules) from the youthu R package, it is possible to use utility mapping algorithms to help implement cost-utility analyses. This tutorial illustrates the main steps for doing so using psychological and functional measures collected on clinical samples of young people."
 weight: 97
 categories: 
@@ -43,7 +43,8 @@ html_dependencies:
 
 <pre class='chroma'><code class='language-r' data-lang='r'><span><span class='kr'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='o'>(</span><span class='nv'><a href='https://ready4-dev.github.io/youthu/'>youthu</a></span><span class='o'>)</span></span>
 <span><span class='kr'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='o'>(</span><span class='nv'><a href='https://ggplot2.tidyverse.org'>ggplot2</a></span><span class='o'>)</span></span>
-<span><span class='kr'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='o'>(</span><span class='nv'><a href='https://ready4-dev.github.io/ready4use/'>ready4use</a></span><span class='o'>)</span></span>
+<span><span class='c'>#&gt; Warning: package 'ggplot2' was built under R version 4.4.3</span></span>
+<span></span><span><span class='kr'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='o'>(</span><span class='nv'><a href='https://ready4-dev.github.io/ready4use/'>ready4use</a></span><span class='o'>)</span></span>
 <span><span class='nf'><a href='https://rdrr.io/r/base/Random.html'>set.seed</a></span><span class='o'>(</span><span class='m'>1234</span><span class='o'>)</span></span></code></pre>
 
 </div>
@@ -116,7 +117,7 @@ Participant_20
 Baseline
 </td>
 <td style="text-align:right;">
-2023-07-04
+2025-06-24
 </td>
 <td style="text-align:right;">
 0S
@@ -145,7 +146,7 @@ Participant_593
 Baseline
 </td>
 <td style="text-align:right;">
-2023-05-11
+2025-05-01
 </td>
 <td style="text-align:right;">
 0S
@@ -174,7 +175,7 @@ Participant_593
 Follow-up
 </td>
 <td style="text-align:right;">
-2023-11-02
+2025-10-23
 </td>
 <td style="text-align:right;">
 175d 0H 0M 0S
@@ -203,7 +204,7 @@ Participant_20
 Follow-up
 </td>
 <td style="text-align:right;">
-2023-12-29
+2025-12-19
 </td>
 <td style="text-align:right;">
 178d 0H 0M 0S
@@ -232,7 +233,7 @@ Participant_259
 Baseline
 </td>
 <td style="text-align:right;">
-2023-08-29
+2025-08-19
 </td>
 <td style="text-align:right;">
 0S
@@ -261,7 +262,7 @@ Participant_962
 Baseline
 </td>
 <td style="text-align:right;">
-2023-10-11
+2025-10-01
 </td>
 <td style="text-align:right;">
 0S
@@ -381,14 +382,6 @@ The rest of this article demonstrates how youthu functions can be used to undert
 
 Our first step is to identify which youthu models we will use to predict adolescent AQoL-6D and apply these models to our data. This step was explained in more detail in [another vignette article about finding and using transfer to utility models](https://ready4-dev.github.io/youthu/articles/Prediction_With_Mdls.html), so will be dealt with briefly here.
 
-We ingest metadata about the mapping models we plan to use. **NOTE: This is a temporary step that is required due to the metadata file not being in the study online repository. This code will cease to work once the metadata file has been moved from its temporary location to the study dataset. We will perform this task when an associated manuscript exits its current review process.**
-
-<div class="highlight">
-
-<pre class='chroma'><code class='language-r' data-lang='r'><span><span class='nv'>mdl_meta_data_ls</span> <span class='o'>&lt;-</span> <span class='nf'><a href='https://ready4-dev.github.io/ready4/reference/ingest-methods.html'>ingest</a></span><span class='o'>(</span><span class='nf'><a href='https://ready4-dev.github.io/ready4use/reference/Ready4useRepos-class.html'>Ready4useRepos</a></span><span class='o'>(</span>gh_repo_1L_chr <span class='o'>=</span> <span class='s'>"ready4-dev/youthu"</span>, gh_tag_1L_chr <span class='o'>=</span> <span class='s'>"v0.0.0.91125"</span><span class='o'>)</span>, fls_to_ingest_chr <span class='o'>=</span> <span class='nf'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='o'>(</span><span class='s'>"mdl_meta_data_ls"</span><span class='o'>)</span>, metadata_1L_lgl <span class='o'>=</span> <span class='kc'>F</span><span class='o'>)</span></span></code></pre>
-
-</div>
-
 We now make sure that our dataset can be used as a prediction dataset in conjunction with the model we intend using.
 
 <div class="highlight">
@@ -398,7 +391,6 @@ We now make sure that our dataset can be used as a prediction dataset in conjunc
 <span>                                      cmprsn_var_nm_1L_chr <span class='o'>=</span> <span class='s'>"study_arm_chr"</span>,</span>
 <span>                                      costs_var_nm_1L_chr <span class='o'>=</span> <span class='s'>"costs_dbl"</span>,</span>
 <span>                                      id_var_nm_1L_chr <span class='o'>=</span> <span class='s'>"fkClientID"</span>,</span>
-<span>                                      mdl_meta_data_ls <span class='o'>=</span> <span class='nv'>mdl_meta_data_ls</span>,</span>
 <span>                                      msrmnt_date_var_nm_1L_chr <span class='o'>=</span> <span class='s'>"date_psx"</span>,</span>
 <span>                                      round_var_nm_1L_chr <span class='o'>=</span> <span class='s'>"round"</span>,</span>
 <span>                                      round_bl_val_1L_chr <span class='o'>=</span> <span class='s'>"Baseline"</span>,</span>
@@ -528,10 +520,10 @@ Control
 243
 </td>
 <td style="text-align:right;">
-2023-04-19
+2025-04-09
 </td>
 <td style="text-align:right;">
-2023-10-13
+2025-10-03
 </td>
 <td style="text-align:right;">
 0S
@@ -599,10 +591,10 @@ Control
 191
 </td>
 <td style="text-align:right;">
-2023-06-15
+2025-06-05
 </td>
 <td style="text-align:right;">
-2023-12-16
+2025-12-06
 </td>
 <td style="text-align:right;">
 0S
@@ -670,10 +662,10 @@ Intervention
 230
 </td>
 <td style="text-align:right;">
-2023-05-10
+2025-04-30
 </td>
 <td style="text-align:right;">
-2023-11-05
+2025-10-26
 </td>
 <td style="text-align:right;">
 0S
@@ -741,10 +733,10 @@ Intervention
 115
 </td>
 <td style="text-align:right;">
-2023-06-08
+2025-05-29
 </td>
 <td style="text-align:right;">
-2023-12-07
+2025-11-27
 </td>
 <td style="text-align:right;">
 0S
@@ -812,10 +804,10 @@ Intervention
 183
 </td>
 <td style="text-align:right;">
-2023-09-09
+2025-08-30
 </td>
 <td style="text-align:right;">
-2024-03-13
+2026-03-04
 </td>
 <td style="text-align:right;">
 0S
@@ -883,10 +875,10 @@ Intervention
 219
 </td>
 <td style="text-align:right;">
-2023-10-05
+2025-09-25
 </td>
 <td style="text-align:right;">
-2024-04-01
+2026-03-23
 </td>
 <td style="text-align:right;">
 0S
@@ -965,15 +957,7 @@ Note, for this illustrative example we only request 1000 bootstrap iterations - 
 
 <div class="highlight">
 
-<pre class='chroma'><code class='language-r' data-lang='r'><span><span class='nv'>he_smry_ls</span> <span class='o'>&lt;-</span> <span class='nv'>ds_tb</span> <span class='o'><a href='https://magrittr.tidyverse.org/reference/pipe.html'>%&gt;%</a></span> <span class='nf'><a href='https://ready4-dev.github.io/youthu/reference/make_hlth_ec_smry.html'>make_hlth_ec_smry</a></span><span class='o'>(</span>predn_ds_ls <span class='o'>=</span> <span class='nv'>predn_ds_ls</span>,</span>
-<span>                                                 wtp_dbl <span class='o'>=</span> <span class='m'>50000</span>,</span>
-<span>                                                 bootstrap_iters_1L_int <span class='o'>=</span> <span class='m'>1000L</span><span class='o'>)</span></span>
-<span><span class='c'>#&gt; Warning: There was 1 warning in `dplyr::summarise()`.</span></span>
-<span><span class='c'>#&gt; <span style='color: #00BBBB;'>ℹ</span> In argument: `dplyr::across(.fns = mean)`.</span></span>
-<span><span class='c'>#&gt; Caused by warning:</span></span>
-<span><span class='c'>#&gt; <span style='color: #BBBB00;'>!</span> Using `across()` without supplying `.cols` was deprecated in dplyr 1.1.0.</span></span>
-<span><span class='c'>#&gt; <span style='color: #00BBBB;'>ℹ</span> Please supply `.cols` instead.</span></span>
-<span></span></code></pre>
+<pre class='chroma'><code class='language-r' data-lang='r'><span><span class='nv'>he_smry_ls</span> <span class='o'>&lt;-</span> <span class='nv'>ds_tb</span> <span class='o'><a href='https://magrittr.tidyverse.org/reference/pipe.html'>%&gt;%</a></span> <span class='nf'><a href='https://ready4-dev.github.io/youthu/reference/make_hlth_ec_smry.html'>make_hlth_ec_smry</a></span><span class='o'>(</span>predn_ds_ls <span class='o'>=</span> <span class='nv'>predn_ds_ls</span>, wtp_dbl <span class='o'>=</span> <span class='m'>50000</span>, bootstrap_iters_1L_int <span class='o'>=</span> <span class='m'>1000L</span><span class='o'>)</span></span></code></pre>
 
 </div>
 
@@ -981,9 +965,9 @@ As part of the output of the `make_hlth_ec_smry` function is a BCEA object, we c
 
 <div class="highlight">
 
-<pre class='chroma'><code class='language-r' data-lang='r'><span><span class='nf'>BCEA</span><span class='nf'>::</span><span class='nf'><a href='https://rdrr.io/pkg/BCEA/man/ceplane.plot.html'>ceplane.plot</a></span><span class='o'>(</span><span class='nv'>he_smry_ls</span><span class='o'>$</span><span class='nv'>ce_res_ls</span>, wtp <span class='o'>=</span><span class='m'>50000</span>,  graph <span class='o'>=</span> <span class='s'>"ggplot2"</span>, theme <span class='o'>=</span> <span class='nf'>ggplot2</span><span class='nf'>::</span><span class='nf'><a href='https://ggplot2.tidyverse.org/reference/ggtheme.html'>theme_light</a></span><span class='o'>(</span><span class='o'>)</span><span class='o'>)</span></span>
+<pre class='chroma'><code class='language-r' data-lang='r'><span><span class='nf'>BCEA</span><span class='nf'>::</span><span class='nf'><a href='https://n8thangreen.github.io/BCEA/reference/ceplane.plot.html'>ceplane.plot</a></span><span class='o'>(</span><span class='nv'>he_smry_ls</span><span class='o'>$</span><span class='nv'>ce_res_ls</span>, wtp <span class='o'>=</span><span class='m'>50000</span>,  graph <span class='o'>=</span> <span class='s'>"ggplot2"</span>, theme <span class='o'>=</span> <span class='nf'>ggplot2</span><span class='nf'>::</span><span class='nf'><a href='https://ggplot2.tidyverse.org/reference/ggtheme.html'>theme_light</a></span><span class='o'>(</span><span class='o'>)</span><span class='o'>)</span></span>
 </code></pre>
-<img src="figs/unnamed-chunk-17-1.png" width="700px" style="display: block; margin: auto;" />
+<img src="figs/unnamed-chunk-16-1.png" alt="" width="700px" style="display: block; margin: auto;" />
 
 </div>
 
